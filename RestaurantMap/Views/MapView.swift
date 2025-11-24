@@ -17,12 +17,15 @@ struct MapView: View {
     @State private var temporaryPin: CLLocationCoordinate2D?
     @State private var searchText = ""
     @State private var searchResults: [MKMapItem] = []
-    @State private var isSearching = false
+    @State private var isSearchingManual = false
     @State private var selectedMapItem: MKMapItem?
-    @State private var showHelpMessage = true
-    @State private var showNearbyPlaces = false
-    @State private var nearbyPlaces: [MKMapItem] = []
-    @State private var tappedCoordinate: CLLocationCoordinate2D?
+    @State private var selectedPOI: MKMapItem?
+    @State private var showingPOIDetail = false
+    @State private var mapSelection: MKMapItem?
+    @State private var nearbyPOIs: [MKMapItem] = []
+    @State private var searchedRegions: Set<String> = []
+    @State private var isPOISearching = false
+    @State private var lastSearchTime: Date?
 
     private let logger = Logger(subsystem: "com.restaurantmap", category: "MapView")
     
@@ -31,7 +34,6 @@ struct MapView: View {
             ZStack(alignment: .bottomTrailing) {
                 mapView
                 floatingButton
-                helpMessage
             }
             .navigationTitle("식당 지도")
             .searchable(text: $searchText, prompt: "식당이나 장소 검색")
@@ -41,17 +43,17 @@ struct MapView: View {
             .sheet(isPresented: $showingAddSheet) {
                 AddRestaurantView(coordinate: selectedCoordinate, mapItem: selectedMapItem)
             }
-            .sheet(isPresented: $isSearching) {
+            .sheet(isPresented: $isSearchingManual) {
                 SearchResultsView(
                     searchResults: searchResults,
                     onSelect: { mapItem in
                         selectSearchResult(mapItem)
                     },
                     onViewOnMap: {
-                        isSearching = false
+                        isSearchingManual = false
                     },
                     onDismiss: {
-                        isSearching = false
+                        isSearchingManual = false
                         searchResults = []
                     }
                 )
@@ -68,31 +70,20 @@ struct MapView: View {
                     RestaurantDetailView(restaurant: restaurant)
                 }
             }
-            .sheet(isPresented: $showNearbyPlaces) {
-                NearbyPlacesView(
-                    places: nearbyPlaces,
-                    tappedCoordinate: tappedCoordinate,
-                    onSelect: { mapItem in
-                        selectNearbyPlace(mapItem)
-                    },
-                    onDismiss: {
-                        showNearbyPlaces = false
-                        nearbyPlaces = []
-                        tappedCoordinate = nil
-                    }
-                )
-                .presentationDetents([.medium, .large])
+            .sheet(isPresented: $showingPOIDetail) {
+                if let poi = selectedPOI {
+                    POIDetailView(mapItem: poi, onAddRestaurant: {
+                        selectedCoordinate = poi.placemark.coordinate
+                        selectedMapItem = poi
+                        showingPOIDetail = false
+                        showingAddSheet = true
+                    })
+                }
             }
             .onAppear {
-                logger.info("MapView appeared")
+                logger.info("🚀 MapView appeared")
+                logger.info("🚀 nearbyPOIs 초기 개수: \(nearbyPOIs.count)")
                 locationDelegate.requestLocation()
-
-                // 5초 후 안내 메시지 자동으로 숨기기
-                DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                    withAnimation {
-                        showHelpMessage = false
-                    }
-                }
             }
             .onChange(of: locationDelegate.locationUpdated) { _, _ in
                 if let location = locationDelegate.userLocation {
@@ -105,56 +96,72 @@ struct MapView: View {
                     ))
                 }
             }
+            .onChange(of: nearbyPOIs) { oldValue, newValue in
+                logger.info("🔄 nearbyPOIs 배열 변경됨: \(oldValue.count) -> \(newValue.count)")
+            }
         }
     }
     
     // MARK: - Computed Views
 
     private var mapView: some View {
-        MapReader { proxy in
-            Map(position: $position) {
-                UserAnnotation()
+        Map(position: $position, selection: $mapSelection) {
+            UserAnnotation()
 
-                if let tempPin = temporaryPin {
-                    Annotation("", coordinate: tempPin) {
-                        TemporaryPinView()
-                    }
+            if let tempPin = temporaryPin {
+                Annotation("", coordinate: tempPin) {
+                    TemporaryPinView()
                 }
+            }
 
-                ForEach(searchResults, id: \.self) { item in
-                    if let coord = item.placemark.location?.coordinate {
-                        Annotation(item.name ?? "장소", coordinate: coord) {
-                            SearchResultPinView(mapItem: item) {
-                                selectSearchResult(item)
-                            }
-                        }
-                    }
-                }
-
-                ForEach(restaurants) { restaurant in
-                    Annotation(restaurant.name, coordinate: restaurant.coordinate) {
-                        RestaurantPinView(restaurant: restaurant) {
-                            selectedRestaurant = restaurant
-                            showingDetail = true
+            // 주변 POI 마커 표시
+            ForEach(nearbyPOIs, id: \.self) { item in
+                if let coord = item.placemark.location?.coordinate {
+                    Annotation(item.name ?? "장소", coordinate: coord) {
+                        NearbyPOIPinView(mapItem: item) {
+                            logger.info("🎯 POI 마커 탭됨: \(item.name ?? "이름없음")")
+                            selectedPOI = item
+                            showingPOIDetail = true
                         }
                     }
                 }
             }
-            .onTapGesture { location in
-                if let coordinate = proxy.convert(location, from: .local) {
-                    handleMapTap(coordinate: coordinate)
+
+            ForEach(searchResults, id: \.self) { item in
+                if let coord = item.placemark.location?.coordinate {
+                    Annotation(item.name ?? "장소", coordinate: coord) {
+                        SearchResultPinView(mapItem: item) {
+                            selectSearchResult(item)
+                        }
+                    }
                 }
             }
-            .gesture(
-                LongPressGesture(minimumDuration: 0.5)
-                    .sequenced(before: DragGesture(minimumDistance: 0))
-                    .onEnded { value in
-                        handleLongPressGesture(value, proxy: proxy)
+
+            ForEach(restaurants) { restaurant in
+                Annotation(restaurant.name, coordinate: restaurant.coordinate) {
+                    RestaurantPinView(restaurant: restaurant) {
+                        selectedRestaurant = restaurant
+                        showingDetail = true
                     }
-            )
-            .mapControls {
-                MapUserLocationButton()
-                MapCompass()
+                }
+            }
+        }
+        .mapStyle(.standard(pointsOfInterest: .including([.cafe, .restaurant, .bakery, .brewery, .foodMarket])))
+        .mapControls {
+            MapUserLocationButton()
+            MapCompass()
+        }
+        .onMapCameraChange(frequency: .onEnd) { context in
+            logger.info("📍 지도 카메라 변경 감지 - 중심: \(context.region.center.latitude), \(context.region.center.longitude)")
+            logger.info("📍 지도 범위 - span: \(context.region.span.latitudeDelta), \(context.region.span.longitudeDelta)")
+            searchNearbyPOIsIfNeeded(in: context.region)
+        }
+        .onChange(of: mapSelection) { oldValue, newValue in
+            logger.info("맵 선택 변경: \(String(describing: newValue?.name))")
+            if let newValue = newValue {
+                selectedPOI = newValue
+                showingPOIDetail = true
+                logger.info("POI 상세 시트 표시: \(newValue.name ?? "이름 없음")")
             }
         }
     }
@@ -169,51 +176,8 @@ struct MapView: View {
         .padding(.bottom, 16)
     }
 
-    @ViewBuilder
-    private var helpMessage: some View {
-        if showHelpMessage && temporaryPin == nil && restaurants.isEmpty {
-            VStack {
-                Text("지도를 길게 눌러서 식당을 추가하세요")
-                    .font(.subheadline)
-                    .padding(.horizontal, 20)
-                    .padding(.vertical, 12)
-                    .background(.ultraThinMaterial)
-                    .clipShape(Capsule())
-                    .shadow(radius: 2)
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-            .padding(.top, 60)
-            .transition(.move(edge: .top).combined(with: .opacity))
-            .onTapGesture {
-                withAnimation {
-                    showHelpMessage = false
-                }
-            }
-        }
-    }
 
     // MARK: - Helper Methods
-
-    private func handleLongPressGesture(_ value: SequenceGesture<LongPressGesture, DragGesture>.Value, proxy: MapProxy) {
-        switch value {
-        case .second(true, let drag):
-            if let location = drag?.location,
-               let coordinate = proxy.convert(location, from: .local) {
-                temporaryPin = coordinate
-                selectedCoordinate = coordinate
-                logger.info("지도 롱프레스: 위도=\(coordinate.latitude), 경도=\(coordinate.longitude)")
-
-                // 사용자가 액션을 취하면 안내 메시지 숨기기
-                withAnimation {
-                    showHelpMessage = false
-                }
-
-                showingAddSheet = true
-            }
-        default:
-            break
-        }
-    }
 
     private func addRestaurantAtCurrentLocation() {
         // 현재 위치를 사용하거나, 없으면 기본 위치 사용
@@ -242,10 +206,46 @@ struct MapView: View {
                 searchResults = response.mapItems
                 logger.info("검색 결과: \(response.mapItems.count)개")
                 if !searchResults.isEmpty {
-                    isSearching = true
+                    isSearchingManual = true
                 }
             }
         }
+    }
+
+    private func searchNearbyPOIsIfNeeded(in region: MKCoordinateRegion) {
+        // 중복 검색 방지: 같은 영역을 이미 검색했는지 확인
+        let regionKey = regionToKey(region)
+
+        // 이미 검색 중이거나, 최근에 검색한 영역이면 스킵
+        if isPOISearching {
+            logger.info("⏸️ 이미 검색 중이므로 스킵")
+            return
+        }
+
+        // 같은 영역을 최근에 검색했으면 스킵 (캐싱)
+        if searchedRegions.contains(regionKey) {
+            logger.info("💾 캐시된 영역이므로 스킵: \(regionKey)")
+            return
+        }
+
+        // 너무 자주 검색하지 않도록 throttling (최소 1초 간격)
+        if let lastTime = lastSearchTime, Date().timeIntervalSince(lastTime) < 1.0 {
+            logger.info("⏱️ 검색 간격이 너무 짧아서 스킷 (throttling)")
+            return
+        }
+
+        lastSearchTime = Date()
+        searchedRegions.insert(regionKey)
+        searchNearbyPOIs(in: region)
+    }
+
+    private func regionToKey(_ region: MKCoordinateRegion) -> String {
+        // 소수점 3자리로 반올림하여 비슷한 영역을 같은 것으로 취급
+        let lat = round(region.center.latitude * 1000) / 1000
+        let lon = round(region.center.longitude * 1000) / 1000
+        let spanLat = round(region.span.latitudeDelta * 1000) / 1000
+        let spanLon = round(region.span.longitudeDelta * 1000) / 1000
+        return "\(lat),\(lon),\(spanLat),\(spanLon)"
     }
 
     private func selectSearchResult(_ mapItem: MKMapItem) {
@@ -261,60 +261,110 @@ struct MapView: View {
             span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
         ))
 
-        isSearching = false
+        isSearchingManual = false
         searchText = ""
         showingAddSheet = true
     }
 
-    private func handleMapTap(coordinate: CLLocationCoordinate2D) {
-        logger.info("지도 탭: 위도=\(coordinate.latitude), 경도=\(coordinate.longitude)")
+    private func searchNearbyPOIs(in region: MKCoordinateRegion, retryCount: Int = 0) {
+        isPOISearching = true
+        logger.info("🔍 화면 영역의 POI 검색 시작 (시도: \(retryCount + 1))")
+        logger.info("🔍 검색 영역 중심: \(region.center.latitude), \(region.center.longitude)")
+        logger.info("🔍 검색 범위: \(region.span.latitudeDelta) x \(region.span.longitudeDelta)")
 
-        tappedCoordinate = coordinate
-        searchNearbyPlaces(at: coordinate)
-    }
+        // 여러 키워드로 병렬 검색 (먹고 마실 수 있는 모든 곳)
+        let keywords = [
+            "restaurant",    // 식당
+            "cafe",          // 카페
+            "food",          // 음식점
+            "bar",           // 바
+            "bakery",        // 베이커리
+            "coffee",        // 커피숍
+            "dessert",       // 디저트
+            "pizza",         // 피자
+            "burger",        // 버거
+            "pub",           // 펍
+            "brewery",       // 양조장
+            "chicken",       // 치킨
+            "bbq",           // 바베큐
+            "noodle",        // 국수/면
+            "sushi"          // 초밥/일식
+        ]
+        var allResults: [MKMapItem] = []
+        let group = DispatchGroup()
+        var hasError = false
+        var lastError: Error?
 
-    private func searchNearbyPlaces(at coordinate: CLLocationCoordinate2D) {
-        logger.info("주변 장소 검색 시작")
+        for keyword in keywords {
+            group.enter()
 
-        let request = MKLocalSearch.Request()
-        request.naturalLanguageQuery = "restaurant cafe food"
-        request.region = MKCoordinateRegion(
-            center: coordinate,
-            span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
-        )
+            let request = MKLocalSearch.Request()
+            request.naturalLanguageQuery = keyword
+            request.region = region
+            request.resultTypes = .pointOfInterest
 
-        let search = MKLocalSearch(request: request)
-        search.start { response, error in
-            if let error = error {
-                logger.error("주변 장소 검색 실패: \(error.localizedDescription)")
-                return
-            }
+            logger.info("🔍 '\(keyword)' 검색 시작")
 
-            if let response = response {
-                nearbyPlaces = response.mapItems
-                logger.info("주변 장소: \(response.mapItems.count)개")
-                if !nearbyPlaces.isEmpty {
-                    showNearbyPlaces = true
+            let search = MKLocalSearch(request: request)
+            search.start { response, error in
+                defer { group.leave() }
+
+                if let error = error {
+                    let nsError = error as NSError
+                    logger.error("❌ '\(keyword)' 검색 실패: \(error.localizedDescription) (code: \(nsError.code))")
+                    hasError = true
+                    lastError = error
+                    return
+                }
+
+                if let response = response {
+                    logger.info("✅ '\(keyword)' 검색 성공: \(response.mapItems.count)개")
+                    allResults.append(contentsOf: response.mapItems)
                 }
             }
         }
-    }
 
-    private func selectNearbyPlace(_ mapItem: MKMapItem) {
-        logger.info("주변 장소 선택: \(mapItem.name ?? "이름 없음")")
+        group.notify(queue: .main) { [self] in
+            isPOISearching = false
 
-        selectedCoordinate = mapItem.placemark.coordinate
-        selectedMapItem = mapItem
-        temporaryPin = mapItem.placemark.coordinate
+            // 네트워크 오류 발생 시 재시도
+            if hasError, let error = lastError {
+                let nsError = error as NSError
+                if nsError.domain == "MKErrorDomain" && nsError.code == 4 && retryCount < 3 {
+                    logger.warning("⚠️ 네트워크 오류 - 1초 후 재시도...")
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                        self.searchNearbyPOIs(in: region, retryCount: retryCount + 1)
+                    }
+                    return
+                } else {
+                    logger.error("❌ 검색 포기 (최대 재시도 횟수 초과 또는 다른 오류)")
+                }
+            }
 
-        // 선택한 위치로 지도 이동
-        position = .region(MKCoordinateRegion(
-            center: mapItem.placemark.coordinate,
-            span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-        ))
+            if !allResults.isEmpty {
+                logger.info("✅ 전체 검색 완료! 원본 결과: \(allResults.count)개")
 
-        showNearbyPlaces = false
-        showingAddSheet = true
+                // 기존 POI와 새로운 POI를 합치고 중복 제거
+                var combinedPOIs = nearbyPOIs + allResults
+                var uniquePOIs: [MKMapItem] = []
+                var seenCoordinates = Set<String>()
+
+                for item in combinedPOIs {
+                    if let coord = item.placemark.location?.coordinate {
+                        let key = "\(coord.latitude),\(coord.longitude)"
+                        if !seenCoordinates.contains(key) {
+                            seenCoordinates.insert(key)
+                            uniquePOIs.append(item)
+                        }
+                    }
+                }
+
+                nearbyPOIs = uniquePOIs
+                logger.info("✅ nearbyPOIs 배열 업데이트 완료: \(nearbyPOIs.count)개 (중복 제거 후)")
+            } else {
+                logger.warning("⚠️ 모든 검색이 실패하거나 결과가 없습니다")
+            }
+        }
     }
 }
 
@@ -326,6 +376,22 @@ struct TemporaryPinView: View {
             .font(.system(size: 40))
             .foregroundStyle(.orange)
             .shadow(radius: 3)
+    }
+}
+
+struct NearbyPOIPinView: View {
+    let mapItem: MKMapItem
+    let onTap: () -> Void
+
+    var body: some View {
+        VStack(spacing: 2) {
+            Image(systemName: "fork.knife.circle.fill")
+                .font(.system(size: 30))
+                .foregroundStyle(.green)
+                .background(Circle().fill(.white))
+                .shadow(radius: 2)
+        }
+        .onTapGesture(perform: onTap)
     }
 }
 
@@ -511,98 +577,178 @@ struct SearchResultsView: View {
     }
 }
 
-// MARK: - NearbyPlacesView
-struct NearbyPlacesView: View {
-    let places: [MKMapItem]
-    let tappedCoordinate: CLLocationCoordinate2D?
-    let onSelect: (MKMapItem) -> Void
-    let onDismiss: () -> Void
+// MARK: - POIDetailView
+struct POIDetailView: View {
+    let mapItem: MKMapItem
+    let onAddRestaurant: () -> Void
+    @Environment(\.dismiss) private var dismiss
+    @State private var isLoading = true
+    @State private var hasError = false
 
     var body: some View {
         NavigationStack {
-            VStack(spacing: 0) {
-                // 안내 메시지
-                HStack {
-                    Image(systemName: "info.circle.fill")
-                        .foregroundStyle(.blue)
-                    Text("장소를 선택하여 식당으로 저장하세요")
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
-                    Spacer()
-                }
-                .padding()
-                .background(.blue.opacity(0.1))
-
-                Divider()
-
-                // 주변 장소 리스트
-                if places.isEmpty {
-                    VStack(spacing: 16) {
-                        Image(systemName: "map.circle")
-                            .font(.system(size: 60))
-                            .foregroundStyle(.gray)
-                        Text("주변에 장소가 없습니다")
-                            .font(.headline)
-                            .foregroundStyle(.secondary)
-                        Text("다른 위치를 선택해보세요")
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .padding()
+            Group {
+                if hasError {
+                    // 오류 발생 시
+                    errorView
+                } else if isLoading {
+                    // 로딩 중
+                    loadingView
                 } else {
-                    List(places, id: \.self) { item in
-                        Button {
-                            onSelect(item)
-                        } label: {
-                            VStack(alignment: .leading, spacing: 4) {
-                                Text(item.name ?? "이름 없음")
-                                    .font(.headline)
-                                    .foregroundStyle(.primary)
-
-                                if let address = item.placemark.title {
-                                    Text(address)
-                                        .font(.subheadline)
-                                        .foregroundStyle(.secondary)
-                                }
-
-                                if let category = item.pointOfInterestCategory?.rawValue {
-                                    Text(category)
-                                        .font(.caption)
-                                        .padding(.horizontal, 8)
-                                        .padding(.vertical, 2)
-                                        .background(.green.opacity(0.1))
-                                        .foregroundStyle(.green)
-                                        .clipShape(Capsule())
-                                }
-
-                                if let phone = item.phoneNumber {
-                                    HStack {
-                                        Image(systemName: "phone.fill")
-                                            .font(.caption)
-                                        Text(phone)
-                                            .font(.caption)
-                                    }
-                                    .foregroundStyle(.secondary)
-                                }
-                            }
-                            .padding(.vertical, 4)
-                        }
-                    }
+                    // 정상 표시
+                    contentView
                 }
             }
-            .navigationTitle("주변 장소 \(places.count)개")
+            .navigationTitle("장소 정보")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        onDismiss()
+                        dismiss()
                     } label: {
                         Image(systemName: "xmark.circle.fill")
                             .foregroundStyle(.gray)
                     }
                 }
             }
+            .onAppear {
+                // 데이터 검증
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    withAnimation {
+                        // 최소한의 정보가 있는지 확인
+                        if mapItem.name == nil && mapItem.placemark.title == nil {
+                            hasError = true
+                        }
+                        isLoading = false
+                    }
+                }
+            }
+        }
+    }
+
+    private var loadingView: some View {
+        VStack(spacing: 20) {
+            ProgressView()
+                .scaleEffect(1.5)
+            Text("장소 정보를 불러오는 중...")
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+
+    private var errorView: some View {
+        VStack(spacing: 24) {
+            Image(systemName: "exclamationmark.triangle.fill")
+                .font(.system(size: 60))
+                .foregroundStyle(.orange)
+
+            VStack(spacing: 8) {
+                Text("정보를 불러올 수 없습니다")
+                    .font(.headline)
+
+                Text("지도를 이동하거나 다른 장소를 선택한 후\n다시 시도해주세요")
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+                    .multilineTextAlignment(.center)
+            }
+
+            Button {
+                dismiss()
+            } label: {
+                HStack {
+                    Image(systemName: "arrow.counterclockwise")
+                    Text("닫기")
+                }
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(.blue)
+                .foregroundStyle(.white)
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+            }
+            .padding(.horizontal, 40)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .padding()
+    }
+
+    private var contentView: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 20) {
+                // 장소 이름
+                VStack(alignment: .leading, spacing: 8) {
+                    Text(mapItem.name ?? "이름 없음")
+                        .font(.title2)
+                        .fontWeight(.bold)
+
+                    if let category = mapItem.pointOfInterestCategory?.rawValue {
+                        Text(category)
+                            .font(.subheadline)
+                            .padding(.horizontal, 12)
+                            .padding(.vertical, 4)
+                            .background(.blue.opacity(0.1))
+                            .foregroundStyle(.blue)
+                            .clipShape(Capsule())
+                    }
+                }
+                .padding(.horizontal)
+
+                Divider()
+
+                // 주소
+                if let address = mapItem.placemark.title {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Label("주소", systemImage: "location.fill")
+                            .font(.headline)
+                        Text(address)
+                            .font(.body)
+                            .foregroundStyle(.secondary)
+                    }
+                    .padding(.horizontal)
+                }
+
+                // 전화번호
+                if let phone = mapItem.phoneNumber {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Label("전화번호", systemImage: "phone.fill")
+                            .font(.headline)
+                        Link(phone, destination: URL(string: "tel:\(phone.filter { !$0.isWhitespace && $0 != "-" })")!)
+                            .font(.body)
+                    }
+                    .padding(.horizontal)
+                }
+
+                // URL
+                if let url = mapItem.url {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Label("웹사이트", systemImage: "safari.fill")
+                            .font(.headline)
+                        Link(url.absoluteString, destination: url)
+                            .font(.body)
+                            .lineLimit(1)
+                    }
+                    .padding(.horizontal)
+                }
+
+                Spacer(minLength: 20)
+
+                // 식당으로 추가 버튼
+                Button {
+                    onAddRestaurant()
+                } label: {
+                    HStack {
+                        Image(systemName: "plus.circle.fill")
+                        Text("내 식당 목록에 추가")
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                }
+                .padding(.horizontal)
+            }
+            .padding(.vertical)
         }
     }
 }
