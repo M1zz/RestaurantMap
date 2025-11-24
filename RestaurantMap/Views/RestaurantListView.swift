@@ -86,7 +86,18 @@ struct RestaurantListView: View {
             }
             .sheet(isPresented: $showingDetail) {
                 if let restaurant = selectedRestaurant {
-                    RestaurantDetailView(restaurant: restaurant)
+                    RestaurantDetailViewWrapper(restaurant: restaurant)
+                } else {
+                    LoadingSheetView()
+                }
+            }
+            .onChange(of: showingDetail) { _, isShowing in
+                // Sheet가 닫힐 때 선택된 식당 초기화
+                if !isShowing {
+                    // 약간의 딜레이를 두고 초기화 (애니메이션 완료 대기)
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        selectedRestaurant = nil
+                    }
                 }
             }
             .overlay {
@@ -215,6 +226,82 @@ struct RestaurantRow: View {
             }
         }
         .padding(.vertical, 4)
+    }
+}
+
+// MARK: - Restaurant Detail Wrapper with Loading State
+struct RestaurantDetailViewWrapper: View {
+    let restaurant: Restaurant
+    @State private var isLoading = true
+    @State private var hasError = false
+
+    var body: some View {
+        Group {
+            if hasError {
+                ErrorSheetView()
+            } else if isLoading {
+                LoadingSheetView()
+            } else {
+                RestaurantDetailView(restaurant: restaurant)
+            }
+        }
+        .onAppear {
+            // 데이터 검증
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                withAnimation {
+                    // Restaurant 객체가 유효한지 확인
+                    if restaurant.name.isEmpty {
+                        hasError = true
+                    }
+                    isLoading = false
+                }
+            }
+        }
+    }
+}
+
+// MARK: - Loading Sheet View
+struct LoadingSheetView: View {
+    var body: some View {
+        VStack(spacing: 20) {
+            ProgressView()
+                .scaleEffect(1.5)
+            Text("불러오는 중...")
+                .font(.headline)
+                .foregroundStyle(.secondary)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color(.systemBackground))
+    }
+}
+
+// MARK: - Error Sheet View
+struct ErrorSheetView: View {
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        NavigationStack {
+            VStack(spacing: 20) {
+                Image(systemName: "exclamationmark.triangle.fill")
+                    .font(.system(size: 60))
+                    .foregroundStyle(.orange)
+
+                Text("데이터를 불러올 수 없습니다")
+                    .font(.headline)
+
+                Text("다시 시도해주세요")
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+
+                Button("닫기") {
+                    dismiss()
+                }
+                .buttonStyle(.borderedProminent)
+            }
+            .padding()
+            .navigationTitle("오류")
+            .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 

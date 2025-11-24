@@ -16,6 +16,8 @@
 		1A00000D /* RestaurantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A00000C /* RestaurantDetailView.swift */; };
 		1A00000F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A00000E /* Assets.xcassets */; };
 		1A000011 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A000010 /* Preview Assets.xcassets */; };
+		1A00001B /* TasteProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A00001A /* TasteProfile.swift */; };
+		1A00001D /* TasteProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A00001C /* TasteProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		1A00000C /* RestaurantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailView.swift; sourceTree = "<group>"; };
 		1A00000E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A000010 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1A00001A /* TasteProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasteProfile.swift; sourceTree = "<group>"; };
+		1A00001C /* TasteProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasteProfileView.swift; sourceTree = "<group>"; };
 		1AFFFFFD /* RestaurantMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -67,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				1A000004 /* Restaurant.swift */,
+				1A00001A /* TasteProfile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -78,6 +83,7 @@
 				1A000008 /* RestaurantListView.swift */,
 				1A00000A /* AddRestaurantView.swift */,
 				1A00000C /* RestaurantDetailView.swift */,
+				1A00001C /* TasteProfileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,6 +180,8 @@
 				1A000009 /* RestaurantListView.swift in Sources */,
 				1A00000B /* AddRestaurantView.swift in Sources */,
 				1A00000D /* RestaurantDetailView.swift in Sources */,
+				1A00001B /* TasteProfile.swift in Sources */,
+				1A00001D /* TasteProfileView.swift in Sources */,
 				1A000001 /* RestaurantMapApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

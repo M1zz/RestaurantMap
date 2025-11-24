@@ -26,6 +26,7 @@ struct MapView: View {
     @State private var searchedRegions: Set<String> = []
     @State private var isPOISearching = false
     @State private var lastSearchTime: Date?
+    @State private var showSavedOnly = false
 
     private let logger = Logger(subsystem: "com.restaurantmap", category: "MapView")
     
@@ -36,6 +37,15 @@ struct MapView: View {
                 floatingButton
             }
             .navigationTitle("식당 지도")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Toggle(isOn: $showSavedOnly) {
+                        Label("저장된 식당만", systemImage: showSavedOnly ? "bookmark.fill" : "bookmark")
+                    }
+                    .toggleStyle(.button)
+                    .tint(showSavedOnly ? .blue : .gray)
+                }
+            }
             .searchable(text: $searchText, prompt: "식당이나 장소 검색")
             .onSubmit(of: .search) {
                 performSearch()
@@ -114,24 +124,26 @@ struct MapView: View {
                 }
             }
 
-            // 주변 POI 마커 표시
-            ForEach(nearbyPOIs, id: \.self) { item in
-                if let coord = item.placemark.location?.coordinate {
-                    Annotation(item.name ?? "장소", coordinate: coord) {
-                        NearbyPOIPinView(mapItem: item) {
-                            logger.info("🎯 POI 마커 탭됨: \(item.name ?? "이름없음")")
-                            selectedPOI = item
-                            showingPOIDetail = true
+            // 주변 POI 마커 표시 (저장된 식당만 보기가 꺼져있을 때만)
+            if !showSavedOnly {
+                ForEach(nearbyPOIs, id: \.self) { item in
+                    if let coord = item.placemark.location?.coordinate {
+                        Annotation(item.name ?? "장소", coordinate: coord) {
+                            NearbyPOIPinView(mapItem: item) {
+                                logger.info("🎯 POI 마커 탭됨: \(item.name ?? "이름없음")")
+                                selectedPOI = item
+                                showingPOIDetail = true
+                            }
                         }
                     }
                 }
-            }
 
-            ForEach(searchResults, id: \.self) { item in
-                if let coord = item.placemark.location?.coordinate {
-                    Annotation(item.name ?? "장소", coordinate: coord) {
-                        SearchResultPinView(mapItem: item) {
-                            selectSearchResult(item)
+                ForEach(searchResults, id: \.self) { item in
+                    if let coord = item.placemark.location?.coordinate {
+                        Annotation(item.name ?? "장소", coordinate: coord) {
+                            SearchResultPinView(mapItem: item) {
+                                selectSearchResult(item)
+                            }
                         }
                     }
                 }

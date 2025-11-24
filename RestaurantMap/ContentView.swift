@@ -19,11 +19,17 @@ struct ContentView: View {
                     Label("목록", systemImage: "list.bullet")
                 }
                 .tag(1)
+
+            TasteProfileView()
+                .tabItem {
+                    Label("취향", systemImage: "person.crop.circle")
+                }
+                .tag(2)
         }
     }
 }
 
 #Preview {
     ContentView()
-        .modelContainer(for: Restaurant.self, inMemory: true)
+        .modelContainer(for: [Restaurant.self, TasteProfile.self], inMemory: true)
 }

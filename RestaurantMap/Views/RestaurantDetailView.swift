@@ -121,6 +121,73 @@ struct RestaurantDetailView: View {
                         }
                     }
                 }
+
+                // 취향 프로필 섹션
+                Section {
+                    VStack(spacing: 16) {
+                        HStack {
+                            Text("맛 취향 프로필")
+                                .font(.headline)
+                            Spacer()
+                            if restaurant.hasTasteProfile && !isEditing {
+                                Text("✓ 평가됨")
+                                    .font(.caption)
+                                    .foregroundStyle(.green)
+                            }
+                        }
+
+                        if restaurant.hasTasteProfile && !isEditing {
+                            // 레이더 차트 표시
+                            RadarChartView(data: restaurant.tasteRadarData)
+                                .frame(height: 250)
+                        }
+
+                        if isEditing {
+                            VStack(spacing: 12) {
+                                TasteSliderRow(title: "🌶️ 맵기", subtitle: "순한 ↔ 매운", value: Binding(
+                                    get: { restaurant.spicy ?? 5.0 },
+                                    set: { restaurant.spicy = $0 }
+                                ))
+                                TasteSliderRow(title: "💪 진한맛", subtitle: "담백 ↔ 진한", value: Binding(
+                                    get: { restaurant.boldness ?? 5.0 },
+                                    set: { restaurant.boldness = $0 }
+                                ))
+                                TasteSliderRow(title: "🍯 단맛", subtitle: "안좋아함 ↔ 좋아함", value: Binding(
+                                    get: { restaurant.sweetness ?? 5.0 },
+                                    set: { restaurant.sweetness = $0 }
+                                ))
+                                TasteSliderRow(title: "🧂 짠맛", subtitle: "싱거움 ↔ 짭짤", value: Binding(
+                                    get: { restaurant.saltiness ?? 5.0 },
+                                    set: { restaurant.saltiness = $0 }
+                                ))
+                                TasteSliderRow(title: "🥓 기름진", subtitle: "담백 ↔ 고소", value: Binding(
+                                    get: { restaurant.richness ?? 5.0 },
+                                    set: { restaurant.richness = $0 }
+                                ))
+                                TasteSliderRow(title: "🌿 본연의맛", subtitle: "양념 ↔ 재료맛", value: Binding(
+                                    get: { restaurant.naturalTaste ?? 5.0 },
+                                    set: { restaurant.naturalTaste = $0 }
+                                ))
+                                TasteSliderRow(title: "✨ 질감", subtitle: "부드러움 ↔ 쫄깃", value: Binding(
+                                    get: { restaurant.texture ?? 5.0 },
+                                    set: { restaurant.texture = $0 }
+                                ))
+                                TasteSliderRow(title: "🔥 조리법", subtitle: "날것 ↔ 구이", value: Binding(
+                                    get: { restaurant.cooking ?? 5.0 },
+                                    set: { restaurant.cooking = $0 }
+                                ))
+                            }
+                        } else if !restaurant.hasTasteProfile {
+                            Text("이 식당의 맛 취향을 평가하려면 '편집'을 눌러주세요")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                                .frame(maxWidth: .infinity, alignment: .center)
+                                .padding(.vertical, 8)
+                        }
+                    }
+                } header: {
+                    Text("이 식당은 어땠나요?")
+                }
                 
                 if !isEditing {
                     Section {
@@ -165,6 +232,42 @@ struct RestaurantDetailView: View {
     private func deleteRestaurant() {
         modelContext.delete(restaurant)
         dismiss()
+    }
+}
+
+// MARK: - Taste Slider Row
+struct TasteSliderRow: View {
+    let title: String
+    let subtitle: String
+    @Binding var value: Double
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack {
+                Text(title)
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
+                Spacer()
+                Text("\(Int(value))")
+                    .font(.subheadline)
+                    .fontWeight(.bold)
+                    .foregroundStyle(.blue)
+            }
+
+            Slider(value: $value, in: 0...10, step: 1)
+                .tint(.blue)
+
+            HStack {
+                Text(subtitle.components(separatedBy: " ↔ ").first ?? "")
+                    .font(.caption2)
+                    .foregroundStyle(.secondary)
+                Spacer()
+                Text(subtitle.components(separatedBy: " ↔ ").last ?? "")
+                    .font(.caption2)
+                    .foregroundStyle(.secondary)
+            }
+        }
+        .padding(.vertical, 4)
     }
 }
 
