@@ -17,17 +17,11 @@ final class Restaurant {
     var top6Rank: Int?
     var categoryIcon: String
 
-    // 맛 취향 프로필 (0-10, nil = 평가하지 않음)
-    var spicy: Double?
-    var boldness: Double?
-    var sweetness: Double?
-    var saltiness: Double?
-    var richness: Double?
-    var naturalTaste: Double?
-    var texture: Double?
-    var cooking: Double?
+    // 방문 기록들
+    @Relationship(deleteRule: .cascade, inverse: \Visit.restaurant)
+    var visits: [Visit]?
 
-    init(name: String, address: String, latitude: Double, longitude: Double, notes: String = "", rating: Int = 0, visitDate: Date = Date(), category: String = "", phoneNumber: String = "", isTop6: Bool = false, top6Rank: Int? = nil, categoryIcon: String = "fork.knife", spicy: Double? = nil, boldness: Double? = nil, sweetness: Double? = nil, saltiness: Double? = nil, richness: Double? = nil, naturalTaste: Double? = nil, texture: Double? = nil, cooking: Double? = nil) {
+    init(name: String, address: String, latitude: Double, longitude: Double, notes: String = "", rating: Int = 0, visitDate: Date = Date(), category: String = "", phoneNumber: String = "", isTop6: Bool = false, top6Rank: Int? = nil, categoryIcon: String = "fork.knife") {
         self.name = name
         self.address = address
         self.latitude = latitude
@@ -40,37 +34,87 @@ final class Restaurant {
         self.isTop6 = isTop6
         self.top6Rank = top6Rank
         self.categoryIcon = categoryIcon
-        self.spicy = spicy
-        self.boldness = boldness
-        self.sweetness = sweetness
-        self.saltiness = saltiness
-        self.richness = richness
-        self.naturalTaste = naturalTaste
-        self.texture = texture
-        self.cooking = cooking
+        self.visits = []
     }
 
     var coordinate: CLLocationCoordinate2D {
         CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
 
-    // 레이더 차트용 데이터 (평가된 값만)
-    var tasteRadarData: [(String, Double, String)] {
-        var data: [(String, Double, String)] = []
-        if let spicy = spicy { data.append(("맵기", spicy, "순한 ↔ 매운")) }
-        if let boldness = boldness { data.append(("진한맛", boldness, "담백 ↔ 진한")) }
-        if let sweetness = sweetness { data.append(("단맛", sweetness, "안좋아함 ↔ 좋아함")) }
-        if let saltiness = saltiness { data.append(("짠맛", saltiness, "싱거움 ↔ 짭짤")) }
-        if let richness = richness { data.append(("기름진", richness, "담백 ↔ 고소")) }
-        if let naturalTaste = naturalTaste { data.append(("본연의맛", naturalTaste, "양념 ↔ 재료맛")) }
-        if let texture = texture { data.append(("질감", texture, "부드러움 ↔ 쫄깃")) }
-        if let cooking = cooking { data.append(("조리법", cooking, "날것 ↔ 구이")) }
-        return data
+    // 방문 횟수
+    var visitCount: Int {
+        visits?.count ?? 0
     }
 
-    // 취향이 평가되었는지 확인
-    var hasTasteProfile: Bool {
-        spicy != nil || boldness != nil || sweetness != nil || saltiness != nil ||
-        richness != nil || naturalTaste != nil || texture != nil || cooking != nil
+    // 최근 방문일
+    var lastVisitDate: Date? {
+        visits?.sorted(by: { $0.visitDate > $1.visitDate }).first?.visitDate
+    }
+
+    // 평균 별점
+    var averageRating: Double {
+        guard let visits = visits, !visits.isEmpty else { return Double(rating) }
+        let sum = visits.reduce(0) { $0 + $1.rating }
+        return Double(sum) / Double(visits.count)
+    }
+
+    // 총평 - 평균 맛 강도
+    var averageIntensity: [(String, Double)] {
+        guard let visits = visits, !visits.isEmpty else { return [] }
+
+        let validVisits = visits.filter { $0.hasTasteProfile }
+        guard !validVisits.isEmpty else { return [] }
+
+        let avgSpicy = validVisits.compactMap { $0.spicy }.average
+        let avgBoldness = validVisits.compactMap { $0.boldness }.average
+        let avgSweetness = validVisits.compactMap { $0.sweetness }.average
+        let avgSaltiness = validVisits.compactMap { $0.saltiness }.average
+        let avgRichness = validVisits.compactMap { $0.richness }.average
+        let avgNaturalTaste = validVisits.compactMap { $0.naturalTaste }.average
+
+        return [
+            ("맵기", avgSpicy),
+            ("진한맛", avgBoldness),
+            ("단맛", avgSweetness),
+            ("짠맛", avgSaltiness),
+            ("기름진", avgRichness),
+            ("본연의맛", avgNaturalTaste)
+        ]
+    }
+
+    // 총평 - 평균 적절함
+    var averageAppropriateness: [(String, Double)] {
+        guard let visits = visits, !visits.isEmpty else { return [] }
+
+        let validVisits = visits.filter { $0.hasTasteProfile }
+        guard !validVisits.isEmpty else { return [] }
+
+        let avgSpicy = validVisits.compactMap { $0.spicyAppropriate }.map { Double($0) }.average * 2
+        let avgBoldness = validVisits.compactMap { $0.boldnessAppropriate }.map { Double($0) }.average * 2
+        let avgSweetness = validVisits.compactMap { $0.sweetnessAppropriate }.map { Double($0) }.average * 2
+        let avgSaltiness = validVisits.compactMap { $0.saltinessAppropriate }.map { Double($0) }.average * 2
+        let avgRichness = validVisits.compactMap { $0.richnessAppropriate }.map { Double($0) }.average * 2
+        let avgNaturalTaste = validVisits.compactMap { $0.naturalTasteAppropriate }.map { Double($0) }.average * 2
+
+        return [
+            ("맵기", avgSpicy),
+            ("진한맛", avgBoldness),
+            ("단맛", avgSweetness),
+            ("짠맛", avgSaltiness),
+            ("기름진", avgRichness),
+            ("본연의맛", avgNaturalTaste)
+        ]
+    }
+
+    // 방문 기록이 있는지 확인
+    var hasVisits: Bool {
+        !(visits?.isEmpty ?? true)
+    }
+}
+
+// 배열 평균 계산 확장
+extension Array where Element == Double {
+    var average: Double {
+        isEmpty ? 5.0 : reduce(0, +) / Double(count)
     }
 }

@@ -18,6 +18,9 @@
 		1A000011 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A000010 /* Preview Assets.xcassets */; };
 		1A00001B /* TasteProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A00001A /* TasteProfile.swift */; };
 		1A00001D /* TasteProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A00001C /* TasteProfileView.swift */; };
+		1A00001F /* Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A00001E /* Visit.swift */; };
+		1A000021 /* AddVisitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000020 /* AddVisitView.swift */; };
+		1A000023 /* VisitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000022 /* VisitDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		1A000010 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1A00001A /* TasteProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasteProfile.swift; sourceTree = "<group>"; };
 		1A00001C /* TasteProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasteProfileView.swift; sourceTree = "<group>"; };
+		1A00001E /* Visit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visit.swift; sourceTree = "<group>"; };
+		1A000020 /* AddVisitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVisitView.swift; sourceTree = "<group>"; };
+		1A000022 /* VisitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitDetailView.swift; sourceTree = "<group>"; };
 		1AFFFFFD /* RestaurantMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -72,6 +78,7 @@
 			children = (
 				1A000004 /* Restaurant.swift */,
 				1A00001A /* TasteProfile.swift */,
+				1A00001E /* Visit.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -84,6 +91,8 @@
 				1A00000A /* AddRestaurantView.swift */,
 				1A00000C /* RestaurantDetailView.swift */,
 				1A00001C /* TasteProfileView.swift */,
+				1A000020 /* AddVisitView.swift */,
+				1A000022 /* VisitDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,6 +191,9 @@
 				1A00000D /* RestaurantDetailView.swift in Sources */,
 				1A00001B /* TasteProfile.swift in Sources */,
 				1A00001D /* TasteProfileView.swift in Sources */,
+				1A00001F /* Visit.swift in Sources */,
+				1A000021 /* AddVisitView.swift in Sources */,
+				1A000023 /* VisitDetailView.swift in Sources */,
 				1A000001 /* RestaurantMapApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

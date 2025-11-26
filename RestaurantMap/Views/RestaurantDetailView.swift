@@ -1,72 +1,128 @@
 import SwiftUI
 import MapKit
 import SwiftData
+import CoreLocation
+import OSLog
 
 struct RestaurantDetailView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
     @Bindable var restaurant: Restaurant
-    
-    @State private var isEditing = false
+
     @State private var showingDeleteAlert = false
-    
+    @State private var showingAddVisit = false
+    @State private var selectedVisit: Visit?
+
+    private let logger = Logger(subsystem: "com.restaurantmap", category: "RestaurantDetail")
+
+    var sortedVisits: [Visit] {
+        (restaurant.visits ?? []).sorted(by: { $0.visitDate > $1.visitDate })
+    }
+
     var body: some View {
         NavigationStack {
             Form {
-                Section("기본 정보") {
-                    if isEditing {
-                        TextField("식당 이름", text: $restaurant.name)
-                        TextField("주소", text: $restaurant.address)
-                        TextField("카테고리", text: $restaurant.category)
-                        TextField("전화번호", text: $restaurant.phoneNumber)
-                    } else {
-                        LabeledContent("식당 이름", value: restaurant.name)
-                        LabeledContent("주소", value: restaurant.address)
-                        if !restaurant.category.isEmpty {
-                            LabeledContent("카테고리", value: restaurant.category)
+                
+
+                Section("방문 통계") {
+                    LabeledContent("총 방문 횟수", value: "\(restaurant.visitCount)회")
+
+                    if let lastVisit = restaurant.lastVisitDate {
+                        LabeledContent("최근 방문일") {
+                            Text(lastVisit, format: .dateTime.year().month().day())
                         }
-                        if !restaurant.phoneNumber.isEmpty {
-                            LabeledContent("전화번호") {
-                                Link(restaurant.phoneNumber, destination: URL(string: "tel://\(restaurant.phoneNumber)")!)
+                    }
+
+                    if restaurant.visitCount > 0 {
+                        LabeledContent("평균 별점") {
+                            HStack(spacing: 2) {
+                                ForEach(0..<5) { index in
+                                    Image(systemName: index < Int(restaurant.averageRating.rounded()) ? "star.fill" : "star")
+                                        .foregroundStyle(index < Int(restaurant.averageRating.rounded()) ? .yellow : .gray)
+                                        .font(.system(size: 14))
+                                }
+                                Text(String(format: "%.1f", restaurant.averageRating))
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
+                    }
+                }
+
+                // 방문 기록 목록
+                Section {
+                    if sortedVisits.isEmpty {
+                        Button {
+                            showingAddVisit = true
+                        } label: {
+                            HStack {
+                                Image(systemName: "plus.circle.fill")
+                                Text("첫 방문 기록 추가하기")
+                                Spacer()
+                            }
+                            .foregroundStyle(.blue)
+                        }
+                    } else {
+                        ForEach(sortedVisits) { visit in
+                            VisitRowView(visit: visit)
+                                .contentShape(Rectangle())
+                                .onTapGesture {
+                                    logger.info("🔵 [방문 기록 탭] Date: \(visit.visitDate.formatted()), HasProfile: \(visit.hasTasteProfile)")
+                                    selectedVisit = visit
+                                }
+                        }
+                        .onDelete(perform: deleteVisits)
+                    }
+                } header: {
+                    HStack {
+                        Text("방문 기록")
+                        Spacer()
+                        if !sortedVisits.isEmpty {
+                            Button {
+                                showingAddVisit = true
+                            } label: {
+                                Image(systemName: "plus.circle.fill")
                                     .foregroundStyle(.blue)
                             }
                         }
                     }
                 }
+
+                // 총평 (평균 레이더 차트)
+                if !restaurant.averageIntensity.isEmpty {
+                    Section {
+                        VStack(spacing: 12) {
+                            HStack {
+                                Text("총평 (전체 방문 평균)")
+                                    .font(.headline)
+                                Spacer()
+                                Text("\(restaurant.visitCount)회 방문")
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                            }
+
+                            AverageRadarChartView(
+                                intensityData: restaurant.averageIntensity,
+                                appropriatenessData: restaurant.averageAppropriateness
+                            )
+                            .frame(height: 280)
+                        }
+                    } header: {
+                        Text("이 식당은 전반적으로...")
+                    }
+                }
+
                 
-                Section("방문 정보") {
-                    if isEditing {
-                        DatePicker("방문 날짜", selection: $restaurant.visitDate, displayedComponents: .date)
-                        
-                        VStack(alignment: .leading) {
-                            Text("별점")
-                                .font(.subheadline)
-                                .foregroundStyle(.secondary)
-                            
-                            HStack(spacing: 8) {
-                                ForEach(1..<6) { index in
-                                    Image(systemName: index <= restaurant.rating ? "star.fill" : "star")
-                                        .foregroundStyle(index <= restaurant.rating ? .yellow : .gray)
-                                        .font(.system(size: 24))
-                                        .onTapGesture {
-                                            restaurant.rating = index
-                                        }
-                                }
-                            }
-                        }
-                    } else {
-                        LabeledContent("방문 날짜") {
-                            Text(restaurant.visitDate, format: .dateTime.year().month().day())
-                        }
-                        
-                        LabeledContent("별점") {
-                            HStack(spacing: 2) {
-                                ForEach(0..<5) { index in
-                                    Image(systemName: index < restaurant.rating ? "star.fill" : "star")
-                                        .foregroundStyle(index < restaurant.rating ? .yellow : .gray)
-                                        .font(.system(size: 14))
-                                }
-                            }
+                Section("기본 정보") {
+                    LabeledContent("식당 이름", value: restaurant.name)
+                    LabeledContent("주소", value: restaurant.address)
+                    if !restaurant.category.isEmpty {
+                        LabeledContent("카테고리", value: restaurant.category)
+                    }
+                    if !restaurant.phoneNumber.isEmpty {
+                        LabeledContent("전화번호") {
+                            Link(restaurant.phoneNumber, destination: URL(string: "tel://\(restaurant.phoneNumber)")!)
+                                .foregroundStyle(.blue)
                         }
                     }
                 }
@@ -89,17 +145,10 @@ struct RestaurantDetailView: View {
                     }
                     .frame(height: 200)
                     .listRowInsets(EdgeInsets())
-                    
-                    LabeledContent("좌표") {
-                        VStack(alignment: .trailing) {
-                            Text("위도: \(restaurant.latitude, specifier: "%.6f")")
-                            Text("경도: \(restaurant.longitude, specifier: "%.6f")")
-                        }
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                    }
-                    
-                    Link(destination: URL(string: "http://maps.apple.com/?ll=\(restaurant.latitude),\(restaurant.longitude)")!) {
+
+                    Button {
+                        openInAppleMaps()
+                    } label: {
                         HStack {
                             Text("Apple 지도에서 열기")
                             Spacer()
@@ -107,98 +156,15 @@ struct RestaurantDetailView: View {
                         }
                     }
                 }
-                
-                Section("메모") {
-                    if isEditing {
-                        TextEditor(text: $restaurant.notes)
-                            .frame(minHeight: 100)
-                    } else {
-                        if restaurant.notes.isEmpty {
-                            Text("메모 없음")
-                                .foregroundStyle(.secondary)
-                        } else {
-                            Text(restaurant.notes)
-                        }
-                    }
-                }
 
-                // 취향 프로필 섹션
                 Section {
-                    VStack(spacing: 16) {
+                    Button(role: .destructive) {
+                        showingDeleteAlert = true
+                    } label: {
                         HStack {
-                            Text("맛 취향 프로필")
-                                .font(.headline)
                             Spacer()
-                            if restaurant.hasTasteProfile && !isEditing {
-                                Text("✓ 평가됨")
-                                    .font(.caption)
-                                    .foregroundStyle(.green)
-                            }
-                        }
-
-                        if restaurant.hasTasteProfile && !isEditing {
-                            // 레이더 차트 표시
-                            RadarChartView(data: restaurant.tasteRadarData)
-                                .frame(height: 250)
-                        }
-
-                        if isEditing {
-                            VStack(spacing: 12) {
-                                TasteSliderRow(title: "🌶️ 맵기", subtitle: "순한 ↔ 매운", value: Binding(
-                                    get: { restaurant.spicy ?? 5.0 },
-                                    set: { restaurant.spicy = $0 }
-                                ))
-                                TasteSliderRow(title: "💪 진한맛", subtitle: "담백 ↔ 진한", value: Binding(
-                                    get: { restaurant.boldness ?? 5.0 },
-                                    set: { restaurant.boldness = $0 }
-                                ))
-                                TasteSliderRow(title: "🍯 단맛", subtitle: "안좋아함 ↔ 좋아함", value: Binding(
-                                    get: { restaurant.sweetness ?? 5.0 },
-                                    set: { restaurant.sweetness = $0 }
-                                ))
-                                TasteSliderRow(title: "🧂 짠맛", subtitle: "싱거움 ↔ 짭짤", value: Binding(
-                                    get: { restaurant.saltiness ?? 5.0 },
-                                    set: { restaurant.saltiness = $0 }
-                                ))
-                                TasteSliderRow(title: "🥓 기름진", subtitle: "담백 ↔ 고소", value: Binding(
-                                    get: { restaurant.richness ?? 5.0 },
-                                    set: { restaurant.richness = $0 }
-                                ))
-                                TasteSliderRow(title: "🌿 본연의맛", subtitle: "양념 ↔ 재료맛", value: Binding(
-                                    get: { restaurant.naturalTaste ?? 5.0 },
-                                    set: { restaurant.naturalTaste = $0 }
-                                ))
-                                TasteSliderRow(title: "✨ 질감", subtitle: "부드러움 ↔ 쫄깃", value: Binding(
-                                    get: { restaurant.texture ?? 5.0 },
-                                    set: { restaurant.texture = $0 }
-                                ))
-                                TasteSliderRow(title: "🔥 조리법", subtitle: "날것 ↔ 구이", value: Binding(
-                                    get: { restaurant.cooking ?? 5.0 },
-                                    set: { restaurant.cooking = $0 }
-                                ))
-                            }
-                        } else if !restaurant.hasTasteProfile {
-                            Text("이 식당의 맛 취향을 평가하려면 '편집'을 눌러주세요")
-                                .font(.caption)
-                                .foregroundStyle(.secondary)
-                                .frame(maxWidth: .infinity, alignment: .center)
-                                .padding(.vertical, 8)
-                        }
-                    }
-                } header: {
-                    Text("이 식당은 어땠나요?")
-                }
-                
-                if !isEditing {
-                    Section {
-                        Button(role: .destructive) {
-                            showingDeleteAlert = true
-                        } label: {
-                            HStack {
-                                Spacer()
-                                Text("식당 삭제")
-                                Spacer()
-                            }
+                            Text("식당 삭제")
+                            Spacer()
                         }
                     }
                 }
@@ -211,12 +177,6 @@ struct RestaurantDetailView: View {
                         dismiss()
                     }
                 }
-                
-                ToolbarItem(placement: .primaryAction) {
-                    Button(isEditing ? "완료" : "편집") {
-                        isEditing.toggle()
-                    }
-                }
             }
             .alert("식당 삭제", isPresented: $showingDeleteAlert) {
                 Button("취소", role: .cancel) { }
@@ -224,68 +184,236 @@ struct RestaurantDetailView: View {
                     deleteRestaurant()
                 }
             } message: {
-                Text("'\(restaurant.name)'을(를) 삭제하시겠습니까?")
+                Text("'\(restaurant.name)'과(와) 모든 방문 기록을 삭제하시겠습니까?")
+            }
+            .sheet(isPresented: $showingAddVisit) {
+                AddVisitView(restaurant: restaurant)
+            }
+            .sheet(item: $selectedVisit) { visit in
+                VisitDetailViewWrapper(visit: visit)
             }
         }
     }
-    
+
     private func deleteRestaurant() {
         modelContext.delete(restaurant)
         dismiss()
     }
+
+    private func deleteVisits(at offsets: IndexSet) {
+        for index in offsets {
+            modelContext.delete(sortedVisits[index])
+        }
+    }
+
+    private func openInAppleMaps() {
+        let coordinate = CLLocationCoordinate2D(
+            latitude: restaurant.latitude,
+            longitude: restaurant.longitude
+        )
+        let placemark = MKPlacemark(coordinate: coordinate)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = restaurant.name
+        mapItem.openInMaps(launchOptions: [
+            MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving
+        ])
+    }
 }
 
-// MARK: - Taste Slider Row
-struct TasteSliderRow: View {
-    let title: String
-    let subtitle: String
-    @Binding var value: Double
+// MARK: - Visit Row View
+struct VisitRowView: View {
+    let visit: Visit
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack {
-                Text(title)
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
+                Text(visit.visitDate, format: .dateTime.year().month().day())
+                    .font(.headline)
+
                 Spacer()
-                Text("\(Int(value))")
-                    .font(.subheadline)
-                    .fontWeight(.bold)
-                    .foregroundStyle(.blue)
+
+                HStack(spacing: 2) {
+                    ForEach(0..<5) { index in
+                        Image(systemName: index < visit.rating ? "star.fill" : "star")
+                            .foregroundStyle(index < visit.rating ? .yellow : .gray)
+                            .font(.system(size: 12))
+                    }
+                }
             }
 
-            Slider(value: $value, in: 0...10, step: 1)
-                .tint(.blue)
+            if !visit.notes.isEmpty {
+                Text(visit.notes)
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+                    .lineLimit(2)
+            }
 
-            HStack {
-                Text(subtitle.components(separatedBy: " ↔ ").first ?? "")
-                    .font(.caption2)
-                    .foregroundStyle(.secondary)
-                Spacer()
-                Text(subtitle.components(separatedBy: " ↔ ").last ?? "")
-                    .font(.caption2)
-                    .foregroundStyle(.secondary)
+            if visit.hasTasteProfile {
+                HStack(spacing: 4) {
+                    Image(systemName: "chart.pie.fill")
+                        .font(.caption2)
+                    Text("맛 평가됨")
+                        .font(.caption2)
+                }
+                .foregroundStyle(.green)
             }
         }
         .padding(.vertical, 4)
     }
 }
 
+// MARK: - Average Radar Chart View
+struct AverageRadarChartView: View {
+    let intensityData: [(String, Double)]
+    let appropriatenessData: [(String, Double)]
+
+    var body: some View {
+        VStack(spacing: 12) {
+            HStack(spacing: 20) {
+                HStack(spacing: 4) {
+                    Circle()
+                        .fill(.blue.opacity(0.3))
+                        .frame(width: 12, height: 12)
+                    Text("평균 맛 강도")
+                        .font(.caption)
+                }
+                HStack(spacing: 4) {
+                    Circle()
+                        .fill(.yellow.opacity(0.5))
+                        .frame(width: 12, height: 12)
+                    Text("평균 적절함")
+                        .font(.caption)
+                }
+            }
+
+            OverlappedRadarChart(
+                intensityData: intensityData,
+                appropriatenessData: appropriatenessData
+            )
+        }
+    }
+}
+
+// MARK: - Overlapped Radar Chart
+struct OverlappedRadarChart: View {
+    let intensityData: [(String, Double)]
+    let appropriatenessData: [(String, Double)]
+    let maxValue: Double = 10.0
+
+    var body: some View {
+        GeometryReader { geometry in
+            let center = CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2)
+            let radius = min(geometry.size.width, geometry.size.height) / 2 - 50
+
+            ZStack {
+                // 배경 그리드
+                ForEach(1...3, id: \.self) { level in
+                    hexagonPath(center: center, radius: radius * Double(level) / 3, sides: 6)
+                        .stroke(.gray.opacity(0.2), lineWidth: 1)
+                }
+
+                // 적절함 차트 (노란색)
+                if !appropriatenessData.isEmpty {
+                    hexagonDataPath(center: center, radius: radius, data: appropriatenessData)
+                        .fill(.yellow.opacity(0.3))
+                    hexagonDataPath(center: center, radius: radius, data: appropriatenessData)
+                        .stroke(.yellow.opacity(0.8), lineWidth: 2)
+                }
+
+                // 맛 강도 차트 (파란색)
+                if !intensityData.isEmpty {
+                    hexagonDataPath(center: center, radius: radius, data: intensityData)
+                        .fill(.blue.opacity(0.2))
+                    hexagonDataPath(center: center, radius: radius, data: intensityData)
+                        .stroke(.blue, lineWidth: 2)
+                }
+
+                // 축 선
+                ForEach(0..<6, id: \.self) { index in
+                    let angle = angleForIndex(index, total: 6)
+                    let endPoint = pointOnCircle(center: center, radius: radius, angle: angle)
+
+                    Path { path in
+                        path.move(to: center)
+                        path.addLine(to: endPoint)
+                    }
+                    .stroke(.gray.opacity(0.3), lineWidth: 1)
+                }
+
+                // 라벨
+                ForEach(0..<intensityData.count, id: \.self) { index in
+                    let angle = angleForIndex(index, total: 6)
+                    let labelRadius = radius + 30
+                    let point = pointOnCircle(center: center, radius: labelRadius, angle: angle)
+
+                    Text(intensityData[index].0)
+                        .font(.caption)
+                        .fontWeight(.semibold)
+                        .position(point)
+                }
+            }
+        }
+    }
+
+    private func hexagonPath(center: CGPoint, radius: CGFloat, sides: Int) -> Path {
+        var path = Path()
+        for i in 0..<sides {
+            let angle = angleForIndex(i, total: sides)
+            let point = pointOnCircle(center: center, radius: radius, angle: angle)
+
+            if i == 0 {
+                path.move(to: point)
+            } else {
+                path.addLine(to: point)
+            }
+        }
+        path.closeSubpath()
+        return path
+    }
+
+    private func hexagonDataPath(center: CGPoint, radius: CGFloat, data: [(String, Double)]) -> Path {
+        var path = Path()
+        for i in 0..<data.count {
+            let angle = angleForIndex(i, total: data.count)
+            let value = data[i].1
+            let distance = radius * (value / maxValue)
+            let point = pointOnCircle(center: center, radius: distance, angle: angle)
+
+            if i == 0 {
+                path.move(to: point)
+            } else {
+                path.addLine(to: point)
+            }
+        }
+        path.closeSubpath()
+        return path
+    }
+
+    private func angleForIndex(_ index: Int, total: Int) -> Double {
+        let angleStep = 2 * .pi / Double(total)
+        return angleStep * Double(index) - .pi / 2
+    }
+
+    private func pointOnCircle(center: CGPoint, radius: CGFloat, angle: Double) -> CGPoint {
+        let x = center.x + radius * cos(angle)
+        let y = center.y + radius * sin(angle)
+        return CGPoint(x: x, y: y)
+    }
+}
+
 #Preview {
     let config = ModelConfiguration(isStoredInMemoryOnly: true)
-    let container = try! ModelContainer(for: Restaurant.self, configurations: config)
-    
+    let container = try! ModelContainer(for: Restaurant.self, Visit.self, configurations: config)
+
     let restaurant = Restaurant(
         name: "샘플 식당",
         address: "서울시 중구 태평로 1가",
         latitude: 37.5665,
         longitude: 126.9780,
-        notes: "맛있었어요!",
-        rating: 4,
         category: "한식"
     )
     container.mainContext.insert(restaurant)
-    
+
     return RestaurantDetailView(restaurant: restaurant)
         .modelContainer(container)
 }

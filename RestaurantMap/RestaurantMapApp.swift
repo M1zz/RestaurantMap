@@ -13,6 +13,7 @@ struct RestaurantMapApp: App {
         let schema = Schema([
             Restaurant.self,
             TasteProfile.self,
+            Visit.self,
         ])
 
         let modelConfiguration = ModelConfiguration(
