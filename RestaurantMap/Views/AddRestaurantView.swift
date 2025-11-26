@@ -20,6 +20,7 @@ struct AddRestaurantView: View {
     @State private var isTop6 = false
     @State private var top6Rank: Int? = nil
     @State private var categoryIcon = "fork.knife"
+    @State private var foodCategory: FoodCategory = .general
 
     @State private var selectedCoordinate: CLLocationCoordinate2D
     @State private var region: MKCoordinateRegion
@@ -83,6 +84,16 @@ struct AddRestaurantView: View {
         NavigationStack {
             Form {
                 Section("기본 정보") {
+                    Picker("음식 종류", selection: $foodCategory) {
+                        ForEach(FoodCategory.allCases) { category in
+                            Text(category.displayName).tag(category)
+                        }
+                    }
+                    .pickerStyle(.menu)
+                    .onAppear {
+                        logger.info("Picker onAppear - foodCategory: \(foodCategory.rawValue)")
+                    }
+
                     TextField("식당 이름", text: $name)
                     TextField("주소", text: $address)
                     TextField("카테고리 (예: 한식, 중식)", text: $category)
@@ -209,6 +220,11 @@ struct AddRestaurantView: View {
             .sheet(isPresented: $showingMap) {
                 MapSelectionView(coordinate: $selectedCoordinate)
             }
+            .onAppear {
+                logger.info("AddRestaurantView appeared")
+                logger.info("  - coordinate: \(String(describing: coordinate))")
+                logger.info("  - foodCategory: \(foodCategory.rawValue)")
+            }
         }
     }
     
@@ -227,7 +243,8 @@ struct AddRestaurantView: View {
             phoneNumber: phoneNumber,
             isTop6: isTop6,
             top6Rank: isTop6 ? top6Rank : nil,
-            categoryIcon: categoryIcon
+            categoryIcon: categoryIcon,
+            foodCategory: foodCategory
         )
 
         modelContext.insert(restaurant)

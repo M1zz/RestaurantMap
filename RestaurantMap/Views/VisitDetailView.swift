@@ -148,7 +148,7 @@ struct VisitDetailView: View {
                                 intensityData: visit.intensityData,
                                 appropriatenessData: visit.appropriatenessData
                             )
-                            .frame(height: 300)
+                            .frame(height: 380)
                         }
 
                         if isEditing {
@@ -211,30 +211,61 @@ struct VisitDetailView: View {
                 .font(.caption)
                 .foregroundStyle(.secondary)
 
-            IntensitySliderRow(title: "🌶️ 맵기", subtitle: "순한 ↔ 매운", value: Binding(
-                get: { visit.spicy ?? 5.0 },
-                set: { visit.spicy = $0 }
-            ))
-            IntensitySliderRow(title: "💪 진한맛", subtitle: "담백 ↔ 진한", value: Binding(
-                get: { visit.boldness ?? 5.0 },
-                set: { visit.boldness = $0 }
-            ))
-            IntensitySliderRow(title: "🍯 단맛", subtitle: "안좋아함 ↔ 좋아함", value: Binding(
-                get: { visit.sweetness ?? 5.0 },
-                set: { visit.sweetness = $0 }
-            ))
-            IntensitySliderRow(title: "🧂 짠맛", subtitle: "싱거움 ↔ 짭짤", value: Binding(
-                get: { visit.saltiness ?? 5.0 },
-                set: { visit.saltiness = $0 }
-            ))
-            IntensitySliderRow(title: "🥓 기름진", subtitle: "담백 ↔ 고소", value: Binding(
-                get: { visit.richness ?? 5.0 },
-                set: { visit.richness = $0 }
-            ))
-            IntensitySliderRow(title: "🌿 본연의맛", subtitle: "양념 ↔ 재료맛", value: Binding(
-                get: { visit.naturalTaste ?? 5.0 },
-                set: { visit.naturalTaste = $0 }
-            ))
+            if let restaurant = visit.restaurant {
+                switch restaurant.foodCategory {
+                case .general:
+                    IntensitySliderRow(title: "🌶️ 맵기", subtitle: "순한 ↔ 매운", value: Binding(
+                        get: { visit.spicy ?? 5.0 },
+                        set: { visit.spicy = $0 }
+                    ))
+                    IntensitySliderRow(title: "💪 진한맛", subtitle: "담백 ↔ 진한", value: Binding(
+                        get: { visit.boldness ?? 5.0 },
+                        set: { visit.boldness = $0 }
+                    ))
+                    IntensitySliderRow(title: "🍯 단맛", subtitle: "안좋아함 ↔ 좋아함", value: Binding(
+                        get: { visit.sweetness ?? 5.0 },
+                        set: { visit.sweetness = $0 }
+                    ))
+                    IntensitySliderRow(title: "🧂 짠맛", subtitle: "싱거움 ↔ 짭짤", value: Binding(
+                        get: { visit.saltiness ?? 5.0 },
+                        set: { visit.saltiness = $0 }
+                    ))
+                    IntensitySliderRow(title: "🥓 기름진", subtitle: "담백 ↔ 고소", value: Binding(
+                        get: { visit.richness ?? 5.0 },
+                        set: { visit.richness = $0 }
+                    ))
+                    IntensitySliderRow(title: "🌿 본연의맛", subtitle: "양념 ↔ 재료맛", value: Binding(
+                        get: { visit.naturalTaste ?? 5.0 },
+                        set: { visit.naturalTaste = $0 }
+                    ))
+
+                case .steak:
+                    IntensitySliderRow(title: "🔥 굽기", subtitle: "레어 ↔ 웰던", value: Binding(
+                        get: { visit.steakDoneness ?? 5.0 },
+                        set: { visit.steakDoneness = $0 }
+                    ))
+                    IntensitySliderRow(title: "🥩 육즙", subtitle: "퍽퍽 ↔ 촉촉", value: Binding(
+                        get: { visit.steakJuiciness ?? 5.0 },
+                        set: { visit.steakJuiciness = $0 }
+                    ))
+                    IntensitySliderRow(title: "✨ 부드러움", subtitle: "질김 ↔ 부드러움", value: Binding(
+                        get: { visit.steakTenderness ?? 5.0 },
+                        set: { visit.steakTenderness = $0 }
+                    ))
+                    IntensitySliderRow(title: "🧂 간", subtitle: "싱거움 ↔ 짭짤", value: Binding(
+                        get: { visit.steakSeasoning ?? 5.0 },
+                        set: { visit.steakSeasoning = $0 }
+                    ))
+                    IntensitySliderRow(title: "🌿 육향", subtitle: "약함 ↔ 강함", value: Binding(
+                        get: { visit.steakFlavor ?? 5.0 },
+                        set: { visit.steakFlavor = $0 }
+                    ))
+                    IntensitySliderRow(title: "🍖 마블링", subtitle: "적음 ↔ 많음", value: Binding(
+                        get: { visit.steakMarbling ?? 5.0 },
+                        set: { visit.steakMarbling = $0 }
+                    ))
+                }
+            }
         }
     }
 
@@ -245,30 +276,61 @@ struct VisitDetailView: View {
                 .font(.caption)
                 .foregroundStyle(.secondary)
 
-            AppropriatenessRow(title: "🌶️ 맵기", value: Binding(
-                get: { visit.spicyAppropriate ?? 3 },
-                set: { visit.spicyAppropriate = $0 }
-            ))
-            AppropriatenessRow(title: "💪 진한맛", value: Binding(
-                get: { visit.boldnessAppropriate ?? 3 },
-                set: { visit.boldnessAppropriate = $0 }
-            ))
-            AppropriatenessRow(title: "🍯 단맛", value: Binding(
-                get: { visit.sweetnessAppropriate ?? 3 },
-                set: { visit.sweetnessAppropriate = $0 }
-            ))
-            AppropriatenessRow(title: "🧂 짠맛", value: Binding(
-                get: { visit.saltinessAppropriate ?? 3 },
-                set: { visit.saltinessAppropriate = $0 }
-            ))
-            AppropriatenessRow(title: "🥓 기름진", value: Binding(
-                get: { visit.richnessAppropriate ?? 3 },
-                set: { visit.richnessAppropriate = $0 }
-            ))
-            AppropriatenessRow(title: "🌿 본연의맛", value: Binding(
-                get: { visit.naturalTasteAppropriate ?? 3 },
-                set: { visit.naturalTasteAppropriate = $0 }
-            ))
+            if let restaurant = visit.restaurant {
+                switch restaurant.foodCategory {
+                case .general:
+                    AppropriatenessRow(title: "🌶️ 맵기", value: Binding(
+                        get: { visit.spicyAppropriate ?? 3 },
+                        set: { visit.spicyAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "💪 진한맛", value: Binding(
+                        get: { visit.boldnessAppropriate ?? 3 },
+                        set: { visit.boldnessAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "🍯 단맛", value: Binding(
+                        get: { visit.sweetnessAppropriate ?? 3 },
+                        set: { visit.sweetnessAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "🧂 짠맛", value: Binding(
+                        get: { visit.saltinessAppropriate ?? 3 },
+                        set: { visit.saltinessAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "🥓 기름진", value: Binding(
+                        get: { visit.richnessAppropriate ?? 3 },
+                        set: { visit.richnessAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "🌿 본연의맛", value: Binding(
+                        get: { visit.naturalTasteAppropriate ?? 3 },
+                        set: { visit.naturalTasteAppropriate = $0 }
+                    ))
+
+                case .steak:
+                    AppropriatenessRow(title: "🔥 굽기", value: Binding(
+                        get: { visit.steakDonenessAppropriate ?? 3 },
+                        set: { visit.steakDonenessAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "🥩 육즙", value: Binding(
+                        get: { visit.steakJuicinessAppropriate ?? 3 },
+                        set: { visit.steakJuicinessAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "✨ 부드러움", value: Binding(
+                        get: { visit.steakTendernessAppropriate ?? 3 },
+                        set: { visit.steakTendernessAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "🧂 간", value: Binding(
+                        get: { visit.steakSeasoningAppropriate ?? 3 },
+                        set: { visit.steakSeasoningAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "🌿 육향", value: Binding(
+                        get: { visit.steakFlavorAppropriate ?? 3 },
+                        set: { visit.steakFlavorAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "🍖 마블링", value: Binding(
+                        get: { visit.steakMarblingAppropriate ?? 3 },
+                        set: { visit.steakMarblingAppropriate = $0 }
+                    ))
+                }
+            }
         }
     }
 }
@@ -283,23 +345,23 @@ struct DualRadarChartView: View {
             // 범례
             HStack(spacing: 20) {
                 HStack(spacing: 4) {
-                    Circle()
-                        .fill(.blue.opacity(0.3))
+                    RoundedRectangle(cornerRadius: 2)
+                        .strokeBorder(.blue, lineWidth: 2)
                         .frame(width: 12, height: 12)
-                    Text("맛 강도")
+                    Text("맛의 형태")
                         .font(.caption)
                 }
                 HStack(spacing: 4) {
-                    Circle()
-                        .fill(.yellow.opacity(0.5))
+                    RoundedRectangle(cornerRadius: 2)
+                        .fill(.green.opacity(0.6))
                         .frame(width: 12, height: 12)
-                    Text("적절함")
+                    Text("만족도")
                         .font(.caption)
                 }
             }
 
-            // 이중 레이더 차트
-            OverlappedRadarChartForVisit(
+            // 새로운 레이더 차트: 맛 강도로 형태, 적절함으로 채움
+            CalibratedRadarChartForVisit(
                 intensityData: intensityData,
                 appropriatenessData: appropriatenessData
             )
@@ -347,6 +409,135 @@ struct OverlappedRadarChartForVisit: View {
                         path.addLine(to: endPoint)
                     }
                     .stroke(.gray.opacity(0.3), lineWidth: 1)
+                }
+
+                // 라벨
+                ForEach(0..<intensityData.count, id: \.self) { index in
+                    let angle = angleForIndex(index, total: 6)
+                    let labelRadius = radius + 30
+                    let point = pointOnCircle(center: center, radius: labelRadius, angle: angle)
+
+                    Text(intensityData[index].0)
+                        .font(.caption)
+                        .fontWeight(.semibold)
+                        .position(point)
+                }
+            }
+        }
+    }
+
+    private func hexagonPath(center: CGPoint, radius: CGFloat, sides: Int) -> Path {
+        var path = Path()
+        for i in 0..<sides {
+            let angle = angleForIndex(i, total: sides)
+            let point = pointOnCircle(center: center, radius: radius, angle: angle)
+
+            if i == 0 {
+                path.move(to: point)
+            } else {
+                path.addLine(to: point)
+            }
+        }
+        path.closeSubpath()
+        return path
+    }
+
+    private func hexagonDataPath(center: CGPoint, radius: CGFloat, data: [(String, Double)]) -> Path {
+        var path = Path()
+        for i in 0..<data.count {
+            let angle = angleForIndex(i, total: data.count)
+            let value = data[i].1
+            let distance = radius * (value / maxValue)
+            let point = pointOnCircle(center: center, radius: distance, angle: angle)
+
+            if i == 0 {
+                path.move(to: point)
+            } else {
+                path.addLine(to: point)
+            }
+        }
+        path.closeSubpath()
+        return path
+    }
+
+    private func angleForIndex(_ index: Int, total: Int) -> Double {
+        let angleStep = 2 * .pi / Double(total)
+        return angleStep * Double(index) - .pi / 2
+    }
+
+    private func pointOnCircle(center: CGPoint, radius: CGFloat, angle: Double) -> CGPoint {
+        let x = center.x + radius * cos(angle)
+        let y = center.y + radius * sin(angle)
+        return CGPoint(x: x, y: y)
+    }
+}
+
+// MARK: - Calibrated Radar Chart For Visit (새로운 버전)
+struct CalibratedRadarChartForVisit: View {
+    let intensityData: [(String, Double)]
+    let appropriatenessData: [(String, Double)]
+    let maxValue: Double = 10.0
+
+    var body: some View {
+        GeometryReader { geometry in
+            let center = CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2)
+            let radius = min(geometry.size.width, geometry.size.height) / 2 - 50
+
+            ZStack {
+                // 배경 그리드
+                ForEach(1...5, id: \.self) { level in
+                    hexagonPath(center: center, radius: radius * Double(level) / 5, sides: 6)
+                        .stroke(.gray.opacity(0.15), lineWidth: 1)
+                }
+
+                // 축 선
+                ForEach(0..<6, id: \.self) { index in
+                    let angle = angleForIndex(index, total: 6)
+                    let endPoint = pointOnCircle(center: center, radius: radius, angle: angle)
+
+                    Path { path in
+                        path.move(to: center)
+                        path.addLine(to: endPoint)
+                    }
+                    .stroke(.gray.opacity(0.3), lineWidth: 1)
+                }
+
+                // 맛 강도 외곽선 (파란색) - 맛의 형태
+                hexagonDataPath(center: center, radius: radius, data: intensityData)
+                    .stroke(.blue, lineWidth: 2.5)
+
+                // 적절함에 따른 채움 - 각 축별로 그라데이션
+                ForEach(0..<intensityData.count, id: \.self) { index in
+                    let nextIndex = (index + 1) % intensityData.count
+
+                    // 현재 축과 다음 축의 데이터
+                    let currentIntensity = intensityData[index].1
+                    let nextIntensity = intensityData[nextIndex].1
+
+                    // 적절함 점수 (1-5를 0-1로 정규화)
+                    let currentAppropriateness = appropriatenessData[index].1 / 10.0 // 이미 *2 되어 있음
+                    let nextAppropriateness = appropriatenessData[nextIndex].1 / 10.0
+
+                    // 삼각형 영역 그리기
+                    let angle1 = angleForIndex(index, total: intensityData.count)
+                    let angle2 = angleForIndex(nextIndex, total: intensityData.count)
+
+                    let distance1 = radius * (currentIntensity / maxValue)
+                    let distance2 = radius * (nextIntensity / maxValue)
+
+                    let point1 = pointOnCircle(center: center, radius: distance1, angle: angle1)
+                    let point2 = pointOnCircle(center: center, radius: distance2, angle: angle2)
+
+                    // 적절함에 따른 투명도 계산 (평균)
+                    let averageAppropriateness = (currentAppropriateness + nextAppropriateness) / 2.0
+
+                    Path { path in
+                        path.move(to: center)
+                        path.addLine(to: point1)
+                        path.addLine(to: point2)
+                        path.closeSubpath()
+                    }
+                    .fill(.green.opacity(averageAppropriateness * 0.6))
                 }
 
                 // 라벨

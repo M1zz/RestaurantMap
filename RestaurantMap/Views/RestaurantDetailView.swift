@@ -105,7 +105,7 @@ struct RestaurantDetailView: View {
                                 intensityData: restaurant.averageIntensity,
                                 appropriatenessData: restaurant.averageAppropriateness
                             )
-                            .frame(height: 280)
+                            .frame(height: 380)
                         }
                     } header: {
                         Text("이 식당은 전반적으로...")
@@ -271,22 +271,22 @@ struct AverageRadarChartView: View {
         VStack(spacing: 12) {
             HStack(spacing: 20) {
                 HStack(spacing: 4) {
-                    Circle()
-                        .fill(.blue.opacity(0.3))
+                    RoundedRectangle(cornerRadius: 2)
+                        .strokeBorder(.blue, lineWidth: 2)
                         .frame(width: 12, height: 12)
-                    Text("평균 맛 강도")
+                    Text("맛의 형태")
                         .font(.caption)
                 }
                 HStack(spacing: 4) {
-                    Circle()
-                        .fill(.yellow.opacity(0.5))
+                    RoundedRectangle(cornerRadius: 2)
+                        .fill(.green.opacity(0.6))
                         .frame(width: 12, height: 12)
-                    Text("평균 적절함")
+                    Text("만족도")
                         .font(.caption)
                 }
             }
 
-            OverlappedRadarChart(
+            CalibratedRadarChartForVisit(
                 intensityData: intensityData,
                 appropriatenessData: appropriatenessData
             )

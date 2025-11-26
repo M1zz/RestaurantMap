@@ -21,6 +21,7 @@
 		1A00001F /* Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A00001E /* Visit.swift */; };
 		1A000021 /* AddVisitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000020 /* AddVisitView.swift */; };
 		1A000023 /* VisitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000022 /* VisitDetailView.swift */; };
+		1A000025 /* FoodCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000024 /* FoodCategory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		1A00001E /* Visit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visit.swift; sourceTree = "<group>"; };
 		1A000020 /* AddVisitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVisitView.swift; sourceTree = "<group>"; };
 		1A000022 /* VisitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitDetailView.swift; sourceTree = "<group>"; };
+		1A000024 /* FoodCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategory.swift; sourceTree = "<group>"; };
 		1AFFFFFD /* RestaurantMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -79,6 +81,7 @@
 				1A000004 /* Restaurant.swift */,
 				1A00001A /* TasteProfile.swift */,
 				1A00001E /* Visit.swift */,
+				1A000024 /* FoodCategory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				1A00001F /* Visit.swift in Sources */,
 				1A000021 /* AddVisitView.swift in Sources */,
 				1A000023 /* VisitDetailView.swift in Sources */,
+				1A000025 /* FoodCategory.swift in Sources */,
 				1A000001 /* RestaurantMapApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

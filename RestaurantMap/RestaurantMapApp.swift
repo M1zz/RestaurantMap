@@ -24,12 +24,27 @@ struct RestaurantMapApp: App {
         do {
             let container = try ModelContainer(for: schema, configurations: [modelConfiguration])
             logger.info("ModelContainer 초기화 성공")
+
+            // 기존 Restaurant 데이터에 foodCategoryRaw가 없으면 기본값 설정
+            let context = container.mainContext
+            let descriptor = FetchDescriptor<Restaurant>()
+            if let restaurants = try? context.fetch(descriptor) {
+                for restaurant in restaurants {
+                    if restaurant.foodCategoryRaw.isEmpty {
+                        restaurant.foodCategoryRaw = "일반"
+                        logger.info("Restaurant '\(restaurant.name)'에 기본 카테고리 설정")
+                    }
+                }
+                try? context.save()
+            }
+
             return container
         } catch {
             logger.error("ModelContainer 생성 실패: \(error.localizedDescription)")
 
             // 스키마 변경으로 인한 오류 시 모든 SwiftData 파일 삭제
-            logger.warning("기존 SwiftData 파일을 모두 삭제합니다")
+            logger.warning("⚠️ 스키마 변경으로 인해 기존 데이터를 모두 삭제합니다")
+            logger.warning("⚠️ 이 작업은 되돌릴 수 없습니다!")
 
             let appSupportURL = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
 
