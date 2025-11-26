@@ -44,6 +44,81 @@ struct AddVisitView: View {
     @State private var steakFlavorAppropriate: Int = 3
     @State private var steakMarblingAppropriate: Int = 3
 
+    // 초밥 평가
+    @State private var sushiShari: Double = 5.0
+    @State private var sushiNeta: Double = 5.0
+    @State private var sushiWasabi: Double = 5.0
+    @State private var sushiBalance: Double = 5.0
+    @State private var sushiGrip: Double = 5.0
+    @State private var sushiTemperature: Double = 5.0
+
+    @State private var sushiShariAppropriate: Int = 3
+    @State private var sushiNetaAppropriate: Int = 3
+    @State private var sushiWasabiAppropriate: Int = 3
+    @State private var sushiBalanceAppropriate: Int = 3
+    @State private var sushiGripAppropriate: Int = 3
+    @State private var sushiTemperatureAppropriate: Int = 3
+
+    // 라멘 평가
+    @State private var ramenBroth: Double = 5.0
+    @State private var ramenNoodle: Double = 5.0
+    @State private var ramenChashu: Double = 5.0
+    @State private var ramenTopping: Double = 5.0
+    @State private var ramenTemperature: Double = 5.0
+    @State private var ramenBalance: Double = 5.0
+
+    @State private var ramenBrothAppropriate: Int = 3
+    @State private var ramenNoodleAppropriate: Int = 3
+    @State private var ramenChashuAppropriate: Int = 3
+    @State private var ramenToppingAppropriate: Int = 3
+    @State private var ramenTemperatureAppropriate: Int = 3
+    @State private var ramenBalanceAppropriate: Int = 3
+
+    // 피자 평가
+    @State private var pizzaDough: Double = 5.0
+    @State private var pizzaSauce: Double = 5.0
+    @State private var pizzaCheese: Double = 5.0
+    @State private var pizzaBaking: Double = 5.0
+    @State private var pizzaTopping: Double = 5.0
+    @State private var pizzaBalance: Double = 5.0
+
+    @State private var pizzaDoughAppropriate: Int = 3
+    @State private var pizzaSauceAppropriate: Int = 3
+    @State private var pizzaCheeseAppropriate: Int = 3
+    @State private var pizzaBakingAppropriate: Int = 3
+    @State private var pizzaToppingAppropriate: Int = 3
+    @State private var pizzaBalanceAppropriate: Int = 3
+
+    // 와인 평가
+    @State private var wineBody: Double = 5.0
+    @State private var wineTannin: Double = 5.0
+    @State private var wineAcidity: Double = 5.0
+    @State private var wineAroma: Double = 5.0
+    @State private var wineFinish: Double = 5.0
+    @State private var wineBalance: Double = 5.0
+
+    @State private var wineBodyAppropriate: Int = 3
+    @State private var wineTanninAppropriate: Int = 3
+    @State private var wineAcidityAppropriate: Int = 3
+    @State private var wineAromaAppropriate: Int = 3
+    @State private var wineFinishAppropriate: Int = 3
+    @State private var wineBalanceAppropriate: Int = 3
+
+    // 커피 평가
+    @State private var coffeeAcidity: Double = 5.0
+    @State private var coffeeBody: Double = 5.0
+    @State private var coffeeFlavor: Double = 5.0
+    @State private var coffeeAftertaste: Double = 5.0
+    @State private var coffeeSweetness: Double = 5.0
+    @State private var coffeeBalance: Double = 5.0
+
+    @State private var coffeeAcidityAppropriate: Int = 3
+    @State private var coffeeBodyAppropriate: Int = 3
+    @State private var coffeeFlavorAppropriate: Int = 3
+    @State private var coffeeAftertasteAppropriate: Int = 3
+    @State private var coffeeSweetnessAppropriate: Int = 3
+    @State private var coffeeBalanceAppropriate: Int = 3
+
     private let logger = Logger(subsystem: "com.restaurantmap", category: "AddVisit")
 
     var body: some View {
@@ -171,6 +246,81 @@ struct AddVisitView: View {
             visit.steakSeasoningAppropriate = steakSeasoningAppropriate
             visit.steakFlavorAppropriate = steakFlavorAppropriate
             visit.steakMarblingAppropriate = steakMarblingAppropriate
+
+        case .sushi:
+            visit.sushiShari = sushiShari
+            visit.sushiNeta = sushiNeta
+            visit.sushiWasabi = sushiWasabi
+            visit.sushiBalance = sushiBalance
+            visit.sushiGrip = sushiGrip
+            visit.sushiTemperature = sushiTemperature
+
+            visit.sushiShariAppropriate = sushiShariAppropriate
+            visit.sushiNetaAppropriate = sushiNetaAppropriate
+            visit.sushiWasabiAppropriate = sushiWasabiAppropriate
+            visit.sushiBalanceAppropriate = sushiBalanceAppropriate
+            visit.sushiGripAppropriate = sushiGripAppropriate
+            visit.sushiTemperatureAppropriate = sushiTemperatureAppropriate
+
+        case .ramen:
+            visit.ramenBroth = ramenBroth
+            visit.ramenNoodle = ramenNoodle
+            visit.ramenChashu = ramenChashu
+            visit.ramenTopping = ramenTopping
+            visit.ramenTemperature = ramenTemperature
+            visit.ramenBalance = ramenBalance
+
+            visit.ramenBrothAppropriate = ramenBrothAppropriate
+            visit.ramenNoodleAppropriate = ramenNoodleAppropriate
+            visit.ramenChashuAppropriate = ramenChashuAppropriate
+            visit.ramenToppingAppropriate = ramenToppingAppropriate
+            visit.ramenTemperatureAppropriate = ramenTemperatureAppropriate
+            visit.ramenBalanceAppropriate = ramenBalanceAppropriate
+
+        case .pizza:
+            visit.pizzaDough = pizzaDough
+            visit.pizzaSauce = pizzaSauce
+            visit.pizzaCheese = pizzaCheese
+            visit.pizzaBaking = pizzaBaking
+            visit.pizzaTopping = pizzaTopping
+            visit.pizzaBalance = pizzaBalance
+
+            visit.pizzaDoughAppropriate = pizzaDoughAppropriate
+            visit.pizzaSauceAppropriate = pizzaSauceAppropriate
+            visit.pizzaCheeseAppropriate = pizzaCheeseAppropriate
+            visit.pizzaBakingAppropriate = pizzaBakingAppropriate
+            visit.pizzaToppingAppropriate = pizzaToppingAppropriate
+            visit.pizzaBalanceAppropriate = pizzaBalanceAppropriate
+
+        case .wine:
+            visit.wineBody = wineBody
+            visit.wineTannin = wineTannin
+            visit.wineAcidity = wineAcidity
+            visit.wineAroma = wineAroma
+            visit.wineFinish = wineFinish
+            visit.wineBalance = wineBalance
+
+            visit.wineBodyAppropriate = wineBodyAppropriate
+            visit.wineTanninAppropriate = wineTanninAppropriate
+            visit.wineAcidityAppropriate = wineAcidityAppropriate
+            visit.wineAromaAppropriate = wineAromaAppropriate
+            visit.wineFinishAppropriate = wineFinishAppropriate
+            visit.wineBalanceAppropriate = wineBalanceAppropriate
+
+        case .coffee:
+            visit.coffeeAcidity = coffeeAcidity
+            visit.coffeeBody = coffeeBody
+            visit.coffeeFlavor = coffeeFlavor
+            visit.coffeeAftertaste = coffeeAftertaste
+            visit.coffeeSweetness = coffeeSweetness
+            visit.coffeeBalance = coffeeBalance
+
+            visit.coffeeAcidityAppropriate = coffeeAcidityAppropriate
+            visit.coffeeBodyAppropriate = coffeeBodyAppropriate
+            visit.coffeeFlavorAppropriate = coffeeFlavorAppropriate
+            visit.coffeeAftertasteAppropriate = coffeeAftertasteAppropriate
+            visit.coffeeSweetnessAppropriate = coffeeSweetnessAppropriate
+            visit.coffeeBalanceAppropriate = coffeeBalanceAppropriate
         }
 
         logger.info("  - Visit 생성됨")
@@ -214,6 +364,46 @@ struct AddVisitView: View {
                 IntensitySliderRow(title: "🧂 간", subtitle: "싱거움 ↔ 짭짤", value: $steakSeasoning)
                 IntensitySliderRow(title: "🌿 육향", subtitle: "약함 ↔ 강함", value: $steakFlavor)
                 IntensitySliderRow(title: "🍖 마블링", subtitle: "적음 ↔ 많음", value: $steakMarbling)
+
+            case .sushi:
+                IntensitySliderRow(title: "🍚 샤리(밥)", subtitle: "흐물 ↔ 단단", value: $sushiShari)
+                IntensitySliderRow(title: "🐟 네타(재료)", subtitle: "신선도", value: $sushiNeta)
+                IntensitySliderRow(title: "🌿 와사비", subtitle: "약함 ↔ 강함", value: $sushiWasabi)
+                IntensitySliderRow(title: "⚖️ 밸런스", subtitle: "불균형 ↔ 조화", value: $sushiBalance)
+                IntensitySliderRow(title: "✋ 쥐기", subtitle: "풀림 ↔ 결속", value: $sushiGrip)
+                IntensitySliderRow(title: "🌡️ 온도", subtitle: "차가움 ↔ 따뜻함", value: $sushiTemperature)
+
+            case .ramen:
+                IntensitySliderRow(title: "🥣 국물", subtitle: "깊이/감칠맛", value: $ramenBroth)
+                IntensitySliderRow(title: "🍜 면발", subtitle: "부드러움 ↔ 쫄깃함", value: $ramenNoodle)
+                IntensitySliderRow(title: "🥓 차슈", subtitle: "퍽퍽 ↔ 부드러움", value: $ramenChashu)
+                IntensitySliderRow(title: "🥚 토핑", subtitle: "부실 ↔ 풍부", value: $ramenTopping)
+                IntensitySliderRow(title: "🔥 온도", subtitle: "미지근 ↔ 뜨거움", value: $ramenTemperature)
+                IntensitySliderRow(title: "⚖️ 밸런스", subtitle: "불균형 ↔ 조화", value: $ramenBalance)
+
+            case .pizza:
+                IntensitySliderRow(title: "🫓 도우", subtitle: "질김 ↔ 쫄깃함", value: $pizzaDough)
+                IntensitySliderRow(title: "🍅 소스", subtitle: "적음 ↔ 많음", value: $pizzaSauce)
+                IntensitySliderRow(title: "🧀 치즈", subtitle: "적음 ↔ 많음", value: $pizzaCheese)
+                IntensitySliderRow(title: "🔥 굽기", subtitle: "덜익음 ↔ 바삭함", value: $pizzaBaking)
+                IntensitySliderRow(title: "🌟 토핑", subtitle: "부실 ↔ 풍부", value: $pizzaTopping)
+                IntensitySliderRow(title: "⚖️ 밸런스", subtitle: "불균형 ↔ 조화", value: $pizzaBalance)
+
+            case .wine:
+                IntensitySliderRow(title: "💪 바디", subtitle: "가벼움 ↔ 묵직함", value: $wineBody)
+                IntensitySliderRow(title: "🍇 타닌", subtitle: "약함 ↔ 떫음", value: $wineTannin)
+                IntensitySliderRow(title: "🍋 산도", subtitle: "낮음 ↔ 높음", value: $wineAcidity)
+                IntensitySliderRow(title: "🌸 아로마", subtitle: "단순 ↔ 복잡", value: $wineAroma)
+                IntensitySliderRow(title: "✨ 피니시", subtitle: "짧음 ↔ 긴 여운", value: $wineFinish)
+                IntensitySliderRow(title: "⚖️ 밸런스", subtitle: "불균형 ↔ 조화", value: $wineBalance)
+
+            case .coffee:
+                IntensitySliderRow(title: "🍋 산미", subtitle: "낮음 ↔ 밝음", value: $coffeeAcidity)
+                IntensitySliderRow(title: "💪 바디", subtitle: "가벼움 ↔ 묵직함", value: $coffeeBody)
+                IntensitySliderRow(title: "🌸 향미", subtitle: "단순 ↔ 복잡", value: $coffeeFlavor)
+                IntensitySliderRow(title: "✨ 후미", subtitle: "짧음 ↔ 긴 여운", value: $coffeeAftertaste)
+                IntensitySliderRow(title: "🍯 단맛", subtitle: "쓴맛 ↔ 단맛", value: $coffeeSweetness)
+                IntensitySliderRow(title: "⚖️ 밸런스", subtitle: "불균형 ↔ 조화", value: $coffeeBalance)
             }
         }
     }
@@ -241,6 +431,46 @@ struct AddVisitView: View {
                 AppropriatenessRow(title: "🧂 간", value: $steakSeasoningAppropriate)
                 AppropriatenessRow(title: "🌿 육향", value: $steakFlavorAppropriate)
                 AppropriatenessRow(title: "🍖 마블링", value: $steakMarblingAppropriate)
+
+            case .sushi:
+                AppropriatenessRow(title: "🍚 샤리(밥)", value: $sushiShariAppropriate)
+                AppropriatenessRow(title: "🐟 네타(재료)", value: $sushiNetaAppropriate)
+                AppropriatenessRow(title: "🌿 와사비", value: $sushiWasabiAppropriate)
+                AppropriatenessRow(title: "⚖️ 밸런스", value: $sushiBalanceAppropriate)
+                AppropriatenessRow(title: "✋ 쥐기", value: $sushiGripAppropriate)
+                AppropriatenessRow(title: "🌡️ 온도", value: $sushiTemperatureAppropriate)
+
+            case .ramen:
+                AppropriatenessRow(title: "🥣 국물", value: $ramenBrothAppropriate)
+                AppropriatenessRow(title: "🍜 면발", value: $ramenNoodleAppropriate)
+                AppropriatenessRow(title: "🥓 차슈", value: $ramenChashuAppropriate)
+                AppropriatenessRow(title: "🥚 토핑", value: $ramenToppingAppropriate)
+                AppropriatenessRow(title: "🔥 온도", value: $ramenTemperatureAppropriate)
+                AppropriatenessRow(title: "⚖️ 밸런스", value: $ramenBalanceAppropriate)
+
+            case .pizza:
+                AppropriatenessRow(title: "🫓 도우", value: $pizzaDoughAppropriate)
+                AppropriatenessRow(title: "🍅 소스", value: $pizzaSauceAppropriate)
+                AppropriatenessRow(title: "🧀 치즈", value: $pizzaCheeseAppropriate)
+                AppropriatenessRow(title: "🔥 굽기", value: $pizzaBakingAppropriate)
+                AppropriatenessRow(title: "🌟 토핑", value: $pizzaToppingAppropriate)
+                AppropriatenessRow(title: "⚖️ 밸런스", value: $pizzaBalanceAppropriate)
+
+            case .wine:
+                AppropriatenessRow(title: "💪 바디", value: $wineBodyAppropriate)
+                AppropriatenessRow(title: "🍇 타닌", value: $wineTanninAppropriate)
+                AppropriatenessRow(title: "🍋 산도", value: $wineAcidityAppropriate)
+                AppropriatenessRow(title: "🌸 아로마", value: $wineAromaAppropriate)
+                AppropriatenessRow(title: "✨ 피니시", value: $wineFinishAppropriate)
+                AppropriatenessRow(title: "⚖️ 밸런스", value: $wineBalanceAppropriate)
+
+            case .coffee:
+                AppropriatenessRow(title: "🍋 산미", value: $coffeeAcidityAppropriate)
+                AppropriatenessRow(title: "💪 바디", value: $coffeeBodyAppropriate)
+                AppropriatenessRow(title: "🌸 향미", value: $coffeeFlavorAppropriate)
+                AppropriatenessRow(title: "✨ 후미", value: $coffeeAftertasteAppropriate)
+                AppropriatenessRow(title: "🍯 단맛", value: $coffeeSweetnessAppropriate)
+                AppropriatenessRow(title: "⚖️ 밸런스", value: $coffeeBalanceAppropriate)
             }
         }
     }

@@ -115,6 +115,56 @@ final class Restaurant {
                 ("육향", avgFlavor),
                 ("마블링", avgMarbling)
             ]
+
+        case .sushi:
+            return [
+                ("샤리(밥)", validVisits.compactMap { $0.sushiShari }.average),
+                ("네타(재료)", validVisits.compactMap { $0.sushiNeta }.average),
+                ("와사비", validVisits.compactMap { $0.sushiWasabi }.average),
+                ("밸런스", validVisits.compactMap { $0.sushiBalance }.average),
+                ("쥐기", validVisits.compactMap { $0.sushiGrip }.average),
+                ("온도", validVisits.compactMap { $0.sushiTemperature }.average)
+            ]
+
+        case .ramen:
+            return [
+                ("국물", validVisits.compactMap { $0.ramenBroth }.average),
+                ("면발", validVisits.compactMap { $0.ramenNoodle }.average),
+                ("차슈", validVisits.compactMap { $0.ramenChashu }.average),
+                ("토핑", validVisits.compactMap { $0.ramenTopping }.average),
+                ("온도", validVisits.compactMap { $0.ramenTemperature }.average),
+                ("밸런스", validVisits.compactMap { $0.ramenBalance }.average)
+            ]
+
+        case .pizza:
+            return [
+                ("도우", validVisits.compactMap { $0.pizzaDough }.average),
+                ("소스", validVisits.compactMap { $0.pizzaSauce }.average),
+                ("치즈", validVisits.compactMap { $0.pizzaCheese }.average),
+                ("굽기", validVisits.compactMap { $0.pizzaBaking }.average),
+                ("토핑", validVisits.compactMap { $0.pizzaTopping }.average),
+                ("밸런스", validVisits.compactMap { $0.pizzaBalance }.average)
+            ]
+
+        case .wine:
+            return [
+                ("바디", validVisits.compactMap { $0.wineBody }.average),
+                ("타닌", validVisits.compactMap { $0.wineTannin }.average),
+                ("산도", validVisits.compactMap { $0.wineAcidity }.average),
+                ("아로마", validVisits.compactMap { $0.wineAroma }.average),
+                ("피니시", validVisits.compactMap { $0.wineFinish }.average),
+                ("밸런스", validVisits.compactMap { $0.wineBalance }.average)
+            ]
+
+        case .coffee:
+            return [
+                ("산미", validVisits.compactMap { $0.coffeeAcidity }.average),
+                ("바디", validVisits.compactMap { $0.coffeeBody }.average),
+                ("향미", validVisits.compactMap { $0.coffeeFlavor }.average),
+                ("후미", validVisits.compactMap { $0.coffeeAftertaste }.average),
+                ("단맛", validVisits.compactMap { $0.coffeeSweetness }.average),
+                ("밸런스", validVisits.compactMap { $0.coffeeBalance }.average)
+            ]
         }
     }
 
@@ -158,6 +208,56 @@ final class Restaurant {
                 ("간", avgSeasoning),
                 ("육향", avgFlavor),
                 ("마블링", avgMarbling)
+            ]
+
+        case .sushi:
+            return [
+                ("샤리(밥)", validVisits.compactMap { $0.sushiShariAppropriate }.map { Double($0) }.average * 2),
+                ("네타(재료)", validVisits.compactMap { $0.sushiNetaAppropriate }.map { Double($0) }.average * 2),
+                ("와사비", validVisits.compactMap { $0.sushiWasabiAppropriate }.map { Double($0) }.average * 2),
+                ("밸런스", validVisits.compactMap { $0.sushiBalanceAppropriate }.map { Double($0) }.average * 2),
+                ("쥐기", validVisits.compactMap { $0.sushiGripAppropriate }.map { Double($0) }.average * 2),
+                ("온도", validVisits.compactMap { $0.sushiTemperatureAppropriate }.map { Double($0) }.average * 2)
+            ]
+
+        case .ramen:
+            return [
+                ("국물", validVisits.compactMap { $0.ramenBrothAppropriate }.map { Double($0) }.average * 2),
+                ("면발", validVisits.compactMap { $0.ramenNoodleAppropriate }.map { Double($0) }.average * 2),
+                ("차슈", validVisits.compactMap { $0.ramenChashuAppropriate }.map { Double($0) }.average * 2),
+                ("토핑", validVisits.compactMap { $0.ramenToppingAppropriate }.map { Double($0) }.average * 2),
+                ("온도", validVisits.compactMap { $0.ramenTemperatureAppropriate }.map { Double($0) }.average * 2),
+                ("밸런스", validVisits.compactMap { $0.ramenBalanceAppropriate }.map { Double($0) }.average * 2)
+            ]
+
+        case .pizza:
+            return [
+                ("도우", validVisits.compactMap { $0.pizzaDoughAppropriate }.map { Double($0) }.average * 2),
+                ("소스", validVisits.compactMap { $0.pizzaSauceAppropriate }.map { Double($0) }.average * 2),
+                ("치즈", validVisits.compactMap { $0.pizzaCheeseAppropriate }.map { Double($0) }.average * 2),
+                ("굽기", validVisits.compactMap { $0.pizzaBakingAppropriate }.map { Double($0) }.average * 2),
+                ("토핑", validVisits.compactMap { $0.pizzaToppingAppropriate }.map { Double($0) }.average * 2),
+                ("밸런스", validVisits.compactMap { $0.pizzaBalanceAppropriate }.map { Double($0) }.average * 2)
+            ]
+
+        case .wine:
+            return [
+                ("바디", validVisits.compactMap { $0.wineBodyAppropriate }.map { Double($0) }.average * 2),
+                ("타닌", validVisits.compactMap { $0.wineTanninAppropriate }.map { Double($0) }.average * 2),
+                ("산도", validVisits.compactMap { $0.wineAcidityAppropriate }.map { Double($0) }.average * 2),
+                ("아로마", validVisits.compactMap { $0.wineAromaAppropriate }.map { Double($0) }.average * 2),
+                ("피니시", validVisits.compactMap { $0.wineFinishAppropriate }.map { Double($0) }.average * 2),
+                ("밸런스", validVisits.compactMap { $0.wineBalanceAppropriate }.map { Double($0) }.average * 2)
+            ]
+
+        case .coffee:
+            return [
+                ("산미", validVisits.compactMap { $0.coffeeAcidityAppropriate }.map { Double($0) }.average * 2),
+                ("바디", validVisits.compactMap { $0.coffeeBodyAppropriate }.map { Double($0) }.average * 2),
+                ("향미", validVisits.compactMap { $0.coffeeFlavorAppropriate }.map { Double($0) }.average * 2),
+                ("후미", validVisits.compactMap { $0.coffeeAftertasteAppropriate }.map { Double($0) }.average * 2),
+                ("단맛", validVisits.compactMap { $0.coffeeSweetnessAppropriate }.map { Double($0) }.average * 2),
+                ("밸런스", validVisits.compactMap { $0.coffeeBalanceAppropriate }.map { Double($0) }.average * 2)
             ]
         }
     }

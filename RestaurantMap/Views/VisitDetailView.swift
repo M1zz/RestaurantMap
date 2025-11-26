@@ -264,6 +264,136 @@ struct VisitDetailView: View {
                         get: { visit.steakMarbling ?? 5.0 },
                         set: { visit.steakMarbling = $0 }
                     ))
+
+                case .sushi:
+                    IntensitySliderRow(title: "🍚 샤리(밥)", subtitle: "흐물 ↔ 단단", value: Binding(
+                        get: { visit.sushiShari ?? 5.0 },
+                        set: { visit.sushiShari = $0 }
+                    ))
+                    IntensitySliderRow(title: "🐟 네타(재료)", subtitle: "신선도", value: Binding(
+                        get: { visit.sushiNeta ?? 5.0 },
+                        set: { visit.sushiNeta = $0 }
+                    ))
+                    IntensitySliderRow(title: "🌿 와사비", subtitle: "약함 ↔ 강함", value: Binding(
+                        get: { visit.sushiWasabi ?? 5.0 },
+                        set: { visit.sushiWasabi = $0 }
+                    ))
+                    IntensitySliderRow(title: "⚖️ 밸런스", subtitle: "불균형 ↔ 조화", value: Binding(
+                        get: { visit.sushiBalance ?? 5.0 },
+                        set: { visit.sushiBalance = $0 }
+                    ))
+                    IntensitySliderRow(title: "✋ 쥐기", subtitle: "풀림 ↔ 결속", value: Binding(
+                        get: { visit.sushiGrip ?? 5.0 },
+                        set: { visit.sushiGrip = $0 }
+                    ))
+                    IntensitySliderRow(title: "🌡️ 온도", subtitle: "차가움 ↔ 따뜻함", value: Binding(
+                        get: { visit.sushiTemperature ?? 5.0 },
+                        set: { visit.sushiTemperature = $0 }
+                    ))
+
+                case .ramen:
+                    IntensitySliderRow(title: "🥣 국물", subtitle: "깊이/감칠맛", value: Binding(
+                        get: { visit.ramenBroth ?? 5.0 },
+                        set: { visit.ramenBroth = $0 }
+                    ))
+                    IntensitySliderRow(title: "🍜 면발", subtitle: "부드러움 ↔ 쫄깃함", value: Binding(
+                        get: { visit.ramenNoodle ?? 5.0 },
+                        set: { visit.ramenNoodle = $0 }
+                    ))
+                    IntensitySliderRow(title: "🥓 차슈", subtitle: "퍽퍽 ↔ 부드러움", value: Binding(
+                        get: { visit.ramenChashu ?? 5.0 },
+                        set: { visit.ramenChashu = $0 }
+                    ))
+                    IntensitySliderRow(title: "🥚 토핑", subtitle: "부실 ↔ 풍부", value: Binding(
+                        get: { visit.ramenTopping ?? 5.0 },
+                        set: { visit.ramenTopping = $0 }
+                    ))
+                    IntensitySliderRow(title: "🔥 온도", subtitle: "미지근 ↔ 뜨거움", value: Binding(
+                        get: { visit.ramenTemperature ?? 5.0 },
+                        set: { visit.ramenTemperature = $0 }
+                    ))
+                    IntensitySliderRow(title: "⚖️ 밸런스", subtitle: "불균형 ↔ 조화", value: Binding(
+                        get: { visit.ramenBalance ?? 5.0 },
+                        set: { visit.ramenBalance = $0 }
+                    ))
+
+                case .pizza:
+                    IntensitySliderRow(title: "🫓 도우", subtitle: "질김 ↔ 쫄깃함", value: Binding(
+                        get: { visit.pizzaDough ?? 5.0 },
+                        set: { visit.pizzaDough = $0 }
+                    ))
+                    IntensitySliderRow(title: "🍅 소스", subtitle: "적음 ↔ 많음", value: Binding(
+                        get: { visit.pizzaSauce ?? 5.0 },
+                        set: { visit.pizzaSauce = $0 }
+                    ))
+                    IntensitySliderRow(title: "🧀 치즈", subtitle: "적음 ↔ 많음", value: Binding(
+                        get: { visit.pizzaCheese ?? 5.0 },
+                        set: { visit.pizzaCheese = $0 }
+                    ))
+                    IntensitySliderRow(title: "🔥 굽기", subtitle: "덜익음 ↔ 바삭함", value: Binding(
+                        get: { visit.pizzaBaking ?? 5.0 },
+                        set: { visit.pizzaBaking = $0 }
+                    ))
+                    IntensitySliderRow(title: "🌟 토핑", subtitle: "부실 ↔ 풍부", value: Binding(
+                        get: { visit.pizzaTopping ?? 5.0 },
+                        set: { visit.pizzaTopping = $0 }
+                    ))
+                    IntensitySliderRow(title: "⚖️ 밸런스", subtitle: "불균형 ↔ 조화", value: Binding(
+                        get: { visit.pizzaBalance ?? 5.0 },
+                        set: { visit.pizzaBalance = $0 }
+                    ))
+
+                case .wine:
+                    IntensitySliderRow(title: "💪 바디", subtitle: "가벼움 ↔ 묵직함", value: Binding(
+                        get: { visit.wineBody ?? 5.0 },
+                        set: { visit.wineBody = $0 }
+                    ))
+                    IntensitySliderRow(title: "🍇 타닌", subtitle: "약함 ↔ 떫음", value: Binding(
+                        get: { visit.wineTannin ?? 5.0 },
+                        set: { visit.wineTannin = $0 }
+                    ))
+                    IntensitySliderRow(title: "🍋 산도", subtitle: "낮음 ↔ 높음", value: Binding(
+                        get: { visit.wineAcidity ?? 5.0 },
+                        set: { visit.wineAcidity = $0 }
+                    ))
+                    IntensitySliderRow(title: "🌸 아로마", subtitle: "단순 ↔ 복잡", value: Binding(
+                        get: { visit.wineAroma ?? 5.0 },
+                        set: { visit.wineAroma = $0 }
+                    ))
+                    IntensitySliderRow(title: "✨ 피니시", subtitle: "짧음 ↔ 긴 여운", value: Binding(
+                        get: { visit.wineFinish ?? 5.0 },
+                        set: { visit.wineFinish = $0 }
+                    ))
+                    IntensitySliderRow(title: "⚖️ 밸런스", subtitle: "불균형 ↔ 조화", value: Binding(
+                        get: { visit.wineBalance ?? 5.0 },
+                        set: { visit.wineBalance = $0 }
+                    ))
+
+                case .coffee:
+                    IntensitySliderRow(title: "🍋 산미", subtitle: "낮음 ↔ 밝음", value: Binding(
+                        get: { visit.coffeeAcidity ?? 5.0 },
+                        set: { visit.coffeeAcidity = $0 }
+                    ))
+                    IntensitySliderRow(title: "💪 바디", subtitle: "가벼움 ↔ 묵직함", value: Binding(
+                        get: { visit.coffeeBody ?? 5.0 },
+                        set: { visit.coffeeBody = $0 }
+                    ))
+                    IntensitySliderRow(title: "🌸 향미", subtitle: "단순 ↔ 복잡", value: Binding(
+                        get: { visit.coffeeFlavor ?? 5.0 },
+                        set: { visit.coffeeFlavor = $0 }
+                    ))
+                    IntensitySliderRow(title: "✨ 후미", subtitle: "짧음 ↔ 긴 여운", value: Binding(
+                        get: { visit.coffeeAftertaste ?? 5.0 },
+                        set: { visit.coffeeAftertaste = $0 }
+                    ))
+                    IntensitySliderRow(title: "🍯 단맛", subtitle: "쓴맛 ↔ 단맛", value: Binding(
+                        get: { visit.coffeeSweetness ?? 5.0 },
+                        set: { visit.coffeeSweetness = $0 }
+                    ))
+                    IntensitySliderRow(title: "⚖️ 밸런스", subtitle: "불균형 ↔ 조화", value: Binding(
+                        get: { visit.coffeeBalance ?? 5.0 },
+                        set: { visit.coffeeBalance = $0 }
+                    ))
                 }
             }
         }
@@ -328,6 +458,136 @@ struct VisitDetailView: View {
                     AppropriatenessRow(title: "🍖 마블링", value: Binding(
                         get: { visit.steakMarblingAppropriate ?? 3 },
                         set: { visit.steakMarblingAppropriate = $0 }
+                    ))
+
+                case .sushi:
+                    AppropriatenessRow(title: "🍚 샤리(밥)", value: Binding(
+                        get: { visit.sushiShariAppropriate ?? 3 },
+                        set: { visit.sushiShariAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "🐟 네타(재료)", value: Binding(
+                        get: { visit.sushiNetaAppropriate ?? 3 },
+                        set: { visit.sushiNetaAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "🌿 와사비", value: Binding(
+                        get: { visit.sushiWasabiAppropriate ?? 3 },
+                        set: { visit.sushiWasabiAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "⚖️ 밸런스", value: Binding(
+                        get: { visit.sushiBalanceAppropriate ?? 3 },
+                        set: { visit.sushiBalanceAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "✋ 쥐기", value: Binding(
+                        get: { visit.sushiGripAppropriate ?? 3 },
+                        set: { visit.sushiGripAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "🌡️ 온도", value: Binding(
+                        get: { visit.sushiTemperatureAppropriate ?? 3 },
+                        set: { visit.sushiTemperatureAppropriate = $0 }
+                    ))
+
+                case .ramen:
+                    AppropriatenessRow(title: "🥣 국물", value: Binding(
+                        get: { visit.ramenBrothAppropriate ?? 3 },
+                        set: { visit.ramenBrothAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "🍜 면발", value: Binding(
+                        get: { visit.ramenNoodleAppropriate ?? 3 },
+                        set: { visit.ramenNoodleAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "🥓 차슈", value: Binding(
+                        get: { visit.ramenChashuAppropriate ?? 3 },
+                        set: { visit.ramenChashuAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "🥚 토핑", value: Binding(
+                        get: { visit.ramenToppingAppropriate ?? 3 },
+                        set: { visit.ramenToppingAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "🔥 온도", value: Binding(
+                        get: { visit.ramenTemperatureAppropriate ?? 3 },
+                        set: { visit.ramenTemperatureAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "⚖️ 밸런스", value: Binding(
+                        get: { visit.ramenBalanceAppropriate ?? 3 },
+                        set: { visit.ramenBalanceAppropriate = $0 }
+                    ))
+
+                case .pizza:
+                    AppropriatenessRow(title: "🫓 도우", value: Binding(
+                        get: { visit.pizzaDoughAppropriate ?? 3 },
+                        set: { visit.pizzaDoughAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "🍅 소스", value: Binding(
+                        get: { visit.pizzaSauceAppropriate ?? 3 },
+                        set: { visit.pizzaSauceAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "🧀 치즈", value: Binding(
+                        get: { visit.pizzaCheeseAppropriate ?? 3 },
+                        set: { visit.pizzaCheeseAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "🔥 굽기", value: Binding(
+                        get: { visit.pizzaBakingAppropriate ?? 3 },
+                        set: { visit.pizzaBakingAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "🌟 토핑", value: Binding(
+                        get: { visit.pizzaToppingAppropriate ?? 3 },
+                        set: { visit.pizzaToppingAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "⚖️ 밸런스", value: Binding(
+                        get: { visit.pizzaBalanceAppropriate ?? 3 },
+                        set: { visit.pizzaBalanceAppropriate = $0 }
+                    ))
+
+                case .wine:
+                    AppropriatenessRow(title: "💪 바디", value: Binding(
+                        get: { visit.wineBodyAppropriate ?? 3 },
+                        set: { visit.wineBodyAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "🍇 타닌", value: Binding(
+                        get: { visit.wineTanninAppropriate ?? 3 },
+                        set: { visit.wineTanninAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "🍋 산도", value: Binding(
+                        get: { visit.wineAcidityAppropriate ?? 3 },
+                        set: { visit.wineAcidityAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "🌸 아로마", value: Binding(
+                        get: { visit.wineAromaAppropriate ?? 3 },
+                        set: { visit.wineAromaAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "✨ 피니시", value: Binding(
+                        get: { visit.wineFinishAppropriate ?? 3 },
+                        set: { visit.wineFinishAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "⚖️ 밸런스", value: Binding(
+                        get: { visit.wineBalanceAppropriate ?? 3 },
+                        set: { visit.wineBalanceAppropriate = $0 }
+                    ))
+
+                case .coffee:
+                    AppropriatenessRow(title: "🍋 산미", value: Binding(
+                        get: { visit.coffeeAcidityAppropriate ?? 3 },
+                        set: { visit.coffeeAcidityAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "💪 바디", value: Binding(
+                        get: { visit.coffeeBodyAppropriate ?? 3 },
+                        set: { visit.coffeeBodyAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "🌸 향미", value: Binding(
+                        get: { visit.coffeeFlavorAppropriate ?? 3 },
+                        set: { visit.coffeeFlavorAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "✨ 후미", value: Binding(
+                        get: { visit.coffeeAftertasteAppropriate ?? 3 },
+                        set: { visit.coffeeAftertasteAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "🍯 단맛", value: Binding(
+                        get: { visit.coffeeSweetnessAppropriate ?? 3 },
+                        set: { visit.coffeeSweetnessAppropriate = $0 }
+                    ))
+                    AppropriatenessRow(title: "⚖️ 밸런스", value: Binding(
+                        get: { visit.coffeeBalanceAppropriate ?? 3 },
+                        set: { visit.coffeeBalanceAppropriate = $0 }
                     ))
                 }
             }
