@@ -200,6 +200,8 @@ struct SliderRowView: View {
 
             Slider(value: $value, in: 0...10, step: 1)
                 .tint(.blue)
+                .contentShape(Rectangle())  // 터치 영역 명확히 지정
+                .gesture(DragGesture(minimumDistance: 0))  // 스크롤보다 슬라이더 우선
 
             HStack {
                 Text(subtitle.components(separatedBy: " ↔ ").first ?? "")
@@ -221,6 +223,7 @@ struct SliderRowView: View {
 struct RadarChartView: View {
     let data: [(String, Double, String)]
     let maxValue: Double = 10.0
+    var userProfile: TasteProfile? = nil  // 사용자 취향 (적절함 계산용)
 
     var body: some View {
         GeometryReader { geometry in
@@ -238,10 +241,13 @@ struct RadarChartView: View {
                     .stroke(.gray.opacity(0.2), lineWidth: 1)
                 }
 
-                // 메인 데이터 영역
-                radarDataPolygon(center: center, radius: radius)
-                    .fill(.blue.opacity(0.2))
+                // 적절함 영역 (채워진 도형) - userProfile이 있을 때만
+                if userProfile != nil {
+                    adequacyPolygon(center: center, radius: radius)
+                        .fill(.green.opacity(0.3))
+                }
 
+                // 맛 정보 영역 (테두리만 있는 빈 도형)
                 radarDataPolygon(center: center, radius: radius)
                     .stroke(.blue, lineWidth: 2)
 
@@ -323,6 +329,41 @@ struct RadarChartView: View {
             let value = data[i].1
             let distance = radius * (value / maxValue)
             let point = pointOnCircle(center: center, radius: distance, angle: angle)
+
+            if i == 0 {
+                path.move(to: point)
+            } else {
+                path.addLine(to: point)
+            }
+        }
+
+        path.closeSubpath()
+        return path
+    }
+
+    // 적절함 도형: 맛 정보 범위 내에서 매칭율만큼 채움
+    private func adequacyPolygon(center: CGPoint, radius: CGFloat) -> Path {
+        var path = Path()
+        guard let profile = userProfile else { return path }
+
+        let profileValues = [
+            profile.spicy, profile.boldness, profile.sweetness, profile.saltiness,
+            profile.richness, profile.naturalTaste, profile.texture, profile.cooking
+        ]
+
+        for i in 0..<data.count {
+            let angle = angleForIndex(i, total: data.count)
+            let restaurantValue = data[i].1
+            let userValue = profileValues[i]
+
+            // 적절함 계산: 1 - (차이 / 10), 차이가 클수록 적절함이 낮음
+            let difference = abs(restaurantValue - userValue)
+            let adequacy = 1.0 - (difference / maxValue)
+
+            // 적절함 비율만큼 식당 맛 정보 범위 내에서 채움
+            let restaurantDistance = radius * (restaurantValue / maxValue)
+            let adequacyDistance = restaurantDistance * adequacy
+            let point = pointOnCircle(center: center, radius: adequacyDistance, angle: angle)
 
             if i == 0 {
                 path.move(to: point)

@@ -266,6 +266,98 @@ final class Restaurant {
     var hasVisits: Bool {
         !(visits?.isEmpty ?? true)
     }
+
+    // 리이오미슐랭 점수 (0-100점)
+    // 순수 맛 평가: 평균 별점(50%) + 평균 적절함(50%)
+    var satisfactionScore: Double {
+        guard let visits = visits, !visits.isEmpty else {
+            // 방문 기록이 없으면 기본 별점만 사용
+            return Double(rating) / 5.0 * 100.0
+        }
+
+        let validVisits = visits.filter { $0.hasTasteProfile }
+
+        // 평균 별점 (1-5점 → 0-100점)
+        let avgRating = averageRating / 5.0 * 100.0
+
+        // 평균 적절함이 없으면 별점만 사용
+        guard !validVisits.isEmpty else {
+            return avgRating
+        }
+
+        // 평균 적절함 계산 (1-5점 → 0-100점)
+        let appropriatenessValues = validVisits.flatMap { visit -> [Double] in
+            var values: [Double] = []
+
+            // 일반 음식
+            if let v = visit.spicyAppropriate { values.append(Double(v)) }
+            if let v = visit.boldnessAppropriate { values.append(Double(v)) }
+            if let v = visit.sweetnessAppropriate { values.append(Double(v)) }
+            if let v = visit.saltinessAppropriate { values.append(Double(v)) }
+            if let v = visit.richnessAppropriate { values.append(Double(v)) }
+            if let v = visit.naturalTasteAppropriate { values.append(Double(v)) }
+
+            // 스테이크
+            if let v = visit.steakDonenessAppropriate { values.append(Double(v)) }
+            if let v = visit.steakJuicinessAppropriate { values.append(Double(v)) }
+            if let v = visit.steakTendernessAppropriate { values.append(Double(v)) }
+            if let v = visit.steakSeasoningAppropriate { values.append(Double(v)) }
+            if let v = visit.steakFlavorAppropriate { values.append(Double(v)) }
+            if let v = visit.steakMarblingAppropriate { values.append(Double(v)) }
+
+            // 스시
+            if let v = visit.sushiShariAppropriate { values.append(Double(v)) }
+            if let v = visit.sushiNetaAppropriate { values.append(Double(v)) }
+            if let v = visit.sushiWasabiAppropriate { values.append(Double(v)) }
+            if let v = visit.sushiBalanceAppropriate { values.append(Double(v)) }
+            if let v = visit.sushiGripAppropriate { values.append(Double(v)) }
+            if let v = visit.sushiTemperatureAppropriate { values.append(Double(v)) }
+
+            // 라멘
+            if let v = visit.ramenBrothAppropriate { values.append(Double(v)) }
+            if let v = visit.ramenNoodleAppropriate { values.append(Double(v)) }
+            if let v = visit.ramenChashuAppropriate { values.append(Double(v)) }
+            if let v = visit.ramenToppingAppropriate { values.append(Double(v)) }
+            if let v = visit.ramenTemperatureAppropriate { values.append(Double(v)) }
+            if let v = visit.ramenBalanceAppropriate { values.append(Double(v)) }
+
+            // 피자
+            if let v = visit.pizzaDoughAppropriate { values.append(Double(v)) }
+            if let v = visit.pizzaSauceAppropriate { values.append(Double(v)) }
+            if let v = visit.pizzaCheeseAppropriate { values.append(Double(v)) }
+            if let v = visit.pizzaBakingAppropriate { values.append(Double(v)) }
+            if let v = visit.pizzaToppingAppropriate { values.append(Double(v)) }
+            if let v = visit.pizzaBalanceAppropriate { values.append(Double(v)) }
+
+            // 와인
+            if let v = visit.wineBodyAppropriate { values.append(Double(v)) }
+            if let v = visit.wineTanninAppropriate { values.append(Double(v)) }
+            if let v = visit.wineAcidityAppropriate { values.append(Double(v)) }
+            if let v = visit.wineAromaAppropriate { values.append(Double(v)) }
+            if let v = visit.wineFinishAppropriate { values.append(Double(v)) }
+            if let v = visit.wineBalanceAppropriate { values.append(Double(v)) }
+
+            // 커피
+            if let v = visit.coffeeAcidityAppropriate { values.append(Double(v)) }
+            if let v = visit.coffeeBodyAppropriate { values.append(Double(v)) }
+            if let v = visit.coffeeFlavorAppropriate { values.append(Double(v)) }
+            if let v = visit.coffeeAftertasteAppropriate { values.append(Double(v)) }
+            if let v = visit.coffeeSweetnessAppropriate { values.append(Double(v)) }
+            if let v = visit.coffeeBalanceAppropriate { values.append(Double(v)) }
+
+            return values
+        }
+
+        if appropriatenessValues.isEmpty {
+            return avgRating
+        }
+
+        let avgAppropriateness = appropriatenessValues.reduce(0, +) / Double(appropriatenessValues.count)
+        let appropriatenessScore = avgAppropriateness / 5.0 * 100.0
+
+        // 최종 점수: 별점 50% + 적절함 50%
+        return (avgRating * 0.5) + (appropriatenessScore * 0.5)
+    }
 }
 
 // 배열 평균 계산 확장

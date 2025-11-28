@@ -4,12 +4,69 @@ import SwiftData
 import CoreLocation
 import OSLog
 
+// MARK: - POI Category Helper
+enum POICategoryMapper {
+    static func toKorean(_ rawValue: String) -> String {
+        switch rawValue {
+        case "MKPOICategoryCafe":
+            return "카페"
+        case "MKPOICategoryRestaurant":
+            return "레스토랑"
+        case "MKPOICategoryBakery":
+            return "베이커리"
+        case "MKPOICategoryBrewery":
+            return "브루어리"
+        case "MKPOICategoryNightlife":
+            return "나이트라이프"
+        case "MKPOICategoryWinery":
+            return "와이너리"
+        case "MKPOICategoryFoodMarket":
+            return "식품마켓"
+        case "MKPOICategoryBar":
+            return "바"
+        case "MKPOICategoryFastFood":
+            return "패스트푸드"
+        default:
+            if rawValue.hasPrefix("MKPOICategory") {
+                return String(rawValue.dropFirst("MKPOICategory".count))
+            }
+            return rawValue
+        }
+    }
+
+    static func toIcon(_ rawValue: String) -> String {
+        switch rawValue {
+        case "MKPOICategoryCafe", "카페":
+            return "cup.and.saucer.fill"
+        case "MKPOICategoryRestaurant", "레스토랑":
+            return "fork.knife"
+        case "MKPOICategoryBakery", "베이커리":
+            return "birthday.cake.fill"
+        case "MKPOICategoryBrewery", "브루어리":
+            return "mug.fill"
+        case "MKPOICategoryNightlife", "나이트라이프":
+            return "moon.stars.fill"
+        case "MKPOICategoryWinery", "와이너리":
+            return "wineglass.fill"
+        case "MKPOICategoryFoodMarket", "식품마켓":
+            return "cart.fill"
+        case "MKPOICategoryBar", "바":
+            return "wineglass.fill"
+        case "MKPOICategoryFastFood", "패스트푸드":
+            return "takeoutbag.and.cup.and.straw.fill"
+        default:
+            return "fork.knife"
+        }
+    }
+}
+
 struct MapView: View {
     @Environment(\.modelContext) private var modelContext
     let restaurants: [Restaurant]
 
     @StateObject private var locationDelegate = LocationDelegate()
-    @State private var position: MapCameraPosition = .automatic
+    @State private var position: MapCameraPosition = .userLocation(fallback: .automatic)
+    @State private var hasInitializedPosition = false
     @State private var showingAddSheet = false
     @State private var selectedCoordinate: CLLocationCoordinate2D?
     @State private var selectedRestaurant: Restaurant?
@@ -37,13 +94,16 @@ struct MapView: View {
                 floatingButton
             }
             .navigationTitle("식당 지도")
+            .navigationBarTitleDisplayMode(.large)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Toggle(isOn: $showSavedOnly) {
-                        Label("저장된 식당만", systemImage: showSavedOnly ? "bookmark.fill" : "bookmark")
+                    Button {
+                        showSavedOnly.toggle()
+                    } label: {
+                        Image(systemName: showSavedOnly ? "bookmark.fill" : "bookmark")
+                            .font(.system(size: 18))
+                            .foregroundStyle(showSavedOnly ? .blue : .gray)
                     }
-                    .toggleStyle(.button)
-                    .tint(showSavedOnly ? .blue : .gray)
                 }
             }
             .searchable(text: $searchText, prompt: "식당이나 장소 검색")
@@ -96,14 +156,16 @@ struct MapView: View {
                 locationDelegate.requestLocation()
             }
             .onChange(of: locationDelegate.locationUpdated) { _, _ in
-                if let location = locationDelegate.userLocation {
-                    logger.info("지도 위치 업데이트: 위도=\(location.latitude), 경도=\(location.longitude)")
+                // 앱 시작 시 한 번만 현재 위치로 이동
+                if !hasInitializedPosition, let location = locationDelegate.userLocation {
+                    logger.info("지도 초기 위치 설정: 위도=\(location.latitude), 경도=\(location.longitude)")
                     // 사용자 위치를 중심으로 적절한 줌 레벨로 지도 이동
                     // span 값: 0.01은 약 1km 반경을 보여줍니다
                     position = .region(MKCoordinateRegion(
                         center: location,
                         span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
                     ))
+                    hasInitializedPosition = true
                 }
             }
             .onChange(of: nearbyPOIs) { oldValue, newValue in
@@ -395,13 +457,44 @@ struct NearbyPOIPinView: View {
     let mapItem: MKMapItem
     let onTap: () -> Void
 
+    private var iconName: String {
+        if let category = mapItem.pointOfInterestCategory?.rawValue {
+            return POICategoryMapper.toIcon(category)
+        }
+        return "fork.knife"
+    }
+
+    private var iconColor: Color {
+        if let category = mapItem.pointOfInterestCategory?.rawValue {
+            switch category {
+            case "MKPOICategoryCafe":
+                return .brown
+            case "MKPOICategoryBakery":
+                return .orange
+            case "MKPOICategoryBar", "MKPOICategoryWinery", "MKPOICategoryBrewery":
+                return .purple
+            case "MKPOICategoryNightlife":
+                return .indigo
+            case "MKPOICategoryFastFood":
+                return .red
+            default:
+                return .green
+            }
+        }
+        return .green
+    }
+
     var body: some View {
         VStack(spacing: 2) {
-            Image(systemName: "fork.knife.circle.fill")
-                .font(.system(size: 30))
-                .foregroundStyle(.green)
-                .background(Circle().fill(.white))
-                .shadow(radius: 2)
+            ZStack {
+                Circle()
+                    .fill(.white)
+                    .frame(width: 32, height: 32)
+                Image(systemName: iconName)
+                    .font(.system(size: 18))
+                    .foregroundStyle(iconColor)
+            }
+            .shadow(radius: 2)
         }
         .onTapGesture(perform: onTap)
     }
@@ -412,15 +505,27 @@ struct SearchResultPinView: View {
     let onTap: () -> Void
     @State private var showingOptions = false
 
+    private var iconName: String {
+        if let category = mapItem.pointOfInterestCategory?.rawValue {
+            return POICategoryMapper.toIcon(category)
+        }
+        return "mappin"
+    }
+
     var body: some View {
-        Image(systemName: "magnifyingglass.circle.fill")
-            .font(.system(size: 30))
-            .foregroundStyle(.blue)
-            .background(Circle().fill(.white))
-            .onTapGesture {
-                showingOptions = true
-            }
-            .popover(isPresented: $showingOptions, arrowEdge: .bottom) {
+        ZStack {
+            Circle()
+                .fill(.blue)
+                .frame(width: 32, height: 32)
+            Image(systemName: iconName)
+                .font(.system(size: 16))
+                .foregroundStyle(.white)
+        }
+        .shadow(radius: 2)
+        .onTapGesture {
+            showingOptions = true
+        }
+        .popover(isPresented: $showingOptions, arrowEdge: .bottom) {
                 VStack(spacing: 0) {
                     Button {
                         showingOptions = false
@@ -570,7 +675,7 @@ struct SearchResultsView: View {
                             }
 
                             if let category = item.pointOfInterestCategory?.rawValue {
-                                Text(category)
+                                Text(POICategoryMapper.toKorean(category))
                                     .font(.caption)
                                     .padding(.horizontal, 8)
                                     .padding(.vertical, 2)
@@ -694,7 +799,7 @@ struct POIDetailView: View {
                         .fontWeight(.bold)
 
                     if let category = mapItem.pointOfInterestCategory?.rawValue {
-                        Text(category)
+                        Text(POICategoryMapper.toKorean(category))
                             .font(.subheadline)
                             .padding(.horizontal, 12)
                             .padding(.vertical, 4)

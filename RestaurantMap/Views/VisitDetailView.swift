@@ -78,6 +78,55 @@ struct VisitDetailView: View {
     var body: some View {
         NavigationStack {
             Form {
+                // 맛 평가 섹션 - 가장 먼저 표시
+                Section {
+                    VStack(spacing: 16) {
+                        HStack {
+                            Text("인생 맛집 평가하기")
+                                .font(.headline)
+                            Spacer()
+                            if visit.hasTasteProfile && !isEditing {
+                                Text("✓ 평가됨")
+                                    .font(.caption)
+                                    .foregroundStyle(.green)
+                            }
+                        }
+
+                        if visit.hasTasteProfile && !isEditing {
+                            // 이중 레이더 차트 표시
+                            DualRadarChartView(
+                                intensityData: visit.intensityData,
+                                appropriatenessData: visit.appropriatenessData
+                            )
+                            .frame(height: 380)
+                        }
+
+                        if isEditing {
+                            // 편집 모드 선택
+                            Picker("평가 유형", selection: $editingMode) {
+                                Text("맛 강도").tag(EvaluationMode.intensity)
+                                Text("적절함").tag(EvaluationMode.appropriateness)
+                            }
+                            .pickerStyle(.segmented)
+                            .padding(.bottom, 8)
+
+                            if editingMode == .intensity {
+                                intensityEditingView
+                            } else {
+                                appropriatenessEditingView
+                            }
+                        } else if !visit.hasTasteProfile {
+                            Text("이 방문의 맛 취향을 평가하려면 '편집'을 눌러주세요")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                                .frame(maxWidth: .infinity, alignment: .center)
+                                .padding(.vertical, 8)
+                        }
+                    }
+                } header: {
+                    Text("이 방문은 어땠나요?")
+                }
+
                 Section("방문 정보") {
                     if isEditing {
                         DatePicker("방문 날짜", selection: $visit.visitDate, displayedComponents: .date)
@@ -126,55 +175,6 @@ struct VisitDetailView: View {
                             Text(visit.notes)
                         }
                     }
-                }
-
-                // 맛 평가 섹션
-                Section {
-                    VStack(spacing: 16) {
-                        HStack {
-                            Text("인생 맛집 평가하기")
-                                .font(.headline)
-                            Spacer()
-                            if visit.hasTasteProfile && !isEditing {
-                                Text("✓ 평가됨")
-                                    .font(.caption)
-                                    .foregroundStyle(.green)
-                            }
-                        }
-
-                        if visit.hasTasteProfile && !isEditing {
-                            // 이중 레이더 차트 표시
-                            DualRadarChartView(
-                                intensityData: visit.intensityData,
-                                appropriatenessData: visit.appropriatenessData
-                            )
-                            .frame(height: 380)
-                        }
-
-                        if isEditing {
-                            // 편집 모드 선택
-                            Picker("평가 유형", selection: $editingMode) {
-                                Text("맛 강도").tag(EvaluationMode.intensity)
-                                Text("적절함").tag(EvaluationMode.appropriateness)
-                            }
-                            .pickerStyle(.segmented)
-                            .padding(.bottom, 8)
-
-                            if editingMode == .intensity {
-                                intensityEditingView
-                            } else {
-                                appropriatenessEditingView
-                            }
-                        } else if !visit.hasTasteProfile {
-                            Text("이 방문의 맛 취향을 평가하려면 '편집'을 눌러주세요")
-                                .font(.caption)
-                                .foregroundStyle(.secondary)
-                                .frame(maxWidth: .infinity, alignment: .center)
-                                .padding(.vertical, 8)
-                        }
-                    }
-                } header: {
-                    Text("이 방문은 어땠나요?")
                 }
             }
             .navigationTitle(visit.restaurant?.name ?? "방문 기록")
@@ -737,6 +737,7 @@ struct CalibratedRadarChartForVisit: View {
     let intensityData: [(String, Double)]
     let appropriatenessData: [(String, Double)]
     let maxValue: Double = 10.0
+    let appropriatenessMaxValue: Double = 5.0  // 적절함은 5점 만점
 
     var body: some View {
         GeometryReader { geometry in
@@ -762,43 +763,13 @@ struct CalibratedRadarChartForVisit: View {
                     .stroke(.gray.opacity(0.3), lineWidth: 1)
                 }
 
-                // 맛 강도 외곽선 (파란색) - 맛의 형태
+                // 적절함 영역 (채워진 도형) - 맛 강도 범위 내에서 비율만큼 채움
+                appropriatenessFilledPath(center: center, radius: radius)
+                    .fill(.green.opacity(0.5))
+
+                // 맛 강도 외곽선 (파란색 테두리만) - 맛의 형태
                 hexagonDataPath(center: center, radius: radius, data: intensityData)
                     .stroke(.blue, lineWidth: 2.5)
-
-                // 적절함에 따른 채움 - 각 축별로 그라데이션
-                ForEach(0..<intensityData.count, id: \.self) { index in
-                    let nextIndex = (index + 1) % intensityData.count
-
-                    // 현재 축과 다음 축의 데이터
-                    let currentIntensity = intensityData[index].1
-                    let nextIntensity = intensityData[nextIndex].1
-
-                    // 적절함 점수 (1-5를 0-1로 정규화)
-                    let currentAppropriateness = appropriatenessData[index].1 / 10.0 // 이미 *2 되어 있음
-                    let nextAppropriateness = appropriatenessData[nextIndex].1 / 10.0
-
-                    // 삼각형 영역 그리기
-                    let angle1 = angleForIndex(index, total: intensityData.count)
-                    let angle2 = angleForIndex(nextIndex, total: intensityData.count)
-
-                    let distance1 = radius * (currentIntensity / maxValue)
-                    let distance2 = radius * (nextIntensity / maxValue)
-
-                    let point1 = pointOnCircle(center: center, radius: distance1, angle: angle1)
-                    let point2 = pointOnCircle(center: center, radius: distance2, angle: angle2)
-
-                    // 적절함에 따른 투명도 계산 (평균)
-                    let averageAppropriateness = (currentAppropriateness + nextAppropriateness) / 2.0
-
-                    Path { path in
-                        path.move(to: center)
-                        path.addLine(to: point1)
-                        path.addLine(to: point2)
-                        path.closeSubpath()
-                    }
-                    .fill(.green.opacity(averageAppropriateness * 0.6))
-                }
 
                 // 라벨
                 ForEach(0..<intensityData.count, id: \.self) { index in
@@ -849,6 +820,35 @@ struct CalibratedRadarChartForVisit: View {
         return path
     }
 
+    // 적절함 비율에 따라 맛 강도 범위 내에서 채워진 도형
+    private func appropriatenessFilledPath(center: CGPoint, radius: CGFloat) -> Path {
+        var path = Path()
+
+        for i in 0..<intensityData.count {
+            let angle = angleForIndex(i, total: intensityData.count)
+            let intensityValue = intensityData[i].1
+
+            // appropriatenessData는 이미 *2 되어 있으므로 10으로 나눔 (원래 5점 만점 → 10점으로 변환됨)
+            let appropriatenessValue = appropriatenessData[i].1 / 2.0  // 다시 5점 만점으로
+            let appropriatenessRatio = appropriatenessValue / appropriatenessMaxValue  // 0~1 비율
+
+            // 맛 강도 범위 내에서 적절함 비율만큼만 거리 계산
+            let intensityDistance = radius * (intensityValue / maxValue)
+            let filledDistance = intensityDistance * appropriatenessRatio
+
+            let point = pointOnCircle(center: center, radius: filledDistance, angle: angle)
+
+            if i == 0 {
+                path.move(to: point)
+            } else {
+                path.addLine(to: point)
+            }
+        }
+
+        path.closeSubpath()
+        return path
+    }
+
     private func angleForIndex(_ index: Int, total: Int) -> Double {
         let angleStep = 2 * .pi / Double(total)
         return angleStep * Double(index) - .pi / 2
@@ -881,6 +881,8 @@ struct IntensitySliderRow: View {
 
             Slider(value: $value, in: 0...10, step: 1)
                 .tint(.blue)
+                .contentShape(Rectangle())  // 터치 영역 명확히 지정
+                .gesture(DragGesture(minimumDistance: 0))  // Form 스크롤보다 슬라이더 우선
 
             HStack {
                 Text(subtitle.components(separatedBy: " ↔ ").first ?? "")
@@ -918,6 +920,8 @@ struct AppropriatenessRow: View {
                 set: { value = Int($0.rounded()) }
             ), in: 1...5, step: 1)
                 .tint(.yellow)
+                .contentShape(Rectangle())  // 터치 영역 명확히 지정
+                .gesture(DragGesture(minimumDistance: 0))  // Form 스크롤보다 슬라이더 우선
 
             HStack {
                 Text("부족함")

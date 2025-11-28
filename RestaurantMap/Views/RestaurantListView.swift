@@ -2,6 +2,74 @@ import SwiftUI
 import SwiftData
 import OSLog
 
+// MARK: - Fractional Star Rating View
+struct FractionalStarRatingView: View {
+    let rating: Double
+    let maxRating: Int
+    let starSize: CGFloat
+    let filledColor: Color
+    let emptyColor: Color
+
+    init(rating: Double, maxRating: Int = 5, starSize: CGFloat = 12, filledColor: Color = .yellow, emptyColor: Color = .gray) {
+        self.rating = rating
+        self.maxRating = maxRating
+        self.starSize = starSize
+        self.filledColor = filledColor
+        self.emptyColor = emptyColor
+    }
+
+    var body: some View {
+        HStack(spacing: 2) {
+            ForEach(0..<maxRating, id: \.self) { index in
+                StarView(
+                    fillAmount: fillAmount(for: index),
+                    size: starSize,
+                    filledColor: filledColor,
+                    emptyColor: emptyColor
+                )
+            }
+        }
+    }
+
+    private func fillAmount(for index: Int) -> Double {
+        let starValue = Double(index + 1)
+        if rating >= starValue {
+            return 1.0 // 완전히 채워진 별
+        } else if rating > Double(index) {
+            return rating - Double(index) // 부분적으로 채워진 별 (0.0 ~ 1.0)
+        } else {
+            return 0.0 // 빈 별
+        }
+    }
+}
+
+struct StarView: View {
+    let fillAmount: Double
+    let size: CGFloat
+    let filledColor: Color
+    let emptyColor: Color
+
+    var body: some View {
+        ZStack {
+            // 빈 별 (배경)
+            Image(systemName: "star.fill")
+                .font(.system(size: size))
+                .foregroundStyle(emptyColor)
+
+            // 채워진 별 (마스크로 부분 표시)
+            Image(systemName: "star.fill")
+                .font(.system(size: size))
+                .foregroundStyle(filledColor)
+                .mask(
+                    GeometryReader { geometry in
+                        Rectangle()
+                            .frame(width: geometry.size.width * fillAmount)
+                    }
+                )
+        }
+    }
+}
+
 struct RestaurantListView: View {
     @Environment(\.modelContext) private var modelContext
     let restaurants: [Restaurant]
@@ -20,9 +88,40 @@ struct RestaurantListView: View {
         restaurants.filter { !$0.isTop6 }
     }
 
+    // 리이오미슐랭 랭킹 (만족도 점수 기준 상위 식당)
+    private var rankedRestaurants: [Restaurant] {
+        restaurants
+            .filter { $0.visitCount > 0 } // 방문 기록이 있는 식당만
+            .sorted { $0.satisfactionScore > $1.satisfactionScore }
+    }
+
     var body: some View {
         NavigationStack {
             List {
+                // 리이오미슐랭 랭킹
+                if !rankedRestaurants.isEmpty {
+                    Section {
+                        ForEach(Array(rankedRestaurants.enumerated()), id: \.element.id) { index, restaurant in
+                            RankedRestaurantRow(restaurant: restaurant, rank: index + 1)
+                                .contentShape(Rectangle())
+                                .onTapGesture {
+                                    selectedRestaurant = restaurant
+                                    showingDetail = true
+                                }
+                        }
+                    } header: {
+                        HStack {
+                            Image(systemName: "medal.fill")
+                                .foregroundStyle(.orange)
+                            Text("리이오미슐랭")
+                        }
+                        .font(.headline)
+                    } footer: {
+                        Text("별점과 적절함 평가를 기반으로 자동 계산됩니다")
+                            .font(.caption2)
+                    }
+                }
+
                 // 나의 최애 탑6
                 if !top6Restaurants.isEmpty {
                     Section {
@@ -41,7 +140,7 @@ struct RestaurantListView: View {
                         HStack {
                             Image(systemName: "star.fill")
                                 .foregroundStyle(.yellow)
-                            Text("나의 최애 탑6")
+                            Text("나의 최애 탑6 (수동)")
                         }
                         .font(.headline)
                     }
@@ -136,6 +235,95 @@ struct RestaurantListView: View {
     }
 }
 
+// MARK: - Ranked Restaurant Row (리이오미슐랭)
+struct RankedRestaurantRow: View {
+    let restaurant: Restaurant
+    let rank: Int
+
+    // 카테고리에 맞는 아이콘 반환
+    private var categoryIcon: String {
+        if !restaurant.category.isEmpty {
+            return POICategoryMapper.toIcon(restaurant.category)
+        }
+        return restaurant.categoryIcon
+    }
+
+    // 랭킹 메달 색상
+    private var medalColor: Color {
+        switch rank {
+        case 1: return .yellow
+        case 2: return .gray
+        case 3: return .orange
+        default: return .blue.opacity(0.7)
+        }
+    }
+
+    var body: some View {
+        HStack(spacing: 12) {
+            // 랭킹 배지
+            ZStack {
+                Circle()
+                    .fill(medalColor.opacity(0.2))
+                    .frame(width: 44, height: 44)
+                VStack(spacing: 0) {
+                    Text("\(rank)")
+                        .font(.system(size: 18, weight: .bold))
+                        .foregroundStyle(medalColor)
+                    if rank <= 3 {
+                        Image(systemName: "medal.fill")
+                            .font(.system(size: 10))
+                            .foregroundStyle(medalColor)
+                    }
+                }
+            }
+
+            VStack(alignment: .leading, spacing: 6) {
+                // 이름 + 점수
+                HStack {
+                    Text(restaurant.name)
+                        .font(.headline)
+
+                    Spacer()
+
+                    // 만족도 점수
+                    HStack(spacing: 4) {
+                        Image(systemName: "heart.fill")
+                            .font(.system(size: 10))
+                            .foregroundStyle(.red)
+                        Text(String(format: "%.0f", restaurant.satisfactionScore))
+                            .font(.subheadline)
+                            .fontWeight(.bold)
+                            .foregroundStyle(.red)
+                    }
+                }
+
+                // 별점 + 카테고리
+                HStack(spacing: 8) {
+                    // 별점
+                    FractionalStarRatingView(rating: restaurant.averageRating, starSize: 10)
+
+                    // 카테고리
+                    Text(POICategoryMapper.toKorean(restaurant.category.isEmpty ? "레스토랑" : restaurant.category))
+                        .font(.caption2)
+                        .padding(.horizontal, 6)
+                        .padding(.vertical, 2)
+                        .background(.blue.opacity(0.1))
+                        .foregroundStyle(.blue)
+                        .clipShape(Capsule())
+
+                    Spacer()
+
+                    // 방문 횟수
+                    Text("\(restaurant.visitCount)회 방문")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                }
+            }
+        }
+        .padding(.vertical, 4)
+    }
+}
+
 struct Top6RestaurantRow: View {
     let restaurant: Restaurant
 
@@ -152,20 +340,55 @@ struct Top6RestaurantRow: View {
             }
             .frame(width: 40)
 
-            VStack(alignment: .leading, spacing: 4) {
-                Text(restaurant.name)
-                    .font(.headline)
+            VStack(alignment: .leading, spacing: 6) {
+                // 이름 + 평균 별점
+                HStack {
+                    Text(restaurant.name)
+                        .font(.headline)
 
-                Text(restaurant.address)
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
+                    Spacer()
 
-                HStack(spacing: 2) {
-                    ForEach(0..<5) { index in
-                        Image(systemName: index < restaurant.rating ? "star.fill" : "star")
-                            .foregroundStyle(index < restaurant.rating ? .yellow : .gray)
-                            .font(.system(size: 12))
+                    HStack(spacing: 2) {
+                        ForEach(0..<5) { index in
+                            Image(systemName: index < Int(restaurant.averageRating.rounded()) ? "star.fill" : "star")
+                                .foregroundStyle(index < Int(restaurant.averageRating.rounded()) ? .yellow : .gray)
+                                .font(.system(size: 12))
+                        }
                     }
+                }
+
+                // 카테고리 + 마지막 방문일 + 총 방문횟수
+                HStack(spacing: 8) {
+                    // 카테고리 텍스트
+                    Text(POICategoryMapper.toKorean(restaurant.category.isEmpty ? "레스토랑" : restaurant.category))
+                        .font(.caption)
+                        .padding(.horizontal, 8)
+                        .padding(.vertical, 2)
+                        .background(.blue.opacity(0.1))
+                        .foregroundStyle(.blue)
+                        .clipShape(Capsule())
+
+                    Spacer()
+
+                    // 마지막 방문일
+                    if let lastVisit = restaurant.lastVisitDate {
+                        HStack(spacing: 2) {
+                            Image(systemName: "calendar")
+                                .font(.caption2)
+                            Text(lastVisit, format: .dateTime.month().day())
+                                .font(.caption)
+                        }
+                        .foregroundStyle(.secondary)
+                    }
+
+                    // 총 방문횟수
+                    HStack(spacing: 2) {
+                        Image(systemName: "figure.walk")
+                            .font(.caption2)
+                        Text("\(restaurant.visitCount)회")
+                            .font(.caption)
+                    }
+                    .foregroundStyle(.secondary)
                 }
             }
         }
@@ -176,6 +399,14 @@ struct Top6RestaurantRow: View {
 struct RestaurantRow: View {
     let restaurant: Restaurant
 
+    // 카테고리에 맞는 아이콘 반환
+    private var categoryIcon: String {
+        if !restaurant.category.isEmpty {
+            return POICategoryMapper.toIcon(restaurant.category)
+        }
+        return restaurant.categoryIcon
+    }
+
     var body: some View {
         HStack(spacing: 12) {
             // 카테고리 아이콘
@@ -183,45 +414,55 @@ struct RestaurantRow: View {
                 Circle()
                     .fill(.yellow.opacity(0.3))
                     .frame(width: 40, height: 40)
-                Image(systemName: restaurant.categoryIcon)
+                Image(systemName: categoryIcon)
                     .font(.system(size: 20))
                     .foregroundStyle(.orange)
             }
 
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: 6) {
+                // 이름 + 별점
                 HStack {
                     Text(restaurant.name)
                         .font(.headline)
 
                     Spacer()
 
-                    HStack(spacing: 2) {
-                        ForEach(0..<5) { index in
-                            Image(systemName: index < restaurant.rating ? "star.fill" : "star")
-                                .foregroundStyle(index < restaurant.rating ? .yellow : .gray)
-                                .font(.system(size: 12))
-                        }
-                    }
+                    // 평균 별점 (소수점 표현)
+                    FractionalStarRatingView(rating: restaurant.averageRating)
                 }
 
-                Text(restaurant.address)
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
+                // 카테고리 + 마지막 방문일 + 총 방문횟수
+                HStack(spacing: 8) {
+                    // 카테고리 텍스트
+                    Text(POICategoryMapper.toKorean(restaurant.category.isEmpty ? "레스토랑" : restaurant.category))
+                        .font(.caption)
+                        .padding(.horizontal, 8)
+                        .padding(.vertical, 2)
+                        .background(.blue.opacity(0.1))
+                        .foregroundStyle(.blue)
+                        .clipShape(Capsule())
 
-                HStack {
-                    if !restaurant.category.isEmpty {
-                        Text(restaurant.category)
-                            .font(.caption)
-                            .padding(.horizontal, 8)
-                            .padding(.vertical, 2)
-                            .background(.blue.opacity(0.1))
-                            .foregroundStyle(.blue)
-                            .clipShape(Capsule())
+                    Spacer()
+
+                    // 마지막 방문일
+                    if let lastVisit = restaurant.lastVisitDate {
+                        HStack(spacing: 2) {
+                            Image(systemName: "calendar")
+                                .font(.caption2)
+                            Text(lastVisit, format: .dateTime.month().day())
+                                .font(.caption)
+                        }
+                        .foregroundStyle(.secondary)
                     }
 
-                    Text(restaurant.visitDate, format: .dateTime.year().month().day())
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
+                    // 총 방문횟수
+                    HStack(spacing: 2) {
+                        Image(systemName: "figure.walk")
+                            .font(.caption2)
+                        Text("\(restaurant.visitCount)회")
+                            .font(.caption)
+                    }
+                    .foregroundStyle(.secondary)
                 }
             }
         }

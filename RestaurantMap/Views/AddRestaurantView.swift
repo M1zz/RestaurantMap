@@ -32,10 +32,11 @@ struct AddRestaurantView: View {
         ("fork.knife", "포크&나이프"),
         ("cup.and.saucer.fill", "카페"),
         ("wineglass.fill", "술집"),
-        ("Birthday-cake", "디저트"),
+        ("birthday.cake.fill", "디저트"),
         ("basket.fill", "분식"),
         ("takeoutbag.and.cup.and.straw.fill", "패스트푸드")
     ]
+
 
     init(coordinate: CLLocationCoordinate2D?, mapItem: MKMapItem? = nil) {
         self.coordinate = coordinate
@@ -73,9 +74,9 @@ struct AddRestaurantView: View {
                 _phoneNumber = State(initialValue: phone)
             }
 
-            // 카테고리
-            if let category = mapItem.pointOfInterestCategory?.rawValue {
-                _category = State(initialValue: category)
+            // 카테고리 (한글로 매핑)
+            if let poiCategory = mapItem.pointOfInterestCategory?.rawValue {
+                _category = State(initialValue: POICategoryMapper.toKorean(poiCategory))
             }
         }
     }

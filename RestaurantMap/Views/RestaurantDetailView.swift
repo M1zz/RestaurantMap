@@ -12,6 +12,7 @@ struct RestaurantDetailView: View {
     @State private var showingDeleteAlert = false
     @State private var showingAddVisit = false
     @State private var selectedVisit: Visit?
+    @State private var isEditing = false
 
     private let logger = Logger(subsystem: "com.restaurantmap", category: "RestaurantDetail")
 
@@ -22,7 +23,29 @@ struct RestaurantDetailView: View {
     var body: some View {
         NavigationStack {
             Form {
-                
+                // 총평 (평균 레이더 차트) - 가장 먼저 표시
+                if !restaurant.averageIntensity.isEmpty {
+                    Section {
+                        VStack(spacing: 12) {
+                            HStack {
+                                Text("총평 (전체 방문 평균)")
+                                    .font(.headline)
+                                Spacer()
+                                Text("\(restaurant.visitCount)회 방문")
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                            }
+
+                            AverageRadarChartView(
+                                intensityData: restaurant.averageIntensity,
+                                appropriatenessData: restaurant.averageAppropriateness
+                            )
+                            .frame(height: 380)
+                        }
+                    } header: {
+                        Text("이 식당은 전반적으로...")
+                    }
+                }
 
                 Section("방문 통계") {
                     LabeledContent("총 방문 횟수", value: "\(restaurant.visitCount)회")
@@ -35,13 +58,24 @@ struct RestaurantDetailView: View {
 
                     if restaurant.visitCount > 0 {
                         LabeledContent("평균 별점") {
-                            HStack(spacing: 2) {
-                                ForEach(0..<5) { index in
-                                    Image(systemName: index < Int(restaurant.averageRating.rounded()) ? "star.fill" : "star")
-                                        .foregroundStyle(index < Int(restaurant.averageRating.rounded()) ? .yellow : .gray)
-                                        .font(.system(size: 14))
-                                }
+                            HStack(spacing: 4) {
+                                FractionalStarRatingView(rating: restaurant.averageRating, starSize: 14)
                                 Text(String(format: "%.1f", restaurant.averageRating))
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
+
+                        // 리이오미슐랭 만족도 점수
+                        LabeledContent("리이오미슐랭 점수") {
+                            HStack(spacing: 4) {
+                                Image(systemName: "medal.fill")
+                                    .foregroundStyle(.orange)
+                                Text(String(format: "%.0f", restaurant.satisfactionScore))
+                                    .font(.headline)
+                                    .fontWeight(.bold)
+                                    .foregroundStyle(.orange)
+                                Text("/ 100")
                                     .font(.caption)
                                     .foregroundStyle(.secondary)
                             }
@@ -88,41 +122,71 @@ struct RestaurantDetailView: View {
                     }
                 }
 
-                // 총평 (평균 레이더 차트)
-                if !restaurant.averageIntensity.isEmpty {
-                    Section {
-                        VStack(spacing: 12) {
-                            HStack {
-                                Text("총평 (전체 방문 평균)")
-                                    .font(.headline)
-                                Spacer()
-                                Text("\(restaurant.visitCount)회 방문")
-                                    .font(.caption)
-                                    .foregroundStyle(.secondary)
-                            }
+                Section("기본 정보") {
+                    if isEditing {
+                        // 편집 모드
+                        TextField("식당 이름", text: $restaurant.name)
+                        TextField("주소", text: $restaurant.address)
+                        TextField("카테고리", text: $restaurant.category)
+                        TextField("전화번호", text: $restaurant.phoneNumber)
+                            .keyboardType(.phonePad)
 
-                            AverageRadarChartView(
-                                intensityData: restaurant.averageIntensity,
-                                appropriatenessData: restaurant.averageAppropriateness
-                            )
-                            .frame(height: 380)
+                        Picker("음식 종류", selection: Binding(
+                            get: { restaurant.foodCategory },
+                            set: { restaurant.foodCategory = $0 }
+                        )) {
+                            ForEach(FoodCategory.allCases) { category in
+                                Text(category.displayName).tag(category)
+                            }
                         }
-                    } header: {
-                        Text("이 식당은 전반적으로...")
+                        .pickerStyle(.menu)
+                    } else {
+                        // 보기 모드
+                        LabeledContent("식당 이름", value: restaurant.name)
+                        LabeledContent("주소", value: restaurant.address)
+                        if !restaurant.category.isEmpty {
+                            LabeledContent("카테고리", value: POICategoryMapper.toKorean(restaurant.category))
+                        }
+                        LabeledContent("음식 종류", value: restaurant.foodCategory.displayName)
+                        if !restaurant.phoneNumber.isEmpty {
+                            LabeledContent("전화번호") {
+                                Link(restaurant.phoneNumber, destination: URL(string: "tel://\(restaurant.phoneNumber)")!)
+                                    .foregroundStyle(.blue)
+                            }
+                        }
                     }
                 }
 
-                
-                Section("기본 정보") {
-                    LabeledContent("식당 이름", value: restaurant.name)
-                    LabeledContent("주소", value: restaurant.address)
-                    if !restaurant.category.isEmpty {
-                        LabeledContent("카테고리", value: restaurant.category)
-                    }
-                    if !restaurant.phoneNumber.isEmpty {
-                        LabeledContent("전화번호") {
-                            Link(restaurant.phoneNumber, destination: URL(string: "tel://\(restaurant.phoneNumber)")!)
-                                .foregroundStyle(.blue)
+                Section("탑6 설정") {
+                    if isEditing {
+                        Toggle("나의 최애 탑6", isOn: $restaurant.isTop6)
+
+                        if restaurant.isTop6 {
+                            Picker("랭킹", selection: $restaurant.top6Rank) {
+                                Text("선택 안함").tag(nil as Int?)
+                                ForEach(1...6, id: \.self) { rank in
+                                    HStack {
+                                        Image(systemName: "star.fill")
+                                            .foregroundStyle(.yellow)
+                                        Text("\(rank)위")
+                                    }
+                                    .tag(rank as Int?)
+                                }
+                            }
+                            .pickerStyle(.menu)
+                        }
+                    } else {
+                        LabeledContent("탑6 여부") {
+                            if restaurant.isTop6 {
+                                HStack {
+                                    Image(systemName: "star.fill")
+                                        .foregroundStyle(.yellow)
+                                    Text("\(restaurant.top6Rank ?? 0)위")
+                                }
+                            } else {
+                                Text("아니오")
+                                    .foregroundStyle(.secondary)
+                            }
                         }
                     }
                 }
@@ -175,6 +239,11 @@ struct RestaurantDetailView: View {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("닫기") {
                         dismiss()
+                    }
+                }
+                ToolbarItem(placement: .primaryAction) {
+                    Button(isEditing ? "완료" : "편집") {
+                        isEditing.toggle()
                     }
                 }
             }
