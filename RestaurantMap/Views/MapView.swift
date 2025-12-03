@@ -84,7 +84,16 @@ struct MapView: View {
     @State private var isPOISearching = false
     @State private var lastSearchTime: Date?
     @State private var showSavedOnly = false
+    @State private var kakaoPlaces: [KakaoPlace] = []
+    @State private var kakaoSearchResults: [KakaoPlace] = []  // 검색 결과 (파란색으로 표시)
+    @State private var isUsingKakaoSearch = true  // 기본값: 카카오 검색 사용
+    @State private var isKakaoSearching = false
+    @State private var selectedKakaoPlace: KakaoPlace?
+    @State private var showingKakaoDetail = false
+    @State private var errorMessage: String?
+    @State private var showingError = false
 
+    @StateObject private var kakaoService = KakaoLocalSearchService.shared
     private let logger = Logger(subsystem: "com.restaurantmap", category: "MapView")
     
     var body: some View {
@@ -111,7 +120,20 @@ struct MapView: View {
                 performSearch()
             }
             .sheet(isPresented: $showingAddSheet) {
-                AddRestaurantView(coordinate: selectedCoordinate, mapItem: selectedMapItem)
+                if let kakaoPlace = selectedKakaoPlace {
+                    // 카카오 장소 정보로 자동 채우기
+                    AddRestaurantView(
+                        coordinate: selectedCoordinate,
+                        mapItem: selectedMapItem,
+                        initialName: kakaoPlace.placeName,
+                        initialAddress: !kakaoPlace.roadAddressName.isEmpty ? kakaoPlace.roadAddressName : kakaoPlace.addressName,
+                        initialPhone: !kakaoPlace.phone.isEmpty ? kakaoPlace.phone : nil,
+                        initialCategory: kakaoPlace.categoryGroupName
+                    )
+                } else {
+                    // 일반 장소 또는 MKMapItem 정보로 채우기
+                    AddRestaurantView(coordinate: selectedCoordinate, mapItem: selectedMapItem)
+                }
             }
             .sheet(isPresented: $isSearchingManual) {
                 SearchResultsView(
@@ -150,6 +172,39 @@ struct MapView: View {
                     })
                 }
             }
+            .sheet(isPresented: $showingKakaoDetail) {
+                if let place = selectedKakaoPlace {
+                    KakaoPlaceDetailView(place: place, onAddRestaurant: {
+                        selectedCoordinate = place.coordinate
+                        selectedMapItem = nil
+                        showingKakaoDetail = false
+                        // 시트 닫힘을 보장하기 위해 약간의 지연
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                            showingAddSheet = true
+                        }
+                    })
+                } else {
+                    // 로딩 중 상태
+                    VStack(spacing: 16) {
+                        ProgressView()
+                            .scaleEffect(1.5)
+                        Text("정보를 불러오는 중...")
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .onAppear {
+                        logger.info("⏳ 카카오 장소 정보 로딩 중...")
+                        // 2초 후에도 nil이면 시트 닫기
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                            if selectedKakaoPlace == nil {
+                                logger.error("❌ 타임아웃: selectedKakaoPlace가 여전히 nil입니다")
+                                showingKakaoDetail = false
+                            }
+                        }
+                    }
+                }
+            }
             .onAppear {
                 logger.info("🚀 MapView appeared")
                 logger.info("🚀 nearbyPOIs 초기 개수: \(nearbyPOIs.count)")
@@ -171,6 +226,15 @@ struct MapView: View {
             .onChange(of: nearbyPOIs) { oldValue, newValue in
                 logger.info("🔄 nearbyPOIs 배열 변경됨: \(oldValue.count) -> \(newValue.count)")
             }
+            .alert("오류", isPresented: $showingError) {
+                Button("확인", role: .cancel) {
+                    errorMessage = nil
+                }
+            } message: {
+                if let errorMessage = errorMessage {
+                    Text(errorMessage)
+                }
+            }
         }
     }
     
@@ -188,13 +252,53 @@ struct MapView: View {
 
             // 주변 POI 마커 표시 (저장된 식당만 보기가 꺼져있을 때만)
             if !showSavedOnly {
-                ForEach(nearbyPOIs, id: \.self) { item in
-                    if let coord = item.placemark.location?.coordinate {
-                        Annotation(item.name ?? "장소", coordinate: coord) {
-                            NearbyPOIPinView(mapItem: item) {
-                                logger.info("🎯 POI 마커 탭됨: \(item.name ?? "이름없음")")
-                                selectedPOI = item
-                                showingPOIDetail = true
+                // 카카오 검색 결과 마커 (파란색 - 우선 표시)
+                if isUsingKakaoSearch {
+                    ForEach(kakaoSearchResults) { place in
+                        Annotation(place.placeName, coordinate: place.coordinate) {
+                            KakaoSearchResultPinView(place: place) {
+                                logger.info("🎯 카카오 검색 결과 마커 탭됨: \(place.placeName)")
+                                // 상태를 동기적으로 설정
+                                selectedKakaoPlace = place
+                                // 다음 런루프에서 시트 표시 (상태가 완전히 업데이트된 후)
+                                DispatchQueue.main.async {
+                                    showingKakaoDetail = true
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // 카카오 주변 장소 마커 (기본색 - 검색 결과가 아닌 것들만)
+                if isUsingKakaoSearch {
+                    ForEach(kakaoPlaces) { place in
+                        // 검색 결과에 포함되지 않은 것만 표시
+                        if !kakaoSearchResults.contains(where: { $0.id == place.id }) {
+                            Annotation(place.placeName, coordinate: place.coordinate) {
+                                KakaoPlacePinView(place: place) {
+                                    logger.info("🎯 카카오 장소 마커 탭됨: \(place.placeName)")
+                                    // 상태를 동기적으로 설정
+                                    selectedKakaoPlace = place
+                                    // 다음 런루프에서 시트 표시
+                                    DispatchQueue.main.async {
+                                        showingKakaoDetail = true
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // Apple Maps POI 마커
+                if !isUsingKakaoSearch {
+                    ForEach(nearbyPOIs, id: \.self) { item in
+                        if let coord = item.placemark.location?.coordinate {
+                            Annotation(item.name ?? "장소", coordinate: coord) {
+                                NearbyPOIPinView(mapItem: item) {
+                                    logger.info("🎯 POI 마커 탭됨: \(item.name ?? "이름없음")")
+                                    selectedPOI = item
+                                    showingPOIDetail = true
+                                }
                             }
                         }
                     }
@@ -228,6 +332,8 @@ struct MapView: View {
         .onMapCameraChange(frequency: .onEnd) { context in
             logger.info("📍 지도 카메라 변경 감지 - 중심: \(context.region.center.latitude), \(context.region.center.longitude)")
             logger.info("📍 지도 범위 - span: \(context.region.span.latitudeDelta), \(context.region.span.longitudeDelta)")
+
+            // 애플맵으로 주변 POI 검색 (카카오는 검색창에서만 사용)
             searchNearbyPOIsIfNeeded(in: context.region)
         }
         .onChange(of: mapSelection) { oldValue, newValue in
@@ -266,21 +372,120 @@ struct MapView: View {
 
         logger.info("장소 검색 시작: \(searchText)")
 
-        let request = MKLocalSearch.Request()
-        request.naturalLanguageQuery = searchText
+        if isUsingKakaoSearch {
+            // 카카오 키워드 검색
+            Task {
+                do {
+                    let result = try await kakaoService.searchByKeyword(
+                        query: searchText,
+                        coordinate: locationDelegate.userLocation,
+                        radius: 20000,
+                        size: 15
+                    )
 
-        let search = MKLocalSearch(request: request)
-        search.start { response, error in
-            if let error = error {
-                logger.error("검색 실패: \(error.localizedDescription)")
-                return
+                    await MainActor.run {
+                        // 카카오 검색 결과를 별도로 저장 (파란색으로 표시될 것)
+                        kakaoSearchResults = result.documents
+                        logger.info("✅ 카카오 키워드 검색 완료: \(result.documents.count)개 (파란색으로 표시)")
+
+                        // 검색 결과가 없을 때 사용자에게 안내
+                        if result.documents.isEmpty {
+                            errorMessage = "'\(searchText)' 검색 결과가 없습니다.\n\n다른 키워드로 시도해보세요."
+                            showingError = true
+                            searchText = ""
+                            return
+                        }
+
+                        // 첫 번째 결과로 지도 이동 및 줌인
+                        if let firstPlace = result.documents.first {
+                            // 애니메이션과 함께 이동 후 자동 모드로 전환 (사용자가 자유롭게 이동 가능)
+                            withAnimation(.easeInOut(duration: 0.5)) {
+                                position = .region(MKCoordinateRegion(
+                                    center: firstPlace.coordinate,
+                                    span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
+                                ))
+                            }
+
+                            // 애니메이션 완료 후 자동 모드로 전환 (지도 고정 해제)
+                            Task {
+                                try? await Task.sleep(nanoseconds: 600_000_000) // 0.6초 대기
+                                await MainActor.run {
+                                    position = .automatic
+                                }
+                            }
+
+                            logger.info("📍 지도를 '\(firstPlace.placeName)'로 이동 및 줌인")
+
+                            // 검색 텍스트 초기화
+                            searchText = ""
+                        }
+                    }
+                } catch {
+                    logger.error("❌ 카카오 검색 실패: \(error.localizedDescription)")
+
+                    await MainActor.run {
+                        // 사용자에게 친절한 에러 메시지 표시
+                        if let kakaoError = error as? KakaoSearchError {
+                            switch kakaoError {
+                            case .noAPIKey:
+                                errorMessage = "카카오 API 키가 설정되지 않았습니다.\n\nInfo.plist에 KAKAO_REST_API_KEY를 추가해주세요."
+                            case .httpError(401):
+                                errorMessage = "카카오 API 인증 실패 (401)\n\nAPI 키가 올바른지 확인해주세요.\n카카오 개발자 콘솔에서 REST API 키를 확인하세요."
+                            case .httpError(let code):
+                                errorMessage = "카카오 API 오류 (HTTP \(code))\n\n잠시 후 다시 시도해주세요."
+                            default:
+                                errorMessage = "검색 중 오류가 발생했습니다.\n\n\(error.localizedDescription)"
+                            }
+                        } else {
+                            errorMessage = "검색 중 오류가 발생했습니다.\n\n인터넷 연결을 확인해주세요."
+                        }
+                        showingError = true
+                    }
+                }
             }
+        } else {
+            // Apple Maps 검색
+            let request = MKLocalSearch.Request()
+            request.naturalLanguageQuery = searchText
 
-            if let response = response {
-                searchResults = response.mapItems
-                logger.info("검색 결과: \(response.mapItems.count)개")
-                if !searchResults.isEmpty {
-                    isSearchingManual = true
+            let search = MKLocalSearch(request: request)
+            search.start { [self] response, error in
+                if let error = error {
+                    logger.error("검색 실패: \(error.localizedDescription)")
+
+                    // 사용자에게 에러 알림
+                    errorMessage = "검색 실패\n\n\(error.localizedDescription)\n\n인터넷 연결을 확인하거나\n다른 키워드로 시도해주세요."
+                    showingError = true
+                    return
+                }
+
+                if let response = response {
+                    searchResults = response.mapItems
+                    logger.info("검색 결과: \(response.mapItems.count)개")
+                    if !searchResults.isEmpty {
+                        isSearchingManual = true
+
+                        // 첫 번째 결과로 지도 이동
+                        if let firstResult = response.mapItems.first {
+                            // 애니메이션과 함께 이동
+                            withAnimation(.easeInOut(duration: 0.5)) {
+                                position = .region(MKCoordinateRegion(
+                                    center: firstResult.placemark.coordinate,
+                                    span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
+                                ))
+                            }
+
+                            // 애니메이션 완료 후 자동 모드로 전환
+                            Task {
+                                try? await Task.sleep(nanoseconds: 600_000_000)
+                                await MainActor.run {
+                                    position = .automatic
+                                }
+                            }
+
+                            logger.info("📍 지도를 '\(firstResult.name ?? "검색 결과")'로 이동")
+                        }
+                    }
                 }
             }
         }
@@ -339,6 +544,97 @@ struct MapView: View {
         searchText = ""
         showingAddSheet = true
     }
+
+    // MARK: - Kakao Search Methods
+
+    private func searchKakaoPlacesIfNeeded(in region: MKCoordinateRegion) {
+        // 중복 검색 방지
+        let regionKey = regionToKey(region)
+
+        if isKakaoSearching {
+            logger.info("⏸️ 이미 카카오 검색 중이므로 스킵")
+            return
+        }
+
+        if searchedRegions.contains(regionKey) {
+            logger.info("💾 캐시된 영역이므로 스킵: \(regionKey)")
+            return
+        }
+
+        if let lastTime = lastSearchTime, Date().timeIntervalSince(lastTime) < 1.0 {
+            logger.info("⏱️ 검색 간격이 너무 짧아서 스킵 (throttling)")
+            return
+        }
+
+        lastSearchTime = Date()
+        searchedRegions.insert(regionKey)
+        searchKakaoPlaces(in: region)
+    }
+
+    private func searchKakaoPlaces(in region: MKCoordinateRegion) {
+        isKakaoSearching = true
+        logger.info("🔍 카카오 주변 장소 검색 시작")
+
+        Task {
+            do {
+                // 반경 계산 (span을 미터로 변환)
+                let radiusInMeters = Int(region.span.latitudeDelta * 111_000 / 2)  // 1도 ≈ 111km
+                let clampedRadius = min(radiusInMeters, 20000)  // 최대 20km
+
+                let places = try await kakaoService.searchNearbyPlaces(
+                    coordinate: region.center,
+                    radius: clampedRadius
+                )
+
+                await MainActor.run {
+                    // 기존 장소와 새 장소를 합치고 중복 제거
+                    let combined = kakaoPlaces + places
+                    var uniquePlaces: [KakaoPlace] = []
+                    var seenIDs = Set<String>()
+
+                    for place in combined {
+                        if !seenIDs.contains(place.id) {
+                            seenIDs.insert(place.id)
+                            uniquePlaces.append(place)
+                        }
+                    }
+
+                    kakaoPlaces = uniquePlaces
+                    logger.info("✅ 카카오 검색 완료: \(kakaoPlaces.count)개 장소")
+
+                    // 자동 주변 검색에서는 지도를 강제로 이동하지 않음
+                    // 사용자가 원하는 위치를 보고 있을 수 있으므로
+
+                    isKakaoSearching = false
+                }
+            } catch {
+                logger.error("❌ 카카오 검색 실패: \(error.localizedDescription)")
+                await MainActor.run {
+                    isKakaoSearching = false
+
+                    // 자동 검색 실패 시에는 조용히 처리 (알림 없음)
+                    // 사용자가 직접 검색한 경우에만 알림 표시
+                    if let kakaoError = error as? KakaoSearchError {
+                        switch kakaoError {
+                        case .noAPIKey:
+                            // API 키 누락은 한 번만 알림
+                            errorMessage = "카카오 API 키가 설정되지 않았습니다.\n\n좌측 상단에서 Apple Maps로 전환하거나,\nInfo.plist에 KAKAO_REST_API_KEY를 추가해주세요."
+                            showingError = true
+                        case .httpError(401):
+                            // 401 에러도 한 번만 알림
+                            errorMessage = "카카오 API 인증 실패\n\nApple Maps 모드로 전환하거나,\nAPI 키를 확인해주세요."
+                            showingError = true
+                        default:
+                            // 다른 에러는 로그만 (UI 알림 없음)
+                            break
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // MARK: - Apple Maps Search Methods
 
     private func searchNearbyPOIs(in region: MKCoordinateRegion, retryCount: Int = 0) {
         isPOISearching = true
@@ -419,7 +715,7 @@ struct MapView: View {
                 logger.info("✅ 전체 검색 완료! 원본 결과: \(allResults.count)개")
 
                 // 기존 POI와 새로운 POI를 합치고 중복 제거
-                var combinedPOIs = nearbyPOIs + allResults
+                let combinedPOIs = nearbyPOIs + allResults
                 var uniquePOIs: [MKMapItem] = []
                 var seenCoordinates = Set<String>()
 
@@ -870,6 +1166,207 @@ struct POIDetailView: View {
     }
 }
 
+// MARK: - Kakao Place Views
+
+struct KakaoSearchResultPinView: View {
+    let place: KakaoPlace
+    let onTap: () -> Void
+
+    private var iconName: String {
+        if place.categoryGroupCode == "FD6" {
+            return "fork.knife"
+        } else if place.categoryGroupCode == "CE7" {
+            return "cup.and.saucer.fill"
+        }
+        return "mappin.circle.fill"
+    }
+
+    var body: some View {
+        VStack(spacing: 2) {
+            ZStack {
+                // 파란색 외곽 링 (검색 결과 강조)
+                Circle()
+                    .stroke(.blue, lineWidth: 3)
+                    .frame(width: 40, height: 40)
+
+                // 내부 원
+                Circle()
+                    .fill(.blue)
+                    .frame(width: 36, height: 36)
+
+                // 흰색 내부 원
+                Circle()
+                    .fill(.white)
+                    .frame(width: 32, height: 32)
+
+                // 아이콘
+                Image(systemName: iconName)
+                    .font(.system(size: 18, weight: .bold))
+                    .foregroundStyle(.blue)
+            }
+            .shadow(color: .blue.opacity(0.5), radius: 4)
+        }
+        .onTapGesture(perform: onTap)
+    }
+}
+
+struct KakaoPlacePinView: View {
+    let place: KakaoPlace
+    let onTap: () -> Void
+
+    private var iconName: String {
+        if place.categoryGroupCode == "FD6" {
+            return "fork.knife"
+        } else if place.categoryGroupCode == "CE7" {
+            return "cup.and.saucer.fill"
+        }
+        return "mappin.circle.fill"
+    }
+
+    private var iconColor: Color {
+        if place.categoryGroupCode == "FD6" {
+            return .orange
+        } else if place.categoryGroupCode == "CE7" {
+            return .brown
+        }
+        return .blue
+    }
+
+    var body: some View {
+        VStack(spacing: 2) {
+            ZStack {
+                Circle()
+                    .fill(.white)
+                    .frame(width: 32, height: 32)
+                Image(systemName: iconName)
+                    .font(.system(size: 18))
+                    .foregroundStyle(iconColor)
+            }
+            .shadow(radius: 2)
+        }
+        .onTapGesture(perform: onTap)
+    }
+}
+
+struct KakaoPlaceDetailView: View {
+    let place: KakaoPlace
+    let onAddRestaurant: () -> Void
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        NavigationStack {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 20) {
+                    // 장소 이름
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text(place.placeName)
+                            .font(.title2)
+                            .fontWeight(.bold)
+
+                        Text(place.categoryGroupName)
+                            .font(.subheadline)
+                            .padding(.horizontal, 12)
+                            .padding(.vertical, 4)
+                            .background(.blue.opacity(0.1))
+                            .foregroundStyle(.blue)
+                            .clipShape(Capsule())
+                    }
+                    .padding(.horizontal)
+
+                    Divider()
+
+                    // 카테고리 상세
+                    VStack(alignment: .leading, spacing: 8) {
+                        Label("카테고리", systemImage: "tag.fill")
+                            .font(.headline)
+                        Text(place.categoryName)
+                            .font(.body)
+                            .foregroundStyle(.secondary)
+                    }
+                    .padding(.horizontal)
+
+                    // 주소
+                    if !place.roadAddressName.isEmpty {
+                        VStack(alignment: .leading, spacing: 8) {
+                            Label("도로명 주소", systemImage: "location.fill")
+                                .font(.headline)
+                            Text(place.roadAddressName)
+                                .font(.body)
+                                .foregroundStyle(.secondary)
+                        }
+                        .padding(.horizontal)
+                    }
+
+                    if !place.addressName.isEmpty {
+                        VStack(alignment: .leading, spacing: 8) {
+                            Label("지번 주소", systemImage: "mappin.circle")
+                                .font(.headline)
+                            Text(place.addressName)
+                                .font(.body)
+                                .foregroundStyle(.secondary)
+                        }
+                        .padding(.horizontal)
+                    }
+
+                    // 전화번호
+                    if !place.phone.isEmpty {
+                        VStack(alignment: .leading, spacing: 8) {
+                            Label("전화번호", systemImage: "phone.fill")
+                                .font(.headline)
+                            Link(place.phone, destination: URL(string: "tel:\(place.phone.filter { !$0.isWhitespace && $0 != "-" })")!)
+                                .font(.body)
+                        }
+                        .padding(.horizontal)
+                    }
+
+                    // 거리
+                    if !place.distance.isEmpty {
+                        VStack(alignment: .leading, spacing: 8) {
+                            Label("현재 위치에서", systemImage: "location.circle")
+                                .font(.headline)
+                            Text("\(place.distance)m")
+                                .font(.body)
+                                .foregroundStyle(.secondary)
+                        }
+                        .padding(.horizontal)
+                    }
+
+                    Spacer(minLength: 20)
+
+                    // 식당으로 추가 버튼
+                    Button {
+                        onAddRestaurant()
+                    } label: {
+                        HStack {
+                            Image(systemName: "plus.circle.fill")
+                            Text("내 식당 목록에 추가")
+                        }
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                    }
+                    .padding(.horizontal)
+                }
+                .padding(.vertical)
+            }
+            .navigationTitle("장소 정보")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        dismiss()
+                    } label: {
+                        Image(systemName: "xmark.circle.fill")
+                            .foregroundStyle(.gray)
+                    }
+                }
+            }
+        }
+    }
+}
+
 // MARK: - LocationDelegate
 class LocationDelegate: NSObject, ObservableObject, CLLocationManagerDelegate {
     private let manager = CLLocationManager()
@@ -919,6 +1416,284 @@ class LocationDelegate: NSObject, ObservableObject, CLLocationManagerDelegate {
         @unknown default:
             logger.warning("알 수 없는 위치 권한 상태")
             break
+        }
+    }
+}
+
+// MARK: - Kakao API Models
+
+struct KakaoSearchResponse: Codable {
+    let documents: [KakaoPlace]
+    let meta: KakaoMeta
+}
+
+struct KakaoPlace: Codable, Identifiable {
+    let id: String
+    let placeName: String
+    let categoryName: String
+    let categoryGroupCode: String
+    let categoryGroupName: String
+    let phone: String
+    let addressName: String
+    let roadAddressName: String
+    let x: String  // longitude
+    let y: String  // latitude
+    let placeUrl: String
+    let distance: String
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case placeName = "place_name"
+        case categoryName = "category_name"
+        case categoryGroupCode = "category_group_code"
+        case categoryGroupName = "category_group_name"
+        case phone
+        case addressName = "address_name"
+        case roadAddressName = "road_address_name"
+        case x
+        case y
+        case placeUrl = "place_url"
+        case distance
+    }
+
+    var coordinate: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(
+            latitude: Double(y) ?? 0,
+            longitude: Double(x) ?? 0
+        )
+    }
+}
+
+struct KakaoMeta: Codable {
+    let isEnd: Bool
+    let pageableCount: Int
+    let totalCount: Int
+
+    enum CodingKeys: String, CodingKey {
+        case isEnd = "is_end"
+        case pageableCount = "pageable_count"
+        case totalCount = "total_count"
+    }
+}
+
+// MARK: - Kakao Category
+
+enum KakaoCategory: String, CaseIterable {
+    case restaurant = "FD6"  // 음식점
+    case cafe = "CE7"        // 카페
+
+    var displayName: String {
+        switch self {
+        case .restaurant: return "음식점"
+        case .cafe: return "카페"
+        }
+    }
+}
+
+// MARK: - Kakao Local Search Service
+
+class KakaoLocalSearchService: ObservableObject {
+    static let shared = KakaoLocalSearchService()
+
+    private let logger = Logger(subsystem: "com.restaurantmap", category: "KakaoSearch")
+
+    // ⚠️ 실제 사용 시 카카오 REST API 키를 여기에 입력하세요
+    // https://developers.kakao.com/console/app 에서 발급받을 수 있습니다
+    private var apiKey: String {
+        // 🔧 디버깅: 여기에 직접 REST API 키를 입력해서 테스트해보세요
+        // let key = "여기에_REST_API_키_직접_입력"  // 테스트용
+
+        // Info.plist에서 읽어오기 (정식)
+        let key = Bundle.main.object(forInfoDictionaryKey: "KAKAO_REST_API_KEY") as? String ?? ""
+
+        self.logger.info("🔑 카카오 API 키 로드됨: \(key.prefix(4))***\(key.suffix(4)) (길이: \(key.count))")
+        return key
+    }
+
+    private let baseURL = "https://dapi.kakao.com/v2/local"
+
+    private init() {}
+
+    // MARK: - 키워드 검색
+
+    /// 키워드로 장소 검색
+    func searchByKeyword(
+        query: String,
+        coordinate: CLLocationCoordinate2D? = nil,
+        radius: Int = 5000,
+        page: Int = 1,
+        size: Int = 15
+    ) async throws -> KakaoSearchResponse {
+        guard !apiKey.isEmpty else {
+            throw KakaoSearchError.noAPIKey
+        }
+
+        var urlString = "\(baseURL)/search/keyword.json?"
+        urlString += "query=\(query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? query)"
+
+        if let coord = coordinate {
+            urlString += "&x=\(coord.longitude)"
+            urlString += "&y=\(coord.latitude)"
+            urlString += "&radius=\(radius)"
+        }
+
+        urlString += "&page=\(page)"
+        urlString += "&size=\(size)"
+        urlString += "&sort=accuracy"
+
+        guard let url = URL(string: urlString) else {
+            throw KakaoSearchError.invalidURL
+        }
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.setValue("KakaoAK \(apiKey)", forHTTPHeaderField: "Authorization")
+
+        logger.info("🔍 카카오 검색 요청: \(query)")
+
+        let (data, response) = try await URLSession.shared.data(for: request)
+
+        guard let httpResponse = response as? HTTPURLResponse else {
+            throw KakaoSearchError.invalidResponse
+        }
+
+        guard httpResponse.statusCode == 200 else {
+            logger.error("❌ 카카오 API 오류: \(httpResponse.statusCode)")
+            throw KakaoSearchError.httpError(httpResponse.statusCode)
+        }
+
+        let decoder = JSONDecoder()
+        let result = try decoder.decode(KakaoSearchResponse.self, from: data)
+
+        logger.info("✅ 카카오 검색 성공: \(result.documents.count)개 결과")
+
+        return result
+    }
+
+    // MARK: - 카테고리 검색
+
+    /// 카테고리로 장소 검색
+    func searchByCategory(
+        category: KakaoCategory,
+        coordinate: CLLocationCoordinate2D,
+        radius: Int = 5000,
+        page: Int = 1,
+        size: Int = 15
+    ) async throws -> KakaoSearchResponse {
+        guard !apiKey.isEmpty else {
+            throw KakaoSearchError.noAPIKey
+        }
+
+        var urlString = "\(baseURL)/search/category.json?"
+        urlString += "category_group_code=\(category.rawValue)"
+        urlString += "&x=\(coordinate.longitude)"
+        urlString += "&y=\(coordinate.latitude)"
+        urlString += "&radius=\(radius)"
+        urlString += "&page=\(page)"
+        urlString += "&size=\(size)"
+        urlString += "&sort=distance"
+
+        guard let url = URL(string: urlString) else {
+            throw KakaoSearchError.invalidURL
+        }
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        let authHeader = "KakaoAK \(apiKey)"
+        request.setValue(authHeader, forHTTPHeaderField: "Authorization")
+
+        logger.info("🔍 카카오 카테고리 검색: \(category.displayName)")
+        logger.info("🔍 요청 URL: \(urlString)")
+        logger.info("🔍 Authorization 헤더: KakaoAK \(self.apiKey.prefix(4))***\(self.apiKey.suffix(4))")
+
+        let (data, response) = try await URLSession.shared.data(for: request)
+
+        guard let httpResponse = response as? HTTPURLResponse else {
+            throw KakaoSearchError.invalidResponse
+        }
+
+        guard httpResponse.statusCode == 200 else {
+            logger.error("❌ 카카오 API 오류: \(httpResponse.statusCode)")
+            logger.error("❌ 요청 URL: \(urlString)")
+            logger.error("❌ Authorization: KakaoAK \(self.apiKey.prefix(4))***\(self.apiKey.suffix(4))")
+
+            if let errorString = String(data: data, encoding: .utf8) {
+                logger.error("에러 내용: \(errorString)")
+            }
+
+            throw KakaoSearchError.httpError(httpResponse.statusCode)
+        }
+
+        let decoder = JSONDecoder()
+        let result = try decoder.decode(KakaoSearchResponse.self, from: data)
+
+        logger.info("✅ 카카오 카테고리 검색 성공: \(result.documents.count)개 결과")
+
+        return result
+    }
+
+    // MARK: - 주변 음식점/카페 검색
+
+    /// 주변 음식점과 카페를 한 번에 검색
+    func searchNearbyPlaces(
+        coordinate: CLLocationCoordinate2D,
+        radius: Int = 5000
+    ) async throws -> [KakaoPlace] {
+        async let restaurants = searchByCategory(
+            category: .restaurant,
+            coordinate: coordinate,
+            radius: radius,
+            size: 15
+        )
+
+        async let cafes = searchByCategory(
+            category: .cafe,
+            coordinate: coordinate,
+            radius: radius,
+            size: 15
+        )
+
+        let (restaurantResult, cafeResult) = try await (restaurants, cafes)
+
+        let allPlaces = restaurantResult.documents + cafeResult.documents
+
+        var uniquePlaces: [KakaoPlace] = []
+        var seenIDs = Set<String>()
+
+        for place in allPlaces {
+            if !seenIDs.contains(place.id) {
+                seenIDs.insert(place.id)
+                uniquePlaces.append(place)
+            }
+        }
+
+        logger.info("✅ 주변 장소 검색 완료: \(uniquePlaces.count)개")
+
+        return uniquePlaces
+    }
+}
+
+// MARK: - Errors
+
+enum KakaoSearchError: LocalizedError {
+    case noAPIKey
+    case invalidURL
+    case invalidResponse
+    case httpError(Int)
+    case decodingError(Error)
+
+    var errorDescription: String? {
+        switch self {
+        case .noAPIKey:
+            return "카카오 REST API 키가 설정되지 않았습니다"
+        case .invalidURL:
+            return "잘못된 URL입니다"
+        case .invalidResponse:
+            return "잘못된 응답입니다"
+        case .httpError(let code):
+            return "HTTP 오류: \(code)"
+        case .decodingError(let error):
+            return "디코딩 오류: \(error.localizedDescription)"
         }
     }
 }

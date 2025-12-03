@@ -9,6 +9,10 @@ struct AddRestaurantView: View {
 
     let coordinate: CLLocationCoordinate2D?
     let mapItem: MKMapItem?
+    let initialName: String?
+    let initialAddress: String?
+    let initialPhone: String?
+    let initialCategory: String?
 
     @State private var name = ""
     @State private var address = ""
@@ -38,9 +42,20 @@ struct AddRestaurantView: View {
     ]
 
 
-    init(coordinate: CLLocationCoordinate2D?, mapItem: MKMapItem? = nil) {
+    init(
+        coordinate: CLLocationCoordinate2D?,
+        mapItem: MKMapItem? = nil,
+        initialName: String? = nil,
+        initialAddress: String? = nil,
+        initialPhone: String? = nil,
+        initialCategory: String? = nil
+    ) {
         self.coordinate = coordinate
         self.mapItem = mapItem
+        self.initialName = initialName
+        self.initialAddress = initialAddress
+        self.initialPhone = initialPhone
+        self.initialCategory = initialCategory
 
         let initialCoordinate = coordinate ?? CLLocationCoordinate2D(latitude: 37.5665, longitude: 126.9780)
         _selectedCoordinate = State(initialValue: initialCoordinate)
@@ -49,8 +64,22 @@ struct AddRestaurantView: View {
             span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
         ))
 
-        // MKMapItem이 있으면 자동으로 정보 채우기
-        if let mapItem = mapItem {
+        // 초기값이 직접 전달된 경우 (카카오 장소 정보)
+        if let initialName = initialName {
+            _name = State(initialValue: initialName)
+        }
+        if let initialAddress = initialAddress {
+            _address = State(initialValue: initialAddress)
+        }
+        if let initialPhone = initialPhone {
+            _phoneNumber = State(initialValue: initialPhone)
+        }
+        if let initialCategory = initialCategory {
+            _category = State(initialValue: initialCategory)
+        }
+
+        // MKMapItem이 있으면 자동으로 정보 채우기 (초기값이 없을 때만)
+        if let mapItem = mapItem, initialName == nil {
             _name = State(initialValue: mapItem.name ?? "")
 
             // 주소 정보 추출
@@ -67,15 +96,17 @@ struct AddRestaurantView: View {
                 addressComponents.append(locality)
             }
 
-            _address = State(initialValue: addressComponents.isEmpty ? (placemark.title ?? "") : addressComponents.joined(separator: " "))
+            if initialAddress == nil {
+                _address = State(initialValue: addressComponents.isEmpty ? (placemark.title ?? "") : addressComponents.joined(separator: " "))
+            }
 
             // 전화번호
-            if let phone = mapItem.phoneNumber {
+            if let phone = mapItem.phoneNumber, initialPhone == nil {
                 _phoneNumber = State(initialValue: phone)
             }
 
             // 카테고리 (한글로 매핑)
-            if let poiCategory = mapItem.pointOfInterestCategory?.rawValue {
+            if let poiCategory = mapItem.pointOfInterestCategory?.rawValue, initialCategory == nil {
                 _category = State(initialValue: POICategoryMapper.toKorean(poiCategory))
             }
         }
@@ -101,8 +132,8 @@ struct AddRestaurantView: View {
                     TextField("전화번호", text: $phoneNumber)
                         .keyboardType(.phonePad)
 
-                    if mapItem != nil {
-                        Label("검색 결과에서 자동 입력됨", systemImage: "checkmark.circle.fill")
+                    if mapItem != nil || initialName != nil {
+                        Label("장소 정보에서 자동 입력됨", systemImage: "checkmark.circle.fill")
                             .font(.caption)
                             .foregroundStyle(.green)
                     }

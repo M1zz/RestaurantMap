@@ -1,10 +1,17 @@
 import SwiftUI
 import SwiftData
 import OSLog
+import FirebaseCore
 
 @main
 struct RestaurantMapApp: App {
     private let logger = Logger(subsystem: "com.restaurantmap", category: "App")
+
+    init() {
+        // Firebase 초기화
+        FirebaseApp.configure()
+        logger.info("🔥 Firebase configured")
+    }
 
     var sharedModelContainer: ModelContainer = {
         let logger = Logger(subsystem: "com.restaurantmap", category: "App")
@@ -79,7 +86,7 @@ struct RestaurantMapApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .onAppear {
+                .task {
                     logger.info("RestaurantMap 앱 시작됨")
                 }
         }
