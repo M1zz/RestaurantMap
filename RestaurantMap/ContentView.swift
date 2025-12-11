@@ -73,36 +73,16 @@ struct SimpleRecommendationView: View {
                     generateRecommendations()
                 }
             }
-            .sheet(isPresented: $showingDetail) {
-                if let recommendation = selectedRecommendation {
-                    RecommendationDetailView(
-                        recommendation: recommendation,
-                        onSave: {
-                            showingDetail = false
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                                showingAddSheet = true
-                            }
-                        }
-                    )
-                } else {
-                    // 로딩 중 화면
-                    VStack(spacing: 16) {
-                        ProgressView()
-                            .scaleEffect(1.5)
-                        Text("식당 정보 불러오는 중...")
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .onAppear {
-                        // 데이터가 없으면 sheet 닫기
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                            if selectedRecommendation == nil {
-                                showingDetail = false
-                            }
+            .sheet(item: $selectedRecommendation) { recommendation in
+                RecommendationDetailView(
+                    recommendation: recommendation,
+                    onSave: {
+                        selectedRecommendation = nil
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                            showingAddSheet = true
                         }
                     }
-                }
+                )
             }
             .sheet(isPresented: $showingAddSheet) {
                 if let recommendation = selectedRecommendation {
@@ -139,13 +119,7 @@ struct SimpleRecommendationView: View {
                     RecommendationCard(item: item)
                         .padding(.horizontal)
                         .onTapGesture {
-                            // 비동기로 상태 업데이트하여 UI 동기화 보장
-                            Task { @MainActor in
-                                selectedRecommendation = item
-                                // 약간의 지연으로 상태 업데이트 완료 보장
-                                try? await Task.sleep(nanoseconds: 50_000_000) // 0.05초
-                                showingDetail = true
-                            }
+                            selectedRecommendation = item
                         }
                 }
             }
