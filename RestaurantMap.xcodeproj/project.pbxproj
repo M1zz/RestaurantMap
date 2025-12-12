@@ -22,6 +22,9 @@
 		1A000021 /* AddVisitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000020 /* AddVisitView.swift */; };
 		1A000023 /* VisitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000022 /* VisitDetailView.swift */; };
 		1A000025 /* FoodCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000024 /* FoodCategory.swift */; };
+		1A000027 /* VisitReminderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000026 /* VisitReminderManager.swift */; };
+		1A000029 /* CloudKitBackupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A00002A /* CloudKitBackupService.swift */; };
+		1A00002B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A00002C /* SettingsView.swift */; };
 		586184B82EE0838100320D6B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 586184B72EE0838100320D6B /* GoogleService-Info.plist */; };
 		586184CB2EE0848300320D6B /* FirebaseAI in Frameworks */ = {isa = PBXBuildFile; productRef = 586184CA2EE0848300320D6B /* FirebaseAI */; };
 		586184CD2EE0848300320D6B /* FirebaseAILogic in Frameworks */ = {isa = PBXBuildFile; productRef = 586184CC2EE0848300320D6B /* FirebaseAILogic */; };
@@ -65,9 +68,13 @@
 		1A000020 /* AddVisitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVisitView.swift; sourceTree = "<group>"; };
 		1A000022 /* VisitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitDetailView.swift; sourceTree = "<group>"; };
 		1A000024 /* FoodCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategory.swift; sourceTree = "<group>"; };
+		1A000026 /* VisitReminderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitReminderManager.swift; sourceTree = "<group>"; };
+		1A00002A /* CloudKitBackupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitBackupService.swift; sourceTree = "<group>"; };
+		1A00002C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		1AFFFFFD /* RestaurantMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		586184B72EE0838100320D6B /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5861852A2EE08D8F00320D6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C994B0B2EEBF60500FBC8F6 /* RestaurantMap.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RestaurantMap.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +112,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A000028 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1A000026 /* VisitReminderManager.swift */,
+				1A00002A /* CloudKitBackupService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		1AFFFFF4 = {
 			isa = PBXGroup;
 			children = (
@@ -116,12 +132,14 @@
 		1AFFFFF5 /* RestaurantMap */ = {
 			isa = PBXGroup;
 			children = (
+				9C994B0B2EEBF60500FBC8F6 /* RestaurantMap.entitlements */,
 				5861852A2EE08D8F00320D6B /* Info.plist */,
 				586184B72EE0838100320D6B /* GoogleService-Info.plist */,
 				1A000000 /* RestaurantMapApp.swift */,
 				1A000002 /* ContentView.swift */,
 				1AFFFFF6 /* Models */,
 				1AFFFFF7 /* Views */,
+				1A000028 /* Services */,
 				1A00000E /* Assets.xcassets */,
 				1AFFFFF8 /* Preview Content */,
 			);
@@ -149,6 +167,7 @@
 				1A00001C /* TasteProfileView.swift */,
 				1A000020 /* AddVisitView.swift */,
 				1A000022 /* VisitDetailView.swift */,
+				1A00002C /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -255,6 +274,9 @@
 				1A000021 /* AddVisitView.swift in Sources */,
 				1A000023 /* VisitDetailView.swift in Sources */,
 				1A000025 /* FoodCategory.swift in Sources */,
+				1A000027 /* VisitReminderManager.swift in Sources */,
+				1A000029 /* CloudKitBackupService.swift in Sources */,
+				1A00002B /* SettingsView.swift in Sources */,
 				1A000001 /* RestaurantMapApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,6 +408,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RestaurantMap/RestaurantMap.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RestaurantMap/Preview Content\"";
@@ -422,6 +445,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RestaurantMap/RestaurantMap.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RestaurantMap/Preview Content\"";

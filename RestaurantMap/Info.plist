@@ -4,5 +4,13 @@
 <dict>
 	<key>KAKAO_REST_API_KEY</key>
 	<string>90a03e52b1626c8d8a3546700c2c8315</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>지도에서 현재 위치를 표시하고 저장된 가게 근처인지 확인하기 위해 필요합니다.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>저장된 가게 방문 후 리뷰 요청 알림을 보내기 위해 백그라운드에서도 위치 정보가 필요합니다.</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
 </dict>
 </plist>

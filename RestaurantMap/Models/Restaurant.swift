@@ -2,6 +2,25 @@ import Foundation
 import SwiftData
 import MapKit
 
+// 식당 목록 타입
+enum RestaurantListType: String, Codable, CaseIterable {
+    case visited = "가본 곳"        // 실제로 방문한 식당
+    case wishlist = "가볼 곳"       // 가보고 싶은 식당 (위시리스트)
+    case michelin = "미슐랭"        // 최고의 식당 (Top 6)
+
+    var displayName: String {
+        rawValue
+    }
+
+    var icon: String {
+        switch self {
+        case .visited: return "checkmark.circle.fill"
+        case .wishlist: return "star.circle.fill"
+        case .michelin: return "crown.fill"
+        }
+    }
+}
+
 @Model
 final class Restaurant {
     var name: String
@@ -17,6 +36,7 @@ final class Restaurant {
     var top6Rank: Int?
     var categoryIcon: String
     var foodCategoryRaw: String = "일반" // FoodCategory enum을 String으로 저장, 기본값 설정
+    var isWishlist: Bool = false  // 가볼 곳 여부 (Boolean은 마이그레이션이 안전함)
 
     // 방문 기록들
     @Relationship(deleteRule: .cascade, inverse: \Visit.restaurant)
@@ -36,7 +56,40 @@ final class Restaurant {
         }
     }
 
-    init(name: String, address: String, latitude: Double, longitude: Double, notes: String = "", rating: Int = 0, visitDate: Date = Date(), category: String = "", phoneNumber: String = "", isTop6: Bool = false, top6Rank: Int? = nil, categoryIcon: String = "fork.knife", foodCategory: FoodCategory = .general) {
+    // RestaurantListType 편의 속성
+    var listType: RestaurantListType {
+        get {
+            // Top6이면 미슐랭
+            if isTop6 {
+                return .michelin
+            }
+            // 위시리스트면 가볼 곳
+            if isWishlist {
+                return .wishlist
+            }
+            // 기본값: 가본 곳
+            return .visited
+        }
+        set {
+            // 미슐랭으로 설정
+            if newValue == .michelin {
+                isTop6 = true
+                isWishlist = false
+            }
+            // 가볼 곳으로 설정
+            else if newValue == .wishlist {
+                isTop6 = false
+                isWishlist = true
+            }
+            // 가본 곳으로 설정
+            else {
+                isTop6 = false
+                isWishlist = false
+            }
+        }
+    }
+
+    init(name: String, address: String, latitude: Double, longitude: Double, notes: String = "", rating: Int = 0, visitDate: Date = Date(), category: String = "", phoneNumber: String = "", isTop6: Bool = false, top6Rank: Int? = nil, categoryIcon: String = "fork.knife", foodCategory: FoodCategory = .general, listType: RestaurantListType = .visited) {
         self.name = name
         self.address = address
         self.latitude = latitude
@@ -50,6 +103,10 @@ final class Restaurant {
         self.top6Rank = top6Rank
         self.categoryIcon = categoryIcon
         self.foodCategoryRaw = foodCategory.rawValue
+
+        // listType에 따라 isWishlist 설정
+        self.isWishlist = (listType == .wishlist)
+
         self.visits = []
     }
 

@@ -79,53 +79,31 @@ struct RestaurantListView: View {
 
     private let logger = Logger(subsystem: "com.restaurantmap", category: "RestaurantList")
 
-    private var top6Restaurants: [Restaurant] {
-        restaurants.filter { $0.isTop6 }
+    // 나의 미슐랭 (Top 6)
+    private var michelinRestaurants: [Restaurant] {
+        restaurants.filter { $0.listType == .michelin || $0.isTop6 }
             .sorted { ($0.top6Rank ?? 99) < ($1.top6Rank ?? 99) }
     }
 
-    private var regularRestaurants: [Restaurant] {
-        restaurants.filter { !$0.isTop6 }
+    // 가본 곳 (visited)
+    private var visitedRestaurants: [Restaurant] {
+        restaurants.filter { $0.listType == .visited && !$0.isTop6 }
+            .sorted { $0.visitDate > $1.visitDate }
     }
 
-    // 리이오미슐랭 랭킹 (만족도 점수 기준 상위 식당)
-    private var rankedRestaurants: [Restaurant] {
-        restaurants
-            .filter { $0.visitCount > 0 } // 방문 기록이 있는 식당만
-            .sorted { $0.satisfactionScore > $1.satisfactionScore }
+    // 가볼 곳 (wishlist)
+    private var wishlistRestaurants: [Restaurant] {
+        restaurants.filter { $0.listType == .wishlist }
+            .sorted { $0.visitDate > $1.visitDate }
     }
 
     var body: some View {
         NavigationStack {
             List {
-                // 리이오미슐랭 랭킹
-                if !rankedRestaurants.isEmpty {
+                // 나의 미슐랭 (Top 6)
+                if !michelinRestaurants.isEmpty {
                     Section {
-                        ForEach(Array(rankedRestaurants.enumerated()), id: \.element.id) { index, restaurant in
-                            RankedRestaurantRow(restaurant: restaurant, rank: index + 1)
-                                .contentShape(Rectangle())
-                                .onTapGesture {
-                                    selectedRestaurant = restaurant
-                                    showingDetail = true
-                                }
-                        }
-                    } header: {
-                        HStack {
-                            Image(systemName: "medal.fill")
-                                .foregroundStyle(.orange)
-                            Text("리이오미슐랭")
-                        }
-                        .font(.headline)
-                    } footer: {
-                        Text("별점과 적절함 평가를 기반으로 자동 계산됩니다")
-                            .font(.caption2)
-                    }
-                }
-
-                // 나의 최애 탑6
-                if !top6Restaurants.isEmpty {
-                    Section {
-                        ForEach(top6Restaurants) { restaurant in
+                        ForEach(michelinRestaurants) { restaurant in
                             Top6RestaurantRow(restaurant: restaurant)
                                 .contentShape(Rectangle())
                                 .onTapGesture {
@@ -134,22 +112,25 @@ struct RestaurantListView: View {
                                 }
                         }
                         .onDelete { indexSet in
-                            deleteTop6Restaurants(at: indexSet)
+                            deleteMichelinRestaurants(at: indexSet)
                         }
                     } header: {
                         HStack {
-                            Image(systemName: "star.fill")
+                            Image(systemName: "crown.fill")
                                 .foregroundStyle(.yellow)
-                            Text("나의 최애 탑6 (수동)")
+                            Text("나의 미슐랭")
                         }
                         .font(.headline)
+                    } footer: {
+                        Text("최고의 식당들입니다")
+                            .font(.caption2)
                     }
                 }
 
-                // 내가 저장한 식당
-                if !regularRestaurants.isEmpty {
+                // 가본 곳
+                if !visitedRestaurants.isEmpty {
                     Section {
-                        ForEach(regularRestaurants) { restaurant in
+                        ForEach(visitedRestaurants) { restaurant in
                             RestaurantRow(restaurant: restaurant)
                                 .contentShape(Rectangle())
                                 .onTapGesture {
@@ -158,11 +139,39 @@ struct RestaurantListView: View {
                                 }
                         }
                         .onDelete { indexSet in
-                            deleteRegularRestaurants(at: indexSet)
+                            deleteVisitedRestaurants(at: indexSet)
                         }
                     } header: {
-                        Text("내가 저장한 식당")
-                            .font(.headline)
+                        HStack {
+                            Image(systemName: "checkmark.circle.fill")
+                                .foregroundStyle(.green)
+                            Text("가본 곳")
+                        }
+                        .font(.headline)
+                    }
+                }
+
+                // 가볼 곳
+                if !wishlistRestaurants.isEmpty {
+                    Section {
+                        ForEach(wishlistRestaurants) { restaurant in
+                            RestaurantRow(restaurant: restaurant)
+                                .contentShape(Rectangle())
+                                .onTapGesture {
+                                    selectedRestaurant = restaurant
+                                    showingDetail = true
+                                }
+                        }
+                        .onDelete { indexSet in
+                            deleteWishlistRestaurants(at: indexSet)
+                        }
+                    } header: {
+                        HStack {
+                            Image(systemName: "star.circle.fill")
+                                .foregroundStyle(.orange)
+                            Text("가볼 곳")
+                        }
+                        .font(.headline)
                     }
                 }
             }
@@ -216,22 +225,31 @@ struct RestaurantListView: View {
         }
     }
     
-    private func deleteTop6Restaurants(at offsets: IndexSet) {
+    private func deleteMichelinRestaurants(at offsets: IndexSet) {
         for index in offsets {
-            let restaurant = top6Restaurants[index]
-            logger.info("탑6 식당 삭제: 이름=\(restaurant.name), 랭킹=\(restaurant.top6Rank ?? 0)")
+            let restaurant = michelinRestaurants[index]
+            logger.info("미슐랭 식당 삭제: 이름=\(restaurant.name), 랭킹=\(restaurant.top6Rank ?? 0)")
             modelContext.delete(restaurant)
         }
-        logger.info("총 \(offsets.count)개의 탑6 식당 삭제됨")
+        logger.info("총 \(offsets.count)개의 미슐랭 식당 삭제됨")
     }
 
-    private func deleteRegularRestaurants(at offsets: IndexSet) {
+    private func deleteVisitedRestaurants(at offsets: IndexSet) {
         for index in offsets {
-            let restaurant = regularRestaurants[index]
-            logger.info("식당 삭제: 이름=\(restaurant.name), 주소=\(restaurant.address)")
+            let restaurant = visitedRestaurants[index]
+            logger.info("가본 곳 삭제: 이름=\(restaurant.name), 주소=\(restaurant.address)")
             modelContext.delete(restaurant)
         }
-        logger.info("총 \(offsets.count)개의 식당 삭제됨")
+        logger.info("총 \(offsets.count)개의 가본 곳 삭제됨")
+    }
+
+    private func deleteWishlistRestaurants(at offsets: IndexSet) {
+        for index in offsets {
+            let restaurant = wishlistRestaurants[index]
+            logger.info("가볼 곳 삭제: 이름=\(restaurant.name), 주소=\(restaurant.address)")
+            modelContext.delete(restaurant)
+        }
+        logger.info("총 \(offsets.count)개의 가볼 곳 삭제됨")
     }
 }
 

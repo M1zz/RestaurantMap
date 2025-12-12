@@ -20,7 +20,7 @@ struct ContentView: View {
                 }
                 .tag(1)
 
-            SimpleRecommendationView(restaurants: restaurants)
+            SimpleRecommendationView(restaurants: restaurants, selectedTab: $selectedTab)
                 .tabItem {
                     Label("추천", systemImage: "sparkles")
                 }
@@ -40,6 +40,7 @@ struct ContentView: View {
 struct SimpleRecommendationView: View {
     @Environment(\.modelContext) private var modelContext
     let restaurants: [Restaurant]
+    @Binding var selectedTab: Int
     @State private var recommendations: [RecommendedRestaurantItem] = []
     @State private var isLoading = false
     @State private var selectedRecommendation: RecommendedRestaurantItem?
@@ -99,15 +100,119 @@ struct SimpleRecommendationView: View {
     }
 
     private var emptyView: some View {
-        VStack(spacing: 20) {
+        let restaurantCount = restaurants.count
+        let highRatedCount = restaurants.filter { $0.rating >= 4 }.count
+
+        return VStack(spacing: 24) {
             Image(systemName: "sparkles")
                 .font(.system(size: 60))
-                .foregroundStyle(.gray)
+                .foregroundStyle(.orange)
 
-            Text("식당을 추가하고\n별점을 매겨보세요!")
-                .font(.title3)
-                .multilineTextAlignment(.center)
-                .foregroundStyle(.secondary)
+            VStack(spacing: 12) {
+                Text("맞춤 추천을 받으려면")
+                    .font(.title2)
+                    .fontWeight(.bold)
+
+                // 현재 상태에 따른 안내
+                if restaurantCount == 0 {
+                    Text("아직 저장된 식당이 없어요")
+                        .font(.body)
+                        .foregroundStyle(.secondary)
+                } else if highRatedCount == 0 {
+                    Text("저장된 식당: \(restaurantCount)개")
+                        .font(.body)
+                        .foregroundStyle(.secondary)
+                    Text("4점 이상의 별점을 준 식당이 없어요")
+                        .font(.body)
+                        .foregroundStyle(.secondary)
+                } else {
+                    Text("데이터가 부족해요")
+                        .font(.body)
+                        .foregroundStyle(.secondary)
+                }
+            }
+
+            Divider()
+                .padding(.horizontal, 40)
+
+            // 단계별 안내
+            VStack(alignment: .leading, spacing: 16) {
+                HStack(alignment: .top, spacing: 12) {
+                    Image(systemName: "1.circle.fill")
+                        .font(.title2)
+                        .foregroundStyle(.blue)
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("식당 추가하기")
+                            .font(.headline)
+                        Text("지도나 목록에서 식당을 추가하세요")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+
+                HStack(alignment: .top, spacing: 12) {
+                    Image(systemName: "2.circle.fill")
+                        .font(.title2)
+                        .foregroundStyle(.green)
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("별점 매기기")
+                            .font(.headline)
+                        Text("식당 상세 화면에서 4점 이상의 별점을 매겨주세요")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+
+                HStack(alignment: .top, spacing: 12) {
+                    Image(systemName: "3.circle.fill")
+                        .font(.title2)
+                        .foregroundStyle(.orange)
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("추천 받기")
+                            .font(.headline)
+                        Text("여러분의 취향을 분석해서 맞춤 추천을 제공해요")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+            }
+            .padding(.horizontal, 32)
+
+            // 액션 버튼
+            VStack(spacing: 12) {
+                if restaurantCount == 0 {
+                    Button {
+                        selectedTab = 0  // 지도 탭으로 이동
+                    } label: {
+                        HStack {
+                            Image(systemName: "map.fill")
+                            Text("지도에서 식당 찾기")
+                        }
+                        .font(.headline)
+                        .foregroundStyle(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(.blue)
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                    }
+                } else {
+                    Button {
+                        selectedTab = 1  // 목록 탭으로 이동
+                    } label: {
+                        HStack {
+                            Image(systemName: "star.fill")
+                            Text("식당 목록에서 별점 매기기")
+                        }
+                        .font(.headline)
+                        .foregroundStyle(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(.green)
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                    }
+                }
+            }
+            .padding(.horizontal, 32)
         }
         .padding()
     }

@@ -89,9 +89,11 @@ struct MapView: View {
     @State private var isUsingKakaoSearch = true  // 기본값: 카카오 검색 사용
     @State private var isKakaoSearching = false
     @State private var selectedKakaoPlace: KakaoPlace?
+    @State private var kakaoPlaceForAdd: KakaoPlace?  // AddRestaurantView에 전달할 장소 정보
     @State private var showingKakaoDetail = false
     @State private var errorMessage: String?
     @State private var showingError = false
+    @State private var showSettings = false  // 설정 화면 표시 여부
 
     @StateObject private var kakaoService = KakaoLocalSearchService.shared
     private let logger = Logger(subsystem: "com.restaurantmap", category: "MapView")
@@ -106,12 +108,41 @@ struct MapView: View {
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        showSavedOnly.toggle()
+                    Menu {
+                        // 저장된 식당만 보기 토글
+                        Button {
+                            showSavedOnly.toggle()
+                        } label: {
+                            Label(
+                                showSavedOnly ? "모든 장소 보기" : "저장된 식당만 보기",
+                                systemImage: showSavedOnly ? "map" : "bookmark.fill"
+                            )
+                        }
+
+                        Divider()
+
+                        // 카카오 검색 / Apple Maps 검색 전환
+                        Button {
+                            isUsingKakaoSearch.toggle()
+                        } label: {
+                            Label(
+                                isUsingKakaoSearch ? "Apple Maps 검색 사용" : "카카오 검색 사용",
+                                systemImage: isUsingKakaoSearch ? "applelogo" : "magnifyingglass"
+                            )
+                        }
+
+                        Divider()
+
+                        // 설정
+                        Button {
+                            showSettings = true
+                        } label: {
+                            Label("설정", systemImage: "gearshape")
+                        }
                     } label: {
-                        Image(systemName: showSavedOnly ? "bookmark.fill" : "bookmark")
-                            .font(.system(size: 18))
-                            .foregroundStyle(showSavedOnly ? .blue : .gray)
+                        Image(systemName: "ellipsis.circle")
+                            .font(.system(size: 20))
+                            .foregroundStyle(.blue)
                     }
                 }
             }
@@ -120,8 +151,8 @@ struct MapView: View {
                 performSearch()
             }
             .sheet(isPresented: $showingAddSheet) {
-                if let kakaoPlace = selectedKakaoPlace {
-                    // 카카오 장소 정보로 자동 채우기
+                if let kakaoPlace = kakaoPlaceForAdd {
+                    // 카카오 장소 정보로 미리 채워진 상태로 식당 추가
                     AddRestaurantView(
                         coordinate: selectedCoordinate,
                         mapItem: selectedMapItem,
@@ -133,6 +164,12 @@ struct MapView: View {
                 } else {
                     // 일반 장소 또는 MKMapItem 정보로 채우기
                     AddRestaurantView(coordinate: selectedCoordinate, mapItem: selectedMapItem)
+                }
+            }
+            .onChange(of: showingAddSheet) { _, isShowing in
+                // 시트가 닫히면 kakaoPlaceForAdd 초기화
+                if !isShowing {
+                    kakaoPlaceForAdd = nil
                 }
             }
             .sheet(isPresented: $isSearchingManual) {
@@ -172,38 +209,22 @@ struct MapView: View {
                     })
                 }
             }
-            .sheet(isPresented: $showingKakaoDetail) {
-                if let place = selectedKakaoPlace {
-                    KakaoPlaceDetailView(place: place, onAddRestaurant: {
-                        selectedCoordinate = place.coordinate
-                        selectedMapItem = nil
-                        showingKakaoDetail = false
-                        // 시트 닫힘을 보장하기 위해 약간의 지연
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                            showingAddSheet = true
-                        }
-                    })
-                } else {
-                    // 로딩 중 상태
-                    VStack(spacing: 16) {
-                        ProgressView()
-                            .scaleEffect(1.5)
-                        Text("정보를 불러오는 중...")
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
+            .sheet(item: $selectedKakaoPlace) { place in
+                // item 바인딩 사용: place가 nil이 아닐 때만 시트 표시 (타이밍 이슈 완전 해결)
+                KakaoPlaceDetailView(place: place, onAddRestaurant: {
+                    // 식당 추가 뷰에 전달할 정보 저장
+                    kakaoPlaceForAdd = place
+                    selectedCoordinate = place.coordinate
+                    selectedMapItem = nil
+                    selectedKakaoPlace = nil  // 카카오 상세 시트 닫기
+                    // 시트 닫힘을 보장하기 위해 약간의 지연
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                        showingAddSheet = true
                     }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .onAppear {
-                        logger.info("⏳ 카카오 장소 정보 로딩 중...")
-                        // 2초 후에도 nil이면 시트 닫기
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                            if selectedKakaoPlace == nil {
-                                logger.error("❌ 타임아웃: selectedKakaoPlace가 여전히 nil입니다")
-                                showingKakaoDetail = false
-                            }
-                        }
-                    }
-                }
+                })
+            }
+            .sheet(isPresented: $showSettings) {
+                SettingsView()
             }
             .onAppear {
                 logger.info("🚀 MapView appeared")
@@ -258,12 +279,8 @@ struct MapView: View {
                         Annotation(place.placeName, coordinate: place.coordinate) {
                             KakaoSearchResultPinView(place: place) {
                                 logger.info("🎯 카카오 검색 결과 마커 탭됨: \(place.placeName)")
-                                // 상태를 동기적으로 설정
+                                // item 바인딩 사용: place 설정만으로 자동으로 시트 열림
                                 selectedKakaoPlace = place
-                                // 다음 런루프에서 시트 표시 (상태가 완전히 업데이트된 후)
-                                DispatchQueue.main.async {
-                                    showingKakaoDetail = true
-                                }
                             }
                         }
                     }
@@ -277,12 +294,8 @@ struct MapView: View {
                             Annotation(place.placeName, coordinate: place.coordinate) {
                                 KakaoPlacePinView(place: place) {
                                     logger.info("🎯 카카오 장소 마커 탭됨: \(place.placeName)")
-                                    // 상태를 동기적으로 설정
+                                    // item 바인딩 사용: place 설정만으로 자동으로 시트 열림
                                     selectedKakaoPlace = place
-                                    // 다음 런루프에서 시트 표시
-                                    DispatchQueue.main.async {
-                                        showingKakaoDetail = true
-                                    }
                                 }
                             }
                         }
@@ -347,9 +360,19 @@ struct MapView: View {
     }
 
     private var floatingButton: some View {
-        VStack(spacing: 12) {
-            Button(action: addRestaurantAtCurrentLocation) {
-                FloatingButtonView()
+        // 주변 식당 보기 버튼
+        Button {
+            loadNearbyPlaces()
+        } label: {
+            ZStack {
+                Circle()
+                    .fill(.blue)
+                    .frame(width: 56, height: 56)
+                    .shadow(color: .black.opacity(0.3), radius: 8, x: 0, y: 4)
+
+                Image(systemName: "map")
+                    .font(.system(size: 24, weight: .semibold))
+                    .foregroundStyle(.white)
             }
         }
         .padding(.trailing, 16)
@@ -358,6 +381,26 @@ struct MapView: View {
 
 
     // MARK: - Helper Methods
+
+    private func loadNearbyPlaces() {
+        logger.info("🗺️ 주변 식당 보기 버튼 탭됨")
+
+        // 현재 위치를 중심으로 검색 영역 생성
+        let center = locationDelegate.userLocation ?? CLLocationCoordinate2D(latitude: 37.5665, longitude: 126.9780)
+        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        let region = MKCoordinateRegion(center: center, span: span)
+
+        // 저장된 식당만 보기 모드를 끄고, 주변 POI 표시
+        showSavedOnly = false
+
+        // 카카오 검색 모드 활성화
+        if !isUsingKakaoSearch {
+            isUsingKakaoSearch = true
+        }
+
+        // 주변 장소 검색 강제 실행
+        searchKakaoPlaces(in: region)
+    }
 
     private func addRestaurantAtCurrentLocation() {
         // 현재 위치를 사용하거나, 없으면 기본 위치 사용
