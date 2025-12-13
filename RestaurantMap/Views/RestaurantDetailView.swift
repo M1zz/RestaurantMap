@@ -8,13 +8,19 @@ struct RestaurantDetailView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
     @Bindable var restaurant: Restaurant
+    @Query private var allRestaurants: [Restaurant]
 
     @State private var showingDeleteAlert = false
     @State private var showingAddVisit = false
     @State private var selectedVisit: Visit?
     @State private var isEditing = false
+    @State private var showingTop6LimitAlert = false
 
     private let logger = Logger(subsystem: "com.restaurantmap", category: "RestaurantDetail")
+
+    private var top6Count: Int {
+        allRestaurants.filter { $0.isTop6 }.count
+    }
 
     var sortedVisits: [Visit] {
         (restaurant.visits ?? []).sorted(by: { $0.visitDate > $1.visitDate })
@@ -70,17 +76,38 @@ struct RestaurantDetailView: View {
                         LabeledContent("리이오미슐랭 점수") {
                             HStack(spacing: 4) {
                                 Image(systemName: "medal.fill")
-                                    .foregroundStyle(.orange)
+                                    .foregroundStyle(.green)
                                 Text(String(format: "%.0f", restaurant.satisfactionScore))
                                     .font(.headline)
                                     .fontWeight(.bold)
-                                    .foregroundStyle(.orange)
+                                    .foregroundStyle(.green)
                                 Text("/ 100")
                                     .font(.caption)
                                     .foregroundStyle(.secondary)
                             }
                         }
                     }
+                }
+
+                // 메뉴 목록
+                Section {
+                    NavigationLink(destination: MenuListView(restaurant: restaurant)) {
+                        HStack {
+                            Image(systemName: "fork.knife.circle.fill")
+                                .foregroundStyle(.orange)
+                            Text("메뉴 관리")
+                            Spacer()
+                            if let menuCount = restaurant.menus?.count, menuCount > 0 {
+                                Text("\(menuCount)개")
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
+                    }
+                } header: {
+                    Text("메뉴")
+                } footer: {
+                    Text("메뉴를 등록하면 방문 기록 추가 시 선택할 수 있습니다")
                 }
 
                 // 방문 기록 목록
@@ -135,7 +162,7 @@ struct RestaurantDetailView: View {
                             get: { restaurant.foodCategory },
                             set: { restaurant.foodCategory = $0 }
                         )) {
-                            ForEach(FoodCategory.allCases) { category in
+                            ForEach(FoodCategoryRepository.builtInCategories) { category in
                                 Text(category.displayName).tag(category)
                             }
                         }
@@ -157,9 +184,67 @@ struct RestaurantDetailView: View {
                     }
                 }
 
-                Section("탑6 설정") {
+                // 가본곳/가볼곳 구분
+                Section {
                     if isEditing {
-                        Toggle("나의 최애 탑6", isOn: $restaurant.isTop6)
+                        Picker("구분", selection: Binding(
+                            get: { restaurant.listType },
+                            set: { newValue in
+                                restaurant.listType = newValue
+                                // 가볼곳으로 변경하면 탑6 자동 해제
+                                if newValue == .wishlist {
+                                    restaurant.isTop6 = false
+                                    restaurant.top6Rank = nil
+                                }
+                            }
+                        )) {
+                            ForEach([RestaurantListType.visited, RestaurantListType.wishlist], id: \.self) { type in
+                                HStack {
+                                    Image(systemName: type.icon)
+                                    Text(type.displayName)
+                                }
+                                .tag(type)
+                            }
+                        }
+                        .pickerStyle(.segmented)
+                    } else {
+                        LabeledContent("구분") {
+                            HStack {
+                                Image(systemName: restaurant.listType.icon)
+                                Text(restaurant.listType.displayName)
+                            }
+                        }
+                    }
+                } header: {
+                    Text("식당 구분")
+                } footer: {
+                    if isEditing && restaurant.listType == .wishlist {
+                        Text("가볼 곳으로 설정된 식당은 탑6로 지정할 수 없습니다")
+                    }
+                }
+
+                Section {
+                    if isEditing && restaurant.listType == .visited {
+                        Toggle("나의 최애 탑6", isOn: Binding(
+                            get: { restaurant.isTop6 },
+                            set: { newValue in
+                                // 탑6를 켜려고 할 때
+                                if newValue && !restaurant.isTop6 {
+                                    // 현재 탑6가 6개 이상이면 경고
+                                    if top6Count >= 6 {
+                                        showingTop6LimitAlert = true
+                                    } else {
+                                        restaurant.isTop6 = true
+                                    }
+                                } else {
+                                    // 탑6를 끄는 경우는 제한 없음
+                                    restaurant.isTop6 = newValue
+                                    if !newValue {
+                                        restaurant.top6Rank = nil
+                                    }
+                                }
+                            }
+                        ))
 
                         if restaurant.isTop6 {
                             Picker("랭킹", selection: $restaurant.top6Rank) {
@@ -175,7 +260,7 @@ struct RestaurantDetailView: View {
                             }
                             .pickerStyle(.menu)
                         }
-                    } else {
+                    } else if restaurant.listType == .visited {
                         LabeledContent("탑6 여부") {
                             if restaurant.isTop6 {
                                 HStack {
@@ -188,6 +273,14 @@ struct RestaurantDetailView: View {
                                     .foregroundStyle(.secondary)
                             }
                         }
+                    }
+                } header: {
+                    if restaurant.listType == .visited || isEditing {
+                        Text("탑6 설정")
+                    }
+                } footer: {
+                    if isEditing && restaurant.listType == .visited {
+                        Text("탑6는 최대 6개까지만 지정할 수 있습니다 (현재: \(top6Count)/6)")
                     }
                 }
                 
@@ -214,7 +307,31 @@ struct RestaurantDetailView: View {
                         openInAppleMaps()
                     } label: {
                         HStack {
+                            Image(systemName: "map")
+                                .foregroundStyle(.blue)
                             Text("Apple 지도에서 열기")
+                            Spacer()
+                            Image(systemName: "arrow.up.right.square")
+                        }
+                    }
+
+                    Button {
+                        openInKakaoMap()
+                    } label: {
+                        HStack {
+                            Text("🗺️")
+                            Text("카카오맵에서 열기")
+                            Spacer()
+                            Image(systemName: "arrow.up.right.square")
+                        }
+                    }
+
+                    Button {
+                        openInNaverMap()
+                    } label: {
+                        HStack {
+                            Text("🧭")
+                            Text("네이버맵에서 열기")
                             Spacer()
                             Image(systemName: "arrow.up.right.square")
                         }
@@ -255,6 +372,11 @@ struct RestaurantDetailView: View {
             } message: {
                 Text("'\(restaurant.name)'과(와) 모든 방문 기록을 삭제하시겠습니까?")
             }
+            .alert("탑6 제한", isPresented: $showingTop6LimitAlert) {
+                Button("확인", role: .cancel) { }
+            } message: {
+                Text("탑6는 최대 6개까지만 지정할 수 있습니다. 다른 식당의 탑6를 해제한 후 다시 시도해주세요.")
+            }
             .sheet(isPresented: $showingAddVisit) {
                 AddVisitView(restaurant: restaurant)
             }
@@ -287,6 +409,44 @@ struct RestaurantDetailView: View {
             MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving
         ])
     }
+
+    private func openInKakaoMap() {
+        let lat = restaurant.latitude
+        let lng = restaurant.longitude
+        let name = restaurant.name.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? restaurant.name
+
+        // 카카오맵 URL Scheme
+        let kakaoMapURL = "kakaomap://look?p=\(lat),\(lng)"
+
+        if let url = URL(string: kakaoMapURL), UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url)
+        } else {
+            // 카카오맵 앱이 없으면 웹으로 열기
+            let webURL = "https://map.kakao.com/link/map/\(name),\(lat),\(lng)"
+            if let url = URL(string: webURL) {
+                UIApplication.shared.open(url)
+            }
+        }
+    }
+
+    private func openInNaverMap() {
+        let lat = restaurant.latitude
+        let lng = restaurant.longitude
+        let name = restaurant.name.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? restaurant.name
+
+        // 네이버맵 URL Scheme
+        let naverMapURL = "nmap://place?lat=\(lat)&lng=\(lng)&name=\(name)&appname=com.restaurantmap"
+
+        if let url = URL(string: naverMapURL), UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url)
+        } else {
+            // 네이버맵 앱이 없으면 웹으로 열기
+            let webURL = "https://map.naver.com/v5/search/\(name)"
+            if let url = URL(string: webURL) {
+                UIApplication.shared.open(url)
+            }
+        }
+    }
 }
 
 // MARK: - Visit Row View
@@ -308,6 +468,22 @@ struct VisitRowView: View {
                             .font(.system(size: 12))
                     }
                 }
+            }
+
+            if !visit.displayMenuName.isEmpty {
+                HStack(spacing: 4) {
+                    Image(systemName: "fork.knife")
+                        .font(.caption)
+                    Text(visit.displayMenuName)
+                        .font(.subheadline)
+                        .fontWeight(.medium)
+                    if visit.menu?.isSignature == true {
+                        Image(systemName: "crown.fill")
+                            .font(.caption2)
+                            .foregroundStyle(.yellow)
+                    }
+                }
+                .foregroundStyle(.orange)
             }
 
             if !visit.notes.isEmpty {

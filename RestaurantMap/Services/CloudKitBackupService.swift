@@ -299,7 +299,7 @@ class CloudKitBackupService {
                 isTop6: restaurant.isTop6,
                 top6Rank: restaurant.top6Rank,
                 categoryIcon: restaurant.categoryIcon,
-                foodCategoryRaw: restaurant.foodCategoryRaw,
+                foodCategoryId: restaurant.foodCategoryId,
                 isWishlist: restaurant.isWishlist,
                 visits: visits
             )
@@ -432,6 +432,16 @@ class CloudKitBackupService {
 
         // Restaurant 및 Visit 복구
         for backupRestaurant in data.restaurants {
+            // foodCategoryId를 FoodCategory로 변환
+            let foodCategory: FoodCategory
+            if let uuid = UUID(uuidString: backupRestaurant.foodCategoryId),
+               let category = FoodCategoryRepository.shared.findCategory(by: uuid) {
+                foodCategory = category
+            } else {
+                // 백업된 ID를 찾을 수 없으면 기본값 사용
+                foodCategory = FoodCategoryRepository.builtInCategories[0]
+            }
+
             let restaurant = Restaurant(
                 name: backupRestaurant.name,
                 address: backupRestaurant.address,
@@ -445,7 +455,7 @@ class CloudKitBackupService {
                 isTop6: backupRestaurant.isTop6,
                 top6Rank: backupRestaurant.top6Rank,
                 categoryIcon: backupRestaurant.categoryIcon,
-                foodCategory: FoodCategory(rawValue: backupRestaurant.foodCategoryRaw) ?? .general,
+                foodCategory: foodCategory,
                 listType: backupRestaurant.isWishlist ? .wishlist : (backupRestaurant.isTop6 ? .michelin : .visited)
             )
 
@@ -618,7 +628,7 @@ struct BackupRestaurant: Codable {
     let isTop6: Bool
     let top6Rank: Int?
     let categoryIcon: String
-    let foodCategoryRaw: String
+    let foodCategoryId: String
     let isWishlist: Bool
     let visits: [BackupVisit]
 }

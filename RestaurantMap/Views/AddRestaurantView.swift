@@ -21,10 +21,12 @@ struct AddRestaurantView: View {
     @State private var category = ""
     @State private var phoneNumber = ""
     @State private var visitDate = Date()
+    @State private var menuItem = "" // 첫 방문 시 먹은 메뉴
     @State private var isTop6 = false
     @State private var top6Rank: Int? = nil
     @State private var categoryIcon = "fork.knife"
-    @State private var foodCategory: FoodCategory = .general
+    @State private var foodCategory: FoodCategory = FoodCategoryRepository.builtInCategories[0]
+    @State private var listType: RestaurantListType = .visited // 가본곳/가볼곳 구분
 
     @State private var selectedCoordinate: CLLocationCoordinate2D
     @State private var region: MKCoordinateRegion
@@ -117,13 +119,13 @@ struct AddRestaurantView: View {
             Form {
                 Section("기본 정보") {
                     Picker("음식 종류", selection: $foodCategory) {
-                        ForEach(FoodCategory.allCases) { category in
+                        ForEach(FoodCategoryRepository.builtInCategories) { category in
                             Text(category.displayName).tag(category)
                         }
                     }
                     .pickerStyle(.menu)
                     .onAppear {
-                        logger.info("Picker onAppear - foodCategory: \(foodCategory.rawValue)")
+                        logger.info("Picker onAppear - foodCategory: \(foodCategory.name)")
                     }
 
                     TextField("식당 이름", text: $name)
@@ -140,43 +142,70 @@ struct AddRestaurantView: View {
                 }
                 
                 Section("방문 정보") {
-                    DatePicker("방문 날짜", selection: $visitDate, displayedComponents: .date)
+                    // 가본곳/가볼곳 선택
+                    Picker("구분", selection: $listType) {
+                        Text(RestaurantListType.visited.displayName).tag(RestaurantListType.visited)
+                        Text(RestaurantListType.wishlist.displayName).tag(RestaurantListType.wishlist)
+                    }
+                    .pickerStyle(.segmented)
+                    .onChange(of: listType) { oldValue, newValue in
+                        // 가볼곳으로 변경하면 탑6 자동 해제
+                        if newValue == .wishlist {
+                            isTop6 = false
+                            top6Rank = nil
+                        }
+                    }
 
-                    VStack(alignment: .leading) {
-                        Text("별점")
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
+                    if listType == .visited {
+                        DatePicker("방문 날짜", selection: $visitDate, displayedComponents: .date)
 
-                        HStack(spacing: 8) {
-                            ForEach(1..<6) { index in
-                                Image(systemName: index <= rating ? "star.fill" : "star")
-                                    .foregroundStyle(index <= rating ? .yellow : .gray)
-                                    .font(.system(size: 24))
-                                    .onTapGesture {
-                                        rating = index
-                                    }
+                        TextField("먹은 메뉴 (예: 불고기정식, 마르게리따 피자)", text: $menuItem)
+
+                        VStack(alignment: .leading) {
+                            Text("별점")
+                                .font(.subheadline)
+                                .foregroundStyle(.secondary)
+
+                            HStack(spacing: 8) {
+                                ForEach(1..<6) { index in
+                                    Image(systemName: index <= rating ? "star.fill" : "star")
+                                        .foregroundStyle(index <= rating ? .yellow : .gray)
+                                        .font(.system(size: 24))
+                                        .onTapGesture {
+                                            rating = index
+                                        }
+                                }
                             }
                         }
+                    } else {
+                        Text("아직 방문하지 않은 식당입니다")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
                     }
                 }
 
                 Section("카테고리 설정") {
-                    Toggle("나의 최애 탑6", isOn: $isTop6)
+                    // 탑6는 가본곳일 때만 설정 가능
+                    if listType == .visited {
+                        Toggle("나의 최애 탑6", isOn: $isTop6)
 
-                    if isTop6 {
-                        Picker("랭킹", selection: $top6Rank) {
-                            Text("선택 안함").tag(nil as Int?)
-                            ForEach(1...6, id: \.self) { rank in
-                                HStack {
-                                    Image(systemName: "star.fill")
-                                        .foregroundStyle(.yellow)
-                                    Text("\(rank)위")
+                        if isTop6 {
+                            Picker("랭킹", selection: $top6Rank) {
+                                Text("선택 안함").tag(nil as Int?)
+                                ForEach(1...6, id: \.self) { rank in
+                                    HStack {
+                                        Image(systemName: "star.fill")
+                                            .foregroundStyle(.yellow)
+                                        Text("\(rank)위")
+                                    }
+                                    .tag(rank as Int?)
                                 }
-                                .tag(rank as Int?)
                             }
+                            .pickerStyle(.menu)
                         }
-                        .pickerStyle(.menu)
-                    } else {
+                    }
+
+                    if !isTop6 {
                         VStack(alignment: .leading, spacing: 8) {
                             Text("카테고리 아이콘")
                                 .font(.subheadline)
@@ -233,6 +262,7 @@ struct AddRestaurantView: View {
                         .frame(minHeight: 100)
                 }
             }
+            .scrollDismissesKeyboard(.interactively)
             .navigationTitle("식당 추가")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -255,13 +285,13 @@ struct AddRestaurantView: View {
             .onAppear {
                 logger.info("AddRestaurantView appeared")
                 logger.info("  - coordinate: \(String(describing: coordinate))")
-                logger.info("  - foodCategory: \(foodCategory.rawValue)")
+                logger.info("  - foodCategory: \(foodCategory.name)")
             }
         }
     }
     
     private func saveRestaurant() {
-        logger.info("식당 저장 시작: 이름=\(name), 주소=\(address), 카테고리=\(category), 별점=\(rating), 탑6=\(isTop6)")
+        logger.info("식당 저장 시작: 이름=\(name), 주소=\(address), 카테고리=\(category), 별점=\(rating), 메뉴=\(menuItem), 탑6=\(isTop6), 구분=\(listType.displayName)")
 
         let restaurant = Restaurant(
             name: name,
@@ -276,11 +306,26 @@ struct AddRestaurantView: View {
             isTop6: isTop6,
             top6Rank: isTop6 ? top6Rank : nil,
             categoryIcon: categoryIcon,
-            foodCategory: foodCategory
+            foodCategory: foodCategory,
+            listType: listType
         )
 
         modelContext.insert(restaurant)
-        logger.info("식당 저장 완료: \(name) (탑6=\(isTop6), 랭킹=\(top6Rank ?? 0), 아이콘=\(categoryIcon))")
+
+        // 가본곳일 때만 첫 방문 기록 생성 (별점이 있거나 메뉴가 입력된 경우)
+        if listType == .visited && (rating > 0 || !menuItem.isEmpty) {
+            let firstVisit = Visit(
+                restaurant: restaurant,
+                visitDate: visitDate,
+                notes: notes,
+                rating: rating
+            )
+            firstVisit.menuItem = menuItem
+            modelContext.insert(firstVisit)
+            logger.info("첫 방문 기록 생성: 메뉴=\(menuItem), 별점=\(rating)")
+        }
+
+        logger.info("식당 저장 완료: \(name) (탑6=\(isTop6), 랭킹=\(top6Rank ?? 0), 아이콘=\(categoryIcon), 구분=\(listType.displayName))")
         dismiss()
     }
 }

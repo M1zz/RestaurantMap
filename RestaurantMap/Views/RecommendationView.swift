@@ -11,13 +11,22 @@ struct RecommendationView: View {
     @StateObject private var engine = RecommendationEngine.shared
     @StateObject private var firebaseService = FirebaseService.shared
     @StateObject private var locationManager = LocationManager()
+    @StateObject private var categoryRepository = FoodCategoryRepository.shared
 
     @State private var selectedMode: RecommendationMode = .hybrid
     @State private var selectedCategory: FoodCategory? = nil
     @State private var showingSync = false
     @State private var errorMessage: String?
+    @State private var selectedTop6Restaurant: Restaurant?
+    @State private var showingTop6Detail = false
 
     private let logger = Logger(subsystem: "com.restaurantmap", category: "RecommendationView")
+
+    // 탑6 식당들
+    private var top6Restaurants: [Restaurant] {
+        restaurants.filter { $0.isTop6 }
+            .sorted { ($0.top6Rank ?? 99) < ($1.top6Rank ?? 99) }
+    }
 
     enum RecommendationMode: String, CaseIterable, Identifiable {
         case hybrid = "종합 추천"
@@ -176,17 +185,14 @@ struct RecommendationView: View {
                 }
                 .buttonStyle(.plain)
 
-                ForEach(FoodCategory.allCases) { category in
+                ForEach(categoryRepository.allCategories) { category in
                     Button {
                         selectedCategory = category
                         Task {
                             await loadRecommendations()
                         }
                     } label: {
-                        HStack(spacing: 4) {
-                            Text(category.icon)
-                            Text(category.displayName)
-                        }
+                        Text(category.displayName)
                         .font(.caption)
                         .padding(.horizontal, 12)
                         .padding(.vertical, 6)
@@ -257,11 +263,48 @@ struct RecommendationView: View {
 
     private var recommendationList: some View {
         List {
-            ForEach(engine.recommendations) { recommendation in
-                RecommendationCard(recommendation: recommendation)
+            // 나의 탑6 섹션
+            if !top6Restaurants.isEmpty {
+                Section {
+                    ForEach(top6Restaurants) { restaurant in
+                        Top6Card(restaurant: restaurant)
+                            .contentShape(Rectangle())
+                            .onTapGesture {
+                                selectedTop6Restaurant = restaurant
+                                showingTop6Detail = true
+                            }
+                    }
+                } header: {
+                    HStack {
+                        Image(systemName: "crown.fill")
+                            .foregroundStyle(.yellow)
+                        Text("나의 탑6")
+                            .font(.headline)
+                    }
+                } footer: {
+                    Text("내가 가장 좋아하는 식당들입니다")
+                        .font(.caption2)
+                }
+            }
+
+            // 추천 식당 섹션
+            if !engine.recommendations.isEmpty {
+                Section {
+                    ForEach(engine.recommendations) { recommendation in
+                        RecommendationCard(recommendation: recommendation)
+                    }
+                } header: {
+                    Text("추천 식당")
+                        .font(.headline)
+                }
             }
         }
         .listStyle(.plain)
+        .sheet(item: $selectedTop6Restaurant) { restaurant in
+            NavigationStack {
+                RestaurantDetailView(restaurant: restaurant)
+            }
+        }
     }
 
     // MARK: - Methods
@@ -659,6 +702,115 @@ struct InfoRow: View {
                 .font(.subheadline)
             Spacer()
         }
+    }
+}
+
+// MARK: - Top6 Card
+
+struct Top6Card: View {
+    let restaurant: Restaurant
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            // 상단: 랭킹 + 식당 이름
+            HStack(alignment: .top) {
+                // 랭킹 뱃지
+                if let rank = restaurant.top6Rank {
+                    ZStack {
+                        Circle()
+                            .fill(.yellow)
+                            .frame(width: 36, height: 36)
+                        Text("\(rank)")
+                            .font(.headline)
+                            .fontWeight(.bold)
+                            .foregroundStyle(.white)
+                    }
+                }
+
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(restaurant.name)
+                        .font(.headline)
+
+                    Text(restaurant.foodCategory.displayName)
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+
+                Spacer()
+
+                // 별점
+                HStack(spacing: 2) {
+                    Image(systemName: "star.fill")
+                        .foregroundStyle(.yellow)
+                        .font(.caption)
+                    Text(String(format: "%.1f", restaurant.averageRating))
+                        .font(.subheadline)
+                        .fontWeight(.semibold)
+                }
+            }
+
+            // 통계
+            HStack(spacing: 16) {
+                HStack(spacing: 4) {
+                    Image(systemName: "calendar")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                    Text("\(restaurant.visitCount)회 방문")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+
+                if let lastVisit = restaurant.lastVisitDate {
+                    HStack(spacing: 4) {
+                        Image(systemName: "clock")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                        Text(lastVisit, style: .relative)
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+            }
+
+            // 평균 맛 평가 (간단한 바 차트)
+            if !restaurant.averageIntensity.isEmpty {
+                VStack(alignment: .leading, spacing: 6) {
+                    Text("맛 평가")
+                        .font(.caption)
+                        .fontWeight(.semibold)
+                        .foregroundStyle(.secondary)
+
+                    ForEach(Array(restaurant.averageIntensity.prefix(3)), id: \.0) { item in
+                        HStack(spacing: 8) {
+                            Text(item.0)
+                                .font(.caption2)
+                                .frame(width: 50, alignment: .leading)
+                                .foregroundStyle(.secondary)
+
+                            GeometryReader { geometry in
+                                ZStack(alignment: .leading) {
+                                    RoundedRectangle(cornerRadius: 2)
+                                        .fill(Color.gray.opacity(0.2))
+                                        .frame(height: 6)
+
+                                    RoundedRectangle(cornerRadius: 2)
+                                        .fill(Color.blue)
+                                        .frame(width: geometry.size.width * (item.1 / 10.0), height: 6)
+                                }
+                            }
+                            .frame(height: 6)
+
+                            Text(String(format: "%.1f", item.1))
+                                .font(.caption2)
+                                .foregroundStyle(.secondary)
+                                .frame(width: 30, alignment: .trailing)
+                        }
+                    }
+                }
+                .padding(.top, 4)
+            }
+        }
+        .padding(.vertical, 8)
     }
 }
 

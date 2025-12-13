@@ -37,6 +37,17 @@ struct SettingsView: View {
                     Text("데이터 현황")
                 }
 
+                // 데이터 관리
+                Section {
+                    NavigationLink {
+                        CustomCategorySettingsView()
+                    } label: {
+                        Label("음식 종류 관리", systemImage: "list.bullet")
+                    }
+                } header: {
+                    Text("데이터 관리")
+                }
+
                 // iCloud 백업
                 Section {
                     // 마지막 백업 시간

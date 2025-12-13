@@ -41,11 +41,25 @@ struct SimpleRecommendationView: View {
     @Environment(\.modelContext) private var modelContext
     let restaurants: [Restaurant]
     @Binding var selectedTab: Int
+    @Query private var allVisits: [Visit]
     @State private var recommendations: [RecommendedRestaurantItem] = []
     @State private var isLoading = false
     @State private var selectedRecommendation: RecommendedRestaurantItem?
     @State private var showingDetail = false
     @State private var showingAddSheet = false
+
+    // 추천 받기 위한 최소 요구사항
+    private let minimumEvaluationsRequired = 5
+
+    // 맛 평가가 완료된 방문 기록 개수
+    private var evaluatedVisitsCount: Int {
+        allVisits.filter { $0.hasTasteProfile }.count
+    }
+
+    // 추천을 받을 수 있는지 여부
+    private var canReceiveRecommendations: Bool {
+        evaluatedVisitsCount >= minimumEvaluationsRequired
+    }
 
     var body: some View {
         NavigationStack {
@@ -118,6 +132,16 @@ struct SimpleRecommendationView: View {
                     Text("아직 저장된 식당이 없어요")
                         .font(.body)
                         .foregroundStyle(.secondary)
+                } else if evaluatedVisitsCount > 0 && evaluatedVisitsCount < minimumEvaluationsRequired {
+                    // 평가를 시작했지만 아직 부족한 경우
+                    VStack(spacing: 16) {
+                        Text("조금만 더 평가해주세요!")
+                            .font(.body)
+                            .foregroundStyle(.secondary)
+
+                        // 진행도 표시
+                        progressIndicatorView
+                    }
                 } else if highRatedCount == 0 {
                     Text("저장된 식당: \(restaurantCount)개")
                         .font(.body)
@@ -217,6 +241,67 @@ struct SimpleRecommendationView: View {
         .padding()
     }
 
+    // 진행도 표시 뷰
+    private var progressIndicatorView: some View {
+        VStack(spacing: 16) {
+            // 원형 진행도
+            ZStack {
+                Circle()
+                    .stroke(.gray.opacity(0.2), lineWidth: 12)
+                    .frame(width: 120, height: 120)
+
+                Circle()
+                    .trim(from: 0, to: CGFloat(evaluatedVisitsCount) / CGFloat(minimumEvaluationsRequired))
+                    .stroke(
+                        LinearGradient(
+                            colors: [.blue, .purple],
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        ),
+                        style: StrokeStyle(lineWidth: 12, lineCap: .round)
+                    )
+                    .frame(width: 120, height: 120)
+                    .rotationEffect(.degrees(-90))
+                    .animation(.easeInOut(duration: 1.0), value: evaluatedVisitsCount)
+
+                VStack(spacing: 4) {
+                    Text("\(evaluatedVisitsCount)")
+                        .font(.system(size: 36, weight: .bold))
+                        .foregroundStyle(.blue)
+                    Text("/ \(minimumEvaluationsRequired)")
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                }
+            }
+
+            // 텍스트 설명
+            VStack(spacing: 8) {
+                Text("맛 평가 완료")
+                    .font(.headline)
+                    .foregroundStyle(.primary)
+
+                Text("\(minimumEvaluationsRequired - evaluatedVisitsCount)개 더 평가하면 추천을 받을 수 있어요")
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+                    .multilineTextAlignment(.center)
+            }
+
+            // 안내 문구
+            HStack(spacing: 8) {
+                Image(systemName: "lightbulb.fill")
+                    .foregroundStyle(.orange)
+                    .font(.caption)
+                Text("방문 기록 추가 시 맛 평가를 입력해주세요")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+            .padding(.horizontal, 20)
+            .padding(.vertical, 12)
+            .background(.orange.opacity(0.1))
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+        }
+    }
+
     private var recommendationList: some View {
         ScrollView {
             LazyVStack(spacing: 16) {
@@ -233,6 +318,12 @@ struct SimpleRecommendationView: View {
     }
 
     private func generateRecommendations() {
+        // 최소 평가 요구사항을 만족하지 않으면 추천 생성 안 함
+        guard canReceiveRecommendations else {
+            recommendations = []
+            return
+        }
+
         isLoading = true
 
         // 비동기 작업을 Task로 처리
@@ -313,16 +404,17 @@ struct SimpleRecommendationView: View {
     }
 
     private func generateRestaurantName(category: FoodCategory, index: Int) -> String {
-        let names: [FoodCategory: [String]] = [
-            .general: ["미식가의 정원", "맛있는 이야기", "행복한 밥상", "정성담은 한끼", "계절의 맛"],
-            .steak: ["프라임 스테이크하우스", "더 블랙 앵거스", "고기공방", "스테이크 마스터", "미트 하우스"],
-            .sushi: ["스시 오마카세", "이타마에 스시", "도쿄스시", "스시장인", "오마카세 명가"],
-            .ramen: ["라멘 이치방", "메구로 라멘", "츠케멘 전문점", "하카타 라멘", "미소라멘"],
-            .pizza: ["나폴리 피자", "피자 마르게리따", "정통 화덕피자", "피자 장인", "피제리아"],
-            .wine: ["와인바 소믈리에", "보르도 와인바", "그랑크뤼", "와인 앤 다인", "빈티지 와인바"],
-            .coffee: ["스페셜티 커피", "로스터스 커피", "핸드드립 전문점", "커피 공작소", "빈즈 커피"]
+        // 카테고리 이름을 키로 사용
+        let names: [String: [String]] = [
+            "일반": ["미식가의 정원", "맛있는 이야기", "행복한 밥상", "정성담은 한끼", "계절의 맛"],
+            "스테이크": ["프라임 스테이크하우스", "더 블랙 앵거스", "고기공방", "스테이크 마스터", "미트 하우스"],
+            "초밥": ["스시 오마카세", "이타마에 스시", "도쿄스시", "스시장인", "오마카세 명가"],
+            "라멘": ["라멘 이치방", "메구로 라멘", "츠케멘 전문점", "하카타 라멘", "미소라멘"],
+            "피자": ["나폴리 피자", "피자 마르게리따", "정통 화덕피자", "피자 장인", "피제리아"],
+            "와인": ["와인바 소믈리에", "보르도 와인바", "그랑크뤼", "와인 앤 다인", "빈티지 와인바"],
+            "커피": ["스페셜티 커피", "로스터스 커피", "핸드드립 전문점", "커피 공작소", "빈즈 커피"]
         ]
-        return names[category]?[index % 5] ?? "추천 식당 \(index + 1)"
+        return names[category.name]?[index % 5] ?? "추천 식당 \(index + 1)"
     }
 
     private func generateDetailedReason(

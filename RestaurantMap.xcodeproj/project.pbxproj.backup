@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		16F26C12F5687998036CE66B /* HeroImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA38B4F848311E044C1489D /* HeroImageView.swift */; };
-		02D2DB7D53AEABF344566792 /* PhotoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A40CB361376D1A3B48AD2E /* PhotoDetailView.swift */; };
-		052AC2EDD33E8042077FA16E /* PhotoGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFF3BE8DA3BF72210A80C8B /* PhotoGalleryView.swift */; };
-		41384CCCA61A204486C1128F /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697357049ED220481E397856 /* PhotoPickerView.swift */; };
-		186B3CD244E4BE6FF8292064 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8049614B201675E306A8E09 /* CameraView.swift */; };
-		5E000B9D5DE2612D8295E49E /* PhotoStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E8C84619F1DE96AB117EB1 /* PhotoStorageManager.swift */; };
 		1A000001 /* RestaurantMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000000 /* RestaurantMapApp.swift */; };
 		1A000003 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000002 /* ContentView.swift */; };
 		1A000005 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000004 /* Restaurant.swift */; };
@@ -84,17 +78,9 @@
 		58A77BC42EEC79B90068B8C2 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 58A77BC32EEC79B90068B8C2 /* FirebaseRemoteConfig */; };
 		58A77BC62EEC79B90068B8C2 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 58A77BC52EEC79B90068B8C2 /* FirebaseStorage */; };
 		58A77BC82EEC79B90068B8C2 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 58A77BC72EEC79B90068B8C2 /* FirebaseStorageCombine-Community */; };
-		60D48A4C54ED925C4780FF67 /* CustomCategorySettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD27675423ADDCC051FA3D1 /* CustomCategorySettingsView.swift */; };
-		B60294BB536A0E5F624240AC /* AddCustomCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130C9D405E83F0E949E172F4 /* AddCustomCategoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BAA38B4F848311E044C1489D /* HeroImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RestaurantMap/Views/Components/HeroImageView.swift"; sourceTree = "<group>"; };
-		F7A40CB361376D1A3B48AD2E /* PhotoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RestaurantMap/Views/Components/PhotoDetailView.swift"; sourceTree = "<group>"; };
-		1EFF3BE8DA3BF72210A80C8B /* PhotoGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RestaurantMap/Views/Components/PhotoGalleryView.swift"; sourceTree = "<group>"; };
-		697357049ED220481E397856 /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RestaurantMap/Views/Components/PhotoPickerView.swift"; sourceTree = "<group>"; };
-		D8049614B201675E306A8E09 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RestaurantMap/Views/Components/CameraView.swift"; sourceTree = "<group>"; };
-		17E8C84619F1DE96AB117EB1 /* PhotoStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStorageManager.swift; sourceTree = "<group>"; };
 		1A000000 /* RestaurantMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMapApp.swift; sourceTree = "<group>"; };
 		1A000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1A000004 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
@@ -121,8 +107,6 @@
 		586184B72EE0838100320D6B /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5861852A2EE08D8F00320D6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C994B0B2EEBF60500FBC8F6 /* RestaurantMap.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RestaurantMap.entitlements; sourceTree = "<group>"; };
-		2AD27675423ADDCC051FA3D1 /* CustomCategorySettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RestaurantMap/Views/CustomCategorySettingsView.swift"; sourceTree = "<group>"; };
-		130C9D405E83F0E949E172F4 /* AddCustomCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RestaurantMap/Views/AddCustomCategoryView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,8 +171,6 @@
 		1A000028 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				
-				17E8C84619F1DE96AB117EB1 /* PhotoStorageManager.swift */,
 				1A000026 /* VisitReminderManager.swift */,
 				1A00002A /* CloudKitBackupService.swift */,
 			);
@@ -264,18 +246,6 @@
 				1AFFFFFD /* RestaurantMap.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		8DFAD1655EBA66CACA1EBBA2 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				D8049614B201675E306A8E09 /* CameraView.swift */,
-				697357049ED220481E397856 /* PhotoPickerView.swift */,
-				1EFF3BE8DA3BF72210A80C8B /* PhotoGalleryView.swift */,
-				F7A40CB361376D1A3B48AD2E /* PhotoDetailView.swift */,
-				BAA38B4F848311E044C1489D /* HeroImageView.swift */,
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,15 +342,7 @@
 				1A000035 /* AddMenuView.swift in Sources */,
 				1A000037 /* MenuDetailView.swift in Sources */,
 				1A000001 /* RestaurantMapApp.swift in Sources */,
-							5E000B9D5DE2612D8295E49E /* PhotoStorageManager.swift in Sources */,
-				16F26C12F5687998036CE66B /* HeroImageView.swift in Sources */,
-				02D2DB7D53AEABF344566792 /* PhotoDetailView.swift in Sources */,
-				052AC2EDD33E8042077FA16E /* PhotoGalleryView.swift in Sources */,
-				41384CCCA61A204486C1128F /* PhotoPickerView.swift in Sources */,
-				186B3CD244E4BE6FF8292064 /* CameraView.swift in Sources */,
-				60D48A4C54ED925C4780FF67 /* CustomCategorySettingsView.swift in Sources */,
-				B60294BB536A0E5F624240AC /* AddCustomCategoryView.swift in Sources */,
-);
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */

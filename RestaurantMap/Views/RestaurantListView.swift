@@ -101,8 +101,13 @@ struct RestaurantListView: View {
         NavigationStack {
             List {
                 // 나의 미슐랭 (Top 6)
-                if !michelinRestaurants.isEmpty {
-                    Section {
+                Section {
+                    if michelinRestaurants.isEmpty {
+                        Text("아직 탑6로 지정된 식당이 없습니다")
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                            .padding(.vertical, 8)
+                    } else {
                         ForEach(michelinRestaurants) { restaurant in
                             Top6RestaurantRow(restaurant: restaurant)
                                 .contentShape(Rectangle())
@@ -114,22 +119,33 @@ struct RestaurantListView: View {
                         .onDelete { indexSet in
                             deleteMichelinRestaurants(at: indexSet)
                         }
-                    } header: {
-                        HStack {
-                            Image(systemName: "crown.fill")
-                                .foregroundStyle(.yellow)
-                            Text("나의 미슐랭")
-                        }
-                        .font(.headline)
-                    } footer: {
+                    }
+                } header: {
+                    HStack {
+                        Image(systemName: "crown.fill")
+                            .foregroundStyle(.yellow)
+                        Text("나의 미슐랭")
+                        Spacer()
+                        Text("\(michelinRestaurants.count)")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                    .font(.headline)
+                } footer: {
+                    if !michelinRestaurants.isEmpty {
                         Text("최고의 식당들입니다")
                             .font(.caption2)
                     }
                 }
 
                 // 가본 곳
-                if !visitedRestaurants.isEmpty {
-                    Section {
+                Section {
+                    if visitedRestaurants.isEmpty {
+                        Text("아직 방문한 식당이 없습니다")
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                            .padding(.vertical, 8)
+                    } else {
                         ForEach(visitedRestaurants) { restaurant in
                             RestaurantRow(restaurant: restaurant)
                                 .contentShape(Rectangle())
@@ -141,19 +157,28 @@ struct RestaurantListView: View {
                         .onDelete { indexSet in
                             deleteVisitedRestaurants(at: indexSet)
                         }
-                    } header: {
-                        HStack {
-                            Image(systemName: "checkmark.circle.fill")
-                                .foregroundStyle(.green)
-                            Text("가본 곳")
-                        }
-                        .font(.headline)
                     }
+                } header: {
+                    HStack {
+                        Image(systemName: "checkmark.circle.fill")
+                            .foregroundStyle(.green)
+                        Text("가본 곳")
+                        Spacer()
+                        Text("\(visitedRestaurants.count)")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                    .font(.headline)
                 }
 
                 // 가볼 곳
-                if !wishlistRestaurants.isEmpty {
-                    Section {
+                Section {
+                    if wishlistRestaurants.isEmpty {
+                        Text("아직 가보고 싶은 식당이 없습니다")
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                            .padding(.vertical, 8)
+                    } else {
                         ForEach(wishlistRestaurants) { restaurant in
                             RestaurantRow(restaurant: restaurant)
                                 .contentShape(Rectangle())
@@ -165,14 +190,18 @@ struct RestaurantListView: View {
                         .onDelete { indexSet in
                             deleteWishlistRestaurants(at: indexSet)
                         }
-                    } header: {
-                        HStack {
-                            Image(systemName: "star.circle.fill")
-                                .foregroundStyle(.orange)
-                            Text("가볼 곳")
-                        }
-                        .font(.headline)
                     }
+                } header: {
+                    HStack {
+                        Image(systemName: "star.circle.fill")
+                            .foregroundStyle(.orange)
+                        Text("가볼 곳")
+                        Spacer()
+                        Text("\(wishlistRestaurants.count)")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                    .font(.headline)
                 }
             }
             .navigationTitle("식당 목록")
@@ -307,11 +336,11 @@ struct RankedRestaurantRow: View {
                     HStack(spacing: 4) {
                         Image(systemName: "heart.fill")
                             .font(.system(size: 10))
-                            .foregroundStyle(.red)
+                            .foregroundStyle(.green)
                         Text(String(format: "%.0f", restaurant.satisfactionScore))
                             .font(.subheadline)
                             .fontWeight(.bold)
-                            .foregroundStyle(.red)
+                            .foregroundStyle(.green)
                     }
                 }
 

@@ -1,40 +1,40 @@
 import SwiftUI
 
-enum FoodCategory: String, Codable, CaseIterable, Identifiable {
-    case general = "일반"
-    case steak = "스테이크"
-    case sushi = "초밥"
-    case ramen = "라멘"
-    case pizza = "피자"
-    case wine = "와인"
-    case coffee = "커피"
+// MARK: - FoodCategory (Struct)
 
-    var id: String { rawValue }
-
-    var icon: String {
-        switch self {
-        case .general:
-            return "🍽️"
-        case .steak:
-            return "🥩"
-        case .sushi:
-            return "🍣"
-        case .ramen:
-            return "🍜"
-        case .pizza:
-            return "🍕"
-        case .wine:
-            return "🍷"
-        case .coffee:
-            return "☕"
-        }
-    }
+struct FoodCategory: Codable, Identifiable, Hashable {
+    let id: UUID
+    let name: String
+    let icon: String
+    let isCustom: Bool
+    let isBuiltIn: Bool
+    let evaluationType: EvaluationType
 
     var displayName: String {
-        return "\(icon) \(rawValue)"
+        "\(icon) \(name)"
     }
 
-    // 카테고리별 평가 항목
+    // Hashable conformance
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+
+    static func == (lhs: FoodCategory, rhs: FoodCategory) -> Bool {
+        lhs.id == rhs.id
+    }
+}
+
+// MARK: - EvaluationType
+
+enum EvaluationType: String, Codable {
+    case general
+    case steak
+    case sushi
+    case ramen
+    case pizza
+    case wine
+    case coffee
+
     var evaluationAttributes: [EvaluationAttribute] {
         switch self {
         case .general:
@@ -104,12 +104,201 @@ enum FoodCategory: String, Codable, CaseIterable, Identifiable {
     }
 }
 
+// MARK: - EvaluationAttribute
+
 struct EvaluationAttribute {
     let emoji: String
     let title: String
     let subtitle: String
 
     var displayTitle: String {
-        return "\(emoji) \(title)"
+        "\(emoji) \(title)"
+    }
+}
+
+// MARK: - FoodCategoryRepository
+
+class FoodCategoryRepository: ObservableObject {
+    static let shared = FoodCategoryRepository()
+
+    @Published var customCategories: [FoodCategory] = []
+
+    private let customCategoriesKey = "customFoodCategories"
+
+    // 기본 제공 카테고리 15개 (고정 UUID 사용)
+    static let builtInCategories: [FoodCategory] = [
+        FoodCategory(
+            id: UUID(uuidString: "00000000-0000-0000-0000-000000000001")!,
+            name: "일반",
+            icon: "🍽️",
+            isCustom: false,
+            isBuiltIn: true,
+            evaluationType: .general
+        ),
+        FoodCategory(
+            id: UUID(uuidString: "00000000-0000-0000-0000-000000000002")!,
+            name: "스테이크",
+            icon: "🥩",
+            isCustom: false,
+            isBuiltIn: true,
+            evaluationType: .steak
+        ),
+        FoodCategory(
+            id: UUID(uuidString: "00000000-0000-0000-0000-000000000003")!,
+            name: "초밥",
+            icon: "🍣",
+            isCustom: false,
+            isBuiltIn: true,
+            evaluationType: .sushi
+        ),
+        FoodCategory(
+            id: UUID(uuidString: "00000000-0000-0000-0000-000000000004")!,
+            name: "라멘",
+            icon: "🍜",
+            isCustom: false,
+            isBuiltIn: true,
+            evaluationType: .ramen
+        ),
+        FoodCategory(
+            id: UUID(uuidString: "00000000-0000-0000-0000-000000000005")!,
+            name: "피자",
+            icon: "🍕",
+            isCustom: false,
+            isBuiltIn: true,
+            evaluationType: .pizza
+        ),
+        FoodCategory(
+            id: UUID(uuidString: "00000000-0000-0000-0000-000000000006")!,
+            name: "와인",
+            icon: "🍷",
+            isCustom: false,
+            isBuiltIn: true,
+            evaluationType: .wine
+        ),
+        FoodCategory(
+            id: UUID(uuidString: "00000000-0000-0000-0000-000000000007")!,
+            name: "커피",
+            icon: "☕",
+            isCustom: false,
+            isBuiltIn: true,
+            evaluationType: .coffee
+        ),
+        // 새로 추가되는 8개 카테고리
+        FoodCategory(
+            id: UUID(uuidString: "00000000-0000-0000-0000-000000000008")!,
+            name: "중식",
+            icon: "🥟",
+            isCustom: false,
+            isBuiltIn: true,
+            evaluationType: .general
+        ),
+        FoodCategory(
+            id: UUID(uuidString: "00000000-0000-0000-0000-000000000009")!,
+            name: "일식",
+            icon: "🍱",
+            isCustom: false,
+            isBuiltIn: true,
+            evaluationType: .general
+        ),
+        FoodCategory(
+            id: UUID(uuidString: "00000000-0000-0000-0000-00000000000A")!,
+            name: "한식",
+            icon: "🍲",
+            isCustom: false,
+            isBuiltIn: true,
+            evaluationType: .general
+        ),
+        FoodCategory(
+            id: UUID(uuidString: "00000000-0000-0000-0000-00000000000B")!,
+            name: "양식",
+            icon: "🍝",
+            isCustom: false,
+            isBuiltIn: true,
+            evaluationType: .general
+        ),
+        FoodCategory(
+            id: UUID(uuidString: "00000000-0000-0000-0000-00000000000C")!,
+            name: "치킨",
+            icon: "🍗",
+            isCustom: false,
+            isBuiltIn: true,
+            evaluationType: .general
+        ),
+        FoodCategory(
+            id: UUID(uuidString: "00000000-0000-0000-0000-00000000000D")!,
+            name: "버거",
+            icon: "🍔",
+            isCustom: false,
+            isBuiltIn: true,
+            evaluationType: .general
+        ),
+        FoodCategory(
+            id: UUID(uuidString: "00000000-0000-0000-0000-00000000000E")!,
+            name: "디저트",
+            icon: "🍰",
+            isCustom: false,
+            isBuiltIn: true,
+            evaluationType: .general
+        ),
+        FoodCategory(
+            id: UUID(uuidString: "00000000-0000-0000-0000-00000000000F")!,
+            name: "술집",
+            icon: "🍺",
+            isCustom: false,
+            isBuiltIn: true,
+            evaluationType: .general
+        )
+    ]
+
+    var allCategories: [FoodCategory] {
+        Self.builtInCategories + customCategories
+    }
+
+    private init() {
+        loadCustomCategories()
+    }
+
+    // MARK: - Public Methods
+
+    func addCustomCategory(name: String, icon: String) {
+        let newCategory = FoodCategory(
+            id: UUID(),
+            name: name,
+            icon: icon,
+            isCustom: true,
+            isBuiltIn: false,
+            evaluationType: .general
+        )
+
+        customCategories.append(newCategory)
+        saveCustomCategories()
+    }
+
+    func deleteCustomCategory(id: UUID) {
+        customCategories.removeAll { $0.id == id }
+        saveCustomCategories()
+    }
+
+    func findCategory(by id: UUID) -> FoodCategory? {
+        if let builtIn = Self.builtInCategories.first(where: { $0.id == id }) {
+            return builtIn
+        }
+        return customCategories.first { $0.id == id }
+    }
+
+    // MARK: - Private Methods
+
+    private func saveCustomCategories() {
+        if let encoded = try? JSONEncoder().encode(customCategories) {
+            UserDefaults.standard.set(encoded, forKey: customCategoriesKey)
+        }
+    }
+
+    private func loadCustomCategories() {
+        guard let data = UserDefaults.standard.data(forKey: customCategoriesKey),
+              let decoded = try? JSONDecoder().decode([FoodCategory].self, from: data) else {
+            return
+        }
+        customCategories = decoded
     }
 }

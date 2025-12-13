@@ -8,9 +8,18 @@
 	<string>지도에서 현재 위치를 표시하고 저장된 가게 근처인지 확인하기 위해 필요합니다.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>저장된 가게 방문 후 리뷰 요청 알림을 보내기 위해 백그라운드에서도 위치 정보가 필요합니다.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>사진을 방문 기록에 추가하기 위해 사진 라이브러리 접근이 필요합니다.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>방문 기록에 추가할 사진을 촬영하기 위해 카메라 접근이 필요합니다.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
+	</array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>kakaomap</string>
+		<string>nmap</string>
 	</array>
 </dict>
 </plist>

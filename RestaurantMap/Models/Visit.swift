@@ -4,9 +4,13 @@ import SwiftData
 @Model
 final class Visit {
     var restaurant: Restaurant?
+    var menu: MenuItem? // 선택한 메뉴 (메뉴 등록된 경우)
     var visitDate: Date
     var notes: String
     var rating: Int
+    var menuItem: String = "" // 먹은 메뉴 이름 (텍스트, 하위 호환용)
+    var photoFilenames: [String] = [] // 방문 사진 파일명 배열
+    var photoId: UUID = UUID() // 사진 저장용 UUID (PersistentIdentifier 대신 사용)
 
     // 일반 맛 취향 프로필 - 강도 (0-10)
     var spicy: Double?
@@ -131,6 +135,29 @@ final class Visit {
         self.rating = rating
     }
 
+    // 표시할 메뉴 이름 (Menu 우선, 없으면 menuItem)
+    var displayMenuName: String {
+        if let menu = menu {
+            return menu.name
+        }
+        return menuItem
+    }
+
+    // 사진 관련 computed properties
+    var photoURLs: [URL] {
+        photoFilenames.compactMap { filename in
+            PhotoStorageManager.shared.photoURL(for: filename, visitID: self.photoId)
+        }
+    }
+
+    var heroImageURL: URL? {
+        photoURLs.first
+    }
+
+    var hasPhotos: Bool {
+        !photoFilenames.isEmpty
+    }
+
     // 취향이 평가되었는지 확인
     var hasTasteProfile: Bool {
         let hasGeneral = spicy != nil || boldness != nil || sweetness != nil || saltiness != nil ||
@@ -157,7 +184,7 @@ final class Visit {
             return generalIntensityData
         }
 
-        switch restaurant.foodCategory {
+        switch restaurant.evaluationType {
         case .general: return generalIntensityData
         case .steak: return steakIntensityData
         case .sushi: return sushiIntensityData
@@ -173,7 +200,7 @@ final class Visit {
             return generalAppropriatenessData
         }
 
-        switch restaurant.foodCategory {
+        switch restaurant.evaluationType {
         case .general: return generalAppropriatenessData
         case .steak: return steakAppropriatenessData
         case .sushi: return sushiAppropriatenessData

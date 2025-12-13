@@ -23,6 +23,7 @@ struct RestaurantMapApp: App {
             Restaurant.self,
             TasteProfile.self,
             Visit.self,
+            MenuItem.self,
         ])
 
         // CloudKit 통합 완전히 비활성화 (에러 방지)
@@ -36,22 +37,45 @@ struct RestaurantMapApp: App {
             let container = try ModelContainer(for: schema, configurations: [modelConfiguration])
             logger.info("ModelContainer 초기화 성공")
 
-            // 기존 Restaurant 데이터에 기본값 설정 (마이그레이션)
+            // 기존 Restaurant 데이터를 UUID 기반 카테고리로 마이그레이션
             let context = container.mainContext
             let descriptor = FetchDescriptor<Restaurant>()
             if let restaurants = try? context.fetch(descriptor) {
                 var needsSave = false
+
+                // 구 카테고리 이름 → 새 UUID 매핑
+                let categoryMigration: [String: String] = [
+                    "일반": FoodCategoryRepository.builtInCategories[0].id.uuidString,
+                    "스테이크": FoodCategoryRepository.builtInCategories[1].id.uuidString,
+                    "초밥": FoodCategoryRepository.builtInCategories[2].id.uuidString,
+                    "라멘": FoodCategoryRepository.builtInCategories[3].id.uuidString,
+                    "피자": FoodCategoryRepository.builtInCategories[4].id.uuidString,
+                    "와인": FoodCategoryRepository.builtInCategories[5].id.uuidString,
+                    "커피": FoodCategoryRepository.builtInCategories[6].id.uuidString
+                ]
+
                 for restaurant in restaurants {
-                    // foodCategoryRaw 기본값 설정
-                    if restaurant.foodCategoryRaw.isEmpty {
-                        restaurant.foodCategoryRaw = "일반"
-                        logger.info("Restaurant '\(restaurant.name)'에 기본 카테고리 설정")
+                    // 이미 UUID 형식이면 스킵
+                    if UUID(uuidString: restaurant.foodCategoryId) != nil {
+                        continue
+                    }
+
+                    // 구 방식 데이터 변환
+                    if let newId = categoryMigration[restaurant.foodCategoryId] {
+                        restaurant.foodCategoryId = newId
+                        logger.info("Restaurant '\(restaurant.name)' 카테고리 마이그레이션: \(restaurant.foodCategoryId) → UUID")
+                        needsSave = true
+                    } else {
+                        // 매핑되지 않은 값이면 기본값(일반)으로
+                        restaurant.foodCategoryId = FoodCategoryRepository.builtInCategories[0].id.uuidString
+                        logger.warning("Restaurant '\(restaurant.name)' 알 수 없는 카테고리, 기본값으로 설정")
                         needsSave = true
                     }
                 }
+
                 if needsSave {
                     try? context.save()
-                    logger.info("✅ 마이그레이션 완료")
+                    logger.info("✅ 카테고리 마이그레이션 완료")
                 }
             }
 

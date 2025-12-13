@@ -35,25 +35,34 @@ final class Restaurant {
     var isTop6: Bool
     var top6Rank: Int?
     var categoryIcon: String
-    var foodCategoryRaw: String = "일반" // FoodCategory enum을 String으로 저장, 기본값 설정
+    var foodCategoryId: String = FoodCategoryRepository.builtInCategories[0].id.uuidString
     var isWishlist: Bool = false  // 가볼 곳 여부 (Boolean은 마이그레이션이 안전함)
 
     // 방문 기록들
     @Relationship(deleteRule: .cascade, inverse: \Visit.restaurant)
     var visits: [Visit]?
 
+    // 메뉴들
+    @Relationship(deleteRule: .cascade, inverse: \MenuItem.restaurant)
+    var menus: [MenuItem]?
+
     // FoodCategory 편의 속성
     var foodCategory: FoodCategory {
         get {
-            // 빈 문자열이나 잘못된 값이면 기본값 반환
-            if foodCategoryRaw.isEmpty {
-                return .general
+            guard let uuid = UUID(uuidString: foodCategoryId),
+                  let category = FoodCategoryRepository.shared.findCategory(by: uuid) else {
+                return FoodCategoryRepository.builtInCategories[0] // 일반
             }
-            return FoodCategory(rawValue: foodCategoryRaw) ?? .general
+            return category
         }
         set {
-            foodCategoryRaw = newValue.rawValue
+            foodCategoryId = newValue.id.uuidString
         }
+    }
+
+    // evaluationType은 foodCategory를 통해 접근
+    var evaluationType: EvaluationType {
+        foodCategory.evaluationType
     }
 
     // RestaurantListType 편의 속성
@@ -89,7 +98,7 @@ final class Restaurant {
         }
     }
 
-    init(name: String, address: String, latitude: Double, longitude: Double, notes: String = "", rating: Int = 0, visitDate: Date = Date(), category: String = "", phoneNumber: String = "", isTop6: Bool = false, top6Rank: Int? = nil, categoryIcon: String = "fork.knife", foodCategory: FoodCategory = .general, listType: RestaurantListType = .visited) {
+    init(name: String, address: String, latitude: Double, longitude: Double, notes: String = "", rating: Int = 0, visitDate: Date = Date(), category: String = "", phoneNumber: String = "", isTop6: Bool = false, top6Rank: Int? = nil, categoryIcon: String = "fork.knife", foodCategory: FoodCategory = FoodCategoryRepository.builtInCategories[0], listType: RestaurantListType = .visited) {
         self.name = name
         self.address = address
         self.latitude = latitude
@@ -102,12 +111,13 @@ final class Restaurant {
         self.isTop6 = isTop6
         self.top6Rank = top6Rank
         self.categoryIcon = categoryIcon
-        self.foodCategoryRaw = foodCategory.rawValue
+        self.foodCategoryId = foodCategory.id.uuidString
 
         // listType에 따라 isWishlist 설정
         self.isWishlist = (listType == .wishlist)
 
         self.visits = []
+        self.menus = []
     }
 
     var coordinate: CLLocationCoordinate2D {
@@ -138,7 +148,7 @@ final class Restaurant {
         let validVisits = visits.filter { $0.hasTasteProfile }
         guard !validVisits.isEmpty else { return [] }
 
-        switch foodCategory {
+        switch evaluationType {
         case .general:
             let avgSpicy = validVisits.compactMap { $0.spicy }.average
             let avgBoldness = validVisits.compactMap { $0.boldness }.average
@@ -232,7 +242,7 @@ final class Restaurant {
         let validVisits = visits.filter { $0.hasTasteProfile }
         guard !validVisits.isEmpty else { return [] }
 
-        switch foodCategory {
+        switch evaluationType {
         case .general:
             let avgSpicy = validVisits.compactMap { $0.spicyAppropriate }.map { Double($0) }.average * 2
             let avgBoldness = validVisits.compactMap { $0.boldnessAppropriate }.map { Double($0) }.average * 2
