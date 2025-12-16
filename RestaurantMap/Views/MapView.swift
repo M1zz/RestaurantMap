@@ -441,20 +441,12 @@ struct MapView: View {
 
                         // 첫 번째 결과로 지도 이동 및 줌인
                         if let firstPlace = result.documents.first {
-                            // 애니메이션과 함께 이동 후 자동 모드로 전환 (사용자가 자유롭게 이동 가능)
+                            // 애니메이션과 함께 이동 (줌인된 상태 유지)
                             withAnimation(.easeInOut(duration: 0.5)) {
                                 position = .region(MKCoordinateRegion(
                                     center: firstPlace.coordinate,
                                     span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
                                 ))
-                            }
-
-                            // 애니메이션 완료 후 자동 모드로 전환 (지도 고정 해제)
-                            Task {
-                                try? await Task.sleep(nanoseconds: 600_000_000) // 0.6초 대기
-                                await MainActor.run {
-                                    position = .automatic
-                                }
                             }
 
                             logger.info("📍 지도를 '\(firstPlace.placeName)'로 이동 및 줌인")
@@ -510,20 +502,12 @@ struct MapView: View {
 
                         // 첫 번째 결과로 지도 이동
                         if let firstResult = response.mapItems.first {
-                            // 애니메이션과 함께 이동
+                            // 애니메이션과 함께 이동 (줌인된 상태 유지)
                             withAnimation(.easeInOut(duration: 0.5)) {
                                 position = .region(MKCoordinateRegion(
                                     center: firstResult.placemark.coordinate,
                                     span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
                                 ))
-                            }
-
-                            // 애니메이션 완료 후 자동 모드로 전환
-                            Task {
-                                try? await Task.sleep(nanoseconds: 600_000_000)
-                                await MainActor.run {
-                                    position = .automatic
-                                }
                             }
 
                             logger.info("📍 지도를 '\(firstResult.name ?? "검색 결과")'로 이동")
