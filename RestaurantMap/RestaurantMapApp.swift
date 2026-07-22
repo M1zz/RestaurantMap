@@ -3,6 +3,7 @@ import SwiftData
 import OSLog
 import FirebaseCore
 import UserNotifications
+import LeeoKit
 
 @main
 struct RestaurantMapApp: App {
@@ -13,6 +14,9 @@ struct RestaurantMapApp: App {
         // Firebase 초기화
         FirebaseApp.configure()
         logger.info("🔥 Firebase configured")
+
+        // LeeoKit 사용량 기록
+        LeeoEngagement.shared.registerLaunch()
     }
 
     var sharedModelContainer: ModelContainer = {
@@ -135,6 +139,7 @@ struct RestaurantMapApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .leeoSatisfactionCheck(RestaurantMapSpec.self)
                 .task {
                     logger.info("RestaurantMap 앱 시작됨")
 

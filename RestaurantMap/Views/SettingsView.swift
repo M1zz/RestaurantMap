@@ -1,5 +1,6 @@
 import SwiftUI
 import SwiftData
+import LeeoKit
 
 struct SettingsView: View {
     @Environment(\.modelContext) private var modelContext
@@ -129,6 +130,16 @@ struct SettingsView: View {
                 } header: {
                     Text("앱 정보")
                 }
+
+                // 지원
+                Section {
+                    LeeoSupportSection<RestaurantMapSpec>()
+                } header: {
+                    Text("지원")
+                }
+
+                // 개발자 문의
+                DeveloperContactSection()
             }
             .navigationTitle("설정")
             .navigationBarTitleDisplayMode(.inline)
@@ -225,6 +236,24 @@ struct SettingsView: View {
                 resultMessage = success ? "모든 데이터가 삭제되었습니다." : (backupService.errorMessage ?? "초기화에 실패했습니다.")
                 showResultAlert = true
             }
+        }
+    }
+}
+
+// MARK: - 개발자 문의
+struct DeveloperContactSection: View {
+    var body: some View {
+        Section {
+            Link(destination: URL(string: "mailto:leeo@kakao.com")!) {
+                Label("이메일로 문의하기", systemImage: "envelope")
+            }
+            Link(destination: URL(string: "https://instagram.com/lee25_ios")!) {
+                Label("인스타그램 DM (@lee25_ios)", systemImage: "paperplane")
+            }
+        } header: {
+            Text("개발자에게 문의")
+        } footer: {
+            Text("버그 제보와 기능 제안을 환영합니다.")
         }
     }
 }
