@@ -15,4 +15,7 @@ enum RestaurantMapSpec: LeeoAppSpec {
 
     /// 인앱 결제 없음 (StoreKit 미사용).
     static let monetization = LeeoMonetization.free
+
+    /// 익명 사용 통계 → FeedbackHub. 없으면 bootstrap 이 스냅샷·app_open 을 건너뛴다.
+    static let analytics: any LeeoAnalytics = LeeoUsageAnalytics(spec: RestaurantMapSpec.self)
 }

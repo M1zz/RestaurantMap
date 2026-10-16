@@ -15,8 +15,8 @@ struct RestaurantMapApp: App {
         FirebaseApp.configure()
         logger.info("🔥 Firebase configured")
 
-        // LeeoKit 사용량 기록
-        LeeoEngagement.shared.registerLaunch()
+        // LeeoKit — 사용량 기록 · 크래시 진단 · 익명 사용 통계 (FeedbackHub)
+        LeeoKit.bootstrap(RestaurantMapSpec.self)
     }
 
     var sharedModelContainer: ModelContainer = {
