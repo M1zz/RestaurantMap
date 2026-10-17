@@ -86,6 +86,7 @@
 		5E000B9D5DE2612D8295E49E /* PhotoStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E8C84619F1DE96AB117EB1 /* PhotoStorageManager.swift */; };
 		60D48A4C54ED925C4780FF67 /* CustomCategorySettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD27675423ADDCC051FA3D1 /* CustomCategorySettingsView.swift */; };
 		680EB723127B1C8190CB6588 /* RestaurantMapSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54692912D3196B73FF3330D8 /* RestaurantMapSpec.swift */; };
+		A000BD0DB6806D29A2895F2B /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E98A59A68B9CAA9DA38753A9 /* Localizable.xcstrings */; };
 		B60294BB536A0E5F624240AC /* AddCustomCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130C9D405E83F0E949E172F4 /* AddCustomCategoryView.swift */; };
 		EF58C461041A18D03924B4D3 /* LeeoKit in Frameworks */ = {isa = PBXBuildFile; productRef = EA31E41C51A96BFB1501A4EF /* LeeoKit */; };
 		F3FEC8CF47B74E084FAE9776 /* RestaurantMapRoadmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5D58AA1008E7DFAC23E8AB /* RestaurantMapRoadmap.swift */; };
@@ -126,6 +127,7 @@
 		9C994B0B2EEBF60500FBC8F6 /* RestaurantMap.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RestaurantMap.entitlements; sourceTree = "<group>"; };
 		BAA38B4F848311E044C1489D /* HeroImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMap/Views/Components/HeroImageView.swift; sourceTree = "<group>"; };
 		D8049614B201675E306A8E09 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMap/Views/Components/CameraView.swift; sourceTree = "<group>"; };
+		E98A59A68B9CAA9DA38753A9 /* Localizable.xcstrings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		F7A40CB361376D1A3B48AD2E /* PhotoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMap/Views/Components/PhotoDetailView.swift; sourceTree = "<group>"; };
 		FE5D58AA1008E7DFAC23E8AB /* RestaurantMapRoadmap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RestaurantMapRoadmap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -223,6 +225,7 @@
 				1AFFFFF8 /* Preview Content */,
 				54692912D3196B73FF3330D8 /* RestaurantMapSpec.swift */,
 				FE5D58AA1008E7DFAC23E8AB /* RestaurantMapRoadmap.swift */,
+				E98A59A68B9CAA9DA38753A9 /* Localizable.xcstrings */,
 			);
 			path = RestaurantMap;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = 1AFFFFF4;
 			packageReferences = (
@@ -341,6 +345,7 @@
 				1A000011 /* Preview Assets.xcassets in Resources */,
 				1A00000F /* Assets.xcassets in Resources */,
 				586184B82EE0838100320D6B /* GoogleService-Info.plist in Resources */,
+				A000BD0DB6806D29A2895F2B /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
