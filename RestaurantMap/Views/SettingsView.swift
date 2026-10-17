@@ -133,6 +133,8 @@ struct SettingsView: View {
 
                 // 지원
                 Section {
+                    // 앞으로 만들 기능 — 원본은 RestaurantMapRoadmap.swift
+                    NavigationLink(LeeoRoadmapText.entry) { RoadmapScreen() }
                     LeeoSupportSection<RestaurantMapSpec>()
                 } header: {
                     Text("지원")
