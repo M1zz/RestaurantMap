@@ -447,3 +447,59 @@ Te avisamos para que registres la visita después de ir a un restaurante guardad
 
 Copia de seguridad en iCloud
 Tus registros se guardan en el dispositivo y, cuando quieras, puedes copiarlos a tu iCloud y restaurarlos desde allí.
+
+## de
+
+### 지원 URL
+
+https://m1zz.github.io/RestaurantMap/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/RestaurantMap/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/RestaurantMap/
+
+### 이름
+
+Insaeng: Restaurant-Karte
+
+### 부제
+
+Essen bewerten, ranken, merken
+
+### 키워드
+
+Tagebuch,Favoriten,Foodie,Bewertung,Wunschliste,Steak,Ramen,Sushi,Café,Date,Lokale,Notizen,Fotos,Top
+
+### 프로모션 텍스트
+
+Setze für jedes besuchte Restaurant einen Pin auf die Karte und halte Bewertung und Notizen fest. Ort für Ort entsteht deine Karte unvergesslicher Mahlzeiten.
+
+### 설명
+
+Markiere die Orte, an denen du gegessen hast, und halte bei jedem Besuch fest, wie es geschmeckt hat.
+Insaeng ist deine ganz persönliche Restaurant-Karte – nur mit Lokalen, die du selbst ausgewählt hast.
+
+Eine Karte deiner Lieblingsorte
+Suche ein Restaurant oder wähle einen Punkt auf der Karte, um es zu speichern. Gespeicherte Orte erscheinen als Pins, und deine sechs Favoriten bekommen eigene Platzierungs-Abzeichen.
+
+Besucht, Wunschliste und deine Top 6
+Behalte Restaurants, in denen du schon warst, und solche, die du noch ausprobieren willst, in getrennten Listen – und bringe deine sechs besten in eine Reihenfolge.
+
+Jedes Gericht nach eigenen Maßstäben
+Beim Steak zählen Garpunkt und Saftigkeit, beim Sushi Reis und Fisch, beim Ramen Brühe und Nudeln. Bewerte Geschmacksintensität und Zufriedenheit nach den Kriterien, die zur jeweiligen Küche passen. Auch Pizza, Wein und Kaffee haben eigene Bewertungen, und du kannst eigene Küchenarten hinzufügen.
+
+Ein Besuchsprotokoll, das mitwächst
+Halte Datum, Bewertung, Gerichte, Fotos und Notizen jedes Besuchs fest. Für jedes Restaurant sammeln sich Besuchszahl, Durchschnittsbewertung und ein Gesamturteil zum Geschmack an. Trägst du die Speisekarte ein, siehst du Signature-Gerichte und Preise auf einen Blick.
+
+Dein Geschmacksprofil
+Sieh deinen Gaumen im Diagramm: scharf, süß, salzig, deftig und natürlich.
+
+Erinnerung nach dem Besuch
+Nach einem Besuch in einem gespeicherten Restaurant erinnern wir dich daran, den Besuch einzutragen. Das funktioniert nur, wenn du den Zugriff auf deinen Standort erlaubst.
+
+iCloud-Backup
+Deine Einträge bleiben auf dem Gerät. Wann immer du möchtest, kannst du sie in deiner eigenen iCloud sichern und von dort wiederherstellen.

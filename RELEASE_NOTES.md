@@ -60,3 +60,10 @@ Envía tus comentarios desde la app
 Cuéntanos qué tal te va con la app
 Añadimos privacidad y página de ayuda
 Corregimos pequeños errores
+
+### 앱스토어 (Deutsch)
+
+Feedback direkt in der App senden
+Sag uns kurz, wie dir die App gefällt
+Datenschutz und Hilfe sind jetzt online
+Kleine Fehler behoben

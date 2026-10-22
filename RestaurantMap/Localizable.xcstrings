@@ -50,6 +50,12 @@
             "state" : "translated",
             "value" : "Menú de %@"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Speisekarte von %@"
+          }
         }
       }
     },
@@ -102,6 +108,12 @@
             "state" : "translated",
             "value" : "%lld%% de coincidencia"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld %% Übereinstimmung"
+          }
         }
       }
     },
@@ -150,6 +162,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld"
@@ -206,6 +224,12 @@
             "state" : "translated",
             "value" : "Valora %lld más para recibir recomendaciones"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bewerte noch %lld, um Empfehlungen zu erhalten"
+          }
         }
       }
     },
@@ -257,6 +281,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld opiniones"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld Bewertungen"
           }
         }
       }
@@ -310,6 +340,12 @@
             "state" : "translated",
             "value" : "Recomendado por %lld usuarios con gustos similares"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Empfohlen von %lld Nutzern mit ähnlichem Geschmack"
+          }
         }
       }
     },
@@ -361,6 +397,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "N.º %lld"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Platz %lld"
           }
         }
       }
@@ -414,6 +456,12 @@
             "state" : "translated",
             "value" : "%lld fotos"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld Fotos"
+          }
         }
       }
     },
@@ -465,6 +513,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld veces"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld×"
           }
         }
       }
@@ -518,6 +572,12 @@
             "state" : "translated",
             "value" : "%lld visitas"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld Besuche"
+          }
         }
       }
     },
@@ -569,6 +629,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "¿Eliminar «%@» y todos sus registros de visitas?"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "„%@“ und alle Besuchseinträge löschen?"
           }
         }
       }
@@ -622,6 +688,12 @@
             "state" : "translated",
             "value" : "1️⃣ Subir mis datos"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1️⃣ Meine Daten hochladen"
+          }
         }
       }
     },
@@ -673,6 +745,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "2️⃣ Generar datos de prueba"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2️⃣ Testdaten erzeugen"
           }
         }
       }
@@ -726,6 +804,12 @@
             "state" : "translated",
             "value" : "3️⃣ Ver los resultados en la pestaña Recomendaciones"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3️⃣ Ergebnis im Tab „Empfehlungen“ ansehen"
+          }
         }
       }
     },
@@ -777,6 +861,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "No has dado 4 estrellas o más a ningún restaurante"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du hast noch kein Restaurant mit 4 Sternen oder mehr bewertet"
           }
         }
       }
@@ -830,6 +920,12 @@
             "state" : "translated",
             "value" : "Tu gusto, resumido en seis atributos"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dein Geschmack in sechs Merkmalen"
+          }
         }
       }
     },
@@ -881,6 +977,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Abrir en Apple Maps"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In Apple Karten öffnen"
           }
         }
       }
@@ -935,6 +1037,12 @@
             "state" : "translated",
             "value" : "Bloqueo con Face ID"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Face-ID-Sperre"
+          }
         }
       }
     },
@@ -988,6 +1096,12 @@
             "state" : "translated",
             "value" : "Bloquea la app con Face ID o Touch ID para mantener privado tu diario de restaurantes."
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sperre die App mit Face ID oder Touch ID, damit dein Restaurant-Tagebuch privat bleibt."
+          }
         }
       }
     },
@@ -1039,6 +1153,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sube datos a Firebase\npara probar el sistema de recomendaciones"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lade Daten zu Firebase hoch,\num das Empfehlungssystem zu testen"
           }
         }
       }
@@ -1092,6 +1212,12 @@
             "state" : "translated",
             "value" : "Subir a Realtime DB"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zu Realtime DB hochladen"
+          }
         }
       }
     },
@@ -1144,6 +1270,12 @@
             "state" : "translated",
             "value" : "Ventajas de Realtime Database"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vorteile der Realtime Database"
+          }
         }
       }
     },
@@ -1195,6 +1327,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Obteniendo datos de Realtime Database…"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Daten aus der Realtime Database werden abgerufen …"
           }
         }
       }
@@ -1249,6 +1387,12 @@
             "state" : "translated",
             "value" : "Pídeselo a Siri o usa un atajo para registrar una visita al instante."
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sag es Siri oder starte einen Kurzbefehl – und der Besuch ist sofort notiert."
+          }
         }
       }
     },
@@ -1301,6 +1445,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siri y Atajos"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri und Kurzbefehle"
           }
         }
       }
@@ -1355,6 +1505,12 @@
             "state" : "translated",
             "value" : "Mejor compatibilidad con VoiceOver"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOver noch besser nutzbar"
+          }
         }
       }
     },
@@ -1406,6 +1562,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Copia de seguridad en iCloud"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud-Backup"
           }
         }
       }
@@ -1459,6 +1621,12 @@
             "state" : "translated",
             "value" : "Debes iniciar sesión en iCloud para hacer o restaurar copias."
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Für Backup und Wiederherstellung musst du in iCloud angemeldet sein."
+          }
         }
       }
     },
@@ -1510,6 +1678,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Copiar a iCloud"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In iCloud sichern"
           }
         }
       }
@@ -1563,6 +1737,12 @@
             "state" : "translated",
             "value" : "Restaurar desde iCloud"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aus iCloud wiederherstellen"
+          }
         }
       }
     },
@@ -1614,6 +1794,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Se restaurará desde tu copia de iCloud. Todos los datos de este dispositivo se eliminarán y se sustituirán por los de la copia."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stellt die Daten aus deinem iCloud-Backup wieder her. Alle Daten auf diesem Gerät werden gelöscht und durch das Backup ersetzt."
           }
         }
       }
@@ -1667,6 +1853,12 @@
             "state" : "translated",
             "value" : "• De 3 a 4 restaurantes por usuario"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 3–4 Restaurants pro Nutzer"
+          }
         }
       }
     },
@@ -1718,6 +1910,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "• De 1 a 3 registros de visita por restaurante"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 1–3 Besuchseinträge pro Restaurant"
           }
         }
       }
@@ -1771,6 +1969,12 @@
             "state" : "translated",
             "value" : "• 5 usuarios con gustos variados"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 5 Nutzer mit unterschiedlichem Geschmack"
+          }
         }
       }
     },
@@ -1822,6 +2026,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "⚡ Sincronización en tiempo real más rápida"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚡ Schnellere Echtzeit-Synchronisierung"
           }
         }
       }
@@ -1875,6 +2085,12 @@
             "state" : "translated",
             "value" : "⚡ Sincronización en tiempo real más rápida\n💰 Menor coste"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚡ Schnellere Echtzeit-Synchronisierung\n💰 Geringere Kosten"
+          }
         }
       }
     },
@@ -1926,6 +2142,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "✓ Valorado"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "✓ Bewertet"
           }
         }
       }
@@ -1980,6 +2202,12 @@
             "state" : "translated",
             "value" : "Una vibración suave al guardar un sitio o registrar una visita."
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein leichtes Vibrieren, wenn du einen Ort sicherst oder einen Besuch einträgst."
+          }
         }
       }
     },
@@ -2031,6 +2259,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Precio"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preis"
           }
         }
       }
@@ -2084,6 +2318,12 @@
             "state" : "translated",
             "value" : "Visitados"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Besucht"
+          }
         }
       }
     },
@@ -2135,6 +2375,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Quiero ir"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Möchte ich besuchen"
           }
         }
       }
@@ -2188,6 +2434,12 @@
             "state" : "translated",
             "value" : "Un restaurante marcado como «Quiero ir» no puede entrar en el Top 6"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein Restaurant auf der Wunschliste kann nicht in die Top 6 aufgenommen werden"
+          }
         }
       }
     },
@@ -2239,6 +2491,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Valora la intensidad del sabor y la satisfacción de cada elemento. La valoración es opcional."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bewerte bei jedem Punkt Geschmacksintensität und Zufriedenheit. Die Bewertung ist optional."
           }
         }
       }
@@ -2292,6 +2550,12 @@
             "state" : "translated",
             "value" : "Contactar con el desarrollador"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entwickler kontaktieren"
+          }
         }
       }
     },
@@ -2343,6 +2607,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld resultados de búsqueda"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld Suchergebnisse"
           }
         }
       }
@@ -2396,6 +2666,12 @@
             "state" : "translated",
             "value" : "Longitud: %.6f"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Längengrad: %.6f"
+          }
         }
       }
     },
@@ -2447,6 +2723,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tipo"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Art"
           }
         }
       }
@@ -2501,6 +2783,12 @@
             "state" : "translated",
             "value" : "Al aumentar el tamaño del texto, las pantallas se reorganizan sin cortarse."
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bei größerer Schrift ordnen sich die Bildschirme neu an, ohne dass etwas abgeschnitten wird."
+          }
         }
       }
     },
@@ -2552,6 +2840,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Basado en «%@»"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Basierend auf „%@“"
           }
         }
       }
@@ -2605,6 +2899,12 @@
             "state" : "translated",
             "value" : "Predeterminado"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Standard"
+          }
         }
       }
     },
@@ -2656,6 +2956,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Información básica"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Grunddaten"
           }
         }
       }
@@ -2709,6 +3015,12 @@
             "state" : "translated",
             "value" : "Incluido"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Integriert"
+          }
         }
       }
     },
@@ -2760,6 +3072,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mi Michelin"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mein Michelin"
           }
         }
       }
@@ -2813,6 +3131,12 @@
             "state" : "translated",
             "value" : "Mi ADN gastronómico"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meine Foodie-DNA"
+          }
         }
       }
     },
@@ -2864,6 +3188,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mi Top 6 favorito"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meine Lieblings-Top-6"
           }
         }
       }
@@ -2917,6 +3247,12 @@
             "state" : "translated",
             "value" : "Mi Top 6"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meine Top 6"
+          }
         }
       }
     },
@@ -2968,6 +3304,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mis datos"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meine Daten"
           }
         }
       }
@@ -3021,6 +3363,12 @@
             "state" : "translated",
             "value" : "Subir mis datos"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meine Daten hochladen"
+          }
         }
       }
     },
@@ -3072,6 +3420,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Añadir a mis restaurantes"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zu meinen Restaurants hinzufügen"
           }
         }
       }
@@ -3125,6 +3479,12 @@
             "state" : "translated",
             "value" : "Tus restaurantes favoritos"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deine absoluten Lieblingsrestaurants"
+          }
         }
       }
     },
@@ -3176,6 +3536,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tipos añadidos por mí"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Von mir hinzugefügte Arten"
           }
         }
       }
@@ -3229,6 +3595,12 @@
             "state" : "translated",
             "value" : "Abrir en Naver Map"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In Naver Map öffnen"
+          }
         }
       }
     },
@@ -3280,6 +3652,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Inténtalo de nuevo"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bitte versuche es erneut"
           }
         }
       }
@@ -3334,6 +3712,12 @@
             "state" : "translated",
             "value" : "Modo oscuro"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dunkelmodus"
+          }
         }
       }
     },
@@ -3385,6 +3769,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cerrar"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schließen"
           }
         }
       }
@@ -3439,6 +3829,12 @@
             "state" : "translated",
             "value" : "Distingue el mapa y las listas con facilidad, incluso con más contraste o si te cuesta diferenciar colores."
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Karte und Listen bleiben gut erkennbar – auch bei erhöhtem Kontrast oder wenn Farben schwer zu unterscheiden sind."
+          }
         }
       }
     },
@@ -3490,6 +3886,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Plato estrella"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Signature-Gericht"
           }
         }
       }
@@ -3543,6 +3945,12 @@
             "state" : "translated",
             "value" : "Los platos estrella aparecen al principio de la lista del menú"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Signature-Gerichte erscheinen oben in der Speisekarte"
+          }
         }
       }
     },
@@ -3594,6 +4002,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Marcar como plato estrella"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Als Signature-Gericht festlegen"
           }
         }
       }
@@ -3648,6 +4062,12 @@
             "state" : "translated",
             "value" : "Usa la app en más idiomas."
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die App in mehr Sprachen nutzen."
+          }
         }
       }
     },
@@ -3701,6 +4121,12 @@
             "state" : "translated",
             "value" : "Más idiomas"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mehr Sprachen"
+          }
         }
       }
     },
@@ -3752,6 +4178,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Generar datos de prueba"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Testdaten erzeugen"
           }
         }
       }
@@ -3805,6 +4237,12 @@
             "state" : "translated",
             "value" : "Genera 5 usuarios de prueba y datos de restaurantes"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erzeugt 5 Testnutzer und Restaurantdaten"
+          }
         }
       }
     },
@@ -3856,6 +4294,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gestión de datos"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datenverwaltung"
           }
         }
       }
@@ -3909,6 +4353,12 @@
             "state" : "translated",
             "value" : "Sincronización de datos"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datensynchronisierung"
+          }
         }
       }
     },
@@ -3960,6 +4410,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sincronizar datos"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Daten synchronisieren"
           }
         }
       }
@@ -4013,6 +4469,12 @@
             "state" : "translated",
             "value" : "Subir datos"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Daten hochladen"
+          }
         }
       }
     },
@@ -4064,6 +4526,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Resumen de datos"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datenübersicht"
           }
         }
       }
@@ -4117,6 +4585,12 @@
             "state" : "translated",
             "value" : "Aún hay pocos datos"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noch zu wenige Daten"
+          }
         }
       }
     },
@@ -4168,6 +4642,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Puede que no haya datos suficientes"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Möglicherweise sind nicht genug Daten vorhanden"
           }
         }
       }
@@ -4221,6 +4701,12 @@
             "state" : "translated",
             "value" : "No se pueden cargar los datos"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Daten konnten nicht geladen werden"
+          }
         }
       }
     },
@@ -4272,6 +4758,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dirección (calle)"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Straßenadresse"
           }
         }
       }
@@ -4325,6 +4817,12 @@
             "state" : "translated",
             "value" : "Aún no hay platos en el menú"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noch keine Gerichte auf der Speisekarte"
+          }
         }
       }
     },
@@ -4376,6 +4874,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ranking"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rangliste"
           }
         }
       }
@@ -4429,6 +4933,12 @@
             "state" : "translated",
             "value" : "Puntuación Riio Michelin"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Riio-Michelin-Wertung"
+          }
         }
       }
     },
@@ -4480,6 +4990,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Última copia"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Letztes Backup"
           }
         }
       }
@@ -4533,6 +5049,12 @@
             "state" : "translated",
             "value" : "Satisfacción"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zufriedenheit"
+          }
         }
       }
     },
@@ -4584,6 +5106,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Intensidad del sabor"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geschmacksintensität"
           }
         }
       }
@@ -4637,6 +5165,12 @@
             "state" : "translated",
             "value" : "Preferencias de sabor"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geschmackspräferenzen"
+          }
         }
       }
     },
@@ -4688,6 +5222,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Preferencias de sabor\n%lld%%"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geschmackspräferenzen\n%lld %%"
           }
         }
       }
@@ -4741,6 +5281,12 @@
             "state" : "translated",
             "value" : "Valoración del sabor"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geschmacksbewertung"
+          }
         }
       }
     },
@@ -4792,6 +5338,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sabor valorado"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geschmack bewertet"
           }
         }
       }
@@ -4845,6 +5397,12 @@
             "state" : "translated",
             "value" : "Sabor valorado"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geschmack bewertet"
+          }
         }
       }
     },
@@ -4896,6 +5454,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Perfil de sabor"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geschmacksprofil"
           }
         }
       }
@@ -4949,6 +5513,12 @@
             "state" : "translated",
             "value" : "Restaurantes para ti"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurant-Tipps"
+          }
         }
       }
     },
@@ -5000,6 +5570,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Para ti"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Für dich"
           }
         }
       }
@@ -5053,6 +5629,12 @@
             "state" : "translated",
             "value" : "Para recibir recomendaciones personalizadas"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Für persönliche Empfehlungen"
+          }
         }
       }
     },
@@ -5104,6 +5686,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Muy satisfecho"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sehr zufrieden"
           }
         }
       }
@@ -5157,6 +5745,12 @@
             "state" : "translated",
             "value" : "Lo que comiste"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Was du gegessen hast"
+          }
         }
       }
     },
@@ -5208,6 +5802,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lo que comiste (p. ej., menú de bulgogi, pizza margarita)"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Was du gegessen hast (z. B. Bulgogi-Menü, Pizza Margherita)"
           }
         }
       }
@@ -5261,6 +5861,12 @@
             "state" : "translated",
             "value" : "Menú"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Speisekarte"
+          }
         }
       }
     },
@@ -5312,6 +5918,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gestionar menú"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Speisekarte verwalten"
           }
         }
       }
@@ -5365,6 +5977,12 @@
             "state" : "translated",
             "value" : "Añadir platos"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gerichte hinzufügen"
+          }
         }
       }
     },
@@ -5416,6 +6034,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Menú (%lld)"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Speisekarte (%lld)"
           }
         }
       }
@@ -5469,6 +6093,12 @@
             "state" : "translated",
             "value" : "Elegir plato"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gericht auswählen"
+          }
         }
       }
     },
@@ -5520,6 +6150,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Descripción del plato"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beschreibung des Gerichts"
           }
         }
       }
@@ -5573,6 +6209,12 @@
             "state" : "translated",
             "value" : "Descripción del plato (opcional)"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beschreibung des Gerichts (optional)"
+          }
         }
       }
     },
@@ -5624,6 +6266,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nombre del plato"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name des Gerichts"
           }
         }
       }
@@ -5677,6 +6325,12 @@
             "state" : "translated",
             "value" : "Datos del plato"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Infos zum Gericht"
+          }
         }
       }
     },
@@ -5728,6 +6382,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Añadir plato"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gericht hinzufügen"
           }
         }
       }
@@ -5781,6 +6441,12 @@
             "state" : "translated",
             "value" : "Los platos que añadas se podrán elegir al registrar una visita"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hinzugefügte Gerichte kannst du beim Eintragen eines Besuchs auswählen"
+          }
         }
       }
     },
@@ -5832,6 +6498,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Notas"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notizen"
           }
         }
       }
@@ -5885,6 +6557,12 @@
             "state" : "translated",
             "value" : "Sin notas"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine Notizen"
+          }
         }
       }
     },
@@ -5936,6 +6614,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Se eliminarán todos los restaurantes y registros de visitas. Esta acción no se puede deshacer."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alle Restaurants und Besuchseinträge werden gelöscht. Das lässt sich nicht rückgängig machen."
           }
         }
       }
@@ -5989,6 +6673,12 @@
             "state" : "translated",
             "value" : "Eliminar todos los datos"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alle Daten löschen"
+          }
         }
       }
     },
@@ -6040,6 +6730,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lista"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liste"
           }
         }
       }
@@ -6093,6 +6789,12 @@
             "state" : "translated",
             "value" : "Cerrar lista"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liste schließen"
+          }
         }
       }
     },
@@ -6144,6 +6846,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Registro de visitas"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Besuchsprotokoll"
           }
         }
       }
@@ -6197,6 +6905,12 @@
             "state" : "translated",
             "value" : "Añadir visita"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Besuch hinzufügen"
+          }
         }
       }
     },
@@ -6249,6 +6963,12 @@
             "state" : "translated",
             "value" : "Introduce la valoración del sabor al añadir una visita"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gib beim Hinzufügen eines Besuchs eine Geschmacksbewertung ein"
+          }
         }
       }
     },
@@ -6300,6 +7020,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Elige este plato al añadir una visita"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wähle dieses Gericht beim Hinzufügen eines Besuchs aus"
           }
         }
       }
@@ -6354,6 +7080,12 @@
             "state" : "translated",
             "value" : "Si la app se cierra mientras escribes una visita, lo que habías escrito se conserva."
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wird die App beim Schreiben eines Besuchs beendet, bleibt das Geschriebene erhalten."
+          }
         }
       }
     },
@@ -6405,6 +7137,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fecha de la visita"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Besuchsdatum"
           }
         }
       }
@@ -6458,6 +7196,12 @@
             "state" : "translated",
             "value" : "Datos de la visita"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Infos zum Besuch"
+          }
         }
       }
     },
@@ -6509,6 +7253,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Estadísticas de visitas"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Besuchsstatistik"
           }
         }
       }
@@ -6562,6 +7312,12 @@
             "state" : "translated",
             "value" : "Copiar"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sichern"
+          }
         }
       }
     },
@@ -6613,6 +7369,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Se agradecen los informes de errores y las sugerencias."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fehlermeldungen und Funktionsvorschläge sind willkommen."
           }
         }
       }
@@ -6666,6 +7428,12 @@
             "state" : "translated",
             "value" : "Versión"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version"
+          }
         }
       }
     },
@@ -6718,6 +7486,12 @@
             "state" : "translated",
             "value" : "Valoración"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bewertung"
+          }
         }
       }
     },
@@ -6769,6 +7543,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Valorar"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bewerten"
           }
         }
       }
@@ -6823,6 +7603,12 @@
             "state" : "translated",
             "value" : "Colores y contraste más cómodos"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Angenehmere Farben und Kontraste"
+          }
         }
       }
     },
@@ -6874,6 +7660,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Restaurar"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wiederherstellen"
           }
         }
       }
@@ -6927,6 +7719,12 @@
             "state" : "translated",
             "value" : "Cargando…"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wird geladen …"
+          }
         }
       }
     },
@@ -6978,6 +7776,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Insatisfecho"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unzufrieden"
           }
         }
       }
@@ -7031,6 +7835,12 @@
             "state" : "translated",
             "value" : "Lo que opina la gente"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Was andere sagen"
+          }
         }
       }
     },
@@ -7079,6 +7889,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotos"
+          }
+        },
+        "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fotos"
@@ -7135,6 +7951,12 @@
             "state" : "translated",
             "value" : "Fotos (%lld)"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotos (%lld)"
+          }
         }
       }
     },
@@ -7186,6 +8008,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Elegir fotos"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotos auswählen"
           }
         }
       }
@@ -7239,6 +8067,12 @@
             "state" : "translated",
             "value" : "Añadir fotos"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotos hinzufügen"
+          }
         }
       }
     },
@@ -7290,6 +8124,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Eliminar"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Löschen"
           }
         }
       }
@@ -7343,6 +8183,12 @@
             "state" : "translated",
             "value" : "Detalles de la coincidencia"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Details zur Übereinstimmung"
+          }
         }
       }
     },
@@ -7394,6 +8240,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nuevo tipo de cocina"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neue Küchenart"
           }
         }
       }
@@ -7447,6 +8299,12 @@
             "state" : "translated",
             "value" : "Añadir tipo nuevo"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neue Art hinzufügen"
+          }
         }
       }
     },
@@ -7498,6 +8356,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fotos por añadir"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neu hinzuzufügende Fotos"
           }
         }
       }
@@ -7551,6 +8415,12 @@
             "state" : "translated",
             "value" : "Actualizar"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aktualisieren"
+          }
         }
       }
     },
@@ -7602,6 +8472,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Seleccionar"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auswählen"
           }
         }
       }
@@ -7655,6 +8531,12 @@
             "state" : "translated",
             "value" : "Ninguno"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine Auswahl"
+          }
         }
       }
     },
@@ -7707,6 +8589,12 @@
             "state" : "translated",
             "value" : "Descripción"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beschreibung"
+          }
         }
       }
     },
@@ -7758,6 +8646,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ajustes"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einstellungen"
           }
         }
       }
@@ -7812,6 +8706,12 @@
             "state" : "translated",
             "value" : "Respuesta que se siente en los dedos"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Feedback, das man in den Fingerspitzen spürt"
+          }
         }
       }
     },
@@ -7863,6 +8763,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tipo de restaurante"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurantart"
           }
         }
       }
@@ -7916,6 +8822,12 @@
             "state" : "translated",
             "value" : "Restaurantes"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurants"
+          }
         }
       }
     },
@@ -7967,6 +8879,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Valorar restaurantes desde la lista"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurants in der Liste bewerten"
           }
         }
       }
@@ -8020,6 +8938,12 @@
             "state" : "translated",
             "value" : "Eliminar restaurante"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurant löschen"
+          }
         }
       }
     },
@@ -8071,6 +8995,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Da 4 estrellas o más en la pantalla de detalles de un restaurante"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vergib auf der Detailseite eines Restaurants mindestens 4 Sterne"
           }
         }
       }
@@ -8124,6 +9054,12 @@
             "state" : "translated",
             "value" : "Sin restaurantes"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine Restaurants"
+          }
         }
       }
     },
@@ -8175,6 +9111,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nombre del restaurante"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name des Restaurants"
           }
         }
       }
@@ -8228,6 +9170,12 @@
             "state" : "translated",
             "value" : "Datos del restaurante"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Infos zum Restaurant"
+          }
         }
       }
     },
@@ -8279,6 +9227,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mapa de restaurantes"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurantkarte"
           }
         }
       }
@@ -8332,6 +9286,12 @@
             "state" : "translated",
             "value" : "Añadir restaurante"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurant hinzufügen"
+          }
         }
       }
     },
@@ -8383,6 +9343,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Añadir un restaurante"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein Restaurant hinzufügen"
           }
         }
       }
@@ -8436,6 +9402,12 @@
             "state" : "translated",
             "value" : "Añadir como restaurante"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Als Restaurant hinzufügen"
+          }
         }
       }
     },
@@ -8487,6 +9459,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Añade un restaurante para empezar"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Füge ein Restaurant hinzu, um zu starten"
           }
         }
       }
@@ -8541,6 +9519,12 @@
             "state" : "translated",
             "value" : "Consejos útiles"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Praktische Tipps"
+          }
         }
       }
     },
@@ -8594,6 +9578,12 @@
             "state" : "translated",
             "value" : "Retomar una visita a medias"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Angefangenen Besuch weiterschreiben"
+          }
         }
       }
     },
@@ -8646,6 +9636,12 @@
             "state" : "translated",
             "value" : "No"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nein"
+          }
         }
       }
     },
@@ -8697,6 +9693,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Icono"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Symbol"
           }
         }
       }
@@ -8751,6 +9753,12 @@
             "state" : "translated",
             "value" : "En el iPad puedes usar las funciones principales solo con el teclado."
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auf dem iPad lassen sich die wichtigsten Funktionen allein mit der Tastatur bedienen."
+          }
         }
       }
     },
@@ -8802,6 +9810,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aún no hay restaurantes en tu lista de «Quiero ir»"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noch keine Restaurants auf deiner Wunschliste"
           }
         }
       }
@@ -8855,6 +9869,12 @@
             "state" : "translated",
             "value" : "Todavía no has visitado este restaurante"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du warst in diesem Restaurant noch nicht"
+          }
         }
       }
     },
@@ -8906,6 +9926,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aún no hay restaurantes visitados"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noch keine besuchten Restaurants"
           }
         }
       }
@@ -8959,6 +9985,12 @@
             "state" : "translated",
             "value" : "Aún no hay restaurantes guardados"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noch keine gespeicherten Restaurants"
+          }
         }
       }
     },
@@ -9011,6 +10043,12 @@
             "state" : "translated",
             "value" : "Aún no hay restaurantes en el Top 6"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noch keine Restaurants in den Top 6"
+          }
         }
       }
     },
@@ -9062,6 +10100,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aún no hay valoraciones"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noch keine Bewertungen"
           }
         }
       }
@@ -9116,6 +10160,12 @@
             "state" : "translated",
             "value" : "Te avisamos con discreción de funciones útiles, justo cuando las necesitas."
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nützliche Funktionen werden dir dezent zum passenden Zeitpunkt gezeigt."
+          }
         }
       }
     },
@@ -9168,6 +10218,12 @@
             "state" : "translated",
             "value" : "Elegir de la fototeca"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aus der Mediathek auswählen"
+          }
         }
       }
     },
@@ -9219,6 +10275,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Acerca de"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Info"
           }
         }
       }
@@ -9273,6 +10335,12 @@
             "state" : "translated",
             "value" : "Consulta tus sitios favoritos desde la pantalla de inicio, sin abrir la app."
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sieh deine Lieblingsorte direkt auf dem Home-Bildschirm, ohne die App zu öffnen."
+          }
         }
       }
     },
@@ -9325,6 +10393,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "La app también se puede usar en inglés."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die App lässt sich auch auf Englisch nutzen."
           }
         }
       }
@@ -9379,6 +10453,12 @@
             "state" : "translated",
             "value" : "El texto y los botones se ven nítidos también en modo oscuro."
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Text und Tasten bleiben auch im Dunkelmodus gut lesbar."
+          }
         }
       }
     },
@@ -9431,6 +10511,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "La primera vez que abras la app tras una actualización, te contamos las novedades."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beim ersten Öffnen nach einem Update zeigen wir dir, was neu ist."
           }
         }
       }
@@ -9485,6 +10571,12 @@
             "state" : "translated",
             "value" : "Novedades"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neuigkeiten"
+          }
         }
       }
     },
@@ -9536,6 +10628,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Analizamos tu gusto para ofrecerte recomendaciones personalizadas"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wir analysieren deinen Geschmack und geben dir persönliche Empfehlungen"
           }
         }
       }
@@ -9590,6 +10688,12 @@
             "state" : "translated",
             "value" : "Compatible con inglés"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Englisch-Unterstützung"
+          }
         }
       }
     },
@@ -9641,6 +10745,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "P. ej.: tailandesa, india"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "z. B. Thai, Indisch"
           }
         }
       }
@@ -9694,6 +10804,12 @@
             "state" : "translated",
             "value" : "Valoración prevista"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voraussichtliche Bewertung"
+          }
         }
       }
     },
@@ -9745,6 +10861,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Error"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fehler"
           }
         }
       }
@@ -9798,6 +10920,12 @@
             "state" : "translated",
             "value" : "Listo"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fertig"
+          }
         }
       }
     },
@@ -9849,6 +10977,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "¿Por qué se recomienda?"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Warum diese Empfehlung?"
           }
         }
       }
@@ -9903,6 +11037,12 @@
             "state" : "translated",
             "value" : "Reducir movimiento"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bewegung reduzieren"
+          }
         }
       }
     },
@@ -9956,6 +11096,12 @@
             "state" : "translated",
             "value" : "Con «Reducir movimiento» activado, los efectos en pantalla son más suaves."
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ist „Bewegung reduzieren“ aktiviert, werden Bildschirmeffekte ruhiger."
+          }
         }
       }
     },
@@ -10004,6 +11150,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "KRW"
+          }
+        },
+        "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "KRW"
@@ -10060,6 +11212,12 @@
             "state" : "translated",
             "value" : "Sitio web"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Website"
+          }
         }
       }
     },
@@ -10111,6 +11269,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Latitud: %.6f"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Breitengrad: %.6f"
           }
         }
       }
@@ -10164,6 +11328,12 @@
             "state" : "translated",
             "value" : "Ubicación"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ort"
+          }
         }
       }
     },
@@ -10215,6 +11385,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Elegir ubicación"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ort auswählen"
           }
         }
       }
@@ -10268,6 +11444,12 @@
             "state" : "translated",
             "value" : "Estilo de comida"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Küchenstil"
+          }
         }
       }
     },
@@ -10319,6 +11501,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tipo de cocina"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Küchenart"
           }
         }
       }
@@ -10372,6 +11560,12 @@
             "state" : "translated",
             "value" : "Gestionar tipos de cocina"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Küchenarten verwalten"
+          }
         }
       }
     },
@@ -10423,6 +11617,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "¿Qué tal fue esta visita?"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wie war dieser Besuch?"
           }
         }
       }
@@ -10476,6 +11676,12 @@
             "state" : "translated",
             "value" : "Toca «Editar» para valorar los sabores de esta visita"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tippe auf „Bearbeiten“, um den Geschmack dieses Besuchs zu bewerten"
+          }
         }
       }
     },
@@ -10527,6 +11733,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Este restaurante aún no tiene platos en el menú. Añádelos primero o escríbelos a mano."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Für dieses Restaurant gibt es noch keine Gerichte. Lege zuerst welche an oder gib eins von Hand ein."
           }
         }
       }
@@ -10580,6 +11792,12 @@
             "state" : "translated",
             "value" : "En general, este restaurante es…"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Insgesamt ist dieses Restaurant …"
+          }
         }
       }
     },
@@ -10631,6 +11849,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nombre"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name"
           }
         }
       }
@@ -10684,6 +11908,12 @@
             "state" : "translated",
             "value" : "Contactar por correo"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Per E-Mail kontaktieren"
+          }
         }
       }
     },
@@ -10735,6 +11965,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "No se puede cargar la imagen"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bild konnte nicht geladen werden"
           }
         }
       }
@@ -10788,6 +12024,12 @@
             "state" : "translated",
             "value" : "Valora el restaurante de tu vida"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bewerte das Restaurant deines Lebens"
+          }
         }
       }
     },
@@ -10839,6 +12081,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "MD de Instagram (@lee25_ios)"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram-DM (@lee25_ios)"
           }
         }
       }
@@ -10892,6 +12140,12 @@
             "state" : "translated",
             "value" : "Puedes añadir los tipos de cocina que sueles pedir"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du kannst die Küchenarten, die du oft isst, selbst hinzufügen"
+          }
         }
       }
     },
@@ -10943,6 +12197,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Datos del lugar"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ortsinfo"
           }
         }
       }
@@ -10996,6 +12256,12 @@
             "state" : "translated",
             "value" : "Cargando datos del lugar…"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ortsinfo wird geladen …"
+          }
         }
       }
     },
@@ -11047,6 +12313,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rellenado con los datos del lugar"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aus der Ortsinfo übernommen"
           }
         }
       }
@@ -11100,6 +12372,12 @@
             "state" : "translated",
             "value" : "Guardar"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Speichern"
+          }
         }
       }
     },
@@ -11151,6 +12429,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Restaurantes guardados"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gespeicherte Restaurants"
           }
         }
       }
@@ -11204,6 +12488,12 @@
             "state" : "translated",
             "value" : "Restaurantes guardados: %lld"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gespeicherte Restaurants: %lld"
+          }
         }
       }
     },
@@ -11255,6 +12545,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Todos"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alle"
           }
         }
       }
@@ -11308,6 +12604,12 @@
             "state" : "translated",
             "value" : "Coincidencia total"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gesamtübereinstimmung"
+          }
         }
       }
     },
@@ -11359,6 +12661,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Teléfono"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Telefon"
           }
         }
       }
@@ -11412,6 +12720,12 @@
             "state" : "translated",
             "value" : "¿Eliminar todos los datos? Esta acción no se puede deshacer."
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wirklich alle Daten löschen? Das lässt sich nicht rückgängig machen."
+          }
         }
       }
     },
@@ -11463,6 +12777,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "No se puede cargar la información"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Informationen konnten nicht geladen werden"
           }
         }
       }
@@ -11516,6 +12836,12 @@
             "state" : "translated",
             "value" : "¡Valora solo un poco más!"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bewerte bitte noch ein paar mehr!"
+          }
         }
       }
     },
@@ -11567,6 +12893,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Veces pedido"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bestellt"
           }
         }
       }
@@ -11620,6 +12952,12 @@
             "state" : "translated",
             "value" : "Dirección"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adresse"
+          }
         }
       }
     },
@@ -11671,6 +13009,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mapa"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Karte"
           }
         }
       }
@@ -11724,6 +13068,12 @@
             "state" : "translated",
             "value" : "Añade un restaurante desde el mapa o la lista"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Füge ein Restaurant über die Karte oder die Liste hinzu"
+          }
         }
       }
     },
@@ -11775,6 +13125,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mueve el mapa o elige otro lugar\ny vuelve a intentarlo"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verschiebe die Karte oder wähle einen anderen Ort\nund versuche es erneut"
           }
         }
       }
@@ -11828,6 +13184,12 @@
             "state" : "translated",
             "value" : "Ver en el mapa"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auf der Karte ansehen"
+          }
         }
       }
     },
@@ -11879,6 +13241,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Buscar restaurantes en el mapa"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurants auf der Karte finden"
           }
         }
       }
@@ -11932,6 +13300,12 @@
             "state" : "translated",
             "value" : "Dirección (parcela)"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flurstücksadresse"
+          }
         }
       }
     },
@@ -11984,6 +13358,12 @@
             "state" : "translated",
             "value" : "Soporte"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Support"
+          }
         }
       }
     },
@@ -12035,6 +13415,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Introducir a mano"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manuell eingeben"
           }
         }
       }
@@ -12089,6 +13475,12 @@
             "state" : "translated",
             "value" : "Guía de inicio"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einstiegshilfe"
+          }
         }
       }
     },
@@ -12142,6 +13534,12 @@
             "state" : "translated",
             "value" : "Un recorrido breve por lo que puedes hacer la primera vez que abres la app."
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein kurzer Überblick, was du beim ersten Öffnen alles tun kannst."
+          }
         }
       }
     },
@@ -12193,6 +13591,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Añade tu primer plato"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erstes Gericht hinzufügen"
           }
         }
       }
@@ -12246,6 +13650,12 @@
             "state" : "translated",
             "value" : "Añade tu primera visita"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ersten Besuch hinzufügen"
+          }
         }
       }
     },
@@ -12297,6 +13707,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Restablecer"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zurücksetzen"
           }
         }
       }
@@ -12350,6 +13766,12 @@
             "state" : "translated",
             "value" : "Total de visitas"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Besuche insgesamt"
+          }
         }
       }
     },
@@ -12401,6 +13823,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Total de visitas"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Besuche insgesamt"
           }
         }
       }
@@ -12454,6 +13882,12 @@
             "state" : "translated",
             "value" : "Valoración global (media de todas las visitas)"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gesamturteil (Durchschnitt aller Besuche)"
+          }
         }
       }
     },
@@ -12505,6 +13939,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tus mejores restaurantes"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deine besten Restaurants"
           }
         }
       }
@@ -12558,6 +13998,12 @@
             "state" : "translated",
             "value" : "Última visita"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Letzter Besuch"
+          }
         }
       }
     },
@@ -12609,6 +14055,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Último pedido"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zuletzt bestellt"
           }
         }
       }
@@ -12662,6 +14114,12 @@
             "state" : "translated",
             "value" : "Recomendados"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Empfehlungen"
+          }
         }
       }
     },
@@ -12713,6 +14171,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ver recomendaciones"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Empfehlungen holen"
           }
         }
       }
@@ -12766,6 +14230,12 @@
             "state" : "translated",
             "value" : "Analizando recomendaciones…"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Empfehlungen werden analysiert …"
+          }
         }
       }
     },
@@ -12817,6 +14287,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Restaurantes recomendados"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Empfohlene Restaurants"
           }
         }
       }
@@ -12870,6 +14346,12 @@
             "state" : "translated",
             "value" : "Puntuación de recomendación"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Empfehlungswert"
+          }
         }
       }
     },
@@ -12921,6 +14403,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pasos para probar las recomendaciones"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schritte zum Testen der Empfehlungen"
           }
         }
       }
@@ -12974,6 +14462,12 @@
             "state" : "translated",
             "value" : "No hay restaurantes que recomendar"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine Restaurants zu empfehlen"
+          }
         }
       }
     },
@@ -13025,6 +14519,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cancelar"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbrechen"
           }
         }
       }
@@ -13078,6 +14578,12 @@
             "state" : "translated",
             "value" : "Gusto"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geschmack"
+          }
         }
       }
     },
@@ -13129,6 +14635,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Perfil de gustos"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geschmacksprofil"
           }
         }
       }
@@ -13182,6 +14694,12 @@
             "state" : "translated",
             "value" : "Hacer foto"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto aufnehmen"
+          }
         }
       }
     },
@@ -13233,6 +14751,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Abrir en Kakao Map"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In Kakao Map öffnen"
           }
         }
       }
@@ -13286,6 +14810,12 @@
             "state" : "translated",
             "value" : "Categoría"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kategorie"
+          }
         }
       }
     },
@@ -13337,6 +14867,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Categoría\n%lld%%"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kategorie\n%lld %%"
           }
         }
       }
@@ -13390,6 +14926,12 @@
             "state" : "translated",
             "value" : "Categoría (p. ej., coreana, china)"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kategorie (z. B. Koreanisch, Chinesisch)"
+          }
         }
       }
     },
@@ -13442,6 +14984,12 @@
             "state" : "translated",
             "value" : "Ajustes de categorías"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kategorieeinstellungen"
+          }
         }
       }
     },
@@ -13493,6 +15041,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Icono de categoría"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kategoriesymbol"
           }
         }
       }
@@ -13547,6 +15101,12 @@
             "state" : "translated",
             "value" : "Pantallas para texto grande"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Layouts für große Schrift"
+          }
         }
       }
     },
@@ -13600,6 +15160,12 @@
             "state" : "translated",
             "value" : "Control con teclado"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bedienung per Tastatur"
+          }
         }
       }
     },
@@ -13652,6 +15218,12 @@
             "state" : "translated",
             "value" : "Añadir al Top 6"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zu den Top 6 hinzufügen"
+          }
         }
       }
     },
@@ -13700,6 +15272,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Top 6"
+          }
+        },
+        "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Top 6"
@@ -13756,6 +15334,12 @@
             "state" : "translated",
             "value" : "Límite del Top 6"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Top-6-Limit"
+          }
         }
       }
     },
@@ -13807,6 +15391,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "El Top 6 admite un máximo de 6 restaurantes (ahora: %lld/6)"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Top 6 können höchstens 6 Restaurants enthalten (aktuell: %lld/6)"
           }
         }
       }
@@ -13860,6 +15450,12 @@
             "state" : "translated",
             "value" : "El Top 6 admite un máximo de 6 restaurantes. Quita otro del Top 6 e inténtalo de nuevo."
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Top 6 können höchstens 6 Restaurants enthalten. Entferne ein anderes Restaurant aus den Top 6 und versuche es erneut."
+          }
         }
       }
     },
@@ -13912,6 +15508,12 @@
             "state" : "translated",
             "value" : "Datos de prueba"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Testdaten"
+          }
         }
       }
     },
@@ -13963,6 +15565,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Estadísticas"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Statistik"
           }
         }
       }
@@ -14017,6 +15625,12 @@
             "state" : "translated",
             "value" : "Pantalla para iPhone plegable"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Layout für faltbare iPhones"
+          }
         }
       }
     },
@@ -14070,6 +15684,12 @@
             "state" : "translated",
             "value" : "En un iPhone plegable, la pantalla ancha se divide en dos paneles."
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auf einem faltbaren iPhone wird der große Bildschirm in zwei Bereiche geteilt."
+          }
         }
       }
     },
@@ -14121,6 +15741,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Datos de la valoración"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bewertungsinfos"
           }
         }
       }
@@ -14174,6 +15800,12 @@
             "state" : "translated",
             "value" : "Historial de valoraciones (%lld)"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bewertungsverlauf (%lld)"
+          }
         }
       }
     },
@@ -14225,6 +15857,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Valoración media"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Durchschnittliche Bewertung"
           }
         }
       }
@@ -14278,6 +15916,12 @@
             "state" : "translated",
             "value" : "Patrón de valoración\n%lld%%"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bewertungsmuster\n%lld %%"
+          }
         }
       }
     },
@@ -14330,6 +15974,12 @@
             "state" : "translated",
             "value" : "Copia los datos actuales en iCloud. Cualquier copia existente se sobrescribirá."
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sichert deine aktuellen Daten in iCloud. Ein vorhandenes Backup wird überschrieben."
+          }
         }
       }
     },
@@ -14381,6 +16031,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Desde la ubicación actual"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vom aktuellen Standort"
           }
         }
       }
@@ -14435,6 +16091,12 @@
             "state" : "translated",
             "value" : "Widgets de la pantalla de inicio"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widgets für den Home-Bildschirm"
+          }
         }
       }
     },
@@ -14488,6 +16150,12 @@
             "state" : "translated",
             "value" : "VoiceOver lee todos los botones y contenidos, en el orden correcto."
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOver liest alle Tasten und Inhalte vollständig und in der richtigen Reihenfolge vor."
+          }
         }
       }
     },
@@ -14536,6 +16204,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"
@@ -14592,6 +16266,12 @@
             "state" : "translated",
             "value" : "💰 Económico (1/6 del coste de Firestore)"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "💰 Kostengünstig (1/6 der Kosten von Firestore)"
+          }
         }
       }
     },
@@ -14643,6 +16323,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "🚀 Estructura JSON sencilla"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🚀 Einfache JSON-Struktur"
           }
         }
       }
