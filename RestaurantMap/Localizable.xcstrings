@@ -92,6 +92,12 @@
             "state" : "translated",
             "value" : "Menu: %@"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu hos %@"
+          }
         }
       }
     },
@@ -186,6 +192,12 @@
             "state" : "translated",
             "value" : "Shoda %lld %%"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld %% match"
+          }
         }
       }
     },
@@ -276,6 +288,12 @@
           }
         },
         "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld"
@@ -374,6 +392,12 @@
             "state" : "translated",
             "value" : "Ohodnoťte ještě %lld, abyste získali doporučení"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bedøm %lld mere for at få anbefalinger"
+          }
         }
       }
     },
@@ -467,6 +491,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Recenzí: %lld"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld anmeldelser"
           }
         }
       }
@@ -562,6 +592,12 @@
             "state" : "translated",
             "value" : "Doporučuje %lld uživatelů s podobnou chutí"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anbefalet af %lld brugere med lignende smag"
+          }
         }
       }
     },
@@ -655,6 +691,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld. místo"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nr. %lld"
           }
         }
       }
@@ -750,6 +792,12 @@
             "state" : "translated",
             "value" : "Fotek: %lld"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld billeder"
+          }
         }
       }
     },
@@ -843,6 +891,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld×"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld gange"
           }
         }
       }
@@ -938,6 +992,12 @@
             "state" : "translated",
             "value" : "Návštěv: %lld"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld besøg"
+          }
         }
       }
     },
@@ -1031,6 +1091,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Smazat „%@“ a všechny záznamy návštěv?"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slet “%@” og alle besøgsnoter?"
           }
         }
       }
@@ -1126,6 +1192,12 @@
             "state" : "translated",
             "value" : "1️⃣ Nahrát moje data"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1️⃣ Upload mine data"
+          }
         }
       }
     },
@@ -1219,6 +1291,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "2️⃣ Vytvořit testovací data"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2️⃣ Opret testdata"
           }
         }
       }
@@ -1314,6 +1392,12 @@
             "state" : "translated",
             "value" : "3️⃣ Zkontrolovat výsledek na kartě Doporučení"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3️⃣ Se resultatet under fanen Anbefalinger"
+          }
         }
       }
     },
@@ -1407,6 +1491,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Žádná restaurace nemá hodnocení 4 hvězdy nebo víc"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du har ikke givet nogen restaurant 4 stjerner eller mere"
           }
         }
       }
@@ -1502,6 +1592,12 @@
             "state" : "translated",
             "value" : "Vaše chuť v šesti vlastnostech"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Din smag i seks egenskaber"
+          }
         }
       }
     },
@@ -1595,6 +1691,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Otevřít v Mapách Apple"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åbn i Kort"
           }
         }
       }
@@ -1691,6 +1793,12 @@
             "state" : "translated",
             "value" : "Zámek Face ID"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Face ID-lås"
+          }
         }
       }
     },
@@ -1786,6 +1894,12 @@
             "state" : "translated",
             "value" : "Zamkněte aplikaci pomocí Face ID nebo Touch ID a chraňte svůj deník restaurací."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lås appen med Face ID eller Touch ID, så din restaurantdagbog forbliver privat."
+          }
         }
       }
     },
@@ -1879,6 +1993,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nahrajte data do Firebase\na otestujte systém doporučení"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upload data til Firebase\nfor at teste anbefalingssystemet"
           }
         }
       }
@@ -1974,6 +2094,12 @@
             "state" : "translated",
             "value" : "Nahrát do Realtime DB"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upload til Realtime DB"
+          }
         }
       }
     },
@@ -2068,6 +2194,12 @@
             "state" : "translated",
             "value" : "Výhody Realtime Database"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fordele ved Realtime Database"
+          }
         }
       }
     },
@@ -2161,6 +2293,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Načítání dat z Realtime Database…"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Henter data fra Realtime Database …"
           }
         }
       }
@@ -2257,6 +2395,12 @@
             "state" : "translated",
             "value" : "Řekněte to Siri nebo použijte zkratku a návštěvu hned zapíšete."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sig det til Siri, eller brug en genvej, og registrér et besøg med det samme."
+          }
         }
       }
     },
@@ -2351,6 +2495,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siri a Zkratky"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri og Genveje"
           }
         }
       }
@@ -2447,6 +2597,12 @@
             "state" : "translated",
             "value" : "Pohodlnější VoiceOver"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nemmere at bruge VoiceOver"
+          }
         }
       }
     },
@@ -2540,6 +2696,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Záloha na iCloudu"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud-backup"
           }
         }
       }
@@ -2635,6 +2797,12 @@
             "state" : "translated",
             "value" : "Pro zálohu a obnovu musíte být přihlášeni k iCloudu."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du skal være logget ind på iCloud for at tage backup eller gendanne."
+          }
         }
       }
     },
@@ -2728,6 +2896,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zálohovat na iCloud"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tag backup til iCloud"
           }
         }
       }
@@ -2823,6 +2997,12 @@
             "state" : "translated",
             "value" : "Obnovit z iCloudu"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gendan fra iCloud"
+          }
         }
       }
     },
@@ -2916,6 +3096,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Obnoví data ze zálohy na iCloudu. Všechna data v tomto zařízení se smažou a nahradí se zálohou."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gendanner fra din iCloud-backup. Alle data på denne enhed slettes og erstattes af backuppen."
           }
         }
       }
@@ -3011,6 +3197,12 @@
             "state" : "translated",
             "value" : "• 3–4 restaurace na uživatele"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 3-4 restauranter pr. bruger"
+          }
         }
       }
     },
@@ -3104,6 +3296,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "• 1–3 záznamy návštěv na restauraci"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 1-3 besøg pr. restaurant"
           }
         }
       }
@@ -3199,6 +3397,12 @@
             "state" : "translated",
             "value" : "• 5 uživatelů s různou chutí"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 5 brugere med forskellig smag"
+          }
         }
       }
     },
@@ -3292,6 +3496,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "⚡ Rychlejší synchronizace v reálném čase"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚡ Hurtigere synkronisering i realtid"
           }
         }
       }
@@ -3387,6 +3597,12 @@
             "state" : "translated",
             "value" : "⚡ Rychlejší synchronizace v reálném čase\n💰 Nižší náklady"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚡ Hurtigere synkronisering i realtid\n💰 Lavere omkostninger"
+          }
         }
       }
     },
@@ -3480,6 +3696,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "✓ Ohodnoceno"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "✓ Bedømt"
           }
         }
       }
@@ -3576,6 +3798,12 @@
             "state" : "translated",
             "value" : "Jemné zavibrování při uložení místa nebo zápisu návštěvy."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En let vibration, når du gemmer et sted eller registrerer et besøg."
+          }
         }
       }
     },
@@ -3669,6 +3897,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cena"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pris"
           }
         }
       }
@@ -3764,6 +3998,12 @@
             "state" : "translated",
             "value" : "Navštívené"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Besøgt"
+          }
         }
       }
     },
@@ -3857,6 +4097,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chci vyzkoušet"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vil derhen"
           }
         }
       }
@@ -3952,6 +4198,12 @@
             "state" : "translated",
             "value" : "Restauraci ze seznamu „Chci vyzkoušet“ nelze zařadit do Top 6"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En restaurant på listen “Vil derhen” kan ikke sættes i Top 6"
+          }
         }
       }
     },
@@ -4045,6 +4297,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ohodnoťte intenzitu chuti a spokojenost u každé položky. Hodnocení je volitelné."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bedøm smagsintensitet og tilfredshed for hver ret. Bedømmelse er valgfri."
           }
         }
       }
@@ -4140,6 +4398,12 @@
             "state" : "translated",
             "value" : "Kontaktovat vývojáře"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kontakt udvikleren"
+          }
         }
       }
     },
@@ -4233,6 +4497,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Výsledků hledání: %lld"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld søgeresultater"
           }
         }
       }
@@ -4328,6 +4598,12 @@
             "state" : "translated",
             "value" : "Zeměpisná délka: %.6f"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Længdegrad: %.6f"
+          }
         }
       }
     },
@@ -4421,6 +4697,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Typ"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Type"
           }
         }
       }
@@ -4517,6 +4799,12 @@
             "state" : "translated",
             "value" : "Při zvětšení textu se obrazovky přeskupí, aniž by se cokoli oříznulo."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Når du gør teksten større, ordnes skærmene om, så intet bliver skåret af."
+          }
         }
       }
     },
@@ -4610,6 +4898,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Podle „%@“"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Baseret på “%@”"
           }
         }
       }
@@ -4705,6 +4999,12 @@
             "state" : "translated",
             "value" : "Výchozí"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Standard"
+          }
         }
       }
     },
@@ -4798,6 +5098,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Základní údaje"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Grundoplysninger"
           }
         }
       }
@@ -4893,6 +5199,12 @@
             "state" : "translated",
             "value" : "Vestavěné"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indbygget"
+          }
         }
       }
     },
@@ -4986,6 +5298,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Moje Michelin"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Min Michelin"
           }
         }
       }
@@ -5081,6 +5399,12 @@
             "state" : "translated",
             "value" : "Moje gurmánská DNA"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mit madnørd-DNA"
+          }
         }
       }
     },
@@ -5174,6 +5498,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Moje nejmilejší Top 6"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Min yndlings-Top 6"
           }
         }
       }
@@ -5269,6 +5599,12 @@
             "state" : "translated",
             "value" : "Moje Top 6"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Min Top 6"
+          }
         }
       }
     },
@@ -5362,6 +5698,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Moje data"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mine data"
           }
         }
       }
@@ -5457,6 +5799,12 @@
             "state" : "translated",
             "value" : "Nahrát moje data"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upload mine data"
+          }
         }
       }
     },
@@ -5550,6 +5898,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Přidat do mých restaurací"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Føj til mine restauranter"
           }
         }
       }
@@ -5645,6 +5999,12 @@
             "state" : "translated",
             "value" : "Vaše úplně nejoblíbenější restaurace"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dine allerbedste restauranter"
+          }
         }
       }
     },
@@ -5738,6 +6098,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Typy, které jsem přidal(a)"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Typer, jeg har tilføjet"
           }
         }
       }
@@ -5833,6 +6199,12 @@
             "state" : "translated",
             "value" : "Otevřít v Naver Map"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åbn i Naver Map"
+          }
         }
       }
     },
@@ -5926,6 +6298,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zkuste to prosím znovu"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prøv igen"
           }
         }
       }
@@ -6022,6 +6400,12 @@
             "state" : "translated",
             "value" : "Tmavý režim"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mørk tilstand"
+          }
         }
       }
     },
@@ -6115,6 +6499,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zavřít"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Luk"
           }
         }
       }
@@ -6211,6 +6601,12 @@
             "state" : "translated",
             "value" : "Mapu i seznamy snadno přečtete i při zvýšeném kontrastu nebo potížích s rozlišením barev."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se kort og lister tydeligt, også med øget kontrast eller hvis det er svært at kende forskel på farver."
+          }
         }
       }
     },
@@ -6304,6 +6700,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Specialita podniku"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Husets specialitet"
           }
         }
       }
@@ -6399,6 +6801,12 @@
             "state" : "translated",
             "value" : "Speciality podniku se zobrazují na začátku seznamu jídel"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Husets specialiteter vises øverst på menulisten"
+          }
         }
       }
     },
@@ -6492,6 +6900,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nastavit jako specialitu"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Angiv som husets specialitet"
           }
         }
       }
@@ -6588,6 +7002,12 @@
             "state" : "translated",
             "value" : "Používejte aplikaci ve více jazycích."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brug appen på flere sprog."
+          }
         }
       }
     },
@@ -6683,6 +7103,12 @@
             "state" : "translated",
             "value" : "Více jazyků"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flere sprog"
+          }
         }
       }
     },
@@ -6776,6 +7202,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vytvořit testovací data"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opret testdata"
           }
         }
       }
@@ -6871,6 +7303,12 @@
             "state" : "translated",
             "value" : "Vytvoří 5 testovacích uživatelů a data restaurací"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opretter 5 testbrugere og restaurantdata"
+          }
         }
       }
     },
@@ -6964,6 +7402,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Správa dat"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datastyring"
           }
         }
       }
@@ -7059,6 +7503,12 @@
             "state" : "translated",
             "value" : "Synchronizace dat"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datasynkronisering"
+          }
         }
       }
     },
@@ -7152,6 +7602,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Synchronizovat data"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Synkronisér data"
           }
         }
       }
@@ -7247,6 +7703,12 @@
             "state" : "translated",
             "value" : "Nahrát data"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upload data"
+          }
         }
       }
     },
@@ -7340,6 +7802,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Přehled dat"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dataoversigt"
           }
         }
       }
@@ -7435,6 +7903,12 @@
             "state" : "translated",
             "value" : "Zatím málo dat"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ikke nok data endnu"
+          }
         }
       }
     },
@@ -7528,6 +8002,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dat nemusí být dost"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der er måske ikke data nok"
           }
         }
       }
@@ -7623,6 +8103,12 @@
             "state" : "translated",
             "value" : "Data se nepodařilo načíst"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Data kunne ikke indlæses"
+          }
         }
       }
     },
@@ -7716,6 +8202,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Adresa (ulice)"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adresse (vej)"
           }
         }
       }
@@ -7811,6 +8303,12 @@
             "state" : "translated",
             "value" : "Zatím žádná jídla v menu"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen retter på menuen endnu"
+          }
         }
       }
     },
@@ -7904,6 +8402,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Žebříček"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rangliste"
           }
         }
       }
@@ -7999,6 +8503,12 @@
             "state" : "translated",
             "value" : "Skóre Riio Michelin"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Riio Michelin-score"
+          }
         }
       }
     },
@@ -8092,6 +8602,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Poslední záloha"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seneste backup"
           }
         }
       }
@@ -8187,6 +8703,12 @@
             "state" : "translated",
             "value" : "Spokojenost"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilfredshed"
+          }
         }
       }
     },
@@ -8280,6 +8802,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Intenzita chuti"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smagsintensitet"
           }
         }
       }
@@ -8375,6 +8903,12 @@
             "state" : "translated",
             "value" : "Chuťové preference"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smagspræferencer"
+          }
         }
       }
     },
@@ -8468,6 +9002,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chuťové preference\n%lld %%"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smagspræferencer\n%lld %%"
           }
         }
       }
@@ -8563,6 +9103,12 @@
             "state" : "translated",
             "value" : "Hodnocení chuti"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smagsbedømmelse"
+          }
         }
       }
     },
@@ -8656,6 +9202,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chuť ohodnocena"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smag bedømt"
           }
         }
       }
@@ -8751,6 +9303,12 @@
             "state" : "translated",
             "value" : "Chuť ohodnocena"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smag bedømt"
+          }
         }
       }
     },
@@ -8844,6 +9402,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chuťový profil"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smagsprofil"
           }
         }
       }
@@ -8939,6 +9503,12 @@
             "state" : "translated",
             "value" : "Tipy na restaurace"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restauranttips"
+          }
         }
       }
     },
@@ -9032,6 +9602,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pro vás"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Til dig"
           }
         }
       }
@@ -9127,6 +9703,12 @@
             "state" : "translated",
             "value" : "Abyste dostávali doporučení na míru"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "For at få anbefalinger, der passer til dig"
+          }
         }
       }
     },
@@ -9220,6 +9802,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Velmi spokojen(a)"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meget tilfreds"
           }
         }
       }
@@ -9315,6 +9903,12 @@
             "state" : "translated",
             "value" : "Co jste jedli"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hvad du spiste"
+          }
         }
       }
     },
@@ -9409,6 +10003,12 @@
             "state" : "translated",
             "value" : "Co jste jedli (např. bulgogi menu, pizza Margherita)"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hvad du spiste (fx bulgogimenu, pizza margherita)"
+          }
         }
       }
     },
@@ -9499,6 +10099,12 @@
           }
         },
         "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Menu"
@@ -9597,6 +10203,12 @@
             "state" : "translated",
             "value" : "Spravovat menu"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Administrer menu"
+          }
         }
       }
     },
@@ -9691,6 +10303,12 @@
             "state" : "translated",
             "value" : "Přidat jídla"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilføj retter"
+          }
         }
       }
     },
@@ -9781,6 +10399,12 @@
           }
         },
         "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu (%lld)"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Menu (%lld)"
@@ -9879,6 +10503,12 @@
             "state" : "translated",
             "value" : "Vybrat jídlo"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vælg ret"
+          }
         }
       }
     },
@@ -9972,6 +10602,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Popis jídla"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beskrivelse af ret"
           }
         }
       }
@@ -10067,6 +10703,12 @@
             "state" : "translated",
             "value" : "Popis jídla (volitelné)"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beskrivelse af ret (valgfri)"
+          }
         }
       }
     },
@@ -10160,6 +10802,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Název jídla"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Navn på ret"
           }
         }
       }
@@ -10255,6 +10903,12 @@
             "state" : "translated",
             "value" : "Údaje o jídle"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oplysninger om ret"
+          }
         }
       }
     },
@@ -10348,6 +11002,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Přidat jídlo"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilføj ret"
           }
         }
       }
@@ -10443,6 +11103,12 @@
             "state" : "translated",
             "value" : "Přidaná jídla půjde vybrat při zápisu návštěvy"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilføjede retter kan vælges, når du registrerer et besøg"
+          }
         }
       }
     },
@@ -10536,6 +11202,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Poznámky"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noter"
           }
         }
       }
@@ -10631,6 +11303,12 @@
             "state" : "translated",
             "value" : "Žádné poznámky"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen noter"
+          }
         }
       }
     },
@@ -10724,6 +11402,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Všechny restaurace a záznamy návštěv budou smazány. Tuto akci nelze vrátit zpět."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alle restauranter og besøg slettes. Det kan ikke fortrydes."
           }
         }
       }
@@ -10819,6 +11503,12 @@
             "state" : "translated",
             "value" : "Smazat všechna data"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slet alle data"
+          }
         }
       }
     },
@@ -10912,6 +11602,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Seznam"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liste"
           }
         }
       }
@@ -11007,6 +11703,12 @@
             "state" : "translated",
             "value" : "Zavřít seznam"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Luk liste"
+          }
         }
       }
     },
@@ -11100,6 +11802,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Deník návštěv"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Besøgslog"
           }
         }
       }
@@ -11195,6 +11903,12 @@
             "state" : "translated",
             "value" : "Přidat návštěvu"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilføj besøg"
+          }
         }
       }
     },
@@ -11289,6 +12003,12 @@
             "state" : "translated",
             "value" : "Při přidání návštěvy zadejte hodnocení chuti"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Angiv en smagsbedømmelse, når du tilføjer et besøg"
+          }
         }
       }
     },
@@ -11382,6 +12102,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Při přidání návštěvy vyberte toto jídlo"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vælg denne ret, når du tilføjer et besøg"
           }
         }
       }
@@ -11478,6 +12204,12 @@
             "state" : "translated",
             "value" : "Když se aplikace při psaní návštěvy zavře, napsaný text zůstane zachován."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hvis appen lukker, mens du skriver et besøg, bliver det skrevne gemt."
+          }
         }
       }
     },
@@ -11571,6 +12303,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Datum návštěvy"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Besøgsdato"
           }
         }
       }
@@ -11666,6 +12404,12 @@
             "state" : "translated",
             "value" : "Údaje o návštěvě"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oplysninger om besøg"
+          }
         }
       }
     },
@@ -11759,6 +12503,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Statistiky návštěv"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Besøgsstatistik"
           }
         }
       }
@@ -11854,6 +12604,12 @@
             "state" : "translated",
             "value" : "Zálohovat"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Backup"
+          }
         }
       }
     },
@@ -11947,6 +12703,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hlášení chyb a nápady na funkce uvítáme."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fejlrapporter og forslag til nye funktioner er velkomne."
           }
         }
       }
@@ -12042,6 +12804,12 @@
             "state" : "translated",
             "value" : "Verze"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version"
+          }
         }
       }
     },
@@ -12136,6 +12904,12 @@
             "state" : "translated",
             "value" : "Hodnocení"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bedømmelse"
+          }
         }
       }
     },
@@ -12229,6 +13003,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ohodnotit"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bedøm"
           }
         }
       }
@@ -12325,6 +13105,12 @@
             "state" : "translated",
             "value" : "Pohodlnější barvy a kontrast"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mere behagelige farver og kontrast"
+          }
         }
       }
     },
@@ -12418,6 +13204,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Obnovit"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gendan"
           }
         }
       }
@@ -12513,6 +13305,12 @@
             "state" : "translated",
             "value" : "Načítání…"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indlæser …"
+          }
         }
       }
     },
@@ -12606,6 +13404,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nespokojen(a)"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utilfreds"
           }
         }
       }
@@ -12701,6 +13505,12 @@
             "state" : "translated",
             "value" : "Co říkají lidé"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hvad andre siger"
+          }
         }
       }
     },
@@ -12794,6 +13604,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fotky"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billeder"
           }
         }
       }
@@ -12889,6 +13705,12 @@
             "state" : "translated",
             "value" : "Fotky (%lld)"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billeder (%lld)"
+          }
         }
       }
     },
@@ -12982,6 +13804,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vybrat fotky"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vælg billeder"
           }
         }
       }
@@ -13077,6 +13905,12 @@
             "state" : "translated",
             "value" : "Přidat fotky"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilføj billeder"
+          }
         }
       }
     },
@@ -13170,6 +14004,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Smazat"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slet"
           }
         }
       }
@@ -13265,6 +14105,12 @@
             "state" : "translated",
             "value" : "Podrobnosti o shodě"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Detaljer om match"
+          }
         }
       }
     },
@@ -13358,6 +14204,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nový typ kuchyně"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ny madtype"
           }
         }
       }
@@ -13453,6 +14305,12 @@
             "state" : "translated",
             "value" : "Přidat nový typ"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilføj ny type"
+          }
         }
       }
     },
@@ -13546,6 +14404,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fotky k přidání"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billeder der tilføjes"
           }
         }
       }
@@ -13641,6 +14505,12 @@
             "state" : "translated",
             "value" : "Aktualizovat"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opdater"
+          }
         }
       }
     },
@@ -13734,6 +14604,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vybrat"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vælg"
           }
         }
       }
@@ -13829,6 +14705,12 @@
             "state" : "translated",
             "value" : "Nic"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen"
+          }
         }
       }
     },
@@ -13923,6 +14805,12 @@
             "state" : "translated",
             "value" : "Popis"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beskrivelse"
+          }
         }
       }
     },
@@ -14016,6 +14904,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nastavení"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indstillinger"
           }
         }
       }
@@ -14112,6 +15006,12 @@
             "state" : "translated",
             "value" : "Odezva, kterou ucítíte na prstech"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Respons, du kan mærke i fingerspidserne"
+          }
         }
       }
     },
@@ -14205,6 +15105,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Typ restaurace"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restauranttype"
           }
         }
       }
@@ -14300,6 +15206,12 @@
             "state" : "translated",
             "value" : "Restaurace"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restauranter"
+          }
         }
       }
     },
@@ -14393,6 +15305,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hodnotit restaurace ze seznamu"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bedøm restauranter fra listen"
           }
         }
       }
@@ -14488,6 +15406,12 @@
             "state" : "translated",
             "value" : "Smazat restauraci"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slet restaurant"
+          }
         }
       }
     },
@@ -14581,6 +15505,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dejte na obrazovce s detailem restaurace 4 hvězdy nebo víc"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giv 4 stjerner eller mere på restaurantens detaljeside"
           }
         }
       }
@@ -14676,6 +15606,12 @@
             "state" : "translated",
             "value" : "Žádné restaurace"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen restauranter"
+          }
         }
       }
     },
@@ -14769,6 +15705,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Název restaurace"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurantens navn"
           }
         }
       }
@@ -14864,6 +15806,12 @@
             "state" : "translated",
             "value" : "Údaje o restauraci"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oplysninger om restaurant"
+          }
         }
       }
     },
@@ -14957,6 +15905,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mapa restaurací"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurantkort"
           }
         }
       }
@@ -15052,6 +16006,12 @@
             "state" : "translated",
             "value" : "Přidat restauraci"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilføj restaurant"
+          }
         }
       }
     },
@@ -15145,6 +16105,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Přidat restauraci"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilføj en restaurant"
           }
         }
       }
@@ -15240,6 +16206,12 @@
             "state" : "translated",
             "value" : "Přidat jako restauraci"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilføj som restaurant"
+          }
         }
       }
     },
@@ -15333,6 +16305,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Začněte přidáním restaurace"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilføj en restaurant for at komme i gang"
           }
         }
       }
@@ -15429,6 +16407,12 @@
             "state" : "translated",
             "value" : "Užitečné tipy"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gode råd"
+          }
         }
       }
     },
@@ -15524,6 +16508,12 @@
             "state" : "translated",
             "value" : "Dopsat rozepsanou návštěvu"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fortsæt et påbegyndt besøg"
+          }
         }
       }
     },
@@ -15618,6 +16608,12 @@
             "state" : "translated",
             "value" : "Ne"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nej"
+          }
         }
       }
     },
@@ -15711,6 +16707,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ikona"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Symbol"
           }
         }
       }
@@ -15807,6 +16809,12 @@
             "state" : "translated",
             "value" : "Na iPadu ovládnete hlavní funkce jen klávesnicí."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "På iPad kan du bruge de vigtigste funktioner kun med tastaturet."
+          }
         }
       }
     },
@@ -15900,6 +16908,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "V seznamu „Chci vyzkoušet“ zatím nic není"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der er endnu ingen restauranter på listen “Vil derhen”"
           }
         }
       }
@@ -15995,6 +17009,12 @@
             "state" : "translated",
             "value" : "V této restauraci jste ještě nebyli"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du har ikke besøgt denne restaurant endnu"
+          }
         }
       }
     },
@@ -16088,6 +17108,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zatím žádné navštívené restaurace"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen besøgte restauranter endnu"
           }
         }
       }
@@ -16183,6 +17209,12 @@
             "state" : "translated",
             "value" : "Zatím žádné uložené restaurace"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen gemte restauranter endnu"
+          }
         }
       }
     },
@@ -16277,6 +17309,12 @@
             "state" : "translated",
             "value" : "V Top 6 zatím nic není"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen restauranter i Top 6 endnu"
+          }
         }
       }
     },
@@ -16370,6 +17408,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zatím žádná hodnocení"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen bedømmelser endnu"
           }
         }
       }
@@ -16466,6 +17510,12 @@
             "state" : "translated",
             "value" : "Nenápadně vám v pravou chvíli ukážeme užitečné funkce."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vi gør diskret opmærksom på nyttige funktioner, lige når du har brug for dem."
+          }
         }
       }
     },
@@ -16560,6 +17610,12 @@
             "state" : "translated",
             "value" : "Vybrat z knihovny"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vælg fra bibliotek"
+          }
         }
       }
     },
@@ -16653,6 +17709,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "O aplikaci"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Om"
           }
         }
       }
@@ -16749,6 +17811,12 @@
             "state" : "translated",
             "value" : "Oblíbená místa uvidíte rovnou na ploše, aniž byste museli otevírat aplikaci."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se dine yndlingssteder direkte på hjemmeskærmen uden at åbne appen."
+          }
         }
       }
     },
@@ -16843,6 +17911,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aplikaci lze používat i v angličtině."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appen kan også bruges på engelsk."
           }
         }
       }
@@ -16939,6 +18013,12 @@
             "state" : "translated",
             "value" : "Text a tlačítka zůstávají ostré i v tmavém režimu."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tekst og knapper er skarpe og tydelige i mørk tilstand."
+          }
         }
       }
     },
@@ -17033,6 +18113,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Při prvním otevření po aktualizaci vám ukážeme, co je nového."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Første gang du åbner appen efter en opdatering, kan du se, hvad der er nyt."
           }
         }
       }
@@ -17129,6 +18215,12 @@
             "state" : "translated",
             "value" : "Novinky"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nyheder"
+          }
         }
       }
     },
@@ -17222,6 +18314,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Analyzujeme vaši chuť, abychom vám doporučili to pravé"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vi analyserer din smag for at give dig anbefalinger, der passer"
           }
         }
       }
@@ -17318,6 +18416,12 @@
             "state" : "translated",
             "value" : "Podpora angličtiny"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Understøttelse af engelsk"
+          }
         }
       }
     },
@@ -17411,6 +18515,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Např. thajská, indická"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fx thai, indisk"
           }
         }
       }
@@ -17506,6 +18616,12 @@
             "state" : "translated",
             "value" : "Předpokládané hodnocení"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forventet bedømmelse"
+          }
         }
       }
     },
@@ -17599,6 +18715,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chyba"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fejl"
           }
         }
       }
@@ -17694,6 +18816,12 @@
             "state" : "translated",
             "value" : "Hotovo"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Færdig"
+          }
         }
       }
     },
@@ -17787,6 +18915,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Proč to doporučujeme?"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hvorfor anbefales den?"
           }
         }
       }
@@ -17883,6 +19017,12 @@
             "state" : "translated",
             "value" : "Omezit pohyb"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reducer bevægelse"
+          }
         }
       }
     },
@@ -17978,6 +19118,12 @@
             "state" : "translated",
             "value" : "Když zapnete „Omezit pohyb“, efekty na obrazovce budou klidnější."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Når “Reducer bevægelse” er slået til, bliver effekterne på skærmen mere rolige."
+          }
         }
       }
     },
@@ -18068,6 +19214,12 @@
           }
         },
         "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "KRW"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "KRW"
@@ -18166,6 +19318,12 @@
             "state" : "translated",
             "value" : "Web"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Websted"
+          }
         }
       }
     },
@@ -18259,6 +19417,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zeměpisná šířka: %.6f"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Breddegrad: %.6f"
           }
         }
       }
@@ -18354,6 +19518,12 @@
             "state" : "translated",
             "value" : "Místo"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Placering"
+          }
         }
       }
     },
@@ -18447,6 +19617,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vybrat místo"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vælg placering"
           }
         }
       }
@@ -18542,6 +19718,12 @@
             "state" : "translated",
             "value" : "Styl kuchyně"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Madstil"
+          }
         }
       }
     },
@@ -18635,6 +19817,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Typ kuchyně"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Madtype"
           }
         }
       }
@@ -18730,6 +19918,12 @@
             "state" : "translated",
             "value" : "Spravovat typy kuchyně"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Administrer madtyper"
+          }
         }
       }
     },
@@ -18823,6 +20017,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Jaká byla tato návštěva?"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hvordan var dette besøg?"
           }
         }
       }
@@ -18918,6 +20118,12 @@
             "state" : "translated",
             "value" : "Klepnutím na Upravit ohodnotíte chutě této návštěvy"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryk på Rediger for at bedømme smagen ved dette besøg"
+          }
         }
       }
     },
@@ -19011,6 +20217,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tato restaurace zatím nemá žádná jídla v menu. Nejprve je přidejte, nebo zadejte ručně."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Denne restaurant har endnu ingen retter på menuen. Tilføj dem først, eller skriv en ind."
           }
         }
       }
@@ -19106,6 +20318,12 @@
             "state" : "translated",
             "value" : "Celkově je tato restaurace…"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Overordnet er denne restaurant …"
+          }
         }
       }
     },
@@ -19199,6 +20417,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Název"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Navn"
           }
         }
       }
@@ -19294,6 +20518,12 @@
             "state" : "translated",
             "value" : "Napsat e-mail"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kontakt via e-mail"
+          }
         }
       }
     },
@@ -19387,6 +20617,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Obrázek se nepodařilo načíst"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billedet kunne ikke indlæses"
           }
         }
       }
@@ -19482,6 +20718,12 @@
             "state" : "translated",
             "value" : "Ohodnoťte restauraci svého života"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bedøm din livs restaurant"
+          }
         }
       }
     },
@@ -19575,6 +20817,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "DM na Instagramu (@lee25_ios)"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram-besked (@lee25_ios)"
           }
         }
       }
@@ -19670,6 +20918,12 @@
             "state" : "translated",
             "value" : "Typy kuchyně, které jíte často, si můžete přidat sami"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du kan selv tilføje de madtyper, du ofte spiser"
+          }
         }
       }
     },
@@ -19763,6 +21017,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Údaje o místě"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stedoplysninger"
           }
         }
       }
@@ -19858,6 +21118,12 @@
             "state" : "translated",
             "value" : "Načítání údajů o místě…"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indlæser stedoplysninger …"
+          }
         }
       }
     },
@@ -19951,6 +21217,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vyplněno z údajů o místě"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Udfyldt fra stedoplysninger"
           }
         }
       }
@@ -20046,6 +21318,12 @@
             "state" : "translated",
             "value" : "Uložit"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gem"
+          }
         }
       }
     },
@@ -20139,6 +21417,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uložené restaurace"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gemte restauranter"
           }
         }
       }
@@ -20234,6 +21518,12 @@
             "state" : "translated",
             "value" : "Uložené restaurace: %lld"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gemte restauranter: %lld"
+          }
         }
       }
     },
@@ -20327,6 +21617,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vše"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alle"
           }
         }
       }
@@ -20422,6 +21718,12 @@
             "state" : "translated",
             "value" : "Celková shoda"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Samlet match"
+          }
         }
       }
     },
@@ -20512,6 +21814,12 @@
           }
         },
         "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Telefon"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Telefon"
@@ -20610,6 +21918,12 @@
             "state" : "translated",
             "value" : "Opravdu smazat všechna data? Tuto akci nelze vrátit zpět."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slet alle data? Det kan ikke fortrydes."
+          }
         }
       }
     },
@@ -20703,6 +22017,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Informace se nepodařilo načíst"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oplysningerne kunne ikke indlæses"
           }
         }
       }
@@ -20798,6 +22118,12 @@
             "state" : "translated",
             "value" : "Ohodnoťte prosím ještě pár restaurací!"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bedøm lige lidt flere!"
+          }
         }
       }
     },
@@ -20891,6 +22217,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Počet objednávek"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Antal bestillinger"
           }
         }
       }
@@ -20986,6 +22318,12 @@
             "state" : "translated",
             "value" : "Adresa"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adresse"
+          }
         }
       }
     },
@@ -21079,6 +22417,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mapa"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kort"
           }
         }
       }
@@ -21174,6 +22518,12 @@
             "state" : "translated",
             "value" : "Přidejte restauraci z mapy nebo ze seznamu"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilføj en restaurant fra kortet eller listen"
+          }
         }
       }
     },
@@ -21267,6 +22617,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Posuňte mapu nebo vyberte jiné místo\na zkuste to znovu"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flyt kortet eller vælg et andet sted,\nog prøv igen"
           }
         }
       }
@@ -21362,6 +22718,12 @@
             "state" : "translated",
             "value" : "Zobrazit na mapě"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vis på kort"
+          }
         }
       }
     },
@@ -21455,6 +22817,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Najít restaurace na mapě"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Find restauranter på kortet"
           }
         }
       }
@@ -21550,6 +22918,12 @@
             "state" : "translated",
             "value" : "Adresa (parcela)"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adresse (matrikel)"
+          }
         }
       }
     },
@@ -21644,6 +23018,12 @@
             "state" : "translated",
             "value" : "Podpora"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Support"
+          }
         }
       }
     },
@@ -21737,6 +23117,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zadat ručně"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indtast manuelt"
           }
         }
       }
@@ -21833,6 +23219,12 @@
             "state" : "translated",
             "value" : "Průvodce pro začátečníky"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kom godt i gang"
+          }
         }
       }
     },
@@ -21928,6 +23320,12 @@
             "state" : "translated",
             "value" : "Stručný přehled toho, co aplikace umí, při prvním otevření."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En kort gennemgang af, hvad du kan, første gang du åbner appen."
+          }
         }
       }
     },
@@ -22021,6 +23419,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Přidat první jídlo"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilføj din første ret"
           }
         }
       }
@@ -22116,6 +23520,12 @@
             "state" : "translated",
             "value" : "Přidat první návštěvu"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilføj dit første besøg"
+          }
         }
       }
     },
@@ -22209,6 +23619,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Obnovit původní stav"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nulstil"
           }
         }
       }
@@ -22304,6 +23720,12 @@
             "state" : "translated",
             "value" : "Návštěv celkem"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Besøg i alt"
+          }
         }
       }
     },
@@ -22397,6 +23819,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Návštěv celkem"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Besøg i alt"
           }
         }
       }
@@ -22492,6 +23920,12 @@
             "state" : "translated",
             "value" : "Celkové hodnocení (průměr všech návštěv)"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Samlet vurdering (gennemsnit af alle besøg)"
+          }
         }
       }
     },
@@ -22585,6 +24019,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vaše nejlepší restaurace"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dine bedste restauranter"
           }
         }
       }
@@ -22680,6 +24120,12 @@
             "state" : "translated",
             "value" : "Poslední návštěva"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seneste besøg"
+          }
         }
       }
     },
@@ -22773,6 +24219,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Poslední objednávka"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seneste bestilling"
           }
         }
       }
@@ -22868,6 +24320,12 @@
             "state" : "translated",
             "value" : "Doporučení"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anbefalinger"
+          }
         }
       }
     },
@@ -22961,6 +24419,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zobrazit doporučení"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Få anbefalinger"
           }
         }
       }
@@ -23056,6 +24520,12 @@
             "state" : "translated",
             "value" : "Analýza doporučení…"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Analyserer anbefalinger …"
+          }
         }
       }
     },
@@ -23149,6 +24619,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Doporučené restaurace"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anbefalede restauranter"
           }
         }
       }
@@ -23244,6 +24720,12 @@
             "state" : "translated",
             "value" : "Skóre doporučení"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anbefalingsscore"
+          }
         }
       }
     },
@@ -23337,6 +24819,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Postup testování doporučení"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trin til test af anbefalinger"
           }
         }
       }
@@ -23432,6 +24920,12 @@
             "state" : "translated",
             "value" : "Žádné restaurace k doporučení"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen restauranter at anbefale"
+          }
         }
       }
     },
@@ -23525,6 +25019,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zrušit"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annuller"
           }
         }
       }
@@ -23620,6 +25120,12 @@
             "state" : "translated",
             "value" : "Chuť"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smag"
+          }
         }
       }
     },
@@ -23713,6 +25219,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chuťový profil"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smagsprofil"
           }
         }
       }
@@ -23808,6 +25320,12 @@
             "state" : "translated",
             "value" : "Vyfotit"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tag billede"
+          }
         }
       }
     },
@@ -23901,6 +25419,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Otevřít v Kakao Map"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åbn i Kakao Map"
           }
         }
       }
@@ -23996,6 +25520,12 @@
             "state" : "translated",
             "value" : "Kategorie"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kategori"
+          }
         }
       }
     },
@@ -24089,6 +25619,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kategorie\n%lld %%"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kategori\n%lld %%"
           }
         }
       }
@@ -24184,6 +25720,12 @@
             "state" : "translated",
             "value" : "Kategorie (např. korejská, čínská)"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kategori (fx koreansk, kinesisk)"
+          }
         }
       }
     },
@@ -24278,6 +25820,12 @@
             "state" : "translated",
             "value" : "Nastavení kategorií"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kategoriindstillinger"
+          }
         }
       }
     },
@@ -24371,6 +25919,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ikona kategorie"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kategorisymbol"
           }
         }
       }
@@ -24467,6 +26021,12 @@
             "state" : "translated",
             "value" : "Rozložení pro velké písmo"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Layout til stor tekst"
+          }
         }
       }
     },
@@ -24562,6 +26122,12 @@
             "state" : "translated",
             "value" : "Ovládání klávesnicí"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Styring med tastatur"
+          }
         }
       }
     },
@@ -24656,6 +26222,12 @@
             "state" : "translated",
             "value" : "Přidat do Top 6"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Føj til Top 6"
+          }
         }
       }
     },
@@ -24746,6 +26318,12 @@
           }
         },
         "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Top 6"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Top 6"
@@ -24844,6 +26422,12 @@
             "state" : "translated",
             "value" : "Limit Top 6"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Grænse for Top 6"
+          }
         }
       }
     },
@@ -24937,6 +26521,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Top 6 může obsahovat nejvýše 6 restaurací (nyní: %lld/6)"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Top 6 kan højst indeholde 6 restauranter (nu: %lld/6)"
           }
         }
       }
@@ -25032,6 +26622,12 @@
             "state" : "translated",
             "value" : "Top 6 může obsahovat nejvýše 6 restaurací. Odeberte jinou restauraci z Top 6 a zkuste to znovu."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Top 6 kan højst indeholde 6 restauranter. Fjern en anden restaurant fra Top 6, og prøv igen."
+          }
         }
       }
     },
@@ -25126,6 +26722,12 @@
             "state" : "translated",
             "value" : "Testovací data"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Testdata"
+          }
         }
       }
     },
@@ -25219,6 +26821,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Statistiky"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Statistik"
           }
         }
       }
@@ -25315,6 +26923,12 @@
             "state" : "translated",
             "value" : "Rozložení pro skládací iPhone"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Layout til foldbar iPhone"
+          }
         }
       }
     },
@@ -25410,6 +27024,12 @@
             "state" : "translated",
             "value" : "Na skládacím iPhonu se široká obrazovka rozdělí na dva panely."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "På en foldbar iPhone deles den brede skærm i to paneler."
+          }
         }
       }
     },
@@ -25503,6 +27123,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Údaje o hodnocení"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bedømmelsesoplysninger"
           }
         }
       }
@@ -25598,6 +27224,12 @@
             "state" : "translated",
             "value" : "Historie hodnocení (%lld)"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bedømmelseshistorik (%lld)"
+          }
         }
       }
     },
@@ -25691,6 +27323,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Průměrné hodnocení"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gennemsnitlig bedømmelse"
           }
         }
       }
@@ -25786,6 +27424,12 @@
             "state" : "translated",
             "value" : "Vzorec hodnocení\n%lld %%"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bedømmelsesmønster\n%lld %%"
+          }
         }
       }
     },
@@ -25880,6 +27524,12 @@
             "state" : "translated",
             "value" : "Zazálohuje aktuální data na iCloud. Případná existující záloha bude přepsána."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tager backup af dine nuværende data til iCloud. En eksisterende backup overskrives."
+          }
         }
       }
     },
@@ -25973,6 +27623,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Z aktuální polohy"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fra nuværende position"
           }
         }
       }
@@ -26069,6 +27725,12 @@
             "state" : "translated",
             "value" : "Widgety na ploše"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widgets på hjemmeskærmen"
+          }
         }
       }
     },
@@ -26164,6 +27826,12 @@
             "state" : "translated",
             "value" : "VoiceOver přečte všechna tlačítka a obsah ve správném pořadí."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOver læser alle knapper og indhold højt i den rigtige rækkefølge."
+          }
         }
       }
     },
@@ -26254,6 +27922,12 @@
           }
         },
         "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"
@@ -26352,6 +28026,12 @@
             "state" : "translated",
             "value" : "💰 Úsporné (1/6 nákladů Firestore)"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "💰 Billigt (1/6 af prisen for Firestore)"
+          }
         }
       }
     },
@@ -26445,6 +28125,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "🚀 Jednoduchá struktura JSON"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🚀 Enkel JSON-struktur"
           }
         }
       }

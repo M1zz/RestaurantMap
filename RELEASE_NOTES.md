@@ -109,3 +109,10 @@ Zpětnou vazbu pošlete přímo z aplikace
 Dejte nám vědět, jak se vám líbí
 Přibyly zásady soukromí a nápověda
 Opravili jsme drobné chyby
+
+### 앱스토어 (Dansk)
+
+Send feedback direkte fra appen
+Fortæl os, hvor godt du kan lide appen
+Privatlivspolitik og hjælp er tilføjet
+Små fejl er rettet

@@ -839,3 +839,59 @@ Po návštěvě uložené restaurace vám připomeneme, abyste si návštěvu za
 
 Záloha na iCloudu
 Záznamy zůstávají v zařízení a podle potřeby je můžete zazálohovat na vlastní iCloud a znovu obnovit.
+
+## da
+
+### 지원 URL
+
+https://m1zz.github.io/RestaurantMap/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/RestaurantMap/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/RestaurantMap/
+
+### 이름
+
+Insaeng: restaurantkort
+
+### 부제
+
+Bedøm og rangér dine måltider
+
+### 키워드
+
+dagbog,favoritter,madnørd,anmeldelser,ønskeliste,bøf,ramen,sushi,café,date,noter,top,frokost
+
+### 프로모션 텍스트
+
+Sæt en nål på kortet for hver restaurant, du besøger, og gem din bedømmelse og dine noter. Sted for sted bygger du et kort over måltider, du aldrig glemmer.
+
+### 설명
+
+Sæt nåle på de steder, hvor du har spist, og skriv ned, hvordan det smagte – hver gang du er der.
+Insaeng er dit personlige madkort, som kun rummer de restauranter, du selv har valgt.
+
+Et kort over dine yndlingssteder
+Søg efter en restaurant, eller vælg et punkt på kortet for at gemme den. Gemte steder vises som nåle, og dine seks favoritter får egne placeringsmærker.
+
+Besøgt, Vil derhen og din Top 6
+Hold restauranter, du har prøvet, adskilt fra dem, du vil prøve, og rangér dine seks bedste.
+
+Hver ret med sine egne kriterier
+For bøffen tæller stegegrad og saftighed, for sushi ris og fisk, for ramen bouillon og nudler. Bedøm smagsintensitet og tilfredshed efter de kriterier, der passer til hver slags mad. Pizza, vin og kaffe har også deres egne bedømmelser, og du kan tilføje dine egne madtyper.
+
+En besøgslog, der vokser for hver tur
+Gem dato, bedømmelse, retter, billeder og noter for hvert besøg. Hver restaurant samler antal besøg, gennemsnitlig bedømmelse og en samlet vurdering af smagen. Tilføj menuen, og se husets specialiteter og priser med et blik.
+
+Din smagsprofil
+Se din smag i et diagram: stærkt, sødt, salt, fedt og naturlige smage.
+
+Påmindelse efter besøget
+Når du har været på en gemt restaurant, minder vi dig om at registrere besøget. Det virker kun, hvis du giver adgang til din position.
+
+iCloud-backup
+Dine optegnelser ligger på enheden, og du kan når som helst tage backup til din egen iCloud og gendanne derfra.
