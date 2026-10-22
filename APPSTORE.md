@@ -1007,3 +1007,59 @@ Kun olet käynyt tallennetussa ravintolassa, muistutamme kirjaamaan käynnin. To
 
 iCloud-varmuuskopio
 Tietosi pysyvät laitteellasi, ja voit halutessasi varmuuskopioida ne omaan iCloudiisi ja palauttaa sieltä.
+
+## id
+
+### 지원 URL
+
+https://m1zz.github.io/RestaurantMap/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/RestaurantMap/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/RestaurantMap/
+
+### 이름
+
+Insaeng: Peta Restoran
+
+### 부제
+
+Nilai dan peringkat makananmu
+
+### 키워드
+
+catatan,favorit,kuliner,ulasan,wishlist,steak,ramen,sushi,kafe,kencan,jajan,makan,tempat,top,foto
+
+### 프로모션 텍스트
+
+Sematkan setiap restoran yang kamu kunjungi di peta, lalu simpan nilai dan catatannya. Tempat demi tempat, kamu menyusun peta santapan yang tak terlupakan.
+
+### 설명
+
+Sematkan tempat-tempat yang pernah kamu kunjungi dan catat rasa makanannya setiap kali datang.
+Insaeng adalah peta kuliner pribadimu, hanya berisi restoran yang kamu pilih sendiri.
+
+Peta tempat favoritmu
+Cari restoran atau pilih titik di peta untuk menyimpannya. Tempat yang tersimpan tampil sebagai pin, dan enam favoritmu mendapat lencana peringkat tersendiri.
+
+Sudah dikunjungi, Ingin ke sana, dan Top 6
+Pisahkan restoran yang sudah dicoba dan yang ingin dicoba dalam daftar berbeda, lalu beri peringkat enam yang terbaik.
+
+Setiap hidangan punya kriterianya sendiri
+Untuk steak, yang penting tingkat kematangan dan kelembutannya; untuk sushi, nasi dan ikannya; untuk ramen, kuah dan mienya. Nilai intensitas rasa dan kepuasan dengan kriteria yang sesuai untuk tiap jenis makanan. Pizza, anggur, dan kopi juga punya penilaian sendiri, dan kamu bisa menambahkan jenis masakan buatanmu sendiri.
+
+Catatan kunjungan yang terus bertambah
+Simpan tanggal, nilai, menu yang dipesan, foto, dan catatan dari setiap kunjungan. Tiap restoran akan mengumpulkan jumlah kunjungan, nilai rata-rata, dan ringkasan penilaian rasa. Tambahkan menu, dan menu andalan beserta harganya terlihat sekilas.
+
+Profil seleramu
+Lihat seleramu dalam bentuk grafik: pedas, manis, asin, berlemak, dan rasa alami.
+
+Pengingat setelah berkunjung
+Setelah kamu datang ke restoran yang tersimpan, kami mengingatkanmu untuk mencatat kunjungan. Hanya berfungsi jika kamu mengizinkan akses lokasi.
+
+Cadangan iCloud
+Catatanmu tersimpan di perangkat, dan kapan saja kamu bisa mencadangkannya ke iCloud milikmu sendiri lalu memulihkannya.

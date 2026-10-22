@@ -130,3 +130,10 @@ Lähetä palautetta suoraan sovelluksesta
 Kerro, kuinka hyvin sovellus miellyttää
 Tietosuoja ja ohjesivu julkaistu
 Pieniä virheitä korjattu
+
+### 앱스토어 (Bahasa Indonesia)
+
+Kirim masukan langsung dari aplikasi
+Beri tahu seberapa kamu suka aplikasi
+Kebijakan privasi dan bantuan tersedia
+Perbaikan bug kecil
