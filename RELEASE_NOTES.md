@@ -151,3 +151,10 @@ Stuur feedback direct vanuit de app
 Laat weten hoe je de app vindt
 Privacybeleid en help toegevoegd
 Kleine fouten opgelost
+
+### 앱스토어 (Polski)
+
+Wyślij opinię prosto z aplikacji
+Powiedz nam, jak oceniasz aplikację
+Dodaliśmy politykę prywatności i pomoc
+Poprawiliśmy drobne błędy

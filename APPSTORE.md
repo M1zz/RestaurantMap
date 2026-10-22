@@ -1175,3 +1175,59 @@ Na een bezoek aan een bewaard restaurant herinneren we je eraan het bezoek vast 
 
 iCloud-back-up
 Je gegevens blijven op je apparaat en je kunt ze wanneer je maar wilt in je eigen iCloud bewaren en terugzetten.
+
+## pl
+
+### 지원 URL
+
+https://m1zz.github.io/RestaurantMap/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/RestaurantMap/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/RestaurantMap/
+
+### 이름
+
+Insaeng: mapa restauracji
+
+### 부제
+
+Oceniaj i rankinguj posiłki
+
+### 키워드
+
+dziennik,ulubione,foodie,recenzje,lista życzeń,stek,ramen,sushi,kawiarnia,randka,notatki,top,obiad
+
+### 프로모션 텍스트
+
+Zaznacz pinezką każdą odwiedzoną restaurację i zapisz ocenę oraz notatki. Miejsce po miejscu stworzysz mapę posiłków, których nie zapomnisz.
+
+### 설명
+
+Zaznacz na mapie miejsca, w których jadłeś, i zapisuj, jak smakowało – przy każdej wizycie.
+Insaeng to Twoja osobista mapa kulinarna, w której są tylko restauracje wybrane przez Ciebie.
+
+Mapa Twoich ulubionych miejsc
+Wyszukaj restaurację lub wybierz punkt na mapie, aby ją zapisać. Zapisane miejsca pojawiają się jako pinezki, a sześć ulubionych dostaje własne odznaki rankingu.
+
+Odwiedzone, Chcę odwiedzić i Twoje Top 6
+Trzymaj restauracje, w których już byłeś, i te, które chcesz wypróbować, na osobnych listach, a sześć najlepszych ułóż w rankingu.
+
+Każde danie według własnych kryteriów
+W steku liczy się stopień wysmażenia i soczystość, w sushi ryż i ryba, w ramenie bulion i makaron. Oceń intensywność smaku i zadowolenie według kryteriów pasujących do danego rodzaju jedzenia. Pizza, wino i kawa mają własne oceny, a rodzaje kuchni możesz dodawać samodzielnie.
+
+Dziennik wizyt, który rośnie razem z Tobą
+Zapisz datę, ocenę, dania, zdjęcia i notatki z każdej wizyty. Każda restauracja zbiera liczbę wizyt, średnią ocenę i ogólną ocenę smaku. Dodaj menu, a dania firmowe i ceny zobaczysz jednym spojrzeniem.
+
+Twój profil smaku
+Zobacz swój gust na wykresie: ostre, słodkie, słone, tłuste i naturalne smaki.
+
+Przypomnienie po wizycie
+Gdy odwiedzisz zapisaną restaurację, przypomnimy Ci o zapisaniu wizyty. Działa tylko po zezwoleniu na dostęp do lokalizacji.
+
+Kopia w iCloud
+Twoje zapisy są na urządzeniu, a w każdej chwili możesz utworzyć ich kopię we własnym iCloud i je przywrócić.
