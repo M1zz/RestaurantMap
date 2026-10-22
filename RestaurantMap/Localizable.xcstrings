@@ -62,6 +62,12 @@
             "state" : "translated",
             "value" : "Menu de %@"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu di %@"
+          }
         }
       }
     },
@@ -126,6 +132,12 @@
             "state" : "translated",
             "value" : "%lld %% de correspondance"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Corrispondenza %lld%%"
+          }
         }
       }
     },
@@ -186,6 +198,12 @@
           }
         },
         "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld"
@@ -254,6 +272,12 @@
             "state" : "translated",
             "value" : "Notez-en encore %lld pour recevoir des recommandations"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valuta ancora %lld per ricevere consigli"
+          }
         }
       }
     },
@@ -317,6 +341,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld avis"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld recensioni"
           }
         }
       }
@@ -382,6 +412,12 @@
             "state" : "translated",
             "value" : "Recommandé par %lld utilisateurs aux goûts proches"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Consigliato da %lld utenti con gusti simili"
+          }
         }
       }
     },
@@ -445,6 +481,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "N° %lld"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N. %lld"
           }
         }
       }
@@ -510,6 +552,12 @@
             "state" : "translated",
             "value" : "%lld photos"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld foto"
+          }
         }
       }
     },
@@ -573,6 +621,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld fois"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld volte"
           }
         }
       }
@@ -638,6 +692,12 @@
             "state" : "translated",
             "value" : "%lld visites"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld visite"
+          }
         }
       }
     },
@@ -701,6 +761,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Supprimer « %@ » et tous ses enregistrements de visite ?"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eliminare «%@» e tutte le sue visite registrate?"
           }
         }
       }
@@ -766,6 +832,12 @@
             "state" : "translated",
             "value" : "1️⃣ Importer mes données"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1️⃣ Carica i miei dati"
+          }
         }
       }
     },
@@ -829,6 +901,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "2️⃣ Générer des données fictives"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2️⃣ Genera dati di prova"
           }
         }
       }
@@ -894,6 +972,12 @@
             "state" : "translated",
             "value" : "3️⃣ Voir les résultats dans l’onglet Recommandations"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3️⃣ Controlla i risultati nella scheda Consigli"
+          }
         }
       }
     },
@@ -957,6 +1041,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aucun restaurant noté 4 étoiles ou plus"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nessun ristorante valutato con 4 stelle o più"
           }
         }
       }
@@ -1022,6 +1112,12 @@
             "state" : "translated",
             "value" : "Vos goûts en six critères"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I tuoi gusti in sei caratteristiche"
+          }
         }
       }
     },
@@ -1085,6 +1181,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ouvrir dans Plans"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apri in Mappe"
           }
         }
       }
@@ -1151,6 +1253,12 @@
             "state" : "translated",
             "value" : "Verrouillage Face ID"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blocco con Face ID"
+          }
         }
       }
     },
@@ -1216,6 +1324,12 @@
             "state" : "translated",
             "value" : "Verrouillez l’app avec Face ID ou Touch ID pour garder votre carnet de tables privé."
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blocca l’app con Face ID o Touch ID per tenere privato il tuo diario dei ristoranti."
+          }
         }
       }
     },
@@ -1279,6 +1393,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Envoyez des données vers Firebase\npour tester le système de recommandation"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Carica i dati su Firebase\nper provare il sistema di consigli"
           }
         }
       }
@@ -1344,6 +1464,12 @@
             "state" : "translated",
             "value" : "Envoyer vers Realtime DB"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Carica su Realtime DB"
+          }
         }
       }
     },
@@ -1408,6 +1534,12 @@
             "state" : "translated",
             "value" : "Avantages de Realtime Database"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vantaggi di Realtime Database"
+          }
         }
       }
     },
@@ -1471,6 +1603,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Récupération des données depuis Realtime Database…"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recupero dei dati da Realtime Database…"
           }
         }
       }
@@ -1537,6 +1675,12 @@
             "state" : "translated",
             "value" : "Demandez à Siri ou lancez un raccourci pour noter une visite aussitôt."
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chiedilo a Siri o usa un comando rapido per registrare subito una visita."
+          }
         }
       }
     },
@@ -1601,6 +1745,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siri et Raccourcis"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri e Comandi rapidi"
           }
         }
       }
@@ -1667,6 +1817,12 @@
             "state" : "translated",
             "value" : "VoiceOver plus pratique"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOver più comodo"
+          }
         }
       }
     },
@@ -1730,6 +1886,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sauvegarde iCloud"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Backup su iCloud"
           }
         }
       }
@@ -1795,6 +1957,12 @@
             "state" : "translated",
             "value" : "Vous devez être connecté à iCloud pour sauvegarder ou restaurer."
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Per eseguire il backup o il ripristino devi aver effettuato l’accesso a iCloud."
+          }
         }
       }
     },
@@ -1858,6 +2026,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sauvegarder sur iCloud"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esegui backup su iCloud"
           }
         }
       }
@@ -1923,6 +2097,12 @@
             "state" : "translated",
             "value" : "Restaurer depuis iCloud"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ripristina da iCloud"
+          }
         }
       }
     },
@@ -1986,6 +2166,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Restaure depuis votre sauvegarde iCloud. Toutes les données de cet appareil seront supprimées et remplacées par celles de la sauvegarde."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ripristina dal backup di iCloud. Tutti i dati su questo dispositivo verranno eliminati e sostituiti da quelli del backup."
           }
         }
       }
@@ -2051,6 +2237,12 @@
             "state" : "translated",
             "value" : "• 3 à 4 restaurants par utilisateur"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• Da 3 a 4 ristoranti per utente"
+          }
         }
       }
     },
@@ -2114,6 +2306,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "• 1 à 3 visites par restaurant"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• Da 1 a 3 visite per ristorante"
           }
         }
       }
@@ -2179,6 +2377,12 @@
             "state" : "translated",
             "value" : "• 5 utilisateurs aux goûts variés"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 5 utenti con gusti diversi"
+          }
         }
       }
     },
@@ -2242,6 +2446,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "⚡ Synchronisation en temps réel plus rapide"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚡ Sincronizzazione in tempo reale più veloce"
           }
         }
       }
@@ -2307,6 +2517,12 @@
             "state" : "translated",
             "value" : "⚡ Synchronisation en temps réel plus rapide\n💰 Coût réduit"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚡ Sincronizzazione in tempo reale più veloce\n💰 Costi più bassi"
+          }
         }
       }
     },
@@ -2370,6 +2586,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "✓ Noté"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "✓ Valutato"
           }
         }
       }
@@ -2436,6 +2658,12 @@
             "state" : "translated",
             "value" : "Une légère vibration quand vous enregistrez un lieu ou une visite."
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Una leggera vibrazione quando salvi un posto o registri una visita."
+          }
         }
       }
     },
@@ -2499,6 +2727,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Prix"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prezzo"
           }
         }
       }
@@ -2564,6 +2798,12 @@
             "state" : "translated",
             "value" : "Déjà allé"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visitati"
+          }
         }
       }
     },
@@ -2627,6 +2867,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "À tester"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Da provare"
           }
         }
       }
@@ -2692,6 +2938,12 @@
             "state" : "translated",
             "value" : "Un restaurant « À tester » ne peut pas entrer dans le Top 6"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un ristorante tra i «Da provare» non può entrare nella Top 6"
+          }
         }
       }
     },
@@ -2755,6 +3007,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Notez l’intensité du goût et la satisfaction pour chaque élément. La note est facultative."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valuta intensità del sapore e soddisfazione per ogni voce. La valutazione è facoltativa."
           }
         }
       }
@@ -2820,6 +3078,12 @@
             "state" : "translated",
             "value" : "Contacter le développeur"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contatta lo sviluppatore"
+          }
         }
       }
     },
@@ -2883,6 +3147,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld résultats de recherche"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld risultati di ricerca"
           }
         }
       }
@@ -2948,6 +3218,12 @@
             "state" : "translated",
             "value" : "Longitude : %.6f"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Longitudine: %.6f"
+          }
         }
       }
     },
@@ -3011,6 +3287,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Type"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tipo"
           }
         }
       }
@@ -3077,6 +3359,12 @@
             "state" : "translated",
             "value" : "Quand vous agrandissez le texte, les écrans se réorganisent sans rien couper."
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se ingrandisci il testo, le schermate si riorganizzano senza tagliare nulla."
+          }
         }
       }
     },
@@ -3140,6 +3428,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "D’après « %@ »"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In base a «%@»"
           }
         }
       }
@@ -3205,6 +3499,12 @@
             "state" : "translated",
             "value" : "Par défaut"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Predefinito"
+          }
         }
       }
     },
@@ -3268,6 +3568,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Infos de base"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Informazioni di base"
           }
         }
       }
@@ -3333,6 +3639,12 @@
             "state" : "translated",
             "value" : "Intégré"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Integrato"
+          }
         }
       }
     },
@@ -3396,6 +3708,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mon Michelin"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il mio Michelin"
           }
         }
       }
@@ -3461,6 +3779,12 @@
             "state" : "translated",
             "value" : "Mon ADN gourmand"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il mio DNA gastronomico"
+          }
         }
       }
     },
@@ -3524,6 +3848,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mon Top 6 coup de cœur"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La mia Top 6 del cuore"
           }
         }
       }
@@ -3589,6 +3919,12 @@
             "state" : "translated",
             "value" : "Mon Top 6"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La mia Top 6"
+          }
         }
       }
     },
@@ -3652,6 +3988,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mes données"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I miei dati"
           }
         }
       }
@@ -3717,6 +4059,12 @@
             "state" : "translated",
             "value" : "Importer mes données"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Carica i miei dati"
+          }
         }
       }
     },
@@ -3780,6 +4128,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ajouter à mes restaurants"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aggiungi ai miei ristoranti"
           }
         }
       }
@@ -3845,6 +4199,12 @@
             "state" : "translated",
             "value" : "Vos restaurants préférés entre tous"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I tuoi ristoranti preferiti in assoluto"
+          }
         }
       }
     },
@@ -3908,6 +4268,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Types ajoutés par moi"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tipi aggiunti da me"
           }
         }
       }
@@ -3973,6 +4339,12 @@
             "state" : "translated",
             "value" : "Ouvrir dans Naver Map"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apri in Naver Map"
+          }
         }
       }
     },
@@ -4036,6 +4408,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Veuillez réessayer"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Riprova"
           }
         }
       }
@@ -4102,6 +4480,12 @@
             "state" : "translated",
             "value" : "Mode sombre"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modalità scura"
+          }
         }
       }
     },
@@ -4165,6 +4549,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fermer"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chiudi"
           }
         }
       }
@@ -4231,6 +4621,12 @@
             "state" : "translated",
             "value" : "Repérez facilement la carte et les listes, même avec un contraste renforcé ou une difficulté à distinguer les couleurs."
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mappa ed elenchi restano leggibili anche con contrasto elevato o se fai fatica a distinguere i colori."
+          }
         }
       }
     },
@@ -4294,6 +4690,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Plat signature"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Piatto forte"
           }
         }
       }
@@ -4359,6 +4761,12 @@
             "state" : "translated",
             "value" : "Les plats signature apparaissent en haut de la liste du menu"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I piatti forti compaiono in cima al menu"
+          }
         }
       }
     },
@@ -4422,6 +4830,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Définir comme plat signature"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Imposta come piatto forte"
           }
         }
       }
@@ -4488,6 +4902,12 @@
             "state" : "translated",
             "value" : "Utilisez l’app dans davantage de langues."
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usa l’app in più lingue."
+          }
         }
       }
     },
@@ -4553,6 +4973,12 @@
             "state" : "translated",
             "value" : "Plus de langues"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Più lingue"
+          }
         }
       }
     },
@@ -4616,6 +5042,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Générer des données fictives"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Genera dati di prova"
           }
         }
       }
@@ -4681,6 +5113,12 @@
             "state" : "translated",
             "value" : "Génère 5 utilisateurs fictifs et des données de restaurants"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Genera 5 utenti di prova e dati sui ristoranti"
+          }
         }
       }
     },
@@ -4744,6 +5182,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gestion des données"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gestione dei dati"
           }
         }
       }
@@ -4809,6 +5253,12 @@
             "state" : "translated",
             "value" : "Synchronisation des données"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sincronizzazione dei dati"
+          }
         }
       }
     },
@@ -4872,6 +5322,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Synchroniser les données"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sincronizza i dati"
           }
         }
       }
@@ -4937,6 +5393,12 @@
             "state" : "translated",
             "value" : "Envoyer les données"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Carica i dati"
+          }
         }
       }
     },
@@ -5000,6 +5462,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aperçu des données"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Panoramica dei dati"
           }
         }
       }
@@ -5065,6 +5533,12 @@
             "state" : "translated",
             "value" : "Pas assez de données"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dati insufficienti"
+          }
         }
       }
     },
@@ -5128,6 +5602,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Les données risquent d’être insuffisantes"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I dati potrebbero non bastare"
           }
         }
       }
@@ -5193,6 +5673,12 @@
             "state" : "translated",
             "value" : "Impossible de charger les données"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossibile caricare i dati"
+          }
         }
       }
     },
@@ -5256,6 +5742,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Adresse (rue)"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indirizzo (via)"
           }
         }
       }
@@ -5321,6 +5813,12 @@
             "state" : "translated",
             "value" : "Aucun plat au menu pour l’instant"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nessun piatto nel menu"
+          }
         }
       }
     },
@@ -5384,6 +5882,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Classement"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Classifica"
           }
         }
       }
@@ -5449,6 +5953,12 @@
             "state" : "translated",
             "value" : "Score Riio Michelin"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Punteggio Riio Michelin"
+          }
         }
       }
     },
@@ -5512,6 +6022,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dernière sauvegarde"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ultimo backup"
           }
         }
       }
@@ -5577,6 +6093,12 @@
             "state" : "translated",
             "value" : "Satisfaction"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Soddisfazione"
+          }
         }
       }
     },
@@ -5640,6 +6162,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Intensité du goût"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Intensità del sapore"
           }
         }
       }
@@ -5705,6 +6233,12 @@
             "state" : "translated",
             "value" : "Préférences de goût"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preferenze di gusto"
+          }
         }
       }
     },
@@ -5768,6 +6302,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Préférences de goût\n%lld %%"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preferenze di gusto\n%lld%%"
           }
         }
       }
@@ -5833,6 +6373,12 @@
             "state" : "translated",
             "value" : "Note de goût"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valutazione del gusto"
+          }
         }
       }
     },
@@ -5896,6 +6442,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Goût noté"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gusto valutato"
           }
         }
       }
@@ -5961,6 +6513,12 @@
             "state" : "translated",
             "value" : "Goût noté"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gusto valutato"
+          }
         }
       }
     },
@@ -6024,6 +6582,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Profil de goût"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profilo del gusto"
           }
         }
       }
@@ -6089,6 +6653,12 @@
             "state" : "translated",
             "value" : "Adresses à tester"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ristoranti consigliati"
+          }
         }
       }
     },
@@ -6152,6 +6722,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pour vous"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Per te"
           }
         }
       }
@@ -6217,6 +6793,12 @@
             "state" : "translated",
             "value" : "Pour recevoir des recommandations personnalisées"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Per ricevere consigli personalizzati"
+          }
         }
       }
     },
@@ -6280,6 +6862,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Très satisfait"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Molto soddisfatto"
           }
         }
       }
@@ -6345,6 +6933,12 @@
             "state" : "translated",
             "value" : "Ce que vous avez mangé"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cosa hai mangiato"
+          }
         }
       }
     },
@@ -6409,6 +7003,12 @@
             "state" : "translated",
             "value" : "Ce que vous avez mangé (ex. : menu bulgogi, pizza margherita)"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cosa hai mangiato (es. menu bulgogi, pizza margherita)"
+          }
         }
       }
     },
@@ -6469,6 +7069,12 @@
           }
         },
         "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu"
+          }
+        },
+        "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Menu"
@@ -6537,6 +7143,12 @@
             "state" : "translated",
             "value" : "Gérer le menu"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gestisci menu"
+          }
         }
       }
     },
@@ -6601,6 +7213,12 @@
             "state" : "translated",
             "value" : "Ajouter des plats"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aggiungi piatti"
+          }
         }
       }
     },
@@ -6661,6 +7279,12 @@
           }
         },
         "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu (%lld)"
+          }
+        },
+        "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Menu (%lld)"
@@ -6729,6 +7353,12 @@
             "state" : "translated",
             "value" : "Choisir un plat"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scegli un piatto"
+          }
         }
       }
     },
@@ -6792,6 +7422,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Description du plat"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Descrizione del piatto"
           }
         }
       }
@@ -6857,6 +7493,12 @@
             "state" : "translated",
             "value" : "Description du plat (facultatif)"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Descrizione del piatto (facoltativa)"
+          }
         }
       }
     },
@@ -6920,6 +7562,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nom du plat"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nome del piatto"
           }
         }
       }
@@ -6985,6 +7633,12 @@
             "state" : "translated",
             "value" : "Infos sur le plat"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Info sul piatto"
+          }
         }
       }
     },
@@ -7048,6 +7702,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ajouter un plat"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aggiungi piatto"
           }
         }
       }
@@ -7113,6 +7773,12 @@
             "state" : "translated",
             "value" : "Les plats ajoutés pourront être choisis lors de l’ajout d’une visite"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I piatti aggiunti si potranno scegliere quando registri una visita"
+          }
         }
       }
     },
@@ -7176,6 +7842,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Notes"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Note"
           }
         }
       }
@@ -7241,6 +7913,12 @@
             "state" : "translated",
             "value" : "Aucune note"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nessuna nota"
+          }
         }
       }
     },
@@ -7304,6 +7982,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tous les restaurants et enregistrements de visite seront supprimés. Cette action est irréversible."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tutti i ristoranti e le visite registrate verranno eliminati. L’operazione non si può annullare."
           }
         }
       }
@@ -7369,6 +8053,12 @@
             "state" : "translated",
             "value" : "Supprimer toutes les données"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elimina tutti i dati"
+          }
         }
       }
     },
@@ -7432,6 +8122,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Liste"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elenco"
           }
         }
       }
@@ -7497,6 +8193,12 @@
             "state" : "translated",
             "value" : "Fermer la liste"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chiudi elenco"
+          }
         }
       }
     },
@@ -7560,6 +8262,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Journal des visites"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Registro delle visite"
           }
         }
       }
@@ -7625,6 +8333,12 @@
             "state" : "translated",
             "value" : "Ajouter une visite"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aggiungi visita"
+          }
         }
       }
     },
@@ -7689,6 +8403,12 @@
             "state" : "translated",
             "value" : "Saisissez une note de goût lors de l’ajout d’une visite"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inserisci una valutazione del gusto quando aggiungi una visita"
+          }
         }
       }
     },
@@ -7752,6 +8472,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Choisissez ce plat lors de l’ajout d’une visite"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scegli questo piatto quando aggiungi una visita"
           }
         }
       }
@@ -7818,6 +8544,12 @@
             "state" : "translated",
             "value" : "Si l’app se ferme pendant que vous rédigez une visite, ce que vous aviez écrit est conservé."
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se l’app si chiude mentre scrivi una visita, quello che avevi scritto resta salvato."
+          }
         }
       }
     },
@@ -7881,6 +8613,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Date de la visite"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Data della visita"
           }
         }
       }
@@ -7946,6 +8684,12 @@
             "state" : "translated",
             "value" : "Infos sur la visite"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Info sulla visita"
+          }
         }
       }
     },
@@ -8009,6 +8753,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Statistiques de visites"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Statistiche delle visite"
           }
         }
       }
@@ -8074,6 +8824,12 @@
             "state" : "translated",
             "value" : "Sauvegarder"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Backup"
+          }
         }
       }
     },
@@ -8137,6 +8893,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Signalements de bugs et suggestions bienvenus."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Segnalazioni di bug e suggerimenti sono benvenuti."
           }
         }
       }
@@ -8202,6 +8964,12 @@
             "state" : "translated",
             "value" : "Version"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Versione"
+          }
         }
       }
     },
@@ -8266,6 +9034,12 @@
             "state" : "translated",
             "value" : "Note"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valutazione"
+          }
         }
       }
     },
@@ -8329,6 +9103,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Noter"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valuta"
           }
         }
       }
@@ -8395,6 +9175,12 @@
             "state" : "translated",
             "value" : "Couleurs et contraste plus confortables"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Colori e contrasto più comodi"
+          }
         }
       }
     },
@@ -8458,6 +9244,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Restaurer"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ripristina"
           }
         }
       }
@@ -8523,6 +9315,12 @@
             "state" : "translated",
             "value" : "Chargement…"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Caricamento…"
+          }
         }
       }
     },
@@ -8586,6 +9384,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Insatisfait"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Insoddisfatto"
           }
         }
       }
@@ -8651,6 +9455,12 @@
             "state" : "translated",
             "value" : "L’avis des autres"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cosa ne pensa la gente"
+          }
         }
       }
     },
@@ -8714,6 +9524,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Photos"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto"
           }
         }
       }
@@ -8779,6 +9595,12 @@
             "state" : "translated",
             "value" : "Photos (%lld)"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto (%lld)"
+          }
         }
       }
     },
@@ -8842,6 +9664,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Choisir des photos"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scegli foto"
           }
         }
       }
@@ -8907,6 +9735,12 @@
             "state" : "translated",
             "value" : "Ajouter des photos"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aggiungi foto"
+          }
         }
       }
     },
@@ -8970,6 +9804,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Supprimer"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elimina"
           }
         }
       }
@@ -9035,6 +9875,12 @@
             "state" : "translated",
             "value" : "Détail de la correspondance"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dettagli della corrispondenza"
+          }
         }
       }
     },
@@ -9098,6 +9944,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nouveau type de cuisine"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nuovo tipo di cucina"
           }
         }
       }
@@ -9163,6 +10015,12 @@
             "state" : "translated",
             "value" : "Ajouter un type"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aggiungi nuovo tipo"
+          }
         }
       }
     },
@@ -9226,6 +10084,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Photos à ajouter"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto da aggiungere"
           }
         }
       }
@@ -9291,6 +10155,12 @@
             "state" : "translated",
             "value" : "Actualiser"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aggiorna"
+          }
         }
       }
     },
@@ -9354,6 +10224,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sélectionner"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seleziona"
           }
         }
       }
@@ -9419,6 +10295,12 @@
             "state" : "translated",
             "value" : "Aucun"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nessuno"
+          }
         }
       }
     },
@@ -9483,6 +10365,12 @@
             "state" : "translated",
             "value" : "Description"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Descrizione"
+          }
         }
       }
     },
@@ -9546,6 +10434,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Réglages"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impostazioni"
           }
         }
       }
@@ -9612,6 +10506,12 @@
             "state" : "translated",
             "value" : "Un retour que l’on sent du bout des doigts"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un riscontro che senti sulla punta delle dita"
+          }
         }
       }
     },
@@ -9675,6 +10575,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Type de restaurant"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tipo di ristorante"
           }
         }
       }
@@ -9740,6 +10646,12 @@
             "state" : "translated",
             "value" : "Restaurants"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ristoranti"
+          }
         }
       }
     },
@@ -9803,6 +10715,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Noter les restaurants depuis la liste"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valuta i ristoranti dall’elenco"
           }
         }
       }
@@ -9868,6 +10786,12 @@
             "state" : "translated",
             "value" : "Supprimer le restaurant"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elimina ristorante"
+          }
         }
       }
     },
@@ -9931,6 +10855,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Donnez 4 étoiles ou plus depuis la fiche d’un restaurant"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Assegna 4 stelle o più nella schermata di dettaglio di un ristorante"
           }
         }
       }
@@ -9996,6 +10926,12 @@
             "state" : "translated",
             "value" : "Aucun restaurant"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nessun ristorante"
+          }
         }
       }
     },
@@ -10059,6 +10995,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nom du restaurant"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nome del ristorante"
           }
         }
       }
@@ -10124,6 +11066,12 @@
             "state" : "translated",
             "value" : "Infos sur le restaurant"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Info sul ristorante"
+          }
         }
       }
     },
@@ -10187,6 +11135,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Carte des restaurants"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mappa dei ristoranti"
           }
         }
       }
@@ -10252,6 +11206,12 @@
             "state" : "translated",
             "value" : "Ajouter un restaurant"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aggiungi ristorante"
+          }
         }
       }
     },
@@ -10315,6 +11275,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ajouter un restaurant"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aggiungi un ristorante"
           }
         }
       }
@@ -10380,6 +11346,12 @@
             "state" : "translated",
             "value" : "Ajouter comme restaurant"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aggiungi come ristorante"
+          }
         }
       }
     },
@@ -10443,6 +11415,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ajoutez un restaurant pour commencer"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aggiungi un ristorante per iniziare"
           }
         }
       }
@@ -10509,6 +11487,12 @@
             "state" : "translated",
             "value" : "Astuces pratiques"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Consigli utili"
+          }
         }
       }
     },
@@ -10574,6 +11558,12 @@
             "state" : "translated",
             "value" : "Reprendre une visite en cours de rédaction"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Riprendi una visita lasciata a metà"
+          }
         }
       }
     },
@@ -10638,6 +11628,12 @@
             "state" : "translated",
             "value" : "Non"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No"
+          }
         }
       }
     },
@@ -10701,6 +11697,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Icône"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Icona"
           }
         }
       }
@@ -10767,6 +11769,12 @@
             "state" : "translated",
             "value" : "Sur iPad, utilisez les principales fonctions avec le seul clavier."
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Su iPad puoi usare le funzioni principali con la sola tastiera."
+          }
         }
       }
     },
@@ -10830,6 +11838,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aucun restaurant dans votre liste « À tester » pour l’instant"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ancora nessun ristorante in «Da provare»"
           }
         }
       }
@@ -10895,6 +11909,12 @@
             "state" : "translated",
             "value" : "Vous n’êtes pas encore allé dans ce restaurant"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Non sei ancora stato in questo ristorante"
+          }
         }
       }
     },
@@ -10958,6 +11978,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aucun restaurant visité pour l’instant"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ancora nessun ristorante visitato"
           }
         }
       }
@@ -11023,6 +12049,12 @@
             "state" : "translated",
             "value" : "Aucun restaurant enregistré pour l’instant"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ancora nessun ristorante salvato"
+          }
         }
       }
     },
@@ -11087,6 +12119,12 @@
             "state" : "translated",
             "value" : "Aucun restaurant dans le Top 6 pour l’instant"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ancora nessun ristorante nella Top 6"
+          }
         }
       }
     },
@@ -11150,6 +12188,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aucune note pour l’instant"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ancora nessuna valutazione"
           }
         }
       }
@@ -11216,6 +12260,12 @@
             "state" : "translated",
             "value" : "On vous signale discrètement les fonctions utiles, au bon moment."
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ti segnaliamo con discrezione le funzioni utili, al momento giusto."
+          }
         }
       }
     },
@@ -11280,6 +12330,12 @@
             "state" : "translated",
             "value" : "Choisir dans la photothèque"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scegli dalla libreria"
+          }
         }
       }
     },
@@ -11343,6 +12399,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "À propos"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Info"
           }
         }
       }
@@ -11409,6 +12471,12 @@
             "state" : "translated",
             "value" : "Retrouvez vos adresses préférées sur l’écran d’accueil, sans ouvrir l’app."
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guarda i tuoi posti preferiti dalla schermata Home, senza aprire l’app."
+          }
         }
       }
     },
@@ -11473,6 +12541,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "L’app est aussi disponible en anglais."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L’app si può usare anche in inglese."
           }
         }
       }
@@ -11539,6 +12613,12 @@
             "state" : "translated",
             "value" : "Le texte et les boutons restent nets en mode sombre."
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Testo e pulsanti restano nitidi anche in modalità scura."
+          }
         }
       }
     },
@@ -11603,6 +12683,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "À la première ouverture après une mise à jour, découvrez les nouveautés."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alla prima apertura dopo un aggiornamento ti mostriamo le novità."
           }
         }
       }
@@ -11669,6 +12755,12 @@
             "state" : "translated",
             "value" : "Nouveautés"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Novità"
+          }
         }
       }
     },
@@ -11732,6 +12824,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nous analysons vos goûts pour vous proposer des recommandations personnalisées"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Analizziamo i tuoi gusti per darti consigli personalizzati"
           }
         }
       }
@@ -11798,6 +12896,12 @@
             "state" : "translated",
             "value" : "Prise en charge de l’anglais"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supporto per l’inglese"
+          }
         }
       }
     },
@@ -11861,6 +12965,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ex. : thaï, indien"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Es.: thailandese, indiano"
           }
         }
       }
@@ -11926,6 +13036,12 @@
             "state" : "translated",
             "value" : "Note estimée"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valutazione prevista"
+          }
         }
       }
     },
@@ -11989,6 +13105,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Erreur"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Errore"
           }
         }
       }
@@ -12054,6 +13176,12 @@
             "state" : "translated",
             "value" : "OK"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fine"
+          }
         }
       }
     },
@@ -12117,6 +13245,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pourquoi cette recommandation ?"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perché questo consiglio?"
           }
         }
       }
@@ -12183,6 +13317,12 @@
             "state" : "translated",
             "value" : "Réduire les animations"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Riduci movimento"
+          }
         }
       }
     },
@@ -12248,6 +13388,12 @@
             "state" : "translated",
             "value" : "Avec « Réduire les animations », les effets à l’écran sont plus discrets."
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Con «Riduci movimento» attivo, gli effetti sullo schermo sono più sobri."
+          }
         }
       }
     },
@@ -12308,6 +13454,12 @@
           }
         },
         "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "KRW"
+          }
+        },
+        "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "KRW"
@@ -12376,6 +13528,12 @@
             "state" : "translated",
             "value" : "Site web"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sito web"
+          }
         }
       }
     },
@@ -12439,6 +13597,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Latitude : %.6f"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Latitudine: %.6f"
           }
         }
       }
@@ -12504,6 +13668,12 @@
             "state" : "translated",
             "value" : "Lieu"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Posizione"
+          }
         }
       }
     },
@@ -12567,6 +13737,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Choisir un lieu"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scegli posizione"
           }
         }
       }
@@ -12632,6 +13808,12 @@
             "state" : "translated",
             "value" : "Style de cuisine"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stile di cucina"
+          }
         }
       }
     },
@@ -12695,6 +13877,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Type de cuisine"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tipo di cucina"
           }
         }
       }
@@ -12760,6 +13948,12 @@
             "state" : "translated",
             "value" : "Gérer les types de cuisine"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gestisci tipi di cucina"
+          }
         }
       }
     },
@@ -12823,6 +14017,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Comment était cette visite ?"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Com’è andata questa visita?"
           }
         }
       }
@@ -12888,6 +14088,12 @@
             "state" : "translated",
             "value" : "Touchez Modifier pour noter les saveurs de cette visite"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tocca Modifica per valutare i sapori di questa visita"
+          }
         }
       }
     },
@@ -12951,6 +14157,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ce restaurant n’a pas encore de plats au menu. Ajoutez-en d’abord ou saisissez-en un à la main."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Questo ristorante non ha ancora piatti nel menu. Aggiungili prima o scrivine uno a mano."
           }
         }
       }
@@ -13016,6 +14228,12 @@
             "state" : "translated",
             "value" : "Dans l’ensemble, ce restaurant est…"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nel complesso, questo ristorante è…"
+          }
         }
       }
     },
@@ -13079,6 +14297,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nom"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nome"
           }
         }
       }
@@ -13144,6 +14368,12 @@
             "state" : "translated",
             "value" : "Contacter par e-mail"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contatta via e-mail"
+          }
         }
       }
     },
@@ -13207,6 +14437,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Impossible de charger l’image"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossibile caricare l’immagine"
           }
         }
       }
@@ -13272,6 +14508,12 @@
             "state" : "translated",
             "value" : "Notez le restaurant de votre vie"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valuta il ristorante della tua vita"
+          }
         }
       }
     },
@@ -13335,6 +14577,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Message Instagram (@lee25_ios)"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DM su Instagram (@lee25_ios)"
           }
         }
       }
@@ -13400,6 +14648,12 @@
             "state" : "translated",
             "value" : "Vous pouvez ajouter les types de cuisine que vous choisissez souvent"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Puoi aggiungere i tipi di cucina che scegli più spesso"
+          }
         }
       }
     },
@@ -13463,6 +14717,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Infos sur le lieu"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Info sul luogo"
           }
         }
       }
@@ -13528,6 +14788,12 @@
             "state" : "translated",
             "value" : "Chargement des infos du lieu…"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Caricamento info sul luogo…"
+          }
         }
       }
     },
@@ -13591,6 +14857,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rempli à partir des infos du lieu"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compilato dalle info sul luogo"
           }
         }
       }
@@ -13656,6 +14928,12 @@
             "state" : "translated",
             "value" : "Enregistrer"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salva"
+          }
         }
       }
     },
@@ -13719,6 +14997,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Restaurants enregistrés"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ristoranti salvati"
           }
         }
       }
@@ -13784,6 +15068,12 @@
             "state" : "translated",
             "value" : "Restaurants enregistrés : %lld"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ristoranti salvati: %lld"
+          }
         }
       }
     },
@@ -13847,6 +15137,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tous"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tutti"
           }
         }
       }
@@ -13912,6 +15208,12 @@
             "state" : "translated",
             "value" : "Correspondance globale"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Corrispondenza complessiva"
+          }
         }
       }
     },
@@ -13975,6 +15277,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Téléphone"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Telefono"
           }
         }
       }
@@ -14040,6 +15348,12 @@
             "state" : "translated",
             "value" : "Supprimer toutes les données ? Cette action est irréversible."
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eliminare tutti i dati? L’operazione non si può annullare."
+          }
         }
       }
     },
@@ -14103,6 +15417,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Impossible de charger les informations"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossibile caricare le informazioni"
           }
         }
       }
@@ -14168,6 +15488,12 @@
             "state" : "translated",
             "value" : "Encore quelques notes, s’il vous plaît !"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ancora qualche valutazione, per favore!"
+          }
         }
       }
     },
@@ -14231,6 +15557,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Commandes"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ordini"
           }
         }
       }
@@ -14296,6 +15628,12 @@
             "state" : "translated",
             "value" : "Adresse"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indirizzo"
+          }
         }
       }
     },
@@ -14359,6 +15697,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Carte"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mappa"
           }
         }
       }
@@ -14424,6 +15768,12 @@
             "state" : "translated",
             "value" : "Ajoutez un restaurant depuis la carte ou la liste"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aggiungi un ristorante dalla mappa o dall’elenco"
+          }
         }
       }
     },
@@ -14487,6 +15837,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Déplacez la carte ou choisissez un autre lieu,\npuis réessayez"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sposta la mappa o scegli un altro posto,\npoi riprova"
           }
         }
       }
@@ -14552,6 +15908,12 @@
             "state" : "translated",
             "value" : "Voir sur la carte"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostra sulla mappa"
+          }
         }
       }
     },
@@ -14615,6 +15977,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Trouver des restaurants sur la carte"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trova ristoranti sulla mappa"
           }
         }
       }
@@ -14680,6 +16048,12 @@
             "state" : "translated",
             "value" : "Adresse (cadastre)"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indirizzo (catasto)"
+          }
         }
       }
     },
@@ -14744,6 +16118,12 @@
             "state" : "translated",
             "value" : "Assistance"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Assistenza"
+          }
         }
       }
     },
@@ -14807,6 +16187,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Saisir à la main"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inserisci a mano"
           }
         }
       }
@@ -14873,6 +16259,12 @@
             "state" : "translated",
             "value" : "Guide de démarrage"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guida introduttiva"
+          }
         }
       }
     },
@@ -14938,6 +16330,12 @@
             "state" : "translated",
             "value" : "Un aperçu rapide de ce que vous pouvez faire à la première ouverture."
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Una rapida panoramica di cosa puoi fare alla prima apertura."
+          }
         }
       }
     },
@@ -15001,6 +16399,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ajouter votre premier plat"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aggiungi il tuo primo piatto"
           }
         }
       }
@@ -15066,6 +16470,12 @@
             "state" : "translated",
             "value" : "Ajouter votre première visite"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aggiungi la tua prima visita"
+          }
         }
       }
     },
@@ -15129,6 +16539,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Réinitialiser"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reimposta"
           }
         }
       }
@@ -15194,6 +16610,12 @@
             "state" : "translated",
             "value" : "Total des visites"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visite totali"
+          }
         }
       }
     },
@@ -15257,6 +16679,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Total des visites"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visite totali"
           }
         }
       }
@@ -15322,6 +16750,12 @@
             "state" : "translated",
             "value" : "Avis global (moyenne de toutes les visites)"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giudizio complessivo (media di tutte le visite)"
+          }
         }
       }
     },
@@ -15385,6 +16819,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vos meilleurs restaurants"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I tuoi ristoranti migliori"
           }
         }
       }
@@ -15450,6 +16890,12 @@
             "state" : "translated",
             "value" : "Dernière visite"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ultima visita"
+          }
         }
       }
     },
@@ -15513,6 +16959,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dernière commande"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ultimo ordine"
           }
         }
       }
@@ -15578,6 +17030,12 @@
             "state" : "translated",
             "value" : "Sélection"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Consigli"
+          }
         }
       }
     },
@@ -15641,6 +17099,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Voir les recommandations"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ottieni consigli"
           }
         }
       }
@@ -15706,6 +17170,12 @@
             "state" : "translated",
             "value" : "Analyse des recommandations…"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Analisi dei consigli…"
+          }
         }
       }
     },
@@ -15769,6 +17239,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Restaurants recommandés"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ristoranti consigliati"
           }
         }
       }
@@ -15834,6 +17310,12 @@
             "state" : "translated",
             "value" : "Score de recommandation"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Punteggio del consiglio"
+          }
         }
       }
     },
@@ -15897,6 +17379,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Étapes pour tester les recommandations"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passaggi per provare i consigli"
           }
         }
       }
@@ -15962,6 +17450,12 @@
             "state" : "translated",
             "value" : "Aucun restaurant à recommander"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nessun ristorante da consigliare"
+          }
         }
       }
     },
@@ -16025,6 +17519,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Annuler"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annulla"
           }
         }
       }
@@ -16090,6 +17590,12 @@
             "state" : "translated",
             "value" : "Goût"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gusto"
+          }
         }
       }
     },
@@ -16153,6 +17659,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Profil de goût"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profilo dei gusti"
           }
         }
       }
@@ -16218,6 +17730,12 @@
             "state" : "translated",
             "value" : "Prendre une photo"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scatta foto"
+          }
         }
       }
     },
@@ -16281,6 +17799,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ouvrir dans Kakao Map"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apri in Kakao Map"
           }
         }
       }
@@ -16346,6 +17870,12 @@
             "state" : "translated",
             "value" : "Catégorie"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Categoria"
+          }
         }
       }
     },
@@ -16409,6 +17939,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Catégorie\n%lld %%"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Categoria\n%lld%%"
           }
         }
       }
@@ -16474,6 +18010,12 @@
             "state" : "translated",
             "value" : "Catégorie (ex. : coréen, chinois)"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Categoria (es. coreana, cinese)"
+          }
         }
       }
     },
@@ -16538,6 +18080,12 @@
             "state" : "translated",
             "value" : "Réglages des catégories"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impostazioni categorie"
+          }
         }
       }
     },
@@ -16601,6 +18149,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Icône de catégorie"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Icona categoria"
           }
         }
       }
@@ -16667,6 +18221,12 @@
             "state" : "translated",
             "value" : "Mises en page pour texte agrandi"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schermate per testo grande"
+          }
         }
       }
     },
@@ -16732,6 +18292,12 @@
             "state" : "translated",
             "value" : "Commande au clavier"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Controllo da tastiera"
+          }
         }
       }
     },
@@ -16796,6 +18362,12 @@
             "state" : "translated",
             "value" : "Ajouter au Top 6"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aggiungi alla Top 6"
+          }
         }
       }
     },
@@ -16856,6 +18428,12 @@
           }
         },
         "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Top 6"
+          }
+        },
+        "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Top 6"
@@ -16924,6 +18502,12 @@
             "state" : "translated",
             "value" : "Limite du Top 6"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Limite Top 6"
+          }
         }
       }
     },
@@ -16987,6 +18571,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Le Top 6 est limité à 6 restaurants (actuellement : %lld/6)"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La Top 6 può contenere al massimo 6 ristoranti (ora: %lld/6)"
           }
         }
       }
@@ -17052,6 +18642,12 @@
             "state" : "translated",
             "value" : "Le Top 6 est limité à 6 restaurants. Retirez-en un autre du Top 6, puis réessayez."
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La Top 6 può contenere al massimo 6 ristoranti. Togline un altro dalla Top 6 e riprova."
+          }
         }
       }
     },
@@ -17116,6 +18712,12 @@
             "state" : "translated",
             "value" : "Données de test"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dati di prova"
+          }
         }
       }
     },
@@ -17179,6 +18781,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Statistiques"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Statistiche"
           }
         }
       }
@@ -17245,6 +18853,12 @@
             "state" : "translated",
             "value" : "Affichage pour iPhone pliable"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schermata per iPhone pieghevole"
+          }
         }
       }
     },
@@ -17310,6 +18924,12 @@
             "state" : "translated",
             "value" : "Sur un iPhone pliable, le grand écran se divise en deux volets."
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Su un iPhone pieghevole lo schermo ampio si divide in due pannelli."
+          }
         }
       }
     },
@@ -17373,6 +18993,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Infos de la note"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Info sulla valutazione"
           }
         }
       }
@@ -17438,6 +19064,12 @@
             "state" : "translated",
             "value" : "Historique des notes (%lld)"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cronologia valutazioni (%lld)"
+          }
         }
       }
     },
@@ -17501,6 +19133,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Note moyenne"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valutazione media"
           }
         }
       }
@@ -17566,6 +19204,12 @@
             "state" : "translated",
             "value" : "Profil de notation\n%lld %%"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Andamento delle valutazioni\n%lld%%"
+          }
         }
       }
     },
@@ -17630,6 +19274,12 @@
             "state" : "translated",
             "value" : "Sauvegarde vos données actuelles sur iCloud. Toute sauvegarde existante sera remplacée."
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esegue il backup dei dati attuali su iCloud. Un eventuale backup esistente verrà sovrascritto."
+          }
         }
       }
     },
@@ -17693,6 +19343,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Depuis la position actuelle"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dalla posizione attuale"
           }
         }
       }
@@ -17759,6 +19415,12 @@
             "state" : "translated",
             "value" : "Widgets de l’écran d’accueil"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widget della schermata Home"
+          }
         }
       }
     },
@@ -17824,6 +19486,12 @@
             "state" : "translated",
             "value" : "VoiceOver lit tous les boutons et contenus, dans le bon ordre."
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOver legge tutti i pulsanti e i contenuti, nell’ordine giusto."
+          }
         }
       }
     },
@@ -17884,6 +19552,12 @@
           }
         },
         "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"
@@ -17952,6 +19626,12 @@
             "state" : "translated",
             "value" : "💰 Économique (1/6 du coût de Firestore)"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "💰 Conveniente (1/6 del costo di Firestore)"
+          }
         }
       }
     },
@@ -18015,6 +19695,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "🚀 Structure JSON simple"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🚀 Struttura JSON semplice"
           }
         }
       }

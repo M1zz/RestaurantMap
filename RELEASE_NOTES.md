@@ -74,3 +74,10 @@ Envoyez vos retours depuis l’app
 Dites-nous si l’app vous plaît
 Confidentialité et aide en ligne
 Petits bugs corrigés
+
+### 앱스토어 (Italiano)
+
+Invia i tuoi commenti dall’app
+Dicci in breve come ti trovi con l’app
+Privacy e pagina di aiuto ora online
+Corretti piccoli errori
