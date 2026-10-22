@@ -25,3 +25,10 @@ Send feedback right from the app
 Tell us how much you enjoy the app
 Privacy policy and help pages added
 Fixed small bugs for a steadier app
+
+### 앱스토어 (日本語)
+
+アプリ内からご意見を送れます
+アプリの満足度を気軽に教えていただけます
+プライバシーポリシーとヘルプを公開しました
+細かな不具合を直し、より安定しました
