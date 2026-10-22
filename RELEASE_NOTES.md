@@ -88,3 +88,10 @@ Envie sugestões direto pelo app
 Conte rapidinho se você curte o app
 Privacidade e ajuda agora no ar
 Pequenos erros corrigidos
+
+### 앱스토어 (ไทย)
+
+ส่งความคิดเห็นจากในแอปได้เลย
+บอกเราได้ง่าย ๆ ว่าคุณพอใจแอปแค่ไหน
+เปิดหน้านโยบายความเป็นส่วนตัวและวิธีใช้
+แก้ไขข้อผิดพลาดเล็กน้อย
