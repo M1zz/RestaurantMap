@@ -1063,3 +1063,59 @@ Setelah kamu datang ke restoran yang tersimpan, kami mengingatkanmu untuk mencat
 
 Cadangan iCloud
 Catatanmu tersimpan di perangkat, dan kapan saja kamu bisa mencadangkannya ke iCloud milikmu sendiri lalu memulihkannya.
+
+## nb
+
+### 지원 URL
+
+https://m1zz.github.io/RestaurantMap/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/RestaurantMap/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/RestaurantMap/
+
+### 이름
+
+Insaeng: restaurantkart
+
+### 부제
+
+Vurder og rangér måltidene
+
+### 키워드
+
+dagbok,favoritter,matnerd,anmeldelser,ønskeliste,biff,ramen,sushi,kafé,date,notater,top,lunsj
+
+### 프로모션 텍스트
+
+Sett en nål på kartet for hver restaurant du besøker, og lagre vurderingen og notatene dine. Sted for sted bygger du et kart over måltider du aldri glemmer.
+
+### 설명
+
+Sett nåler på stedene der du har spist, og skriv ned hvordan det smakte – hver gang du er der.
+Insaeng er ditt personlige matkart, med bare de restaurantene du selv har valgt.
+
+Et kart over favorittstedene dine
+Søk etter en restaurant, eller velg et punkt på kartet for å lagre den. Lagrede steder vises som nåler, og de seks favorittene dine får egne rangeringsmerker.
+
+Besøkt, Vil dit og din Topp 6
+Hold restauranter du har prøvd, adskilt fra de du vil prøve, og rangér de seks beste.
+
+Hver rett med sine egne kriterier
+For biffen teller stekegrad og saftighet, for sushi ris og fisk, for ramen buljong og nudler. Vurder smaksintensitet og tilfredshet etter kriteriene som passer til hver type mat. Pizza, vin og kaffe har også egne vurderinger, og du kan legge til dine egne mattyper.
+
+En besøkslogg som vokser for hver tur
+Lagre dato, vurdering, retter, bilder og notater for hvert besøk. Hver restaurant samler antall besøk, gjennomsnittlig vurdering og en samlet vurdering av smaken. Legg til menyen, så ser du husets spesialiteter og priser med et blikk.
+
+Smaksprofilen din
+Se smaken din i et diagram: krydret, søtt, salt, fett og naturlige smaker.
+
+Påminnelse etter besøket
+Når du har vært på en lagret restaurant, minner vi deg på å registrere besøket. Det fungerer bare hvis du gir tilgang til posisjonen din.
+
+iCloud-sikkerhetskopi
+Oppføringene dine ligger på enheten, og du kan når som helst sikkerhetskopiere dem til din egen iCloud og gjenopprette derfra.

@@ -137,3 +137,10 @@ Kirim masukan langsung dari aplikasi
 Beri tahu seberapa kamu suka aplikasi
 Kebijakan privasi dan bantuan tersedia
 Perbaikan bug kecil
+
+### 앱스토어 (Norsk bokmål)
+
+Send tilbakemelding rett fra appen
+Fortell oss hvor godt du liker appen
+Personvern og hjelp er lagt til
+Små feil er rettet
