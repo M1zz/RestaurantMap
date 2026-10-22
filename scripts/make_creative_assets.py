@@ -22,7 +22,7 @@ ICON = ROOT / "RestaurantMap" / "Assets.xcassets" / "AppIcon.appiconset" / "imag
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
 # 앱 언어 코드 → App Store Connect 로케일 (make_marketing_screenshots.py 와 같다)
-STORE = {"ko": "ko", "en": "en-US", "en-GB": "en-GB", "ja": "ja", "zh-Hans": "zh-Hans", "zh-Hant": "zh-Hant", "ru": "ru", "es": "es-ES", "de": "de-DE", "fr": "fr-FR", "it": "it", "pt-BR": "pt-BR", "th": "th", "vi": "vi", "cs": "cs", "da": "da"}   # 스토어에는 한국어 한 가지
+STORE = {"ko": "ko", "en": "en-US", "en-GB": "en-GB", "ja": "ja", "zh-Hans": "zh-Hans", "zh-Hant": "zh-Hant", "ru": "ru", "es": "es-ES", "de": "de-DE", "fr": "fr-FR", "it": "it", "pt-BR": "pt-BR", "th": "th", "vi": "vi", "cs": "cs", "da": "da", "el": "el"}   # 스토어에는 한국어 한 가지
 
 # (가로, 세로, 안전 영역 left, top, right, bottom)
 SPEC = {
@@ -49,6 +49,7 @@ SEARCH = {
     "vi": ("bản đồ quán ăn", "Gom quán yêu thích<br>vào một bản đồ", "Chấm sao và xếp hạng<br>Michelin của riêng bạn"),
     "cs": ("mapa restaurací", "Oblíbená místa<br>na jedné mapě", "Hvězdy a pořadí:<br>váš vlastní Michelin"),
     "da": ("restaurantkort", "Dine yndlingssteder<br>på ét kort", "Stjerner og rangering:<br>din egen Michelin"),
+    "el": ("χάρτης εστιατορίων", "Τα αγαπημένα σας μέρη<br>σε έναν χάρτη", "Αστέρια και κατάταξη:<br>το δικό σας Michelin"),
 }
 
 # 헤더는 한 가지 약속: 진짜 맛집만 골라 내 지도에 남긴다(부제 '진짜 맛집을 찾아서').
@@ -69,6 +70,7 @@ HEADER = {
     "vi": ("Insaeng", "Chỉ giữ quán ngon thật<br>trên bản đồ của bạn"),
     "cs": ("Insaeng", "Jen opravdu dobrá místa<br>na vaší mapě"),
     "da": ("Insaeng", "Kun de rigtig gode steder<br>på dit kort"),
+    "el": ("Insaeng", "Μόνο τα πραγματικά καλά μέρη<br>στον χάρτη σας"),
 }
 
 # ⚠️ 바탕 · 글자색은 앱 아이콘(크림빛 지도 위 빨간 차양 식당 · 빨간 핀)에서 왔다.

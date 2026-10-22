@@ -116,3 +116,10 @@ Send feedback direkte fra appen
 Fortæl os, hvor godt du kan lide appen
 Privatlivspolitik og hjælp er tilføjet
 Små fejl er rettet
+
+### 앱스토어 (Ελληνικά)
+
+Στείλτε σχόλια μέσα από την εφαρμογή
+Πείτε μας πόσο σας αρέσει η εφαρμογή
+Προστέθηκαν απόρρητο και σελίδα βοήθειας
+Διορθώθηκαν μικρά σφάλματα

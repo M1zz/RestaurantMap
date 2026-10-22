@@ -98,6 +98,12 @@
             "state" : "translated",
             "value" : "Menu hos %@"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Μενού του %@"
+          }
         }
       }
     },
@@ -198,6 +204,12 @@
             "state" : "translated",
             "value" : "%lld %% match"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Συμφωνία %lld%%"
+          }
         }
       }
     },
@@ -294,6 +306,12 @@
           }
         },
         "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "el" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld"
@@ -398,6 +416,12 @@
             "state" : "translated",
             "value" : "Bedøm %lld mere for at få anbefalinger"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Βαθμολογήστε ακόμη %lld για να λάβετε προτάσεις"
+          }
         }
       }
     },
@@ -497,6 +521,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld anmeldelser"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld κριτικές"
           }
         }
       }
@@ -598,6 +628,12 @@
             "state" : "translated",
             "value" : "Anbefalet af %lld brugere med lignende smag"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Προτείνεται από %lld χρήστες με παρόμοιο γούστο"
+          }
         }
       }
     },
@@ -697,6 +733,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nr. %lld"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Νο %lld"
           }
         }
       }
@@ -798,6 +840,12 @@
             "state" : "translated",
             "value" : "%lld billeder"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld φωτογραφίες"
+          }
         }
       }
     },
@@ -897,6 +945,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld gange"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld φορές"
           }
         }
       }
@@ -998,6 +1052,12 @@
             "state" : "translated",
             "value" : "%lld besøg"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld επισκέψεις"
+          }
         }
       }
     },
@@ -1097,6 +1157,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Slet “%@” og alle besøgsnoter?"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Διαγραφή του «%@» και όλων των καταγραφών επισκέψεων;"
           }
         }
       }
@@ -1198,6 +1264,12 @@
             "state" : "translated",
             "value" : "1️⃣ Upload mine data"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1️⃣ Μεταφόρτωση των δεδομένων μου"
+          }
         }
       }
     },
@@ -1297,6 +1369,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "2️⃣ Opret testdata"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2️⃣ Δημιουργία δοκιμαστικών δεδομένων"
           }
         }
       }
@@ -1398,6 +1476,12 @@
             "state" : "translated",
             "value" : "3️⃣ Se resultatet under fanen Anbefalinger"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3️⃣ Δείτε τα αποτελέσματα στην καρτέλα Προτάσεις"
+          }
         }
       }
     },
@@ -1497,6 +1581,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Du har ikke givet nogen restaurant 4 stjerner eller mere"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Κανένα εστιατόριο δεν έχει βαθμολογία 4 αστέρων ή πάνω"
           }
         }
       }
@@ -1598,6 +1688,12 @@
             "state" : "translated",
             "value" : "Din smag i seks egenskaber"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Το γούστο σας σε έξι χαρακτηριστικά"
+          }
         }
       }
     },
@@ -1697,6 +1793,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Åbn i Kort"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Άνοιγμα στους Χάρτες"
           }
         }
       }
@@ -1799,6 +1901,12 @@
             "state" : "translated",
             "value" : "Face ID-lås"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Κλείδωμα με Face ID"
+          }
         }
       }
     },
@@ -1900,6 +2008,12 @@
             "state" : "translated",
             "value" : "Lås appen med Face ID eller Touch ID, så din restaurantdagbog forbliver privat."
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Κλειδώστε την εφαρμογή με Face ID ή Touch ID για να μένει ιδιωτικό το ημερολόγιο των εστιατορίων σας."
+          }
         }
       }
     },
@@ -1999,6 +2113,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Upload data til Firebase\nfor at teste anbefalingssystemet"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Μεταφορτώστε δεδομένα στο Firebase\nγια να δοκιμάσετε το σύστημα προτάσεων"
           }
         }
       }
@@ -2100,6 +2220,12 @@
             "state" : "translated",
             "value" : "Upload til Realtime DB"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Μεταφόρτωση στη Realtime DB"
+          }
         }
       }
     },
@@ -2200,6 +2326,12 @@
             "state" : "translated",
             "value" : "Fordele ved Realtime Database"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Πλεονεκτήματα της Realtime Database"
+          }
         }
       }
     },
@@ -2299,6 +2431,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Henter data fra Realtime Database …"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Λήψη δεδομένων από τη Realtime Database…"
           }
         }
       }
@@ -2401,6 +2539,12 @@
             "state" : "translated",
             "value" : "Sig det til Siri, eller brug en genvej, og registrér et besøg med det samme."
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Πείτε το στη Siri ή χρησιμοποιήστε μια συντόμευση για να καταγράψετε αμέσως μια επίσκεψη."
+          }
         }
       }
     },
@@ -2501,6 +2645,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siri og Genveje"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri και Συντομεύσεις"
           }
         }
       }
@@ -2603,6 +2753,12 @@
             "state" : "translated",
             "value" : "Nemmere at bruge VoiceOver"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Πιο εύχρηστο VoiceOver"
+          }
         }
       }
     },
@@ -2702,6 +2858,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "iCloud-backup"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Αντίγραφο ασφαλείας iCloud"
           }
         }
       }
@@ -2803,6 +2965,12 @@
             "state" : "translated",
             "value" : "Du skal være logget ind på iCloud for at tage backup eller gendanne."
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Για αντίγραφο ασφαλείας ή επαναφορά πρέπει να έχετε συνδεθεί στο iCloud."
+          }
         }
       }
     },
@@ -2902,6 +3070,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tag backup til iCloud"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Αντίγραφο ασφαλείας στο iCloud"
           }
         }
       }
@@ -3003,6 +3177,12 @@
             "state" : "translated",
             "value" : "Gendan fra iCloud"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Επαναφορά από το iCloud"
+          }
         }
       }
     },
@@ -3102,6 +3282,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gendanner fra din iCloud-backup. Alle data på denne enhed slettes og erstattes af backuppen."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Επαναφορά από το αντίγραφο ασφαλείας του iCloud. Όλα τα δεδομένα αυτής της συσκευής θα διαγραφούν και θα αντικατασταθούν από το αντίγραφο."
           }
         }
       }
@@ -3203,6 +3389,12 @@
             "state" : "translated",
             "value" : "• 3-4 restauranter pr. bruger"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 3–4 εστιατόρια ανά χρήστη"
+          }
         }
       }
     },
@@ -3302,6 +3494,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "• 1-3 besøg pr. restaurant"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 1–3 καταγραφές επισκέψεων ανά εστιατόριο"
           }
         }
       }
@@ -3403,6 +3601,12 @@
             "state" : "translated",
             "value" : "• 5 brugere med forskellig smag"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 5 χρήστες με διαφορετικά γούστα"
+          }
         }
       }
     },
@@ -3502,6 +3706,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "⚡ Hurtigere synkronisering i realtid"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚡ Ταχύτερος συγχρονισμός σε πραγματικό χρόνο"
           }
         }
       }
@@ -3603,6 +3813,12 @@
             "state" : "translated",
             "value" : "⚡ Hurtigere synkronisering i realtid\n💰 Lavere omkostninger"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚡ Ταχύτερος συγχρονισμός σε πραγματικό χρόνο\n💰 Χαμηλότερο κόστος"
+          }
         }
       }
     },
@@ -3702,6 +3918,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "✓ Bedømt"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "✓ Βαθμολογήθηκε"
           }
         }
       }
@@ -3804,6 +4026,12 @@
             "state" : "translated",
             "value" : "En let vibration, når du gemmer et sted eller registrerer et besøg."
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Μια ελαφριά δόνηση όταν αποθηκεύετε ένα μέρος ή καταγράφετε μια επίσκεψη."
+          }
         }
       }
     },
@@ -3903,6 +4131,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pris"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Τιμή"
           }
         }
       }
@@ -4004,6 +4238,12 @@
             "state" : "translated",
             "value" : "Besøgt"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Έχω πάει"
+          }
         }
       }
     },
@@ -4103,6 +4343,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vil derhen"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Θέλω να πάω"
           }
         }
       }
@@ -4204,6 +4450,12 @@
             "state" : "translated",
             "value" : "En restaurant på listen “Vil derhen” kan ikke sættes i Top 6"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ένα εστιατόριο στη λίστα «Θέλω να πάω» δεν μπορεί να μπει στο Top 6"
+          }
         }
       }
     },
@@ -4303,6 +4555,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bedøm smagsintensitet og tilfredshed for hver ret. Bedømmelse er valgfri."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Βαθμολογήστε την ένταση της γεύσης και την ικανοποίηση για κάθε στοιχείο. Η βαθμολόγηση είναι προαιρετική."
           }
         }
       }
@@ -4404,6 +4662,12 @@
             "state" : "translated",
             "value" : "Kontakt udvikleren"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Επικοινωνία με τον προγραμματιστή"
+          }
         }
       }
     },
@@ -4503,6 +4767,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld søgeresultater"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld αποτελέσματα αναζήτησης"
           }
         }
       }
@@ -4604,6 +4874,12 @@
             "state" : "translated",
             "value" : "Længdegrad: %.6f"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Γεωγραφικό μήκος: %.6f"
+          }
         }
       }
     },
@@ -4703,6 +4979,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Type"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Τύπος"
           }
         }
       }
@@ -4805,6 +5087,12 @@
             "state" : "translated",
             "value" : "Når du gør teksten større, ordnes skærmene om, så intet bliver skåret af."
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Όταν μεγαλώνετε το κείμενο, οι οθόνες αναδιατάσσονται χωρίς να κόβεται τίποτα."
+          }
         }
       }
     },
@@ -4904,6 +5192,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Baseret på “%@”"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Με βάση το «%@»"
           }
         }
       }
@@ -5005,6 +5299,12 @@
             "state" : "translated",
             "value" : "Standard"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Προεπιλογή"
+          }
         }
       }
     },
@@ -5104,6 +5404,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Grundoplysninger"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Βασικές πληροφορίες"
           }
         }
       }
@@ -5205,6 +5511,12 @@
             "state" : "translated",
             "value" : "Indbygget"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ενσωματωμένο"
+          }
         }
       }
     },
@@ -5304,6 +5616,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Min Michelin"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Το δικό μου Michelin"
           }
         }
       }
@@ -5405,6 +5723,12 @@
             "state" : "translated",
             "value" : "Mit madnørd-DNA"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Το γαστρονομικό μου DNA"
+          }
         }
       }
     },
@@ -5504,6 +5828,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Min yndlings-Top 6"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Το αγαπημένο μου Top 6"
           }
         }
       }
@@ -5605,6 +5935,12 @@
             "state" : "translated",
             "value" : "Min Top 6"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Το Top 6 μου"
+          }
         }
       }
     },
@@ -5704,6 +6040,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mine data"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Τα δεδομένα μου"
           }
         }
       }
@@ -5805,6 +6147,12 @@
             "state" : "translated",
             "value" : "Upload mine data"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Μεταφόρτωση των δεδομένων μου"
+          }
         }
       }
     },
@@ -5904,6 +6252,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Føj til mine restauranter"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Προσθήκη στα εστιατόριά μου"
           }
         }
       }
@@ -6005,6 +6359,12 @@
             "state" : "translated",
             "value" : "Dine allerbedste restauranter"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Τα πιο αγαπημένα σας εστιατόρια"
+          }
         }
       }
     },
@@ -6104,6 +6464,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Typer, jeg har tilføjet"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Τύποι που πρόσθεσα"
           }
         }
       }
@@ -6205,6 +6571,12 @@
             "state" : "translated",
             "value" : "Åbn i Naver Map"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Άνοιγμα στο Naver Map"
+          }
         }
       }
     },
@@ -6304,6 +6676,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Prøv igen"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Δοκιμάστε ξανά"
           }
         }
       }
@@ -6406,6 +6784,12 @@
             "state" : "translated",
             "value" : "Mørk tilstand"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Σκουρόχρωμη λειτουργία"
+          }
         }
       }
     },
@@ -6505,6 +6889,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Luk"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Κλείσιμο"
           }
         }
       }
@@ -6607,6 +6997,12 @@
             "state" : "translated",
             "value" : "Se kort og lister tydeligt, også med øget kontrast eller hvis det er svært at kende forskel på farver."
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Διαβάστε εύκολα τον χάρτη και τις λίστες, ακόμη και με αυξημένη αντίθεση ή δυσκολία στη διάκριση χρωμάτων."
+          }
         }
       }
     },
@@ -6706,6 +7102,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Husets specialitet"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Σπεσιαλιτέ"
           }
         }
       }
@@ -6807,6 +7209,12 @@
             "state" : "translated",
             "value" : "Husets specialiteter vises øverst på menulisten"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Οι σπεσιαλιτέ εμφανίζονται στην κορυφή της λίστας μενού"
+          }
         }
       }
     },
@@ -6906,6 +7314,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Angiv som husets specialitet"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ορισμός ως σπεσιαλιτέ"
           }
         }
       }
@@ -7008,6 +7422,12 @@
             "state" : "translated",
             "value" : "Brug appen på flere sprog."
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Χρησιμοποιήστε την εφαρμογή σε περισσότερες γλώσσες."
+          }
         }
       }
     },
@@ -7109,6 +7529,12 @@
             "state" : "translated",
             "value" : "Flere sprog"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Περισσότερες γλώσσες"
+          }
         }
       }
     },
@@ -7208,6 +7634,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Opret testdata"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Δημιουργία δοκιμαστικών δεδομένων"
           }
         }
       }
@@ -7309,6 +7741,12 @@
             "state" : "translated",
             "value" : "Opretter 5 testbrugere og restaurantdata"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Δημιουργεί 5 δοκιμαστικούς χρήστες και δεδομένα εστιατορίων"
+          }
         }
       }
     },
@@ -7408,6 +7846,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Datastyring"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Διαχείριση δεδομένων"
           }
         }
       }
@@ -7509,6 +7953,12 @@
             "state" : "translated",
             "value" : "Datasynkronisering"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Συγχρονισμός δεδομένων"
+          }
         }
       }
     },
@@ -7608,6 +8058,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Synkronisér data"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Συγχρονισμός δεδομένων"
           }
         }
       }
@@ -7709,6 +8165,12 @@
             "state" : "translated",
             "value" : "Upload data"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Μεταφόρτωση δεδομένων"
+          }
         }
       }
     },
@@ -7808,6 +8270,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dataoversigt"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Επισκόπηση δεδομένων"
           }
         }
       }
@@ -7909,6 +8377,12 @@
             "state" : "translated",
             "value" : "Ikke nok data endnu"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Δεν υπάρχουν αρκετά δεδομένα"
+          }
         }
       }
     },
@@ -8008,6 +8482,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Der er måske ikke data nok"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ίσως τα δεδομένα να μην επαρκούν"
           }
         }
       }
@@ -8109,6 +8589,12 @@
             "state" : "translated",
             "value" : "Data kunne ikke indlæses"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Αδυναμία φόρτωσης δεδομένων"
+          }
         }
       }
     },
@@ -8208,6 +8694,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Adresse (vej)"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Διεύθυνση (οδός)"
           }
         }
       }
@@ -8309,6 +8801,12 @@
             "state" : "translated",
             "value" : "Ingen retter på menuen endnu"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Δεν υπάρχουν ακόμη πιάτα στο μενού"
+          }
         }
       }
     },
@@ -8408,6 +8906,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rangliste"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Κατάταξη"
           }
         }
       }
@@ -8509,6 +9013,12 @@
             "state" : "translated",
             "value" : "Riio Michelin-score"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Βαθμολογία Riio Michelin"
+          }
         }
       }
     },
@@ -8608,6 +9118,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Seneste backup"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Τελευταίο αντίγραφο ασφαλείας"
           }
         }
       }
@@ -8709,6 +9225,12 @@
             "state" : "translated",
             "value" : "Tilfredshed"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ικανοποίηση"
+          }
         }
       }
     },
@@ -8808,6 +9330,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Smagsintensitet"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ένταση γεύσης"
           }
         }
       }
@@ -8909,6 +9437,12 @@
             "state" : "translated",
             "value" : "Smagspræferencer"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Γευστικές προτιμήσεις"
+          }
         }
       }
     },
@@ -9008,6 +9542,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Smagspræferencer\n%lld %%"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Γευστικές προτιμήσεις\n%lld%%"
           }
         }
       }
@@ -9109,6 +9649,12 @@
             "state" : "translated",
             "value" : "Smagsbedømmelse"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Βαθμολογία γεύσης"
+          }
         }
       }
     },
@@ -9208,6 +9754,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Smag bedømt"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Η γεύση βαθμολογήθηκε"
           }
         }
       }
@@ -9309,6 +9861,12 @@
             "state" : "translated",
             "value" : "Smag bedømt"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Η γεύση βαθμολογήθηκε"
+          }
         }
       }
     },
@@ -9408,6 +9966,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Smagsprofil"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Γευστικό προφίλ"
           }
         }
       }
@@ -9509,6 +10073,12 @@
             "state" : "translated",
             "value" : "Restauranttips"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Προτάσεις εστιατορίων"
+          }
         }
       }
     },
@@ -9608,6 +10178,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Til dig"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Για εσάς"
           }
         }
       }
@@ -9709,6 +10285,12 @@
             "state" : "translated",
             "value" : "For at få anbefalinger, der passer til dig"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Για να λάβετε εξατομικευμένες προτάσεις"
+          }
         }
       }
     },
@@ -9808,6 +10390,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Meget tilfreds"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Πολύ ικανοποιημένος"
           }
         }
       }
@@ -9909,6 +10497,12 @@
             "state" : "translated",
             "value" : "Hvad du spiste"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Τι φάγατε"
+          }
         }
       }
     },
@@ -10008,6 +10602,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hvad du spiste (fx bulgogimenu, pizza margherita)"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Τι φάγατε (π.χ. μπουλγκογκί, πίτσα μαργαρίτα)"
           }
         }
       }
@@ -10109,6 +10709,12 @@
             "state" : "translated",
             "value" : "Menu"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Μενού"
+          }
         }
       }
     },
@@ -10208,6 +10814,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Administrer menu"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Διαχείριση μενού"
           }
         }
       }
@@ -10309,6 +10921,12 @@
             "state" : "translated",
             "value" : "Tilføj retter"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Προσθήκη πιάτων"
+          }
         }
       }
     },
@@ -10408,6 +11026,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Menu (%lld)"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Μενού (%lld)"
           }
         }
       }
@@ -10509,6 +11133,12 @@
             "state" : "translated",
             "value" : "Vælg ret"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Επιλογή πιάτου"
+          }
         }
       }
     },
@@ -10608,6 +11238,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Beskrivelse af ret"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Περιγραφή πιάτου"
           }
         }
       }
@@ -10709,6 +11345,12 @@
             "state" : "translated",
             "value" : "Beskrivelse af ret (valgfri)"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Περιγραφή πιάτου (προαιρετικά)"
+          }
         }
       }
     },
@@ -10808,6 +11450,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Navn på ret"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Όνομα πιάτου"
           }
         }
       }
@@ -10909,6 +11557,12 @@
             "state" : "translated",
             "value" : "Oplysninger om ret"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Στοιχεία πιάτου"
+          }
         }
       }
     },
@@ -11008,6 +11662,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tilføj ret"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Προσθήκη πιάτου"
           }
         }
       }
@@ -11109,6 +11769,12 @@
             "state" : "translated",
             "value" : "Tilføjede retter kan vælges, når du registrerer et besøg"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Τα πιάτα που προσθέτετε μπορείτε να τα επιλέξετε όταν καταγράφετε μια επίσκεψη"
+          }
         }
       }
     },
@@ -11208,6 +11874,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Noter"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Σημειώσεις"
           }
         }
       }
@@ -11309,6 +11981,12 @@
             "state" : "translated",
             "value" : "Ingen noter"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Χωρίς σημειώσεις"
+          }
         }
       }
     },
@@ -11408,6 +12086,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Alle restauranter og besøg slettes. Det kan ikke fortrydes."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Όλα τα εστιατόρια και οι καταγραφές επισκέψεων θα διαγραφούν. Η ενέργεια δεν αναιρείται."
           }
         }
       }
@@ -11509,6 +12193,12 @@
             "state" : "translated",
             "value" : "Slet alle data"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Διαγραφή όλων των δεδομένων"
+          }
         }
       }
     },
@@ -11608,6 +12298,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Liste"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Λίστα"
           }
         }
       }
@@ -11709,6 +12405,12 @@
             "state" : "translated",
             "value" : "Luk liste"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Κλείσιμο λίστας"
+          }
         }
       }
     },
@@ -11808,6 +12510,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Besøgslog"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ιστορικό επισκέψεων"
           }
         }
       }
@@ -11909,6 +12617,12 @@
             "state" : "translated",
             "value" : "Tilføj besøg"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Προσθήκη επίσκεψης"
+          }
         }
       }
     },
@@ -12009,6 +12723,12 @@
             "state" : "translated",
             "value" : "Angiv en smagsbedømmelse, når du tilføjer et besøg"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Εισαγάγετε βαθμολογία γεύσης όταν προσθέτετε επίσκεψη"
+          }
         }
       }
     },
@@ -12108,6 +12828,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vælg denne ret, når du tilføjer et besøg"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Επιλέξτε αυτό το πιάτο όταν προσθέτετε επίσκεψη"
           }
         }
       }
@@ -12210,6 +12936,12 @@
             "state" : "translated",
             "value" : "Hvis appen lukker, mens du skriver et besøg, bliver det skrevne gemt."
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Αν η εφαρμογή κλείσει ενώ γράφετε μια επίσκεψη, αυτά που γράψατε διατηρούνται."
+          }
         }
       }
     },
@@ -12309,6 +13041,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Besøgsdato"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ημερομηνία επίσκεψης"
           }
         }
       }
@@ -12410,6 +13148,12 @@
             "state" : "translated",
             "value" : "Oplysninger om besøg"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Στοιχεία επίσκεψης"
+          }
         }
       }
     },
@@ -12509,6 +13253,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Besøgsstatistik"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Στατιστικά επισκέψεων"
           }
         }
       }
@@ -12610,6 +13360,12 @@
             "state" : "translated",
             "value" : "Backup"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Αντίγραφο ασφαλείας"
+          }
         }
       }
     },
@@ -12709,6 +13465,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fejlrapporter og forslag til nye funktioner er velkomne."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Αναφορές σφαλμάτων και προτάσεις λειτουργιών είναι ευπρόσδεκτες."
           }
         }
       }
@@ -12810,6 +13572,12 @@
             "state" : "translated",
             "value" : "Version"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Έκδοση"
+          }
         }
       }
     },
@@ -12910,6 +13678,12 @@
             "state" : "translated",
             "value" : "Bedømmelse"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Βαθμολογία"
+          }
         }
       }
     },
@@ -13009,6 +13783,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bedøm"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Βαθμολόγηση"
           }
         }
       }
@@ -13111,6 +13891,12 @@
             "state" : "translated",
             "value" : "Mere behagelige farver og kontrast"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Πιο άνετα χρώματα και αντίθεση"
+          }
         }
       }
     },
@@ -13210,6 +13996,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gendan"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Επαναφορά"
           }
         }
       }
@@ -13311,6 +14103,12 @@
             "state" : "translated",
             "value" : "Indlæser …"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Φόρτωση…"
+          }
         }
       }
     },
@@ -13410,6 +14208,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Utilfreds"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Δυσαρεστημένος"
           }
         }
       }
@@ -13511,6 +14315,12 @@
             "state" : "translated",
             "value" : "Hvad andre siger"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Τι λένε οι άλλοι"
+          }
         }
       }
     },
@@ -13610,6 +14420,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Billeder"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Φωτογραφίες"
           }
         }
       }
@@ -13711,6 +14527,12 @@
             "state" : "translated",
             "value" : "Billeder (%lld)"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Φωτογραφίες (%lld)"
+          }
         }
       }
     },
@@ -13810,6 +14632,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vælg billeder"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Επιλογή φωτογραφιών"
           }
         }
       }
@@ -13911,6 +14739,12 @@
             "state" : "translated",
             "value" : "Tilføj billeder"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Προσθήκη φωτογραφιών"
+          }
         }
       }
     },
@@ -14010,6 +14844,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Slet"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Διαγραφή"
           }
         }
       }
@@ -14111,6 +14951,12 @@
             "state" : "translated",
             "value" : "Detaljer om match"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Λεπτομέρειες συμφωνίας"
+          }
         }
       }
     },
@@ -14210,6 +15056,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ny madtype"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Νέος τύπος κουζίνας"
           }
         }
       }
@@ -14311,6 +15163,12 @@
             "state" : "translated",
             "value" : "Tilføj ny type"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Προσθήκη νέου τύπου"
+          }
         }
       }
     },
@@ -14410,6 +15268,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Billeder der tilføjes"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Φωτογραφίες προς προσθήκη"
           }
         }
       }
@@ -14511,6 +15375,12 @@
             "state" : "translated",
             "value" : "Opdater"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ανανέωση"
+          }
         }
       }
     },
@@ -14610,6 +15480,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vælg"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Επιλογή"
           }
         }
       }
@@ -14711,6 +15587,12 @@
             "state" : "translated",
             "value" : "Ingen"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Κανένα"
+          }
         }
       }
     },
@@ -14811,6 +15693,12 @@
             "state" : "translated",
             "value" : "Beskrivelse"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Περιγραφή"
+          }
         }
       }
     },
@@ -14910,6 +15798,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Indstillinger"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ρυθμίσεις"
           }
         }
       }
@@ -15012,6 +15906,12 @@
             "state" : "translated",
             "value" : "Respons, du kan mærke i fingerspidserne"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Αντίδραση που την νιώθετε στα δάχτυλα"
+          }
         }
       }
     },
@@ -15111,6 +16011,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Restauranttype"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Τύπος εστιατορίου"
           }
         }
       }
@@ -15212,6 +16118,12 @@
             "state" : "translated",
             "value" : "Restauranter"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Εστιατόρια"
+          }
         }
       }
     },
@@ -15311,6 +16223,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bedøm restauranter fra listen"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Βαθμολογήστε εστιατόρια από τη λίστα"
           }
         }
       }
@@ -15412,6 +16330,12 @@
             "state" : "translated",
             "value" : "Slet restaurant"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Διαγραφή εστιατορίου"
+          }
         }
       }
     },
@@ -15511,6 +16435,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Giv 4 stjerner eller mere på restaurantens detaljeside"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Δώστε 4 αστέρια ή περισσότερα στην οθόνη λεπτομερειών του εστιατορίου"
           }
         }
       }
@@ -15612,6 +16542,12 @@
             "state" : "translated",
             "value" : "Ingen restauranter"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Κανένα εστιατόριο"
+          }
         }
       }
     },
@@ -15711,6 +16647,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Restaurantens navn"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Όνομα εστιατορίου"
           }
         }
       }
@@ -15812,6 +16754,12 @@
             "state" : "translated",
             "value" : "Oplysninger om restaurant"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Στοιχεία εστιατορίου"
+          }
         }
       }
     },
@@ -15911,6 +16859,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Restaurantkort"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Χάρτης εστιατορίων"
           }
         }
       }
@@ -16012,6 +16966,12 @@
             "state" : "translated",
             "value" : "Tilføj restaurant"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Προσθήκη εστιατορίου"
+          }
         }
       }
     },
@@ -16111,6 +17071,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tilføj en restaurant"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Προσθήκη εστιατορίου"
           }
         }
       }
@@ -16212,6 +17178,12 @@
             "state" : "translated",
             "value" : "Tilføj som restaurant"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Προσθήκη ως εστιατόριο"
+          }
         }
       }
     },
@@ -16311,6 +17283,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tilføj en restaurant for at komme i gang"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Προσθέστε ένα εστιατόριο για να ξεκινήσετε"
           }
         }
       }
@@ -16413,6 +17391,12 @@
             "state" : "translated",
             "value" : "Gode råd"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Χρήσιμες συμβουλές"
+          }
         }
       }
     },
@@ -16514,6 +17498,12 @@
             "state" : "translated",
             "value" : "Fortsæt et påbegyndt besøg"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Συνέχεια μιας μισοτελειωμένης επίσκεψης"
+          }
         }
       }
     },
@@ -16614,6 +17604,12 @@
             "state" : "translated",
             "value" : "Nej"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Όχι"
+          }
         }
       }
     },
@@ -16713,6 +17709,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Symbol"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Εικονίδιο"
           }
         }
       }
@@ -16815,6 +17817,12 @@
             "state" : "translated",
             "value" : "På iPad kan du bruge de vigtigste funktioner kun med tastaturet."
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Στο iPad χρησιμοποιήστε τις κύριες λειτουργίες μόνο με το πληκτρολόγιο."
+          }
         }
       }
     },
@@ -16914,6 +17922,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Der er endnu ingen restauranter på listen “Vil derhen”"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Δεν υπάρχουν ακόμη εστιατόρια στη λίστα «Θέλω να πάω»"
           }
         }
       }
@@ -17015,6 +18029,12 @@
             "state" : "translated",
             "value" : "Du har ikke besøgt denne restaurant endnu"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Δεν έχετε επισκεφθεί ακόμη αυτό το εστιατόριο"
+          }
         }
       }
     },
@@ -17114,6 +18134,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ingen besøgte restauranter endnu"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Δεν υπάρχουν ακόμη εστιατόρια που έχετε επισκεφθεί"
           }
         }
       }
@@ -17215,6 +18241,12 @@
             "state" : "translated",
             "value" : "Ingen gemte restauranter endnu"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Δεν υπάρχουν ακόμη αποθηκευμένα εστιατόρια"
+          }
         }
       }
     },
@@ -17315,6 +18347,12 @@
             "state" : "translated",
             "value" : "Ingen restauranter i Top 6 endnu"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Δεν υπάρχουν ακόμη εστιατόρια στο Top 6"
+          }
         }
       }
     },
@@ -17414,6 +18452,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ingen bedømmelser endnu"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Δεν υπάρχουν ακόμη βαθμολογίες"
           }
         }
       }
@@ -17516,6 +18560,12 @@
             "state" : "translated",
             "value" : "Vi gør diskret opmærksom på nyttige funktioner, lige når du har brug for dem."
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Σας υποδεικνύουμε διακριτικά χρήσιμες λειτουργίες, τη σωστή στιγμή."
+          }
         }
       }
     },
@@ -17616,6 +18666,12 @@
             "state" : "translated",
             "value" : "Vælg fra bibliotek"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Επιλογή από τη βιβλιοθήκη"
+          }
         }
       }
     },
@@ -17715,6 +18771,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Om"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Σχετικά"
           }
         }
       }
@@ -17817,6 +18879,12 @@
             "state" : "translated",
             "value" : "Se dine yndlingssteder direkte på hjemmeskærmen uden at åbne appen."
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Δείτε τα αγαπημένα σας μέρη απευθείας στην Αρχική οθόνη, χωρίς να ανοίξετε την εφαρμογή."
+          }
         }
       }
     },
@@ -17917,6 +18985,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Appen kan også bruges på engelsk."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Η εφαρμογή μπορεί να χρησιμοποιηθεί και στα αγγλικά."
           }
         }
       }
@@ -18019,6 +19093,12 @@
             "state" : "translated",
             "value" : "Tekst og knapper er skarpe og tydelige i mørk tilstand."
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Το κείμενο και τα κουμπιά παραμένουν καθαρά και στη σκουρόχρωμη λειτουργία."
+          }
         }
       }
     },
@@ -18119,6 +19199,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Første gang du åbner appen efter en opdatering, kan du se, hvad der er nyt."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Την πρώτη φορά που ανοίγετε την εφαρμογή μετά από ενημέρωση, δείτε τι νέο υπάρχει."
           }
         }
       }
@@ -18221,6 +19307,12 @@
             "state" : "translated",
             "value" : "Nyheder"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Τι νέο υπάρχει"
+          }
         }
       }
     },
@@ -18320,6 +19412,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vi analyserer din smag for at give dig anbefalinger, der passer"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Αναλύουμε το γούστο σας για να σας δώσουμε εξατομικευμένες προτάσεις"
           }
         }
       }
@@ -18422,6 +19520,12 @@
             "state" : "translated",
             "value" : "Understøttelse af engelsk"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Υποστήριξη αγγλικών"
+          }
         }
       }
     },
@@ -18521,6 +19625,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fx thai, indisk"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "π.χ. ταϊλανδέζικη, ινδική"
           }
         }
       }
@@ -18622,6 +19732,12 @@
             "state" : "translated",
             "value" : "Forventet bedømmelse"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Εκτιμώμενη βαθμολογία"
+          }
         }
       }
     },
@@ -18721,6 +19837,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fejl"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Σφάλμα"
           }
         }
       }
@@ -18822,6 +19944,12 @@
             "state" : "translated",
             "value" : "Færdig"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Τέλος"
+          }
         }
       }
     },
@@ -18921,6 +20049,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hvorfor anbefales den?"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Γιατί προτείνεται;"
           }
         }
       }
@@ -19023,6 +20157,12 @@
             "state" : "translated",
             "value" : "Reducer bevægelse"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Μείωση κίνησης"
+          }
         }
       }
     },
@@ -19124,6 +20264,12 @@
             "state" : "translated",
             "value" : "Når “Reducer bevægelse” er slået til, bliver effekterne på skærmen mere rolige."
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Με ενεργή τη «Μείωση κίνησης», τα εφέ στην οθόνη γίνονται πιο ήρεμα."
+          }
         }
       }
     },
@@ -19220,6 +20366,12 @@
           }
         },
         "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "KRW"
+          }
+        },
+        "el" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "KRW"
@@ -19324,6 +20476,12 @@
             "state" : "translated",
             "value" : "Websted"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ιστότοπος"
+          }
         }
       }
     },
@@ -19423,6 +20581,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Breddegrad: %.6f"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Γεωγραφικό πλάτος: %.6f"
           }
         }
       }
@@ -19524,6 +20688,12 @@
             "state" : "translated",
             "value" : "Placering"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Τοποθεσία"
+          }
         }
       }
     },
@@ -19623,6 +20793,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vælg placering"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Επιλογή τοποθεσίας"
           }
         }
       }
@@ -19724,6 +20900,12 @@
             "state" : "translated",
             "value" : "Madstil"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Στυλ κουζίνας"
+          }
         }
       }
     },
@@ -19823,6 +21005,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Madtype"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Τύπος κουζίνας"
           }
         }
       }
@@ -19924,6 +21112,12 @@
             "state" : "translated",
             "value" : "Administrer madtyper"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Διαχείριση τύπων κουζίνας"
+          }
         }
       }
     },
@@ -20023,6 +21217,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hvordan var dette besøg?"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Πώς ήταν αυτή η επίσκεψη;"
           }
         }
       }
@@ -20124,6 +21324,12 @@
             "state" : "translated",
             "value" : "Tryk på Rediger for at bedømme smagen ved dette besøg"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Πατήστε Επεξεργασία για να βαθμολογήσετε τις γεύσεις αυτής της επίσκεψης"
+          }
         }
       }
     },
@@ -20223,6 +21429,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Denne restaurant har endnu ingen retter på menuen. Tilføj dem først, eller skriv en ind."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Αυτό το εστιατόριο δεν έχει ακόμη πιάτα στο μενού. Προσθέστε πρώτα ή πληκτρολογήστε ένα."
           }
         }
       }
@@ -20324,6 +21536,12 @@
             "state" : "translated",
             "value" : "Overordnet er denne restaurant …"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Συνολικά, αυτό το εστιατόριο είναι…"
+          }
         }
       }
     },
@@ -20423,6 +21641,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Navn"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Όνομα"
           }
         }
       }
@@ -20524,6 +21748,12 @@
             "state" : "translated",
             "value" : "Kontakt via e-mail"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Επικοινωνία μέσω email"
+          }
         }
       }
     },
@@ -20623,6 +21853,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Billedet kunne ikke indlæses"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Αδυναμία φόρτωσης της εικόνας"
           }
         }
       }
@@ -20724,6 +21960,12 @@
             "state" : "translated",
             "value" : "Bedøm din livs restaurant"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Βαθμολογήστε το εστιατόριο της ζωής σας"
+          }
         }
       }
     },
@@ -20823,6 +22065,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Instagram-besked (@lee25_ios)"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Μήνυμα Instagram (@lee25_ios)"
           }
         }
       }
@@ -20924,6 +22172,12 @@
             "state" : "translated",
             "value" : "Du kan selv tilføje de madtyper, du ofte spiser"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Μπορείτε να προσθέσετε μόνοι σας τους τύπους κουζίνας που τρώτε συχνά"
+          }
         }
       }
     },
@@ -21023,6 +22277,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stedoplysninger"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Στοιχεία τοποθεσίας"
           }
         }
       }
@@ -21124,6 +22384,12 @@
             "state" : "translated",
             "value" : "Indlæser stedoplysninger …"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Φόρτωση στοιχείων τοποθεσίας…"
+          }
         }
       }
     },
@@ -21223,6 +22489,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Udfyldt fra stedoplysninger"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Συμπληρώθηκε από τα στοιχεία τοποθεσίας"
           }
         }
       }
@@ -21324,6 +22596,12 @@
             "state" : "translated",
             "value" : "Gem"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Αποθήκευση"
+          }
         }
       }
     },
@@ -21423,6 +22701,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gemte restauranter"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Αποθηκευμένα εστιατόρια"
           }
         }
       }
@@ -21524,6 +22808,12 @@
             "state" : "translated",
             "value" : "Gemte restauranter: %lld"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Αποθηκευμένα εστιατόρια: %lld"
+          }
         }
       }
     },
@@ -21623,6 +22913,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Alle"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Όλα"
           }
         }
       }
@@ -21724,6 +23020,12 @@
             "state" : "translated",
             "value" : "Samlet match"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Συνολική συμφωνία"
+          }
         }
       }
     },
@@ -21823,6 +23125,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Telefon"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Τηλέφωνο"
           }
         }
       }
@@ -21924,6 +23232,12 @@
             "state" : "translated",
             "value" : "Slet alle data? Det kan ikke fortrydes."
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Διαγραφή όλων των δεδομένων; Η ενέργεια δεν αναιρείται."
+          }
         }
       }
     },
@@ -22023,6 +23337,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Oplysningerne kunne ikke indlæses"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Αδυναμία φόρτωσης πληροφοριών"
           }
         }
       }
@@ -22124,6 +23444,12 @@
             "state" : "translated",
             "value" : "Bedøm lige lidt flere!"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Βαθμολογήστε λίγα ακόμη, παρακαλούμε!"
+          }
         }
       }
     },
@@ -22223,6 +23549,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Antal bestillinger"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Φορές παραγγελίας"
           }
         }
       }
@@ -22324,6 +23656,12 @@
             "state" : "translated",
             "value" : "Adresse"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Διεύθυνση"
+          }
         }
       }
     },
@@ -22423,6 +23761,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kort"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Χάρτης"
           }
         }
       }
@@ -22524,6 +23868,12 @@
             "state" : "translated",
             "value" : "Tilføj en restaurant fra kortet eller listen"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Προσθέστε ένα εστιατόριο από τον χάρτη ή τη λίστα"
+          }
         }
       }
     },
@@ -22623,6 +23973,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Flyt kortet eller vælg et andet sted,\nog prøv igen"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Μετακινήστε τον χάρτη ή επιλέξτε άλλο μέρος\nκαι δοκιμάστε ξανά"
           }
         }
       }
@@ -22724,6 +24080,12 @@
             "state" : "translated",
             "value" : "Vis på kort"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Προβολή στον χάρτη"
+          }
         }
       }
     },
@@ -22823,6 +24185,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Find restauranter på kortet"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Εύρεση εστιατορίων στον χάρτη"
           }
         }
       }
@@ -22924,6 +24292,12 @@
             "state" : "translated",
             "value" : "Adresse (matrikel)"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Διεύθυνση (γεωτεμάχιο)"
+          }
         }
       }
     },
@@ -23024,6 +24398,12 @@
             "state" : "translated",
             "value" : "Support"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Υποστήριξη"
+          }
         }
       }
     },
@@ -23123,6 +24503,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Indtast manuelt"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Μη αυτόματη εισαγωγή"
           }
         }
       }
@@ -23225,6 +24611,12 @@
             "state" : "translated",
             "value" : "Kom godt i gang"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Οδηγός έναρξης"
+          }
         }
       }
     },
@@ -23326,6 +24718,12 @@
             "state" : "translated",
             "value" : "En kort gennemgang af, hvad du kan, første gang du åbner appen."
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Μια σύντομη ματιά σε όσα μπορείτε να κάνετε την πρώτη φορά που ανοίγετε την εφαρμογή."
+          }
         }
       }
     },
@@ -23425,6 +24823,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tilføj din første ret"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Προσθέστε το πρώτο σας πιάτο"
           }
         }
       }
@@ -23526,6 +24930,12 @@
             "state" : "translated",
             "value" : "Tilføj dit første besøg"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Προσθέστε την πρώτη σας επίσκεψη"
+          }
         }
       }
     },
@@ -23625,6 +25035,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nulstil"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Επαναφορά αρχικών ρυθμίσεων"
           }
         }
       }
@@ -23726,6 +25142,12 @@
             "state" : "translated",
             "value" : "Besøg i alt"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Σύνολο επισκέψεων"
+          }
         }
       }
     },
@@ -23825,6 +25247,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Besøg i alt"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Σύνολο επισκέψεων"
           }
         }
       }
@@ -23926,6 +25354,12 @@
             "state" : "translated",
             "value" : "Samlet vurdering (gennemsnit af alle besøg)"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Συνολική εκτίμηση (μέσος όρος όλων των επισκέψεων)"
+          }
         }
       }
     },
@@ -24025,6 +25459,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dine bedste restauranter"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Τα καλύτερά σας εστιατόρια"
           }
         }
       }
@@ -24126,6 +25566,12 @@
             "state" : "translated",
             "value" : "Seneste besøg"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Τελευταία επίσκεψη"
+          }
         }
       }
     },
@@ -24225,6 +25671,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Seneste bestilling"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Τελευταία παραγγελία"
           }
         }
       }
@@ -24326,6 +25778,12 @@
             "state" : "translated",
             "value" : "Anbefalinger"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Προτάσεις"
+          }
         }
       }
     },
@@ -24425,6 +25883,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Få anbefalinger"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Λήψη προτάσεων"
           }
         }
       }
@@ -24526,6 +25990,12 @@
             "state" : "translated",
             "value" : "Analyserer anbefalinger …"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ανάλυση προτάσεων…"
+          }
         }
       }
     },
@@ -24625,6 +26095,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Anbefalede restauranter"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Προτεινόμενα εστιατόρια"
           }
         }
       }
@@ -24726,6 +26202,12 @@
             "state" : "translated",
             "value" : "Anbefalingsscore"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Βαθμολογία πρότασης"
+          }
         }
       }
     },
@@ -24825,6 +26307,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Trin til test af anbefalinger"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Βήματα δοκιμής προτάσεων"
           }
         }
       }
@@ -24926,6 +26414,12 @@
             "state" : "translated",
             "value" : "Ingen restauranter at anbefale"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Δεν υπάρχουν εστιατόρια για πρόταση"
+          }
         }
       }
     },
@@ -25025,6 +26519,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Annuller"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ακύρωση"
           }
         }
       }
@@ -25126,6 +26626,12 @@
             "state" : "translated",
             "value" : "Smag"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Γούστο"
+          }
         }
       }
     },
@@ -25225,6 +26731,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Smagsprofil"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Προφίλ γούστου"
           }
         }
       }
@@ -25326,6 +26838,12 @@
             "state" : "translated",
             "value" : "Tag billede"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Λήψη φωτογραφίας"
+          }
         }
       }
     },
@@ -25425,6 +26943,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Åbn i Kakao Map"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Άνοιγμα στο Kakao Map"
           }
         }
       }
@@ -25526,6 +27050,12 @@
             "state" : "translated",
             "value" : "Kategori"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Κατηγορία"
+          }
         }
       }
     },
@@ -25625,6 +27155,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kategori\n%lld %%"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Κατηγορία\n%lld%%"
           }
         }
       }
@@ -25726,6 +27262,12 @@
             "state" : "translated",
             "value" : "Kategori (fx koreansk, kinesisk)"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Κατηγορία (π.χ. κορεάτικη, κινέζικη)"
+          }
         }
       }
     },
@@ -25826,6 +27368,12 @@
             "state" : "translated",
             "value" : "Kategoriindstillinger"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ρυθμίσεις κατηγοριών"
+          }
         }
       }
     },
@@ -25925,6 +27473,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kategorisymbol"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Εικονίδιο κατηγορίας"
           }
         }
       }
@@ -26027,6 +27581,12 @@
             "state" : "translated",
             "value" : "Layout til stor tekst"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Διατάξεις για μεγάλο κείμενο"
+          }
         }
       }
     },
@@ -26128,6 +27688,12 @@
             "state" : "translated",
             "value" : "Styring med tastatur"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Χειρισμός με πληκτρολόγιο"
+          }
         }
       }
     },
@@ -26228,6 +27794,12 @@
             "state" : "translated",
             "value" : "Føj til Top 6"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Προσθήκη στο Top 6"
+          }
         }
       }
     },
@@ -26324,6 +27896,12 @@
           }
         },
         "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Top 6"
+          }
+        },
+        "el" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Top 6"
@@ -26428,6 +28006,12 @@
             "state" : "translated",
             "value" : "Grænse for Top 6"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Όριο Top 6"
+          }
         }
       }
     },
@@ -26527,6 +28111,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Top 6 kan højst indeholde 6 restauranter (nu: %lld/6)"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Το Top 6 χωράει έως 6 εστιατόρια (τώρα: %lld/6)"
           }
         }
       }
@@ -26628,6 +28218,12 @@
             "state" : "translated",
             "value" : "Top 6 kan højst indeholde 6 restauranter. Fjern en anden restaurant fra Top 6, og prøv igen."
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Το Top 6 χωράει έως 6 εστιατόρια. Αφαιρέστε ένα άλλο εστιατόριο από το Top 6 και δοκιμάστε ξανά."
+          }
         }
       }
     },
@@ -26728,6 +28324,12 @@
             "state" : "translated",
             "value" : "Testdata"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Δοκιμαστικά δεδομένα"
+          }
         }
       }
     },
@@ -26827,6 +28429,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Statistik"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Στατιστικά"
           }
         }
       }
@@ -26929,6 +28537,12 @@
             "state" : "translated",
             "value" : "Layout til foldbar iPhone"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Διάταξη για αναδιπλούμενο iPhone"
+          }
         }
       }
     },
@@ -27030,6 +28644,12 @@
             "state" : "translated",
             "value" : "På en foldbar iPhone deles den brede skærm i to paneler."
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Σε αναδιπλούμενο iPhone, η μεγάλη οθόνη χωρίζεται σε δύο τμήματα."
+          }
         }
       }
     },
@@ -27129,6 +28749,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bedømmelsesoplysninger"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Στοιχεία βαθμολογίας"
           }
         }
       }
@@ -27230,6 +28856,12 @@
             "state" : "translated",
             "value" : "Bedømmelseshistorik (%lld)"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ιστορικό βαθμολογιών (%lld)"
+          }
         }
       }
     },
@@ -27329,6 +28961,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gennemsnitlig bedømmelse"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Μέση βαθμολογία"
           }
         }
       }
@@ -27430,6 +29068,12 @@
             "state" : "translated",
             "value" : "Bedømmelsesmønster\n%lld %%"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Μοτίβο βαθμολογίας\n%lld%%"
+          }
         }
       }
     },
@@ -27530,6 +29174,12 @@
             "state" : "translated",
             "value" : "Tager backup af dine nuværende data til iCloud. En eksisterende backup overskrives."
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Δημιουργεί αντίγραφο ασφαλείας των τρεχόντων δεδομένων στο iCloud. Τυχόν υπάρχον αντίγραφο θα αντικατασταθεί."
+          }
         }
       }
     },
@@ -27629,6 +29279,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fra nuværende position"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Από την τρέχουσα τοποθεσία"
           }
         }
       }
@@ -27731,6 +29387,12 @@
             "state" : "translated",
             "value" : "Widgets på hjemmeskærmen"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Γραφικά στοιχεία Αρχικής οθόνης"
+          }
         }
       }
     },
@@ -27832,6 +29494,12 @@
             "state" : "translated",
             "value" : "VoiceOver læser alle knapper og indhold højt i den rigtige rækkefølge."
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Το VoiceOver διαβάζει όλα τα κουμπιά και το περιεχόμενο με τη σωστή σειρά."
+          }
         }
       }
     },
@@ -27928,6 +29596,12 @@
           }
         },
         "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "el" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"
@@ -28032,6 +29706,12 @@
             "state" : "translated",
             "value" : "💰 Billigt (1/6 af prisen for Firestore)"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "💰 Οικονομικό (1/6 του κόστους του Firestore)"
+          }
         }
       }
     },
@@ -28131,6 +29811,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "🚀 Enkel JSON-struktur"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🚀 Απλή δομή JSON"
           }
         }
       }
