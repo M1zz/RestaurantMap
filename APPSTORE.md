@@ -1287,3 +1287,59 @@ När du har varit på en sparad restaurang påminner vi dig om att registrera be
 
 iCloud-säkerhetskopia
 Dina anteckningar finns kvar på enheten, och du kan när som helst säkerhetskopiera dem till din egen iCloud och återställa därifrån.
+
+## tr
+
+### 지원 URL
+
+https://m1zz.github.io/RestaurantMap/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/RestaurantMap/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/RestaurantMap/
+
+### 이름
+
+Insaeng: Restoran Haritası
+
+### 부제
+
+Yemeklerini puanla, sırala
+
+### 키워드
+
+günlük,favoriler,yemek,yorumlar,istek listesi,biftek,ramen,suşi,kafe,randevu,notlar,kahve,öğle,akşam
+
+### 프로모션 텍스트
+
+Gittiğiniz her restoranı haritaya iğneleyin, puanınızı ve notlarınızı kaydedin. Mekân mekân, unutamayacağınız yemeklerin haritasını oluşturun.
+
+### 설명
+
+Yemek yediğiniz yerleri haritaya iğneleyin ve her gidişinizde lezzetini not edin.
+Insaeng, yalnızca sizin seçtiğiniz restoranlardan oluşan kişisel yemek haritanızdır.
+
+Sevdiğiniz mekânların haritası
+Bir restoran arayın ya da haritadan bir nokta seçip kaydedin. Kaydedilen yerler iğne olarak görünür, en sevdiğiniz altı yer ise kendi sıralama rozetini alır.
+
+Gidilenler, Gitmek istediklerim ve Top 6
+Deneyip beğendiğiniz restoranlarla denemek istediklerinizi ayrı listelerde tutun, en iyi altısını sıralayın.
+
+Her yemeğe kendi ölçütleri
+Biftekte pişme derecesi ve sululuk, suşide pirinç ve balık, ramende et suyu ve erişte önemlidir. Lezzet yoğunluğunu ve memnuniyeti her yemek türüne uygun ölçütlerle puanlayın. Pizza, şarap ve kahve için de ayrı puanlama vardır; kendi mutfak türlerinizi de ekleyebilirsiniz.
+
+Her gidişle büyüyen ziyaret günlüğü
+Her ziyaret için tarihi, puanı, yediklerinizi, fotoğrafları ve notları kaydedin. Her restoran ziyaret sayısını, ortalama puanı ve genel lezzet değerlendirmesini biriktirir. Menüyü eklerseniz şefin spesiyallerini ve fiyatları tek bakışta görürsünüz.
+
+Zevk profiliniz
+Damak zevkinizi grafikte görün: acı, tatlı, tuzlu, yağlı ve doğal lezzetler.
+
+Ziyaret sonrası hatırlatma
+Kaydettiğiniz bir restorana gittikten sonra ziyareti kaydetmenizi hatırlatırız. Yalnızca konum erişimine izin verirseniz çalışır.
+
+iCloud yedeği
+Kayıtlarınız aygıtınızda durur; istediğiniz zaman kendi iCloud’unuza yedekleyip geri yükleyebilirsiniz.

@@ -165,3 +165,10 @@ Skicka feedback direkt från appen
 Berätta hur du gillar appen
 Integritetspolicy och hjälp tillagda
 Små fel har åtgärdats
+
+### 앱스토어 (Türkçe)
+
+Geri bildirimi uygulamadan gönderin
+Uygulamayı ne kadar sevdiğinizi söyleyin
+Gizlilik ve yardım sayfaları eklendi
+Küçük hatalar düzeltildi
