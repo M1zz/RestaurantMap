@@ -503,3 +503,59 @@ Nach einem Besuch in einem gespeicherten Restaurant erinnern wir dich daran, den
 
 iCloud-Backup
 Deine Einträge bleiben auf dem Gerät. Wann immer du möchtest, kannst du sie in deiner eigenen iCloud sichern und von dort wiederherstellen.
+
+## fr
+
+### 지원 URL
+
+https://m1zz.github.io/RestaurantMap/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/RestaurantMap/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/RestaurantMap/
+
+### 이름
+
+Insaeng : carte des tables
+
+### 부제
+
+Notez et classez vos repas
+
+### 키워드
+
+carnet,favoris,gourmand,avis,envies,steak,ramen,sushi,café,adresses,notes,photos,top,déjeuner,dîner
+
+### 프로모션 텍스트
+
+Épinglez chaque restaurant visité sur la carte et gardez votre note et vos remarques. Adresse après adresse, vous composez la carte des repas inoubliables.
+
+### 설명
+
+Épinglez les lieux où vous avez mangé et notez le goût de chaque repas, à chaque visite.
+Insaeng est votre carte gourmande personnelle, composée uniquement des restaurants que vous avez choisis.
+
+Une carte de vos adresses préférées
+Cherchez un restaurant ou choisissez un point sur la carte pour l’enregistrer. Les lieux enregistrés apparaissent en épingles, et vos six favoris reçoivent chacun un badge de classement.
+
+Déjà allé, À tester et votre Top 6
+Séparez dans des listes les restaurants déjà essayés et ceux que vous voulez tester, puis classez vos six meilleurs.
+
+Chaque plat selon ses propres critères
+Pour un steak, comptent la cuisson et le côté juteux ; pour un sushi, le riz et le poisson ; pour un ramen, le bouillon et les nouilles. Notez l’intensité du goût et la satisfaction selon les critères propres à chaque cuisine. Pizza, vin et café ont aussi leur notation, et vous pouvez ajouter vos propres types de cuisine.
+
+Un journal de visites qui s’enrichit
+Enregistrez la date, la note, les plats, les photos et les remarques de chaque visite. Chaque restaurant cumule son nombre de visites, sa note moyenne et un avis global sur le goût. Ajoutez le menu pour voir d’un coup d’œil les plats signature et les prix.
+
+Votre profil de goût
+Découvrez votre palais en graphique : épicé, sucré, salé, gras et saveurs naturelles.
+
+Rappel après la visite
+Nous vous rappelons de noter votre visite après un passage dans un restaurant enregistré. Cela ne fonctionne que si vous autorisez l’accès à votre position.
+
+Sauvegarde iCloud
+Vos données restent sur votre appareil, et vous pouvez les sauvegarder sur votre iCloud et les restaurer quand vous voulez.

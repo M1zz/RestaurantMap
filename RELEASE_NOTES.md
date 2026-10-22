@@ -67,3 +67,10 @@ Feedback direkt in der App senden
 Sag uns kurz, wie dir die App gefällt
 Datenschutz und Hilfe sind jetzt online
 Kleine Fehler behoben
+
+### 앱스토어 (Français)
+
+Envoyez vos retours depuis l’app
+Dites-nous si l’app vous plaît
+Confidentialité et aide en ligne
+Petits bugs corrigés
