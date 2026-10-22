@@ -38,6 +38,12 @@
             "state" : "translated",
             "value" : "%@的菜單"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Меню: %@"
+          }
         }
       }
     },
@@ -77,6 +83,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld%% 相符"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Совпадение %lld%%"
           }
         }
       }
@@ -118,6 +130,12 @@
             "state" : "translated",
             "value" : "%lld家"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
         }
       }
     },
@@ -157,6 +175,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "再評價%lld家，就能獲得推薦"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оцените ещё %lld, чтобы получить рекомендации"
           }
         }
       }
@@ -198,6 +222,12 @@
             "state" : "translated",
             "value" : "%lld則評論"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отзывов: %lld"
+          }
         }
       }
     },
@@ -237,6 +267,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld位口味相近的使用者推薦"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Рекомендуют %lld пользователей с похожим вкусом"
           }
         }
       }
@@ -278,6 +314,12 @@
             "state" : "translated",
             "value" : "第%lld名"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "№%lld"
+          }
         }
       }
     },
@@ -317,6 +359,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld張照片"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Фото: %lld"
           }
         }
       }
@@ -358,6 +406,12 @@
             "state" : "translated",
             "value" : "%lld次"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld раз"
+          }
         }
       }
     },
@@ -397,6 +451,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "造訪%lld次"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Визитов: %lld"
           }
         }
       }
@@ -438,6 +498,12 @@
             "state" : "translated",
             "value" : "要刪除「%@」及其所有造訪紀錄嗎？"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удалить «%@» и все записи о визитах?"
+          }
         }
       }
     },
@@ -477,6 +543,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "1️⃣ 上傳我的資料"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1️⃣ Загрузить мои данные"
           }
         }
       }
@@ -518,6 +590,12 @@
             "state" : "translated",
             "value" : "2️⃣ 產生模擬資料"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2️⃣ Создать тестовые данные"
+          }
         }
       }
     },
@@ -557,6 +635,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "3️⃣ 在「推薦」分頁查看結果"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3️⃣ Посмотреть результат на вкладке «Советы»"
           }
         }
       }
@@ -598,6 +682,12 @@
             "state" : "translated",
             "value" : "還沒有你評過4顆星以上的餐廳"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нет ресторанов с оценкой 4 звезды и выше"
+          }
         }
       }
     },
@@ -638,6 +728,12 @@
             "state" : "translated",
             "value" : "用六個面向描繪你的口味"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ваш вкус в шести характеристиках"
+          }
         }
       }
     },
@@ -677,6 +773,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "在「Apple 地圖」中打開"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Открыть в Apple Maps"
           }
         }
       }
@@ -719,6 +821,12 @@
             "state" : "translated",
             "value" : "Face ID 鎖定"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Блокировка Face ID"
+          }
         }
       }
     },
@@ -760,6 +868,12 @@
             "state" : "translated",
             "value" : "用 Face ID 或 Touch ID 鎖定 App，守護你的美食紀錄。"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Защитите свои записи о ресторанах с помощью Face ID или Touch ID."
+          }
         }
       }
     },
@@ -799,6 +913,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "將資料上傳到 Firebase，\n測試推薦系統"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Загрузите данные в Firebase,\nчтобы протестировать рекомендации"
           }
         }
       }
@@ -840,6 +960,12 @@
             "state" : "translated",
             "value" : "上傳到 Realtime DB"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Загрузить в Realtime DB"
+          }
         }
       }
     },
@@ -880,6 +1006,12 @@
             "state" : "translated",
             "value" : "Realtime Database 的優點"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Преимущества Realtime Database"
+          }
         }
       }
     },
@@ -919,6 +1051,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "正在從 Realtime Database 取得資料…"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Получение данных из Realtime Database…"
           }
         }
       }
@@ -961,6 +1099,12 @@
             "state" : "translated",
             "value" : "對 Siri 說一聲，或用捷徑，立刻記錄造訪。"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скажите Siri или запустите команду — и визит записан."
+          }
         }
       }
     },
@@ -1001,6 +1145,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siri 與捷徑"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri и «Команды»"
           }
         }
       }
@@ -1043,6 +1193,12 @@
             "state" : "translated",
             "value" : "更好用的旁白"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удобнее с VoiceOver"
+          }
         }
       }
     },
@@ -1082,6 +1238,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "iCloud 備份"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Резервная копия iCloud"
           }
         }
       }
@@ -1123,6 +1285,12 @@
             "state" : "translated",
             "value" : "需要登入 iCloud 才能備份或還原。"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Для копирования и восстановления нужно войти в iCloud."
+          }
         }
       }
     },
@@ -1162,6 +1330,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "備份到 iCloud"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скопировать в iCloud"
           }
         }
       }
@@ -1203,6 +1377,12 @@
             "state" : "translated",
             "value" : "從 iCloud 還原"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Восстановить из iCloud"
+          }
         }
       }
     },
@@ -1242,6 +1422,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "將從 iCloud 備份還原。此裝置上的所有資料都會被刪除，並替換為備份中的資料。"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Данные будут восстановлены из копии в iCloud. Все данные на этом устройстве будут удалены и заменены данными из копии."
           }
         }
       }
@@ -1283,6 +1469,12 @@
             "state" : "translated",
             "value" : "• 每位使用者 3–4 家餐廳"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 3–4 ресторана на пользователя"
+          }
         }
       }
     },
@@ -1322,6 +1514,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "• 每家餐廳 1–3 筆造訪紀錄"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 1–3 записи о визитах на ресторан"
           }
         }
       }
@@ -1363,6 +1561,12 @@
             "state" : "translated",
             "value" : "• 5 位口味各異的使用者"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 5 пользователей с разными вкусами"
+          }
         }
       }
     },
@@ -1402,6 +1606,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "⚡ 更快的即時同步"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚡ Более быстрая синхронизация в реальном времени"
           }
         }
       }
@@ -1443,6 +1653,12 @@
             "state" : "translated",
             "value" : "⚡ 更快的即時同步\n💰 成本更低"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚡ Более быстрая синхронизация в реальном времени\n💰 Ниже стоимость"
+          }
         }
       }
     },
@@ -1482,6 +1698,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "✓ 已評價"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "✓ Оценено"
           }
         }
       }
@@ -1524,6 +1746,12 @@
             "state" : "translated",
             "value" : "儲存餐廳或記錄造訪時，輕輕震動提醒你。"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Лёгкая вибрация при сохранении места или записи визита."
+          }
         }
       }
     },
@@ -1563,6 +1791,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "價格"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Цена"
           }
         }
       }
@@ -1604,6 +1838,12 @@
             "state" : "translated",
             "value" : "去過"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Были"
+          }
         }
       }
     },
@@ -1643,6 +1883,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "想去"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Хочу пойти"
           }
         }
       }
@@ -1684,6 +1930,12 @@
             "state" : "translated",
             "value" : "標為「想去」的餐廳不能設為 Top 6"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ресторан из списка «Хочу пойти» нельзя добавить в топ-6"
+          }
         }
       }
     },
@@ -1723,6 +1975,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "請為每一項評價口味濃淡與滿意度。評價為選填。"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оцените насыщенность вкуса и удовлетворённость по каждому пункту. Оценка необязательна."
           }
         }
       }
@@ -1764,6 +2022,12 @@
             "state" : "translated",
             "value" : "聯絡開發者"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Написать разработчику"
+          }
         }
       }
     },
@@ -1803,6 +2067,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld筆搜尋結果"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Результатов поиска: %lld"
           }
         }
       }
@@ -1844,6 +2114,12 @@
             "state" : "translated",
             "value" : "經度：%.6f"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Долгота: %.6f"
+          }
         }
       }
     },
@@ -1883,6 +2159,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "類別"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тип"
           }
         }
       }
@@ -1925,6 +2207,12 @@
             "state" : "translated",
             "value" : "放大字體後，畫面會重新排版，內容不會被截斷。"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "При увеличении шрифта экраны перестраиваются, и текст не обрезается."
+          }
         }
       }
     },
@@ -1964,6 +2252,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "依據「%@」"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "На основе «%@»"
           }
         }
       }
@@ -2005,6 +2299,12 @@
             "state" : "translated",
             "value" : "預設"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Стандартный"
+          }
         }
       }
     },
@@ -2044,6 +2344,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "基本資訊"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Основное"
           }
         }
       }
@@ -2085,6 +2391,12 @@
             "state" : "translated",
             "value" : "內建"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Встроенный"
+          }
         }
       }
     },
@@ -2124,6 +2436,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "我的米其林"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мой «Мишлен»"
           }
         }
       }
@@ -2165,6 +2483,12 @@
             "state" : "translated",
             "value" : "我的美食 DNA"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Моя гастро-ДНК"
+          }
         }
       }
     },
@@ -2204,6 +2528,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "我的最愛 Top 6"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мой любимый топ-6"
           }
         }
       }
@@ -2245,6 +2575,12 @@
             "state" : "translated",
             "value" : "我的 Top 6"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мой топ-6"
+          }
         }
       }
     },
@@ -2284,6 +2620,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "我的資料"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мои данные"
           }
         }
       }
@@ -2325,6 +2667,12 @@
             "state" : "translated",
             "value" : "上傳我的資料"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Загрузить мои данные"
+          }
         }
       }
     },
@@ -2364,6 +2712,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "加入我的餐廳清單"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавить в мои рестораны"
           }
         }
       }
@@ -2405,6 +2759,12 @@
             "state" : "translated",
             "value" : "這些是你最愛的餐廳"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ваши самые любимые рестораны"
+          }
         }
       }
     },
@@ -2444,6 +2804,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "我新增的類型"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавленные мной"
           }
         }
       }
@@ -2485,6 +2851,12 @@
             "state" : "translated",
             "value" : "在 Naver 地圖中打開"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Открыть в Naver Map"
+          }
         }
       }
     },
@@ -2524,6 +2896,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "請再試一次"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Повторите попытку"
           }
         }
       }
@@ -2566,6 +2944,12 @@
             "state" : "translated",
             "value" : "深色模式"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тёмная тема"
+          }
         }
       }
     },
@@ -2605,6 +2989,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "關閉"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Закрыть"
           }
         }
       }
@@ -2647,6 +3037,12 @@
             "state" : "translated",
             "value" : "即使開啟「提高對比」或不易分辨顏色，也能看清地圖和清單。"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Карта и списки читаются легко, даже при повышенной контрастности или проблемах с различением цветов."
+          }
         }
       }
     },
@@ -2686,6 +3082,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "招牌菜"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Фирменное блюдо"
           }
         }
       }
@@ -2727,6 +3129,12 @@
             "state" : "translated",
             "value" : "招牌菜會顯示在菜單清單最上方"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Фирменные блюда отображаются в начале списка меню"
+          }
         }
       }
     },
@@ -2766,6 +3174,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "設為招牌菜"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сделать фирменным блюдом"
           }
         }
       }
@@ -2808,6 +3222,12 @@
             "state" : "translated",
             "value" : "支援更多語言，讓更多人用上這款 App。"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Приложение станет доступно на большем числе языков."
+          }
         }
       }
     },
@@ -2849,6 +3269,12 @@
             "state" : "translated",
             "value" : "更多語言"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Больше языков"
+          }
         }
       }
     },
@@ -2888,6 +3314,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "產生模擬資料"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Создать тестовые данные"
           }
         }
       }
@@ -2929,6 +3361,12 @@
             "state" : "translated",
             "value" : "產生 5 位模擬使用者與餐廳資料"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Создаёт 5 тестовых пользователей и данные о ресторанах"
+          }
         }
       }
     },
@@ -2968,6 +3406,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "資料管理"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Управление данными"
           }
         }
       }
@@ -3009,6 +3453,12 @@
             "state" : "translated",
             "value" : "資料同步"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Синхронизация данных"
+          }
         }
       }
     },
@@ -3048,6 +3498,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "同步資料"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Синхронизировать данные"
           }
         }
       }
@@ -3089,6 +3545,12 @@
             "state" : "translated",
             "value" : "上傳資料"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Загрузить данные"
+          }
         }
       }
     },
@@ -3128,6 +3590,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "資料概況"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сводка по данным"
           }
         }
       }
@@ -3169,6 +3637,12 @@
             "state" : "translated",
             "value" : "資料不足"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Данных пока мало"
+          }
         }
       }
     },
@@ -3208,6 +3682,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "資料可能不夠充分"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Возможно, данных недостаточно"
           }
         }
       }
@@ -3249,6 +3729,12 @@
             "state" : "translated",
             "value" : "無法載入資料"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось загрузить данные"
+          }
         }
       }
     },
@@ -3288,6 +3774,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "道路名稱地址"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Адрес (улица)"
           }
         }
       }
@@ -3329,6 +3821,12 @@
             "state" : "translated",
             "value" : "還沒有新增菜單"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В меню пока ничего нет"
+          }
         }
       }
     },
@@ -3368,6 +3866,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "排行"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Рейтинг"
           }
         }
       }
@@ -3409,6 +3913,12 @@
             "state" : "translated",
             "value" : "Riio 米其林評分"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оценка Riio «Мишлен»"
+          }
         }
       }
     },
@@ -3448,6 +3958,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "上次備份"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Последняя копия"
           }
         }
       }
@@ -3489,6 +4005,12 @@
             "state" : "translated",
             "value" : "滿意度"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удовлетворённость"
+          }
         }
       }
     },
@@ -3528,6 +4050,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "口味濃淡"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Насыщенность вкуса"
           }
         }
       }
@@ -3569,6 +4097,12 @@
             "state" : "translated",
             "value" : "口味偏好"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вкусовые предпочтения"
+          }
         }
       }
     },
@@ -3608,6 +4142,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "口味偏好\n%lld%%"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вкусовые предпочтения\n%lld%%"
           }
         }
       }
@@ -3649,6 +4189,12 @@
             "state" : "translated",
             "value" : "口味評價"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оценка вкуса"
+          }
         }
       }
     },
@@ -3688,6 +4234,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "已完成口味評價"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вкус оценён"
           }
         }
       }
@@ -3729,6 +4281,12 @@
             "state" : "translated",
             "value" : "已評價口味"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вкус оценён"
+          }
         }
       }
     },
@@ -3768,6 +4326,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "口味類型"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Профиль вкуса"
           }
         }
       }
@@ -3809,6 +4373,12 @@
             "state" : "translated",
             "value" : "餐廳推薦"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Рестораны для вас"
+          }
         }
       }
     },
@@ -3848,6 +4418,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "為你推薦"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Для вас"
           }
         }
       }
@@ -3889,6 +4465,12 @@
             "state" : "translated",
             "value" : "想獲得個人化推薦"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Чтобы получить персональные рекомендации"
+          }
         }
       }
     },
@@ -3928,6 +4510,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "非常滿意"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Очень доволен"
           }
         }
       }
@@ -3969,6 +4557,12 @@
             "state" : "translated",
             "value" : "吃了什麼"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что вы ели"
+          }
         }
       }
     },
@@ -4008,6 +4602,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "吃了什麼（例如：烤肉套餐、瑪格麗特披薩）"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что вы ели (например: набор с бульгоги, пицца маргарита)"
           }
         }
       }
@@ -4049,6 +4649,12 @@
             "state" : "translated",
             "value" : "菜單"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Меню"
+          }
         }
       }
     },
@@ -4088,6 +4694,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "管理菜單"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Управление меню"
           }
         }
       }
@@ -4129,6 +4741,12 @@
             "state" : "translated",
             "value" : "去新增菜單"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавить блюда"
+          }
         }
       }
     },
@@ -4168,6 +4786,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "菜單清單 (%lld)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Меню (%lld)"
           }
         }
       }
@@ -4209,6 +4833,12 @@
             "state" : "translated",
             "value" : "選擇菜色"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите блюдо"
+          }
         }
       }
     },
@@ -4248,6 +4878,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "菜色說明"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Описание блюда"
           }
         }
       }
@@ -4289,6 +4925,12 @@
             "state" : "translated",
             "value" : "菜色說明（選填）"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Описание блюда (необязательно)"
+          }
         }
       }
     },
@@ -4328,6 +4970,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "菜色名稱"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Название блюда"
           }
         }
       }
@@ -4369,6 +5017,12 @@
             "state" : "translated",
             "value" : "菜色資訊"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "О блюде"
+          }
         }
       }
     },
@@ -4408,6 +5062,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "新增菜色"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавить блюдо"
           }
         }
       }
@@ -4449,6 +5109,12 @@
             "state" : "translated",
             "value" : "新增菜單後，記錄造訪時就能直接選擇"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавленные блюда можно выбирать при записи визита"
+          }
         }
       }
     },
@@ -4488,6 +5154,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "備註"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Заметки"
           }
         }
       }
@@ -4529,6 +5201,12 @@
             "state" : "translated",
             "value" : "沒有備註"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нет заметок"
+          }
         }
       }
     },
@@ -4568,6 +5246,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "所有餐廳和造訪紀錄都將被刪除。此操作無法復原。"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Все рестораны и записи о визитах будут удалены. Это действие нельзя отменить."
           }
         }
       }
@@ -4609,6 +5293,12 @@
             "state" : "translated",
             "value" : "刪除所有資料"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удалить все данные"
+          }
         }
       }
     },
@@ -4648,6 +5338,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "清單"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Список"
           }
         }
       }
@@ -4689,6 +5385,12 @@
             "state" : "translated",
             "value" : "關閉清單"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Закрыть список"
+          }
         }
       }
     },
@@ -4728,6 +5430,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "造訪紀錄"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Журнал визитов"
           }
         }
       }
@@ -4769,6 +5477,12 @@
             "state" : "translated",
             "value" : "新增造訪紀錄"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавить визит"
+          }
         }
       }
     },
@@ -4809,6 +5523,12 @@
             "state" : "translated",
             "value" : "新增造訪紀錄時，請填寫口味評價"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Укажите оценку вкуса при добавлении визита"
+          }
         }
       }
     },
@@ -4848,6 +5568,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "新增造訪紀錄時，請選擇這道菜"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите это блюдо при добавлении визита"
           }
         }
       }
@@ -4890,6 +5616,12 @@
             "state" : "translated",
             "value" : "寫造訪紀錄時即使 App 被關閉，寫到一半的內容也不會遺失。"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Если приложение закроется, пока вы пишете запись о визите, написанное сохранится."
+          }
         }
       }
     },
@@ -4929,6 +5661,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "造訪日期"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дата визита"
           }
         }
       }
@@ -4970,6 +5708,12 @@
             "state" : "translated",
             "value" : "造訪資訊"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "О визите"
+          }
         }
       }
     },
@@ -5009,6 +5753,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "造訪統計"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Статистика визитов"
           }
         }
       }
@@ -5050,6 +5800,12 @@
             "state" : "translated",
             "value" : "備份"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Копировать"
+          }
         }
       }
     },
@@ -5089,6 +5845,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "歡迎回報問題、提出功能建議。"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сообщения об ошибках и предложения приветствуются."
           }
         }
       }
@@ -5130,6 +5892,12 @@
             "state" : "translated",
             "value" : "版本"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Версия"
+          }
         }
       }
     },
@@ -5170,6 +5938,12 @@
             "state" : "translated",
             "value" : "評分"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оценка"
+          }
         }
       }
     },
@@ -5209,6 +5983,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "評分"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оценить"
           }
         }
       }
@@ -5251,6 +6031,12 @@
             "state" : "translated",
             "value" : "更易辨識的顏色與對比"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удобные цвета и контраст"
+          }
         }
       }
     },
@@ -5290,6 +6076,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "還原"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Восстановить"
           }
         }
       }
@@ -5331,6 +6123,12 @@
             "state" : "translated",
             "value" : "載入中…"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Загрузка…"
+          }
         }
       }
     },
@@ -5370,6 +6168,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "不滿意"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не доволен"
           }
         }
       }
@@ -5411,6 +6215,12 @@
             "state" : "translated",
             "value" : "大家的評價"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мнения людей"
+          }
         }
       }
     },
@@ -5450,6 +6260,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "照片"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Фото"
           }
         }
       }
@@ -5491,6 +6307,12 @@
             "state" : "translated",
             "value" : "照片 (%lld)"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Фото (%lld)"
+          }
         }
       }
     },
@@ -5530,6 +6352,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "選擇照片"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выбрать фото"
           }
         }
       }
@@ -5571,6 +6399,12 @@
             "state" : "translated",
             "value" : "新增照片"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавить фото"
+          }
         }
       }
     },
@@ -5610,6 +6444,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "刪除"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удалить"
           }
         }
       }
@@ -5651,6 +6491,12 @@
             "state" : "translated",
             "value" : "相符詳情"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подробности совпадения"
+          }
         }
       }
     },
@@ -5690,6 +6536,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "新的菜系"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Новый вид кухни"
           }
         }
       }
@@ -5731,6 +6583,12 @@
             "state" : "translated",
             "value" : "新增類型"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавить новый вид"
+          }
         }
       }
     },
@@ -5770,6 +6628,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "即將新增的照片"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Фото к добавлению"
           }
         }
       }
@@ -5811,6 +6675,12 @@
             "state" : "translated",
             "value" : "重新整理"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Обновить"
+          }
         }
       }
     },
@@ -5850,6 +6720,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "選擇"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выбрать"
           }
         }
       }
@@ -5891,6 +6767,12 @@
             "state" : "translated",
             "value" : "不選擇"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не выбрано"
+          }
         }
       }
     },
@@ -5931,6 +6813,12 @@
             "state" : "translated",
             "value" : "說明"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Описание"
+          }
         }
       }
     },
@@ -5970,6 +6858,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "設定"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройки"
           }
         }
       }
@@ -6012,6 +6906,12 @@
             "state" : "translated",
             "value" : "指尖的觸覺回饋"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отклик, который чувствуется пальцами"
+          }
         }
       }
     },
@@ -6051,6 +6951,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "餐廳類別"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тип ресторана"
           }
         }
       }
@@ -6092,6 +6998,12 @@
             "state" : "translated",
             "value" : "餐廳清單"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Рестораны"
+          }
         }
       }
     },
@@ -6131,6 +7043,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "在餐廳清單中評分"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оценивайте рестораны прямо из списка"
           }
         }
       }
@@ -6172,6 +7090,12 @@
             "state" : "translated",
             "value" : "刪除餐廳"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удалить ресторан"
+          }
         }
       }
     },
@@ -6211,6 +7135,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "請在餐廳詳細資訊頁面評4顆星以上"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поставьте оценку 4 звезды или выше на экране ресторана"
           }
         }
       }
@@ -6252,6 +7182,12 @@
             "state" : "translated",
             "value" : "沒有餐廳"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нет ресторанов"
+          }
         }
       }
     },
@@ -6291,6 +7227,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "餐廳名稱"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Название ресторана"
           }
         }
       }
@@ -6332,6 +7274,12 @@
             "state" : "translated",
             "value" : "餐廳資訊"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "О ресторане"
+          }
         }
       }
     },
@@ -6371,6 +7319,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "餐廳地圖"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Карта ресторанов"
           }
         }
       }
@@ -6412,6 +7366,12 @@
             "state" : "translated",
             "value" : "新增餐廳"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавить ресторан"
+          }
         }
       }
     },
@@ -6451,6 +7411,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "新增一家餐廳"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавить ресторан"
           }
         }
       }
@@ -6492,6 +7458,12 @@
             "state" : "translated",
             "value" : "加入為餐廳"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавить как ресторан"
+          }
         }
       }
     },
@@ -6531,6 +7503,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "新增一家餐廳，開始吧"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавьте ресторан, чтобы начать"
           }
         }
       }
@@ -6573,6 +7551,12 @@
             "state" : "translated",
             "value" : "實用小訣竅"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Полезные подсказки"
+          }
         }
       }
     },
@@ -6614,6 +7598,12 @@
             "state" : "translated",
             "value" : "接著寫沒寫完的造訪紀錄"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Продолжить недописанный визит"
+          }
         }
       }
     },
@@ -6654,6 +7644,12 @@
             "state" : "translated",
             "value" : "否"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нет"
+          }
         }
       }
     },
@@ -6693,6 +7689,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "圖示"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Значок"
           }
         }
       }
@@ -6735,6 +7737,12 @@
             "state" : "translated",
             "value" : "在 iPad 上，只用鍵盤就能操作主要功能。"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "На iPad основными функциями можно пользоваться только с клавиатуры."
+          }
         }
       }
     },
@@ -6774,6 +7782,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "還沒有想去的餐廳"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В списке «Хочу пойти» пока нет ресторанов"
           }
         }
       }
@@ -6815,6 +7829,12 @@
             "state" : "translated",
             "value" : "這家餐廳還沒去過"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вы ещё не были в этом ресторане"
+          }
         }
       }
     },
@@ -6854,6 +7874,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "還沒有去過的餐廳"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пока нет посещённых ресторанов"
           }
         }
       }
@@ -6895,6 +7921,12 @@
             "state" : "translated",
             "value" : "還沒有儲存的餐廳"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пока нет сохранённых ресторанов"
+          }
         }
       }
     },
@@ -6935,6 +7967,12 @@
             "state" : "translated",
             "value" : "還沒有設為 Top 6 的餐廳"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В топ-6 пока нет ресторанов"
+          }
         }
       }
     },
@@ -6974,6 +8012,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "尚無評價"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оценок пока нет"
           }
         }
       }
@@ -7016,6 +8060,12 @@
             "state" : "translated",
             "value" : "在適當的時機，悄悄告訴你好用的功能。"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ненавязчиво подскажем полезные функции в нужный момент."
+          }
         }
       }
     },
@@ -7056,6 +8106,12 @@
             "state" : "translated",
             "value" : "從相簿選擇"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выбрать из медиатеки"
+          }
         }
       }
     },
@@ -7095,6 +8151,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "關於"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "О приложении"
           }
         }
       }
@@ -7137,6 +8199,12 @@
             "state" : "translated",
             "value" : "不用打開 App，在主畫面上就能看到你的心頭好。"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Любимые места видны прямо на экране «Домой» — без запуска приложения."
+          }
         }
       }
     },
@@ -7177,6 +8245,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "App 也支援英文。"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Приложение можно использовать и на английском."
           }
         }
       }
@@ -7219,6 +8293,12 @@
             "state" : "translated",
             "value" : "深色畫面下，文字和按鈕依然清晰醒目。"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Текст и кнопки остаются чёткими и в тёмной теме."
+          }
         }
       }
     },
@@ -7259,6 +8339,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "更新後第一次打開時，告訴你有什麼新變化。"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "После обновления при первом запуске покажем, что нового."
           }
         }
       }
@@ -7301,6 +8387,12 @@
             "state" : "translated",
             "value" : "更新消息"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что нового"
+          }
         }
       }
     },
@@ -7340,6 +8432,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "分析你的口味，為你提供個人化推薦"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мы анализируем ваш вкус, чтобы давать персональные рекомендации"
           }
         }
       }
@@ -7382,6 +8480,12 @@
             "state" : "translated",
             "value" : "支援英文"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поддержка английского"
+          }
         }
       }
     },
@@ -7421,6 +8525,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "例如：泰式料理、印度料理"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Например: тайская, индийская"
           }
         }
       }
@@ -7462,6 +8572,12 @@
             "state" : "translated",
             "value" : "預測評分"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Прогноз оценки"
+          }
         }
       }
     },
@@ -7501,6 +8617,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "錯誤"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ошибка"
           }
         }
       }
@@ -7542,6 +8664,12 @@
             "state" : "translated",
             "value" : "完成"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Готово"
+          }
         }
       }
     },
@@ -7581,6 +8709,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "為什麼推薦？"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Почему это рекомендуют?"
           }
         }
       }
@@ -7623,6 +8757,12 @@
             "state" : "translated",
             "value" : "減少動態效果"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Уменьшение движения"
+          }
         }
       }
     },
@@ -7664,6 +8804,12 @@
             "state" : "translated",
             "value" : "開啟「減少動態效果」後，畫面動畫會更平緩。"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Если включить «Уменьшение движения», эффекты на экране станут спокойнее."
+          }
         }
       }
     },
@@ -7703,6 +8849,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "韓元"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "вон"
           }
         }
       }
@@ -7744,6 +8896,12 @@
             "state" : "translated",
             "value" : "網站"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сайт"
+          }
         }
       }
     },
@@ -7783,6 +8941,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "緯度：%.6f"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Широта: %.6f"
           }
         }
       }
@@ -7824,6 +8988,12 @@
             "state" : "translated",
             "value" : "位置"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Место"
+          }
         }
       }
     },
@@ -7863,6 +9033,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "選擇位置"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выбрать место"
           }
         }
       }
@@ -7904,6 +9080,12 @@
             "state" : "translated",
             "value" : "料理風格"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Стиль кухни"
+          }
         }
       }
     },
@@ -7943,6 +9125,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "料理類型"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вид кухни"
           }
         }
       }
@@ -7984,6 +9172,12 @@
             "state" : "translated",
             "value" : "管理料理類型"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Управление видами кухни"
+          }
         }
       }
     },
@@ -8023,6 +9217,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "這次造訪如何？"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Как прошёл этот визит?"
           }
         }
       }
@@ -8064,6 +9264,12 @@
             "state" : "translated",
             "value" : "想評價這次造訪的口味偏好，請點一下「編輯」"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Чтобы оценить вкус этого визита, нажмите «Править»"
+          }
         }
       }
     },
@@ -8103,6 +9309,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "這家餐廳還沒有新增菜單。請先新增菜單，或手動輸入。"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В этом ресторане пока нет блюд в меню. Сначала добавьте их или введите вручную."
           }
         }
       }
@@ -8144,6 +9356,12 @@
             "state" : "translated",
             "value" : "這家餐廳整體來說……"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В целом этот ресторан…"
+          }
         }
       }
     },
@@ -8183,6 +9401,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "名稱"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Название"
           }
         }
       }
@@ -8224,6 +9448,12 @@
             "state" : "translated",
             "value" : "以電子郵件聯絡"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Написать по электронной почте"
+          }
         }
       }
     },
@@ -8263,6 +9493,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "無法載入圖片"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось загрузить изображение"
           }
         }
       }
@@ -8304,6 +9540,12 @@
             "state" : "translated",
             "value" : "評價你的人生餐廳"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оцените ресторан вашей жизни"
+          }
         }
       }
     },
@@ -8343,6 +9585,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Instagram 私訊 (@lee25_ios)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram DM (@lee25_ios)"
           }
         }
       }
@@ -8384,6 +9632,12 @@
             "state" : "translated",
             "value" : "可以自己新增常吃的料理類型"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Можно добавить виды кухни, которые вы часто выбираете"
+          }
         }
       }
     },
@@ -8423,6 +9677,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "地點資訊"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "О месте"
           }
         }
       }
@@ -8464,6 +9724,12 @@
             "state" : "translated",
             "value" : "正在載入地點資訊…"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Загрузка информации о месте…"
+          }
         }
       }
     },
@@ -8503,6 +9769,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "已根據地點資訊自動填入"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Заполнено по данным о месте"
           }
         }
       }
@@ -8544,6 +9816,12 @@
             "state" : "translated",
             "value" : "儲存"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохранить"
+          }
         }
       }
     },
@@ -8583,6 +9861,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "已儲存的餐廳"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохранённые рестораны"
           }
         }
       }
@@ -8624,6 +9908,12 @@
             "state" : "translated",
             "value" : "已儲存的餐廳：%lld家"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохранённых ресторанов: %lld"
+          }
         }
       }
     },
@@ -8663,6 +9953,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "全部"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Все"
           }
         }
       }
@@ -8704,6 +10000,12 @@
             "state" : "translated",
             "value" : "整體相符度"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Общее совпадение"
+          }
         }
       }
     },
@@ -8743,6 +10045,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "電話"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Телефон"
           }
         }
       }
@@ -8784,6 +10092,12 @@
             "state" : "translated",
             "value" : "確定要刪除所有資料嗎？此操作無法復原。"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удалить все данные? Это действие нельзя отменить."
+          }
         }
       }
     },
@@ -8823,6 +10137,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "無法載入資訊"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось загрузить информацию"
           }
         }
       }
@@ -8864,6 +10184,12 @@
             "state" : "translated",
             "value" : "再多評價幾家吧！"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оцените ещё немного, пожалуйста!"
+          }
         }
       }
     },
@@ -8903,6 +10229,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "點餐次數"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Заказов"
           }
         }
       }
@@ -8944,6 +10276,12 @@
             "state" : "translated",
             "value" : "地址"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Адрес"
+          }
         }
       }
     },
@@ -8983,6 +10321,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "地圖"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Карта"
           }
         }
       }
@@ -9024,6 +10368,12 @@
             "state" : "translated",
             "value" : "從地圖或清單新增餐廳"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавьте ресторан с карты или из списка"
+          }
         }
       }
     },
@@ -9063,6 +10413,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "請移動地圖或選擇其他地點，\n然後再試一次"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сдвиньте карту или выберите другое место,\nи повторите попытку"
           }
         }
       }
@@ -9104,6 +10460,12 @@
             "state" : "translated",
             "value" : "在地圖上查看"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Показать на карте"
+          }
         }
       }
     },
@@ -9143,6 +10505,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "在地圖上找餐廳"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Искать рестораны на карте"
           }
         }
       }
@@ -9184,6 +10552,12 @@
             "state" : "translated",
             "value" : "地號地址"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Адрес (участок)"
+          }
         }
       }
     },
@@ -9224,6 +10598,12 @@
             "state" : "translated",
             "value" : "支援"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поддержка"
+          }
         }
       }
     },
@@ -9263,6 +10643,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "手動輸入"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ввести вручную"
           }
         }
       }
@@ -9305,6 +10691,12 @@
             "state" : "translated",
             "value" : "新手指南"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Знакомство с приложением"
+          }
         }
       }
     },
@@ -9346,6 +10738,12 @@
             "state" : "translated",
             "value" : "第一次打開時，簡單介紹你能做什麼。"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Коротко расскажем, что можно делать, при первом запуске."
+          }
         }
       }
     },
@@ -9385,6 +10783,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "新增第一道菜"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавить первое блюдо"
           }
         }
       }
@@ -9426,6 +10830,12 @@
             "state" : "translated",
             "value" : "新增第一筆造訪紀錄"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавить первый визит"
+          }
         }
       }
     },
@@ -9465,6 +10875,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "重置"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сброс"
           }
         }
       }
@@ -9506,6 +10922,12 @@
             "state" : "translated",
             "value" : "造訪紀錄總數"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Всего визитов"
+          }
         }
       }
     },
@@ -9545,6 +10967,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "總造訪次數"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Всего посещений"
           }
         }
       }
@@ -9586,6 +11014,12 @@
             "state" : "translated",
             "value" : "總評（所有造訪平均）"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Итог (среднее по всем визитам)"
+          }
         }
       }
     },
@@ -9625,6 +11059,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "這些是你最棒的餐廳"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ваши лучшие рестораны"
           }
         }
       }
@@ -9666,6 +11106,12 @@
             "state" : "translated",
             "value" : "最近造訪"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Последний визит"
+          }
         }
       }
     },
@@ -9705,6 +11151,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "最近點餐"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Последний заказ"
           }
         }
       }
@@ -9746,6 +11198,12 @@
             "state" : "translated",
             "value" : "推薦"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Советы"
+          }
         }
       }
     },
@@ -9785,6 +11243,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "取得推薦"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Получить рекомендации"
           }
         }
       }
@@ -9826,6 +11290,12 @@
             "state" : "translated",
             "value" : "正在分析推薦…"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Анализ рекомендаций…"
+          }
         }
       }
     },
@@ -9865,6 +11335,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "推薦餐廳"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Рекомендуемые рестораны"
           }
         }
       }
@@ -9906,6 +11382,12 @@
             "state" : "translated",
             "value" : "推薦分數"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Рейтинг рекомендации"
+          }
         }
       }
     },
@@ -9945,6 +11427,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "推薦功能測試步驟"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Порядок проверки рекомендаций"
           }
         }
       }
@@ -9986,6 +11474,12 @@
             "state" : "translated",
             "value" : "沒有可推薦的餐廳"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нет ресторанов для рекомендации"
+          }
         }
       }
     },
@@ -10025,6 +11519,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "取消"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отмена"
           }
         }
       }
@@ -10066,6 +11566,12 @@
             "state" : "translated",
             "value" : "口味"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вкус"
+          }
         }
       }
     },
@@ -10105,6 +11611,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "口味檔案"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Профиль вкуса"
           }
         }
       }
@@ -10146,6 +11658,12 @@
             "state" : "translated",
             "value" : "拍照"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сделать фото"
+          }
         }
       }
     },
@@ -10185,6 +11703,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "在 Kakao 地圖中打開"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Открыть в Kakao Map"
           }
         }
       }
@@ -10226,6 +11750,12 @@
             "state" : "translated",
             "value" : "類別"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Категория"
+          }
         }
       }
     },
@@ -10265,6 +11795,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "類別\n%lld%%"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Категория\n%lld%%"
           }
         }
       }
@@ -10306,6 +11842,12 @@
             "state" : "translated",
             "value" : "類別（例如：韓式、中式）"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Категория (например: корейская, китайская)"
+          }
         }
       }
     },
@@ -10346,6 +11888,12 @@
             "state" : "translated",
             "value" : "類別設定"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройка категорий"
+          }
         }
       }
     },
@@ -10385,6 +11933,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "類別圖示"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Значок категории"
           }
         }
       }
@@ -10427,6 +11981,12 @@
             "state" : "translated",
             "value" : "適配大字體的畫面"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Экраны для крупного шрифта"
+          }
         }
       }
     },
@@ -10468,6 +12028,12 @@
             "state" : "translated",
             "value" : "用鍵盤操作"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Управление с клавиатуры"
+          }
         }
       }
     },
@@ -10507,6 +12073,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "設為 Top 6"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавить в топ-6"
           }
         }
       }
@@ -10548,6 +12120,12 @@
             "state" : "translated",
             "value" : "Top 6"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Топ-6"
+          }
         }
       }
     },
@@ -10587,6 +12165,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Top 6 上限"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Лимит топ-6"
           }
         }
       }
@@ -10628,6 +12212,12 @@
             "state" : "translated",
             "value" : "Top 6 最多只能設定 6 家（目前：%lld/6）"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В топ-6 можно добавить не более 6 ресторанов (сейчас: %lld/6)"
+          }
         }
       }
     },
@@ -10667,6 +12257,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Top 6 最多只能設定 6 家。請先取消其他餐廳的 Top 6，再試一次。"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В топ-6 можно добавить не более 6 ресторанов. Уберите другой ресторан из топ-6 и повторите попытку."
           }
         }
       }
@@ -10708,6 +12304,12 @@
             "state" : "translated",
             "value" : "測試資料"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тестовые данные"
+          }
         }
       }
     },
@@ -10747,6 +12349,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "統計"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Статистика"
           }
         }
       }
@@ -10789,6 +12397,12 @@
             "state" : "translated",
             "value" : "可折疊 iPhone 畫面"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Экран для складного iPhone"
+          }
         }
       }
     },
@@ -10830,6 +12444,12 @@
             "state" : "translated",
             "value" : "在可折疊 iPhone 上，寬螢幕會分成左右兩欄。"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "На складном iPhone широкий экран делится на две части."
+          }
         }
       }
     },
@@ -10869,6 +12489,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "評價資訊"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Об оценке"
           }
         }
       }
@@ -10910,6 +12536,12 @@
             "state" : "translated",
             "value" : "評價記錄 (%lld)"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "История оценок (%lld)"
+          }
         }
       }
     },
@@ -10949,6 +12581,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "平均評分"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Средняя оценка"
           }
         }
       }
@@ -10990,6 +12628,12 @@
             "state" : "translated",
             "value" : "評分模式\n%lld%%"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Шаблон оценок\n%lld%%"
+          }
         }
       }
     },
@@ -11030,6 +12674,12 @@
             "state" : "translated",
             "value" : "將目前資料備份到 iCloud。既有的備份會被覆寫。"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Текущие данные будут скопированы в iCloud. Существующая копия будет заменена."
+          }
         }
       }
     },
@@ -11069,6 +12719,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "從目前位置"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Из текущего местоположения"
           }
         }
       }
@@ -11111,6 +12767,12 @@
             "state" : "translated",
             "value" : "主畫面小工具"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Виджеты «Домой»"
+          }
         }
       }
     },
@@ -11152,6 +12814,12 @@
             "state" : "translated",
             "value" : "旁白會完整地、依正確順序朗讀按鈕和內容。"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOver озвучивает все кнопки и содержимое в правильном порядке."
+          }
         }
       }
     },
@@ -11191,6 +12859,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "好"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
           }
         }
       }
@@ -11232,6 +12906,12 @@
             "state" : "translated",
             "value" : "💰 更省成本（約為 Firestore 的 1/6）"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "💰 Экономично (в 6 раз дешевле Firestore)"
+          }
         }
       }
     },
@@ -11271,6 +12951,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "🚀 簡潔的 JSON 結構"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🚀 Простая структура JSON"
           }
         }
       }

@@ -22,7 +22,7 @@ ICON = ROOT / "RestaurantMap" / "Assets.xcassets" / "AppIcon.appiconset" / "imag
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
 # 앱 언어 코드 → App Store Connect 로케일 (make_marketing_screenshots.py 와 같다)
-STORE = {"ko": "ko", "en": "en-US", "en-GB": "en-GB", "ja": "ja", "zh-Hans": "zh-Hans", "zh-Hant": "zh-Hant"}   # 스토어에는 한국어 한 가지
+STORE = {"ko": "ko", "en": "en-US", "en-GB": "en-GB", "ja": "ja", "zh-Hans": "zh-Hans", "zh-Hant": "zh-Hant", "ru": "ru"}   # 스토어에는 한국어 한 가지
 
 # (가로, 세로, 안전 영역 left, top, right, bottom)
 SPEC = {
@@ -39,6 +39,7 @@ SEARCH = {
     "ja": ("グルメ マップ", "お気に入りのお店を<br>地図に集めよう", "星とランキングで<br>自分だけのミシュランを"),
     "zh-Hans": ("美食地图", "把你找到的美食<br>都收进地图", "用星级和排名<br>打造专属米其林"),
     "zh-Hant": ("美食地圖", "把你找到的美食<br>都收進地圖", "用星等和排名<br>打造專屬米其林"),
+    "ru": ("карта ресторанов", "Любимые места —<br>на одной карте", "Оценки и рейтинг —<br>ваш личный «Мишлен»"),
 }
 
 # 헤더는 한 가지 약속: 진짜 맛집만 골라 내 지도에 남긴다(부제 '진짜 맛집을 찾아서').
@@ -49,6 +50,7 @@ HEADER = {
     "ja": ("人生グルメ", "本当においしいお店だけを<br>自分の地図に"),
     "zh-Hans": ("人生美食", "只留真正好吃的<br>收进我的地图"),
     "zh-Hant": ("人生美食", "只留真正好吃的<br>收進我的地圖"),
+    "ru": ("Insaeng", "Только лучшие места<br>на вашей карте"),
 }
 
 # ⚠️ 바탕 · 글자색은 앱 아이콘(크림빛 지도 위 빨간 차양 식당 · 빨간 핀)에서 왔다.
