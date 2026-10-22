@@ -22,7 +22,7 @@ ICON = ROOT / "RestaurantMap" / "Assets.xcassets" / "AppIcon.appiconset" / "imag
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
 # 앱 언어 코드 → App Store Connect 로케일 (make_marketing_screenshots.py 와 같다)
-STORE = {"ko": "ko", "en": "en-US"}   # 스토어에는 한국어 한 가지
+STORE = {"ko": "ko", "en": "en-US", "en-GB": "en-GB"}   # 스토어에는 한국어 한 가지
 
 # (가로, 세로, 안전 영역 left, top, right, bottom)
 SPEC = {
@@ -35,12 +35,14 @@ SPEC = {
 SEARCH = {
     "ko": ("맛집 지도", "내가 찾은 맛집<br>지도에 모아요", "별점과 순위로<br>나만의 미슐랭을 만들어요"),
     "en": ("restaurant map", "Pin the places<br>you love", "Make your own Michelin<br>with ratings and ranks"),
+    "en-GB": ("restaurant map", "Pin the places<br>you love", "Make your own Michelin<br>with ratings and ranks"),
 }
 
 # 헤더는 한 가지 약속: 진짜 맛집만 골라 내 지도에 남긴다(부제 '진짜 맛집을 찾아서').
 HEADER = {
     "ko": ("인생 맛집", "진짜 맛집만<br>내 지도에 남겨요"),
     "en": ("Insaeng Matjip", "Keep only the real<br>favorites on your map"),
+    "en-GB": ("Insaeng Matjip", "Keep only the real<br>favourites on your map"),
 }
 
 # ⚠️ 바탕 · 글자색은 앱 아이콘(크림빛 지도 위 빨간 차양 식당 · 빨간 핀)에서 왔다.

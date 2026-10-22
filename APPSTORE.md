@@ -111,3 +111,59 @@ We remind you to log a visit after you have been to a saved restaurant. This wor
 
 Backup to iCloud
 Your records stay on your device, and you can back up to and restore from your own iCloud whenever you like.
+
+## en-GB
+
+### 지원 URL
+
+https://m1zz.github.io/RestaurantMap/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/RestaurantMap/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/RestaurantMap/
+
+### 이름
+
+Insaeng Matjip: Food Map
+
+### 부제
+
+Rate, rank and map your meals
+
+### 키워드
+
+restaurant,diary,journal,favourites,bucketlist,wishlist,dining,foodie,review,steak,ramen,sushi,pub
+
+### 프로모션 텍스트
+
+Drop a pin on every restaurant you visit and save your rating and notes. One place at a time, you build a map of the meals you will never forget.
+
+### 설명
+
+Pin the places you have eaten and note how each meal tasted, every time you go.
+Insaeng Matjip is your own food map, made only of the restaurants you chose.
+
+A map of your favourite places
+Search for a restaurant or pick a spot on the map to save it. Saved places show up as pins, and your six favourites get their own ranked badges.
+
+Visited, Want to Go and your Top 6
+Keep restaurants you have tried and restaurants you want to try in separate lists, and rank your six best.
+
+Rate each dish on its own terms
+Steak is about doneness and juiciness, sushi about rice and fish, ramen about broth and noodles. Rate flavour intensity and satisfaction by the criteria that fit each kind of food. Pizza, wine and coffee have their own ratings too, and you can add food types of your own.
+
+A visit log that grows with every trip
+Save the date, rating, dishes, photos and notes for each visit. Every restaurant builds up its visit count, average rating, and overall taste summary. Add menu items and you will see signature dishes and prices at a glance.
+
+Your taste profile
+See your palate on a chart: spicy, sweet, salty, rich, and natural flavours.
+
+After-visit reminders
+We remind you to log a visit after you have been to a saved restaurant. This works only if you allow location access.
+
+Backup to iCloud
+Your records stay on your device, and you can back up to and restore from your own iCloud whenever you like.

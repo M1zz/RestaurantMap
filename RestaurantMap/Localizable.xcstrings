@@ -14,6 +14,12 @@
             "state" : "translated",
             "value" : "Menu at %@"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu at %@"
+          }
         }
       }
     },
@@ -26,6 +32,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld%% match"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld%% match"
@@ -46,6 +58,12 @@
             "state" : "translated",
             "value" : "%lld"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
         }
       }
     },
@@ -58,6 +76,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rate %lld more to get recommendations"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rate %lld more to get recommendations"
@@ -78,6 +102,12 @@
             "state" : "translated",
             "value" : "%lld reviews"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld reviews"
+          }
         }
       }
     },
@@ -90,6 +120,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recommended by %lld users with similar taste"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Recommended by %lld users with similar taste"
@@ -110,6 +146,12 @@
             "state" : "translated",
             "value" : "No. %lld"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No. %lld"
+          }
         }
       }
     },
@@ -122,6 +164,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld photos"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld photos"
@@ -142,6 +190,12 @@
             "state" : "translated",
             "value" : "%lld×"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld×"
+          }
         }
       }
     },
@@ -154,6 +208,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld visits"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld visits"
@@ -174,6 +234,12 @@
             "state" : "translated",
             "value" : "Delete “%@” and all of its visit records?"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete “%@” and all of its visit records?"
+          }
         }
       }
     },
@@ -186,6 +252,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1️⃣ Upload my data"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "1️⃣ Upload my data"
@@ -206,6 +278,12 @@
             "state" : "translated",
             "value" : "2️⃣ Generate dummy data"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2️⃣ Generate dummy data"
+          }
         }
       }
     },
@@ -218,6 +296,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3️⃣ Check the results in the Recommendations tab"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "3️⃣ Check the results in the Recommendations tab"
@@ -238,6 +322,12 @@
             "state" : "translated",
             "value" : "You haven’t rated any restaurant 4 stars or higher"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You haven’t rated any restaurant 4 stars or higher"
+          }
         }
       }
     },
@@ -254,6 +344,12 @@
             "state" : "translated",
             "value" : "Your taste, expressed in six attributes"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your taste, expressed in six attributes"
+          }
         }
       }
     },
@@ -266,6 +362,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open in Apple Maps"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Open in Apple Maps"
@@ -287,6 +389,12 @@
             "state" : "translated",
             "value" : "Face ID 잠금"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Face ID lock"
+          }
         }
       }
     },
@@ -304,6 +412,12 @@
             "state" : "translated",
             "value" : "Face ID나 Touch ID로 앱을 잠가 내 맛집 기록을 지켜요."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lock the app with Face ID or Touch ID to keep your food log private."
+          }
         }
       }
     },
@@ -316,6 +430,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upload data to Firebase\nto test the recommendation system"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Upload data to Firebase\nto test the recommendation system"
@@ -336,6 +456,12 @@
             "state" : "translated",
             "value" : "Upload to Realtime DB"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upload to Realtime DB"
+          }
         }
       }
     },
@@ -352,6 +478,12 @@
             "state" : "translated",
             "value" : "Realtime Database advantages"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Realtime Database advantages"
+          }
         }
       }
     },
@@ -364,6 +496,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fetching data from Realtime Database…"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fetching data from Realtime Database…"
@@ -385,6 +523,12 @@
             "state" : "translated",
             "value" : "Siri에게 말하거나 단축어로 바로 방문을 기록해요."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Log a visit instantly by asking Siri or running a shortcut."
+          }
         }
       }
     },
@@ -401,6 +545,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siri와 단축어"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri and Shortcuts"
           }
         }
       }
@@ -419,6 +569,12 @@
             "state" : "translated",
             "value" : "VoiceOver로 더 편하게"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Better VoiceOver support"
+          }
         }
       }
     },
@@ -431,6 +587,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud Backup"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "iCloud Backup"
@@ -451,6 +613,12 @@
             "state" : "translated",
             "value" : "You must be signed in to iCloud to back up or restore."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You must be signed in to iCloud to back up or restore."
+          }
         }
       }
     },
@@ -463,6 +631,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back Up to iCloud"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Back Up to iCloud"
@@ -483,6 +657,12 @@
             "state" : "translated",
             "value" : "Restore from iCloud"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restore from iCloud"
+          }
         }
       }
     },
@@ -495,6 +675,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restores from your iCloud backup. All data on this device will be deleted and replaced with the backup."
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Restores from your iCloud backup. All data on this device will be deleted and replaced with the backup."
@@ -515,6 +701,12 @@
             "state" : "translated",
             "value" : "• 3–4 restaurants per user"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 3–4 restaurants per user"
+          }
         }
       }
     },
@@ -527,6 +719,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 1–3 visit records per restaurant"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "• 1–3 visit records per restaurant"
@@ -547,6 +745,12 @@
             "state" : "translated",
             "value" : "• 5 users with varied tastes"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 5 users with varied tastes"
+          }
         }
       }
     },
@@ -559,6 +763,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚡ Faster real-time sync"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "⚡ Faster real-time sync"
@@ -579,6 +789,12 @@
             "state" : "translated",
             "value" : "⚡ Faster real-time sync\n💰 Lower cost"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚡ Faster real-time sync\n💰 Lower cost"
+          }
         }
       }
     },
@@ -591,6 +807,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "✓ Rated"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "✓ Rated"
@@ -612,6 +834,12 @@
             "state" : "translated",
             "value" : "가게를 저장하거나 방문을 남길 때 가볍게 떨려서 알려 줘요."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A gentle tap when you save a place or log a visit."
+          }
         }
       }
     },
@@ -624,6 +852,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Price"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Price"
@@ -644,6 +878,12 @@
             "state" : "translated",
             "value" : "Visited"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visited"
+          }
         }
       }
     },
@@ -656,6 +896,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Want to Go"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Want to Go"
@@ -676,6 +922,12 @@
             "state" : "translated",
             "value" : "A restaurant marked Want to Go can’t be set as a Top 6 pick"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A restaurant marked Want to Go can’t be set as a Top 6 pick"
+          }
         }
       }
     },
@@ -692,6 +944,12 @@
             "state" : "translated",
             "value" : "Rate the flavor intensity and satisfaction for each item. Rating is optional."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rate the flavour intensity and satisfaction for each item. Rating is optional."
+          }
         }
       }
     },
@@ -704,6 +962,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contact the Developer"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Contact the Developer"
@@ -724,6 +988,12 @@
             "state" : "translated",
             "value" : "%lld search results"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld search results"
+          }
         }
       }
     },
@@ -740,6 +1010,12 @@
             "state" : "translated",
             "value" : "Longitude: %.6f"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Longitude: %.6f"
+          }
         }
       }
     },
@@ -752,6 +1028,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Type"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Type"
@@ -773,6 +1055,12 @@
             "state" : "translated",
             "value" : "글자 크기를 키워도 잘리지 않고 보기 좋게 다시 배치돼요."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Screens rearrange neatly instead of getting cut off when you enlarge text."
+          }
         }
       }
     },
@@ -785,6 +1073,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Based on “%@”"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Based on “%@”"
@@ -805,6 +1099,12 @@
             "state" : "translated",
             "value" : "Default"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Default"
+          }
         }
       }
     },
@@ -817,6 +1117,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Basic Info"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Basic Info"
@@ -837,6 +1143,12 @@
             "state" : "translated",
             "value" : "Built-in"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Built-in"
+          }
         }
       }
     },
@@ -849,6 +1161,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My Michelin"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "My Michelin"
@@ -869,6 +1187,12 @@
             "state" : "translated",
             "value" : "My Foodie DNA"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My Foodie DNA"
+          }
         }
       }
     },
@@ -885,6 +1209,12 @@
             "state" : "translated",
             "value" : "My Favorite Top 6"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My Favourite Top 6"
+          }
         }
       }
     },
@@ -897,6 +1227,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My Top 6"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "My Top 6"
@@ -917,6 +1253,12 @@
             "state" : "translated",
             "value" : "My Data"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My Data"
+          }
         }
       }
     },
@@ -929,6 +1271,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upload My Data"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Upload My Data"
@@ -949,6 +1297,12 @@
             "state" : "translated",
             "value" : "Add to My Restaurants"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add to My Restaurants"
+          }
         }
       }
     },
@@ -965,6 +1319,12 @@
             "state" : "translated",
             "value" : "Your very favorite restaurants"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your very favourite restaurants"
+          }
         }
       }
     },
@@ -977,6 +1337,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Types I Added"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Types I Added"
@@ -997,6 +1363,12 @@
             "state" : "translated",
             "value" : "Open in Naver Map"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open in Naver Map"
+          }
         }
       }
     },
@@ -1009,6 +1381,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please try again"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Please try again"
@@ -1030,6 +1408,12 @@
             "state" : "translated",
             "value" : "다크 모드"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dark Mode"
+          }
         }
       }
     },
@@ -1042,6 +1426,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Close"
@@ -1063,6 +1453,12 @@
             "state" : "translated",
             "value" : "대비를 높이거나 색을 구별하기 어려워도 지도와 목록을 알아볼 수 있어요."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Read the map and lists easily, even with Increase Contrast on or if colors are hard to tell apart."
+          }
         }
       }
     },
@@ -1075,6 +1471,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Signature Dish"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Signature Dish"
@@ -1095,6 +1497,12 @@
             "state" : "translated",
             "value" : "Signature dishes appear at the top of the menu list"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Signature dishes appear at the top of the menu list"
+          }
         }
       }
     },
@@ -1107,6 +1515,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Set as Signature Dish"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Set as Signature Dish"
@@ -1128,6 +1542,12 @@
             "state" : "translated",
             "value" : "더 많은 나라 말로 앱을 쓸 수 있게 해요."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Use the app in more languages."
+          }
         }
       }
     },
@@ -1145,6 +1565,12 @@
             "state" : "translated",
             "value" : "더 많은 언어"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "More languages"
+          }
         }
       }
     },
@@ -1157,6 +1583,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Generate Dummy Data"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Generate Dummy Data"
@@ -1177,6 +1609,12 @@
             "state" : "translated",
             "value" : "Generates 5 dummy users and restaurant data"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Generates 5 dummy users and restaurant data"
+          }
         }
       }
     },
@@ -1189,6 +1627,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Data Management"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Data Management"
@@ -1209,6 +1653,12 @@
             "state" : "translated",
             "value" : "Data Sync"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Data Sync"
+          }
         }
       }
     },
@@ -1221,6 +1671,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sync Data"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sync Data"
@@ -1241,6 +1697,12 @@
             "state" : "translated",
             "value" : "Upload Data"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upload Data"
+          }
         }
       }
     },
@@ -1253,6 +1715,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Data Overview"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Data Overview"
@@ -1273,6 +1741,12 @@
             "state" : "translated",
             "value" : "Not enough data yet"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not enough data yet"
+          }
         }
       }
     },
@@ -1285,6 +1759,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "There may not be enough data"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "There may not be enough data"
@@ -1305,6 +1785,12 @@
             "state" : "translated",
             "value" : "Couldn’t load the data"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couldn’t load the data"
+          }
         }
       }
     },
@@ -1317,6 +1803,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Street Address"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Street Address"
@@ -1337,6 +1829,12 @@
             "state" : "translated",
             "value" : "No menu items yet"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No menu items yet"
+          }
         }
       }
     },
@@ -1349,6 +1847,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ranking"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ranking"
@@ -1369,6 +1873,12 @@
             "state" : "translated",
             "value" : "Riio Michelin Score"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Riio Michelin Score"
+          }
         }
       }
     },
@@ -1381,6 +1891,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Last Backup"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Last Backup"
@@ -1401,6 +1917,12 @@
             "state" : "translated",
             "value" : "Satisfaction"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Satisfaction"
+          }
         }
       }
     },
@@ -1416,6 +1938,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Flavor Intensity"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flavour Intensity"
           }
         }
       }
@@ -1433,6 +1961,12 @@
             "state" : "translated",
             "value" : "Flavor Preferences"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flavour Preferences"
+          }
         }
       }
     },
@@ -1449,6 +1983,12 @@
             "state" : "translated",
             "value" : "Flavor Taste\n%lld%%"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flavour Taste\n%lld%%"
+          }
         }
       }
     },
@@ -1461,6 +2001,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taste Rating"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Taste Rating"
@@ -1481,6 +2027,12 @@
             "state" : "translated",
             "value" : "Taste Rated"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taste Rated"
+          }
         }
       }
     },
@@ -1493,6 +2045,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taste Rated"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Taste Rated"
@@ -1513,6 +2071,12 @@
             "state" : "translated",
             "value" : "Flavor Profile"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flavour Profile"
+          }
         }
       }
     },
@@ -1525,6 +2089,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurant Picks"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Restaurant Picks"
@@ -1545,6 +2115,12 @@
             "state" : "translated",
             "value" : "For You"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "For You"
+          }
         }
       }
     },
@@ -1561,6 +2137,12 @@
             "state" : "translated",
             "value" : "To get personalized picks"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "To get personalised picks"
+          }
         }
       }
     },
@@ -1573,6 +2155,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Very satisfied"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Very satisfied"
@@ -1593,6 +2181,12 @@
             "state" : "translated",
             "value" : "What You Ate"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What You Ate"
+          }
         }
       }
     },
@@ -1605,6 +2199,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What you ate (e.g. bulgogi set, margherita pizza)"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "What you ate (e.g. bulgogi set, margherita pizza)"
@@ -1625,6 +2225,12 @@
             "state" : "translated",
             "value" : "Menu"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu"
+          }
         }
       }
     },
@@ -1637,6 +2243,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manage Menu"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Manage Menu"
@@ -1657,6 +2269,12 @@
             "state" : "translated",
             "value" : "Add Menu Items"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Menu Items"
+          }
         }
       }
     },
@@ -1669,6 +2287,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu (%lld)"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Menu (%lld)"
@@ -1689,6 +2313,12 @@
             "state" : "translated",
             "value" : "Choose Menu Item"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose Menu Item"
+          }
         }
       }
     },
@@ -1701,6 +2331,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu Description"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Menu Description"
@@ -1721,6 +2357,12 @@
             "state" : "translated",
             "value" : "Menu description (optional)"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu description (optional)"
+          }
         }
       }
     },
@@ -1733,6 +2375,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu Item Name"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Menu Item Name"
@@ -1753,6 +2401,12 @@
             "state" : "translated",
             "value" : "Menu Item Info"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu Item Info"
+          }
         }
       }
     },
@@ -1765,6 +2419,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Menu Item"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Add Menu Item"
@@ -1785,6 +2445,12 @@
             "state" : "translated",
             "value" : "Menu items you add can be picked when you log a visit"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu items you add can be picked when you log a visit"
+          }
         }
       }
     },
@@ -1797,6 +2463,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notes"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Notes"
@@ -1817,6 +2489,12 @@
             "state" : "translated",
             "value" : "No notes"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No notes"
+          }
         }
       }
     },
@@ -1829,6 +2507,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All restaurants and visit records will be deleted. This can’t be undone."
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "All restaurants and visit records will be deleted. This can’t be undone."
@@ -1849,6 +2533,12 @@
             "state" : "translated",
             "value" : "Delete All Data"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete All Data"
+          }
         }
       }
     },
@@ -1861,6 +2551,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "List"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "List"
@@ -1881,6 +2577,12 @@
             "state" : "translated",
             "value" : "Close List"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close List"
+          }
         }
       }
     },
@@ -1893,6 +2595,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visit Log"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Visit Log"
@@ -1913,6 +2621,12 @@
             "state" : "translated",
             "value" : "Add Visit"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Visit"
+          }
         }
       }
     },
@@ -1929,6 +2643,12 @@
             "state" : "translated",
             "value" : "Enter a taste rating when you add a visit"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter a taste rating when you add a visit"
+          }
         }
       }
     },
@@ -1941,6 +2661,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pick this menu item when you add a visit"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pick this menu item when you add a visit"
@@ -1962,6 +2688,12 @@
             "state" : "translated",
             "value" : "방문 기록을 적다가 앱이 꺼져도 쓰던 내용이 남아 있어요."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What you were writing about a visit stays put, even if the app closes mid-way."
+          }
         }
       }
     },
@@ -1974,6 +2706,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visit Date"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Visit Date"
@@ -1994,6 +2732,12 @@
             "state" : "translated",
             "value" : "Visit Info"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visit Info"
+          }
         }
       }
     },
@@ -2006,6 +2750,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visit Stats"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Visit Stats"
@@ -2026,6 +2776,12 @@
             "state" : "translated",
             "value" : "Back Up"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back Up"
+          }
         }
       }
     },
@@ -2038,6 +2794,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bug reports and feature suggestions are welcome."
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bug reports and feature suggestions are welcome."
@@ -2058,6 +2820,12 @@
             "state" : "translated",
             "value" : "Version"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version"
+          }
         }
       }
     },
@@ -2074,6 +2842,12 @@
             "state" : "translated",
             "value" : "Rating"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rating"
+          }
         }
       }
     },
@@ -2086,6 +2860,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rate"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rate"
@@ -2107,6 +2887,12 @@
             "state" : "translated",
             "value" : "보기 편한 색과 대비"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Easier colors and contrast"
+          }
         }
       }
     },
@@ -2119,6 +2905,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restore"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Restore"
@@ -2139,6 +2931,12 @@
             "state" : "translated",
             "value" : "Loading…"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loading…"
+          }
         }
       }
     },
@@ -2151,6 +2949,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unsatisfied"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Unsatisfied"
@@ -2171,6 +2975,12 @@
             "state" : "translated",
             "value" : "What People Say"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What People Say"
+          }
         }
       }
     },
@@ -2183,6 +2993,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Photos"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Photos"
@@ -2203,6 +3019,12 @@
             "state" : "translated",
             "value" : "Photos (%lld)"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Photos (%lld)"
+          }
         }
       }
     },
@@ -2215,6 +3037,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose Photos"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Choose Photos"
@@ -2235,6 +3063,12 @@
             "state" : "translated",
             "value" : "Add Photos"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Photos"
+          }
         }
       }
     },
@@ -2247,6 +3081,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Delete"
@@ -2267,6 +3107,12 @@
             "state" : "translated",
             "value" : "Match Details"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Match Details"
+          }
         }
       }
     },
@@ -2279,6 +3125,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New Food Type"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "New Food Type"
@@ -2299,6 +3151,12 @@
             "state" : "translated",
             "value" : "Add New Type"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add New Type"
+          }
         }
       }
     },
@@ -2311,6 +3169,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Photos to Be Added"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Photos to Be Added"
@@ -2331,6 +3195,12 @@
             "state" : "translated",
             "value" : "Refresh"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Refresh"
+          }
         }
       }
     },
@@ -2343,6 +3213,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Select"
@@ -2363,6 +3239,12 @@
             "state" : "translated",
             "value" : "None"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "None"
+          }
         }
       }
     },
@@ -2379,6 +3261,12 @@
             "state" : "translated",
             "value" : "Description"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Description"
+          }
         }
       }
     },
@@ -2391,6 +3279,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Settings"
@@ -2412,6 +3306,12 @@
             "state" : "translated",
             "value" : "손끝으로 느끼는 반응"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haptic feedback"
+          }
         }
       }
     },
@@ -2424,6 +3324,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurant Type"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Restaurant Type"
@@ -2444,6 +3350,12 @@
             "state" : "translated",
             "value" : "Restaurants"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurants"
+          }
         }
       }
     },
@@ -2456,6 +3368,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rate restaurants from the list"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rate restaurants from the list"
@@ -2476,6 +3394,12 @@
             "state" : "translated",
             "value" : "Delete Restaurant"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete Restaurant"
+          }
         }
       }
     },
@@ -2488,6 +3412,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Give a rating of 4 stars or higher on a restaurant’s detail screen"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Give a rating of 4 stars or higher on a restaurant’s detail screen"
@@ -2508,6 +3438,12 @@
             "state" : "translated",
             "value" : "No Restaurants"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No Restaurants"
+          }
         }
       }
     },
@@ -2520,6 +3456,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurant Name"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Restaurant Name"
@@ -2540,6 +3482,12 @@
             "state" : "translated",
             "value" : "Restaurant Info"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurant Info"
+          }
         }
       }
     },
@@ -2552,6 +3500,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurant Map"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Restaurant Map"
@@ -2572,6 +3526,12 @@
             "state" : "translated",
             "value" : "Add Restaurant"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Restaurant"
+          }
         }
       }
     },
@@ -2584,6 +3544,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add a Restaurant"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Add a Restaurant"
@@ -2604,6 +3570,12 @@
             "state" : "translated",
             "value" : "Add as Restaurant"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add as Restaurant"
+          }
         }
       }
     },
@@ -2616,6 +3588,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add a restaurant to get started"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Add a restaurant to get started"
@@ -2637,6 +3615,12 @@
             "state" : "translated",
             "value" : "쓰는 요령 알려 주기"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Handy tips"
+          }
         }
       }
     },
@@ -2654,6 +3638,12 @@
             "state" : "translated",
             "value" : "쓰던 방문 기록 이어서 쓰기"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pick up where you left off"
+          }
         }
       }
     },
@@ -2670,6 +3660,12 @@
             "state" : "translated",
             "value" : "No"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No"
+          }
         }
       }
     },
@@ -2682,6 +3678,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Icon"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Icon"
@@ -2703,6 +3705,12 @@
             "state" : "translated",
             "value" : "아이패드에서 키보드만으로 주요 기능을 쓸 수 있어요."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Use the main features on iPad with just a keyboard."
+          }
         }
       }
     },
@@ -2715,6 +3723,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No restaurants on your Want to Go list yet"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "No restaurants on your Want to Go list yet"
@@ -2735,6 +3749,12 @@
             "state" : "translated",
             "value" : "You haven’t visited this restaurant yet"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You haven’t visited this restaurant yet"
+          }
         }
       }
     },
@@ -2747,6 +3767,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No visited restaurants yet"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "No visited restaurants yet"
@@ -2767,6 +3793,12 @@
             "state" : "translated",
             "value" : "No saved restaurants yet"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No saved restaurants yet"
+          }
         }
       }
     },
@@ -2783,6 +3815,12 @@
             "state" : "translated",
             "value" : "No Top 6 restaurants yet"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No Top 6 restaurants yet"
+          }
         }
       }
     },
@@ -2795,6 +3833,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No ratings yet"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "No ratings yet"
@@ -2816,6 +3860,12 @@
             "state" : "translated",
             "value" : "알아 두면 편한 기능을 알맞은 때에 살짝 알려 줘요."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gentle hints about useful features, right when you need them."
+          }
         }
       }
     },
@@ -2832,6 +3882,12 @@
             "state" : "translated",
             "value" : "Choose from Library"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose from Library"
+          }
         }
       }
     },
@@ -2844,6 +3900,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "About"
@@ -2865,6 +3927,12 @@
             "state" : "translated",
             "value" : "앱을 열지 않고 홈 화면에서 내 맛집을 바로 확인해요."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "See your favourite spots right on the Home Screen, without opening the app."
+          }
         }
       }
     },
@@ -2881,6 +3949,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "앱을 영어로도 쓸 수 있어요."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Use the whole app in English."
           }
         }
       }
@@ -2899,6 +3973,12 @@
             "state" : "translated",
             "value" : "어두운 화면에서도 글자와 단추가 또렷하게 보여요."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Text and buttons stay crisp and clear in Dark Mode."
+          }
         }
       }
     },
@@ -2915,6 +3995,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "업데이트 뒤 처음 열 때 무엇이 새로 생겼는지 알려 줘요."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The first time you open the app after an update, see what’s new."
           }
         }
       }
@@ -2933,6 +4019,12 @@
             "state" : "translated",
             "value" : "업데이트 소식"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What’s new"
+          }
         }
       }
     },
@@ -2948,6 +4040,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "We analyze your taste to give you personalized picks"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We analyse your taste to give you personalised picks"
           }
         }
       }
@@ -2966,6 +4064,12 @@
             "state" : "translated",
             "value" : "영어 지원"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Full English support"
+          }
         }
       }
     },
@@ -2978,6 +4082,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "e.g. Thai, Indian"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "e.g. Thai, Indian"
@@ -2998,6 +4108,12 @@
             "state" : "translated",
             "value" : "Predicted Rating"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Predicted Rating"
+          }
         }
       }
     },
@@ -3010,6 +4126,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Error"
@@ -3030,6 +4152,12 @@
             "state" : "translated",
             "value" : "Done"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done"
+          }
         }
       }
     },
@@ -3042,6 +4170,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Why this pick?"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Why this pick?"
@@ -3063,6 +4197,12 @@
             "state" : "translated",
             "value" : "움직임 줄이기"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reduce Motion"
+          }
         }
       }
     },
@@ -3080,6 +4220,12 @@
             "state" : "translated",
             "value" : "움직임 줄이기를 켜면 화면 효과가 차분해져요."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "With Reduce Motion on, screen effects calm down."
+          }
         }
       }
     },
@@ -3092,6 +4238,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "KRW"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "KRW"
@@ -3112,6 +4264,12 @@
             "state" : "translated",
             "value" : "Website"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Website"
+          }
         }
       }
     },
@@ -3124,6 +4282,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Latitude: %.6f"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Latitude: %.6f"
@@ -3144,6 +4308,12 @@
             "state" : "translated",
             "value" : "Location"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Location"
+          }
         }
       }
     },
@@ -3156,6 +4326,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose Location"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Choose Location"
@@ -3176,6 +4352,12 @@
             "state" : "translated",
             "value" : "Food Style"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Food Style"
+          }
         }
       }
     },
@@ -3188,6 +4370,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Food Type"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Food Type"
@@ -3208,6 +4396,12 @@
             "state" : "translated",
             "value" : "Manage Food Types"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manage Food Types"
+          }
         }
       }
     },
@@ -3220,6 +4414,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How was this visit?"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "How was this visit?"
@@ -3240,6 +4440,12 @@
             "state" : "translated",
             "value" : "Tap Edit to rate the flavors of this visit"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap Edit to rate the flavours of this visit"
+          }
         }
       }
     },
@@ -3252,6 +4458,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This restaurant has no menu items yet. Add some first, or type one in."
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "This restaurant has no menu items yet. Add some first, or type one in."
@@ -3272,6 +4484,12 @@
             "state" : "translated",
             "value" : "Overall, this restaurant is…"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Overall, this restaurant is…"
+          }
         }
       }
     },
@@ -3284,6 +4502,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Name"
@@ -3304,6 +4528,12 @@
             "state" : "translated",
             "value" : "Contact by Email"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contact by Email"
+          }
         }
       }
     },
@@ -3316,6 +4546,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couldn’t load the image"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Couldn’t load the image"
@@ -3336,6 +4572,12 @@
             "state" : "translated",
             "value" : "Rate Your Life-Changing Restaurant"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rate Your Life-Changing Restaurant"
+          }
         }
       }
     },
@@ -3348,6 +4590,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram DM (@lee25_ios)"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Instagram DM (@lee25_ios)"
@@ -3368,6 +4616,12 @@
             "state" : "translated",
             "value" : "You can add the food types you eat often"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can add the food types you eat often"
+          }
         }
       }
     },
@@ -3380,6 +4634,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Place Info"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Place Info"
@@ -3400,6 +4660,12 @@
             "state" : "translated",
             "value" : "Loading place info…"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loading place info…"
+          }
         }
       }
     },
@@ -3412,6 +4678,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filled in from place info"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Filled in from place info"
@@ -3432,6 +4704,12 @@
             "state" : "translated",
             "value" : "Save"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save"
+          }
         }
       }
     },
@@ -3444,6 +4722,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saved Restaurants"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Saved Restaurants"
@@ -3464,6 +4748,12 @@
             "state" : "translated",
             "value" : "Saved restaurants: %lld"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saved restaurants: %lld"
+          }
         }
       }
     },
@@ -3476,6 +4766,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "All"
@@ -3496,6 +4792,12 @@
             "state" : "translated",
             "value" : "Overall Match"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Overall Match"
+          }
         }
       }
     },
@@ -3508,6 +4810,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phone"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Phone"
@@ -3528,6 +4836,12 @@
             "state" : "translated",
             "value" : "Delete all data? This can’t be undone."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete all data? This can’t be undone."
+          }
         }
       }
     },
@@ -3540,6 +4854,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couldn’t load the information"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Couldn’t load the information"
@@ -3560,6 +4880,12 @@
             "state" : "translated",
             "value" : "Just a few more ratings, please!"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Just a few more ratings, please!"
+          }
         }
       }
     },
@@ -3572,6 +4898,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Times Ordered"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Times Ordered"
@@ -3592,6 +4924,12 @@
             "state" : "translated",
             "value" : "Address"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Address"
+          }
         }
       }
     },
@@ -3604,6 +4942,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Map"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Map"
@@ -3624,6 +4968,12 @@
             "state" : "translated",
             "value" : "Add a restaurant from the map or the list"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add a restaurant from the map or the list"
+          }
         }
       }
     },
@@ -3636,6 +4986,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Move the map or pick another place,\nthen try again"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Move the map or pick another place,\nthen try again"
@@ -3656,6 +5012,12 @@
             "state" : "translated",
             "value" : "View on Map"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "View on Map"
+          }
         }
       }
     },
@@ -3668,6 +5030,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Find Restaurants on the Map"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Find Restaurants on the Map"
@@ -3688,6 +5056,12 @@
             "state" : "translated",
             "value" : "Lot Number Address"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lot Number Address"
+          }
         }
       }
     },
@@ -3704,6 +5078,12 @@
             "state" : "translated",
             "value" : "Support"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Support"
+          }
         }
       }
     },
@@ -3716,6 +5096,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter Manually"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Enter Manually"
@@ -3737,6 +5123,12 @@
             "state" : "translated",
             "value" : "처음 쓰는 분을 위한 안내"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Getting started guide"
+          }
         }
       }
     },
@@ -3754,6 +5146,12 @@
             "state" : "translated",
             "value" : "처음 열었을 때 무엇을 할 수 있는지 짧게 보여 줘요."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A quick tour of what you can do when you first open the app."
+          }
         }
       }
     },
@@ -3766,6 +5164,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Your First Menu Item"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Add Your First Menu Item"
@@ -3786,6 +5190,12 @@
             "state" : "translated",
             "value" : "Add Your First Visit"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Your First Visit"
+          }
         }
       }
     },
@@ -3798,6 +5208,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reset"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Reset"
@@ -3818,6 +5234,12 @@
             "state" : "translated",
             "value" : "Total Visits"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Total Visits"
+          }
         }
       }
     },
@@ -3830,6 +5252,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Total Visits"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Total Visits"
@@ -3850,6 +5278,12 @@
             "state" : "translated",
             "value" : "Overall (average of all visits)"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Overall (average of all visits)"
+          }
         }
       }
     },
@@ -3862,6 +5296,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your best restaurants"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Your best restaurants"
@@ -3882,6 +5322,12 @@
             "state" : "translated",
             "value" : "Last Visit"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Last Visit"
+          }
         }
       }
     },
@@ -3894,6 +5340,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Last Ordered"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Last Ordered"
@@ -3914,6 +5366,12 @@
             "state" : "translated",
             "value" : "Picks"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Picks"
+          }
         }
       }
     },
@@ -3926,6 +5384,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Get Picks"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Get Picks"
@@ -3946,6 +5410,12 @@
             "state" : "translated",
             "value" : "Analyzing picks…"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Analysing picks…"
+          }
         }
       }
     },
@@ -3958,6 +5428,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recommended Restaurants"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Recommended Restaurants"
@@ -3978,6 +5454,12 @@
             "state" : "translated",
             "value" : "Pick Score"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pick Score"
+          }
         }
       }
     },
@@ -3990,6 +5472,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recommendation Test Steps"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Recommendation Test Steps"
@@ -4010,6 +5498,12 @@
             "state" : "translated",
             "value" : "No restaurants to recommend"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No restaurants to recommend"
+          }
         }
       }
     },
@@ -4022,6 +5516,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cancel"
@@ -4042,6 +5542,12 @@
             "state" : "translated",
             "value" : "Taste"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taste"
+          }
         }
       }
     },
@@ -4054,6 +5560,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taste Profile"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Taste Profile"
@@ -4074,6 +5586,12 @@
             "state" : "translated",
             "value" : "Take Photo"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Take Photo"
+          }
         }
       }
     },
@@ -4086,6 +5604,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open in Kakao Map"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Open in Kakao Map"
@@ -4106,6 +5630,12 @@
             "state" : "translated",
             "value" : "Category"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Category"
+          }
         }
       }
     },
@@ -4118,6 +5648,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Category\n%lld%%"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Category\n%lld%%"
@@ -4138,6 +5674,12 @@
             "state" : "translated",
             "value" : "Category (e.g. Korean, Chinese)"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Category (e.g. Korean, Chinese)"
+          }
         }
       }
     },
@@ -4154,6 +5696,12 @@
             "state" : "translated",
             "value" : "Category Settings"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Category Settings"
+          }
         }
       }
     },
@@ -4166,6 +5714,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Category Icon"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Category Icon"
@@ -4187,6 +5741,12 @@
             "state" : "translated",
             "value" : "큰 글씨에 맞춘 화면"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Layouts for larger text"
+          }
         }
       }
     },
@@ -4204,6 +5764,12 @@
             "state" : "translated",
             "value" : "키보드로 조작하기"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keyboard control"
+          }
         }
       }
     },
@@ -4216,6 +5782,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Set as Top 6"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Set as Top 6"
@@ -4236,6 +5808,12 @@
             "state" : "translated",
             "value" : "Top 6"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Top 6"
+          }
         }
       }
     },
@@ -4248,6 +5826,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Top 6 Limit"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Top 6 Limit"
@@ -4268,6 +5852,12 @@
             "state" : "translated",
             "value" : "You can pick up to 6 Top 6 restaurants (currently %lld/6)"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can pick up to 6 Top 6 restaurants (currently %lld/6)"
+          }
         }
       }
     },
@@ -4280,6 +5870,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can pick up to 6 Top 6 restaurants. Remove another restaurant from your Top 6, then try again."
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "You can pick up to 6 Top 6 restaurants. Remove another restaurant from your Top 6, then try again."
@@ -4300,6 +5896,12 @@
             "state" : "translated",
             "value" : "Test Data"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Test Data"
+          }
         }
       }
     },
@@ -4312,6 +5914,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stats"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stats"
@@ -4333,6 +5941,12 @@
             "state" : "translated",
             "value" : "펼치는 아이폰 화면"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foldable iPhone layout"
+          }
         }
       }
     },
@@ -4350,6 +5964,12 @@
             "state" : "translated",
             "value" : "펼치는 아이폰에서 넓은 화면을 두 쪽으로 나눠 써요."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Use the wide screen of a foldable iPhone as two side-by-side panes."
+          }
         }
       }
     },
@@ -4362,6 +5982,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rating Info"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rating Info"
@@ -4382,6 +6008,12 @@
             "state" : "translated",
             "value" : "Rating History (%lld)"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rating History (%lld)"
+          }
         }
       }
     },
@@ -4394,6 +6026,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Average Rating"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Average Rating"
@@ -4414,6 +6052,12 @@
             "state" : "translated",
             "value" : "Rating Pattern\n%lld%%"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rating Pattern\n%lld%%"
+          }
         }
       }
     },
@@ -4430,6 +6074,12 @@
             "state" : "translated",
             "value" : "Backs up your current data to iCloud. Any existing backup will be overwritten."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Backs up your current data to iCloud. Any existing backup will be overwritten."
+          }
         }
       }
     },
@@ -4442,6 +6092,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "From Current Location"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "From Current Location"
@@ -4463,6 +6119,12 @@
             "state" : "translated",
             "value" : "홈 화면 위젯"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Home Screen widgets"
+          }
         }
       }
     },
@@ -4480,6 +6142,12 @@
             "state" : "translated",
             "value" : "화면 읽기 기능이 단추와 내용을 빠짐없이, 알맞은 순서로 읽어 줘요."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOver reads every button and detail, in the right order."
+          }
         }
       }
     },
@@ -4492,6 +6160,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"
@@ -4512,6 +6186,12 @@
             "state" : "translated",
             "value" : "💰 Cost-efficient (1/6 the cost of Firestore)"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "💰 Cost-efficient (1/6 the cost of Firestore)"
+          }
         }
       }
     },
@@ -4524,6 +6204,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🚀 Simple JSON structure"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "🚀 Simple JSON structure"

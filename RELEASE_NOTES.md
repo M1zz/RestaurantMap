@@ -18,3 +18,10 @@ Send feedback right from the app
 Tell us how much you enjoy the app
 Privacy policy and help pages added
 Fixed small bugs for a steadier app
+
+### 앱스토어 (English (UK))
+
+Send feedback right from the app
+Tell us how much you enjoy the app
+Privacy policy and help pages added
+Fixed small bugs for a steadier app
