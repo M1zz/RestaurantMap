@@ -123,3 +123,10 @@ Små fejl er rettet
 Πείτε μας πόσο σας αρέσει η εφαρμογή
 Προστέθηκαν απόρρητο και σελίδα βοήθειας
 Διορθώθηκαν μικρά σφάλματα
+
+### 앱스토어 (Suomi)
+
+Lähetä palautetta suoraan sovelluksesta
+Kerro, kuinka hyvin sovellus miellyttää
+Tietosuoja ja ohjesivu julkaistu
+Pieniä virheitä korjattu

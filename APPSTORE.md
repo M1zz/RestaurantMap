@@ -951,3 +951,59 @@ Insaeng: Χάρτης εστιατορίων
 
 Αντίγραφο ασφαλείας στο iCloud
 Οι καταγραφές μένουν στη συσκευή σας και, όποτε θέλετε, μπορείτε να τις αποθηκεύσετε στο δικό σας iCloud και να τις επαναφέρετε.
+
+## fi
+
+### 지원 URL
+
+https://m1zz.github.io/RestaurantMap/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/RestaurantMap/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/RestaurantMap/
+
+### 이름
+
+Insaeng: ravintolakartta
+
+### 부제
+
+Arvioi ja järjestä ateriasi
+
+### 키워드
+
+päiväkirja,suosikit,ruokailija,arvostelut,toivelista,pihvi,ramen,sushi,kahvila,treffit,top
+
+### 프로모션 텍스트
+
+Merkitse jokainen vierailemasi ravintola kartalle ja tallenna arvio ja muistiinpanot. Paikka kerrallaan kokoat kartan aterioista, joita et unohda.
+
+### 설명
+
+Merkitse kartalle paikat, joissa olet syönyt, ja kirjaa ylös, miltä ateria maistui – joka kerta.
+Insaeng on henkilökohtainen ruokakarttasi, jossa ovat vain itse valitsemasi ravintolat.
+
+Kartta suosikkipaikoistasi
+Etsi ravintola tai valitse paikka kartalta tallentaaksesi sen. Tallennetut paikat näkyvät nastoina, ja kuusi suosikkiasi saavat omat sijoitusmerkkinsä.
+
+Käyty, Haluan käydä ja oma Top 6
+Pidä jo kokeilemasi ravintolat ja kokeiltavat ravintolat omissa listoissaan ja järjestä kuusi parasta.
+
+Jokaisella annoksella omat kriteerinsä
+Pihvissä ratkaisevat kypsyys ja mehukkuus, sushissa riisi ja kala, ramenissa liemi ja nuudelit. Arvioi maun voimakkuus ja tyytyväisyys kullekin ruokalajille sopivilla kriteereillä. Myös pizzalla, viinillä ja kahvilla on omat arvionsa, ja voit lisätä omia ruokatyyppejä.
+
+Käyntiloki, joka kasvaa mukanasi
+Tallenna jokaisesta käynnistä päivä, arvio, annokset, kuvat ja muistiinpanot. Jokaiselle ravintolalle kertyy käyntimäärä, keskiarvosana ja kokonaisarvio mausta. Lisää menu, niin näet erikoisuudet ja hinnat yhdellä silmäyksellä.
+
+Makuprofiilisi
+Katso makusi kaaviona: tulinen, makea, suolainen, rasvainen ja luonnolliset maut.
+
+Muistutus käynnin jälkeen
+Kun olet käynyt tallennetussa ravintolassa, muistutamme kirjaamaan käynnin. Toimii vain, jos sallit sijainnin käytön.
+
+iCloud-varmuuskopio
+Tietosi pysyvät laitteellasi, ja voit halutessasi varmuuskopioida ne omaan iCloudiisi ja palauttaa sieltä.
