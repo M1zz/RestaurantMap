@@ -1,6 +1,278 @@
 {
   "sourceLanguage" : "ko",
   "strings" : {
+    "%@의 메뉴" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@의 메뉴"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu at %@"
+          }
+        }
+      }
+    },
+    "%lld%% 매칭" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld%% 매칭"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld%% match"
+          }
+        }
+      }
+    },
+    "%lld개" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld개"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        }
+      }
+    },
+    "%lld개 더 평가하면 추천을 받을 수 있어요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld개 더 평가하면 추천을 받을 수 있어요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rate %lld more to get recommendations"
+          }
+        }
+      }
+    },
+    "%lld개의 리뷰" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld개의 리뷰"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld reviews"
+          }
+        }
+      }
+    },
+    "%lld명의 유사한 사용자가 추천" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld명의 유사한 사용자가 추천"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recommended by %lld users with similar taste"
+          }
+        }
+      }
+    },
+    "%lld위" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld위"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No. %lld"
+          }
+        }
+      }
+    },
+    "%lld장의 사진" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld장의 사진"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld photos"
+          }
+        }
+      }
+    },
+    "%lld회" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld회"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld×"
+          }
+        }
+      }
+    },
+    "%lld회 방문" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld회 방문"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld visits"
+          }
+        }
+      }
+    },
+    "'%@'과(와) 모든 방문 기록을 삭제하시겠습니까?" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "'%@'과(와) 모든 방문 기록을 삭제하시겠습니까?"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete “%@” and all of its visit records?"
+          }
+        }
+      }
+    },
+    "1️⃣ 내 데이터 업로드" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1️⃣ 내 데이터 업로드"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1️⃣ Upload my data"
+          }
+        }
+      }
+    },
+    "2️⃣ 더미 데이터 생성" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2️⃣ 더미 데이터 생성"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2️⃣ Generate dummy data"
+          }
+        }
+      }
+    },
+    "3️⃣ 추천 탭에서 결과 확인" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3️⃣ 추천 탭에서 결과 확인"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3️⃣ Check the results in the Recommendations tab"
+          }
+        }
+      }
+    },
+    "4점 이상의 별점을 준 식당이 없어요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4점 이상의 별점을 준 식당이 없어요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You haven’t rated any restaurant 4 stars or higher"
+          }
+        }
+      }
+    },
+    "6가지 속성으로 나의 취향을 표현합니다" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "6가지 속성으로 나의 취향을 표현합니다"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your taste, expressed in six attributes"
+          }
+        }
+      }
+    },
+    "Apple 지도에서 열기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple 지도에서 열기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open in Apple Maps"
+          }
+        }
+      }
+    },
     "Face ID 잠금" : {
       "comment" : "Roadmap item: Face ID lock",
       "localizations" : {
@@ -31,6 +303,70 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Face ID나 Touch ID로 앱을 잠가 내 맛집 기록을 지켜요."
+          }
+        }
+      }
+    },
+    "Firebase에 데이터를 업로드하여\n추천 시스템을 테스트합니다" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Firebase에 데이터를 업로드하여\n추천 시스템을 테스트합니다"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upload data to Firebase\nto test the recommendation system"
+          }
+        }
+      }
+    },
+    "Realtime DB에 업로드" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Realtime DB에 업로드"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upload to Realtime DB"
+          }
+        }
+      }
+    },
+    "Realtime Database 장점" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Realtime Database 장점"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Realtime Database advantages"
+          }
+        }
+      }
+    },
+    "Realtime Database에서 데이터 가져오는 중..." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Realtime Database에서 데이터 가져오는 중..."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fetching data from Realtime Database…"
           }
         }
       }
@@ -86,6 +422,182 @@
         }
       }
     },
+    "iCloud 백업" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud 백업"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud Backup"
+          }
+        }
+      }
+    },
+    "iCloud에 로그인되어 있어야 백업/복구가 가능합니다." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud에 로그인되어 있어야 백업/복구가 가능합니다."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You must be signed in to iCloud to back up or restore."
+          }
+        }
+      }
+    },
+    "iCloud에 백업" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud에 백업"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back Up to iCloud"
+          }
+        }
+      }
+    },
+    "iCloud에서 복구" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud에서 복구"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restore from iCloud"
+          }
+        }
+      }
+    },
+    "iCloud의 백업 데이터로 복구합니다. 현재 기기의 모든 데이터가 삭제되고 백업 데이터로 대체됩니다." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud의 백업 데이터로 복구합니다. 현재 기기의 모든 데이터가 삭제되고 백업 데이터로 대체됩니다."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restores from your iCloud backup. All data on this device will be deleted and replaced with the backup."
+          }
+        }
+      }
+    },
+    "• 각 사용자당 식당 3-4개" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 각 사용자당 식당 3-4개"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 3–4 restaurants per user"
+          }
+        }
+      }
+    },
+    "• 각 식당당 방문 기록 1-3개" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 각 식당당 방문 기록 1-3개"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 1–3 visit records per restaurant"
+          }
+        }
+      }
+    },
+    "• 다양한 취향의 사용자 5명" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 다양한 취향의 사용자 5명"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 5 users with varied tastes"
+          }
+        }
+      }
+    },
+    "⚡ 더 빠른 실시간 동기화" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚡ 더 빠른 실시간 동기화"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚡ Faster real-time sync"
+          }
+        }
+      }
+    },
+    "⚡ 더 빠른 실시간 동기화\n💰 더 저렴한 비용" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚡ 더 빠른 실시간 동기화\n💰 더 저렴한 비용"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚡ Faster real-time sync\n💰 Lower cost"
+          }
+        }
+      }
+    },
+    "✓ 평가됨" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "✓ 평가됨"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "✓ Rated"
+          }
+        }
+      }
+    },
     "가게를 저장하거나 방문을 남길 때 가볍게 떨려서 알려 줘요." : {
       "comment" : "Roadmap item detail: haptics",
       "localizations" : {
@@ -99,6 +611,150 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "가게를 저장하거나 방문을 남길 때 가볍게 떨려서 알려 줘요."
+          }
+        }
+      }
+    },
+    "가격" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가격"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Price"
+          }
+        }
+      }
+    },
+    "가본 곳" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가본 곳"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visited"
+          }
+        }
+      }
+    },
+    "가볼 곳" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가볼 곳"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Want to Go"
+          }
+        }
+      }
+    },
+    "가볼 곳으로 설정된 식당은 탑6로 지정할 수 없습니다" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가볼 곳으로 설정된 식당은 탑6로 지정할 수 없습니다"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A restaurant marked Want to Go can’t be set as a Top 6 pick"
+          }
+        }
+      }
+    },
+    "각 항목의 맛 강도와 만족도를 평가해주세요. 평가는 선택 사항입니다." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "각 항목의 맛 강도와 만족도를 평가해주세요. 평가는 선택 사항입니다."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rate the flavor intensity and satisfaction for each item. Rating is optional."
+          }
+        }
+      }
+    },
+    "개발자에게 문의" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "개발자에게 문의"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contact the Developer"
+          }
+        }
+      }
+    },
+    "검색 결과 %lld개" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "검색 결과 %lld개"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld search results"
+          }
+        }
+      }
+    },
+    "경도: %.6f" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "경도: %.6f"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Longitude: %.6f"
+          }
+        }
+      }
+    },
+    "구분" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "구분"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Type"
           }
         }
       }
@@ -120,6 +776,246 @@
         }
       }
     },
+    "기반: '%@'" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기반: '%@'"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Based on “%@”"
+          }
+        }
+      }
+    },
+    "기본" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기본"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Default"
+          }
+        }
+      }
+    },
+    "기본 정보" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기본 정보"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Basic Info"
+          }
+        }
+      }
+    },
+    "기본 제공" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기본 제공"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Built-in"
+          }
+        }
+      }
+    },
+    "나의 미슐랭" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "나의 미슐랭"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My Michelin"
+          }
+        }
+      }
+    },
+    "나의 미식 DNA" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "나의 미식 DNA"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My Foodie DNA"
+          }
+        }
+      }
+    },
+    "나의 최애 탑6" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "나의 최애 탑6"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My Favorite Top 6"
+          }
+        }
+      }
+    },
+    "나의 탑6" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "나의 탑6"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My Top 6"
+          }
+        }
+      }
+    },
+    "내 데이터" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "내 데이터"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My Data"
+          }
+        }
+      }
+    },
+    "내 데이터 업로드" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "내 데이터 업로드"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upload My Data"
+          }
+        }
+      }
+    },
+    "내 식당 목록에 추가" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "내 식당 목록에 추가"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add to My Restaurants"
+          }
+        }
+      }
+    },
+    "내가 가장 좋아하는 식당들입니다" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "내가 가장 좋아하는 식당들입니다"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your very favorite restaurants"
+          }
+        }
+      }
+    },
+    "내가 추가한 종류" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "내가 추가한 종류"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Types I Added"
+          }
+        }
+      }
+    },
+    "네이버맵에서 열기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "네이버맵에서 열기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open in Naver Map"
+          }
+        }
+      }
+    },
+    "다시 시도해주세요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다시 시도해주세요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please try again"
+          }
+        }
+      }
+    },
     "다크 모드" : {
       "comment" : "Roadmap item: dark mode",
       "localizations" : {
@@ -137,6 +1033,22 @@
         }
       }
     },
+    "닫기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "닫기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close"
+          }
+        }
+      }
+    },
     "대비를 높이거나 색을 구별하기 어려워도 지도와 목록을 알아볼 수 있어요." : {
       "comment" : "Roadmap item detail: colors and contrast",
       "localizations" : {
@@ -150,6 +1062,54 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "대비를 높이거나 색을 구별하기 어려워도 지도와 목록을 알아볼 수 있어요."
+          }
+        }
+      }
+    },
+    "대표 메뉴" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "대표 메뉴"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Signature Dish"
+          }
+        }
+      }
+    },
+    "대표 메뉴는 메뉴 목록 상단에 표시됩니다" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "대표 메뉴는 메뉴 목록 상단에 표시됩니다"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Signature dishes appear at the top of the menu list"
+          }
+        }
+      }
+    },
+    "대표 메뉴로 설정" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "대표 메뉴로 설정"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Set as Signature Dish"
           }
         }
       }
@@ -188,6 +1148,806 @@
         }
       }
     },
+    "더미 데이터 생성" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "더미 데이터 생성"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Generate Dummy Data"
+          }
+        }
+      }
+    },
+    "더미 사용자 5명과 식당 데이터를 생성합니다" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "더미 사용자 5명과 식당 데이터를 생성합니다"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Generates 5 dummy users and restaurant data"
+          }
+        }
+      }
+    },
+    "데이터 관리" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "데이터 관리"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Data Management"
+          }
+        }
+      }
+    },
+    "데이터 동기화" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "데이터 동기화"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Data Sync"
+          }
+        }
+      }
+    },
+    "데이터 동기화하기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "데이터 동기화하기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sync Data"
+          }
+        }
+      }
+    },
+    "데이터 업로드하기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "데이터 업로드하기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upload Data"
+          }
+        }
+      }
+    },
+    "데이터 현황" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "데이터 현황"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Data Overview"
+          }
+        }
+      }
+    },
+    "데이터가 부족해요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "데이터가 부족해요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not enough data yet"
+          }
+        }
+      }
+    },
+    "데이터가 충분하지 않을 수 있습니다" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "데이터가 충분하지 않을 수 있습니다"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "There may not be enough data"
+          }
+        }
+      }
+    },
+    "데이터를 불러올 수 없습니다" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "데이터를 불러올 수 없습니다"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couldn’t load the data"
+          }
+        }
+      }
+    },
+    "도로명 주소" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "도로명 주소"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Street Address"
+          }
+        }
+      }
+    },
+    "등록된 메뉴가 없습니다" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "등록된 메뉴가 없습니다"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No menu items yet"
+          }
+        }
+      }
+    },
+    "랭킹" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "랭킹"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ranking"
+          }
+        }
+      }
+    },
+    "리이오미슐랭 점수" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "리이오미슐랭 점수"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Riio Michelin Score"
+          }
+        }
+      }
+    },
+    "마지막 백업" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "마지막 백업"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Last Backup"
+          }
+        }
+      }
+    },
+    "만족도" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "만족도"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Satisfaction"
+          }
+        }
+      }
+    },
+    "맛 강도" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "맛 강도"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flavor Intensity"
+          }
+        }
+      }
+    },
+    "맛 선호도" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "맛 선호도"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flavor Preferences"
+          }
+        }
+      }
+    },
+    "맛 취향\n%lld%%" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "맛 취향\n%lld%%"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flavor Taste\n%lld%%"
+          }
+        }
+      }
+    },
+    "맛 평가" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "맛 평가"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taste Rating"
+          }
+        }
+      }
+    },
+    "맛 평가 완료" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "맛 평가 완료"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taste Rated"
+          }
+        }
+      }
+    },
+    "맛 평가됨" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "맛 평가됨"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taste Rated"
+          }
+        }
+      }
+    },
+    "맛의 형태" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "맛의 형태"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flavor Profile"
+          }
+        }
+      }
+    },
+    "맛집 추천" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "맛집 추천"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurant Picks"
+          }
+        }
+      }
+    },
+    "맞춤 추천" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "맞춤 추천"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "For You"
+          }
+        }
+      }
+    },
+    "맞춤 추천을 받으려면" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "맞춤 추천을 받으려면"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "To get personalized picks"
+          }
+        }
+      }
+    },
+    "매우만족" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "매우만족"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Very satisfied"
+          }
+        }
+      }
+    },
+    "먹은 메뉴" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "먹은 메뉴"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What You Ate"
+          }
+        }
+      }
+    },
+    "먹은 메뉴 (예: 불고기정식, 마르게리따 피자)" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "먹은 메뉴 (예: 불고기정식, 마르게리따 피자)"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What you ate (e.g. bulgogi set, margherita pizza)"
+          }
+        }
+      }
+    },
+    "메뉴" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "메뉴"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu"
+          }
+        }
+      }
+    },
+    "메뉴 관리" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "메뉴 관리"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manage Menu"
+          }
+        }
+      }
+    },
+    "메뉴 등록하러 가기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "메뉴 등록하러 가기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Menu Items"
+          }
+        }
+      }
+    },
+    "메뉴 목록 (%lld)" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "메뉴 목록 (%lld)"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu (%lld)"
+          }
+        }
+      }
+    },
+    "메뉴 선택" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "메뉴 선택"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose Menu Item"
+          }
+        }
+      }
+    },
+    "메뉴 설명" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "메뉴 설명"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu Description"
+          }
+        }
+      }
+    },
+    "메뉴 설명 (선택)" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "메뉴 설명 (선택)"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu description (optional)"
+          }
+        }
+      }
+    },
+    "메뉴 이름" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "메뉴 이름"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu Item Name"
+          }
+        }
+      }
+    },
+    "메뉴 정보" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "메뉴 정보"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu Item Info"
+          }
+        }
+      }
+    },
+    "메뉴 추가" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "메뉴 추가"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Menu Item"
+          }
+        }
+      }
+    },
+    "메뉴를 등록하면 방문 기록 추가 시 선택할 수 있습니다" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "메뉴를 등록하면 방문 기록 추가 시 선택할 수 있습니다"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu items you add can be picked when you log a visit"
+          }
+        }
+      }
+    },
+    "메모" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "메모"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notes"
+          }
+        }
+      }
+    },
+    "메모 없음" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "메모 없음"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No notes"
+          }
+        }
+      }
+    },
+    "모든 가게와 방문 기록이 삭제됩니다. 이 작업은 되돌릴 수 없습니다." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "모든 가게와 방문 기록이 삭제됩니다. 이 작업은 되돌릴 수 없습니다."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All restaurants and visit records will be deleted. This can’t be undone."
+          }
+        }
+      }
+    },
+    "모든 데이터 삭제" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "모든 데이터 삭제"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete All Data"
+          }
+        }
+      }
+    },
+    "목록" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "목록"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "List"
+          }
+        }
+      }
+    },
+    "목록 닫기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "목록 닫기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close List"
+          }
+        }
+      }
+    },
+    "방문 기록" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "방문 기록"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visit Log"
+          }
+        }
+      }
+    },
+    "방문 기록 추가" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "방문 기록 추가"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Visit"
+          }
+        }
+      }
+    },
+    "방문 기록 추가 시 맛 평가를 입력해주세요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "방문 기록 추가 시 맛 평가를 입력해주세요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter a taste rating when you add a visit"
+          }
+        }
+      }
+    },
+    "방문 기록 추가 시 이 메뉴를 선택해주세요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "방문 기록 추가 시 이 메뉴를 선택해주세요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pick this menu item when you add a visit"
+          }
+        }
+      }
+    },
     "방문 기록을 적다가 앱이 꺼져도 쓰던 내용이 남아 있어요." : {
       "comment" : "Roadmap item detail: keep a half-written visit",
       "localizations" : {
@@ -201,6 +1961,134 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "방문 기록을 적다가 앱이 꺼져도 쓰던 내용이 남아 있어요."
+          }
+        }
+      }
+    },
+    "방문 날짜" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "방문 날짜"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visit Date"
+          }
+        }
+      }
+    },
+    "방문 정보" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "방문 정보"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visit Info"
+          }
+        }
+      }
+    },
+    "방문 통계" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "방문 통계"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visit Stats"
+          }
+        }
+      }
+    },
+    "백업" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "백업"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back Up"
+          }
+        }
+      }
+    },
+    "버그 제보와 기능 제안을 환영합니다." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "버그 제보와 기능 제안을 환영합니다."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bug reports and feature suggestions are welcome."
+          }
+        }
+      }
+    },
+    "버전" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "버전"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version"
+          }
+        }
+      }
+    },
+    "별점" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "별점"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rating"
+          }
+        }
+      }
+    },
+    "별점 매기기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "별점 매기기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rate"
           }
         }
       }
@@ -222,6 +2110,294 @@
         }
       }
     },
+    "복구" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "복구"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restore"
+          }
+        }
+      }
+    },
+    "불러오는 중..." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "불러오는 중..."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loading…"
+          }
+        }
+      }
+    },
+    "불만족" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "불만족"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unsatisfied"
+          }
+        }
+      }
+    },
+    "사람들의 평가" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "사람들의 평가"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What People Say"
+          }
+        }
+      }
+    },
+    "사진" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "사진"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Photos"
+          }
+        }
+      }
+    },
+    "사진 (%lld)" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "사진 (%lld)"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Photos (%lld)"
+          }
+        }
+      }
+    },
+    "사진 선택" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "사진 선택"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose Photos"
+          }
+        }
+      }
+    },
+    "사진 추가" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "사진 추가"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Photos"
+          }
+        }
+      }
+    },
+    "삭제" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "삭제"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete"
+          }
+        }
+      }
+    },
+    "상세 매칭 분석" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "상세 매칭 분석"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Match Details"
+          }
+        }
+      }
+    },
+    "새 음식 종류" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "새 음식 종류"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New Food Type"
+          }
+        }
+      }
+    },
+    "새 종류 추가" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "새 종류 추가"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add New Type"
+          }
+        }
+      }
+    },
+    "새로 추가될 사진" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "새로 추가될 사진"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Photos to Be Added"
+          }
+        }
+      }
+    },
+    "새로고침" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "새로고침"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Refresh"
+          }
+        }
+      }
+    },
+    "선택" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "선택"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select"
+          }
+        }
+      }
+    },
+    "선택 안함" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "선택 안함"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "None"
+          }
+        }
+      }
+    },
+    "설명" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "설명"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Description"
+          }
+        }
+      }
+    },
+    "설정" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "설정"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        }
+      }
+    },
     "손끝으로 느끼는 반응" : {
       "comment" : "Roadmap item: haptics",
       "localizations" : {
@@ -235,6 +2411,214 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "손끝으로 느끼는 반응"
+          }
+        }
+      }
+    },
+    "식당 구분" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "식당 구분"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurant Type"
+          }
+        }
+      }
+    },
+    "식당 목록" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "식당 목록"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurants"
+          }
+        }
+      }
+    },
+    "식당 목록에서 별점 매기기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "식당 목록에서 별점 매기기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rate restaurants from the list"
+          }
+        }
+      }
+    },
+    "식당 삭제" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "식당 삭제"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete Restaurant"
+          }
+        }
+      }
+    },
+    "식당 상세 화면에서 4점 이상의 별점을 매겨주세요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "식당 상세 화면에서 4점 이상의 별점을 매겨주세요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Give a rating of 4 stars or higher on a restaurant’s detail screen"
+          }
+        }
+      }
+    },
+    "식당 없음" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "식당 없음"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No Restaurants"
+          }
+        }
+      }
+    },
+    "식당 이름" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "식당 이름"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurant Name"
+          }
+        }
+      }
+    },
+    "식당 정보" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "식당 정보"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurant Info"
+          }
+        }
+      }
+    },
+    "식당 지도" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "식당 지도"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurant Map"
+          }
+        }
+      }
+    },
+    "식당 추가" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "식당 추가"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Restaurant"
+          }
+        }
+      }
+    },
+    "식당 추가하기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "식당 추가하기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add a Restaurant"
+          }
+        }
+      }
+    },
+    "식당으로 추가" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "식당으로 추가"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add as Restaurant"
+          }
+        }
+      }
+    },
+    "식당을 추가하여 시작하세요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "식당을 추가하여 시작하세요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add a restaurant to get started"
           }
         }
       }
@@ -273,6 +2657,38 @@
         }
       }
     },
+    "아니오" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아니오"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No"
+          }
+        }
+      }
+    },
+    "아이콘" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아이콘"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Icon"
+          }
+        }
+      }
+    },
     "아이패드에서 키보드만으로 주요 기능을 쓸 수 있어요." : {
       "comment" : "Roadmap item detail: keyboard control",
       "localizations" : {
@@ -290,6 +2706,102 @@
         }
       }
     },
+    "아직 가보고 싶은 식당이 없습니다" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아직 가보고 싶은 식당이 없습니다"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No restaurants on your Want to Go list yet"
+          }
+        }
+      }
+    },
+    "아직 방문하지 않은 식당입니다" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아직 방문하지 않은 식당입니다"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You haven’t visited this restaurant yet"
+          }
+        }
+      }
+    },
+    "아직 방문한 식당이 없습니다" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아직 방문한 식당이 없습니다"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No visited restaurants yet"
+          }
+        }
+      }
+    },
+    "아직 저장된 식당이 없어요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아직 저장된 식당이 없어요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No saved restaurants yet"
+          }
+        }
+      }
+    },
+    "아직 탑6로 지정된 식당이 없습니다" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아직 탑6로 지정된 식당이 없습니다"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No Top 6 restaurants yet"
+          }
+        }
+      }
+    },
+    "아직 평가가 없습니다" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아직 평가가 없습니다"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No ratings yet"
+          }
+        }
+      }
+    },
     "알아 두면 편한 기능을 알맞은 때에 살짝 알려 줘요." : {
       "comment" : "Roadmap item detail: tips",
       "localizations" : {
@@ -303,6 +2815,38 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "알아 두면 편한 기능을 알맞은 때에 살짝 알려 줘요."
+          }
+        }
+      }
+    },
+    "앨범에서 선택" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "앨범에서 선택"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose from Library"
+          }
+        }
+      }
+    },
+    "앱 정보" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "앱 정보"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About"
           }
         }
       }
@@ -392,6 +2936,22 @@
         }
       }
     },
+    "여러분의 취향을 분석해서 맞춤 추천을 제공해요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "여러분의 취향을 분석해서 맞춤 추천을 제공해요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We analyze your taste to give you personalized picks"
+          }
+        }
+      }
+    },
     "영어 지원" : {
       "comment" : "Roadmap item: English",
       "localizations" : {
@@ -405,6 +2965,86 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "영어 지원"
+          }
+        }
+      }
+    },
+    "예: 태국음식, 인도음식" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "예: 태국음식, 인도음식"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "e.g. Thai, Indian"
+          }
+        }
+      }
+    },
+    "예측 별점" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "예측 별점"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Predicted Rating"
+          }
+        }
+      }
+    },
+    "오류" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오류"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error"
+          }
+        }
+      }
+    },
+    "완료" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "완료"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done"
+          }
+        }
+      }
+    },
+    "왜 추천하나요?" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "왜 추천하나요?"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Why this pick?"
           }
         }
       }
@@ -443,6 +3083,646 @@
         }
       }
     },
+    "원" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "원"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "KRW"
+          }
+        }
+      }
+    },
+    "웹사이트" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "웹사이트"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Website"
+          }
+        }
+      }
+    },
+    "위도: %.6f" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위도: %.6f"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Latitude: %.6f"
+          }
+        }
+      }
+    },
+    "위치" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위치"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Location"
+          }
+        }
+      }
+    },
+    "위치 선택" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위치 선택"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose Location"
+          }
+        }
+      }
+    },
+    "음식 스타일" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "음식 스타일"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Food Style"
+          }
+        }
+      }
+    },
+    "음식 종류" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "음식 종류"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Food Type"
+          }
+        }
+      }
+    },
+    "음식 종류 관리" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "음식 종류 관리"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manage Food Types"
+          }
+        }
+      }
+    },
+    "이 방문은 어땠나요?" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 방문은 어땠나요?"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How was this visit?"
+          }
+        }
+      }
+    },
+    "이 방문의 맛 취향을 평가하려면 '편집'을 눌러주세요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 방문의 맛 취향을 평가하려면 '편집'을 눌러주세요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap Edit to rate the flavors of this visit"
+          }
+        }
+      }
+    },
+    "이 식당에 등록된 메뉴가 없습니다. 메뉴를 먼저 등록하거나 직접 입력하세요." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 식당에 등록된 메뉴가 없습니다. 메뉴를 먼저 등록하거나 직접 입력하세요."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This restaurant has no menu items yet. Add some first, or type one in."
+          }
+        }
+      }
+    },
+    "이 식당은 전반적으로..." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 식당은 전반적으로..."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Overall, this restaurant is…"
+          }
+        }
+      }
+    },
+    "이름" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이름"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name"
+          }
+        }
+      }
+    },
+    "이메일로 문의하기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이메일로 문의하기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contact by Email"
+          }
+        }
+      }
+    },
+    "이미지를 불러올 수 없습니다" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이미지를 불러올 수 없습니다"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couldn’t load the image"
+          }
+        }
+      }
+    },
+    "인생 맛집 평가하기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "인생 맛집 평가하기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rate Your Life-Changing Restaurant"
+          }
+        }
+      }
+    },
+    "인스타그램 DM (@lee25_ios)" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "인스타그램 DM (@lee25_ios)"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram DM (@lee25_ios)"
+          }
+        }
+      }
+    },
+    "자주 가는 음식 종류를 직접 추가할 수 있습니다" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "자주 가는 음식 종류를 직접 추가할 수 있습니다"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can add the food types you eat often"
+          }
+        }
+      }
+    },
+    "장소 정보" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "장소 정보"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Place Info"
+          }
+        }
+      }
+    },
+    "장소 정보를 불러오는 중..." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "장소 정보를 불러오는 중..."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loading place info…"
+          }
+        }
+      }
+    },
+    "장소 정보에서 자동 입력됨" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "장소 정보에서 자동 입력됨"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filled in from place info"
+          }
+        }
+      }
+    },
+    "저장" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "저장"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save"
+          }
+        }
+      }
+    },
+    "저장된 가게" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "저장된 가게"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saved Restaurants"
+          }
+        }
+      }
+    },
+    "저장된 식당: %lld개" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "저장된 식당: %lld개"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saved restaurants: %lld"
+          }
+        }
+      }
+    },
+    "전체" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "전체"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All"
+          }
+        }
+      }
+    },
+    "전체 매칭도" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "전체 매칭도"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Overall Match"
+          }
+        }
+      }
+    },
+    "전화번호" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "전화번호"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phone"
+          }
+        }
+      }
+    },
+    "정말로 모든 데이터를 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "정말로 모든 데이터를 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete all data? This can’t be undone."
+          }
+        }
+      }
+    },
+    "정보를 불러올 수 없습니다" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "정보를 불러올 수 없습니다"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couldn’t load the information"
+          }
+        }
+      }
+    },
+    "조금만 더 평가해주세요!" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "조금만 더 평가해주세요!"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Just a few more ratings, please!"
+          }
+        }
+      }
+    },
+    "주문 횟수" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "주문 횟수"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Times Ordered"
+          }
+        }
+      }
+    },
+    "주소" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "주소"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Address"
+          }
+        }
+      }
+    },
+    "지도" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지도"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Map"
+          }
+        }
+      }
+    },
+    "지도나 목록에서 식당을 추가하세요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지도나 목록에서 식당을 추가하세요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add a restaurant from the map or the list"
+          }
+        }
+      }
+    },
+    "지도를 이동하거나 다른 장소를 선택한 후\n다시 시도해주세요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지도를 이동하거나 다른 장소를 선택한 후\n다시 시도해주세요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Move the map or pick another place,\nthen try again"
+          }
+        }
+      }
+    },
+    "지도에서 보기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지도에서 보기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "View on Map"
+          }
+        }
+      }
+    },
+    "지도에서 식당 찾기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지도에서 식당 찾기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Find Restaurants on the Map"
+          }
+        }
+      }
+    },
+    "지번 주소" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지번 주소"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lot Number Address"
+          }
+        }
+      }
+    },
+    "지원" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지원"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Support"
+          }
+        }
+      }
+    },
+    "직접 입력" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "직접 입력"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter Manually"
+          }
+        }
+      }
+    },
     "처음 쓰는 분을 위한 안내" : {
       "comment" : "Roadmap item: first-run guide",
       "localizations" : {
@@ -473,6 +3753,422 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "처음 열었을 때 무엇을 할 수 있는지 짧게 보여 줘요."
+          }
+        }
+      }
+    },
+    "첫 메뉴 추가하기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "첫 메뉴 추가하기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Your First Menu Item"
+          }
+        }
+      }
+    },
+    "첫 방문 기록 추가하기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "첫 방문 기록 추가하기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Your First Visit"
+          }
+        }
+      }
+    },
+    "초기화" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "초기화"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reset"
+          }
+        }
+      }
+    },
+    "총 방문 기록" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "총 방문 기록"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Total Visits"
+          }
+        }
+      }
+    },
+    "총 방문 횟수" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "총 방문 횟수"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Total Visits"
+          }
+        }
+      }
+    },
+    "총평 (전체 방문 평균)" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "총평 (전체 방문 평균)"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Overall (average of all visits)"
+          }
+        }
+      }
+    },
+    "최고의 식당들입니다" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "최고의 식당들입니다"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your best restaurants"
+          }
+        }
+      }
+    },
+    "최근 방문일" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "최근 방문일"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Last Visit"
+          }
+        }
+      }
+    },
+    "최근 주문일" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "최근 주문일"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Last Ordered"
+          }
+        }
+      }
+    },
+    "추천" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "추천"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Picks"
+          }
+        }
+      }
+    },
+    "추천 받기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "추천 받기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Get Picks"
+          }
+        }
+      }
+    },
+    "추천 분석 중..." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "추천 분석 중..."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Analyzing picks…"
+          }
+        }
+      }
+    },
+    "추천 식당" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "추천 식당"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recommended Restaurants"
+          }
+        }
+      }
+    },
+    "추천 점수" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "추천 점수"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pick Score"
+          }
+        }
+      }
+    },
+    "추천 테스트 순서" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "추천 테스트 순서"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recommendation Test Steps"
+          }
+        }
+      }
+    },
+    "추천할 식당이 없습니다" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "추천할 식당이 없습니다"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No restaurants to recommend"
+          }
+        }
+      }
+    },
+    "취소" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "취소"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        }
+      }
+    },
+    "취향" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "취향"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taste"
+          }
+        }
+      }
+    },
+    "취향 프로필" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "취향 프로필"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taste Profile"
+          }
+        }
+      }
+    },
+    "카메라로 촬영" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "카메라로 촬영"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Take Photo"
+          }
+        }
+      }
+    },
+    "카카오맵에서 열기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "카카오맵에서 열기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open in Kakao Map"
+          }
+        }
+      }
+    },
+    "카테고리" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "카테고리"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Category"
+          }
+        }
+      }
+    },
+    "카테고리\n%lld%%" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "카테고리\n%lld%%"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Category\n%lld%%"
+          }
+        }
+      }
+    },
+    "카테고리 (예: 한식, 중식)" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "카테고리 (예: 한식, 중식)"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Category (e.g. Korean, Chinese)"
+          }
+        }
+      }
+    },
+    "카테고리 설정" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "카테고리 설정"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Category Settings"
+          }
+        }
+      }
+    },
+    "카테고리 아이콘" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "카테고리 아이콘"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Category Icon"
           }
         }
       }
@@ -511,6 +4207,118 @@
         }
       }
     },
+    "탑6 설정" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "탑6 설정"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Set as Top 6"
+          }
+        }
+      }
+    },
+    "탑6 여부" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "탑6 여부"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Top 6"
+          }
+        }
+      }
+    },
+    "탑6 제한" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "탑6 제한"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Top 6 Limit"
+          }
+        }
+      }
+    },
+    "탑6는 최대 6개까지만 지정할 수 있습니다 (현재: %lld/6)" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "탑6는 최대 6개까지만 지정할 수 있습니다 (현재: %lld/6)"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can pick up to 6 Top 6 restaurants (currently %lld/6)"
+          }
+        }
+      }
+    },
+    "탑6는 최대 6개까지만 지정할 수 있습니다. 다른 식당의 탑6를 해제한 후 다시 시도해주세요." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "탑6는 최대 6개까지만 지정할 수 있습니다. 다른 식당의 탑6를 해제한 후 다시 시도해주세요."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can pick up to 6 Top 6 restaurants. Remove another restaurant from your Top 6, then try again."
+          }
+        }
+      }
+    },
+    "테스트 데이터" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "테스트 데이터"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Test Data"
+          }
+        }
+      }
+    },
+    "통계" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "통계"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stats"
+          }
+        }
+      }
+    },
     "펼치는 아이폰 화면" : {
       "comment" : "Roadmap item: foldable iPhone layout",
       "localizations" : {
@@ -545,6 +4353,102 @@
         }
       }
     },
+    "평가 정보" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "평가 정보"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rating Info"
+          }
+        }
+      }
+    },
+    "평가 히스토리 (%lld)" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "평가 히스토리 (%lld)"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rating History (%lld)"
+          }
+        }
+      }
+    },
+    "평균 별점" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "평균 별점"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Average Rating"
+          }
+        }
+      }
+    },
+    "평점 패턴\n%lld%%" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "평점 패턴\n%lld%%"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rating Pattern\n%lld%%"
+          }
+        }
+      }
+    },
+    "현재 데이터를 iCloud에 백업합니다. 기존 백업이 있다면 덮어씌워집니다." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "현재 데이터를 iCloud에 백업합니다. 기존 백업이 있다면 덮어씌워집니다."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Backs up your current data to iCloud. Any existing backup will be overwritten."
+          }
+        }
+      }
+    },
+    "현재 위치에서" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "현재 위치에서"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "From Current Location"
+          }
+        }
+      }
+    },
     "홈 화면 위젯" : {
       "comment" : "Roadmap item: home screen widgets",
       "localizations" : {
@@ -575,6 +4479,54 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "화면 읽기 기능이 단추와 내용을 빠짐없이, 알맞은 순서로 읽어 줘요."
+          }
+        }
+      }
+    },
+    "확인" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "확인"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        }
+      }
+    },
+    "💰 비용 효율적 (Firestore 대비 1/6)" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "💰 비용 효율적 (Firestore 대비 1/6)"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "💰 Cost-efficient (1/6 the cost of Firestore)"
+          }
+        }
+      }
+    },
+    "🚀 간단한 JSON 구조" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🚀 간단한 JSON 구조"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🚀 Simple JSON structure"
           }
         }
       }
