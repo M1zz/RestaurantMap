@@ -26,6 +26,12 @@
             "state" : "translated",
             "value" : "%@のメニュー"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@的菜单"
+          }
         }
       }
     },
@@ -53,6 +59,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld%%マッチ"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld%% 匹配"
           }
         }
       }
@@ -82,6 +94,12 @@
             "state" : "translated",
             "value" : "%lld件"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld家"
+          }
         }
       }
     },
@@ -109,6 +127,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "あと%lld件評価すると、おすすめが表示されます"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "再评价%lld家，就能获得推荐"
           }
         }
       }
@@ -138,6 +162,12 @@
             "state" : "translated",
             "value" : "レビュー%lld件"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld条评价"
+          }
         }
       }
     },
@@ -165,6 +195,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "好みが近い%lld人のユーザーがおすすめ"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld位口味相近的用户推荐"
           }
         }
       }
@@ -194,6 +230,12 @@
             "state" : "translated",
             "value" : "%lld位"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "第%lld名"
+          }
         }
       }
     },
@@ -221,6 +263,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "写真%lld枚"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld张照片"
           }
         }
       }
@@ -250,6 +298,12 @@
             "state" : "translated",
             "value" : "%lld回"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld次"
+          }
         }
       }
     },
@@ -277,6 +331,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld回訪問"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "到访%lld次"
           }
         }
       }
@@ -306,6 +366,12 @@
             "state" : "translated",
             "value" : "「%@」と、すべての訪問記録を削除しますか?"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "要删除“%@”及其所有到访记录吗？"
+          }
         }
       }
     },
@@ -333,6 +399,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "1️⃣ 自分のデータをアップロード"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1️⃣ 上传我的数据"
           }
         }
       }
@@ -362,6 +434,12 @@
             "state" : "translated",
             "value" : "2️⃣ ダミーデータを作成"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2️⃣ 生成模拟数据"
+          }
         }
       }
     },
@@ -389,6 +467,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "3️⃣ おすすめタブで結果を確認"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3️⃣ 在“推荐”标签页查看结果"
           }
         }
       }
@@ -418,6 +502,12 @@
             "state" : "translated",
             "value" : "4つ星以上をつけたお店がありません"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "还没有你打过4星及以上的餐厅"
+          }
         }
       }
     },
@@ -446,6 +536,12 @@
             "state" : "translated",
             "value" : "6つの属性であなたの好みを表します"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用六个维度描绘你的口味"
+          }
         }
       }
     },
@@ -473,6 +569,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Appleマップで開く"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在 Apple 地图中打开"
           }
         }
       }
@@ -503,6 +605,12 @@
             "state" : "translated",
             "value" : "Face IDロック"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Face ID 锁定"
+          }
         }
       }
     },
@@ -532,6 +640,12 @@
             "state" : "translated",
             "value" : "Face IDまたはTouch IDでアプリをロックして、グルメ記録を守れます。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用 Face ID 或 Touch ID 锁定 App，守护你的美食记录。"
+          }
         }
       }
     },
@@ -559,6 +673,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Firebaseにデータをアップロードして\nおすすめ機能をテストします"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "将数据上传到 Firebase，\n测试推荐系统"
           }
         }
       }
@@ -588,6 +708,12 @@
             "state" : "translated",
             "value" : "Realtime DBにアップロード"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上传到 Realtime DB"
+          }
         }
       }
     },
@@ -616,6 +742,12 @@
             "state" : "translated",
             "value" : "Realtime Databaseの利点"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Realtime Database 的优势"
+          }
         }
       }
     },
@@ -643,6 +775,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Realtime Databaseからデータを取得中…"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在从 Realtime Database 获取数据…"
           }
         }
       }
@@ -673,6 +811,12 @@
             "state" : "translated",
             "value" : "Siriに話しかけたり、ショートカットを使って、すぐに訪問を記録できます。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "对 Siri 说一声，或用快捷指令，立刻记录到访。"
+          }
         }
       }
     },
@@ -701,6 +845,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siriとショートカット"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri 与快捷指令"
           }
         }
       }
@@ -731,6 +881,12 @@
             "state" : "translated",
             "value" : "VoiceOverをもっと使いやすく"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更好用的旁白"
+          }
         }
       }
     },
@@ -758,6 +914,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "iCloudバックアップ"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud 备份"
           }
         }
       }
@@ -787,6 +949,12 @@
             "state" : "translated",
             "value" : "バックアップ/復元にはiCloudへのサインインが必要です。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "需要登录 iCloud 才能备份或恢复。"
+          }
         }
       }
     },
@@ -814,6 +982,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "iCloudにバックアップ"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "备份到 iCloud"
           }
         }
       }
@@ -843,6 +1017,12 @@
             "state" : "translated",
             "value" : "iCloudから復元"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "从 iCloud 恢复"
+          }
         }
       }
     },
@@ -870,6 +1050,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "iCloudのバックアップから復元します。この端末のすべてのデータが削除され、バックアップの内容に置き換わります。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "将从 iCloud 备份恢复。本设备上的所有数据都会被删除，并替换为备份中的数据。"
           }
         }
       }
@@ -899,6 +1085,12 @@
             "state" : "translated",
             "value" : "• ユーザーごとにお店3〜4件"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 每位用户 3–4 家餐厅"
+          }
         }
       }
     },
@@ -926,6 +1118,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "• お店ごとに訪問記録1〜3件"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 每家餐厅 1–3 条到访记录"
           }
         }
       }
@@ -955,6 +1153,12 @@
             "state" : "translated",
             "value" : "• 好みの異なるユーザー5人"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 5 位口味各异的用户"
+          }
         }
       }
     },
@@ -982,6 +1186,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "⚡ より速いリアルタイム同期"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚡ 更快的实时同步"
           }
         }
       }
@@ -1011,6 +1221,12 @@
             "state" : "translated",
             "value" : "⚡ より速いリアルタイム同期\n💰 より低コスト"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚡ 更快的实时同步\n💰 成本更低"
+          }
         }
       }
     },
@@ -1038,6 +1254,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "✓ 評価済み"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "✓ 已评价"
           }
         }
       }
@@ -1068,6 +1290,12 @@
             "state" : "translated",
             "value" : "お店を保存したり訪問を記録したりすると、軽い振動で知らせます。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保存餐厅或记录到访时，轻轻震动提示你。"
+          }
         }
       }
     },
@@ -1095,6 +1323,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "価格"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "价格"
           }
         }
       }
@@ -1124,6 +1358,12 @@
             "state" : "translated",
             "value" : "行った"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "去过"
+          }
         }
       }
     },
@@ -1151,6 +1391,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "行きたい"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "想去"
           }
         }
       }
@@ -1180,6 +1426,12 @@
             "state" : "translated",
             "value" : "「行きたい」に設定したお店はTop 6に選べません"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "标为“想去”的餐厅不能设为 Top 6"
+          }
         }
       }
     },
@@ -1207,6 +1459,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "各項目の味の強さと満足度を評価してください。評価は任意です。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请为每一项评价口味浓淡和满意度。评价为可选项。"
           }
         }
       }
@@ -1236,6 +1494,12 @@
             "state" : "translated",
             "value" : "開発者に問い合わせ"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "联系开发者"
+          }
         }
       }
     },
@@ -1263,6 +1527,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "検索結果 %lld件"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld条搜索结果"
           }
         }
       }
@@ -1292,6 +1562,12 @@
             "state" : "translated",
             "value" : "経度: %.6f"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "经度：%.6f"
+          }
         }
       }
     },
@@ -1319,6 +1595,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "区分"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "类别"
           }
         }
       }
@@ -1349,6 +1631,12 @@
             "state" : "translated",
             "value" : "文字サイズを大きくしても、切れることなく見やすく配置し直されます。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "放大字体后，界面会重新排布，内容不会被截断。"
+          }
         }
       }
     },
@@ -1376,6 +1664,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "「%@」に基づく"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "基于“%@”"
           }
         }
       }
@@ -1405,6 +1699,12 @@
             "state" : "translated",
             "value" : "標準"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "默认"
+          }
         }
       }
     },
@@ -1432,6 +1732,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "基本情報"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "基本信息"
           }
         }
       }
@@ -1461,6 +1767,12 @@
             "state" : "translated",
             "value" : "標準搭載"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "内置"
+          }
         }
       }
     },
@@ -1488,6 +1800,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "マイ・ミシュラン"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我的米其林"
           }
         }
       }
@@ -1517,6 +1835,12 @@
             "state" : "translated",
             "value" : "わたしのグルメDNA"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我的美食 DNA"
+          }
         }
       }
     },
@@ -1544,6 +1868,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "お気に入りTop 6"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我的最爱 Top 6"
           }
         }
       }
@@ -1573,6 +1903,12 @@
             "state" : "translated",
             "value" : "マイTop 6"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我的 Top 6"
+          }
         }
       }
     },
@@ -1600,6 +1936,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "マイデータ"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我的数据"
           }
         }
       }
@@ -1629,6 +1971,12 @@
             "state" : "translated",
             "value" : "自分のデータをアップロード"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上传我的数据"
+          }
         }
       }
     },
@@ -1656,6 +2004,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "マイお店リストに追加"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加到我的餐厅列表"
           }
         }
       }
@@ -1685,6 +2039,12 @@
             "state" : "translated",
             "value" : "いちばん好きなお店です"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这些是你最爱的餐厅"
+          }
         }
       }
     },
@@ -1712,6 +2072,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "追加した種類"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我添加的类型"
           }
         }
       }
@@ -1741,6 +2107,12 @@
             "state" : "translated",
             "value" : "NAVERマップで開く"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在 Naver 地图中打开"
+          }
         }
       }
     },
@@ -1768,6 +2140,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "もう一度お試しください"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请重试"
           }
         }
       }
@@ -1798,6 +2176,12 @@
             "state" : "translated",
             "value" : "ダークモード"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "深色模式"
+          }
         }
       }
     },
@@ -1825,6 +2209,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "閉じる"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关闭"
           }
         }
       }
@@ -1855,6 +2245,12 @@
             "state" : "translated",
             "value" : "コントラストを上げたり、色の区別がつきにくい場合でも、地図とリストを見分けられます。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "即使开启“增强对比度”或不易分辨颜色，也能看清地图和列表。"
+          }
         }
       }
     },
@@ -1882,6 +2278,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "看板メニュー"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "招牌菜"
           }
         }
       }
@@ -1911,6 +2313,12 @@
             "state" : "translated",
             "value" : "看板メニューはメニュー一覧の先頭に表示されます"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "招牌菜会显示在菜单列表顶部"
+          }
         }
       }
     },
@@ -1938,6 +2346,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "看板メニューに設定"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设为招牌菜"
           }
         }
       }
@@ -1968,6 +2382,12 @@
             "state" : "translated",
             "value" : "より多くの言語でアプリを使えるようにします。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "支持更多语言，让更多人用上这款 App。"
+          }
         }
       }
     },
@@ -1997,6 +2417,12 @@
             "state" : "translated",
             "value" : "対応言語の追加"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更多语言"
+          }
         }
       }
     },
@@ -2024,6 +2450,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ダミーデータを作成"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "生成模拟数据"
           }
         }
       }
@@ -2053,6 +2485,12 @@
             "state" : "translated",
             "value" : "ダミーユーザー5人とお店のデータを作成します"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "生成 5 位模拟用户和餐厅数据"
+          }
         }
       }
     },
@@ -2080,6 +2518,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "データ管理"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "数据管理"
           }
         }
       }
@@ -2109,6 +2553,12 @@
             "state" : "translated",
             "value" : "データ同期"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "数据同步"
+          }
         }
       }
     },
@@ -2136,6 +2586,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "データを同期"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "同步数据"
           }
         }
       }
@@ -2165,6 +2621,12 @@
             "state" : "translated",
             "value" : "データをアップロード"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上传数据"
+          }
         }
       }
     },
@@ -2192,6 +2654,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "データの状況"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "数据概览"
           }
         }
       }
@@ -2221,6 +2689,12 @@
             "state" : "translated",
             "value" : "データが足りません"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "数据不足"
+          }
         }
       }
     },
@@ -2248,6 +2722,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "データが十分でない可能性があります"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "数据可能不够充分"
           }
         }
       }
@@ -2277,6 +2757,12 @@
             "state" : "translated",
             "value" : "データを読み込めません"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法加载数据"
+          }
         }
       }
     },
@@ -2304,6 +2790,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "道路名住所"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "道路名地址"
           }
         }
       }
@@ -2333,6 +2825,12 @@
             "state" : "translated",
             "value" : "登録されたメニューがありません"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "还没有添加菜单"
+          }
         }
       }
     },
@@ -2360,6 +2858,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ランキング"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "排行"
           }
         }
       }
@@ -2389,6 +2893,12 @@
             "state" : "translated",
             "value" : "リオ・ミシュランスコア"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Riio 米其林评分"
+          }
         }
       }
     },
@@ -2416,6 +2926,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "最後のバックアップ"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上次备份"
           }
         }
       }
@@ -2445,6 +2961,12 @@
             "state" : "translated",
             "value" : "満足度"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "满意度"
+          }
         }
       }
     },
@@ -2472,6 +2994,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "味の強さ"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "口味浓淡"
           }
         }
       }
@@ -2501,6 +3029,12 @@
             "state" : "translated",
             "value" : "味の好み"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "口味偏好"
+          }
         }
       }
     },
@@ -2528,6 +3062,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "味の好み\n%lld%%"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "口味偏好\n%lld%%"
           }
         }
       }
@@ -2557,6 +3097,12 @@
             "state" : "translated",
             "value" : "味の評価"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "口味评价"
+          }
         }
       }
     },
@@ -2584,6 +3130,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "味の評価済み"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已完成口味评价"
           }
         }
       }
@@ -2613,6 +3165,12 @@
             "state" : "translated",
             "value" : "味の評価済み"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已评价口味"
+          }
         }
       }
     },
@@ -2640,6 +3198,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "味のタイプ"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "口味类型"
           }
         }
       }
@@ -2669,6 +3233,12 @@
             "state" : "translated",
             "value" : "おすすめのお店"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "餐厅推荐"
+          }
         }
       }
     },
@@ -2696,6 +3266,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "あなたへのおすすめ"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "为你推荐"
           }
         }
       }
@@ -2725,6 +3301,12 @@
             "state" : "translated",
             "value" : "あなた向けのおすすめを受け取るには"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "想获得个性化推荐"
+          }
         }
       }
     },
@@ -2752,6 +3334,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "とても満足"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "非常满意"
           }
         }
       }
@@ -2781,6 +3369,12 @@
             "state" : "translated",
             "value" : "食べたもの"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "吃了什么"
+          }
         }
       }
     },
@@ -2808,6 +3402,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "食べたもの(例: プルコギ定食、マルゲリータピザ)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "吃了什么（例如：烤肉套餐、玛格丽特披萨）"
           }
         }
       }
@@ -2837,6 +3437,12 @@
             "state" : "translated",
             "value" : "メニュー"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "菜单"
+          }
         }
       }
     },
@@ -2864,6 +3470,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "メニュー管理"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "管理菜单"
           }
         }
       }
@@ -2893,6 +3505,12 @@
             "state" : "translated",
             "value" : "メニューを登録する"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "去添加菜单"
+          }
         }
       }
     },
@@ -2920,6 +3538,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "メニュー一覧 (%lld)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "菜单列表 (%lld)"
           }
         }
       }
@@ -2949,6 +3573,12 @@
             "state" : "translated",
             "value" : "メニューを選択"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择菜品"
+          }
         }
       }
     },
@@ -2976,6 +3606,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "メニューの説明"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "菜品描述"
           }
         }
       }
@@ -3005,6 +3641,12 @@
             "state" : "translated",
             "value" : "メニューの説明 (任意)"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "菜品描述（可选）"
+          }
         }
       }
     },
@@ -3032,6 +3674,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "メニュー名"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "菜品名称"
           }
         }
       }
@@ -3061,6 +3709,12 @@
             "state" : "translated",
             "value" : "メニュー情報"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "菜品信息"
+          }
         }
       }
     },
@@ -3088,6 +3742,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "メニューを追加"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加菜品"
           }
         }
       }
@@ -3117,6 +3777,12 @@
             "state" : "translated",
             "value" : "メニューを登録しておくと、訪問記録の追加時に選べます"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加菜单后，记录到访时就可以直接选择"
+          }
         }
       }
     },
@@ -3144,6 +3810,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "メモ"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "备注"
           }
         }
       }
@@ -3173,6 +3845,12 @@
             "state" : "translated",
             "value" : "メモなし"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "暂无备注"
+          }
         }
       }
     },
@@ -3200,6 +3878,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "すべてのお店と訪問記録が削除されます。この操作は取り消せません。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "所有餐厅和到访记录都将被删除。此操作无法撤销。"
           }
         }
       }
@@ -3229,6 +3913,12 @@
             "state" : "translated",
             "value" : "すべてのデータを削除"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "删除所有数据"
+          }
         }
       }
     },
@@ -3256,6 +3946,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "リスト"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "列表"
           }
         }
       }
@@ -3285,6 +3981,12 @@
             "state" : "translated",
             "value" : "リストを閉じる"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关闭列表"
+          }
         }
       }
     },
@@ -3312,6 +4014,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "訪問記録"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "到访记录"
           }
         }
       }
@@ -3341,6 +4049,12 @@
             "state" : "translated",
             "value" : "訪問を追加"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加到访记录"
+          }
         }
       }
     },
@@ -3369,6 +4083,12 @@
             "state" : "translated",
             "value" : "訪問記録の追加時に味の評価を入力してください"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加到访记录时，请填写口味评价"
+          }
         }
       }
     },
@@ -3396,6 +4116,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "訪問記録の追加時にこのメニューを選んでください"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加到访记录时，请选择这道菜"
           }
         }
       }
@@ -3426,6 +4152,12 @@
             "state" : "translated",
             "value" : "訪問記録を書いている途中でアプリが終了しても、書きかけの内容が残ります。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "写到访记录时即使 App 被关闭，写到一半的内容也不会丢。"
+          }
         }
       }
     },
@@ -3453,6 +4185,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "訪問日"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "到访日期"
           }
         }
       }
@@ -3482,6 +4220,12 @@
             "state" : "translated",
             "value" : "訪問情報"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "到访信息"
+          }
         }
       }
     },
@@ -3509,6 +4253,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "訪問の統計"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "到访统计"
           }
         }
       }
@@ -3538,6 +4288,12 @@
             "state" : "translated",
             "value" : "バックアップ"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "备份"
+          }
         }
       }
     },
@@ -3565,6 +4321,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "不具合の報告や機能のご提案をお待ちしています。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "欢迎反馈问题、提出功能建议。"
           }
         }
       }
@@ -3594,6 +4356,12 @@
             "state" : "translated",
             "value" : "バージョン"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "版本"
+          }
         }
       }
     },
@@ -3622,6 +4390,12 @@
             "state" : "translated",
             "value" : "評価"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "评分"
+          }
         }
       }
     },
@@ -3649,6 +4423,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "評価する"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "评分"
           }
         }
       }
@@ -3679,6 +4459,12 @@
             "state" : "translated",
             "value" : "見やすい色とコントラスト"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更易看清的颜色与对比度"
+          }
         }
       }
     },
@@ -3706,6 +4492,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "復元"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "恢复"
           }
         }
       }
@@ -3735,6 +4527,12 @@
             "state" : "translated",
             "value" : "読み込み中…"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加载中…"
+          }
         }
       }
     },
@@ -3762,6 +4560,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "不満"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不满意"
           }
         }
       }
@@ -3791,6 +4595,12 @@
             "state" : "translated",
             "value" : "みんなの評価"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "大家的评价"
+          }
         }
       }
     },
@@ -3818,6 +4628,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "写真"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "照片"
           }
         }
       }
@@ -3847,6 +4663,12 @@
             "state" : "translated",
             "value" : "写真 (%lld)"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "照片 (%lld)"
+          }
         }
       }
     },
@@ -3874,6 +4696,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "写真を選択"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择照片"
           }
         }
       }
@@ -3903,6 +4731,12 @@
             "state" : "translated",
             "value" : "写真を追加"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加照片"
+          }
         }
       }
     },
@@ -3930,6 +4764,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "削除"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "删除"
           }
         }
       }
@@ -3959,6 +4799,12 @@
             "state" : "translated",
             "value" : "マッチ度の詳細"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "匹配详情"
+          }
         }
       }
     },
@@ -3986,6 +4832,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "新しい料理ジャンル"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新的菜系"
           }
         }
       }
@@ -4015,6 +4867,12 @@
             "state" : "translated",
             "value" : "新しいジャンルを追加"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加新类型"
+          }
         }
       }
     },
@@ -4042,6 +4900,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "追加される写真"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "将添加的照片"
           }
         }
       }
@@ -4071,6 +4935,12 @@
             "state" : "translated",
             "value" : "更新"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刷新"
+          }
         }
       }
     },
@@ -4098,6 +4968,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "選択"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择"
           }
         }
       }
@@ -4127,6 +5003,12 @@
             "state" : "translated",
             "value" : "選択しない"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不选择"
+          }
         }
       }
     },
@@ -4155,6 +5037,12 @@
             "state" : "translated",
             "value" : "説明"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "描述"
+          }
         }
       }
     },
@@ -4182,6 +5070,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "設定"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设置"
           }
         }
       }
@@ -4212,6 +5106,12 @@
             "state" : "translated",
             "value" : "指先に伝わる反応"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "指尖的触感反馈"
+          }
         }
       }
     },
@@ -4239,6 +5139,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "お店の区分"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "餐厅类别"
           }
         }
       }
@@ -4268,6 +5174,12 @@
             "state" : "translated",
             "value" : "お店リスト"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "餐厅列表"
+          }
         }
       }
     },
@@ -4295,6 +5207,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "お店リストから評価する"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在餐厅列表中评分"
           }
         }
       }
@@ -4324,6 +5242,12 @@
             "state" : "translated",
             "value" : "お店を削除"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "删除餐厅"
+          }
         }
       }
     },
@@ -4351,6 +5275,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "お店の詳細画面で4つ星以上の評価をつけてください"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请在餐厅详情页打出4星及以上的评分"
           }
         }
       }
@@ -4380,6 +5310,12 @@
             "state" : "translated",
             "value" : "お店がありません"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "暂无餐厅"
+          }
         }
       }
     },
@@ -4407,6 +5343,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "お店の名前"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "餐厅名称"
           }
         }
       }
@@ -4436,6 +5378,12 @@
             "state" : "translated",
             "value" : "お店の情報"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "餐厅信息"
+          }
         }
       }
     },
@@ -4463,6 +5411,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "お店マップ"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "餐厅地图"
           }
         }
       }
@@ -4492,6 +5446,12 @@
             "state" : "translated",
             "value" : "お店を追加"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加餐厅"
+          }
         }
       }
     },
@@ -4519,6 +5479,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "お店を追加する"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加一家餐厅"
           }
         }
       }
@@ -4548,6 +5514,12 @@
             "state" : "translated",
             "value" : "お店として追加"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加为餐厅"
+          }
         }
       }
     },
@@ -4575,6 +5547,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "お店を追加して始めましょう"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加一家餐厅，开始吧"
           }
         }
       }
@@ -4605,6 +5583,12 @@
             "state" : "translated",
             "value" : "使い方のヒント"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "实用小技巧"
+          }
         }
       }
     },
@@ -4634,6 +5618,12 @@
             "state" : "translated",
             "value" : "書きかけの訪問記録を続ける"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "接着写没写完的到访记录"
+          }
         }
       }
     },
@@ -4662,6 +5652,12 @@
             "state" : "translated",
             "value" : "いいえ"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "否"
+          }
         }
       }
     },
@@ -4689,6 +5685,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "アイコン"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "图标"
           }
         }
       }
@@ -4719,6 +5721,12 @@
             "state" : "translated",
             "value" : "iPadでは、キーボードだけで主な機能を操作できます。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在 iPad 上，只用键盘就能操作主要功能。"
+          }
         }
       }
     },
@@ -4746,6 +5754,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "行ってみたいお店はまだありません"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "还没有想去的餐厅"
           }
         }
       }
@@ -4775,6 +5789,12 @@
             "state" : "translated",
             "value" : "まだ訪れていないお店です"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这家餐厅还没去过"
+          }
         }
       }
     },
@@ -4802,6 +5822,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "訪れたお店はまだありません"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "还没有去过的餐厅"
           }
         }
       }
@@ -4831,6 +5857,12 @@
             "state" : "translated",
             "value" : "保存したお店はまだありません"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "还没有保存的餐厅"
+          }
         }
       }
     },
@@ -4859,6 +5891,12 @@
             "state" : "translated",
             "value" : "Top 6に選んだお店はまだありません"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "还没有设为 Top 6 的餐厅"
+          }
         }
       }
     },
@@ -4886,6 +5924,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "評価はまだありません"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "暂无评价"
           }
         }
       }
@@ -4916,6 +5960,12 @@
             "state" : "translated",
             "value" : "知っておくと便利な機能を、ちょうどいいタイミングでそっとお知らせします。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在合适的时机，悄悄告诉你好用的功能。"
+          }
         }
       }
     },
@@ -4944,6 +5994,12 @@
             "state" : "translated",
             "value" : "ライブラリから選択"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "从相册选择"
+          }
         }
       }
     },
@@ -4971,6 +6027,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "アプリについて"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关于"
           }
         }
       }
@@ -5001,6 +6063,12 @@
             "state" : "translated",
             "value" : "アプリを開かなくても、ホーム画面でお気に入りのお店をすぐに確認できます。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不用打开 App，在主屏幕上就能看到你的心头好。"
+          }
         }
       }
     },
@@ -5029,6 +6097,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "アプリを英語でも使えます。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App 也支持英语。"
           }
         }
       }
@@ -5059,6 +6133,12 @@
             "state" : "translated",
             "value" : "暗い画面でも、文字とボタンがくっきり見えます。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "深色界面下，文字和按钮依然清晰醒目。"
+          }
         }
       }
     },
@@ -5087,6 +6167,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "アップデート後の初回起動時に、新しくなった点をお知らせします。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更新后首次打开时，告诉你有什么新变化。"
           }
         }
       }
@@ -5117,6 +6203,12 @@
             "state" : "translated",
             "value" : "アップデート情報"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更新动态"
+          }
         }
       }
     },
@@ -5144,6 +6236,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "あなたの好みを分析して、ぴったりのおすすめをお届けします"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "分析你的口味，为你提供个性化推荐"
           }
         }
       }
@@ -5174,6 +6272,12 @@
             "state" : "translated",
             "value" : "英語に対応"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "支持英语"
+          }
         }
       }
     },
@@ -5201,6 +6305,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "例: タイ料理、インド料理"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "例如：泰国菜、印度菜"
           }
         }
       }
@@ -5230,6 +6340,12 @@
             "state" : "translated",
             "value" : "予想評価"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "预测评分"
+          }
         }
       }
     },
@@ -5257,6 +6373,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "エラー"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "错误"
           }
         }
       }
@@ -5286,6 +6408,12 @@
             "state" : "translated",
             "value" : "完了"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "完成"
+          }
         }
       }
     },
@@ -5313,6 +6441,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "おすすめの理由"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "为什么推荐？"
           }
         }
       }
@@ -5343,6 +6477,12 @@
             "state" : "translated",
             "value" : "視差効果を減らす"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "减弱动态效果"
+          }
         }
       }
     },
@@ -5372,6 +6512,12 @@
             "state" : "translated",
             "value" : "「視差効果を減らす」をオンにすると、画面の動きが穏やかになります。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开启“减弱动态效果”后，界面动画会更平缓。"
+          }
         }
       }
     },
@@ -5399,6 +6545,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ウォン"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "韩元"
           }
         }
       }
@@ -5428,6 +6580,12 @@
             "state" : "translated",
             "value" : "ウェブサイト"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "网站"
+          }
         }
       }
     },
@@ -5455,6 +6613,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "緯度: %.6f"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "纬度：%.6f"
           }
         }
       }
@@ -5484,6 +6648,12 @@
             "state" : "translated",
             "value" : "場所"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "位置"
+          }
         }
       }
     },
@@ -5511,6 +6681,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "場所を選択"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择位置"
           }
         }
       }
@@ -5540,6 +6716,12 @@
             "state" : "translated",
             "value" : "料理のスタイル"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "菜式风格"
+          }
         }
       }
     },
@@ -5567,6 +6749,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "料理ジャンル"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "菜系"
           }
         }
       }
@@ -5596,6 +6784,12 @@
             "state" : "translated",
             "value" : "料理ジャンルの管理"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "管理菜系"
+          }
         }
       }
     },
@@ -5623,6 +6817,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "今回の訪問はいかがでしたか?"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这次到访怎么样？"
           }
         }
       }
@@ -5652,6 +6852,12 @@
             "state" : "translated",
             "value" : "この訪問の味の好みを評価するには「編集」をタップしてください"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "想评价这次到访的口味偏好，请点按“编辑”"
+          }
         }
       }
     },
@@ -5679,6 +6885,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "このお店にはメニューが登録されていません。先にメニューを登録するか、直接入力してください。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这家餐厅还没有添加菜单。请先添加菜单，或手动输入。"
           }
         }
       }
@@ -5708,6 +6920,12 @@
             "state" : "translated",
             "value" : "このお店は全体的に…"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这家餐厅总体来说……"
+          }
         }
       }
     },
@@ -5735,6 +6953,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "名前"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "名称"
           }
         }
       }
@@ -5764,6 +6988,12 @@
             "state" : "translated",
             "value" : "メールで問い合わせ"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "发邮件联系"
+          }
         }
       }
     },
@@ -5791,6 +7021,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "画像を読み込めません"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法加载图片"
           }
         }
       }
@@ -5820,6 +7056,12 @@
             "state" : "translated",
             "value" : "人生最高のお店を評価する"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "评价你的人生餐厅"
+          }
         }
       }
     },
@@ -5847,6 +7089,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Instagram DM (@lee25_ios)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram 私信 (@lee25_ios)"
           }
         }
       }
@@ -5876,6 +7124,12 @@
             "state" : "translated",
             "value" : "よく食べる料理ジャンルを自分で追加できます"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "可以自己添加常吃的菜系"
+          }
         }
       }
     },
@@ -5903,6 +7157,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "スポット情報"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地点信息"
           }
         }
       }
@@ -5932,6 +7192,12 @@
             "state" : "translated",
             "value" : "スポット情報を読み込み中…"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在加载地点信息…"
+          }
         }
       }
     },
@@ -5960,6 +7226,12 @@
             "state" : "translated",
             "value" : "スポット情報から自動入力されました"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已根据地点信息自动填写"
+          }
         }
       }
     },
@@ -5984,6 +7256,12 @@
           }
         },
         "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保存"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "保存"
@@ -6016,6 +7294,12 @@
             "state" : "translated",
             "value" : "保存したお店"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已保存的餐厅"
+          }
         }
       }
     },
@@ -6043,6 +7327,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "保存したお店: %lld件"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已保存的餐厅：%lld家"
           }
         }
       }
@@ -6072,6 +7362,12 @@
             "state" : "translated",
             "value" : "すべて"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全部"
+          }
         }
       }
     },
@@ -6099,6 +7395,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "総合マッチ度"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "总体匹配度"
           }
         }
       }
@@ -6128,6 +7430,12 @@
             "state" : "translated",
             "value" : "電話番号"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "电话"
+          }
         }
       }
     },
@@ -6155,6 +7463,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "本当にすべてのデータを削除しますか?この操作は取り消せません。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "确定要删除所有数据吗？此操作无法撤销。"
           }
         }
       }
@@ -6184,6 +7498,12 @@
             "state" : "translated",
             "value" : "情報を読み込めません"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法加载信息"
+          }
         }
       }
     },
@@ -6211,6 +7531,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "もう少し評価をお願いします!"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "再多评价几个吧！"
           }
         }
       }
@@ -6240,6 +7566,12 @@
             "state" : "translated",
             "value" : "注文回数"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "点单次数"
+          }
         }
       }
     },
@@ -6267,6 +7599,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "住所"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地址"
           }
         }
       }
@@ -6296,6 +7634,12 @@
             "state" : "translated",
             "value" : "マップ"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地图"
+          }
         }
       }
     },
@@ -6323,6 +7667,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "マップまたはリストからお店を追加してください"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "从地图或列表中添加餐厅"
           }
         }
       }
@@ -6352,6 +7702,12 @@
             "state" : "translated",
             "value" : "マップを動かすか、別の場所を選んで\nもう一度お試しください"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请移动地图或选择其他地点，\n然后重试"
+          }
         }
       }
     },
@@ -6379,6 +7735,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "マップで見る"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在地图上查看"
           }
         }
       }
@@ -6408,6 +7770,12 @@
             "state" : "translated",
             "value" : "マップでお店を探す"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在地图上找餐厅"
+          }
         }
       }
     },
@@ -6435,6 +7803,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "地番住所"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地号地址"
           }
         }
       }
@@ -6464,6 +7838,12 @@
             "state" : "translated",
             "value" : "サポート"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "支持"
+          }
         }
       }
     },
@@ -6491,6 +7871,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "直接入力"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "手动输入"
           }
         }
       }
@@ -6521,6 +7907,12 @@
             "state" : "translated",
             "value" : "はじめての方へのご案内"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新手指南"
+          }
         }
       }
     },
@@ -6550,6 +7942,12 @@
             "state" : "translated",
             "value" : "初めて開いたときに、できることを手短に紹介します。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "首次打开时，简单介绍你能做什么。"
+          }
         }
       }
     },
@@ -6577,6 +7975,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "最初のメニューを追加する"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加第一道菜"
           }
         }
       }
@@ -6606,6 +8010,12 @@
             "state" : "translated",
             "value" : "最初の訪問を記録する"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加第一条到访记录"
+          }
         }
       }
     },
@@ -6633,6 +8043,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "リセット"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重置"
           }
         }
       }
@@ -6662,6 +8078,12 @@
             "state" : "translated",
             "value" : "訪問記録の合計"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "到访记录总数"
+          }
         }
       }
     },
@@ -6689,6 +8111,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "訪問回数の合計"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "总到访次数"
           }
         }
       }
@@ -6718,6 +8146,12 @@
             "state" : "translated",
             "value" : "総評 (全訪問の平均)"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "总评（所有到访平均）"
+          }
         }
       }
     },
@@ -6745,6 +8179,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "あなたのベストなお店です"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这些是你最棒的餐厅"
           }
         }
       }
@@ -6774,6 +8214,12 @@
             "state" : "translated",
             "value" : "最終訪問日"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最近到访"
+          }
         }
       }
     },
@@ -6801,6 +8247,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "最終注文日"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最近点单"
           }
         }
       }
@@ -6830,6 +8282,12 @@
             "state" : "translated",
             "value" : "おすすめ"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "推荐"
+          }
         }
       }
     },
@@ -6857,6 +8315,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "おすすめを見る"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "获取推荐"
           }
         }
       }
@@ -6886,6 +8350,12 @@
             "state" : "translated",
             "value" : "おすすめを分析中…"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在分析推荐…"
+          }
         }
       }
     },
@@ -6913,6 +8383,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "おすすめのお店"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "推荐餐厅"
           }
         }
       }
@@ -6942,6 +8418,12 @@
             "state" : "translated",
             "value" : "おすすめスコア"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "推荐分数"
+          }
         }
       }
     },
@@ -6969,6 +8451,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "おすすめ機能のテスト手順"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "推荐功能测试步骤"
           }
         }
       }
@@ -6998,6 +8486,12 @@
             "state" : "translated",
             "value" : "おすすめできるお店がありません"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "没有可推荐的餐厅"
+          }
         }
       }
     },
@@ -7025,6 +8519,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "キャンセル"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消"
           }
         }
       }
@@ -7054,6 +8554,12 @@
             "state" : "translated",
             "value" : "好み"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "口味"
+          }
         }
       }
     },
@@ -7081,6 +8587,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "好みのプロフィール"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "口味档案"
           }
         }
       }
@@ -7110,6 +8622,12 @@
             "state" : "translated",
             "value" : "カメラで撮影"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "拍照"
+          }
         }
       }
     },
@@ -7137,6 +8655,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "カカオマップで開く"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在 Kakao 地图中打开"
           }
         }
       }
@@ -7166,6 +8690,12 @@
             "state" : "translated",
             "value" : "カテゴリ"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "类别"
+          }
         }
       }
     },
@@ -7193,6 +8723,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "カテゴリ\n%lld%%"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "类别\n%lld%%"
           }
         }
       }
@@ -7222,6 +8758,12 @@
             "state" : "translated",
             "value" : "カテゴリ (例: 韓国料理、中華料理)"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "类别（例如：韩餐、中餐）"
+          }
         }
       }
     },
@@ -7250,6 +8792,12 @@
             "state" : "translated",
             "value" : "カテゴリ設定"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "类别设置"
+          }
         }
       }
     },
@@ -7277,6 +8825,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "カテゴリアイコン"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "类别图标"
           }
         }
       }
@@ -7307,6 +8861,12 @@
             "state" : "translated",
             "value" : "大きな文字に合わせた画面"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "适配大字体的界面"
+          }
         }
       }
     },
@@ -7336,6 +8896,12 @@
             "state" : "translated",
             "value" : "キーボードで操作"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用键盘操作"
+          }
         }
       }
     },
@@ -7364,6 +8930,12 @@
             "state" : "translated",
             "value" : "Top 6に設定"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设为 Top 6"
+          }
         }
       }
     },
@@ -7388,6 +8960,12 @@
           }
         },
         "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Top 6"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Top 6"
@@ -7420,6 +8998,12 @@
             "state" : "translated",
             "value" : "Top 6の上限"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Top 6 上限"
+          }
         }
       }
     },
@@ -7447,6 +9031,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Top 6は最大6件まで選べます (現在: %lld/6)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Top 6 最多只能设置 6 家（目前：%lld/6）"
           }
         }
       }
@@ -7476,6 +9066,12 @@
             "state" : "translated",
             "value" : "Top 6は最大6件まで選べます。ほかのお店のTop 6を外してから、もう一度お試しください。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Top 6 最多只能设置 6 家。请先取消其他餐厅的 Top 6，再重试。"
+          }
         }
       }
     },
@@ -7504,6 +9100,12 @@
             "state" : "translated",
             "value" : "テストデータ"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "测试数据"
+          }
         }
       }
     },
@@ -7531,6 +9133,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "統計"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "统计"
           }
         }
       }
@@ -7561,6 +9169,12 @@
             "state" : "translated",
             "value" : "折りたたみiPhone対応画面"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "折叠屏 iPhone 界面"
+          }
         }
       }
     },
@@ -7590,6 +9204,12 @@
             "state" : "translated",
             "value" : "折りたたみiPhoneでは、広い画面を2つに分けて使えます。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在折叠屏 iPhone 上，宽屏会分成左右两栏。"
+          }
         }
       }
     },
@@ -7617,6 +9237,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "評価情報"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "评价信息"
           }
         }
       }
@@ -7646,6 +9272,12 @@
             "state" : "translated",
             "value" : "評価の履歴 (%lld)"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "评价历史 (%lld)"
+          }
         }
       }
     },
@@ -7673,6 +9305,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "平均評価"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "平均评分"
           }
         }
       }
@@ -7702,6 +9340,12 @@
             "state" : "translated",
             "value" : "評価パターン\n%lld%%"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "评分模式\n%lld%%"
+          }
         }
       }
     },
@@ -7730,6 +9374,12 @@
             "state" : "translated",
             "value" : "現在のデータをiCloudにバックアップします。既存のバックアップは上書きされます。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "将当前数据备份到 iCloud。已有的备份会被覆盖。"
+          }
         }
       }
     },
@@ -7757,6 +9407,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "現在地から"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "从当前位置"
           }
         }
       }
@@ -7787,6 +9443,12 @@
             "state" : "translated",
             "value" : "ホーム画面ウィジェット"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "主屏幕小组件"
+          }
         }
       }
     },
@@ -7816,6 +9478,12 @@
             "state" : "translated",
             "value" : "VoiceOverがボタンと内容を漏れなく、正しい順序で読み上げます。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "旁白会完整地、按正确顺序朗读按钮和内容。"
+          }
         }
       }
     },
@@ -7843,6 +9511,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "好"
           }
         }
       }
@@ -7872,6 +9546,12 @@
             "state" : "translated",
             "value" : "💰 コスト効率が良い (Firestoreの1/6)"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "💰 更省成本（约为 Firestore 的 1/6）"
+          }
         }
       }
     },
@@ -7899,6 +9579,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "🚀 シンプルなJSON構造"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🚀 简洁的 JSON 结构"
           }
         }
       }
