@@ -95,3 +95,10 @@ Pequenos erros corrigidos
 บอกเราได้ง่าย ๆ ว่าคุณพอใจแอปแค่ไหน
 เปิดหน้านโยบายความเป็นส่วนตัวและวิธีใช้
 แก้ไขข้อผิดพลาดเล็กน้อย
+
+### 앱스토어 (Tiếng Việt)
+
+Gửi góp ý ngay trong ứng dụng
+Cho biết bạn thích ứng dụng đến đâu
+Có chính sách riêng tư và trang trợ giúp
+Sửa một số lỗi nhỏ

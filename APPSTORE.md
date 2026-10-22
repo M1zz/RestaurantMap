@@ -727,3 +727,59 @@ Insaeng คือแผนที่ร้านอาหารส่วนตั
 
 สำรองข้อมูลบน iCloud
 บันทึกของคุณเก็บไว้บนเครื่อง และสำรองไปยัง iCloud ของคุณเองหรือกู้คืนได้ทุกเมื่อที่ต้องการ
+
+## vi
+
+### 지원 URL
+
+https://m1zz.github.io/RestaurantMap/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/RestaurantMap/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/RestaurantMap/
+
+### 이름
+
+Insaeng: Bản đồ quán ăn
+
+### 부제
+
+Chấm điểm, xếp hạng bữa ngon
+
+### 키워드
+
+nhật ký,yêu thích,review,muốn đến,bít tết,ramen,sushi,cà phê,hẹn hò,ghim,ghi chú,quán ngon,ăn vặt
+
+### 프로모션 텍스트
+
+Ghim mọi quán bạn đã ghé lên bản đồ, rồi lưu điểm số và ghi chú. Từng quán một, bạn sẽ có tấm bản đồ những bữa ăn không thể quên.
+
+### 설명
+
+Ghim những nơi bạn đã ăn và ghi lại hương vị mỗi lần ghé.
+Insaeng là tấm bản đồ ẩm thực của riêng bạn, chỉ gồm những quán do chính bạn chọn.
+
+Bản đồ những quán yêu thích
+Tìm một quán hoặc chọn vị trí trên bản đồ để lưu. Quán đã lưu hiện thành ghim, và sáu quán yêu thích nhất có huy hiệu xếp hạng riêng.
+
+Đã đến, Muốn đến và Top 6
+Tách riêng quán đã ăn và quán muốn thử thành hai danh sách, rồi xếp hạng sáu quán xuất sắc nhất.
+
+Mỗi món một tiêu chí
+Bít tết xét độ chín và độ mọng, sushi xét cơm và cá, ramen xét nước dùng và sợi mì. Chấm độ đậm vị và mức hài lòng theo tiêu chí phù hợp với từng loại món. Pizza, rượu vang và cà phê cũng có thang chấm riêng, và bạn có thể tự thêm loại ẩm thực của mình.
+
+Nhật ký ghé thăm dày lên theo thời gian
+Lưu ngày ghé, điểm số, món đã gọi, ảnh và ghi chú của mỗi lượt. Mỗi quán sẽ tích lũy số lần ghé, điểm trung bình và nhận xét chung về hương vị. Thêm thực đơn để xem món đặc trưng và giá chỉ trong một cái nhìn.
+
+Hồ sơ khẩu vị của bạn
+Xem khẩu vị của mình trên biểu đồ: cay, ngọt, mặn, béo và vị nguyên bản.
+
+Nhắc ghi chép sau khi ghé
+Sau khi bạn đến một quán đã lưu, ứng dụng nhắc bạn ghi lại lượt ghé. Chỉ hoạt động khi bạn cho phép truy cập vị trí.
+
+Sao lưu iCloud
+Dữ liệu được lưu trên thiết bị, và bạn có thể sao lưu lên iCloud của mình cũng như khôi phục bất cứ lúc nào.

@@ -80,6 +80,12 @@
             "state" : "translated",
             "value" : "เมนูของ %@"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thực đơn của %@"
+          }
         }
       }
     },
@@ -161,6 +167,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ตรงใจ %lld%%"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phù hợp %lld%%"
           }
         }
       }
@@ -244,6 +256,12 @@
             "state" : "translated",
             "value" : "%lld ร้าน"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
         }
       }
     },
@@ -325,6 +343,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ให้คะแนนอีก %lld ร้านเพื่อรับคำแนะนำ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đánh giá thêm %lld quán để nhận gợi ý"
           }
         }
       }
@@ -408,6 +432,12 @@
             "state" : "translated",
             "value" : "%lld รีวิว"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld đánh giá"
+          }
         }
       }
     },
@@ -489,6 +519,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ผู้ใช้ %lld คนที่รสนิยมคล้ายกันแนะนำ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld người dùng có khẩu vị tương tự giới thiệu"
           }
         }
       }
@@ -572,6 +608,12 @@
             "state" : "translated",
             "value" : "อันดับ %lld"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hạng %lld"
+          }
         }
       }
     },
@@ -653,6 +695,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld รูป"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld ảnh"
           }
         }
       }
@@ -736,6 +784,12 @@
             "state" : "translated",
             "value" : "%lld ครั้ง"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld lần"
+          }
         }
       }
     },
@@ -817,6 +871,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "เยี่ยมชม %lld ครั้ง"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld lượt ghé"
           }
         }
       }
@@ -900,6 +960,12 @@
             "state" : "translated",
             "value" : "ลบ “%@” และบันทึกการเยี่ยมชมทั้งหมดไหม"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xóa “%@” và toàn bộ lịch sử ghé thăm?"
+          }
         }
       }
     },
@@ -981,6 +1047,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "1️⃣ อัปโหลดข้อมูลของฉัน"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1️⃣ Tải dữ liệu của tôi lên"
           }
         }
       }
@@ -1064,6 +1136,12 @@
             "state" : "translated",
             "value" : "2️⃣ สร้างข้อมูลจำลอง"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2️⃣ Tạo dữ liệu mẫu"
+          }
         }
       }
     },
@@ -1145,6 +1223,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "3️⃣ ดูผลลัพธ์ในแท็บคำแนะนำ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3️⃣ Xem kết quả ở tab Gợi ý"
           }
         }
       }
@@ -1228,6 +1312,12 @@
             "state" : "translated",
             "value" : "ยังไม่มีร้านที่ให้ 4 ดาวขึ้นไป"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chưa có quán nào được bạn chấm từ 4 sao trở lên"
+          }
         }
       }
     },
@@ -1310,6 +1400,12 @@
             "state" : "translated",
             "value" : "รสนิยมของคุณใน 6 ด้าน"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khẩu vị của bạn qua sáu đặc điểm"
+          }
         }
       }
     },
@@ -1391,6 +1487,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "เปิดในแผนที่ Apple"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mở trong Apple Maps"
           }
         }
       }
@@ -1475,6 +1577,12 @@
             "state" : "translated",
             "value" : "ล็อก Face ID"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khóa Face ID"
+          }
         }
       }
     },
@@ -1558,6 +1666,12 @@
             "state" : "translated",
             "value" : "ล็อกแอปด้วย Face ID หรือ Touch ID เพื่อเก็บบันทึกร้านอาหารไว้เป็นส่วนตัว"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khóa ứng dụng bằng Face ID hoặc Touch ID để giữ nhật ký quán ăn của bạn riêng tư."
+          }
         }
       }
     },
@@ -1639,6 +1753,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "อัปโหลดข้อมูลไปที่ Firebase\nเพื่อทดสอบระบบแนะนำ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tải dữ liệu lên Firebase\nđể thử hệ thống gợi ý"
           }
         }
       }
@@ -1722,6 +1842,12 @@
             "state" : "translated",
             "value" : "อัปโหลดไปที่ Realtime DB"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tải lên Realtime DB"
+          }
         }
       }
     },
@@ -1804,6 +1930,12 @@
             "state" : "translated",
             "value" : "ข้อดีของ Realtime Database"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ưu điểm của Realtime Database"
+          }
         }
       }
     },
@@ -1885,6 +2017,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "กำลังดึงข้อมูลจาก Realtime Database…"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đang lấy dữ liệu từ Realtime Database…"
           }
         }
       }
@@ -1969,6 +2107,12 @@
             "state" : "translated",
             "value" : "บอก Siri หรือใช้คำสั่งลัดเพื่อบันทึกการเยี่ยมชมได้ทันที"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nói với Siri hoặc dùng phím tắt để ghi lại lượt ghé ngay lập tức."
+          }
         }
       }
     },
@@ -2051,6 +2195,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siri และคำสั่งลัด"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri và Phím tắt"
           }
         }
       }
@@ -2135,6 +2285,12 @@
             "state" : "translated",
             "value" : "ใช้ VoiceOver สะดวกขึ้น"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOver dễ dùng hơn"
+          }
         }
       }
     },
@@ -2216,6 +2372,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "สำรองข้อมูล iCloud"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sao lưu iCloud"
           }
         }
       }
@@ -2299,6 +2461,12 @@
             "state" : "translated",
             "value" : "ต้องเข้าสู่ระบบ iCloud ก่อนจึงจะสำรองหรือกู้คืนข้อมูลได้"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bạn cần đăng nhập iCloud để sao lưu hoặc khôi phục."
+          }
         }
       }
     },
@@ -2380,6 +2548,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "สำรองข้อมูลไปที่ iCloud"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sao lưu lên iCloud"
           }
         }
       }
@@ -2463,6 +2637,12 @@
             "state" : "translated",
             "value" : "กู้คืนจาก iCloud"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khôi phục từ iCloud"
+          }
         }
       }
     },
@@ -2544,6 +2724,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "กู้คืนจากข้อมูลสำรองใน iCloud ข้อมูลทั้งหมดบนเครื่องนี้จะถูกลบและแทนที่ด้วยข้อมูลสำรอง"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khôi phục từ bản sao lưu iCloud. Toàn bộ dữ liệu trên thiết bị này sẽ bị xóa và thay bằng dữ liệu sao lưu."
           }
         }
       }
@@ -2627,6 +2813,12 @@
             "state" : "translated",
             "value" : "• ผู้ใช้ละ 3–4 ร้าน"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• Mỗi người dùng 3–4 quán"
+          }
         }
       }
     },
@@ -2708,6 +2900,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "• ร้านละ 1–3 บันทึกการเยี่ยมชม"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• Mỗi quán 1–3 lượt ghé"
           }
         }
       }
@@ -2791,6 +2989,12 @@
             "state" : "translated",
             "value" : "• ผู้ใช้ 5 คนที่มีรสนิยมหลากหลาย"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 5 người dùng với khẩu vị khác nhau"
+          }
         }
       }
     },
@@ -2872,6 +3076,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "⚡ ซิงก์เรียลไทม์เร็วขึ้น"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚡ Đồng bộ thời gian thực nhanh hơn"
           }
         }
       }
@@ -2955,6 +3165,12 @@
             "state" : "translated",
             "value" : "⚡ ซิงก์เรียลไทม์เร็วขึ้น\n💰 ต้นทุนถูกลง"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚡ Đồng bộ thời gian thực nhanh hơn\n💰 Chi phí thấp hơn"
+          }
         }
       }
     },
@@ -3036,6 +3252,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "✓ ให้คะแนนแล้ว"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "✓ Đã đánh giá"
           }
         }
       }
@@ -3120,6 +3342,12 @@
             "state" : "translated",
             "value" : "สั่นเบา ๆ เมื่อบันทึกร้านหรือบันทึกการเยี่ยมชม"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rung nhẹ khi bạn lưu quán hoặc ghi lượt ghé."
+          }
         }
       }
     },
@@ -3201,6 +3429,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ราคา"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giá"
           }
         }
       }
@@ -3284,6 +3518,12 @@
             "state" : "translated",
             "value" : "เคยไป"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã đến"
+          }
         }
       }
     },
@@ -3365,6 +3605,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "อยากไป"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Muốn đến"
           }
         }
       }
@@ -3448,6 +3694,12 @@
             "state" : "translated",
             "value" : "ร้านที่อยู่ในรายการ “อยากไป” ไม่สามารถตั้งเป็น Top 6 ได้"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quán trong danh sách “Muốn đến” không thể đặt vào Top 6"
+          }
         }
       }
     },
@@ -3529,6 +3781,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ให้คะแนนความเข้มข้นของรสชาติและความพึงพอใจของแต่ละรายการ การให้คะแนนเป็นทางเลือก"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hãy đánh giá độ đậm vị và mức hài lòng cho từng mục. Việc đánh giá là tùy chọn."
           }
         }
       }
@@ -3612,6 +3870,12 @@
             "state" : "translated",
             "value" : "ติดต่อนักพัฒนา"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liên hệ nhà phát triển"
+          }
         }
       }
     },
@@ -3693,6 +3957,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ผลการค้นหา %lld รายการ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld kết quả tìm kiếm"
           }
         }
       }
@@ -3776,6 +4046,12 @@
             "state" : "translated",
             "value" : "ลองจิจูด: %.6f"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kinh độ: %.6f"
+          }
         }
       }
     },
@@ -3857,6 +4133,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ประเภท"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loại"
           }
         }
       }
@@ -3941,6 +4223,12 @@
             "state" : "translated",
             "value" : "เมื่อขยายขนาดตัวอักษร หน้าจอจะจัดเรียงใหม่ ไม่ถูกตัดขาด"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khi phóng to chữ, màn hình sẽ tự sắp xếp lại và không bị cắt."
+          }
         }
       }
     },
@@ -4022,6 +4310,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "อ้างอิงจาก “%@”"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dựa trên “%@”"
           }
         }
       }
@@ -4105,6 +4399,12 @@
             "state" : "translated",
             "value" : "ค่าเริ่มต้น"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mặc định"
+          }
         }
       }
     },
@@ -4186,6 +4486,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ข้อมูลพื้นฐาน"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thông tin cơ bản"
           }
         }
       }
@@ -4269,6 +4575,12 @@
             "state" : "translated",
             "value" : "มีมาให้"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Có sẵn"
+          }
         }
       }
     },
@@ -4350,6 +4662,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "มิชลินของฉัน"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Michelin của tôi"
           }
         }
       }
@@ -4433,6 +4751,12 @@
             "state" : "translated",
             "value" : "DNA นักกินของฉัน"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DNA ẩm thực của tôi"
+          }
         }
       }
     },
@@ -4514,6 +4838,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Top 6 ที่ฉันรักที่สุด"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Top 6 yêu thích nhất của tôi"
           }
         }
       }
@@ -4597,6 +4927,12 @@
             "state" : "translated",
             "value" : "Top 6 ของฉัน"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Top 6 của tôi"
+          }
         }
       }
     },
@@ -4678,6 +5014,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ข้อมูลของฉัน"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dữ liệu của tôi"
           }
         }
       }
@@ -4761,6 +5103,12 @@
             "state" : "translated",
             "value" : "อัปโหลดข้อมูลของฉัน"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tải dữ liệu của tôi lên"
+          }
         }
       }
     },
@@ -4842,6 +5190,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "เพิ่มในรายการร้านของฉัน"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thêm vào danh sách quán của tôi"
           }
         }
       }
@@ -4925,6 +5279,12 @@
             "state" : "translated",
             "value" : "ร้านที่คุณชอบที่สุด"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Những quán bạn yêu thích nhất"
+          }
         }
       }
     },
@@ -5006,6 +5366,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ประเภทที่ฉันเพิ่ม"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loại tôi đã thêm"
           }
         }
       }
@@ -5089,6 +5455,12 @@
             "state" : "translated",
             "value" : "เปิดใน Naver Map"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mở trong Naver Map"
+          }
         }
       }
     },
@@ -5170,6 +5542,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "โปรดลองอีกครั้ง"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vui lòng thử lại"
           }
         }
       }
@@ -5254,6 +5632,12 @@
             "state" : "translated",
             "value" : "โหมดมืด"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chế độ tối"
+          }
         }
       }
     },
@@ -5335,6 +5719,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ปิด"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đóng"
           }
         }
       }
@@ -5419,6 +5809,12 @@
             "state" : "translated",
             "value" : "ดูแผนที่และรายการได้ชัดเจน แม้เปิดเพิ่มความคมชัดหรือแยกสีได้ยาก"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đọc bản đồ và danh sách dễ dàng, kể cả khi bật tăng độ tương phản hoặc khó phân biệt màu."
+          }
         }
       }
     },
@@ -5500,6 +5896,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "เมนูเด็ด"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Món đặc trưng"
           }
         }
       }
@@ -5583,6 +5985,12 @@
             "state" : "translated",
             "value" : "เมนูเด็ดจะแสดงไว้บนสุดของรายการเมนู"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Món đặc trưng hiện ở đầu danh sách thực đơn"
+          }
         }
       }
     },
@@ -5664,6 +6072,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ตั้งเป็นเมนูเด็ด"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đặt làm món đặc trưng"
           }
         }
       }
@@ -5748,6 +6162,12 @@
             "state" : "translated",
             "value" : "ใช้แอปได้หลายภาษามากขึ้น"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dùng ứng dụng bằng nhiều ngôn ngữ hơn."
+          }
         }
       }
     },
@@ -5831,6 +6251,12 @@
             "state" : "translated",
             "value" : "ภาษาเพิ่มเติม"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thêm ngôn ngữ"
+          }
         }
       }
     },
@@ -5912,6 +6338,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "สร้างข้อมูลจำลอง"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tạo dữ liệu mẫu"
           }
         }
       }
@@ -5995,6 +6427,12 @@
             "state" : "translated",
             "value" : "สร้างผู้ใช้จำลอง 5 คนและข้อมูลร้านอาหาร"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tạo 5 người dùng mẫu và dữ liệu quán ăn"
+          }
         }
       }
     },
@@ -6076,6 +6514,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "จัดการข้อมูล"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quản lý dữ liệu"
           }
         }
       }
@@ -6159,6 +6603,12 @@
             "state" : "translated",
             "value" : "การซิงก์ข้อมูล"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đồng bộ dữ liệu"
+          }
         }
       }
     },
@@ -6240,6 +6690,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ซิงก์ข้อมูล"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đồng bộ dữ liệu"
           }
         }
       }
@@ -6323,6 +6779,12 @@
             "state" : "translated",
             "value" : "อัปโหลดข้อมูล"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tải dữ liệu lên"
+          }
         }
       }
     },
@@ -6404,6 +6866,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ภาพรวมข้อมูล"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tổng quan dữ liệu"
           }
         }
       }
@@ -6487,6 +6955,12 @@
             "state" : "translated",
             "value" : "ข้อมูลยังไม่พอ"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chưa đủ dữ liệu"
+          }
         }
       }
     },
@@ -6568,6 +7042,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ข้อมูลอาจไม่เพียงพอ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Có thể chưa đủ dữ liệu"
           }
         }
       }
@@ -6651,6 +7131,12 @@
             "state" : "translated",
             "value" : "โหลดข้อมูลไม่ได้"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không thể tải dữ liệu"
+          }
         }
       }
     },
@@ -6732,6 +7218,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ที่อยู่ (ถนน)"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Địa chỉ (đường)"
           }
         }
       }
@@ -6815,6 +7307,12 @@
             "state" : "translated",
             "value" : "ยังไม่มีเมนู"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chưa có món nào trong thực đơn"
+          }
         }
       }
     },
@@ -6896,6 +7394,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "อันดับ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xếp hạng"
           }
         }
       }
@@ -6979,6 +7483,12 @@
             "state" : "translated",
             "value" : "คะแนนมิชลิน Riio"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Điểm Michelin Riio"
+          }
         }
       }
     },
@@ -7060,6 +7570,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "สำรองข้อมูลล่าสุด"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lần sao lưu gần nhất"
           }
         }
       }
@@ -7143,6 +7659,12 @@
             "state" : "translated",
             "value" : "ความพึงพอใจ"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mức hài lòng"
+          }
         }
       }
     },
@@ -7224,6 +7746,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ความเข้มข้นของรสชาติ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Độ đậm vị"
           }
         }
       }
@@ -7307,6 +7835,12 @@
             "state" : "translated",
             "value" : "รสชาติที่ชอบ"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khẩu vị ưa thích"
+          }
         }
       }
     },
@@ -7388,6 +7922,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "รสชาติที่ชอบ\n%lld%%"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khẩu vị ưa thích\n%lld%%"
           }
         }
       }
@@ -7471,6 +8011,12 @@
             "state" : "translated",
             "value" : "คะแนนรสชาติ"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đánh giá vị"
+          }
         }
       }
     },
@@ -7552,6 +8098,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ให้คะแนนรสชาติแล้ว"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã đánh giá vị"
           }
         }
       }
@@ -7635,6 +8187,12 @@
             "state" : "translated",
             "value" : "ให้คะแนนรสชาติแล้ว"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã đánh giá vị"
+          }
         }
       }
     },
@@ -7716,6 +8274,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "โปรไฟล์รสชาติ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hồ sơ hương vị"
           }
         }
       }
@@ -7799,6 +8363,12 @@
             "state" : "translated",
             "value" : "ร้านแนะนำ"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quán gợi ý"
+          }
         }
       }
     },
@@ -7880,6 +8450,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "สำหรับคุณ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dành cho bạn"
           }
         }
       }
@@ -7963,6 +8539,12 @@
             "state" : "translated",
             "value" : "เพื่อรับคำแนะนำที่เหมาะกับคุณ"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Để nhận gợi ý phù hợp với bạn"
+          }
         }
       }
     },
@@ -8044,6 +8626,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "พอใจมาก"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rất hài lòng"
           }
         }
       }
@@ -8127,6 +8715,12 @@
             "state" : "translated",
             "value" : "สิ่งที่คุณกิน"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bạn đã ăn gì"
+          }
         }
       }
     },
@@ -8208,6 +8802,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "สิ่งที่คุณกิน (เช่น ชุดพุลโกกิ พิซซ่ามาร์การิตา)"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bạn đã ăn gì (VD: cơm bulgogi, pizza margherita)"
           }
         }
       }
@@ -8291,6 +8891,12 @@
             "state" : "translated",
             "value" : "เมนู"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thực đơn"
+          }
         }
       }
     },
@@ -8372,6 +8978,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "จัดการเมนู"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quản lý thực đơn"
           }
         }
       }
@@ -8455,6 +9067,12 @@
             "state" : "translated",
             "value" : "เพิ่มเมนู"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thêm món"
+          }
         }
       }
     },
@@ -8536,6 +9154,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "เมนู (%lld)"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thực đơn (%lld)"
           }
         }
       }
@@ -8619,6 +9243,12 @@
             "state" : "translated",
             "value" : "เลือกเมนู"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chọn món"
+          }
         }
       }
     },
@@ -8700,6 +9330,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "คำอธิบายเมนู"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mô tả món"
           }
         }
       }
@@ -8783,6 +9419,12 @@
             "state" : "translated",
             "value" : "คำอธิบายเมนู (ไม่บังคับ)"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mô tả món (tùy chọn)"
+          }
         }
       }
     },
@@ -8864,6 +9506,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ชื่อเมนู"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tên món"
           }
         }
       }
@@ -8947,6 +9595,12 @@
             "state" : "translated",
             "value" : "ข้อมูลเมนู"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thông tin món"
+          }
         }
       }
     },
@@ -9028,6 +9682,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "เพิ่มเมนู"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thêm món"
           }
         }
       }
@@ -9111,6 +9771,12 @@
             "state" : "translated",
             "value" : "เมนูที่เพิ่มไว้จะเลือกได้ตอนบันทึกการเยี่ยมชม"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Món đã thêm có thể chọn khi ghi lượt ghé"
+          }
         }
       }
     },
@@ -9192,6 +9858,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "บันทึก"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ghi chú"
           }
         }
       }
@@ -9275,6 +9947,12 @@
             "state" : "translated",
             "value" : "ไม่มีบันทึก"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không có ghi chú"
+          }
         }
       }
     },
@@ -9356,6 +10034,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ร้านอาหารและบันทึกการเยี่ยมชมทั้งหมดจะถูกลบ ไม่สามารถยกเลิกการดำเนินการนี้ได้"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tất cả quán và lịch sử ghé thăm sẽ bị xóa. Không thể hoàn tác thao tác này."
           }
         }
       }
@@ -9439,6 +10123,12 @@
             "state" : "translated",
             "value" : "ลบข้อมูลทั้งหมด"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xóa toàn bộ dữ liệu"
+          }
         }
       }
     },
@@ -9520,6 +10210,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "รายการ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Danh sách"
           }
         }
       }
@@ -9603,6 +10299,12 @@
             "state" : "translated",
             "value" : "ปิดรายการ"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đóng danh sách"
+          }
         }
       }
     },
@@ -9684,6 +10386,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "บันทึกการเยี่ยมชม"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhật ký ghé thăm"
           }
         }
       }
@@ -9767,6 +10475,12 @@
             "state" : "translated",
             "value" : "เพิ่มการเยี่ยมชม"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thêm lượt ghé"
+          }
         }
       }
     },
@@ -9849,6 +10563,12 @@
             "state" : "translated",
             "value" : "โปรดกรอกคะแนนรสชาติเมื่อเพิ่มการเยี่ยมชม"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hãy nhập đánh giá vị khi thêm lượt ghé"
+          }
         }
       }
     },
@@ -9930,6 +10650,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "โปรดเลือกเมนูนี้เมื่อเพิ่มการเยี่ยมชม"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hãy chọn món này khi thêm lượt ghé"
           }
         }
       }
@@ -10014,6 +10740,12 @@
             "state" : "translated",
             "value" : "หากแอปปิดระหว่างเขียนบันทึกการเยี่ยมชม สิ่งที่เขียนไว้จะยังอยู่"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nếu ứng dụng bị tắt khi bạn đang viết lượt ghé, phần đã viết vẫn được giữ lại."
+          }
         }
       }
     },
@@ -10095,6 +10827,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "วันที่เยี่ยมชม"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ngày ghé"
           }
         }
       }
@@ -10178,6 +10916,12 @@
             "state" : "translated",
             "value" : "ข้อมูลการเยี่ยมชม"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thông tin lượt ghé"
+          }
         }
       }
     },
@@ -10259,6 +11003,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "สถิติการเยี่ยมชม"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thống kê lượt ghé"
           }
         }
       }
@@ -10342,6 +11092,12 @@
             "state" : "translated",
             "value" : "สำรองข้อมูล"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sao lưu"
+          }
         }
       }
     },
@@ -10423,6 +11179,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ยินดีรับรายงานข้อบกพร่องและข้อเสนอแนะ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rất mong nhận được báo lỗi và đề xuất tính năng."
           }
         }
       }
@@ -10506,6 +11268,12 @@
             "state" : "translated",
             "value" : "เวอร์ชัน"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phiên bản"
+          }
         }
       }
     },
@@ -10588,6 +11356,12 @@
             "state" : "translated",
             "value" : "คะแนน"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Điểm đánh giá"
+          }
         }
       }
     },
@@ -10669,6 +11443,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ให้คะแนน"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đánh giá"
           }
         }
       }
@@ -10753,6 +11533,12 @@
             "state" : "translated",
             "value" : "สีและคอนทราสต์ที่ดูสบายขึ้น"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Màu sắc và độ tương phản dễ nhìn hơn"
+          }
         }
       }
     },
@@ -10834,6 +11620,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "กู้คืน"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khôi phục"
           }
         }
       }
@@ -10917,6 +11709,12 @@
             "state" : "translated",
             "value" : "กำลังโหลด…"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đang tải…"
+          }
         }
       }
     },
@@ -10998,6 +11796,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ไม่พอใจ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không hài lòng"
           }
         }
       }
@@ -11081,6 +11885,12 @@
             "state" : "translated",
             "value" : "คนอื่นว่าอย่างไร"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mọi người nói gì"
+          }
         }
       }
     },
@@ -11162,6 +11972,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "รูปภาพ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ảnh"
           }
         }
       }
@@ -11245,6 +12061,12 @@
             "state" : "translated",
             "value" : "รูปภาพ (%lld)"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ảnh (%lld)"
+          }
         }
       }
     },
@@ -11326,6 +12148,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "เลือกรูปภาพ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chọn ảnh"
           }
         }
       }
@@ -11409,6 +12237,12 @@
             "state" : "translated",
             "value" : "เพิ่มรูปภาพ"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thêm ảnh"
+          }
         }
       }
     },
@@ -11490,6 +12324,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ลบ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xóa"
           }
         }
       }
@@ -11573,6 +12413,12 @@
             "state" : "translated",
             "value" : "รายละเอียดความตรงใจ"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chi tiết độ phù hợp"
+          }
         }
       }
     },
@@ -11654,6 +12500,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ประเภทอาหารใหม่"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loại ẩm thực mới"
           }
         }
       }
@@ -11737,6 +12589,12 @@
             "state" : "translated",
             "value" : "เพิ่มประเภทใหม่"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thêm loại mới"
+          }
         }
       }
     },
@@ -11818,6 +12676,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "รูปภาพที่จะเพิ่ม"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ảnh sẽ được thêm"
           }
         }
       }
@@ -11901,6 +12765,12 @@
             "state" : "translated",
             "value" : "รีเฟรช"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Làm mới"
+          }
         }
       }
     },
@@ -11982,6 +12852,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "เลือก"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chọn"
           }
         }
       }
@@ -12065,6 +12941,12 @@
             "state" : "translated",
             "value" : "ไม่เลือก"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không chọn"
+          }
         }
       }
     },
@@ -12147,6 +13029,12 @@
             "state" : "translated",
             "value" : "คำอธิบาย"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mô tả"
+          }
         }
       }
     },
@@ -12228,6 +13116,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "การตั้งค่า"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cài đặt"
           }
         }
       }
@@ -12312,6 +13206,12 @@
             "state" : "translated",
             "value" : "สัมผัสที่รู้สึกได้ถึงปลายนิ้ว"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phản hồi cảm nhận được ở đầu ngón tay"
+          }
         }
       }
     },
@@ -12393,6 +13293,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ประเภทร้าน"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loại quán"
           }
         }
       }
@@ -12476,6 +13382,12 @@
             "state" : "translated",
             "value" : "รายการร้านอาหาร"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Danh sách quán"
+          }
         }
       }
     },
@@ -12557,6 +13469,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ให้คะแนนร้านจากรายการ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đánh giá quán từ danh sách"
           }
         }
       }
@@ -12640,6 +13558,12 @@
             "state" : "translated",
             "value" : "ลบร้านอาหาร"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xóa quán"
+          }
         }
       }
     },
@@ -12721,6 +13645,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ให้ 4 ดาวขึ้นไปในหน้ารายละเอียดของร้าน"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hãy chấm từ 4 sao trở lên trong màn hình chi tiết của quán"
           }
         }
       }
@@ -12804,6 +13734,12 @@
             "state" : "translated",
             "value" : "ไม่มีร้านอาหาร"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chưa có quán"
+          }
         }
       }
     },
@@ -12885,6 +13821,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ชื่อร้าน"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tên quán"
           }
         }
       }
@@ -12968,6 +13910,12 @@
             "state" : "translated",
             "value" : "ข้อมูลร้าน"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thông tin quán"
+          }
         }
       }
     },
@@ -13049,6 +13997,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "แผนที่ร้านอาหาร"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bản đồ quán ăn"
           }
         }
       }
@@ -13132,6 +14086,12 @@
             "state" : "translated",
             "value" : "เพิ่มร้านอาหาร"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thêm quán"
+          }
         }
       }
     },
@@ -13213,6 +14173,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "เพิ่มร้านอาหาร"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thêm một quán"
           }
         }
       }
@@ -13296,6 +14262,12 @@
             "state" : "translated",
             "value" : "เพิ่มเป็นร้านอาหาร"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thêm làm quán ăn"
+          }
         }
       }
     },
@@ -13377,6 +14349,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "เพิ่มร้านอาหารเพื่อเริ่มต้น"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hãy thêm một quán để bắt đầu"
           }
         }
       }
@@ -13461,6 +14439,12 @@
             "state" : "translated",
             "value" : "เคล็ดลับใช้งาน"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mẹo sử dụng"
+          }
         }
       }
     },
@@ -13544,6 +14528,12 @@
             "state" : "translated",
             "value" : "เขียนบันทึกการเยี่ยมชมต่อจากที่ค้างไว้"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Viết tiếp lượt ghé đang dở"
+          }
         }
       }
     },
@@ -13626,6 +14616,12 @@
             "state" : "translated",
             "value" : "ไม่"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không"
+          }
         }
       }
     },
@@ -13707,6 +14703,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ไอคอน"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Biểu tượng"
           }
         }
       }
@@ -13791,6 +14793,12 @@
             "state" : "translated",
             "value" : "บน iPad ใช้ฟีเจอร์หลักได้ด้วยคีย์บอร์ดอย่างเดียว"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trên iPad, bạn có thể dùng các tính năng chính chỉ với bàn phím."
+          }
         }
       }
     },
@@ -13872,6 +14880,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ยังไม่มีร้านในรายการอยากไป"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chưa có quán nào trong danh sách “Muốn đến”"
           }
         }
       }
@@ -13955,6 +14969,12 @@
             "state" : "translated",
             "value" : "คุณยังไม่เคยไปร้านนี้"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bạn chưa ghé quán này"
+          }
         }
       }
     },
@@ -14036,6 +15056,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ยังไม่มีร้านที่เคยไป"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chưa có quán nào đã đến"
           }
         }
       }
@@ -14119,6 +15145,12 @@
             "state" : "translated",
             "value" : "ยังไม่มีร้านที่บันทึกไว้"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chưa có quán nào được lưu"
+          }
         }
       }
     },
@@ -14201,6 +15233,12 @@
             "state" : "translated",
             "value" : "ยังไม่มีร้านใน Top 6"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chưa có quán nào trong Top 6"
+          }
         }
       }
     },
@@ -14282,6 +15320,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ยังไม่มีคะแนน"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chưa có đánh giá"
           }
         }
       }
@@ -14366,6 +15410,12 @@
             "state" : "translated",
             "value" : "แนะนำฟีเจอร์ที่มีประโยชน์เบา ๆ ในจังหวะที่เหมาะสม"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhẹ nhàng gợi ý các tính năng hữu ích đúng lúc bạn cần."
+          }
         }
       }
     },
@@ -14448,6 +15498,12 @@
             "state" : "translated",
             "value" : "เลือกจากคลังรูปภาพ"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chọn từ thư viện"
+          }
         }
       }
     },
@@ -14529,6 +15585,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "เกี่ยวกับ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giới thiệu"
           }
         }
       }
@@ -14613,6 +15675,12 @@
             "state" : "translated",
             "value" : "ดูร้านโปรดได้ที่หน้าจอโฮมโดยไม่ต้องเปิดแอป"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xem quán yêu thích ngay trên Màn hình chính mà không cần mở ứng dụng."
+          }
         }
       }
     },
@@ -14695,6 +15763,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ใช้แอปเป็นภาษาอังกฤษได้ด้วย"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Có thể dùng ứng dụng bằng tiếng Anh."
           }
         }
       }
@@ -14779,6 +15853,12 @@
             "state" : "translated",
             "value" : "ตัวอักษรและปุ่มคมชัดแม้ในโหมดมืด"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chữ và nút vẫn rõ nét trong chế độ tối."
+          }
         }
       }
     },
@@ -14861,6 +15941,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "เมื่อเปิดแอปครั้งแรกหลังอัปเดต จะบอกว่ามีอะไรใหม่"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lần đầu mở ứng dụng sau khi cập nhật, bạn sẽ biết có gì mới."
           }
         }
       }
@@ -14945,6 +16031,12 @@
             "state" : "translated",
             "value" : "มีอะไรใหม่"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Có gì mới"
+          }
         }
       }
     },
@@ -15026,6 +16118,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "เราวิเคราะห์รสนิยมของคุณเพื่อแนะนำสิ่งที่ใช่"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chúng tôi phân tích khẩu vị của bạn để đưa ra gợi ý phù hợp"
           }
         }
       }
@@ -15110,6 +16208,12 @@
             "state" : "translated",
             "value" : "รองรับภาษาอังกฤษ"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hỗ trợ tiếng Anh"
+          }
         }
       }
     },
@@ -15191,6 +16295,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "เช่น อาหารไทย อาหารอินเดีย"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VD: món Thái, món Ấn"
           }
         }
       }
@@ -15274,6 +16384,12 @@
             "state" : "translated",
             "value" : "คะแนนที่คาดว่าจะให้"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Điểm dự đoán"
+          }
         }
       }
     },
@@ -15355,6 +16471,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ข้อผิดพลาด"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lỗi"
           }
         }
       }
@@ -15438,6 +16560,12 @@
             "state" : "translated",
             "value" : "เสร็จสิ้น"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xong"
+          }
         }
       }
     },
@@ -15519,6 +16647,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ทำไมจึงแนะนำ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vì sao gợi ý quán này?"
           }
         }
       }
@@ -15603,6 +16737,12 @@
             "state" : "translated",
             "value" : "ลดการเคลื่อนไหว"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giảm chuyển động"
+          }
         }
       }
     },
@@ -15686,6 +16826,12 @@
             "state" : "translated",
             "value" : "เมื่อเปิด “ลดการเคลื่อนไหว” เอฟเฟกต์บนหน้าจอจะนุ่มนวลขึ้น"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khi bật “Giảm chuyển động”, hiệu ứng trên màn hình sẽ dịu hơn."
+          }
         }
       }
     },
@@ -15767,6 +16913,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "วอน"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "KRW"
           }
         }
       }
@@ -15850,6 +17002,12 @@
             "state" : "translated",
             "value" : "เว็บไซต์"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trang web"
+          }
         }
       }
     },
@@ -15931,6 +17089,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ละติจูด: %.6f"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vĩ độ: %.6f"
           }
         }
       }
@@ -16014,6 +17178,12 @@
             "state" : "translated",
             "value" : "ตำแหน่ง"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vị trí"
+          }
         }
       }
     },
@@ -16095,6 +17265,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "เลือกตำแหน่ง"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chọn vị trí"
           }
         }
       }
@@ -16178,6 +17354,12 @@
             "state" : "translated",
             "value" : "สไตล์อาหาร"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phong cách ẩm thực"
+          }
         }
       }
     },
@@ -16259,6 +17441,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ประเภทอาหาร"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loại ẩm thực"
           }
         }
       }
@@ -16342,6 +17530,12 @@
             "state" : "translated",
             "value" : "จัดการประเภทอาหาร"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quản lý loại ẩm thực"
+          }
         }
       }
     },
@@ -16423,6 +17617,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "การไปครั้งนี้เป็นอย่างไรบ้าง"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lần ghé này thế nào?"
           }
         }
       }
@@ -16506,6 +17706,12 @@
             "state" : "translated",
             "value" : "แตะ “แก้ไข” เพื่อให้คะแนนรสชาติของการเยี่ยมชมครั้งนี้"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhấn “Sửa” để đánh giá hương vị của lượt ghé này"
+          }
         }
       }
     },
@@ -16587,6 +17793,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ร้านนี้ยังไม่มีเมนู เพิ่มเมนูก่อนหรือพิมพ์เอง"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quán này chưa có món nào trong thực đơn. Hãy thêm món trước hoặc nhập tay."
           }
         }
       }
@@ -16670,6 +17882,12 @@
             "state" : "translated",
             "value" : "โดยรวมแล้วร้านนี้…"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhìn chung, quán này…"
+          }
         }
       }
     },
@@ -16751,6 +17969,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ชื่อ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tên"
           }
         }
       }
@@ -16834,6 +18058,12 @@
             "state" : "translated",
             "value" : "ติดต่อทางอีเมล"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liên hệ qua email"
+          }
         }
       }
     },
@@ -16915,6 +18145,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "โหลดรูปภาพไม่ได้"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không thể tải hình ảnh"
           }
         }
       }
@@ -16998,6 +18234,12 @@
             "state" : "translated",
             "value" : "ให้คะแนนร้านแห่งชีวิตของคุณ"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đánh giá quán ăn của đời bạn"
+          }
         }
       }
     },
@@ -17079,6 +18321,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "DM Instagram (@lee25_ios)"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhắn tin Instagram (@lee25_ios)"
           }
         }
       }
@@ -17162,6 +18410,12 @@
             "state" : "translated",
             "value" : "เพิ่มประเภทอาหารที่กินบ่อยได้เอง"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bạn có thể tự thêm các loại ẩm thực hay ăn"
+          }
         }
       }
     },
@@ -17243,6 +18497,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ข้อมูลสถานที่"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thông tin địa điểm"
           }
         }
       }
@@ -17326,6 +18586,12 @@
             "state" : "translated",
             "value" : "กำลังโหลดข้อมูลสถานที่…"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đang tải thông tin địa điểm…"
+          }
         }
       }
     },
@@ -17407,6 +18673,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "กรอกอัตโนมัติจากข้อมูลสถานที่"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tự điền từ thông tin địa điểm"
           }
         }
       }
@@ -17490,6 +18762,12 @@
             "state" : "translated",
             "value" : "บันทึก"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lưu"
+          }
         }
       }
     },
@@ -17571,6 +18849,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ร้านที่บันทึกไว้"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quán đã lưu"
           }
         }
       }
@@ -17654,6 +18938,12 @@
             "state" : "translated",
             "value" : "ร้านที่บันทึกไว้: %lld ร้าน"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quán đã lưu: %lld"
+          }
         }
       }
     },
@@ -17735,6 +19025,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ทั้งหมด"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tất cả"
           }
         }
       }
@@ -17818,6 +19114,12 @@
             "state" : "translated",
             "value" : "ความตรงใจโดยรวม"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Độ phù hợp tổng thể"
+          }
         }
       }
     },
@@ -17899,6 +19201,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "โทรศัพท์"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Điện thoại"
           }
         }
       }
@@ -17982,6 +19290,12 @@
             "state" : "translated",
             "value" : "ลบข้อมูลทั้งหมดไหม ไม่สามารถยกเลิกการดำเนินการนี้ได้"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xóa toàn bộ dữ liệu? Không thể hoàn tác thao tác này."
+          }
         }
       }
     },
@@ -18063,6 +19377,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "โหลดข้อมูลไม่ได้"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không thể tải thông tin"
           }
         }
       }
@@ -18146,6 +19466,12 @@
             "state" : "translated",
             "value" : "ช่วยให้คะแนนอีกนิดนะ"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đánh giá thêm một chút nhé!"
+          }
         }
       }
     },
@@ -18227,6 +19553,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "จำนวนครั้งที่สั่ง"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Số lần gọi món"
           }
         }
       }
@@ -18310,6 +19642,12 @@
             "state" : "translated",
             "value" : "ที่อยู่"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Địa chỉ"
+          }
         }
       }
     },
@@ -18391,6 +19729,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "แผนที่"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bản đồ"
           }
         }
       }
@@ -18474,6 +19818,12 @@
             "state" : "translated",
             "value" : "เพิ่มร้านจากแผนที่หรือรายการ"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thêm quán từ bản đồ hoặc danh sách"
+          }
         }
       }
     },
@@ -18555,6 +19905,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "เลื่อนแผนที่หรือเลือกสถานที่อื่น\nแล้วลองอีกครั้ง"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hãy di chuyển bản đồ hoặc chọn nơi khác\nrồi thử lại"
           }
         }
       }
@@ -18638,6 +19994,12 @@
             "state" : "translated",
             "value" : "ดูบนแผนที่"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xem trên bản đồ"
+          }
         }
       }
     },
@@ -18719,6 +20081,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ค้นหาร้านอาหารบนแผนที่"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tìm quán ăn trên bản đồ"
           }
         }
       }
@@ -18802,6 +20170,12 @@
             "state" : "translated",
             "value" : "ที่อยู่ (แปลงที่ดิน)"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Địa chỉ (số thửa)"
+          }
         }
       }
     },
@@ -18884,6 +20258,12 @@
             "state" : "translated",
             "value" : "การสนับสนุน"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hỗ trợ"
+          }
         }
       }
     },
@@ -18965,6 +20345,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "กรอกเอง"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhập tay"
           }
         }
       }
@@ -19049,6 +20435,12 @@
             "state" : "translated",
             "value" : "คู่มือเริ่มต้น"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hướng dẫn làm quen"
+          }
         }
       }
     },
@@ -19132,6 +20524,12 @@
             "state" : "translated",
             "value" : "แนะนำสั้น ๆ ว่าทำอะไรได้บ้างเมื่อเปิดแอปครั้งแรก"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giới thiệu nhanh những gì bạn có thể làm khi mở ứng dụng lần đầu."
+          }
         }
       }
     },
@@ -19213,6 +20611,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "เพิ่มเมนูแรกของคุณ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thêm món đầu tiên"
           }
         }
       }
@@ -19296,6 +20700,12 @@
             "state" : "translated",
             "value" : "เพิ่มการเยี่ยมชมครั้งแรก"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thêm lượt ghé đầu tiên"
+          }
         }
       }
     },
@@ -19377,6 +20787,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "รีเซ็ต"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đặt lại"
           }
         }
       }
@@ -19460,6 +20876,12 @@
             "state" : "translated",
             "value" : "การเยี่ยมชมทั้งหมด"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tổng số lượt ghé"
+          }
         }
       }
     },
@@ -19541,6 +20963,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "จำนวนครั้งที่เยี่ยมชมทั้งหมด"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tổng số lần ghé"
           }
         }
       }
@@ -19624,6 +21052,12 @@
             "state" : "translated",
             "value" : "สรุปภาพรวม (ค่าเฉลี่ยทุกครั้งที่ไป)"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhận xét chung (trung bình mọi lần ghé)"
+          }
         }
       }
     },
@@ -19705,6 +21139,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ร้านที่ดีที่สุดของคุณ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Những quán tuyệt nhất của bạn"
           }
         }
       }
@@ -19788,6 +21228,12 @@
             "state" : "translated",
             "value" : "เยี่ยมชมล่าสุด"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lần ghé gần nhất"
+          }
         }
       }
     },
@@ -19869,6 +21315,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "สั่งล่าสุด"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lần gọi món gần nhất"
           }
         }
       }
@@ -19952,6 +21404,12 @@
             "state" : "translated",
             "value" : "แนะนำ"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gợi ý"
+          }
         }
       }
     },
@@ -20033,6 +21491,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "รับคำแนะนำ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhận gợi ý"
           }
         }
       }
@@ -20116,6 +21580,12 @@
             "state" : "translated",
             "value" : "กำลังวิเคราะห์คำแนะนำ…"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đang phân tích gợi ý…"
+          }
         }
       }
     },
@@ -20197,6 +21667,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ร้านแนะนำ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quán được gợi ý"
           }
         }
       }
@@ -20280,6 +21756,12 @@
             "state" : "translated",
             "value" : "คะแนนแนะนำ"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Điểm gợi ý"
+          }
         }
       }
     },
@@ -20361,6 +21843,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ขั้นตอนทดสอบการแนะนำ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Các bước thử gợi ý"
           }
         }
       }
@@ -20444,6 +21932,12 @@
             "state" : "translated",
             "value" : "ไม่มีร้านให้แนะนำ"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không có quán nào để gợi ý"
+          }
         }
       }
     },
@@ -20525,6 +22019,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ยกเลิก"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hủy"
           }
         }
       }
@@ -20608,6 +22108,12 @@
             "state" : "translated",
             "value" : "รสนิยม"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khẩu vị"
+          }
         }
       }
     },
@@ -20689,6 +22195,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "โปรไฟล์รสนิยม"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hồ sơ khẩu vị"
           }
         }
       }
@@ -20772,6 +22284,12 @@
             "state" : "translated",
             "value" : "ถ่ายภาพ"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chụp ảnh"
+          }
         }
       }
     },
@@ -20853,6 +22371,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "เปิดใน Kakao Map"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mở trong Kakao Map"
           }
         }
       }
@@ -20936,6 +22460,12 @@
             "state" : "translated",
             "value" : "หมวดหมู่"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Danh mục"
+          }
         }
       }
     },
@@ -21017,6 +22547,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "หมวดหมู่\n%lld%%"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Danh mục\n%lld%%"
           }
         }
       }
@@ -21100,6 +22636,12 @@
             "state" : "translated",
             "value" : "หมวดหมู่ (เช่น อาหารเกาหลี อาหารจีน)"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Danh mục (VD: món Hàn, món Hoa)"
+          }
         }
       }
     },
@@ -21182,6 +22724,12 @@
             "state" : "translated",
             "value" : "ตั้งค่าหมวดหมู่"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cài đặt danh mục"
+          }
         }
       }
     },
@@ -21263,6 +22811,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ไอคอนหมวดหมู่"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Biểu tượng danh mục"
           }
         }
       }
@@ -21347,6 +22901,12 @@
             "state" : "translated",
             "value" : "หน้าจอสำหรับตัวอักษรขนาดใหญ่"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giao diện cho chữ lớn"
+          }
         }
       }
     },
@@ -21430,6 +22990,12 @@
             "state" : "translated",
             "value" : "ควบคุมด้วยคีย์บอร์ด"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Điều khiển bằng bàn phím"
+          }
         }
       }
     },
@@ -21512,6 +23078,12 @@
             "state" : "translated",
             "value" : "ตั้งเป็น Top 6"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đặt vào Top 6"
+          }
         }
       }
     },
@@ -21590,6 +23162,12 @@
           }
         },
         "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Top 6"
+          }
+        },
+        "vi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Top 6"
@@ -21676,6 +23254,12 @@
             "state" : "translated",
             "value" : "ขีดจำกัด Top 6"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giới hạn Top 6"
+          }
         }
       }
     },
@@ -21757,6 +23341,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Top 6 ตั้งได้สูงสุด 6 ร้าน (ตอนนี้: %lld/6)"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Top 6 tối đa 6 quán (hiện tại: %lld/6)"
           }
         }
       }
@@ -21840,6 +23430,12 @@
             "state" : "translated",
             "value" : "Top 6 ตั้งได้สูงสุด 6 ร้าน โปรดนำร้านอื่นออกจาก Top 6 แล้วลองอีกครั้ง"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Top 6 tối đa 6 quán. Hãy bỏ một quán khỏi Top 6 rồi thử lại."
+          }
         }
       }
     },
@@ -21922,6 +23518,12 @@
             "state" : "translated",
             "value" : "ข้อมูลทดสอบ"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dữ liệu thử nghiệm"
+          }
         }
       }
     },
@@ -22003,6 +23605,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "สถิติ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thống kê"
           }
         }
       }
@@ -22087,6 +23695,12 @@
             "state" : "translated",
             "value" : "หน้าจอสำหรับ iPhone แบบพับได้"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giao diện cho iPhone gập"
+          }
         }
       }
     },
@@ -22170,6 +23784,12 @@
             "state" : "translated",
             "value" : "บน iPhone แบบพับได้ หน้าจอกว้างจะแบ่งเป็นสองส่วน"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trên iPhone gập, màn hình rộng được chia thành hai ngăn."
+          }
         }
       }
     },
@@ -22251,6 +23871,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ข้อมูลคะแนน"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thông tin đánh giá"
           }
         }
       }
@@ -22334,6 +23960,12 @@
             "state" : "translated",
             "value" : "ประวัติคะแนน (%lld)"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lịch sử đánh giá (%lld)"
+          }
         }
       }
     },
@@ -22415,6 +24047,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "คะแนนเฉลี่ย"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Điểm trung bình"
           }
         }
       }
@@ -22498,6 +24136,12 @@
             "state" : "translated",
             "value" : "รูปแบบการให้คะแนน\n%lld%%"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mẫu đánh giá\n%lld%%"
+          }
         }
       }
     },
@@ -22580,6 +24224,12 @@
             "state" : "translated",
             "value" : "สำรองข้อมูลปัจจุบันไปที่ iCloud ข้อมูลสำรองเดิมจะถูกเขียนทับ"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sao lưu dữ liệu hiện tại lên iCloud. Bản sao lưu cũ (nếu có) sẽ bị ghi đè."
+          }
         }
       }
     },
@@ -22661,6 +24311,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "จากตำแหน่งปัจจุบัน"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Từ vị trí hiện tại"
           }
         }
       }
@@ -22745,6 +24401,12 @@
             "state" : "translated",
             "value" : "วิดเจ็ตหน้าจอโฮม"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiện ích Màn hình chính"
+          }
         }
       }
     },
@@ -22828,6 +24490,12 @@
             "state" : "translated",
             "value" : "VoiceOver อ่านปุ่มและเนื้อหาครบถ้วนตามลำดับที่ถูกต้อง"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOver đọc đầy đủ các nút và nội dung theo đúng thứ tự."
+          }
         }
       }
     },
@@ -22909,6 +24577,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ตกลง"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
           }
         }
       }
@@ -22992,6 +24666,12 @@
             "state" : "translated",
             "value" : "💰 ประหยัดต้นทุน (ถูกกว่า Firestore 6 เท่า)"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "💰 Tiết kiệm chi phí (1/6 so với Firestore)"
+          }
         }
       }
     },
@@ -23073,6 +24753,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "🚀 โครงสร้าง JSON แบบเรียบง่าย"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🚀 Cấu trúc JSON đơn giản"
           }
         }
       }
