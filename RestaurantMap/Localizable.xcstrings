@@ -122,6 +122,12 @@
             "state" : "translated",
             "value" : "Meny hos %@"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu van %@"
+          }
         }
       }
     },
@@ -246,6 +252,12 @@
             "state" : "translated",
             "value" : "%lld %% treff"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld%% match"
+          }
         }
       }
     },
@@ -366,6 +378,12 @@
           }
         },
         "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld"
@@ -494,6 +512,12 @@
             "state" : "translated",
             "value" : "Vurder %lld til for å få anbefalinger"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beoordeel er nog %lld om aanbevelingen te krijgen"
+          }
         }
       }
     },
@@ -617,6 +641,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld omtaler"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld beoordelingen"
           }
         }
       }
@@ -742,6 +772,12 @@
             "state" : "translated",
             "value" : "Anbefalt av %lld brukere med lignende smak"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aanbevolen door %lld gebruikers met een vergelijkbare smaak"
+          }
         }
       }
     },
@@ -862,6 +898,12 @@
           }
         },
         "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nr. %lld"
+          }
+        },
+        "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nr. %lld"
@@ -990,6 +1032,12 @@
             "state" : "translated",
             "value" : "%lld bilder"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld foto’s"
+          }
         }
       }
     },
@@ -1113,6 +1161,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld ganger"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld keer"
           }
         }
       }
@@ -1238,6 +1292,12 @@
             "state" : "translated",
             "value" : "%lld besøk"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld bezoeken"
+          }
         }
       }
     },
@@ -1361,6 +1421,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Slette «%@» og alle besøksnotater?"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "‘%@’ en alle bezoeken verwijderen?"
           }
         }
       }
@@ -1486,6 +1552,12 @@
             "state" : "translated",
             "value" : "1️⃣ Last opp dataene mine"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1️⃣ Mijn gegevens uploaden"
+          }
         }
       }
     },
@@ -1609,6 +1681,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "2️⃣ Lag testdata"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2️⃣ Testgegevens maken"
           }
         }
       }
@@ -1734,6 +1812,12 @@
             "state" : "translated",
             "value" : "3️⃣ Se resultatene under Anbefalinger"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3️⃣ Bekijk de resultaten op het tabblad Aanbevelingen"
+          }
         }
       }
     },
@@ -1857,6 +1941,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Du har ikke gitt noen restaurant 4 stjerner eller mer"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geen enkel restaurant heeft 4 sterren of meer gekregen"
           }
         }
       }
@@ -1982,6 +2072,12 @@
             "state" : "translated",
             "value" : "Smaken din i seks egenskaper"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jouw smaak in zes kenmerken"
+          }
         }
       }
     },
@@ -2105,6 +2201,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Åpne i Kart"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open in Kaarten"
           }
         }
       }
@@ -2231,6 +2333,12 @@
             "state" : "translated",
             "value" : "Face ID-lås"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Face ID-vergrendeling"
+          }
         }
       }
     },
@@ -2356,6 +2464,12 @@
             "state" : "translated",
             "value" : "Lås appen med Face ID eller Touch ID, så restaurantdagboken din forblir privat."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vergrendel de app met Face ID of Touch ID zodat je restaurantdagboek privé blijft."
+          }
         }
       }
     },
@@ -2479,6 +2593,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Last opp data til Firebase\nfor å teste anbefalingssystemet"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upload gegevens naar Firebase\nom het aanbevelingssysteem te testen"
           }
         }
       }
@@ -2604,6 +2724,12 @@
             "state" : "translated",
             "value" : "Last opp til Realtime DB"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uploaden naar Realtime DB"
+          }
         }
       }
     },
@@ -2728,6 +2854,12 @@
             "state" : "translated",
             "value" : "Fordeler med Realtime Database"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voordelen van Realtime Database"
+          }
         }
       }
     },
@@ -2851,6 +2983,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Henter data fra Realtime Database …"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gegevens ophalen uit Realtime Database…"
           }
         }
       }
@@ -2977,6 +3115,12 @@
             "state" : "translated",
             "value" : "Si det til Siri eller bruk en snarvei for å registrere et besøk med en gang."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vraag het aan Siri of gebruik een opdracht om meteen een bezoek vast te leggen."
+          }
         }
       }
     },
@@ -3101,6 +3245,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siri og Snarveier"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri en Opdrachten"
           }
         }
       }
@@ -3227,6 +3377,12 @@
             "state" : "translated",
             "value" : "Enklere å bruke VoiceOver"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prettiger werken met VoiceOver"
+          }
         }
       }
     },
@@ -3350,6 +3506,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "iCloud-sikkerhetskopi"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud-back-up"
           }
         }
       }
@@ -3475,6 +3637,12 @@
             "state" : "translated",
             "value" : "Du må være logget på iCloud for å sikkerhetskopiere eller gjenopprette."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je moet bij iCloud zijn ingelogd om een back-up te maken of terug te zetten."
+          }
         }
       }
     },
@@ -3598,6 +3766,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sikkerhetskopier til iCloud"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back-up maken in iCloud"
           }
         }
       }
@@ -3723,6 +3897,12 @@
             "state" : "translated",
             "value" : "Gjenopprett fra iCloud"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terugzetten vanuit iCloud"
+          }
         }
       }
     },
@@ -3846,6 +4026,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gjenoppretter fra iCloud-sikkerhetskopien din. All data på denne enheten slettes og erstattes av sikkerhetskopien."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zet je iCloud-back-up terug. Alle gegevens op dit apparaat worden verwijderd en vervangen door de back-up."
           }
         }
       }
@@ -3971,6 +4157,12 @@
             "state" : "translated",
             "value" : "• 3–4 restauranter per bruker"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 3–4 restaurants per gebruiker"
+          }
         }
       }
     },
@@ -4094,6 +4286,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "• 1–3 besøk per restaurant"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 1–3 bezoeken per restaurant"
           }
         }
       }
@@ -4219,6 +4417,12 @@
             "state" : "translated",
             "value" : "• 5 brukere med ulik smak"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 5 gebruikers met uiteenlopende smaken"
+          }
         }
       }
     },
@@ -4342,6 +4546,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "⚡ Raskere sanntidssynkronisering"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚡ Snellere realtime synchronisatie"
           }
         }
       }
@@ -4467,6 +4677,12 @@
             "state" : "translated",
             "value" : "⚡ Raskere sanntidssynkronisering\n💰 Lavere kostnader"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚡ Snellere realtime synchronisatie\n💰 Lagere kosten"
+          }
         }
       }
     },
@@ -4590,6 +4806,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "✓ Vurdert"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "✓ Beoordeeld"
           }
         }
       }
@@ -4716,6 +4938,12 @@
             "state" : "translated",
             "value" : "En lett vibrasjon når du lagrer et sted eller registrerer et besøk."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Een lichte trilling als je een plek bewaart of een bezoek vastlegt."
+          }
         }
       }
     },
@@ -4839,6 +5067,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pris"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prijs"
           }
         }
       }
@@ -4964,6 +5198,12 @@
             "state" : "translated",
             "value" : "Besøkt"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bezocht"
+          }
         }
       }
     },
@@ -5087,6 +5327,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vil dit"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wil ik proeven"
           }
         }
       }
@@ -5212,6 +5458,12 @@
             "state" : "translated",
             "value" : "En restaurant på «Vil dit»-listen kan ikke settes i Topp 6"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Een restaurant op de lijst ‘Wil ik proeven’ kan niet in de Top 6"
+          }
         }
       }
     },
@@ -5335,6 +5587,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vurder smaksintensitet og tilfredshet for hver rett. Vurdering er valgfritt."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beoordeel de smaakintensiteit en tevredenheid per onderdeel. Beoordelen is optioneel."
           }
         }
       }
@@ -5460,6 +5718,12 @@
             "state" : "translated",
             "value" : "Kontakt utvikleren"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contact met de ontwikkelaar"
+          }
         }
       }
     },
@@ -5583,6 +5847,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld søkeresultater"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld zoekresultaten"
           }
         }
       }
@@ -5708,6 +5978,12 @@
             "state" : "translated",
             "value" : "Lengdegrad: %.6f"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lengtegraad: %.6f"
+          }
         }
       }
     },
@@ -5828,6 +6104,12 @@
           }
         },
         "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Type"
+          }
+        },
+        "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Type"
@@ -5957,6 +6239,12 @@
             "state" : "translated",
             "value" : "Når du gjør teksten større, ordnes skjermene om uten at noe kuttes."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Als je de tekst vergroot, worden schermen opnieuw ingedeeld zonder dat er iets wordt afgekapt."
+          }
         }
       }
     },
@@ -6080,6 +6368,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Basert på «%@»"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gebaseerd op ‘%@’"
           }
         }
       }
@@ -6205,6 +6499,12 @@
             "state" : "translated",
             "value" : "Standard"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Standaard"
+          }
         }
       }
     },
@@ -6328,6 +6628,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Grunnleggende info"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Basisinfo"
           }
         }
       }
@@ -6453,6 +6759,12 @@
             "state" : "translated",
             "value" : "Innebygd"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingebouwd"
+          }
         }
       }
     },
@@ -6576,6 +6888,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Min Michelin"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mijn Michelin"
           }
         }
       }
@@ -6701,6 +7019,12 @@
             "state" : "translated",
             "value" : "Mitt matnerd-DNA"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mijn foodie-DNA"
+          }
         }
       }
     },
@@ -6824,6 +7148,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Min favoritt-Topp 6"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mijn favoriete Top 6"
           }
         }
       }
@@ -6949,6 +7279,12 @@
             "state" : "translated",
             "value" : "Min Topp 6"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mijn Top 6"
+          }
         }
       }
     },
@@ -7072,6 +7408,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dataene mine"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mijn gegevens"
           }
         }
       }
@@ -7197,6 +7539,12 @@
             "state" : "translated",
             "value" : "Last opp dataene mine"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mijn gegevens uploaden"
+          }
         }
       }
     },
@@ -7320,6 +7668,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Legg til i restaurantene mine"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toevoegen aan mijn restaurants"
           }
         }
       }
@@ -7445,6 +7799,12 @@
             "state" : "translated",
             "value" : "Dine aller beste restauranter"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je allerliefste restaurants"
+          }
         }
       }
     },
@@ -7568,6 +7928,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Typer jeg har lagt til"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Door mij toegevoegde soorten"
           }
         }
       }
@@ -7693,6 +8059,12 @@
             "state" : "translated",
             "value" : "Åpne i Naver Map"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open in Naver Map"
+          }
         }
       }
     },
@@ -7816,6 +8188,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Prøv igjen"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Probeer het opnieuw"
           }
         }
       }
@@ -7942,6 +8320,12 @@
             "state" : "translated",
             "value" : "Mørk modus"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Donkere modus"
+          }
         }
       }
     },
@@ -8065,6 +8449,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lukk"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sluit"
           }
         }
       }
@@ -8191,6 +8581,12 @@
             "state" : "translated",
             "value" : "Se kart og lister tydelig, også med økt kontrast eller hvis det er vanskelig å skille farger."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lees kaart en lijsten makkelijk, ook met meer contrast of als kleuren moeilijk te onderscheiden zijn."
+          }
         }
       }
     },
@@ -8314,6 +8710,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Husets spesialitet"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Specialiteit van het huis"
           }
         }
       }
@@ -8439,6 +8841,12 @@
             "state" : "translated",
             "value" : "Husets spesialiteter vises øverst i menylisten"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Specialiteiten van het huis staan bovenaan de menulijst"
+          }
         }
       }
     },
@@ -8562,6 +8970,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Angi som husets spesialitet"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instellen als specialiteit van het huis"
           }
         }
       }
@@ -8688,6 +9102,12 @@
             "state" : "translated",
             "value" : "Bruk appen på flere språk."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gebruik de app in meer talen."
+          }
         }
       }
     },
@@ -8813,6 +9233,12 @@
             "state" : "translated",
             "value" : "Flere språk"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meer talen"
+          }
         }
       }
     },
@@ -8936,6 +9362,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lag testdata"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Testgegevens maken"
           }
         }
       }
@@ -9061,6 +9493,12 @@
             "state" : "translated",
             "value" : "Lager 5 testbrukere og restaurantdata"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maakt 5 testgebruikers en restaurantgegevens aan"
+          }
         }
       }
     },
@@ -9184,6 +9622,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Databehandling"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gegevensbeheer"
           }
         }
       }
@@ -9309,6 +9753,12 @@
             "state" : "translated",
             "value" : "Datasynkronisering"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gegevenssynchronisatie"
+          }
         }
       }
     },
@@ -9432,6 +9882,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Synkroniser data"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gegevens synchroniseren"
           }
         }
       }
@@ -9557,6 +10013,12 @@
             "state" : "translated",
             "value" : "Last opp data"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gegevens uploaden"
+          }
         }
       }
     },
@@ -9680,6 +10142,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dataoversikt"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gegevensoverzicht"
           }
         }
       }
@@ -9805,6 +10273,12 @@
             "state" : "translated",
             "value" : "Ikke nok data ennå"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nog te weinig gegevens"
+          }
         }
       }
     },
@@ -9928,6 +10402,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Det er kanskje ikke nok data"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mogelijk zijn er niet genoeg gegevens"
           }
         }
       }
@@ -10053,6 +10533,12 @@
             "state" : "translated",
             "value" : "Kunne ikke laste data"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gegevens konden niet worden geladen"
+          }
         }
       }
     },
@@ -10176,6 +10662,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Adresse (vei)"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adres (straat)"
           }
         }
       }
@@ -10301,6 +10793,12 @@
             "state" : "translated",
             "value" : "Ingen retter på menyen ennå"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nog geen gerechten op het menu"
+          }
         }
       }
     },
@@ -10424,6 +10922,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rangering"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ranglijst"
           }
         }
       }
@@ -10549,6 +11053,12 @@
             "state" : "translated",
             "value" : "Riio Michelin-poeng"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Riio Michelin-score"
+          }
         }
       }
     },
@@ -10672,6 +11182,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siste sikkerhetskopi"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laatste back-up"
           }
         }
       }
@@ -10797,6 +11313,12 @@
             "state" : "translated",
             "value" : "Tilfredshet"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tevredenheid"
+          }
         }
       }
     },
@@ -10920,6 +11442,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Smaksintensitet"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smaakintensiteit"
           }
         }
       }
@@ -11045,6 +11573,12 @@
             "state" : "translated",
             "value" : "Smakspreferanser"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smaakvoorkeuren"
+          }
         }
       }
     },
@@ -11168,6 +11702,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Smakspreferanser\n%lld %%"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smaakvoorkeuren\n%lld%%"
           }
         }
       }
@@ -11293,6 +11833,12 @@
             "state" : "translated",
             "value" : "Smaksvurdering"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smaakbeoordeling"
+          }
         }
       }
     },
@@ -11416,6 +11962,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Smak vurdert"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smaak beoordeeld"
           }
         }
       }
@@ -11541,6 +12093,12 @@
             "state" : "translated",
             "value" : "Smak vurdert"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smaak beoordeeld"
+          }
         }
       }
     },
@@ -11665,6 +12223,12 @@
             "state" : "translated",
             "value" : "Smaksprofil"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smaakprofiel"
+          }
         }
       }
     },
@@ -11785,6 +12349,12 @@
           }
         },
         "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restauranttips"
+          }
+        },
+        "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Restauranttips"
@@ -11913,6 +12483,12 @@
             "state" : "translated",
             "value" : "For deg"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voor jou"
+          }
         }
       }
     },
@@ -12036,6 +12612,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "For å få anbefalinger tilpasset deg"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Om persoonlijke aanbevelingen te krijgen"
           }
         }
       }
@@ -12161,6 +12743,12 @@
             "state" : "translated",
             "value" : "Veldig fornøyd"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeer tevreden"
+          }
         }
       }
     },
@@ -12284,6 +12872,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hva du spiste"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wat je at"
           }
         }
       }
@@ -12409,6 +13003,12 @@
             "state" : "translated",
             "value" : "Hva du spiste (f.eks. bulgogimeny, pizza margherita)"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wat je at (bijv. bulgogimenu, pizza margherita)"
+          }
         }
       }
     },
@@ -12532,6 +13132,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Meny"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu"
           }
         }
       }
@@ -12657,6 +13263,12 @@
             "state" : "translated",
             "value" : "Administrer meny"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu beheren"
+          }
         }
       }
     },
@@ -12780,6 +13392,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Legg til retter"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gerechten toevoegen"
           }
         }
       }
@@ -12905,6 +13523,12 @@
             "state" : "translated",
             "value" : "Meny (%lld)"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu (%lld)"
+          }
         }
       }
     },
@@ -13028,6 +13652,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Velg rett"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kies een gerecht"
           }
         }
       }
@@ -13153,6 +13783,12 @@
             "state" : "translated",
             "value" : "Beskrivelse av rett"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beschrijving van gerecht"
+          }
         }
       }
     },
@@ -13276,6 +13912,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Beskrivelse av rett (valgfritt)"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beschrijving van gerecht (optioneel)"
           }
         }
       }
@@ -13401,6 +14043,12 @@
             "state" : "translated",
             "value" : "Navn på rett"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Naam van gerecht"
+          }
         }
       }
     },
@@ -13524,6 +14172,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Info om rett"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Info over gerecht"
           }
         }
       }
@@ -13649,6 +14303,12 @@
             "state" : "translated",
             "value" : "Legg til rett"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gerecht toevoegen"
+          }
         }
       }
     },
@@ -13772,6 +14432,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rettene du legger til, kan velges når du registrerer et besøk"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toegevoegde gerechten kun je kiezen als je een bezoek vastlegt"
           }
         }
       }
@@ -13897,6 +14563,12 @@
             "state" : "translated",
             "value" : "Notater"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notities"
+          }
         }
       }
     },
@@ -14020,6 +14692,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ingen notater"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geen notities"
           }
         }
       }
@@ -14145,6 +14823,12 @@
             "state" : "translated",
             "value" : "Alle restauranter og besøk slettes. Dette kan ikke angres."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alle restaurants en bezoeken worden verwijderd. Dit kan niet ongedaan worden gemaakt."
+          }
         }
       }
     },
@@ -14268,6 +14952,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Slett alle data"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alle gegevens verwijderen"
           }
         }
       }
@@ -14393,6 +15083,12 @@
             "state" : "translated",
             "value" : "Liste"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lijst"
+          }
         }
       }
     },
@@ -14516,6 +15212,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lukk liste"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lijst sluiten"
           }
         }
       }
@@ -14641,6 +15343,12 @@
             "state" : "translated",
             "value" : "Besøkslogg"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bezoeklogboek"
+          }
         }
       }
     },
@@ -14764,6 +15472,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Legg til besøk"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bezoek toevoegen"
           }
         }
       }
@@ -14889,6 +15603,12 @@
             "state" : "translated",
             "value" : "Oppgi en smaksvurdering når du legger til et besøk"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vul een smaakbeoordeling in als je een bezoek toevoegt"
+          }
         }
       }
     },
@@ -15012,6 +15732,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Velg denne retten når du legger til et besøk"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kies dit gerecht als je een bezoek toevoegt"
           }
         }
       }
@@ -15138,6 +15864,12 @@
             "state" : "translated",
             "value" : "Hvis appen lukkes mens du skriver et besøk, blir det du har skrevet, lagret."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Als de app sluit terwijl je een bezoek schrijft, blijft wat je al had getypt bewaard."
+          }
         }
       }
     },
@@ -15261,6 +15993,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Besøksdato"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datum van bezoek"
           }
         }
       }
@@ -15386,6 +16124,12 @@
             "state" : "translated",
             "value" : "Info om besøket"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Info over bezoek"
+          }
         }
       }
     },
@@ -15509,6 +16253,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Besøksstatistikk"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bezoekstatistieken"
           }
         }
       }
@@ -15634,6 +16384,12 @@
             "state" : "translated",
             "value" : "Sikkerhetskopi"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back-up maken"
+          }
         }
       }
     },
@@ -15757,6 +16513,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Feilrapporter og forslag til funksjoner er velkomne."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bugmeldingen en functievoorstellen zijn welkom."
           }
         }
       }
@@ -15882,6 +16644,12 @@
             "state" : "translated",
             "value" : "Versjon"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Versie"
+          }
         }
       }
     },
@@ -16006,6 +16774,12 @@
             "state" : "translated",
             "value" : "Vurdering"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beoordeling"
+          }
         }
       }
     },
@@ -16129,6 +16903,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vurder"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beoordelen"
           }
         }
       }
@@ -16255,6 +17035,12 @@
             "state" : "translated",
             "value" : "Behagelige farger og kontrast"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prettigere kleuren en contrast"
+          }
         }
       }
     },
@@ -16378,6 +17164,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gjenopprett"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terugzetten"
           }
         }
       }
@@ -16503,6 +17295,12 @@
             "state" : "translated",
             "value" : "Laster …"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laden…"
+          }
         }
       }
     },
@@ -16626,6 +17424,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Misfornøyd"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ontevreden"
           }
         }
       }
@@ -16751,6 +17555,12 @@
             "state" : "translated",
             "value" : "Hva andre sier"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wat anderen zeggen"
+          }
         }
       }
     },
@@ -16874,6 +17684,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bilder"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto’s"
           }
         }
       }
@@ -16999,6 +17815,12 @@
             "state" : "translated",
             "value" : "Bilder (%lld)"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto’s (%lld)"
+          }
         }
       }
     },
@@ -17122,6 +17944,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Velg bilder"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto’s kiezen"
           }
         }
       }
@@ -17247,6 +18075,12 @@
             "state" : "translated",
             "value" : "Legg til bilder"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto’s toevoegen"
+          }
         }
       }
     },
@@ -17370,6 +18204,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Slett"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verwijder"
           }
         }
       }
@@ -17495,6 +18335,12 @@
             "state" : "translated",
             "value" : "Detaljer om treff"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Details van de match"
+          }
         }
       }
     },
@@ -17618,6 +18464,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ny mattype"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nieuw keukentype"
           }
         }
       }
@@ -17743,6 +18595,12 @@
             "state" : "translated",
             "value" : "Legg til ny type"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nieuw type toevoegen"
+          }
         }
       }
     },
@@ -17866,6 +18724,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bilder som legges til"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toe te voegen foto’s"
           }
         }
       }
@@ -17991,6 +18855,12 @@
             "state" : "translated",
             "value" : "Oppdater"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ververs"
+          }
         }
       }
     },
@@ -18114,6 +18984,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Velg"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kies"
           }
         }
       }
@@ -18239,6 +19115,12 @@
             "state" : "translated",
             "value" : "Ingen"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geen"
+          }
         }
       }
     },
@@ -18363,6 +19245,12 @@
             "state" : "translated",
             "value" : "Beskrivelse"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beschrijving"
+          }
         }
       }
     },
@@ -18486,6 +19374,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Innstillinger"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instellingen"
           }
         }
       }
@@ -18612,6 +19506,12 @@
             "state" : "translated",
             "value" : "Respons du kjenner i fingertuppene"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Een reactie die je voelt in je vingertoppen"
+          }
         }
       }
     },
@@ -18732,6 +19632,12 @@
           }
         },
         "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restauranttype"
+          }
+        },
+        "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Restauranttype"
@@ -18860,6 +19766,12 @@
             "state" : "translated",
             "value" : "Restauranter"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurants"
+          }
         }
       }
     },
@@ -18983,6 +19895,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vurder restauranter fra listen"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beoordeel restaurants vanuit de lijst"
           }
         }
       }
@@ -19108,6 +20026,12 @@
             "state" : "translated",
             "value" : "Slett restaurant"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurant verwijderen"
+          }
         }
       }
     },
@@ -19231,6 +20155,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gi 4 stjerner eller mer på restaurantens detaljside"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geef 4 sterren of meer op het detailscherm van een restaurant"
           }
         }
       }
@@ -19356,6 +20286,12 @@
             "state" : "translated",
             "value" : "Ingen restauranter"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geen restaurants"
+          }
         }
       }
     },
@@ -19479,6 +20415,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Restaurantens navn"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Naam van restaurant"
           }
         }
       }
@@ -19604,6 +20546,12 @@
             "state" : "translated",
             "value" : "Info om restaurant"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Info over restaurant"
+          }
         }
       }
     },
@@ -19727,6 +20675,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Restaurantkart"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurantkaart"
           }
         }
       }
@@ -19852,6 +20806,12 @@
             "state" : "translated",
             "value" : "Legg til restaurant"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurant toevoegen"
+          }
         }
       }
     },
@@ -19975,6 +20935,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Legg til en restaurant"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Een restaurant toevoegen"
           }
         }
       }
@@ -20100,6 +21066,12 @@
             "state" : "translated",
             "value" : "Legg til som restaurant"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toevoegen als restaurant"
+          }
         }
       }
     },
@@ -20223,6 +21195,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Legg til en restaurant for å komme i gang"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voeg een restaurant toe om te beginnen"
           }
         }
       }
@@ -20349,6 +21327,12 @@
             "state" : "translated",
             "value" : "Nyttige tips"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Handige tips"
+          }
         }
       }
     },
@@ -20474,6 +21458,12 @@
             "state" : "translated",
             "value" : "Fortsett et påbegynt besøk"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Een half bezoek afmaken"
+          }
         }
       }
     },
@@ -20598,6 +21588,12 @@
             "state" : "translated",
             "value" : "Nei"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nee"
+          }
         }
       }
     },
@@ -20721,6 +21717,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Symbol"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Symbool"
           }
         }
       }
@@ -20847,6 +21849,12 @@
             "state" : "translated",
             "value" : "På iPad kan du bruke hovedfunksjonene bare med tastaturet."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Op de iPad gebruik je de belangrijkste functies met alleen een toetsenbord."
+          }
         }
       }
     },
@@ -20970,6 +21978,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ingen restauranter på «Vil dit»-listen ennå"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nog geen restaurants op je lijst ‘Wil ik proeven’"
           }
         }
       }
@@ -21095,6 +22109,12 @@
             "state" : "translated",
             "value" : "Du har ikke besøkt denne restauranten ennå"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je bent nog niet in dit restaurant geweest"
+          }
         }
       }
     },
@@ -21218,6 +22238,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ingen besøkte restauranter ennå"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nog geen bezochte restaurants"
           }
         }
       }
@@ -21343,6 +22369,12 @@
             "state" : "translated",
             "value" : "Ingen lagrede restauranter ennå"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nog geen bewaarde restaurants"
+          }
         }
       }
     },
@@ -21467,6 +22499,12 @@
             "state" : "translated",
             "value" : "Ingen restauranter i Topp 6 ennå"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nog geen restaurants in de Top 6"
+          }
         }
       }
     },
@@ -21590,6 +22628,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ingen vurderinger ennå"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nog geen beoordelingen"
           }
         }
       }
@@ -21716,6 +22760,12 @@
             "state" : "translated",
             "value" : "Vi viser deg nyttige funksjoner diskret, akkurat når du trenger dem."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We wijzen je subtiel op handige functies, precies wanneer je ze nodig hebt."
+          }
         }
       }
     },
@@ -21840,6 +22890,12 @@
             "state" : "translated",
             "value" : "Velg fra bibliotek"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kies uit bibliotheek"
+          }
         }
       }
     },
@@ -21963,6 +23019,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Om"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Over"
           }
         }
       }
@@ -22089,6 +23151,12 @@
             "state" : "translated",
             "value" : "Se favorittstedene dine rett på Hjem-skjermen uten å åpne appen."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zie je favoriete plekken direct op het beginscherm, zonder de app te openen."
+          }
         }
       }
     },
@@ -22213,6 +23281,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Appen kan også brukes på engelsk."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De app is ook in het Engels te gebruiken."
           }
         }
       }
@@ -22339,6 +23413,12 @@
             "state" : "translated",
             "value" : "Tekst og knapper er skarpe også i mørk modus."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tekst en knoppen blijven scherp, ook in de donkere modus."
+          }
         }
       }
     },
@@ -22463,6 +23543,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Første gang du åpner appen etter en oppdatering, ser du hva som er nytt."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De eerste keer dat je de app na een update opent, zie je wat er nieuw is."
           }
         }
       }
@@ -22589,6 +23675,12 @@
             "state" : "translated",
             "value" : "Nytt"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nieuw"
+          }
         }
       }
     },
@@ -22712,6 +23804,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vi analyserer smaken din for å gi deg tilpassede anbefalinger"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We analyseren je smaak om je persoonlijke aanbevelingen te geven"
           }
         }
       }
@@ -22838,6 +23936,12 @@
             "state" : "translated",
             "value" : "Støtte for engelsk"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ondersteuning voor Engels"
+          }
         }
       }
     },
@@ -22961,6 +24065,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "F.eks. thai, indisk"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bijv. Thais, Indiaas"
           }
         }
       }
@@ -23086,6 +24196,12 @@
             "state" : "translated",
             "value" : "Forventet vurdering"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verwachte beoordeling"
+          }
         }
       }
     },
@@ -23209,6 +24325,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Feil"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fout"
           }
         }
       }
@@ -23334,6 +24456,12 @@
             "state" : "translated",
             "value" : "Ferdig"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gereed"
+          }
         }
       }
     },
@@ -23457,6 +24585,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hvorfor anbefales den?"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Waarom wordt dit aanbevolen?"
           }
         }
       }
@@ -23583,6 +24717,12 @@
             "state" : "translated",
             "value" : "Reduser bevegelse"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beweging beperken"
+          }
         }
       }
     },
@@ -23708,6 +24848,12 @@
             "state" : "translated",
             "value" : "Med «Reduser bevegelse» på blir effektene på skjermen roligere."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Met ‘Beweging beperken’ aan worden effecten op het scherm rustiger."
+          }
         }
       }
     },
@@ -23828,6 +24974,12 @@
           }
         },
         "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "KRW"
+          }
+        },
+        "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "KRW"
@@ -23956,6 +25108,12 @@
             "state" : "translated",
             "value" : "Nettsted"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Website"
+          }
         }
       }
     },
@@ -24079,6 +25237,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Breddegrad: %.6f"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Breedtegraad: %.6f"
           }
         }
       }
@@ -24204,6 +25368,12 @@
             "state" : "translated",
             "value" : "Sted"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Locatie"
+          }
         }
       }
     },
@@ -24327,6 +25497,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Velg sted"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kies een locatie"
           }
         }
       }
@@ -24452,6 +25628,12 @@
             "state" : "translated",
             "value" : "Matstil"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eetstijl"
+          }
         }
       }
     },
@@ -24575,6 +25757,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mattype"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keukentype"
           }
         }
       }
@@ -24700,6 +25888,12 @@
             "state" : "translated",
             "value" : "Administrer mattyper"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keukentypes beheren"
+          }
         }
       }
     },
@@ -24823,6 +26017,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hvordan var dette besøket?"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoe was dit bezoek?"
           }
         }
       }
@@ -24948,6 +26148,12 @@
             "state" : "translated",
             "value" : "Trykk på Rediger for å vurdere smakene fra dette besøket"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tik op Wijzig om de smaken van dit bezoek te beoordelen"
+          }
         }
       }
     },
@@ -25071,6 +26277,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Denne restauranten har ingen retter på menyen ennå. Legg dem til først, eller skriv inn en."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dit restaurant heeft nog geen gerechten op het menu. Voeg ze eerst toe of typ er zelf een in."
           }
         }
       }
@@ -25196,6 +26408,12 @@
             "state" : "translated",
             "value" : "Alt i alt er denne restauranten …"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Over het geheel genomen is dit restaurant…"
+          }
         }
       }
     },
@@ -25319,6 +26537,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Navn"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Naam"
           }
         }
       }
@@ -25444,6 +26668,12 @@
             "state" : "translated",
             "value" : "Kontakt på e-post"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contact per e-mail"
+          }
         }
       }
     },
@@ -25567,6 +26797,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kunne ikke laste bildet"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afbeelding kon niet worden geladen"
           }
         }
       }
@@ -25692,6 +26928,12 @@
             "state" : "translated",
             "value" : "Vurder livets restaurant"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beoordeel het restaurant van je leven"
+          }
         }
       }
     },
@@ -25815,6 +27057,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Instagram-melding (@lee25_ios)"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram-bericht (@lee25_ios)"
           }
         }
       }
@@ -25940,6 +27188,12 @@
             "state" : "translated",
             "value" : "Du kan selv legge til mattypene du ofte spiser"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je kunt zelf de keukentypes toevoegen die je vaak eet"
+          }
         }
       }
     },
@@ -26063,6 +27317,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stedsinfo"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plaatsinfo"
           }
         }
       }
@@ -26188,6 +27448,12 @@
             "state" : "translated",
             "value" : "Laster stedsinfo …"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plaatsinfo laden…"
+          }
         }
       }
     },
@@ -26311,6 +27577,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fylt ut fra stedsinfo"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingevuld op basis van plaatsinfo"
           }
         }
       }
@@ -26436,6 +27708,12 @@
             "state" : "translated",
             "value" : "Lagre"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bewaar"
+          }
         }
       }
     },
@@ -26559,6 +27837,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lagrede restauranter"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bewaarde restaurants"
           }
         }
       }
@@ -26684,6 +27968,12 @@
             "state" : "translated",
             "value" : "Lagrede restauranter: %lld"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bewaarde restaurants: %lld"
+          }
         }
       }
     },
@@ -26804,6 +28094,12 @@
           }
         },
         "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alle"
+          }
+        },
+        "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Alle"
@@ -26932,6 +28228,12 @@
             "state" : "translated",
             "value" : "Samlet treff"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Totale match"
+          }
         }
       }
     },
@@ -27055,6 +28357,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Telefon"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Telefoon"
           }
         }
       }
@@ -27180,6 +28488,12 @@
             "state" : "translated",
             "value" : "Slette alle data? Dette kan ikke angres."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alle gegevens verwijderen? Dit kan niet ongedaan worden gemaakt."
+          }
         }
       }
     },
@@ -27303,6 +28617,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kunne ikke laste informasjon"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Informatie kon niet worden geladen"
           }
         }
       }
@@ -27428,6 +28748,12 @@
             "state" : "translated",
             "value" : "Vurder bare litt til!"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beoordeel er nog een paar, graag!"
+          }
         }
       }
     },
@@ -27551,6 +28877,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Antall bestillinger"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aantal bestellingen"
           }
         }
       }
@@ -27676,6 +29008,12 @@
             "state" : "translated",
             "value" : "Adresse"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adres"
+          }
         }
       }
     },
@@ -27799,6 +29137,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kart"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kaart"
           }
         }
       }
@@ -27924,6 +29268,12 @@
             "state" : "translated",
             "value" : "Legg til en restaurant fra kartet eller listen"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voeg een restaurant toe via de kaart of de lijst"
+          }
         }
       }
     },
@@ -28047,6 +29397,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Flytt kartet eller velg et annet sted,\nog prøv igjen"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verschuif de kaart of kies een andere plek\nen probeer het opnieuw"
           }
         }
       }
@@ -28172,6 +29528,12 @@
             "state" : "translated",
             "value" : "Vis på kart"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toon op kaart"
+          }
         }
       }
     },
@@ -28295,6 +29657,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Finn restauranter på kartet"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zoek restaurants op de kaart"
           }
         }
       }
@@ -28420,6 +29788,12 @@
             "state" : "translated",
             "value" : "Adresse (matrikkel)"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adres (kadaster)"
+          }
         }
       }
     },
@@ -28544,6 +29918,12 @@
             "state" : "translated",
             "value" : "Støtte"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Support"
+          }
         }
       }
     },
@@ -28667,6 +30047,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Skriv inn manuelt"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Handmatig invoeren"
           }
         }
       }
@@ -28793,6 +30179,12 @@
             "state" : "translated",
             "value" : "Kom i gang"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aan de slag"
+          }
         }
       }
     },
@@ -28918,6 +30310,12 @@
             "state" : "translated",
             "value" : "En kort oversikt over hva du kan gjøre første gang du åpner appen."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Een korte rondleiding door wat je kunt doen als je de app voor het eerst opent."
+          }
         }
       }
     },
@@ -29041,6 +30439,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Legg til din første rett"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voeg je eerste gerecht toe"
           }
         }
       }
@@ -29166,6 +30570,12 @@
             "state" : "translated",
             "value" : "Legg til ditt første besøk"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voeg je eerste bezoek toe"
+          }
         }
       }
     },
@@ -29289,6 +30699,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tilbakestill"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wis alles"
           }
         }
       }
@@ -29414,6 +30830,12 @@
             "state" : "translated",
             "value" : "Besøk totalt"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Totaal aantal bezoeken"
+          }
         }
       }
     },
@@ -29537,6 +30959,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Besøk totalt"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Totaal aantal bezoeken"
           }
         }
       }
@@ -29662,6 +31090,12 @@
             "state" : "translated",
             "value" : "Samlet vurdering (snitt av alle besøk)"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eindoordeel (gemiddelde van alle bezoeken)"
+          }
         }
       }
     },
@@ -29785,6 +31219,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dine beste restauranter"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je beste restaurants"
           }
         }
       }
@@ -29910,6 +31350,12 @@
             "state" : "translated",
             "value" : "Siste besøk"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laatste bezoek"
+          }
         }
       }
     },
@@ -30033,6 +31479,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siste bestilling"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laatste bestelling"
           }
         }
       }
@@ -30158,6 +31610,12 @@
             "state" : "translated",
             "value" : "Anbefalinger"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aanbevelingen"
+          }
         }
       }
     },
@@ -30281,6 +31739,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Få anbefalinger"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aanbevelingen ophalen"
           }
         }
       }
@@ -30406,6 +31870,12 @@
             "state" : "translated",
             "value" : "Analyserer anbefalinger …"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aanbevelingen analyseren…"
+          }
         }
       }
     },
@@ -30529,6 +31999,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Anbefalte restauranter"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aanbevolen restaurants"
           }
         }
       }
@@ -30654,6 +32130,12 @@
             "state" : "translated",
             "value" : "Anbefalingspoeng"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aanbevelingsscore"
+          }
         }
       }
     },
@@ -30777,6 +32259,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Trinn for å teste anbefalinger"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stappen om aanbevelingen te testen"
           }
         }
       }
@@ -30902,6 +32390,12 @@
             "state" : "translated",
             "value" : "Ingen restauranter å anbefale"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geen restaurants om aan te bevelen"
+          }
         }
       }
     },
@@ -31025,6 +32519,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Avbryt"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annuleer"
           }
         }
       }
@@ -31150,6 +32650,12 @@
             "state" : "translated",
             "value" : "Smak"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smaak"
+          }
         }
       }
     },
@@ -31273,6 +32779,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Smaksprofil"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smaakprofiel"
           }
         }
       }
@@ -31398,6 +32910,12 @@
             "state" : "translated",
             "value" : "Ta bilde"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maak een foto"
+          }
         }
       }
     },
@@ -31521,6 +33039,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Åpne i Kakao Map"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open in Kakao Map"
           }
         }
       }
@@ -31646,6 +33170,12 @@
             "state" : "translated",
             "value" : "Kategori"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Categorie"
+          }
         }
       }
     },
@@ -31769,6 +33299,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kategori\n%lld %%"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Categorie\n%lld%%"
           }
         }
       }
@@ -31894,6 +33430,12 @@
             "state" : "translated",
             "value" : "Kategori (f.eks. koreansk, kinesisk)"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Categorie (bijv. Koreaans, Chinees)"
+          }
         }
       }
     },
@@ -32018,6 +33560,12 @@
             "state" : "translated",
             "value" : "Kategoriinnstillinger"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Categorie-instellingen"
+          }
         }
       }
     },
@@ -32141,6 +33689,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kategorisymbol"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Categoriesymbool"
           }
         }
       }
@@ -32267,6 +33821,12 @@
             "state" : "translated",
             "value" : "Oppsett for stor tekst"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indelingen voor grote tekst"
+          }
         }
       }
     },
@@ -32392,6 +33952,12 @@
             "state" : "translated",
             "value" : "Styring med tastatur"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bediening met toetsenbord"
+          }
         }
       }
     },
@@ -32515,6 +34081,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Legg til i Topp 6"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toevoegen aan Top 6"
           }
         }
       }
@@ -32640,6 +34212,12 @@
             "state" : "translated",
             "value" : "Topp 6"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Top 6"
+          }
         }
       }
     },
@@ -32763,6 +34341,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Grense for Topp 6"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Limiet Top 6"
           }
         }
       }
@@ -32888,6 +34472,12 @@
             "state" : "translated",
             "value" : "Topp 6 kan ha maks 6 restauranter (nå: %lld/6)"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De Top 6 kan maximaal 6 restaurants bevatten (nu: %lld/6)"
+          }
         }
       }
     },
@@ -33011,6 +34601,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Topp 6 kan ha maks 6 restauranter. Fjern en annen restaurant fra Topp 6, og prøv igjen."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De Top 6 kan maximaal 6 restaurants bevatten. Haal een ander restaurant uit de Top 6 en probeer het opnieuw."
           }
         }
       }
@@ -33136,6 +34732,12 @@
             "state" : "translated",
             "value" : "Testdata"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Testgegevens"
+          }
         }
       }
     },
@@ -33259,6 +34861,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Statistikk"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Statistieken"
           }
         }
       }
@@ -33385,6 +34993,12 @@
             "state" : "translated",
             "value" : "Oppsett for foldbar iPhone"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indeling voor opvouwbare iPhone"
+          }
         }
       }
     },
@@ -33510,6 +35124,12 @@
             "state" : "translated",
             "value" : "På en foldbar iPhone deles den brede skjermen i to paneler."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Op een opvouwbare iPhone wordt het brede scherm verdeeld in twee panelen."
+          }
         }
       }
     },
@@ -33633,6 +35253,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vurderingsinfo"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beoordelingsinfo"
           }
         }
       }
@@ -33758,6 +35384,12 @@
             "state" : "translated",
             "value" : "Vurderingshistorikk (%lld)"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beoordelingsgeschiedenis (%lld)"
+          }
         }
       }
     },
@@ -33881,6 +35513,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gjennomsnittlig vurdering"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gemiddelde beoordeling"
           }
         }
       }
@@ -34006,6 +35644,12 @@
             "state" : "translated",
             "value" : "Vurderingsmønster\n%lld %%"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beoordelingspatroon\n%lld%%"
+          }
         }
       }
     },
@@ -34130,6 +35774,12 @@
             "state" : "translated",
             "value" : "Sikkerhetskopierer gjeldende data til iCloud. En eksisterende sikkerhetskopi overskrives."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maakt een back-up van je huidige gegevens in iCloud. Een bestaande back-up wordt overschreven."
+          }
         }
       }
     },
@@ -34253,6 +35903,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fra nåværende posisjon"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vanaf huidige locatie"
           }
         }
       }
@@ -34379,6 +36035,12 @@
             "state" : "translated",
             "value" : "Hjem-skjermen-widgeter"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widgets voor het beginscherm"
+          }
         }
       }
     },
@@ -34504,6 +36166,12 @@
             "state" : "translated",
             "value" : "VoiceOver leser opp alle knapper og alt innhold i riktig rekkefølge."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOver leest alle knoppen en inhoud voor in de juiste volgorde."
+          }
         }
       }
     },
@@ -34624,6 +36292,12 @@
           }
         },
         "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"
@@ -34752,6 +36426,12 @@
             "state" : "translated",
             "value" : "💰 Rimelig (1/6 av kostnaden for Firestore)"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "💰 Voordelig (1/6 van de kosten van Firestore)"
+          }
         }
       }
     },
@@ -34875,6 +36555,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "🚀 Enkel JSON-struktur"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🚀 Eenvoudige JSON-structuur"
           }
         }
       }

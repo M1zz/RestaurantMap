@@ -1119,3 +1119,59 @@ Når du har vært på en lagret restaurant, minner vi deg på å registrere bes�
 
 iCloud-sikkerhetskopi
 Oppføringene dine ligger på enheten, og du kan når som helst sikkerhetskopiere dem til din egen iCloud og gjenopprette derfra.
+
+## nl
+
+### 지원 URL
+
+https://m1zz.github.io/RestaurantMap/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/RestaurantMap/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/RestaurantMap/
+
+### 이름
+
+Insaeng: restaurantkaart
+
+### 부제
+
+Beoordeel en rank je eten
+
+### 키워드
+
+dagboek,favorieten,foodie,reviews,wishlist,biefstuk,ramen,sushi,café,date,notities,top,lunch,diner
+
+### 프로모션 텍스트
+
+Prik een speld in de kaart bij elk restaurant dat je bezoekt en bewaar je beoordeling en notities. Plek voor plek bouw je een kaart van maaltijden die je nooit vergeet.
+
+### 설명
+
+Markeer de plekken waar je hebt gegeten en noteer bij elk bezoek hoe het smaakte.
+Insaeng is je persoonlijke eetkaart, met alleen de restaurants die je zelf hebt gekozen.
+
+Een kaart van je favoriete plekken
+Zoek een restaurant of kies een punt op de kaart om het te bewaren. Bewaarde plekken verschijnen als speldjes en je zes favorieten krijgen een eigen ranglijstbadge.
+
+Bezocht, Wil ik proeven en je Top 6
+Houd restaurants die je al kent gescheiden van restaurants die je nog wilt proberen, en rank je zes beste.
+
+Elk gerecht met eigen criteria
+Bij een biefstuk tellen gaarheid en sappigheid, bij sushi rijst en vis, bij ramen bouillon en noedels. Beoordeel smaakintensiteit en tevredenheid met criteria die passen bij elk soort eten. Ook pizza, wijn en koffie hebben een eigen beoordeling, en je kunt je eigen keukentypes toevoegen.
+
+Een bezoeklogboek dat met je meegroeit
+Bewaar datum, beoordeling, gerechten, foto’s en notities van elk bezoek. Elk restaurant bouwt een aantal bezoeken, een gemiddelde beoordeling en een eindoordeel over de smaak op. Voeg het menu toe en zie specialiteiten en prijzen in één oogopslag.
+
+Je smaakprofiel
+Bekijk je smaak in een diagram: pittig, zoet, zout, vettig en natuurlijke smaken.
+
+Herinnering na het bezoek
+Na een bezoek aan een bewaard restaurant herinneren we je eraan het bezoek vast te leggen. Dit werkt alleen als je toegang tot je locatie toestaat.
+
+iCloud-back-up
+Je gegevens blijven op je apparaat en je kunt ze wanneer je maar wilt in je eigen iCloud bewaren en terugzetten.

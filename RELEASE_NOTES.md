@@ -144,3 +144,10 @@ Send tilbakemelding rett fra appen
 Fortell oss hvor godt du liker appen
 Personvern og hjelp er lagt til
 Små feil er rettet
+
+### 앱스토어 (Nederlands)
+
+Stuur feedback direct vanuit de app
+Laat weten hoe je de app vindt
+Privacybeleid en help toegevoegd
+Kleine fouten opgelost
