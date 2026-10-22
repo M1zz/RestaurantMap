@@ -81,3 +81,10 @@ Invia i tuoi commenti dall’app
 Dicci in breve come ti trovi con l’app
 Privacy e pagina di aiuto ora online
 Corretti piccoli errori
+
+### 앱스토어 (Português (Brasil))
+
+Envie sugestões direto pelo app
+Conte rapidinho se você curte o app
+Privacidade e ajuda agora no ar
+Pequenos erros corrigidos

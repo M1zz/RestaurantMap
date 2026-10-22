@@ -615,3 +615,59 @@ Ti ricordiamo di registrare la visita dopo essere stato in un ristorante salvato
 
 Backup su iCloud
 I tuoi dati restano sul dispositivo, e quando vuoi puoi salvarli sul tuo iCloud e ripristinarli.
+
+## pt-BR
+
+### 지원 URL
+
+https://m1zz.github.io/RestaurantMap/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/RestaurantMap/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/RestaurantMap/
+
+### 이름
+
+Insaeng: mapa de restaurantes
+
+### 부제
+
+Avalie e ranqueie suas comidas
+
+### 키워드
+
+diário,favoritos,foodie,resenhas,gastronomia,churrasco,ramen,sushi,café,date,fotos,top,jantar
+
+### 프로모션 텍스트
+
+Marque no mapa cada restaurante que visitar e guarde sua nota e suas anotações. Lugar por lugar, você monta o mapa das refeições inesquecíveis.
+
+### 설명
+
+Marque no mapa os lugares onde você comeu e anote como foi o sabor a cada visita.
+O Insaeng é o seu mapa gastronômico pessoal, feito só com os restaurantes que você escolheu.
+
+Um mapa dos seus lugares favoritos
+Busque um restaurante ou escolha um ponto no mapa para salvar. Os lugares salvos aparecem como pinos, e seus seis favoritos ganham selos de ranking exclusivos.
+
+Já fui, Quero ir e o seu Top 6
+Separe em listas os restaurantes que você já conhece e os que quer experimentar, e classifique os seis melhores.
+
+Cada prato com seus próprios critérios
+Para o bife, importam o ponto e a suculência; para o sushi, o arroz e o peixe; para o ramen, o caldo e o macarrão. Avalie a intensidade do sabor e a satisfação pelos critérios de cada tipo de comida. Pizza, vinho e café também têm avaliação própria, e você pode adicionar seus próprios tipos de culinária.
+
+Um registro de visitas que cresce com você
+Salve data, nota, pratos, fotos e anotações de cada visita. Cada restaurante acumula número de visitas, nota média e uma avaliação geral do sabor. Cadastre o cardápio e veja pratos da casa e preços de relance.
+
+Seu perfil de gosto
+Veja seu paladar em um gráfico: picante, doce, salgado, gorduroso e sabores naturais.
+
+Lembrete depois da visita
+Avisamos para você registrar a visita depois de ir a um restaurante salvo. Só funciona se você permitir o acesso à localização.
+
+Backup no iCloud
+Seus registros ficam no dispositivo e, quando quiser, você pode fazer backup no seu iCloud e restaurar de lá.
