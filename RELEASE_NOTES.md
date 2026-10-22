@@ -158,3 +158,10 @@ Wyślij opinię prosto z aplikacji
 Powiedz nam, jak oceniasz aplikację
 Dodaliśmy politykę prywatności i pomoc
 Poprawiliśmy drobne błędy
+
+### 앱스토어 (Svenska)
+
+Skicka feedback direkt från appen
+Berätta hur du gillar appen
+Integritetspolicy och hjälp tillagda
+Små fel har åtgärdats

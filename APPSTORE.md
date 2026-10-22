@@ -1231,3 +1231,59 @@ Gdy odwiedzisz zapisaną restaurację, przypomnimy Ci o zapisaniu wizyty. Dział
 
 Kopia w iCloud
 Twoje zapisy są na urządzeniu, a w każdej chwili możesz utworzyć ich kopię we własnym iCloud i je przywrócić.
+
+## sv
+
+### 지원 URL
+
+https://m1zz.github.io/RestaurantMap/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/RestaurantMap/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/RestaurantMap/
+
+### 이름
+
+Insaeng: restaurangkarta
+
+### 부제
+
+Betygsätt och ranka din mat
+
+### 키워드
+
+dagbok,favoriter,matnörd,recensioner,önskelista,biff,ramen,sushi,fik,dejt,anteckningar,topp,lunch
+
+### 프로모션 텍스트
+
+Sätt en nål på kartan för varje restaurang du besöker och spara betyg och anteckningar. Ställe för ställe bygger du en karta över måltider du aldrig glömmer.
+
+### 설명
+
+Markera stället där du har ätit och skriv ner hur det smakade – varje gång du är där.
+Insaeng är din personliga matkarta, med bara de restauranger du själv har valt.
+
+En karta över dina favoritställen
+Sök efter en restaurang eller välj en punkt på kartan för att spara den. Sparade ställen visas som nålar, och dina sex favoriter får egna rankningsmärken.
+
+Besökt, Vill besöka och din Topp 6
+Håll restauranger du redan provat isär från dem du vill prova, och rangordna dina sex bästa.
+
+Varje rätt med egna kriterier
+För biffen räknas stekgrad och saftighet, för sushi ris och fisk, för ramen buljong och nudlar. Betygsätt smakintensitet och nöjdhet efter de kriterier som passar varje sorts mat. Pizza, vin och kaffe har också egna betyg, och du kan lägga till dina egna matsorter.
+
+En besökslogg som växer med dig
+Spara datum, betyg, rätter, bilder och anteckningar från varje besök. Varje restaurang samlar antal besök, snittbetyg och ett helhetsomdöme om smaken. Lägg till menyn så ser du husets specialiteter och priser med en blick.
+
+Din smakprofil
+Se din smak i ett diagram: starkt, sött, salt, fett och naturliga smaker.
+
+Påminnelse efter besöket
+När du har varit på en sparad restaurang påminner vi dig om att registrera besöket. Fungerar bara om du ger tillgång till din plats.
+
+iCloud-säkerhetskopia
+Dina anteckningar finns kvar på enheten, och du kan när som helst säkerhetskopiera dem till din egen iCloud och återställa därifrån.

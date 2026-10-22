@@ -134,6 +134,12 @@
             "state" : "translated",
             "value" : "Menu: %@"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meny hos %@"
+          }
         }
       }
     },
@@ -270,6 +276,12 @@
             "state" : "translated",
             "value" : "Dopasowanie %lld%%"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld %% matchning"
+          }
         }
       }
     },
@@ -402,6 +414,12 @@
           }
         },
         "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "sv" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld"
@@ -542,6 +560,12 @@
             "state" : "translated",
             "value" : "Oceń jeszcze %lld, aby dostać rekomendacje"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Betygsätt %lld till för att få rekommendationer"
+          }
         }
       }
     },
@@ -677,6 +701,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Opinii: %lld"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld recensioner"
           }
         }
       }
@@ -814,6 +844,12 @@
             "state" : "translated",
             "value" : "Polecane przez %lld użytkowników o podobnym guście"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rekommenderas av %lld användare med liknande smak"
+          }
         }
       }
     },
@@ -949,6 +985,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Miejsce %lld"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plats %lld"
           }
         }
       }
@@ -1086,6 +1128,12 @@
             "state" : "translated",
             "value" : "Zdjęć: %lld"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld bilder"
+          }
         }
       }
     },
@@ -1221,6 +1269,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld razy"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld gånger"
           }
         }
       }
@@ -1358,6 +1412,12 @@
             "state" : "translated",
             "value" : "Wizyt: %lld"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld besök"
+          }
         }
       }
     },
@@ -1493,6 +1553,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Usunąć „%@” i wszystkie zapisy wizyt?"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vill du ta bort ”%@” och alla besök?"
           }
         }
       }
@@ -1630,6 +1696,12 @@
             "state" : "translated",
             "value" : "1️⃣ Prześlij moje dane"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1️⃣ Ladda upp mina data"
+          }
         }
       }
     },
@@ -1765,6 +1837,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "2️⃣ Utwórz dane testowe"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2️⃣ Skapa testdata"
           }
         }
       }
@@ -1902,6 +1980,12 @@
             "state" : "translated",
             "value" : "3️⃣ Sprawdź wyniki w zakładce Rekomendacje"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3️⃣ Se resultatet under fliken Rekommendationer"
+          }
         }
       }
     },
@@ -2037,6 +2121,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Żadna restauracja nie ma oceny 4 gwiazdek lub wyższej"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du har inte gett någon restaurang 4 stjärnor eller mer"
           }
         }
       }
@@ -2174,6 +2264,12 @@
             "state" : "translated",
             "value" : "Twój gust w sześciu cechach"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Din smak i sex egenskaper"
+          }
         }
       }
     },
@@ -2309,6 +2405,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Otwórz w Mapach"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öppna i Kartor"
           }
         }
       }
@@ -2447,6 +2549,12 @@
             "state" : "translated",
             "value" : "Blokada Face ID"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Face ID-lås"
+          }
         }
       }
     },
@@ -2584,6 +2692,12 @@
             "state" : "translated",
             "value" : "Zablokuj aplikację za pomocą Face ID lub Touch ID, aby dziennik restauracji pozostał prywatny."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lås appen med Face ID eller Touch ID så att din restaurangdagbok förblir privat."
+          }
         }
       }
     },
@@ -2719,6 +2833,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Prześlij dane do Firebase,\naby przetestować system rekomendacji"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ladda upp data till Firebase\nför att testa rekommendationssystemet"
           }
         }
       }
@@ -2856,6 +2976,12 @@
             "state" : "translated",
             "value" : "Prześlij do Realtime DB"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ladda upp till Realtime DB"
+          }
         }
       }
     },
@@ -2992,6 +3118,12 @@
             "state" : "translated",
             "value" : "Zalety Realtime Database"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fördelar med Realtime Database"
+          }
         }
       }
     },
@@ -3127,6 +3259,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pobieranie danych z Realtime Database…"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hämtar data från Realtime Database …"
           }
         }
       }
@@ -3265,6 +3403,12 @@
             "state" : "translated",
             "value" : "Powiedz to Siri lub użyj skrótu, aby od razu zapisać wizytę."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Säg det till Siri eller använd en genväg för att registrera ett besök direkt."
+          }
         }
       }
     },
@@ -3401,6 +3545,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siri i Skróty"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri och Genvägar"
           }
         }
       }
@@ -3539,6 +3689,12 @@
             "state" : "translated",
             "value" : "Wygodniejszy VoiceOver"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smidigare att använda VoiceOver"
+          }
         }
       }
     },
@@ -3674,6 +3830,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kopia w iCloud"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud-säkerhetskopia"
           }
         }
       }
@@ -3811,6 +3973,12 @@
             "state" : "translated",
             "value" : "Aby utworzyć kopię lub ją przywrócić, musisz być zalogowany w iCloud."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du måste vara inloggad på iCloud för att säkerhetskopiera eller återställa."
+          }
         }
       }
     },
@@ -3946,6 +4114,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Utwórz kopię w iCloud"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Säkerhetskopiera till iCloud"
           }
         }
       }
@@ -4083,6 +4257,12 @@
             "state" : "translated",
             "value" : "Przywróć z iCloud"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Återställ från iCloud"
+          }
         }
       }
     },
@@ -4218,6 +4398,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Przywraca dane z kopii w iCloud. Wszystkie dane na tym urządzeniu zostaną usunięte i zastąpione danymi z kopii."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Återställer från din iCloud-säkerhetskopia. All data på den här enheten raderas och ersätts av säkerhetskopian."
           }
         }
       }
@@ -4355,6 +4541,12 @@
             "state" : "translated",
             "value" : "• 3–4 restauracje na użytkownika"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 3–4 restauranger per användare"
+          }
         }
       }
     },
@@ -4490,6 +4682,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "• 1–3 zapisy wizyt na restaurację"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 1–3 besök per restaurang"
           }
         }
       }
@@ -4627,6 +4825,12 @@
             "state" : "translated",
             "value" : "• 5 użytkowników o różnych gustach"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 5 användare med olika smak"
+          }
         }
       }
     },
@@ -4762,6 +4966,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "⚡ Szybsza synchronizacja w czasie rzeczywistym"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚡ Snabbare synkronisering i realtid"
           }
         }
       }
@@ -4899,6 +5109,12 @@
             "state" : "translated",
             "value" : "⚡ Szybsza synchronizacja w czasie rzeczywistym\n💰 Niższe koszty"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚡ Snabbare synkronisering i realtid\n💰 Lägre kostnad"
+          }
         }
       }
     },
@@ -5034,6 +5250,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "✓ Oceniono"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "✓ Betygsatt"
           }
         }
       }
@@ -5172,6 +5394,12 @@
             "state" : "translated",
             "value" : "Delikatna wibracja przy zapisie miejsca lub wizyty."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En lätt vibration när du sparar ett ställe eller registrerar ett besök."
+          }
         }
       }
     },
@@ -5307,6 +5535,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cena"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pris"
           }
         }
       }
@@ -5444,6 +5678,12 @@
             "state" : "translated",
             "value" : "Odwiedzone"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Besökt"
+          }
         }
       }
     },
@@ -5579,6 +5819,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chcę odwiedzić"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vill besöka"
           }
         }
       }
@@ -5716,6 +5962,12 @@
             "state" : "translated",
             "value" : "Restauracji z listy „Chcę odwiedzić” nie można dodać do Top 6"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En restaurang i listan Vill besöka kan inte läggas i Topp 6"
+          }
         }
       }
     },
@@ -5851,6 +6103,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Oceń intensywność smaku i zadowolenie dla każdej pozycji. Ocena jest opcjonalna."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Betygsätt smakintensitet och nöjdhet för varje rätt. Betygsättning är valfri."
           }
         }
       }
@@ -5988,6 +6246,12 @@
             "state" : "translated",
             "value" : "Skontaktuj się z twórcą"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kontakta utvecklaren"
+          }
         }
       }
     },
@@ -6123,6 +6387,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wyników wyszukiwania: %lld"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld sökresultat"
           }
         }
       }
@@ -6260,6 +6530,12 @@
             "state" : "translated",
             "value" : "Długość geograficzna: %.6f"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Longitud: %.6f"
+          }
         }
       }
     },
@@ -6392,6 +6668,12 @@
           }
         },
         "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Typ"
+          }
+        },
+        "sv" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Typ"
@@ -6533,6 +6815,12 @@
             "state" : "translated",
             "value" : "Po powiększeniu tekstu ekrany układają się na nowo i nic nie jest ucięte."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "När du förstorar texten ordnas skärmarna om utan att något klipps av."
+          }
         }
       }
     },
@@ -6668,6 +6956,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Na podstawie „%@”"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Baserat på ”%@”"
           }
         }
       }
@@ -6805,6 +7099,12 @@
             "state" : "translated",
             "value" : "Domyślne"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Standard"
+          }
         }
       }
     },
@@ -6940,6 +7240,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Podstawowe informacje"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Grundinfo"
           }
         }
       }
@@ -7077,6 +7383,12 @@
             "state" : "translated",
             "value" : "Wbudowane"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inbyggd"
+          }
         }
       }
     },
@@ -7212,6 +7524,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mój Michelin"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Min Michelin"
           }
         }
       }
@@ -7349,6 +7667,12 @@
             "state" : "translated",
             "value" : "Moje kulinarne DNA"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mitt matnörds-DNA"
+          }
         }
       }
     },
@@ -7484,6 +7808,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Moje ulubione Top 6"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Min favorit-Topp 6"
           }
         }
       }
@@ -7621,6 +7951,12 @@
             "state" : "translated",
             "value" : "Moje Top 6"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Min Topp 6"
+          }
         }
       }
     },
@@ -7756,6 +8092,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Moje dane"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mina data"
           }
         }
       }
@@ -7893,6 +8235,12 @@
             "state" : "translated",
             "value" : "Prześlij moje dane"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ladda upp mina data"
+          }
         }
       }
     },
@@ -8028,6 +8376,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dodaj do moich restauracji"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lägg till i mina restauranger"
           }
         }
       }
@@ -8165,6 +8519,12 @@
             "state" : "translated",
             "value" : "Twoje najukochańsze restauracje"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dina allra bästa restauranger"
+          }
         }
       }
     },
@@ -8300,6 +8660,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dodane przeze mnie rodzaje"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Typer jag har lagt till"
           }
         }
       }
@@ -8437,6 +8803,12 @@
             "state" : "translated",
             "value" : "Otwórz w Naver Map"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öppna i Naver Map"
+          }
         }
       }
     },
@@ -8572,6 +8944,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Spróbuj ponownie"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Försök igen"
           }
         }
       }
@@ -8710,6 +9088,12 @@
             "state" : "translated",
             "value" : "Tryb ciemny"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mörkt läge"
+          }
         }
       }
     },
@@ -8845,6 +9229,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zamknij"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stäng"
           }
         }
       }
@@ -8983,6 +9373,12 @@
             "state" : "translated",
             "value" : "Mapa i listy pozostają czytelne, nawet przy zwiększonym kontraście lub trudnościach z rozróżnianiem kolorów."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Läs kartan och listorna enkelt, även med ökad kontrast eller om det är svårt att skilja på färger."
+          }
         }
       }
     },
@@ -9118,6 +9514,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Danie firmowe"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Husets specialitet"
           }
         }
       }
@@ -9255,6 +9657,12 @@
             "state" : "translated",
             "value" : "Dania firmowe wyświetlają się na górze listy menu"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Husets specialiteter visas högst upp i menylistan"
+          }
         }
       }
     },
@@ -9390,6 +9798,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ustaw jako danie firmowe"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ange som husets specialitet"
           }
         }
       }
@@ -9528,6 +9942,12 @@
             "state" : "translated",
             "value" : "Korzystaj z aplikacji w większej liczbie języków."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Använd appen på fler språk."
+          }
         }
       }
     },
@@ -9665,6 +10085,12 @@
             "state" : "translated",
             "value" : "Więcej języków"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fler språk"
+          }
         }
       }
     },
@@ -9800,6 +10226,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Utwórz dane testowe"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skapa testdata"
           }
         }
       }
@@ -9937,6 +10369,12 @@
             "state" : "translated",
             "value" : "Tworzy 5 użytkowników testowych i dane restauracji"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skapar 5 testanvändare och restaurangdata"
+          }
         }
       }
     },
@@ -10072,6 +10510,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zarządzanie danymi"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datahantering"
           }
         }
       }
@@ -10209,6 +10653,12 @@
             "state" : "translated",
             "value" : "Synchronizacja danych"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datasynkronisering"
+          }
         }
       }
     },
@@ -10344,6 +10794,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Synchronizuj dane"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Synkronisera data"
           }
         }
       }
@@ -10481,6 +10937,12 @@
             "state" : "translated",
             "value" : "Prześlij dane"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ladda upp data"
+          }
         }
       }
     },
@@ -10616,6 +11078,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Przegląd danych"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dataöversikt"
           }
         }
       }
@@ -10753,6 +11221,12 @@
             "state" : "translated",
             "value" : "Za mało danych"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inte tillräckligt med data än"
+          }
         }
       }
     },
@@ -10888,6 +11362,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Danych może nie wystarczyć"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Det kanske inte finns tillräckligt med data"
           }
         }
       }
@@ -11025,6 +11505,12 @@
             "state" : "translated",
             "value" : "Nie udało się wczytać danych"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Det gick inte att läsa in data"
+          }
         }
       }
     },
@@ -11160,6 +11646,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Adres (ulica)"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adress (gata)"
           }
         }
       }
@@ -11297,6 +11789,12 @@
             "state" : "translated",
             "value" : "W menu nie ma jeszcze dań"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inga rätter på menyn än"
+          }
         }
       }
     },
@@ -11432,6 +11930,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ranking"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rankning"
           }
         }
       }
@@ -11569,6 +12073,12 @@
             "state" : "translated",
             "value" : "Wynik Riio Michelin"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Riio Michelin-poäng"
+          }
         }
       }
     },
@@ -11704,6 +12214,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ostatnia kopia"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Senaste säkerhetskopia"
           }
         }
       }
@@ -11841,6 +12357,12 @@
             "state" : "translated",
             "value" : "Zadowolenie"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nöjdhet"
+          }
         }
       }
     },
@@ -11976,6 +12498,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Intensywność smaku"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smakintensitet"
           }
         }
       }
@@ -12113,6 +12641,12 @@
             "state" : "translated",
             "value" : "Preferencje smakowe"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smakpreferenser"
+          }
         }
       }
     },
@@ -12248,6 +12782,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Preferencje smakowe\n%lld%%"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smakpreferenser\n%lld %%"
           }
         }
       }
@@ -12385,6 +12925,12 @@
             "state" : "translated",
             "value" : "Ocena smaku"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smakbetyg"
+          }
         }
       }
     },
@@ -12520,6 +13066,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Smak oceniony"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smak betygsatt"
           }
         }
       }
@@ -12657,6 +13209,12 @@
             "state" : "translated",
             "value" : "Smak oceniony"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smak betygsatt"
+          }
         }
       }
     },
@@ -12792,6 +13350,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Profil smaku"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smakprofil"
           }
         }
       }
@@ -12929,6 +13493,12 @@
             "state" : "translated",
             "value" : "Polecane restauracje"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurangtips"
+          }
         }
       }
     },
@@ -13064,6 +13634,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dla Ciebie"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "För dig"
           }
         }
       }
@@ -13201,6 +13777,12 @@
             "state" : "translated",
             "value" : "Aby dostawać rekomendacje dopasowane do Ciebie"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "För att få rekommendationer anpassade för dig"
+          }
         }
       }
     },
@@ -13336,6 +13918,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bardzo zadowolony"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mycket nöjd"
           }
         }
       }
@@ -13473,6 +14061,12 @@
             "state" : "translated",
             "value" : "Co jadłeś(-aś)"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vad du åt"
+          }
         }
       }
     },
@@ -13608,6 +14202,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Co jadłeś(-aś) (np. zestaw bulgogi, pizza margherita)"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vad du åt (t.ex. bulgogimeny, pizza margherita)"
           }
         }
       }
@@ -13745,6 +14345,12 @@
             "state" : "translated",
             "value" : "Menu"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meny"
+          }
         }
       }
     },
@@ -13880,6 +14486,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zarządzaj menu"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hantera meny"
           }
         }
       }
@@ -14017,6 +14629,12 @@
             "state" : "translated",
             "value" : "Dodaj dania"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lägg till rätter"
+          }
         }
       }
     },
@@ -14152,6 +14770,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Menu (%lld)"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meny (%lld)"
           }
         }
       }
@@ -14289,6 +14913,12 @@
             "state" : "translated",
             "value" : "Wybierz danie"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Välj rätt"
+          }
         }
       }
     },
@@ -14424,6 +15054,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Opis dania"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beskrivning av rätt"
           }
         }
       }
@@ -14561,6 +15197,12 @@
             "state" : "translated",
             "value" : "Opis dania (opcjonalnie)"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beskrivning av rätt (valfri)"
+          }
         }
       }
     },
@@ -14696,6 +15338,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nazwa dania"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rättens namn"
           }
         }
       }
@@ -14833,6 +15481,12 @@
             "state" : "translated",
             "value" : "Informacje o daniu"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Info om rätt"
+          }
         }
       }
     },
@@ -14968,6 +15622,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dodaj danie"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lägg till rätt"
           }
         }
       }
@@ -15105,6 +15765,12 @@
             "state" : "translated",
             "value" : "Dodane dania można wybrać przy zapisie wizyty"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rätter du lägger till kan väljas när du registrerar ett besök"
+          }
         }
       }
     },
@@ -15240,6 +15906,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Notatki"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anteckningar"
           }
         }
       }
@@ -15377,6 +16049,12 @@
             "state" : "translated",
             "value" : "Brak notatek"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inga anteckningar"
+          }
         }
       }
     },
@@ -15512,6 +16190,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wszystkie restauracje i zapisy wizyt zostaną usunięte. Tej operacji nie można cofnąć."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alla restauranger och besök raderas. Det går inte att ångra."
           }
         }
       }
@@ -15649,6 +16333,12 @@
             "state" : "translated",
             "value" : "Usuń wszystkie dane"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Radera all data"
+          }
         }
       }
     },
@@ -15781,6 +16471,12 @@
           }
         },
         "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lista"
+          }
+        },
+        "sv" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lista"
@@ -15921,6 +16617,12 @@
             "state" : "translated",
             "value" : "Zamknij listę"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stäng lista"
+          }
         }
       }
     },
@@ -16056,6 +16758,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dziennik wizyt"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Besökslogg"
           }
         }
       }
@@ -16193,6 +16901,12 @@
             "state" : "translated",
             "value" : "Dodaj wizytę"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lägg till besök"
+          }
         }
       }
     },
@@ -16329,6 +17043,12 @@
             "state" : "translated",
             "value" : "Podaj ocenę smaku przy dodawaniu wizyty"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ange ett smakbetyg när du lägger till ett besök"
+          }
         }
       }
     },
@@ -16464,6 +17184,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wybierz to danie przy dodawaniu wizyty"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Välj den här rätten när du lägger till ett besök"
           }
         }
       }
@@ -16602,6 +17328,12 @@
             "state" : "translated",
             "value" : "Jeśli aplikacja zamknie się w trakcie pisania wizyty, to, co napisałeś(-aś), zostanie zachowane."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Om appen stängs medan du skriver ett besök finns det du skrivit kvar."
+          }
         }
       }
     },
@@ -16737,6 +17469,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Data wizyty"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Besöksdatum"
           }
         }
       }
@@ -16874,6 +17612,12 @@
             "state" : "translated",
             "value" : "Informacje o wizycie"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Info om besöket"
+          }
         }
       }
     },
@@ -17009,6 +17753,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Statystyki wizyt"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Besöksstatistik"
           }
         }
       }
@@ -17146,6 +17896,12 @@
             "state" : "translated",
             "value" : "Kopia zapasowa"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Säkerhetskopia"
+          }
         }
       }
     },
@@ -17281,6 +18037,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zgłoszenia błędów i pomysły na funkcje są mile widziane."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felrapporter och funktionsförslag är välkomna."
           }
         }
       }
@@ -17418,6 +18180,12 @@
             "state" : "translated",
             "value" : "Wersja"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version"
+          }
         }
       }
     },
@@ -17554,6 +18322,12 @@
             "state" : "translated",
             "value" : "Ocena"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Betyg"
+          }
         }
       }
     },
@@ -17689,6 +18463,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Oceń"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Betygsätt"
           }
         }
       }
@@ -17827,6 +18607,12 @@
             "state" : "translated",
             "value" : "Wygodniejsze kolory i kontrast"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Behagligare färger och kontrast"
+          }
         }
       }
     },
@@ -17962,6 +18748,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Przywróć"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Återställ"
           }
         }
       }
@@ -18099,6 +18891,12 @@
             "state" : "translated",
             "value" : "Wczytywanie…"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Läser in …"
+          }
         }
       }
     },
@@ -18234,6 +19032,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Niezadowolony"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Missnöjd"
           }
         }
       }
@@ -18371,6 +19175,12 @@
             "state" : "translated",
             "value" : "Co mówią inni"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vad andra säger"
+          }
         }
       }
     },
@@ -18506,6 +19316,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zdjęcia"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bilder"
           }
         }
       }
@@ -18643,6 +19459,12 @@
             "state" : "translated",
             "value" : "Zdjęcia (%lld)"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bilder (%lld)"
+          }
         }
       }
     },
@@ -18778,6 +19600,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wybierz zdjęcia"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Välj bilder"
           }
         }
       }
@@ -18915,6 +19743,12 @@
             "state" : "translated",
             "value" : "Dodaj zdjęcia"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lägg till bilder"
+          }
         }
       }
     },
@@ -19050,6 +19884,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Usuń"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Radera"
           }
         }
       }
@@ -19187,6 +20027,12 @@
             "state" : "translated",
             "value" : "Szczegóły dopasowania"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Detaljer om matchning"
+          }
         }
       }
     },
@@ -19322,6 +20168,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nowy rodzaj kuchni"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ny matsort"
           }
         }
       }
@@ -19459,6 +20311,12 @@
             "state" : "translated",
             "value" : "Dodaj nowy rodzaj"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lägg till ny typ"
+          }
         }
       }
     },
@@ -19594,6 +20452,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zdjęcia do dodania"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bilder som läggs till"
           }
         }
       }
@@ -19731,6 +20595,12 @@
             "state" : "translated",
             "value" : "Odśwież"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uppdatera"
+          }
         }
       }
     },
@@ -19866,6 +20736,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wybierz"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Välj"
           }
         }
       }
@@ -20003,6 +20879,12 @@
             "state" : "translated",
             "value" : "Brak"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen"
+          }
         }
       }
     },
@@ -20139,6 +21021,12 @@
             "state" : "translated",
             "value" : "Opis"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beskrivning"
+          }
         }
       }
     },
@@ -20274,6 +21162,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ustawienia"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inställningar"
           }
         }
       }
@@ -20412,6 +21306,12 @@
             "state" : "translated",
             "value" : "Reakcja wyczuwalna w opuszkach palców"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Respons som du känner i fingertopparna"
+          }
         }
       }
     },
@@ -20547,6 +21447,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rodzaj restauracji"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurangtyp"
           }
         }
       }
@@ -20684,6 +21590,12 @@
             "state" : "translated",
             "value" : "Restauracje"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restauranger"
+          }
         }
       }
     },
@@ -20819,6 +21731,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Oceniaj restauracje z listy"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Betygsätt restauranger från listan"
           }
         }
       }
@@ -20956,6 +21874,12 @@
             "state" : "translated",
             "value" : "Usuń restaurację"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Radera restaurang"
+          }
         }
       }
     },
@@ -21091,6 +22015,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Daj 4 gwiazdki lub więcej na ekranie szczegółów restauracji"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ge 4 stjärnor eller mer på restaurangens detaljsida"
           }
         }
       }
@@ -21228,6 +22158,12 @@
             "state" : "translated",
             "value" : "Brak restauracji"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inga restauranger"
+          }
         }
       }
     },
@@ -21363,6 +22299,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nazwa restauracji"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurangens namn"
           }
         }
       }
@@ -21500,6 +22442,12 @@
             "state" : "translated",
             "value" : "Informacje o restauracji"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Info om restaurangen"
+          }
         }
       }
     },
@@ -21635,6 +22583,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mapa restauracji"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurangkarta"
           }
         }
       }
@@ -21772,6 +22726,12 @@
             "state" : "translated",
             "value" : "Dodaj restaurację"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lägg till restaurang"
+          }
         }
       }
     },
@@ -21907,6 +22867,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dodaj restaurację"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lägg till en restaurang"
           }
         }
       }
@@ -22044,6 +23010,12 @@
             "state" : "translated",
             "value" : "Dodaj jako restaurację"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lägg till som restaurang"
+          }
         }
       }
     },
@@ -22179,6 +23151,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dodaj restaurację, aby zacząć"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lägg till en restaurang för att komma igång"
           }
         }
       }
@@ -22317,6 +23295,12 @@
             "state" : "translated",
             "value" : "Przydatne wskazówki"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Praktiska tips"
+          }
         }
       }
     },
@@ -22454,6 +23438,12 @@
             "state" : "translated",
             "value" : "Dokończ rozpoczętą wizytę"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fortsätt på ett påbörjat besök"
+          }
         }
       }
     },
@@ -22590,6 +23580,12 @@
             "state" : "translated",
             "value" : "Nie"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nej"
+          }
         }
       }
     },
@@ -22725,6 +23721,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ikona"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Symbol"
           }
         }
       }
@@ -22863,6 +23865,12 @@
             "state" : "translated",
             "value" : "Na iPadzie z głównych funkcji można korzystać samą klawiaturą."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "På iPad kan du använda huvudfunktionerna enbart med tangentbordet."
+          }
         }
       }
     },
@@ -22998,6 +24006,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Na liście „Chcę odwiedzić” nie ma jeszcze restauracji"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inga restauranger i listan Vill besöka än"
           }
         }
       }
@@ -23135,6 +24149,12 @@
             "state" : "translated",
             "value" : "Nie byłeś(-aś) jeszcze w tej restauracji"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du har inte besökt den här restaurangen än"
+          }
         }
       }
     },
@@ -23270,6 +24290,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Brak odwiedzonych restauracji"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inga besökta restauranger än"
           }
         }
       }
@@ -23407,6 +24433,12 @@
             "state" : "translated",
             "value" : "Brak zapisanych restauracji"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inga sparade restauranger än"
+          }
         }
       }
     },
@@ -23543,6 +24575,12 @@
             "state" : "translated",
             "value" : "W Top 6 nie ma jeszcze restauracji"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inga restauranger i Topp 6 än"
+          }
         }
       }
     },
@@ -23678,6 +24716,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Brak ocen"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inga betyg än"
           }
         }
       }
@@ -23816,6 +24860,12 @@
             "state" : "translated",
             "value" : "Dyskretnie podpowiemy przydatne funkcje w odpowiednim momencie."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vi visar diskret användbara funktioner precis när du behöver dem."
+          }
         }
       }
     },
@@ -23952,6 +25002,12 @@
             "state" : "translated",
             "value" : "Wybierz z biblioteki"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Välj från bibliotek"
+          }
         }
       }
     },
@@ -24087,6 +25143,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Informacje"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Om"
           }
         }
       }
@@ -24225,6 +25287,12 @@
             "state" : "translated",
             "value" : "Zobacz ulubione miejsca na ekranie początkowym bez otwierania aplikacji."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se dina favoritställen direkt på hemskärmen utan att öppna appen."
+          }
         }
       }
     },
@@ -24361,6 +25429,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Z aplikacji można korzystać także po angielsku."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appen kan även användas på engelska."
           }
         }
       }
@@ -24499,6 +25573,12 @@
             "state" : "translated",
             "value" : "Tekst i przyciski pozostają wyraźne także w trybie ciemnym."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Text och knappar förblir skarpa även i mörkt läge."
+          }
         }
       }
     },
@@ -24635,6 +25715,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Przy pierwszym otwarciu po aktualizacji zobaczysz, co nowego."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Första gången du öppnar appen efter en uppdatering ser du vad som är nytt."
           }
         }
       }
@@ -24773,6 +25859,12 @@
             "state" : "translated",
             "value" : "Nowości"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nyheter"
+          }
         }
       }
     },
@@ -24908,6 +26000,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Analizujemy Twój gust, by proponować rekomendacje dopasowane do Ciebie"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vi analyserar din smak för att ge dig personliga rekommendationer"
           }
         }
       }
@@ -25046,6 +26144,12 @@
             "state" : "translated",
             "value" : "Obsługa języka angielskiego"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stöd för engelska"
+          }
         }
       }
     },
@@ -25181,6 +26285,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Np. tajska, indyjska"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "T.ex. thailändskt, indiskt"
           }
         }
       }
@@ -25318,6 +26428,12 @@
             "state" : "translated",
             "value" : "Przewidywana ocena"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Förväntat betyg"
+          }
         }
       }
     },
@@ -25453,6 +26569,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Błąd"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fel"
           }
         }
       }
@@ -25590,6 +26712,12 @@
             "state" : "translated",
             "value" : "Gotowe"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klar"
+          }
         }
       }
     },
@@ -25725,6 +26853,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dlaczego to polecamy?"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Varför rekommenderas den?"
           }
         }
       }
@@ -25863,6 +26997,12 @@
             "state" : "translated",
             "value" : "Ogranicz ruch"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Begränsa rörelser"
+          }
         }
       }
     },
@@ -26000,6 +27140,12 @@
             "state" : "translated",
             "value" : "Gdy „Ogranicz ruch” jest włączone, efekty na ekranie są spokojniejsze."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Med ”Begränsa rörelser” aktiverat blir effekterna på skärmen lugnare."
+          }
         }
       }
     },
@@ -26132,6 +27278,12 @@
           }
         },
         "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "KRW"
+          }
+        },
+        "sv" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "KRW"
@@ -26272,6 +27424,12 @@
             "state" : "translated",
             "value" : "Strona internetowa"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Webbplats"
+          }
         }
       }
     },
@@ -26407,6 +27565,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Szerokość geograficzna: %.6f"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Latitud: %.6f"
           }
         }
       }
@@ -26544,6 +27708,12 @@
             "state" : "translated",
             "value" : "Lokalizacja"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plats"
+          }
         }
       }
     },
@@ -26679,6 +27849,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wybierz lokalizację"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Välj plats"
           }
         }
       }
@@ -26816,6 +27992,12 @@
             "state" : "translated",
             "value" : "Styl kuchni"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Matstil"
+          }
         }
       }
     },
@@ -26951,6 +28133,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rodzaj kuchni"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Matsort"
           }
         }
       }
@@ -27088,6 +28276,12 @@
             "state" : "translated",
             "value" : "Zarządzaj rodzajami kuchni"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hantera matsorter"
+          }
         }
       }
     },
@@ -27223,6 +28417,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Jak było podczas tej wizyty?"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hur var det här besöket?"
           }
         }
       }
@@ -27360,6 +28560,12 @@
             "state" : "translated",
             "value" : "Stuknij Edytuj, aby ocenić smaki tej wizyty"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryck på Redigera för att betygsätta smakerna från det här besöket"
+          }
         }
       }
     },
@@ -27495,6 +28701,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ta restauracja nie ma jeszcze dań w menu. Najpierw je dodaj lub wpisz ręcznie."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Den här restaurangen har inga rätter på menyn än. Lägg till dem först eller skriv in en."
           }
         }
       }
@@ -27632,6 +28844,12 @@
             "state" : "translated",
             "value" : "Ogólnie ta restauracja jest…"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sammantaget är den här restaurangen …"
+          }
         }
       }
     },
@@ -27767,6 +28985,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nazwa"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Namn"
           }
         }
       }
@@ -27904,6 +29128,12 @@
             "state" : "translated",
             "value" : "Napisz e-mail"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kontakta via e-post"
+          }
         }
       }
     },
@@ -28039,6 +29269,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nie udało się wczytać obrazu"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Det gick inte att läsa in bilden"
           }
         }
       }
@@ -28176,6 +29412,12 @@
             "state" : "translated",
             "value" : "Oceń restaurację swojego życia"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Betygsätt ditt livs restaurang"
+          }
         }
       }
     },
@@ -28311,6 +29553,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wiadomość na Instagramie (@lee25_ios)"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram-meddelande (@lee25_ios)"
           }
         }
       }
@@ -28448,6 +29696,12 @@
             "state" : "translated",
             "value" : "Możesz samodzielnie dodać rodzaje kuchni, które często wybierasz"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du kan själv lägga till de matsorter du ofta äter"
+          }
         }
       }
     },
@@ -28583,6 +29837,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Informacje o miejscu"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Platsinfo"
           }
         }
       }
@@ -28720,6 +29980,12 @@
             "state" : "translated",
             "value" : "Wczytywanie informacji o miejscu…"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Läser in platsinfo …"
+          }
         }
       }
     },
@@ -28855,6 +30121,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uzupełniono na podstawie informacji o miejscu"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ifyllt från platsinfo"
           }
         }
       }
@@ -28992,6 +30264,12 @@
             "state" : "translated",
             "value" : "Zapisz"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spara"
+          }
         }
       }
     },
@@ -29127,6 +30405,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zapisane restauracje"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sparade restauranger"
           }
         }
       }
@@ -29264,6 +30548,12 @@
             "state" : "translated",
             "value" : "Zapisane restauracje: %lld"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sparade restauranger: %lld"
+          }
         }
       }
     },
@@ -29399,6 +30689,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wszystkie"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alla"
           }
         }
       }
@@ -29536,6 +30832,12 @@
             "state" : "translated",
             "value" : "Ogólne dopasowanie"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Total matchning"
+          }
         }
       }
     },
@@ -29668,6 +30970,12 @@
           }
         },
         "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Telefon"
+          }
+        },
+        "sv" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Telefon"
@@ -29808,6 +31116,12 @@
             "state" : "translated",
             "value" : "Usunąć wszystkie dane? Tej operacji nie można cofnąć."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Radera all data? Det går inte att ångra."
+          }
         }
       }
     },
@@ -29943,6 +31257,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nie udało się wczytać informacji"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Det gick inte att läsa in informationen"
           }
         }
       }
@@ -30080,6 +31400,12 @@
             "state" : "translated",
             "value" : "Oceń jeszcze kilka, proszę!"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Betygsätt bara lite till!"
+          }
         }
       }
     },
@@ -30215,6 +31541,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Liczba zamówień"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Antal beställningar"
           }
         }
       }
@@ -30352,6 +31684,12 @@
             "state" : "translated",
             "value" : "Adres"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adress"
+          }
         }
       }
     },
@@ -30487,6 +31825,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mapa"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Karta"
           }
         }
       }
@@ -30624,6 +31968,12 @@
             "state" : "translated",
             "value" : "Dodaj restaurację z mapy lub z listy"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lägg till en restaurang från kartan eller listan"
+          }
         }
       }
     },
@@ -30759,6 +32109,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Przesuń mapę lub wybierz inne miejsce\ni spróbuj ponownie"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flytta kartan eller välj en annan plats\noch försök igen"
           }
         }
       }
@@ -30896,6 +32252,12 @@
             "state" : "translated",
             "value" : "Pokaż na mapie"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visa på kartan"
+          }
         }
       }
     },
@@ -31031,6 +32393,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Znajdź restauracje na mapie"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hitta restauranger på kartan"
           }
         }
       }
@@ -31168,6 +32536,12 @@
             "state" : "translated",
             "value" : "Adres (działka)"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adress (fastighet)"
+          }
         }
       }
     },
@@ -31304,6 +32678,12 @@
             "state" : "translated",
             "value" : "Pomoc"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Support"
+          }
         }
       }
     },
@@ -31439,6 +32819,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wpisz ręcznie"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ange manuellt"
           }
         }
       }
@@ -31577,6 +32963,12 @@
             "state" : "translated",
             "value" : "Pierwsze kroki"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kom igång"
+          }
         }
       }
     },
@@ -31714,6 +33106,12 @@
             "state" : "translated",
             "value" : "Krótki przegląd tego, co możesz robić po pierwszym otwarciu aplikacji."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En snabb genomgång av vad du kan göra första gången du öppnar appen."
+          }
         }
       }
     },
@@ -31849,6 +33247,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dodaj pierwsze danie"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lägg till din första rätt"
           }
         }
       }
@@ -31986,6 +33390,12 @@
             "state" : "translated",
             "value" : "Dodaj pierwszą wizytę"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lägg till ditt första besök"
+          }
         }
       }
     },
@@ -32121,6 +33531,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Resetuj"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Återställ allt"
           }
         }
       }
@@ -32258,6 +33674,12 @@
             "state" : "translated",
             "value" : "Wszystkich wizyt"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Besök totalt"
+          }
         }
       }
     },
@@ -32393,6 +33815,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wszystkich wizyt"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Besök totalt"
           }
         }
       }
@@ -32530,6 +33958,12 @@
             "state" : "translated",
             "value" : "Ocena ogólna (średnia ze wszystkich wizyt)"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Helhetsomdöme (snitt av alla besök)"
+          }
         }
       }
     },
@@ -32665,6 +34099,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Twoje najlepsze restauracje"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dina bästa restauranger"
           }
         }
       }
@@ -32802,6 +34242,12 @@
             "state" : "translated",
             "value" : "Ostatnia wizyta"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Senaste besök"
+          }
         }
       }
     },
@@ -32937,6 +34383,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ostatnie zamówienie"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Senaste beställning"
           }
         }
       }
@@ -33074,6 +34526,12 @@
             "state" : "translated",
             "value" : "Rekomendacje"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rekommendationer"
+          }
         }
       }
     },
@@ -33209,6 +34667,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pokaż rekomendacje"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hämta rekommendationer"
           }
         }
       }
@@ -33346,6 +34810,12 @@
             "state" : "translated",
             "value" : "Analizowanie rekomendacji…"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Analyserar rekommendationer …"
+          }
         }
       }
     },
@@ -33481,6 +34951,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Polecane restauracje"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rekommenderade restauranger"
           }
         }
       }
@@ -33618,6 +35094,12 @@
             "state" : "translated",
             "value" : "Wynik rekomendacji"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rekommendationspoäng"
+          }
         }
       }
     },
@@ -33753,6 +35235,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kroki testowania rekomendacji"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Steg för att testa rekommendationer"
           }
         }
       }
@@ -33890,6 +35378,12 @@
             "state" : "translated",
             "value" : "Brak restauracji do polecenia"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inga restauranger att rekommendera"
+          }
         }
       }
     },
@@ -34025,6 +35519,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Anuluj"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avbryt"
           }
         }
       }
@@ -34162,6 +35662,12 @@
             "state" : "translated",
             "value" : "Gust"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smak"
+          }
         }
       }
     },
@@ -34297,6 +35803,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Profil gustu"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smakprofil"
           }
         }
       }
@@ -34434,6 +35946,12 @@
             "state" : "translated",
             "value" : "Zrób zdjęcie"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ta bild"
+          }
         }
       }
     },
@@ -34569,6 +36087,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Otwórz w Kakao Map"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öppna i Kakao Map"
           }
         }
       }
@@ -34706,6 +36230,12 @@
             "state" : "translated",
             "value" : "Kategoria"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kategori"
+          }
         }
       }
     },
@@ -34841,6 +36371,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kategoria\n%lld%%"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kategori\n%lld %%"
           }
         }
       }
@@ -34978,6 +36514,12 @@
             "state" : "translated",
             "value" : "Kategoria (np. koreańska, chińska)"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kategori (t.ex. koreansk, kinesisk)"
+          }
         }
       }
     },
@@ -35114,6 +36656,12 @@
             "state" : "translated",
             "value" : "Ustawienia kategorii"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kategoriinställningar"
+          }
         }
       }
     },
@@ -35249,6 +36797,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ikona kategorii"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kategorisymbol"
           }
         }
       }
@@ -35387,6 +36941,12 @@
             "state" : "translated",
             "value" : "Układy dla dużego tekstu"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Layouter för stor text"
+          }
         }
       }
     },
@@ -35524,6 +37084,12 @@
             "state" : "translated",
             "value" : "Obsługa klawiaturą"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Styrning med tangentbord"
+          }
         }
       }
     },
@@ -35659,6 +37225,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dodaj do Top 6"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lägg till i Topp 6"
           }
         }
       }
@@ -35796,6 +37368,12 @@
             "state" : "translated",
             "value" : "Top 6"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Topp 6"
+          }
         }
       }
     },
@@ -35931,6 +37509,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Limit Top 6"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gräns för Topp 6"
           }
         }
       }
@@ -36068,6 +37652,12 @@
             "state" : "translated",
             "value" : "W Top 6 może być najwyżej 6 restauracji (teraz: %lld/6)"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Topp 6 kan ha högst 6 restauranger (nu: %lld/6)"
+          }
         }
       }
     },
@@ -36203,6 +37793,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "W Top 6 może być najwyżej 6 restauracji. Usuń inną restaurację z Top 6 i spróbuj ponownie."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Topp 6 kan ha högst 6 restauranger. Ta bort en annan restaurang från Topp 6 och försök igen."
           }
         }
       }
@@ -36340,6 +37936,12 @@
             "state" : "translated",
             "value" : "Dane testowe"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Testdata"
+          }
         }
       }
     },
@@ -36475,6 +38077,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Statystyki"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Statistik"
           }
         }
       }
@@ -36613,6 +38221,12 @@
             "state" : "translated",
             "value" : "Układ dla składanego iPhone’a"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Layout för vikbar iPhone"
+          }
         }
       }
     },
@@ -36750,6 +38364,12 @@
             "state" : "translated",
             "value" : "Na składanym iPhonie szeroki ekran dzieli się na dwa panele."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "På en vikbar iPhone delas den breda skärmen i två paneler."
+          }
         }
       }
     },
@@ -36885,6 +38505,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Informacje o ocenie"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Betygsinfo"
           }
         }
       }
@@ -37022,6 +38648,12 @@
             "state" : "translated",
             "value" : "Historia ocen (%lld)"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Betygshistorik (%lld)"
+          }
         }
       }
     },
@@ -37157,6 +38789,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Średnia ocena"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Genomsnittligt betyg"
           }
         }
       }
@@ -37294,6 +38932,12 @@
             "state" : "translated",
             "value" : "Wzorzec ocen\n%lld%%"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Betygsmönster\n%lld %%"
+          }
         }
       }
     },
@@ -37430,6 +39074,12 @@
             "state" : "translated",
             "value" : "Tworzy kopię bieżących danych w iCloud. Istniejąca kopia zostanie zastąpiona."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Säkerhetskopierar nuvarande data till iCloud. En befintlig säkerhetskopia skrivs över."
+          }
         }
       }
     },
@@ -37565,6 +39215,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Z bieżącej lokalizacji"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Från nuvarande plats"
           }
         }
       }
@@ -37703,6 +39359,12 @@
             "state" : "translated",
             "value" : "Widżety ekranu początkowego"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hemskärmswidgetar"
+          }
         }
       }
     },
@@ -37840,6 +39502,12 @@
             "state" : "translated",
             "value" : "VoiceOver odczytuje wszystkie przyciski i treści we właściwej kolejności."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOver läser upp alla knappar och allt innehåll i rätt ordning."
+          }
         }
       }
     },
@@ -37972,6 +39640,12 @@
           }
         },
         "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "sv" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"
@@ -38112,6 +39786,12 @@
             "state" : "translated",
             "value" : "💰 Oszczędne (1/6 kosztów Firestore)"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "💰 Kostnadseffektivt (1/6 av kostnaden för Firestore)"
+          }
         }
       }
     },
@@ -38247,6 +39927,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "🚀 Prosta struktura JSON"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🚀 Enkel JSON-struktur"
           }
         }
       }
