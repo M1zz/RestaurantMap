@@ -102,3 +102,10 @@ Gửi góp ý ngay trong ứng dụng
 Cho biết bạn thích ứng dụng đến đâu
 Có chính sách riêng tư và trang trợ giúp
 Sửa một số lỗi nhỏ
+
+### 앱스토어 (Čeština)
+
+Zpětnou vazbu pošlete přímo z aplikace
+Dejte nám vědět, jak se vám líbí
+Přibyly zásady soukromí a nápověda
+Opravili jsme drobné chyby

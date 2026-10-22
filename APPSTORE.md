@@ -783,3 +783,59 @@ Sau khi bạn đến một quán đã lưu, ứng dụng nhắc bạn ghi lại 
 
 Sao lưu iCloud
 Dữ liệu được lưu trên thiết bị, và bạn có thể sao lưu lên iCloud của mình cũng như khôi phục bất cứ lúc nào.
+
+## cs
+
+### 지원 URL
+
+https://m1zz.github.io/RestaurantMap/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/RestaurantMap/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/RestaurantMap/
+
+### 이름
+
+Insaeng: mapa restaurací
+
+### 부제
+
+Hodnoťte a řaďte svá jídla
+
+### 키워드
+
+deník,oblíbené,gurmán,recenze,steak,ramen,sushi,kavárna,rande,poznámky,fotky,top,oběd,večeře,hospoda
+
+### 프로모션 텍스트
+
+Označte špendlíkem každou navštívenou restauraci a uložte si hodnocení i poznámky. Místo po místě si vytvoříte mapu jídel, na která nezapomenete.
+
+### 설명
+
+Označte na mapě místa, kde jste jedli, a při každé návštěvě si zapište, jak chutnalo.
+Insaeng je vaše osobní gurmánská mapa, ve které najdete jen restaurace, které jste sami vybrali.
+
+Mapa vašich oblíbených míst
+Vyhledejte restauraci nebo vyberte bod na mapě a uložte ho. Uložená místa se zobrazí jako špendlíky a vašich šest nejoblíbenějších má vlastní odznaky pořadí.
+
+Navštívené, Chci vyzkoušet a váš Top 6
+Restaurace, kde jste už byli, a ty, které chcete vyzkoušet, držte v oddělených seznamech a šest nejlepších seřaďte.
+
+Každé jídlo podle svých kritérií
+U steaku rozhoduje propečení a šťavnatost, u sushi rýže a ryba, u ramenu vývar a nudle. Intenzitu chuti a spokojenost hodnotíte podle kritérií, která sedí ke každému druhu jídla. Pizzu, víno i kávu lze hodnotit zvlášť a můžete přidat i vlastní typy kuchyně.
+
+Deník návštěv, který roste s vámi
+Uložte datum, hodnocení, objednaná jídla, fotky a poznámky z každé návštěvy. U každé restaurace se postupně sčítá počet návštěv, průměrné hodnocení a celkové zhodnocení chuti. Když přidáte menu, uvidíte speciality podniku i ceny na první pohled.
+
+Váš chuťový profil
+Podívejte se na svou chuť v grafu: pálivé, sladké, slané, mastné a přirozené chutě.
+
+Připomínka po návštěvě
+Po návštěvě uložené restaurace vám připomeneme, abyste si návštěvu zapsali. Funguje jen v případě, že povolíte přístup k poloze.
+
+Záloha na iCloudu
+Záznamy zůstávají v zařízení a podle potřeby je můžete zazálohovat na vlastní iCloud a znovu obnovit.

@@ -86,6 +86,12 @@
             "state" : "translated",
             "value" : "Thực đơn của %@"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu: %@"
+          }
         }
       }
     },
@@ -174,6 +180,12 @@
             "state" : "translated",
             "value" : "Phù hợp %lld%%"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shoda %lld %%"
+          }
         }
       }
     },
@@ -258,6 +270,12 @@
           }
         },
         "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "cs" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld"
@@ -350,6 +368,12 @@
             "state" : "translated",
             "value" : "Đánh giá thêm %lld quán để nhận gợi ý"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ohodnoťte ještě %lld, abyste získali doporučení"
+          }
         }
       }
     },
@@ -437,6 +461,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld đánh giá"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recenzí: %lld"
           }
         }
       }
@@ -526,6 +556,12 @@
             "state" : "translated",
             "value" : "%lld người dùng có khẩu vị tương tự giới thiệu"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Doporučuje %lld uživatelů s podobnou chutí"
+          }
         }
       }
     },
@@ -613,6 +649,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hạng %lld"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld. místo"
           }
         }
       }
@@ -702,6 +744,12 @@
             "state" : "translated",
             "value" : "%lld ảnh"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotek: %lld"
+          }
         }
       }
     },
@@ -789,6 +837,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld lần"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld×"
           }
         }
       }
@@ -878,6 +932,12 @@
             "state" : "translated",
             "value" : "%lld lượt ghé"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Návštěv: %lld"
+          }
         }
       }
     },
@@ -965,6 +1025,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Xóa “%@” và toàn bộ lịch sử ghé thăm?"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smazat „%@“ a všechny záznamy návštěv?"
           }
         }
       }
@@ -1054,6 +1120,12 @@
             "state" : "translated",
             "value" : "1️⃣ Tải dữ liệu của tôi lên"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1️⃣ Nahrát moje data"
+          }
         }
       }
     },
@@ -1141,6 +1213,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "2️⃣ Tạo dữ liệu mẫu"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2️⃣ Vytvořit testovací data"
           }
         }
       }
@@ -1230,6 +1308,12 @@
             "state" : "translated",
             "value" : "3️⃣ Xem kết quả ở tab Gợi ý"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3️⃣ Zkontrolovat výsledek na kartě Doporučení"
+          }
         }
       }
     },
@@ -1317,6 +1401,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chưa có quán nào được bạn chấm từ 4 sao trở lên"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Žádná restaurace nemá hodnocení 4 hvězdy nebo víc"
           }
         }
       }
@@ -1406,6 +1496,12 @@
             "state" : "translated",
             "value" : "Khẩu vị của bạn qua sáu đặc điểm"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vaše chuť v šesti vlastnostech"
+          }
         }
       }
     },
@@ -1493,6 +1589,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mở trong Apple Maps"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otevřít v Mapách Apple"
           }
         }
       }
@@ -1583,6 +1685,12 @@
             "state" : "translated",
             "value" : "Khóa Face ID"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zámek Face ID"
+          }
         }
       }
     },
@@ -1672,6 +1780,12 @@
             "state" : "translated",
             "value" : "Khóa ứng dụng bằng Face ID hoặc Touch ID để giữ nhật ký quán ăn của bạn riêng tư."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zamkněte aplikaci pomocí Face ID nebo Touch ID a chraňte svůj deník restaurací."
+          }
         }
       }
     },
@@ -1759,6 +1873,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tải dữ liệu lên Firebase\nđể thử hệ thống gợi ý"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nahrajte data do Firebase\na otestujte systém doporučení"
           }
         }
       }
@@ -1848,6 +1968,12 @@
             "state" : "translated",
             "value" : "Tải lên Realtime DB"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nahrát do Realtime DB"
+          }
         }
       }
     },
@@ -1936,6 +2062,12 @@
             "state" : "translated",
             "value" : "Ưu điểm của Realtime Database"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Výhody Realtime Database"
+          }
         }
       }
     },
@@ -2023,6 +2155,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Đang lấy dữ liệu từ Realtime Database…"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Načítání dat z Realtime Database…"
           }
         }
       }
@@ -2113,6 +2251,12 @@
             "state" : "translated",
             "value" : "Nói với Siri hoặc dùng phím tắt để ghi lại lượt ghé ngay lập tức."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Řekněte to Siri nebo použijte zkratku a návštěvu hned zapíšete."
+          }
         }
       }
     },
@@ -2201,6 +2345,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siri và Phím tắt"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri a Zkratky"
           }
         }
       }
@@ -2291,6 +2441,12 @@
             "state" : "translated",
             "value" : "VoiceOver dễ dùng hơn"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pohodlnější VoiceOver"
+          }
         }
       }
     },
@@ -2378,6 +2534,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sao lưu iCloud"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Záloha na iCloudu"
           }
         }
       }
@@ -2467,6 +2629,12 @@
             "state" : "translated",
             "value" : "Bạn cần đăng nhập iCloud để sao lưu hoặc khôi phục."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro zálohu a obnovu musíte být přihlášeni k iCloudu."
+          }
         }
       }
     },
@@ -2554,6 +2722,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sao lưu lên iCloud"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zálohovat na iCloud"
           }
         }
       }
@@ -2643,6 +2817,12 @@
             "state" : "translated",
             "value" : "Khôi phục từ iCloud"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obnovit z iCloudu"
+          }
         }
       }
     },
@@ -2730,6 +2910,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Khôi phục từ bản sao lưu iCloud. Toàn bộ dữ liệu trên thiết bị này sẽ bị xóa và thay bằng dữ liệu sao lưu."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obnoví data ze zálohy na iCloudu. Všechna data v tomto zařízení se smažou a nahradí se zálohou."
           }
         }
       }
@@ -2819,6 +3005,12 @@
             "state" : "translated",
             "value" : "• Mỗi người dùng 3–4 quán"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 3–4 restaurace na uživatele"
+          }
         }
       }
     },
@@ -2906,6 +3098,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "• Mỗi quán 1–3 lượt ghé"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 1–3 záznamy návštěv na restauraci"
           }
         }
       }
@@ -2995,6 +3193,12 @@
             "state" : "translated",
             "value" : "• 5 người dùng với khẩu vị khác nhau"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 5 uživatelů s různou chutí"
+          }
         }
       }
     },
@@ -3082,6 +3286,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "⚡ Đồng bộ thời gian thực nhanh hơn"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚡ Rychlejší synchronizace v reálném čase"
           }
         }
       }
@@ -3171,6 +3381,12 @@
             "state" : "translated",
             "value" : "⚡ Đồng bộ thời gian thực nhanh hơn\n💰 Chi phí thấp hơn"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚡ Rychlejší synchronizace v reálném čase\n💰 Nižší náklady"
+          }
         }
       }
     },
@@ -3258,6 +3474,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "✓ Đã đánh giá"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "✓ Ohodnoceno"
           }
         }
       }
@@ -3348,6 +3570,12 @@
             "state" : "translated",
             "value" : "Rung nhẹ khi bạn lưu quán hoặc ghi lượt ghé."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jemné zavibrování při uložení místa nebo zápisu návštěvy."
+          }
         }
       }
     },
@@ -3435,6 +3663,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Giá"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cena"
           }
         }
       }
@@ -3524,6 +3758,12 @@
             "state" : "translated",
             "value" : "Đã đến"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Navštívené"
+          }
         }
       }
     },
@@ -3611,6 +3851,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Muốn đến"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chci vyzkoušet"
           }
         }
       }
@@ -3700,6 +3946,12 @@
             "state" : "translated",
             "value" : "Quán trong danh sách “Muốn đến” không thể đặt vào Top 6"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restauraci ze seznamu „Chci vyzkoušet“ nelze zařadit do Top 6"
+          }
         }
       }
     },
@@ -3787,6 +4039,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hãy đánh giá độ đậm vị và mức hài lòng cho từng mục. Việc đánh giá là tùy chọn."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ohodnoťte intenzitu chuti a spokojenost u každé položky. Hodnocení je volitelné."
           }
         }
       }
@@ -3876,6 +4134,12 @@
             "state" : "translated",
             "value" : "Liên hệ nhà phát triển"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kontaktovat vývojáře"
+          }
         }
       }
     },
@@ -3963,6 +4227,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld kết quả tìm kiếm"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Výsledků hledání: %lld"
           }
         }
       }
@@ -4052,6 +4322,12 @@
             "state" : "translated",
             "value" : "Kinh độ: %.6f"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeměpisná délka: %.6f"
+          }
         }
       }
     },
@@ -4139,6 +4415,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Loại"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Typ"
           }
         }
       }
@@ -4229,6 +4511,12 @@
             "state" : "translated",
             "value" : "Khi phóng to chữ, màn hình sẽ tự sắp xếp lại và không bị cắt."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Při zvětšení textu se obrazovky přeskupí, aniž by se cokoli oříznulo."
+          }
         }
       }
     },
@@ -4316,6 +4604,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dựa trên “%@”"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Podle „%@“"
           }
         }
       }
@@ -4405,6 +4699,12 @@
             "state" : "translated",
             "value" : "Mặc định"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Výchozí"
+          }
         }
       }
     },
@@ -4492,6 +4792,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Thông tin cơ bản"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Základní údaje"
           }
         }
       }
@@ -4581,6 +4887,12 @@
             "state" : "translated",
             "value" : "Có sẵn"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vestavěné"
+          }
         }
       }
     },
@@ -4668,6 +4980,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Michelin của tôi"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Moje Michelin"
           }
         }
       }
@@ -4757,6 +5075,12 @@
             "state" : "translated",
             "value" : "DNA ẩm thực của tôi"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Moje gurmánská DNA"
+          }
         }
       }
     },
@@ -4844,6 +5168,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Top 6 yêu thích nhất của tôi"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Moje nejmilejší Top 6"
           }
         }
       }
@@ -4933,6 +5263,12 @@
             "state" : "translated",
             "value" : "Top 6 của tôi"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Moje Top 6"
+          }
         }
       }
     },
@@ -5020,6 +5356,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dữ liệu của tôi"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Moje data"
           }
         }
       }
@@ -5109,6 +5451,12 @@
             "state" : "translated",
             "value" : "Tải dữ liệu của tôi lên"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nahrát moje data"
+          }
         }
       }
     },
@@ -5196,6 +5544,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Thêm vào danh sách quán của tôi"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přidat do mých restaurací"
           }
         }
       }
@@ -5285,6 +5639,12 @@
             "state" : "translated",
             "value" : "Những quán bạn yêu thích nhất"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vaše úplně nejoblíbenější restaurace"
+          }
         }
       }
     },
@@ -5372,6 +5732,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Loại tôi đã thêm"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Typy, které jsem přidal(a)"
           }
         }
       }
@@ -5461,6 +5827,12 @@
             "state" : "translated",
             "value" : "Mở trong Naver Map"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otevřít v Naver Map"
+          }
         }
       }
     },
@@ -5548,6 +5920,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vui lòng thử lại"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zkuste to prosím znovu"
           }
         }
       }
@@ -5638,6 +6016,12 @@
             "state" : "translated",
             "value" : "Chế độ tối"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tmavý režim"
+          }
         }
       }
     },
@@ -5725,6 +6109,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Đóng"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zavřít"
           }
         }
       }
@@ -5815,6 +6205,12 @@
             "state" : "translated",
             "value" : "Đọc bản đồ và danh sách dễ dàng, kể cả khi bật tăng độ tương phản hoặc khó phân biệt màu."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mapu i seznamy snadno přečtete i při zvýšeném kontrastu nebo potížích s rozlišením barev."
+          }
         }
       }
     },
@@ -5902,6 +6298,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Món đặc trưng"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Specialita podniku"
           }
         }
       }
@@ -5991,6 +6393,12 @@
             "state" : "translated",
             "value" : "Món đặc trưng hiện ở đầu danh sách thực đơn"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Speciality podniku se zobrazují na začátku seznamu jídel"
+          }
         }
       }
     },
@@ -6078,6 +6486,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Đặt làm món đặc trưng"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nastavit jako specialitu"
           }
         }
       }
@@ -6168,6 +6582,12 @@
             "state" : "translated",
             "value" : "Dùng ứng dụng bằng nhiều ngôn ngữ hơn."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Používejte aplikaci ve více jazycích."
+          }
         }
       }
     },
@@ -6257,6 +6677,12 @@
             "state" : "translated",
             "value" : "Thêm ngôn ngữ"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Více jazyků"
+          }
         }
       }
     },
@@ -6344,6 +6770,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tạo dữ liệu mẫu"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vytvořit testovací data"
           }
         }
       }
@@ -6433,6 +6865,12 @@
             "state" : "translated",
             "value" : "Tạo 5 người dùng mẫu và dữ liệu quán ăn"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vytvoří 5 testovacích uživatelů a data restaurací"
+          }
         }
       }
     },
@@ -6520,6 +6958,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Quản lý dữ liệu"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Správa dat"
           }
         }
       }
@@ -6609,6 +7053,12 @@
             "state" : "translated",
             "value" : "Đồng bộ dữ liệu"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Synchronizace dat"
+          }
         }
       }
     },
@@ -6696,6 +7146,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Đồng bộ dữ liệu"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Synchronizovat data"
           }
         }
       }
@@ -6785,6 +7241,12 @@
             "state" : "translated",
             "value" : "Tải dữ liệu lên"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nahrát data"
+          }
         }
       }
     },
@@ -6872,6 +7334,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tổng quan dữ liệu"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přehled dat"
           }
         }
       }
@@ -6961,6 +7429,12 @@
             "state" : "translated",
             "value" : "Chưa đủ dữ liệu"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zatím málo dat"
+          }
         }
       }
     },
@@ -7048,6 +7522,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Có thể chưa đủ dữ liệu"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dat nemusí být dost"
           }
         }
       }
@@ -7137,6 +7617,12 @@
             "state" : "translated",
             "value" : "Không thể tải dữ liệu"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Data se nepodařilo načíst"
+          }
         }
       }
     },
@@ -7224,6 +7710,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Địa chỉ (đường)"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adresa (ulice)"
           }
         }
       }
@@ -7313,6 +7805,12 @@
             "state" : "translated",
             "value" : "Chưa có món nào trong thực đơn"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zatím žádná jídla v menu"
+          }
         }
       }
     },
@@ -7400,6 +7898,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Xếp hạng"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Žebříček"
           }
         }
       }
@@ -7489,6 +7993,12 @@
             "state" : "translated",
             "value" : "Điểm Michelin Riio"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skóre Riio Michelin"
+          }
         }
       }
     },
@@ -7576,6 +8086,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lần sao lưu gần nhất"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poslední záloha"
           }
         }
       }
@@ -7665,6 +8181,12 @@
             "state" : "translated",
             "value" : "Mức hài lòng"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spokojenost"
+          }
         }
       }
     },
@@ -7752,6 +8274,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Độ đậm vị"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Intenzita chuti"
           }
         }
       }
@@ -7841,6 +8369,12 @@
             "state" : "translated",
             "value" : "Khẩu vị ưa thích"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chuťové preference"
+          }
         }
       }
     },
@@ -7928,6 +8462,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Khẩu vị ưa thích\n%lld%%"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chuťové preference\n%lld %%"
           }
         }
       }
@@ -8017,6 +8557,12 @@
             "state" : "translated",
             "value" : "Đánh giá vị"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hodnocení chuti"
+          }
         }
       }
     },
@@ -8104,6 +8650,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Đã đánh giá vị"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chuť ohodnocena"
           }
         }
       }
@@ -8193,6 +8745,12 @@
             "state" : "translated",
             "value" : "Đã đánh giá vị"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chuť ohodnocena"
+          }
         }
       }
     },
@@ -8280,6 +8838,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hồ sơ hương vị"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chuťový profil"
           }
         }
       }
@@ -8369,6 +8933,12 @@
             "state" : "translated",
             "value" : "Quán gợi ý"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tipy na restaurace"
+          }
         }
       }
     },
@@ -8456,6 +9026,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dành cho bạn"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro vás"
           }
         }
       }
@@ -8545,6 +9121,12 @@
             "state" : "translated",
             "value" : "Để nhận gợi ý phù hợp với bạn"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abyste dostávali doporučení na míru"
+          }
         }
       }
     },
@@ -8632,6 +9214,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rất hài lòng"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velmi spokojen(a)"
           }
         }
       }
@@ -8721,6 +9309,12 @@
             "state" : "translated",
             "value" : "Bạn đã ăn gì"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Co jste jedli"
+          }
         }
       }
     },
@@ -8808,6 +9402,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bạn đã ăn gì (VD: cơm bulgogi, pizza margherita)"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Co jste jedli (např. bulgogi menu, pizza Margherita)"
           }
         }
       }
@@ -8897,6 +9497,12 @@
             "state" : "translated",
             "value" : "Thực đơn"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu"
+          }
         }
       }
     },
@@ -8984,6 +9590,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Quản lý thực đơn"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spravovat menu"
           }
         }
       }
@@ -9073,6 +9685,12 @@
             "state" : "translated",
             "value" : "Thêm món"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přidat jídla"
+          }
         }
       }
     },
@@ -9160,6 +9778,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Thực đơn (%lld)"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu (%lld)"
           }
         }
       }
@@ -9249,6 +9873,12 @@
             "state" : "translated",
             "value" : "Chọn món"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vybrat jídlo"
+          }
         }
       }
     },
@@ -9336,6 +9966,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mô tả món"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Popis jídla"
           }
         }
       }
@@ -9425,6 +10061,12 @@
             "state" : "translated",
             "value" : "Mô tả món (tùy chọn)"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Popis jídla (volitelné)"
+          }
         }
       }
     },
@@ -9512,6 +10154,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tên món"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Název jídla"
           }
         }
       }
@@ -9601,6 +10249,12 @@
             "state" : "translated",
             "value" : "Thông tin món"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Údaje o jídle"
+          }
         }
       }
     },
@@ -9688,6 +10342,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Thêm món"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přidat jídlo"
           }
         }
       }
@@ -9777,6 +10437,12 @@
             "state" : "translated",
             "value" : "Món đã thêm có thể chọn khi ghi lượt ghé"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přidaná jídla půjde vybrat při zápisu návštěvy"
+          }
         }
       }
     },
@@ -9864,6 +10530,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ghi chú"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poznámky"
           }
         }
       }
@@ -9953,6 +10625,12 @@
             "state" : "translated",
             "value" : "Không có ghi chú"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Žádné poznámky"
+          }
         }
       }
     },
@@ -10040,6 +10718,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tất cả quán và lịch sử ghé thăm sẽ bị xóa. Không thể hoàn tác thao tác này."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Všechny restaurace a záznamy návštěv budou smazány. Tuto akci nelze vrátit zpět."
           }
         }
       }
@@ -10129,6 +10813,12 @@
             "state" : "translated",
             "value" : "Xóa toàn bộ dữ liệu"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smazat všechna data"
+          }
         }
       }
     },
@@ -10216,6 +10906,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Danh sách"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seznam"
           }
         }
       }
@@ -10305,6 +11001,12 @@
             "state" : "translated",
             "value" : "Đóng danh sách"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zavřít seznam"
+          }
         }
       }
     },
@@ -10392,6 +11094,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nhật ký ghé thăm"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deník návštěv"
           }
         }
       }
@@ -10481,6 +11189,12 @@
             "state" : "translated",
             "value" : "Thêm lượt ghé"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přidat návštěvu"
+          }
         }
       }
     },
@@ -10569,6 +11283,12 @@
             "state" : "translated",
             "value" : "Hãy nhập đánh giá vị khi thêm lượt ghé"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Při přidání návštěvy zadejte hodnocení chuti"
+          }
         }
       }
     },
@@ -10656,6 +11376,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hãy chọn món này khi thêm lượt ghé"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Při přidání návštěvy vyberte toto jídlo"
           }
         }
       }
@@ -10746,6 +11472,12 @@
             "state" : "translated",
             "value" : "Nếu ứng dụng bị tắt khi bạn đang viết lượt ghé, phần đã viết vẫn được giữ lại."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Když se aplikace při psaní návštěvy zavře, napsaný text zůstane zachován."
+          }
         }
       }
     },
@@ -10833,6 +11565,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ngày ghé"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datum návštěvy"
           }
         }
       }
@@ -10922,6 +11660,12 @@
             "state" : "translated",
             "value" : "Thông tin lượt ghé"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Údaje o návštěvě"
+          }
         }
       }
     },
@@ -11009,6 +11753,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Thống kê lượt ghé"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Statistiky návštěv"
           }
         }
       }
@@ -11098,6 +11848,12 @@
             "state" : "translated",
             "value" : "Sao lưu"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zálohovat"
+          }
         }
       }
     },
@@ -11185,6 +11941,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rất mong nhận được báo lỗi và đề xuất tính năng."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hlášení chyb a nápady na funkce uvítáme."
           }
         }
       }
@@ -11274,6 +12036,12 @@
             "state" : "translated",
             "value" : "Phiên bản"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verze"
+          }
         }
       }
     },
@@ -11362,6 +12130,12 @@
             "state" : "translated",
             "value" : "Điểm đánh giá"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hodnocení"
+          }
         }
       }
     },
@@ -11449,6 +12223,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Đánh giá"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ohodnotit"
           }
         }
       }
@@ -11539,6 +12319,12 @@
             "state" : "translated",
             "value" : "Màu sắc và độ tương phản dễ nhìn hơn"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pohodlnější barvy a kontrast"
+          }
         }
       }
     },
@@ -11626,6 +12412,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Khôi phục"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obnovit"
           }
         }
       }
@@ -11715,6 +12507,12 @@
             "state" : "translated",
             "value" : "Đang tải…"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Načítání…"
+          }
         }
       }
     },
@@ -11802,6 +12600,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Không hài lòng"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nespokojen(a)"
           }
         }
       }
@@ -11891,6 +12695,12 @@
             "state" : "translated",
             "value" : "Mọi người nói gì"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Co říkají lidé"
+          }
         }
       }
     },
@@ -11978,6 +12788,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ảnh"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotky"
           }
         }
       }
@@ -12067,6 +12883,12 @@
             "state" : "translated",
             "value" : "Ảnh (%lld)"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotky (%lld)"
+          }
         }
       }
     },
@@ -12154,6 +12976,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chọn ảnh"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vybrat fotky"
           }
         }
       }
@@ -12243,6 +13071,12 @@
             "state" : "translated",
             "value" : "Thêm ảnh"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přidat fotky"
+          }
         }
       }
     },
@@ -12330,6 +13164,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Xóa"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smazat"
           }
         }
       }
@@ -12419,6 +13259,12 @@
             "state" : "translated",
             "value" : "Chi tiết độ phù hợp"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Podrobnosti o shodě"
+          }
         }
       }
     },
@@ -12506,6 +13352,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Loại ẩm thực mới"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nový typ kuchyně"
           }
         }
       }
@@ -12595,6 +13447,12 @@
             "state" : "translated",
             "value" : "Thêm loại mới"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přidat nový typ"
+          }
         }
       }
     },
@@ -12682,6 +13540,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ảnh sẽ được thêm"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotky k přidání"
           }
         }
       }
@@ -12771,6 +13635,12 @@
             "state" : "translated",
             "value" : "Làm mới"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obnovit"
+          }
         }
       }
     },
@@ -12858,6 +13728,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chọn"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vybrat"
           }
         }
       }
@@ -12947,6 +13823,12 @@
             "state" : "translated",
             "value" : "Không chọn"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nic"
+          }
         }
       }
     },
@@ -13035,6 +13917,12 @@
             "state" : "translated",
             "value" : "Mô tả"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Popis"
+          }
         }
       }
     },
@@ -13122,6 +14010,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cài đặt"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nastavení"
           }
         }
       }
@@ -13212,6 +14106,12 @@
             "state" : "translated",
             "value" : "Phản hồi cảm nhận được ở đầu ngón tay"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odezva, kterou ucítíte na prstech"
+          }
         }
       }
     },
@@ -13299,6 +14199,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Loại quán"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Typ restaurace"
           }
         }
       }
@@ -13388,6 +14294,12 @@
             "state" : "translated",
             "value" : "Danh sách quán"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurace"
+          }
         }
       }
     },
@@ -13475,6 +14387,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Đánh giá quán từ danh sách"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hodnotit restaurace ze seznamu"
           }
         }
       }
@@ -13564,6 +14482,12 @@
             "state" : "translated",
             "value" : "Xóa quán"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smazat restauraci"
+          }
         }
       }
     },
@@ -13651,6 +14575,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hãy chấm từ 4 sao trở lên trong màn hình chi tiết của quán"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dejte na obrazovce s detailem restaurace 4 hvězdy nebo víc"
           }
         }
       }
@@ -13740,6 +14670,12 @@
             "state" : "translated",
             "value" : "Chưa có quán"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Žádné restaurace"
+          }
         }
       }
     },
@@ -13827,6 +14763,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tên quán"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Název restaurace"
           }
         }
       }
@@ -13916,6 +14858,12 @@
             "state" : "translated",
             "value" : "Thông tin quán"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Údaje o restauraci"
+          }
         }
       }
     },
@@ -14003,6 +14951,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bản đồ quán ăn"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mapa restaurací"
           }
         }
       }
@@ -14092,6 +15046,12 @@
             "state" : "translated",
             "value" : "Thêm quán"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přidat restauraci"
+          }
         }
       }
     },
@@ -14179,6 +15139,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Thêm một quán"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přidat restauraci"
           }
         }
       }
@@ -14268,6 +15234,12 @@
             "state" : "translated",
             "value" : "Thêm làm quán ăn"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přidat jako restauraci"
+          }
         }
       }
     },
@@ -14355,6 +15327,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hãy thêm một quán để bắt đầu"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Začněte přidáním restaurace"
           }
         }
       }
@@ -14445,6 +15423,12 @@
             "state" : "translated",
             "value" : "Mẹo sử dụng"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Užitečné tipy"
+          }
         }
       }
     },
@@ -14534,6 +15518,12 @@
             "state" : "translated",
             "value" : "Viết tiếp lượt ghé đang dở"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dopsat rozepsanou návštěvu"
+          }
         }
       }
     },
@@ -14622,6 +15612,12 @@
             "state" : "translated",
             "value" : "Không"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ne"
+          }
         }
       }
     },
@@ -14709,6 +15705,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Biểu tượng"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ikona"
           }
         }
       }
@@ -14799,6 +15801,12 @@
             "state" : "translated",
             "value" : "Trên iPad, bạn có thể dùng các tính năng chính chỉ với bàn phím."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Na iPadu ovládnete hlavní funkce jen klávesnicí."
+          }
         }
       }
     },
@@ -14886,6 +15894,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chưa có quán nào trong danh sách “Muốn đến”"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "V seznamu „Chci vyzkoušet“ zatím nic není"
           }
         }
       }
@@ -14975,6 +15989,12 @@
             "state" : "translated",
             "value" : "Bạn chưa ghé quán này"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "V této restauraci jste ještě nebyli"
+          }
         }
       }
     },
@@ -15062,6 +16082,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chưa có quán nào đã đến"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zatím žádné navštívené restaurace"
           }
         }
       }
@@ -15151,6 +16177,12 @@
             "state" : "translated",
             "value" : "Chưa có quán nào được lưu"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zatím žádné uložené restaurace"
+          }
         }
       }
     },
@@ -15239,6 +16271,12 @@
             "state" : "translated",
             "value" : "Chưa có quán nào trong Top 6"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "V Top 6 zatím nic není"
+          }
         }
       }
     },
@@ -15326,6 +16364,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chưa có đánh giá"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zatím žádná hodnocení"
           }
         }
       }
@@ -15416,6 +16460,12 @@
             "state" : "translated",
             "value" : "Nhẹ nhàng gợi ý các tính năng hữu ích đúng lúc bạn cần."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nenápadně vám v pravou chvíli ukážeme užitečné funkce."
+          }
         }
       }
     },
@@ -15504,6 +16554,12 @@
             "state" : "translated",
             "value" : "Chọn từ thư viện"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vybrat z knihovny"
+          }
         }
       }
     },
@@ -15591,6 +16647,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Giới thiệu"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O aplikaci"
           }
         }
       }
@@ -15681,6 +16743,12 @@
             "state" : "translated",
             "value" : "Xem quán yêu thích ngay trên Màn hình chính mà không cần mở ứng dụng."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oblíbená místa uvidíte rovnou na ploše, aniž byste museli otevírat aplikaci."
+          }
         }
       }
     },
@@ -15769,6 +16837,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Có thể dùng ứng dụng bằng tiếng Anh."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aplikaci lze používat i v angličtině."
           }
         }
       }
@@ -15859,6 +16933,12 @@
             "state" : "translated",
             "value" : "Chữ và nút vẫn rõ nét trong chế độ tối."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Text a tlačítka zůstávají ostré i v tmavém režimu."
+          }
         }
       }
     },
@@ -15947,6 +17027,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lần đầu mở ứng dụng sau khi cập nhật, bạn sẽ biết có gì mới."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Při prvním otevření po aktualizaci vám ukážeme, co je nového."
           }
         }
       }
@@ -16037,6 +17123,12 @@
             "state" : "translated",
             "value" : "Có gì mới"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Novinky"
+          }
         }
       }
     },
@@ -16124,6 +17216,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chúng tôi phân tích khẩu vị của bạn để đưa ra gợi ý phù hợp"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Analyzujeme vaši chuť, abychom vám doporučili to pravé"
           }
         }
       }
@@ -16214,6 +17312,12 @@
             "state" : "translated",
             "value" : "Hỗ trợ tiếng Anh"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Podpora angličtiny"
+          }
         }
       }
     },
@@ -16301,6 +17405,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "VD: món Thái, món Ấn"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Např. thajská, indická"
           }
         }
       }
@@ -16390,6 +17500,12 @@
             "state" : "translated",
             "value" : "Điểm dự đoán"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Předpokládané hodnocení"
+          }
         }
       }
     },
@@ -16477,6 +17593,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lỗi"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chyba"
           }
         }
       }
@@ -16566,6 +17688,12 @@
             "state" : "translated",
             "value" : "Xong"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hotovo"
+          }
         }
       }
     },
@@ -16653,6 +17781,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vì sao gợi ý quán này?"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Proč to doporučujeme?"
           }
         }
       }
@@ -16743,6 +17877,12 @@
             "state" : "translated",
             "value" : "Giảm chuyển động"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Omezit pohyb"
+          }
         }
       }
     },
@@ -16832,6 +17972,12 @@
             "state" : "translated",
             "value" : "Khi bật “Giảm chuyển động”, hiệu ứng trên màn hình sẽ dịu hơn."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Když zapnete „Omezit pohyb“, efekty na obrazovce budou klidnější."
+          }
         }
       }
     },
@@ -16916,6 +18062,12 @@
           }
         },
         "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "KRW"
+          }
+        },
+        "cs" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "KRW"
@@ -17008,6 +18160,12 @@
             "state" : "translated",
             "value" : "Trang web"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Web"
+          }
         }
       }
     },
@@ -17095,6 +18253,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vĩ độ: %.6f"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeměpisná šířka: %.6f"
           }
         }
       }
@@ -17184,6 +18348,12 @@
             "state" : "translated",
             "value" : "Vị trí"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Místo"
+          }
         }
       }
     },
@@ -17271,6 +18441,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chọn vị trí"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vybrat místo"
           }
         }
       }
@@ -17360,6 +18536,12 @@
             "state" : "translated",
             "value" : "Phong cách ẩm thực"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Styl kuchyně"
+          }
         }
       }
     },
@@ -17447,6 +18629,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Loại ẩm thực"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Typ kuchyně"
           }
         }
       }
@@ -17536,6 +18724,12 @@
             "state" : "translated",
             "value" : "Quản lý loại ẩm thực"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spravovat typy kuchyně"
+          }
         }
       }
     },
@@ -17623,6 +18817,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lần ghé này thế nào?"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jaká byla tato návštěva?"
           }
         }
       }
@@ -17712,6 +18912,12 @@
             "state" : "translated",
             "value" : "Nhấn “Sửa” để đánh giá hương vị của lượt ghé này"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klepnutím na Upravit ohodnotíte chutě této návštěvy"
+          }
         }
       }
     },
@@ -17799,6 +19005,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Quán này chưa có món nào trong thực đơn. Hãy thêm món trước hoặc nhập tay."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tato restaurace zatím nemá žádná jídla v menu. Nejprve je přidejte, nebo zadejte ručně."
           }
         }
       }
@@ -17888,6 +19100,12 @@
             "state" : "translated",
             "value" : "Nhìn chung, quán này…"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Celkově je tato restaurace…"
+          }
         }
       }
     },
@@ -17975,6 +19193,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tên"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Název"
           }
         }
       }
@@ -18064,6 +19288,12 @@
             "state" : "translated",
             "value" : "Liên hệ qua email"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Napsat e-mail"
+          }
         }
       }
     },
@@ -18151,6 +19381,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Không thể tải hình ảnh"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obrázek se nepodařilo načíst"
           }
         }
       }
@@ -18240,6 +19476,12 @@
             "state" : "translated",
             "value" : "Đánh giá quán ăn của đời bạn"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ohodnoťte restauraci svého života"
+          }
         }
       }
     },
@@ -18327,6 +19569,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nhắn tin Instagram (@lee25_ios)"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DM na Instagramu (@lee25_ios)"
           }
         }
       }
@@ -18416,6 +19664,12 @@
             "state" : "translated",
             "value" : "Bạn có thể tự thêm các loại ẩm thực hay ăn"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Typy kuchyně, které jíte často, si můžete přidat sami"
+          }
         }
       }
     },
@@ -18503,6 +19757,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Thông tin địa điểm"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Údaje o místě"
           }
         }
       }
@@ -18592,6 +19852,12 @@
             "state" : "translated",
             "value" : "Đang tải thông tin địa điểm…"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Načítání údajů o místě…"
+          }
         }
       }
     },
@@ -18679,6 +19945,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tự điền từ thông tin địa điểm"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vyplněno z údajů o místě"
           }
         }
       }
@@ -18768,6 +20040,12 @@
             "state" : "translated",
             "value" : "Lưu"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uložit"
+          }
         }
       }
     },
@@ -18855,6 +20133,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Quán đã lưu"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uložené restaurace"
           }
         }
       }
@@ -18944,6 +20228,12 @@
             "state" : "translated",
             "value" : "Quán đã lưu: %lld"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uložené restaurace: %lld"
+          }
         }
       }
     },
@@ -19031,6 +20321,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tất cả"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vše"
           }
         }
       }
@@ -19120,6 +20416,12 @@
             "state" : "translated",
             "value" : "Độ phù hợp tổng thể"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Celková shoda"
+          }
         }
       }
     },
@@ -19207,6 +20509,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Điện thoại"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Telefon"
           }
         }
       }
@@ -19296,6 +20604,12 @@
             "state" : "translated",
             "value" : "Xóa toàn bộ dữ liệu? Không thể hoàn tác thao tác này."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opravdu smazat všechna data? Tuto akci nelze vrátit zpět."
+          }
         }
       }
     },
@@ -19383,6 +20697,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Không thể tải thông tin"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Informace se nepodařilo načíst"
           }
         }
       }
@@ -19472,6 +20792,12 @@
             "state" : "translated",
             "value" : "Đánh giá thêm một chút nhé!"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ohodnoťte prosím ještě pár restaurací!"
+          }
         }
       }
     },
@@ -19559,6 +20885,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Số lần gọi món"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Počet objednávek"
           }
         }
       }
@@ -19648,6 +20980,12 @@
             "state" : "translated",
             "value" : "Địa chỉ"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adresa"
+          }
         }
       }
     },
@@ -19735,6 +21073,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bản đồ"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mapa"
           }
         }
       }
@@ -19824,6 +21168,12 @@
             "state" : "translated",
             "value" : "Thêm quán từ bản đồ hoặc danh sách"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přidejte restauraci z mapy nebo ze seznamu"
+          }
         }
       }
     },
@@ -19911,6 +21261,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hãy di chuyển bản đồ hoặc chọn nơi khác\nrồi thử lại"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Posuňte mapu nebo vyberte jiné místo\na zkuste to znovu"
           }
         }
       }
@@ -20000,6 +21356,12 @@
             "state" : "translated",
             "value" : "Xem trên bản đồ"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zobrazit na mapě"
+          }
         }
       }
     },
@@ -20087,6 +21449,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tìm quán ăn trên bản đồ"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Najít restaurace na mapě"
           }
         }
       }
@@ -20176,6 +21544,12 @@
             "state" : "translated",
             "value" : "Địa chỉ (số thửa)"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adresa (parcela)"
+          }
         }
       }
     },
@@ -20264,6 +21638,12 @@
             "state" : "translated",
             "value" : "Hỗ trợ"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Podpora"
+          }
         }
       }
     },
@@ -20351,6 +21731,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nhập tay"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zadat ručně"
           }
         }
       }
@@ -20441,6 +21827,12 @@
             "state" : "translated",
             "value" : "Hướng dẫn làm quen"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Průvodce pro začátečníky"
+          }
         }
       }
     },
@@ -20530,6 +21922,12 @@
             "state" : "translated",
             "value" : "Giới thiệu nhanh những gì bạn có thể làm khi mở ứng dụng lần đầu."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stručný přehled toho, co aplikace umí, při prvním otevření."
+          }
         }
       }
     },
@@ -20617,6 +22015,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Thêm món đầu tiên"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přidat první jídlo"
           }
         }
       }
@@ -20706,6 +22110,12 @@
             "state" : "translated",
             "value" : "Thêm lượt ghé đầu tiên"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přidat první návštěvu"
+          }
         }
       }
     },
@@ -20793,6 +22203,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Đặt lại"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obnovit původní stav"
           }
         }
       }
@@ -20882,6 +22298,12 @@
             "state" : "translated",
             "value" : "Tổng số lượt ghé"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Návštěv celkem"
+          }
         }
       }
     },
@@ -20969,6 +22391,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tổng số lần ghé"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Návštěv celkem"
           }
         }
       }
@@ -21058,6 +22486,12 @@
             "state" : "translated",
             "value" : "Nhận xét chung (trung bình mọi lần ghé)"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Celkové hodnocení (průměr všech návštěv)"
+          }
         }
       }
     },
@@ -21145,6 +22579,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Những quán tuyệt nhất của bạn"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vaše nejlepší restaurace"
           }
         }
       }
@@ -21234,6 +22674,12 @@
             "state" : "translated",
             "value" : "Lần ghé gần nhất"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poslední návštěva"
+          }
         }
       }
     },
@@ -21321,6 +22767,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lần gọi món gần nhất"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poslední objednávka"
           }
         }
       }
@@ -21410,6 +22862,12 @@
             "state" : "translated",
             "value" : "Gợi ý"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Doporučení"
+          }
         }
       }
     },
@@ -21497,6 +22955,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nhận gợi ý"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zobrazit doporučení"
           }
         }
       }
@@ -21586,6 +23050,12 @@
             "state" : "translated",
             "value" : "Đang phân tích gợi ý…"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Analýza doporučení…"
+          }
         }
       }
     },
@@ -21673,6 +23143,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Quán được gợi ý"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Doporučené restaurace"
           }
         }
       }
@@ -21762,6 +23238,12 @@
             "state" : "translated",
             "value" : "Điểm gợi ý"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skóre doporučení"
+          }
         }
       }
     },
@@ -21849,6 +23331,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Các bước thử gợi ý"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Postup testování doporučení"
           }
         }
       }
@@ -21938,6 +23426,12 @@
             "state" : "translated",
             "value" : "Không có quán nào để gợi ý"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Žádné restaurace k doporučení"
+          }
         }
       }
     },
@@ -22025,6 +23519,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hủy"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zrušit"
           }
         }
       }
@@ -22114,6 +23614,12 @@
             "state" : "translated",
             "value" : "Khẩu vị"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chuť"
+          }
         }
       }
     },
@@ -22201,6 +23707,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hồ sơ khẩu vị"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chuťový profil"
           }
         }
       }
@@ -22290,6 +23802,12 @@
             "state" : "translated",
             "value" : "Chụp ảnh"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vyfotit"
+          }
         }
       }
     },
@@ -22377,6 +23895,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mở trong Kakao Map"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otevřít v Kakao Map"
           }
         }
       }
@@ -22466,6 +23990,12 @@
             "state" : "translated",
             "value" : "Danh mục"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kategorie"
+          }
         }
       }
     },
@@ -22553,6 +24083,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Danh mục\n%lld%%"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kategorie\n%lld %%"
           }
         }
       }
@@ -22642,6 +24178,12 @@
             "state" : "translated",
             "value" : "Danh mục (VD: món Hàn, món Hoa)"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kategorie (např. korejská, čínská)"
+          }
         }
       }
     },
@@ -22730,6 +24272,12 @@
             "state" : "translated",
             "value" : "Cài đặt danh mục"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nastavení kategorií"
+          }
         }
       }
     },
@@ -22817,6 +24365,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Biểu tượng danh mục"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ikona kategorie"
           }
         }
       }
@@ -22907,6 +24461,12 @@
             "state" : "translated",
             "value" : "Giao diện cho chữ lớn"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rozložení pro velké písmo"
+          }
         }
       }
     },
@@ -22996,6 +24556,12 @@
             "state" : "translated",
             "value" : "Điều khiển bằng bàn phím"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ovládání klávesnicí"
+          }
         }
       }
     },
@@ -23084,6 +24650,12 @@
             "state" : "translated",
             "value" : "Đặt vào Top 6"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přidat do Top 6"
+          }
         }
       }
     },
@@ -23168,6 +24740,12 @@
           }
         },
         "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Top 6"
+          }
+        },
+        "cs" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Top 6"
@@ -23260,6 +24838,12 @@
             "state" : "translated",
             "value" : "Giới hạn Top 6"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Limit Top 6"
+          }
         }
       }
     },
@@ -23347,6 +24931,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Top 6 tối đa 6 quán (hiện tại: %lld/6)"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Top 6 může obsahovat nejvýše 6 restaurací (nyní: %lld/6)"
           }
         }
       }
@@ -23436,6 +25026,12 @@
             "state" : "translated",
             "value" : "Top 6 tối đa 6 quán. Hãy bỏ một quán khỏi Top 6 rồi thử lại."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Top 6 může obsahovat nejvýše 6 restaurací. Odeberte jinou restauraci z Top 6 a zkuste to znovu."
+          }
         }
       }
     },
@@ -23524,6 +25120,12 @@
             "state" : "translated",
             "value" : "Dữ liệu thử nghiệm"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Testovací data"
+          }
         }
       }
     },
@@ -23611,6 +25213,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Thống kê"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Statistiky"
           }
         }
       }
@@ -23701,6 +25309,12 @@
             "state" : "translated",
             "value" : "Giao diện cho iPhone gập"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rozložení pro skládací iPhone"
+          }
         }
       }
     },
@@ -23790,6 +25404,12 @@
             "state" : "translated",
             "value" : "Trên iPhone gập, màn hình rộng được chia thành hai ngăn."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Na skládacím iPhonu se široká obrazovka rozdělí na dva panely."
+          }
         }
       }
     },
@@ -23877,6 +25497,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Thông tin đánh giá"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Údaje o hodnocení"
           }
         }
       }
@@ -23966,6 +25592,12 @@
             "state" : "translated",
             "value" : "Lịch sử đánh giá (%lld)"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historie hodnocení (%lld)"
+          }
         }
       }
     },
@@ -24053,6 +25685,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Điểm trung bình"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Průměrné hodnocení"
           }
         }
       }
@@ -24142,6 +25780,12 @@
             "state" : "translated",
             "value" : "Mẫu đánh giá\n%lld%%"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vzorec hodnocení\n%lld %%"
+          }
         }
       }
     },
@@ -24230,6 +25874,12 @@
             "state" : "translated",
             "value" : "Sao lưu dữ liệu hiện tại lên iCloud. Bản sao lưu cũ (nếu có) sẽ bị ghi đè."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zazálohuje aktuální data na iCloud. Případná existující záloha bude přepsána."
+          }
         }
       }
     },
@@ -24317,6 +25967,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Từ vị trí hiện tại"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Z aktuální polohy"
           }
         }
       }
@@ -24407,6 +26063,12 @@
             "state" : "translated",
             "value" : "Tiện ích Màn hình chính"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widgety na ploše"
+          }
         }
       }
     },
@@ -24496,6 +26158,12 @@
             "state" : "translated",
             "value" : "VoiceOver đọc đầy đủ các nút và nội dung theo đúng thứ tự."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOver přečte všechna tlačítka a obsah ve správném pořadí."
+          }
         }
       }
     },
@@ -24580,6 +26248,12 @@
           }
         },
         "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "cs" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"
@@ -24672,6 +26346,12 @@
             "state" : "translated",
             "value" : "💰 Tiết kiệm chi phí (1/6 so với Firestore)"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "💰 Úsporné (1/6 nákladů Firestore)"
+          }
         }
       }
     },
@@ -24759,6 +26439,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "🚀 Cấu trúc JSON đơn giản"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🚀 Jednoduchá struktura JSON"
           }
         }
       }
