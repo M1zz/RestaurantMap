@@ -53,3 +53,10 @@ Fixed small bugs for a steadier app
 Можно коротко оценить приложение
 Добавили политику и страницу справки
 Исправили мелкие ошибки
+
+### 앱스토어 (Español)
+
+Envía tus comentarios desde la app
+Cuéntanos qué tal te va con la app
+Añadimos privacidad y página de ayuda
+Corregimos pequeños errores

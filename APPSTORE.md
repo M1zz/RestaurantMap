@@ -391,3 +391,59 @@ Insaeng — ваша личная гастрономическая карта, �
 
 Резервная копия в iCloud
 Записи хранятся на устройстве, а при желании их можно скопировать в ваш iCloud и восстановить оттуда.
+
+## es
+
+### 지원 URL
+
+https://m1zz.github.io/RestaurantMap/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/RestaurantMap/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/RestaurantMap/
+
+### 이름
+
+Insaeng: mapa de restaurantes
+
+### 부제
+
+Puntúa y ordena tus comidas
+
+### 키워드
+
+diario,favoritos,reseñas,gastronomía,foodie,tapas,cafetería,ramen,sushi,asador,lista,cita,comer
+
+### 프로모션 텍스트
+
+Marca en el mapa cada restaurante que visites y guarda tu puntuación y tus notas. Lugar a lugar, irás creando el mapa de las comidas que nunca olvidarás.
+
+### 설명
+
+Marca en el mapa los sitios donde has comido y anota cómo sabía cada comida.
+Insaeng es tu mapa gastronómico personal, hecho solo con los restaurantes que tú eliges.
+
+Un mapa de tus sitios favoritos
+Busca un restaurante o elige un punto en el mapa para guardarlo. Los sitios guardados aparecen como chinchetas y tus seis favoritos tienen insignias de ranking propias.
+
+Visitados, Quiero ir y tu Top 6
+Separa en listas los restaurantes que ya conoces de los que quieres probar, y ordena tus seis mejores.
+
+Cada plato, con sus propios criterios
+El chuletón se juzga por el punto y la jugosidad; el sushi, por el arroz y el pescado; el ramen, por el caldo y los fideos. Valora la intensidad del sabor y la satisfacción con los criterios que encajan con cada tipo de comida. La pizza, el vino y el café tienen su propia valoración, y puedes añadir tus propios tipos de cocina.
+
+Un registro de visitas que crece contigo
+Guarda la fecha, la puntuación, lo que pediste, las fotos y las notas de cada visita. Cada restaurante acumula su número de visitas, su puntuación media y una valoración general del sabor. Si registras el menú, verás de un vistazo los platos estrella y sus precios.
+
+Tu perfil de gustos
+Consulta tu paladar en un gráfico: picante, dulce, salado, graso y sabores naturales.
+
+Recordatorio tras la visita
+Te avisamos para que registres la visita después de ir a un restaurante guardado. Solo funciona si permites el acceso a tu ubicación.
+
+Copia de seguridad en iCloud
+Tus registros se guardan en el dispositivo y, cuando quieras, puedes copiarlos a tu iCloud y restaurarlos desde allí.
