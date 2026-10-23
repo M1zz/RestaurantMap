@@ -34,6 +34,23 @@ enum POICategoryMapper {
         }
     }
 
+    /// 화면에 보여 줄 이름 — 현재 언어로 번역한다. `toKorean` 은 저장값(식당 category)이라 바꾸지 않는다.
+    /// MapKit raw 값과 저장된 한국어 이름을 모두 받는다. 모르는 값(카카오·사용자 입력)은 그대로 둔다.
+    static func displayName(_ rawValue: String) -> String {
+        switch toKorean(rawValue) {
+        case "카페": return String(localized: "카페")
+        case "레스토랑": return String(localized: "레스토랑")
+        case "베이커리": return String(localized: "베이커리")
+        case "브루어리": return String(localized: "브루어리")
+        case "나이트라이프": return String(localized: "나이트라이프")
+        case "와이너리": return String(localized: "와이너리")
+        case "식품마켓": return String(localized: "식품마켓")
+        case "바": return String(localized: "바")
+        case "패스트푸드": return String(localized: "패스트푸드")
+        default: return toKorean(rawValue)
+        }
+    }
+
     static func toIcon(_ rawValue: String) -> String {
         switch rawValue {
         case "MKPOICategoryCafe", "카페":
@@ -306,7 +323,7 @@ struct MapView: View {
                 if !isUsingKakaoSearch {
                     ForEach(nearbyPOIs, id: \.self) { item in
                         if let coord = item.placemark.location?.coordinate {
-                            Annotation(item.name ?? "장소", coordinate: coord) {
+                            Annotation(item.name ?? String(localized: "장소"), coordinate: coord) {
                                 NearbyPOIPinView(mapItem: item) {
                                     logger.info("🎯 POI 마커 탭됨: \(item.name ?? "이름없음")")
                                     selectedPOI = item
@@ -319,7 +336,7 @@ struct MapView: View {
 
                 ForEach(searchResults, id: \.self) { item in
                     if let coord = item.placemark.location?.coordinate {
-                        Annotation(item.name ?? "장소", coordinate: coord) {
+                        Annotation(item.name ?? String(localized: "장소"), coordinate: coord) {
                             SearchResultPinView(mapItem: item) {
                                 selectSearchResult(item)
                             }
@@ -433,7 +450,7 @@ struct MapView: View {
 
                         // 검색 결과가 없을 때 사용자에게 안내
                         if result.documents.isEmpty {
-                            errorMessage = "'\(searchText)' 검색 결과가 없습니다.\n\n다른 키워드로 시도해보세요."
+                            errorMessage = String(localized: "'\(searchText)' 검색 결과가 없습니다.\n\n다른 키워드로 시도해보세요.")
                             showingError = true
                             searchText = ""
                             return
@@ -463,16 +480,16 @@ struct MapView: View {
                         if let kakaoError = error as? KakaoSearchError {
                             switch kakaoError {
                             case .noAPIKey:
-                                errorMessage = "카카오 API 키가 설정되지 않았습니다.\n\nInfo.plist에 KAKAO_REST_API_KEY를 추가해주세요."
+                                errorMessage = String(localized: "카카오 API 키가 설정되지 않았습니다.\n\nInfo.plist에 KAKAO_REST_API_KEY를 추가해주세요.")
                             case .httpError(401):
-                                errorMessage = "카카오 API 인증 실패 (401)\n\nAPI 키가 올바른지 확인해주세요.\n카카오 개발자 콘솔에서 REST API 키를 확인하세요."
+                                errorMessage = String(localized: "카카오 API 인증 실패 (401)\n\nAPI 키가 올바른지 확인해주세요.\n카카오 개발자 콘솔에서 REST API 키를 확인하세요.")
                             case .httpError(let code):
-                                errorMessage = "카카오 API 오류 (HTTP \(code))\n\n잠시 후 다시 시도해주세요."
+                                errorMessage = String(localized: "카카오 API 오류 (HTTP \(code))\n\n잠시 후 다시 시도해주세요.")
                             default:
-                                errorMessage = "검색 중 오류가 발생했습니다.\n\n\(error.localizedDescription)"
+                                errorMessage = String(localized: "검색 중 오류가 발생했습니다.\n\n\(error.localizedDescription)")
                             }
                         } else {
-                            errorMessage = "검색 중 오류가 발생했습니다.\n\n인터넷 연결을 확인해주세요."
+                            errorMessage = String(localized: "검색 중 오류가 발생했습니다.\n\n인터넷 연결을 확인해주세요.")
                         }
                         showingError = true
                     }
@@ -489,7 +506,7 @@ struct MapView: View {
                     logger.error("검색 실패: \(error.localizedDescription)")
 
                     // 사용자에게 에러 알림
-                    errorMessage = "검색 실패\n\n\(error.localizedDescription)\n\n인터넷 연결을 확인하거나\n다른 키워드로 시도해주세요."
+                    errorMessage = String(localized: "검색 실패\n\n\(error.localizedDescription)\n\n인터넷 연결을 확인하거나\n다른 키워드로 시도해주세요.")
                     showingError = true
                     return
                 }
@@ -645,11 +662,11 @@ struct MapView: View {
                         switch kakaoError {
                         case .noAPIKey:
                             // API 키 누락은 한 번만 알림
-                            errorMessage = "카카오 API 키가 설정되지 않았습니다.\n\n좌측 상단에서 Apple Maps로 전환하거나,\nInfo.plist에 KAKAO_REST_API_KEY를 추가해주세요."
+                            errorMessage = String(localized: "카카오 API 키가 설정되지 않았습니다.\n\n좌측 상단에서 Apple Maps로 전환하거나,\nInfo.plist에 KAKAO_REST_API_KEY를 추가해주세요.")
                             showingError = true
                         case .httpError(401):
                             // 401 에러도 한 번만 알림
-                            errorMessage = "카카오 API 인증 실패\n\nApple Maps 모드로 전환하거나,\nAPI 키를 확인해주세요."
+                            errorMessage = String(localized: "카카오 API 인증 실패\n\nApple Maps 모드로 전환하거나,\nAPI 키를 확인해주세요.")
                             showingError = true
                         default:
                             // 다른 에러는 로그만 (UI 알림 없음)
@@ -987,7 +1004,7 @@ struct SearchResultsView: View {
                         onSelect(item)
                     } label: {
                         VStack(alignment: .leading, spacing: 4) {
-                            Text(item.name ?? "이름 없음")
+                            Text(item.name ?? String(localized: "이름 없음"))
                                 .font(.headline)
                                 .foregroundStyle(.primary)
 
@@ -998,7 +1015,7 @@ struct SearchResultsView: View {
                             }
 
                             if let category = item.pointOfInterestCategory?.rawValue {
-                                Text(POICategoryMapper.toKorean(category))
+                                Text(POICategoryMapper.displayName(category))
                                     .font(.caption)
                                     .padding(.horizontal, 8)
                                     .padding(.vertical, 2)
@@ -1117,12 +1134,12 @@ struct POIDetailView: View {
             VStack(alignment: .leading, spacing: 20) {
                 // 장소 이름
                 VStack(alignment: .leading, spacing: 8) {
-                    Text(mapItem.name ?? "이름 없음")
+                    Text(mapItem.name ?? String(localized: "이름 없음"))
                         .font(.title2)
                         .fontWeight(.bold)
 
                     if let category = mapItem.pointOfInterestCategory?.rawValue {
-                        Text(POICategoryMapper.toKorean(category))
+                        Text(POICategoryMapper.displayName(category))
                             .font(.subheadline)
                             .padding(.horizontal, 12)
                             .padding(.vertical, 4)
@@ -1712,15 +1729,15 @@ enum KakaoSearchError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .noAPIKey:
-            return "카카오 REST API 키가 설정되지 않았습니다"
+            return String(localized: "카카오 REST API 키가 설정되지 않았습니다")
         case .invalidURL:
-            return "잘못된 URL입니다"
+            return String(localized: "잘못된 URL입니다")
         case .invalidResponse:
-            return "잘못된 응답입니다"
+            return String(localized: "잘못된 응답입니다")
         case .httpError(let code):
-            return "HTTP 오류: \(code)"
+            return String(localized: "HTTP 오류: \(code)")
         case .decodingError(let error):
-            return "디코딩 오류: \(error.localizedDescription)"
+            return String(localized: "디코딩 오류: \(error.localizedDescription)")
         }
     }
 }

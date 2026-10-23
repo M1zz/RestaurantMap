@@ -381,11 +381,13 @@ struct SimpleRecommendationView: View {
 
                 // 사용자 평가 데이터 생성
                 let userReviews = generateUserReviews(category: category, avgRating: avgRating)
+                let districts: [String] = [String(localized: "강남구"), String(localized: "서초구"), String(localized: "용산구"), String(localized: "마포구"), String(localized: "종로구")]
+                let district = districts.randomElement()!
 
                 results.append(RecommendedRestaurantItem(
                     name: generateRestaurantName(category: category, index: i),
                     category: category.displayName,
-                    address: "서울시 \(["강남구", "서초구", "용산구", "마포구", "종로구"].randomElement()!)",
+                    address: String(localized: "서울시 \(district)"),
                     predictedRating: predictedRating,
                     matchScore: matchScore,
                     reason: generateDetailedReason(
@@ -406,15 +408,15 @@ struct SimpleRecommendationView: View {
     private func generateRestaurantName(category: FoodCategory, index: Int) -> String {
         // 카테고리 이름을 키로 사용
         let names: [String: [String]] = [
-            "일반": ["미식가의 정원", "맛있는 이야기", "행복한 밥상", "정성담은 한끼", "계절의 맛"],
-            "스테이크": ["프라임 스테이크하우스", "더 블랙 앵거스", "고기공방", "스테이크 마스터", "미트 하우스"],
-            "초밥": ["스시 오마카세", "이타마에 스시", "도쿄스시", "스시장인", "오마카세 명가"],
-            "라멘": ["라멘 이치방", "메구로 라멘", "츠케멘 전문점", "하카타 라멘", "미소라멘"],
-            "피자": ["나폴리 피자", "피자 마르게리따", "정통 화덕피자", "피자 장인", "피제리아"],
-            "와인": ["와인바 소믈리에", "보르도 와인바", "그랑크뤼", "와인 앤 다인", "빈티지 와인바"],
-            "커피": ["스페셜티 커피", "로스터스 커피", "핸드드립 전문점", "커피 공작소", "빈즈 커피"]
+            "일반": [String(localized: "미식가의 정원"), String(localized: "맛있는 이야기"), String(localized: "행복한 밥상"), String(localized: "정성담은 한끼"), String(localized: "계절의 맛")],
+            "스테이크": [String(localized: "프라임 스테이크하우스"), String(localized: "더 블랙 앵거스"), String(localized: "고기공방"), String(localized: "스테이크 마스터"), String(localized: "미트 하우스")],
+            "초밥": [String(localized: "스시 오마카세"), String(localized: "이타마에 스시"), String(localized: "도쿄스시"), String(localized: "스시장인"), String(localized: "오마카세 명가")],
+            "라멘": [String(localized: "라멘 이치방"), String(localized: "메구로 라멘"), String(localized: "츠케멘 전문점"), String(localized: "하카타 라멘"), String(localized: "미소라멘")],
+            "피자": [String(localized: "나폴리 피자"), String(localized: "피자 마르게리따"), String(localized: "정통 화덕피자"), String(localized: "피자 장인"), String(localized: "피제리아")],
+            "와인": [String(localized: "와인바 소믈리에"), String(localized: "보르도 와인바"), String(localized: "그랑크뤼"), String(localized: "와인 앤 다인"), String(localized: "빈티지 와인바")],
+            "커피": [String(localized: "스페셜티 커피"), String(localized: "로스터스 커피"), String(localized: "핸드드립 전문점"), String(localized: "커피 공작소"), String(localized: "빈즈 커피")]
         ]
-        return names[category.name]?[index % 5] ?? "추천 식당 \(index + 1)"
+        return names[category.name]?[index % 5] ?? String(localized: "추천 식당 \(index + 1)")
     }
 
     private func generateDetailedReason(
@@ -423,11 +425,12 @@ struct SimpleRecommendationView: View {
         restaurantCount: Int,
         bestRestaurant: String
     ) -> String {
+        let matchPercent = 87.formatted(.percent)
         let reasons = [
-            "'\(bestRestaurant)'와 비슷한 스타일의 \(category.displayName) 맛집",
-            "당신이 평가한 \(restaurantCount)곳의 \(category.displayName) 데이터 분석 결과",
-            "평균 \(avgRating)점을 준 \(category.displayName) 취향과 87% 일치",
-            "\(bestRestaurant)을/를 좋아하는 사용자들이 추천"
+            String(localized: "'\(bestRestaurant)'와 비슷한 스타일의 \(category.displayName) 맛집"),
+            String(localized: "당신이 평가한 \(restaurantCount)곳의 \(category.displayName) 데이터 분석 결과"),
+            String(localized: "평균 \(avgRating)점을 준 \(category.displayName) 취향과 \(matchPercent) 일치"),
+            String(localized: "\(bestRestaurant)을/를 좋아하는 사용자들이 추천")
         ]
         return reasons.randomElement()!
     }
@@ -643,11 +646,11 @@ struct RecommendationDetailView: View {
 
                         // 점수 목록
                         VStack(spacing: 8) {
-                            ReviewScoreRow(title: "맛", score: recommendation.userReviews.taste, color: .red)
-                            ReviewScoreRow(title: "분위기", score: recommendation.userReviews.atmosphere, color: .purple)
-                            ReviewScoreRow(title: "가성비", score: recommendation.userReviews.valueForMoney, color: .green)
-                            ReviewScoreRow(title: "서비스", score: recommendation.userReviews.service, color: .blue)
-                            ReviewScoreRow(title: "청결도", score: recommendation.userReviews.cleanliness, color: .orange)
+                            ReviewScoreRow(title: String(localized: "맛"), score: recommendation.userReviews.taste, color: .red)
+                            ReviewScoreRow(title: String(localized: "분위기"), score: recommendation.userReviews.atmosphere, color: .purple)
+                            ReviewScoreRow(title: String(localized: "가성비"), score: recommendation.userReviews.valueForMoney, color: .green)
+                            ReviewScoreRow(title: String(localized: "서비스"), score: recommendation.userReviews.service, color: .blue)
+                            ReviewScoreRow(title: String(localized: "청결도"), score: recommendation.userReviews.cleanliness, color: .orange)
                         }
                     }
                     .padding()
@@ -1053,7 +1056,7 @@ struct UserReviewsRadarChartView: View {
                 }
 
                 // 레이블
-                let labels = ["맛", "분위기", "가성비", "서비스", "청결도"]
+                let labels = [String(localized: "맛"), String(localized: "분위기"), String(localized: "가성비"), String(localized: "서비스"), String(localized: "청결도")]
                 ForEach(0..<5) { index in
                     let angle = Angle(degrees: Double(index) * 72 - 90)
                     let labelDistance = radius + 20

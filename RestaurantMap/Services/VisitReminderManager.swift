@@ -227,8 +227,8 @@ class VisitReminderManager: NSObject, CLLocationManagerDelegate {
         cancelScheduledNotification()
 
         let content = UNMutableNotificationContent()
-        content.title = "오늘 방문은 어떠셨나요? 🍽️"
-        content.body = "\(restaurantName)에서의 식사는 만족스러우셨나요? 방문 기록을 남겨보세요!"
+        content.title = String(localized: "오늘 방문은 어떠셨나요? 🍽️")
+        content.body = String(localized: "\(restaurantName)에서의 식사는 만족스러우셨나요? 방문 기록을 남겨보세요!")
         content.sound = .default
         content.categoryIdentifier = "VISIT_REMINDER"
         content.userInfo = ["restaurantName": restaurantName]

@@ -209,7 +209,7 @@ struct SettingsView: View {
             let success = await backupService.backup(modelContainer: container)
             await MainActor.run {
                 isSuccess = success
-                resultMessage = success ? "백업이 완료되었습니다." : (backupService.errorMessage ?? "백업에 실패했습니다.")
+                resultMessage = success ? String(localized: "백업이 완료되었습니다.") : (backupService.errorMessage ?? String(localized: "백업에 실패했습니다."))
                 showResultAlert = true
             }
         }
@@ -222,7 +222,7 @@ struct SettingsView: View {
             let success = await backupService.restore(modelContainer: container)
             await MainActor.run {
                 isSuccess = success
-                resultMessage = success ? "복구가 완료되었습니다." : (backupService.errorMessage ?? "복구에 실패했습니다.")
+                resultMessage = success ? String(localized: "복구가 완료되었습니다.") : (backupService.errorMessage ?? String(localized: "복구에 실패했습니다."))
                 showResultAlert = true
             }
         }
@@ -235,7 +235,7 @@ struct SettingsView: View {
             let success = await backupService.resetLocalData(modelContainer: container)
             await MainActor.run {
                 isSuccess = success
-                resultMessage = success ? "모든 데이터가 삭제되었습니다." : (backupService.errorMessage ?? "초기화에 실패했습니다.")
+                resultMessage = success ? String(localized: "모든 데이터가 삭제되었습니다.") : (backupService.errorMessage ?? String(localized: "초기화에 실패했습니다."))
                 showResultAlert = true
             }
         }

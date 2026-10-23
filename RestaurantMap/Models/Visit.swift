@@ -214,161 +214,161 @@ final class Visit {
     // 일반 평가 데이터
     private var generalIntensityData: [(String, Double)] {
         [
-            ("맵기", spicy ?? 5.0),
-            ("진한맛", boldness ?? 5.0),
-            ("단맛", sweetness ?? 5.0),
-            ("짠맛", saltiness ?? 5.0),
-            ("기름진", richness ?? 5.0),
-            ("본연의맛", naturalTaste ?? 5.0)
+            (String(localized: "맵기"), spicy ?? 5.0),
+            (String(localized: "진한맛"), boldness ?? 5.0),
+            (String(localized: "단맛"), sweetness ?? 5.0),
+            (String(localized: "짠맛"), saltiness ?? 5.0),
+            (String(localized: "기름진"), richness ?? 5.0),
+            (String(localized: "본연의맛"), naturalTaste ?? 5.0)
         ]
     }
 
     private var generalAppropriatenessData: [(String, Double)] {
         [
-            ("맵기", Double(spicyAppropriate ?? 3) * 2),
-            ("진한맛", Double(boldnessAppropriate ?? 3) * 2),
-            ("단맛", Double(sweetnessAppropriate ?? 3) * 2),
-            ("짠맛", Double(saltinessAppropriate ?? 3) * 2),
-            ("기름진", Double(richnessAppropriate ?? 3) * 2),
-            ("본연의맛", Double(naturalTasteAppropriate ?? 3) * 2)
+            (String(localized: "맵기"), Double(spicyAppropriate ?? 3) * 2),
+            (String(localized: "진한맛"), Double(boldnessAppropriate ?? 3) * 2),
+            (String(localized: "단맛"), Double(sweetnessAppropriate ?? 3) * 2),
+            (String(localized: "짠맛"), Double(saltinessAppropriate ?? 3) * 2),
+            (String(localized: "기름진"), Double(richnessAppropriate ?? 3) * 2),
+            (String(localized: "본연의맛"), Double(naturalTasteAppropriate ?? 3) * 2)
         ]
     }
 
     // 스테이크 평가 데이터
     private var steakIntensityData: [(String, Double)] {
         [
-            ("굽기", steakDoneness ?? 5.0),
-            ("육즙", steakJuiciness ?? 5.0),
-            ("부드러움", steakTenderness ?? 5.0),
-            ("간", steakSeasoning ?? 5.0),
-            ("육향", steakFlavor ?? 5.0),
-            ("마블링", steakMarbling ?? 5.0)
+            (String(localized: "굽기"), steakDoneness ?? 5.0),
+            (String(localized: "육즙"), steakJuiciness ?? 5.0),
+            (String(localized: "부드러움"), steakTenderness ?? 5.0),
+            (String(localized: "간"), steakSeasoning ?? 5.0),
+            (String(localized: "육향"), steakFlavor ?? 5.0),
+            (String(localized: "마블링"), steakMarbling ?? 5.0)
         ]
     }
 
     private var steakAppropriatenessData: [(String, Double)] {
         [
-            ("굽기", Double(steakDonenessAppropriate ?? 3) * 2),
-            ("육즙", Double(steakJuicinessAppropriate ?? 3) * 2),
-            ("부드러움", Double(steakTendernessAppropriate ?? 3) * 2),
-            ("간", Double(steakSeasoningAppropriate ?? 3) * 2),
-            ("육향", Double(steakFlavorAppropriate ?? 3) * 2),
-            ("마블링", Double(steakMarblingAppropriate ?? 3) * 2)
+            (String(localized: "굽기"), Double(steakDonenessAppropriate ?? 3) * 2),
+            (String(localized: "육즙"), Double(steakJuicinessAppropriate ?? 3) * 2),
+            (String(localized: "부드러움"), Double(steakTendernessAppropriate ?? 3) * 2),
+            (String(localized: "간"), Double(steakSeasoningAppropriate ?? 3) * 2),
+            (String(localized: "육향"), Double(steakFlavorAppropriate ?? 3) * 2),
+            (String(localized: "마블링"), Double(steakMarblingAppropriate ?? 3) * 2)
         ]
     }
 
     // 초밥 평가 데이터
     private var sushiIntensityData: [(String, Double)] {
         [
-            ("샤리(밥)", sushiShari ?? 5.0),
-            ("네타(재료)", sushiNeta ?? 5.0),
-            ("와사비", sushiWasabi ?? 5.0),
-            ("밸런스", sushiBalance ?? 5.0),
-            ("쥐기", sushiGrip ?? 5.0),
-            ("온도", sushiTemperature ?? 5.0)
+            (String(localized: "샤리(밥)"), sushiShari ?? 5.0),
+            (String(localized: "네타(재료)"), sushiNeta ?? 5.0),
+            (String(localized: "와사비"), sushiWasabi ?? 5.0),
+            (String(localized: "밸런스"), sushiBalance ?? 5.0),
+            (String(localized: "쥐기"), sushiGrip ?? 5.0),
+            (String(localized: "온도"), sushiTemperature ?? 5.0)
         ]
     }
 
     private var sushiAppropriatenessData: [(String, Double)] {
         [
-            ("샤리(밥)", Double(sushiShariAppropriate ?? 3) * 2),
-            ("네타(재료)", Double(sushiNetaAppropriate ?? 3) * 2),
-            ("와사비", Double(sushiWasabiAppropriate ?? 3) * 2),
-            ("밸런스", Double(sushiBalanceAppropriate ?? 3) * 2),
-            ("쥐기", Double(sushiGripAppropriate ?? 3) * 2),
-            ("온도", Double(sushiTemperatureAppropriate ?? 3) * 2)
+            (String(localized: "샤리(밥)"), Double(sushiShariAppropriate ?? 3) * 2),
+            (String(localized: "네타(재료)"), Double(sushiNetaAppropriate ?? 3) * 2),
+            (String(localized: "와사비"), Double(sushiWasabiAppropriate ?? 3) * 2),
+            (String(localized: "밸런스"), Double(sushiBalanceAppropriate ?? 3) * 2),
+            (String(localized: "쥐기"), Double(sushiGripAppropriate ?? 3) * 2),
+            (String(localized: "온도"), Double(sushiTemperatureAppropriate ?? 3) * 2)
         ]
     }
 
     // 라멘 평가 데이터
     private var ramenIntensityData: [(String, Double)] {
         [
-            ("국물", ramenBroth ?? 5.0),
-            ("면발", ramenNoodle ?? 5.0),
-            ("차슈", ramenChashu ?? 5.0),
-            ("토핑", ramenTopping ?? 5.0),
-            ("온도", ramenTemperature ?? 5.0),
-            ("밸런스", ramenBalance ?? 5.0)
+            (String(localized: "국물"), ramenBroth ?? 5.0),
+            (String(localized: "면발"), ramenNoodle ?? 5.0),
+            (String(localized: "차슈"), ramenChashu ?? 5.0),
+            (String(localized: "토핑"), ramenTopping ?? 5.0),
+            (String(localized: "온도"), ramenTemperature ?? 5.0),
+            (String(localized: "밸런스"), ramenBalance ?? 5.0)
         ]
     }
 
     private var ramenAppropriatenessData: [(String, Double)] {
         [
-            ("국물", Double(ramenBrothAppropriate ?? 3) * 2),
-            ("면발", Double(ramenNoodleAppropriate ?? 3) * 2),
-            ("차슈", Double(ramenChashuAppropriate ?? 3) * 2),
-            ("토핑", Double(ramenToppingAppropriate ?? 3) * 2),
-            ("온도", Double(ramenTemperatureAppropriate ?? 3) * 2),
-            ("밸런스", Double(ramenBalanceAppropriate ?? 3) * 2)
+            (String(localized: "국물"), Double(ramenBrothAppropriate ?? 3) * 2),
+            (String(localized: "면발"), Double(ramenNoodleAppropriate ?? 3) * 2),
+            (String(localized: "차슈"), Double(ramenChashuAppropriate ?? 3) * 2),
+            (String(localized: "토핑"), Double(ramenToppingAppropriate ?? 3) * 2),
+            (String(localized: "온도"), Double(ramenTemperatureAppropriate ?? 3) * 2),
+            (String(localized: "밸런스"), Double(ramenBalanceAppropriate ?? 3) * 2)
         ]
     }
 
     // 피자 평가 데이터
     private var pizzaIntensityData: [(String, Double)] {
         [
-            ("도우", pizzaDough ?? 5.0),
-            ("소스", pizzaSauce ?? 5.0),
-            ("치즈", pizzaCheese ?? 5.0),
-            ("굽기", pizzaBaking ?? 5.0),
-            ("토핑", pizzaTopping ?? 5.0),
-            ("밸런스", pizzaBalance ?? 5.0)
+            (String(localized: "도우"), pizzaDough ?? 5.0),
+            (String(localized: "소스"), pizzaSauce ?? 5.0),
+            (String(localized: "치즈"), pizzaCheese ?? 5.0),
+            (String(localized: "굽기"), pizzaBaking ?? 5.0),
+            (String(localized: "토핑"), pizzaTopping ?? 5.0),
+            (String(localized: "밸런스"), pizzaBalance ?? 5.0)
         ]
     }
 
     private var pizzaAppropriatenessData: [(String, Double)] {
         [
-            ("도우", Double(pizzaDoughAppropriate ?? 3) * 2),
-            ("소스", Double(pizzaSauceAppropriate ?? 3) * 2),
-            ("치즈", Double(pizzaCheeseAppropriate ?? 3) * 2),
-            ("굽기", Double(pizzaBakingAppropriate ?? 3) * 2),
-            ("토핑", Double(pizzaToppingAppropriate ?? 3) * 2),
-            ("밸런스", Double(pizzaBalanceAppropriate ?? 3) * 2)
+            (String(localized: "도우"), Double(pizzaDoughAppropriate ?? 3) * 2),
+            (String(localized: "소스"), Double(pizzaSauceAppropriate ?? 3) * 2),
+            (String(localized: "치즈"), Double(pizzaCheeseAppropriate ?? 3) * 2),
+            (String(localized: "굽기"), Double(pizzaBakingAppropriate ?? 3) * 2),
+            (String(localized: "토핑"), Double(pizzaToppingAppropriate ?? 3) * 2),
+            (String(localized: "밸런스"), Double(pizzaBalanceAppropriate ?? 3) * 2)
         ]
     }
 
     // 와인 평가 데이터
     private var wineIntensityData: [(String, Double)] {
         [
-            ("바디", wineBody ?? 5.0),
-            ("타닌", wineTannin ?? 5.0),
-            ("산도", wineAcidity ?? 5.0),
-            ("아로마", wineAroma ?? 5.0),
-            ("피니시", wineFinish ?? 5.0),
-            ("밸런스", wineBalance ?? 5.0)
+            (String(localized: "바디"), wineBody ?? 5.0),
+            (String(localized: "타닌"), wineTannin ?? 5.0),
+            (String(localized: "산도"), wineAcidity ?? 5.0),
+            (String(localized: "아로마"), wineAroma ?? 5.0),
+            (String(localized: "피니시"), wineFinish ?? 5.0),
+            (String(localized: "밸런스"), wineBalance ?? 5.0)
         ]
     }
 
     private var wineAppropriatenessData: [(String, Double)] {
         [
-            ("바디", Double(wineBodyAppropriate ?? 3) * 2),
-            ("타닌", Double(wineTanninAppropriate ?? 3) * 2),
-            ("산도", Double(wineAcidityAppropriate ?? 3) * 2),
-            ("아로마", Double(wineAromaAppropriate ?? 3) * 2),
-            ("피니시", Double(wineFinishAppropriate ?? 3) * 2),
-            ("밸런스", Double(wineBalanceAppropriate ?? 3) * 2)
+            (String(localized: "바디"), Double(wineBodyAppropriate ?? 3) * 2),
+            (String(localized: "타닌"), Double(wineTanninAppropriate ?? 3) * 2),
+            (String(localized: "산도"), Double(wineAcidityAppropriate ?? 3) * 2),
+            (String(localized: "아로마"), Double(wineAromaAppropriate ?? 3) * 2),
+            (String(localized: "피니시"), Double(wineFinishAppropriate ?? 3) * 2),
+            (String(localized: "밸런스"), Double(wineBalanceAppropriate ?? 3) * 2)
         ]
     }
 
     // 커피 평가 데이터
     private var coffeeIntensityData: [(String, Double)] {
         [
-            ("산미", coffeeAcidity ?? 5.0),
-            ("바디", coffeeBody ?? 5.0),
-            ("향미", coffeeFlavor ?? 5.0),
-            ("후미", coffeeAftertaste ?? 5.0),
-            ("단맛", coffeeSweetness ?? 5.0),
-            ("밸런스", coffeeBalance ?? 5.0)
+            (String(localized: "산미"), coffeeAcidity ?? 5.0),
+            (String(localized: "바디"), coffeeBody ?? 5.0),
+            (String(localized: "향미"), coffeeFlavor ?? 5.0),
+            (String(localized: "후미"), coffeeAftertaste ?? 5.0),
+            (String(localized: "단맛"), coffeeSweetness ?? 5.0),
+            (String(localized: "밸런스"), coffeeBalance ?? 5.0)
         ]
     }
 
     private var coffeeAppropriatenessData: [(String, Double)] {
         [
-            ("산미", Double(coffeeAcidityAppropriate ?? 3) * 2),
-            ("바디", Double(coffeeBodyAppropriate ?? 3) * 2),
-            ("향미", Double(coffeeFlavorAppropriate ?? 3) * 2),
-            ("후미", Double(coffeeAftertasteAppropriate ?? 3) * 2),
-            ("단맛", Double(coffeeSweetnessAppropriate ?? 3) * 2),
-            ("밸런스", Double(coffeeBalanceAppropriate ?? 3) * 2)
+            (String(localized: "산미"), Double(coffeeAcidityAppropriate ?? 3) * 2),
+            (String(localized: "바디"), Double(coffeeBodyAppropriate ?? 3) * 2),
+            (String(localized: "향미"), Double(coffeeFlavorAppropriate ?? 3) * 2),
+            (String(localized: "후미"), Double(coffeeAftertasteAppropriate ?? 3) * 2),
+            (String(localized: "단맛"), Double(coffeeSweetnessAppropriate ?? 3) * 2),
+            (String(localized: "밸런스"), Double(coffeeBalanceAppropriate ?? 3) * 2)
         ]
     }
 }

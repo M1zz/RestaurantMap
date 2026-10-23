@@ -25,12 +25,20 @@ struct RealtimeRecommendationView: View {
 
         var id: String { rawValue }
 
+        /// 화면에 보여 줄 이름 (rawValue 는 식별자로만 쓴다)
+        var title: String {
+            switch self {
+            case .collaborative: return String(localized: "비슷한 입맛")
+            case .hybrid: return String(localized: "종합 추천")
+            }
+        }
+
         var description: String {
             switch self {
             case .collaborative:
-                return "나와 입맛이 비슷한 사람들의 선택"
+                return String(localized: "나와 입맛이 비슷한 사람들의 선택")
             case .hybrid:
-                return "평점, 만족도, 거리를 종합 고려"
+                return String(localized: "평점, 만족도, 거리를 종합 고려")
             }
         }
 
@@ -118,7 +126,7 @@ struct RealtimeRecommendationView: View {
                         VStack(spacing: 8) {
                             Image(systemName: mode.icon)
                                 .font(.title2)
-                            Text(mode.rawValue)
+                            Text(mode.title)
                                 .font(.caption)
                                 .fontWeight(.semibold)
                         }
@@ -298,7 +306,7 @@ struct RealtimeRecommendationView: View {
 
         } catch {
             logger.error("Failed to load recommendations: \(error.localizedDescription)")
-            errorMessage = "추천을 불러오는데 실패했습니다: \(error.localizedDescription)"
+            errorMessage = String(localized: "추천을 불러오는데 실패했습니다: \(error.localizedDescription)")
         }
     }
 }
@@ -357,15 +365,15 @@ struct RealtimeSyncDataView: View {
                             VStack(alignment: .leading, spacing: 8) {
                                 InfoRow(
                                     icon: "person.fill",
-                                    text: "취향 프로필: \(tasteProfile != nil ? "있음" : "없음")"
+                                    text: String(localized: "취향 프로필: \(tasteProfile != nil ? String(localized: "있음") : String(localized: "없음"))")
                                 )
                                 InfoRow(
                                     icon: "fork.knife",
-                                    text: "식당: \(restaurants.count)개"
+                                    text: String(localized: "식당: \(restaurants.count)개")
                                 )
                                 InfoRow(
                                     icon: "calendar",
-                                    text: "방문 기록: \(restaurants.flatMap { $0.visits ?? [] }.count)개"
+                                    text: String(localized: "방문 기록: \(restaurants.flatMap { $0.visits ?? [] }.count)개")
                                 )
                             }
                             .padding()
@@ -481,7 +489,7 @@ struct RealtimeSyncDataView: View {
         syncProgress = 0.0
 
         do {
-            syncMessage = "Realtime Database에 업로드 중..."
+            syncMessage = String(localized: "Realtime Database에 업로드 중...")
             syncProgress = 0.3
 
             try await FirebaseRealtimeService.shared.syncAllData(
@@ -490,12 +498,12 @@ struct RealtimeSyncDataView: View {
             )
 
             syncProgress = 1.0
-            syncMessage = "✅ 업로드 완료!"
+            syncMessage = String(localized: "✅ 업로드 완료!")
 
             try await Task.sleep(nanoseconds: 2_000_000_000)
 
         } catch {
-            syncMessage = "❌ 업로드 실패: \(error.localizedDescription)"
+            syncMessage = String(localized: "❌ 업로드 실패: \(error.localizedDescription)")
         }
 
         isSyncing = false
@@ -507,19 +515,19 @@ struct RealtimeSyncDataView: View {
         syncProgress = 0.0
 
         do {
-            syncMessage = "더미 사용자 및 식당 생성 중..."
+            syncMessage = String(localized: "더미 사용자 및 식당 생성 중...")
             syncProgress = 0.2
 
             try await FirebaseRealtimeService.shared.generateDummyData()
 
             syncProgress = 1.0
-            syncMessage = "✅ 더미 데이터 생성 완료!"
+            syncMessage = String(localized: "✅ 더미 데이터 생성 완료!")
 
             try await Task.sleep(nanoseconds: 2_000_000_000)
             dismiss()
 
         } catch {
-            syncMessage = "❌ 생성 실패: \(error.localizedDescription)"
+            syncMessage = String(localized: "❌ 생성 실패: \(error.localizedDescription)")
         }
 
         isGeneratingDummy = false

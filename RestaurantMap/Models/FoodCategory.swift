@@ -10,8 +10,14 @@ struct FoodCategory: Codable, Identifiable, Hashable {
     let isBuiltIn: Bool
     let evaluationType: EvaluationType
 
+    /// 화면 표시용 이름. 기본 카테고리는 현지화하고, 사용자가 만든 카테고리는 입력한 그대로 보여 준다.
+    /// `name` 은 식별자(딕셔너리 키 등)로도 쓰이므로 바꾸지 않는다.
+    var localizedName: String {
+        isBuiltIn ? String(localized: String.LocalizationValue(name)) : name
+    }
+
     var displayName: String {
-        "\(icon) \(name)"
+        "\(icon) \(localizedName)"
     }
 
     // Hashable conformance
@@ -39,66 +45,66 @@ enum EvaluationType: String, Codable {
         switch self {
         case .general:
             return [
-                EvaluationAttribute(emoji: "🌶️", title: "맵기", subtitle: "순한 ↔ 매운"),
-                EvaluationAttribute(emoji: "💪", title: "진한맛", subtitle: "담백 ↔ 진한"),
-                EvaluationAttribute(emoji: "🍯", title: "단맛", subtitle: "안좋아함 ↔ 좋아함"),
-                EvaluationAttribute(emoji: "🧂", title: "짠맛", subtitle: "싱거움 ↔ 짭짤"),
-                EvaluationAttribute(emoji: "🥓", title: "기름진", subtitle: "담백 ↔ 고소"),
-                EvaluationAttribute(emoji: "🌿", title: "본연의맛", subtitle: "양념 ↔ 재료맛")
+                EvaluationAttribute(emoji: "🌶️", title: String(localized: "맵기"), subtitle: String(localized: "순한 ↔ 매운")),
+                EvaluationAttribute(emoji: "💪", title: String(localized: "진한맛"), subtitle: String(localized: "담백 ↔ 진한")),
+                EvaluationAttribute(emoji: "🍯", title: String(localized: "단맛"), subtitle: String(localized: "안좋아함 ↔ 좋아함")),
+                EvaluationAttribute(emoji: "🧂", title: String(localized: "짠맛"), subtitle: String(localized: "싱거움 ↔ 짭짤")),
+                EvaluationAttribute(emoji: "🥓", title: String(localized: "기름진"), subtitle: String(localized: "담백 ↔ 고소")),
+                EvaluationAttribute(emoji: "🌿", title: String(localized: "본연의맛"), subtitle: String(localized: "양념 ↔ 재료맛"))
             ]
         case .steak:
             return [
-                EvaluationAttribute(emoji: "🔥", title: "굽기", subtitle: "레어 ↔ 웰던"),
-                EvaluationAttribute(emoji: "🥩", title: "육즙", subtitle: "퍽퍽 ↔ 촉촉"),
-                EvaluationAttribute(emoji: "✨", title: "부드러움", subtitle: "질김 ↔ 부드러움"),
-                EvaluationAttribute(emoji: "🧂", title: "간", subtitle: "싱거움 ↔ 짭짤"),
-                EvaluationAttribute(emoji: "🌿", title: "육향", subtitle: "약함 ↔ 강함"),
-                EvaluationAttribute(emoji: "🍖", title: "마블링", subtitle: "적음 ↔ 많음")
+                EvaluationAttribute(emoji: "🔥", title: String(localized: "굽기"), subtitle: String(localized: "레어 ↔ 웰던")),
+                EvaluationAttribute(emoji: "🥩", title: String(localized: "육즙"), subtitle: String(localized: "퍽퍽 ↔ 촉촉")),
+                EvaluationAttribute(emoji: "✨", title: String(localized: "부드러움"), subtitle: String(localized: "질김 ↔ 부드러움")),
+                EvaluationAttribute(emoji: "🧂", title: String(localized: "간"), subtitle: String(localized: "싱거움 ↔ 짭짤")),
+                EvaluationAttribute(emoji: "🌿", title: String(localized: "육향"), subtitle: String(localized: "약함 ↔ 강함")),
+                EvaluationAttribute(emoji: "🍖", title: String(localized: "마블링"), subtitle: String(localized: "적음 ↔ 많음"))
             ]
         case .sushi:
             return [
-                EvaluationAttribute(emoji: "🍚", title: "샤리(밥)", subtitle: "흐물 ↔ 단단"),
-                EvaluationAttribute(emoji: "🐟", title: "네타(재료)", subtitle: "신선도"),
-                EvaluationAttribute(emoji: "🌿", title: "와사비", subtitle: "약함 ↔ 강함"),
-                EvaluationAttribute(emoji: "⚖️", title: "밸런스", subtitle: "불균형 ↔ 조화"),
-                EvaluationAttribute(emoji: "✋", title: "쥐기", subtitle: "풀림 ↔ 결속"),
-                EvaluationAttribute(emoji: "🌡️", title: "온도", subtitle: "차가움 ↔ 따뜻함")
+                EvaluationAttribute(emoji: "🍚", title: String(localized: "샤리(밥)"), subtitle: String(localized: "흐물 ↔ 단단")),
+                EvaluationAttribute(emoji: "🐟", title: String(localized: "네타(재료)"), subtitle: String(localized: "신선도")),
+                EvaluationAttribute(emoji: "🌿", title: String(localized: "와사비"), subtitle: String(localized: "약함 ↔ 강함")),
+                EvaluationAttribute(emoji: "⚖️", title: String(localized: "밸런스"), subtitle: String(localized: "불균형 ↔ 조화")),
+                EvaluationAttribute(emoji: "✋", title: String(localized: "쥐기"), subtitle: String(localized: "풀림 ↔ 결속")),
+                EvaluationAttribute(emoji: "🌡️", title: String(localized: "온도"), subtitle: String(localized: "차가움 ↔ 따뜻함"))
             ]
         case .ramen:
             return [
-                EvaluationAttribute(emoji: "🥣", title: "국물", subtitle: "깊이/감칠맛"),
-                EvaluationAttribute(emoji: "🍜", title: "면발", subtitle: "부드러움 ↔ 쫄깃함"),
-                EvaluationAttribute(emoji: "🥓", title: "차슈", subtitle: "퍽퍽 ↔ 부드러움"),
-                EvaluationAttribute(emoji: "🥚", title: "토핑", subtitle: "부실 ↔ 풍부"),
-                EvaluationAttribute(emoji: "🔥", title: "온도", subtitle: "미지근 ↔ 뜨거움"),
-                EvaluationAttribute(emoji: "⚖️", title: "밸런스", subtitle: "불균형 ↔ 조화")
+                EvaluationAttribute(emoji: "🥣", title: String(localized: "국물"), subtitle: String(localized: "깊이/감칠맛")),
+                EvaluationAttribute(emoji: "🍜", title: String(localized: "면발"), subtitle: String(localized: "부드러움 ↔ 쫄깃함")),
+                EvaluationAttribute(emoji: "🥓", title: String(localized: "차슈"), subtitle: String(localized: "퍽퍽 ↔ 부드러움")),
+                EvaluationAttribute(emoji: "🥚", title: String(localized: "토핑"), subtitle: String(localized: "부실 ↔ 풍부")),
+                EvaluationAttribute(emoji: "🔥", title: String(localized: "온도"), subtitle: String(localized: "미지근 ↔ 뜨거움")),
+                EvaluationAttribute(emoji: "⚖️", title: String(localized: "밸런스"), subtitle: String(localized: "불균형 ↔ 조화"))
             ]
         case .pizza:
             return [
-                EvaluationAttribute(emoji: "🫓", title: "도우", subtitle: "질김 ↔ 쫄깃함"),
-                EvaluationAttribute(emoji: "🍅", title: "소스", subtitle: "적음 ↔ 많음"),
-                EvaluationAttribute(emoji: "🧀", title: "치즈", subtitle: "적음 ↔ 많음"),
-                EvaluationAttribute(emoji: "🔥", title: "굽기", subtitle: "덜익음 ↔ 바삭함"),
-                EvaluationAttribute(emoji: "🌟", title: "토핑", subtitle: "부실 ↔ 풍부"),
-                EvaluationAttribute(emoji: "⚖️", title: "밸런스", subtitle: "불균형 ↔ 조화")
+                EvaluationAttribute(emoji: "🫓", title: String(localized: "도우"), subtitle: String(localized: "질김 ↔ 쫄깃함")),
+                EvaluationAttribute(emoji: "🍅", title: String(localized: "소스"), subtitle: String(localized: "적음 ↔ 많음")),
+                EvaluationAttribute(emoji: "🧀", title: String(localized: "치즈"), subtitle: String(localized: "적음 ↔ 많음")),
+                EvaluationAttribute(emoji: "🔥", title: String(localized: "굽기"), subtitle: String(localized: "덜익음 ↔ 바삭함")),
+                EvaluationAttribute(emoji: "🌟", title: String(localized: "토핑"), subtitle: String(localized: "부실 ↔ 풍부")),
+                EvaluationAttribute(emoji: "⚖️", title: String(localized: "밸런스"), subtitle: String(localized: "불균형 ↔ 조화"))
             ]
         case .wine:
             return [
-                EvaluationAttribute(emoji: "💪", title: "바디", subtitle: "가벼움 ↔ 묵직함"),
-                EvaluationAttribute(emoji: "🍇", title: "타닌", subtitle: "약함 ↔ 떫음"),
-                EvaluationAttribute(emoji: "🍋", title: "산도", subtitle: "낮음 ↔ 높음"),
-                EvaluationAttribute(emoji: "🌸", title: "아로마", subtitle: "단순 ↔ 복잡"),
-                EvaluationAttribute(emoji: "✨", title: "피니시", subtitle: "짧음 ↔ 긴 여운"),
-                EvaluationAttribute(emoji: "⚖️", title: "밸런스", subtitle: "불균형 ↔ 조화")
+                EvaluationAttribute(emoji: "💪", title: String(localized: "바디"), subtitle: String(localized: "가벼움 ↔ 묵직함")),
+                EvaluationAttribute(emoji: "🍇", title: String(localized: "타닌"), subtitle: String(localized: "약함 ↔ 떫음")),
+                EvaluationAttribute(emoji: "🍋", title: String(localized: "산도"), subtitle: String(localized: "낮음 ↔ 높음")),
+                EvaluationAttribute(emoji: "🌸", title: String(localized: "아로마"), subtitle: String(localized: "단순 ↔ 복잡")),
+                EvaluationAttribute(emoji: "✨", title: String(localized: "피니시"), subtitle: String(localized: "짧음 ↔ 긴 여운")),
+                EvaluationAttribute(emoji: "⚖️", title: String(localized: "밸런스"), subtitle: String(localized: "불균형 ↔ 조화"))
             ]
         case .coffee:
             return [
-                EvaluationAttribute(emoji: "🍋", title: "산미", subtitle: "낮음 ↔ 밝음"),
-                EvaluationAttribute(emoji: "💪", title: "바디", subtitle: "가벼움 ↔ 묵직함"),
-                EvaluationAttribute(emoji: "🌸", title: "향미", subtitle: "단순 ↔ 복잡"),
-                EvaluationAttribute(emoji: "✨", title: "후미", subtitle: "짧음 ↔ 긴 여운"),
-                EvaluationAttribute(emoji: "🍯", title: "단맛", subtitle: "쓴맛 ↔ 단맛"),
-                EvaluationAttribute(emoji: "⚖️", title: "밸런스", subtitle: "불균형 ↔ 조화")
+                EvaluationAttribute(emoji: "🍋", title: String(localized: "산미"), subtitle: String(localized: "낮음 ↔ 밝음")),
+                EvaluationAttribute(emoji: "💪", title: String(localized: "바디"), subtitle: String(localized: "가벼움 ↔ 묵직함")),
+                EvaluationAttribute(emoji: "🌸", title: String(localized: "향미"), subtitle: String(localized: "단순 ↔ 복잡")),
+                EvaluationAttribute(emoji: "✨", title: String(localized: "후미"), subtitle: String(localized: "짧음 ↔ 긴 여운")),
+                EvaluationAttribute(emoji: "🍯", title: String(localized: "단맛"), subtitle: String(localized: "쓴맛 ↔ 단맛")),
+                EvaluationAttribute(emoji: "⚖️", title: String(localized: "밸런스"), subtitle: String(localized: "불균형 ↔ 조화"))
             ]
         }
     }

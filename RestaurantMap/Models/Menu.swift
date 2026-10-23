@@ -41,9 +41,11 @@ final class MenuItem {
 
     // 가격 포맷팅
     var formattedPrice: String {
-        guard let price = price else { return "가격 미정" }
+        guard let price = price else { return String(localized: "가격 미정") }
         let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-        return "\(formatter.string(from: NSNumber(value: price)) ?? "0")원"
+        formatter.numberStyle = .currency
+        formatter.locale = Locale.current
+        formatter.maximumFractionDigits = 0
+        return formatter.string(from: NSNumber(value: price)) ?? "\(price)"
     }
 }

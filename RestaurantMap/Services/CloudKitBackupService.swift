@@ -35,7 +35,7 @@ class CloudKitBackupService {
     /// iCloud 계정 상태 확인
     func checkiCloudStatus() async -> Bool {
         guard let container = getContainer() else {
-            errorMessage = "CloudKit을 사용할 수 없습니다.\n\nXcode에서 Signing & Capabilities 탭으로 이동하여:\n1. '+ Capability' 클릭\n2. 'iCloud' 추가\n3. 'CloudKit' 체크박스 활성화"
+            errorMessage = String(localized: "CloudKit을 사용할 수 없습니다.\n\nXcode에서 Signing & Capabilities 탭으로 이동하여:\n1. '+ Capability' 클릭\n2. 'iCloud' 추가\n3. 'CloudKit' 체크박스 활성화")
             logger.error("❌ CloudKit Capability가 추가되지 않음")
             return false
         }
@@ -47,24 +47,24 @@ class CloudKitBackupService {
                 logger.info("iCloud 계정 사용 가능")
                 return true
             case .noAccount:
-                errorMessage = "iCloud 계정에 로그인되어 있지 않습니다."
+                errorMessage = String(localized: "iCloud 계정에 로그인되어 있지 않습니다.")
                 return false
             case .restricted:
-                errorMessage = "iCloud 접근이 제한되어 있습니다."
+                errorMessage = String(localized: "iCloud 접근이 제한되어 있습니다.")
                 return false
             case .couldNotDetermine:
-                errorMessage = "iCloud 상태를 확인할 수 없습니다."
+                errorMessage = String(localized: "iCloud 상태를 확인할 수 없습니다.")
                 return false
             case .temporarilyUnavailable:
-                errorMessage = "iCloud가 일시적으로 사용 불가합니다."
+                errorMessage = String(localized: "iCloud가 일시적으로 사용 불가합니다.")
                 return false
             @unknown default:
-                errorMessage = "알 수 없는 iCloud 상태입니다."
+                errorMessage = String(localized: "알 수 없는 iCloud 상태입니다.")
                 return false
             }
         } catch {
             logger.error("iCloud 상태 확인 실패: \(error.localizedDescription)")
-            errorMessage = "iCloud 상태 확인 실패: \(error.localizedDescription)"
+            errorMessage = String(localized: "iCloud 상태 확인 실패: \(error.localizedDescription)")
             return false
         }
     }
@@ -75,34 +75,34 @@ class CloudKitBackupService {
 
         isBackingUp = true
         errorMessage = nil
-        progressMessage = "백업 준비 중..."
+        progressMessage = String(localized: "백업 준비 중...")
 
         defer { isBackingUp = false }
 
         do {
             // 1. 로컬 데이터 가져오기
-            progressMessage = "데이터 수집 중..."
+            progressMessage = String(localized: "데이터 수집 중...")
             let backupData = try await fetchLocalData(modelContainer: modelContainer)
 
             // 2. 기존 백업 삭제
-            progressMessage = "기존 백업 정리 중..."
+            progressMessage = String(localized: "기존 백업 정리 중...")
             try await deleteExistingBackups()
 
             // 3. 새 백업 저장
-            progressMessage = "CloudKit에 저장 중..."
+            progressMessage = String(localized: "CloudKit에 저장 중...")
             try await saveToCloudKit(data: backupData)
 
             // 4. 마지막 백업 시간 저장
             lastBackupDate = Date()
             saveLastBackupDate()
 
-            progressMessage = "백업 완료!"
+            progressMessage = String(localized: "백업 완료!")
             logger.info("백업 성공")
             return true
 
         } catch {
             logger.error("백업 실패: \(error.localizedDescription)")
-            errorMessage = "백업 실패: \(error.localizedDescription)"
+            errorMessage = String(localized: "백업 실패: \(error.localizedDescription)")
             progressMessage = nil
             return false
         }
@@ -114,34 +114,34 @@ class CloudKitBackupService {
 
         isRestoring = true
         errorMessage = nil
-        progressMessage = "복구 준비 중..."
+        progressMessage = String(localized: "복구 준비 중...")
 
         defer { isRestoring = false }
 
         do {
             // 1. CloudKit에서 데이터 가져오기
-            progressMessage = "CloudKit에서 데이터 가져오는 중..."
+            progressMessage = String(localized: "CloudKit에서 데이터 가져오는 중...")
             guard let backupData = try await fetchFromCloudKit() else {
-                errorMessage = "백업 데이터가 없습니다."
+                errorMessage = String(localized: "백업 데이터가 없습니다.")
                 progressMessage = nil
                 return false
             }
 
             // 2. 로컬 데이터 삭제
-            progressMessage = "기존 데이터 정리 중..."
+            progressMessage = String(localized: "기존 데이터 정리 중...")
             try await deleteLocalData(modelContainer: modelContainer)
 
             // 3. 복구된 데이터 저장
-            progressMessage = "데이터 복구 중..."
+            progressMessage = String(localized: "데이터 복구 중...")
             try await restoreLocalData(modelContainer: modelContainer, data: backupData)
 
-            progressMessage = "복구 완료!"
+            progressMessage = String(localized: "복구 완료!")
             logger.info("복구 성공")
             return true
 
         } catch {
             logger.error("복구 실패: \(error.localizedDescription)")
-            errorMessage = "복구 실패: \(error.localizedDescription)"
+            errorMessage = String(localized: "복구 실패: \(error.localizedDescription)")
             progressMessage = nil
             return false
         }
@@ -149,16 +149,16 @@ class CloudKitBackupService {
 
     /// 로컬 데이터 초기화 (모든 데이터 삭제)
     func resetLocalData(modelContainer: ModelContainer) async -> Bool {
-        progressMessage = "데이터 초기화 중..."
+        progressMessage = String(localized: "데이터 초기화 중...")
 
         do {
             try await deleteLocalData(modelContainer: modelContainer)
-            progressMessage = "초기화 완료!"
+            progressMessage = String(localized: "초기화 완료!")
             logger.info("로컬 데이터 초기화 완료")
             return true
         } catch {
             logger.error("초기화 실패: \(error.localizedDescription)")
-            errorMessage = "초기화 실패: \(error.localizedDescription)"
+            errorMessage = String(localized: "초기화 실패: \(error.localizedDescription)")
             progressMessage = nil
             return false
         }
@@ -754,19 +754,19 @@ struct BackupTasteProfile: Codable {
     let updatedAt: Date
 }
 
-enum BackupError: Error {
+enum BackupError: LocalizedError {
     case invalidData
     case noBackupFound
     case cloudKitNotAvailable
 
-    var localizedDescription: String {
+    var errorDescription: String? {
         switch self {
         case .invalidData:
-            return "백업 데이터가 손상되었습니다"
+            return String(localized: "백업 데이터가 손상되었습니다")
         case .noBackupFound:
-            return "백업 데이터를 찾을 수 없습니다"
+            return String(localized: "백업 데이터를 찾을 수 없습니다")
         case .cloudKitNotAvailable:
-            return "CloudKit을 사용할 수 없습니다. Xcode에서 iCloud Capability를 추가하세요."
+            return String(localized: "CloudKit을 사용할 수 없습니다. Xcode에서 iCloud Capability를 추가하세요.")
         }
     }
 }

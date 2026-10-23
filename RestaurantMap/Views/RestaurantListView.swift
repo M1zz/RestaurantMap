@@ -350,7 +350,7 @@ struct RankedRestaurantRow: View {
                     FractionalStarRatingView(rating: restaurant.averageRating, starSize: 10)
 
                     // 카테고리
-                    Text(POICategoryMapper.toKorean(restaurant.category.isEmpty ? "레스토랑" : restaurant.category))
+                    Text(POICategoryMapper.displayName(restaurant.category.isEmpty ? "MKPOICategoryRestaurant" : restaurant.category))
                         .font(.caption2)
                         .padding(.horizontal, 6)
                         .padding(.vertical, 2)
@@ -407,7 +407,7 @@ struct Top6RestaurantRow: View {
                 // 카테고리 + 마지막 방문일 + 총 방문횟수
                 HStack(spacing: 8) {
                     // 카테고리 텍스트
-                    Text(POICategoryMapper.toKorean(restaurant.category.isEmpty ? "레스토랑" : restaurant.category))
+                    Text(POICategoryMapper.displayName(restaurant.category.isEmpty ? "MKPOICategoryRestaurant" : restaurant.category))
                         .font(.caption)
                         .padding(.horizontal, 8)
                         .padding(.vertical, 2)
@@ -481,7 +481,7 @@ struct RestaurantRow: View {
                 // 카테고리 + 마지막 방문일 + 총 방문횟수
                 HStack(spacing: 8) {
                     // 카테고리 텍스트
-                    Text(POICategoryMapper.toKorean(restaurant.category.isEmpty ? "레스토랑" : restaurant.category))
+                    Text(POICategoryMapper.displayName(restaurant.category.isEmpty ? "MKPOICategoryRestaurant" : restaurant.category))
                         .font(.caption)
                         .padding(.horizontal, 8)
                         .padding(.vertical, 2)

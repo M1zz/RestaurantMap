@@ -287,7 +287,7 @@ struct VisitDetailView: View {
                 }
             }
             .scrollDismissesKeyboard(.interactively)
-            .navigationTitle(visit.restaurant?.name ?? "방문 기록")
+            .navigationTitle(visit.restaurant?.name ?? String(localized: "방문 기록"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
@@ -298,7 +298,7 @@ struct VisitDetailView: View {
                 }
 
                 ToolbarItem(placement: .primaryAction) {
-                    Button(isEditing ? "완료" : "편집") {
+                    Button(isEditing ? LocalizedStringKey("완료") : LocalizedStringKey("편집")) {
                         logger.info("🔵 편집 버튼 클릭 - isEditing: \(isEditing) -> \(!isEditing)")
 
                         if isEditing {
@@ -348,42 +348,42 @@ struct VisitDetailView: View {
             if let restaurant = visit.restaurant {
                 switch restaurant.evaluationType {
                 case .general:
-                    CombinedEvaluationRow(title: "🌶️ 맵기", subtitle: "순한 ↔ 매운", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "🌶️ \(String(localized: "맵기"))", subtitle: String(localized: "순한 ↔ 매운"), intensityValue: Binding(
                         get: { visit.spicy ?? 5.0 },
                         set: { visit.spicy = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.spicyAppropriate ?? 3 },
                         set: { visit.spicyAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "💪 진한맛", subtitle: "담백 ↔ 진한", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "💪 \(String(localized: "진한맛"))", subtitle: String(localized: "담백 ↔ 진한"), intensityValue: Binding(
                         get: { visit.boldness ?? 5.0 },
                         set: { visit.boldness = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.boldnessAppropriate ?? 3 },
                         set: { visit.boldnessAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "🍯 단맛", subtitle: "안좋아함 ↔ 좋아함", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "🍯 \(String(localized: "단맛"))", subtitle: String(localized: "안좋아함 ↔ 좋아함"), intensityValue: Binding(
                         get: { visit.sweetness ?? 5.0 },
                         set: { visit.sweetness = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.sweetnessAppropriate ?? 3 },
                         set: { visit.sweetnessAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "🧂 짠맛", subtitle: "싱거움 ↔ 짭짤", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "🧂 \(String(localized: "짠맛"))", subtitle: String(localized: "싱거움 ↔ 짭짤"), intensityValue: Binding(
                         get: { visit.saltiness ?? 5.0 },
                         set: { visit.saltiness = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.saltinessAppropriate ?? 3 },
                         set: { visit.saltinessAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "🥓 기름진", subtitle: "담백 ↔ 고소", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "🥓 \(String(localized: "기름진"))", subtitle: String(localized: "담백 ↔ 고소"), intensityValue: Binding(
                         get: { visit.richness ?? 5.0 },
                         set: { visit.richness = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.richnessAppropriate ?? 3 },
                         set: { visit.richnessAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "🌿 본연의맛", subtitle: "양념 ↔ 재료맛", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "🌿 \(String(localized: "본연의맛"))", subtitle: String(localized: "양념 ↔ 재료맛"), intensityValue: Binding(
                         get: { visit.naturalTaste ?? 5.0 },
                         set: { visit.naturalTaste = $0 }
                     ), appropriatenessValue: Binding(
@@ -392,42 +392,42 @@ struct VisitDetailView: View {
                     ))
 
                 case .steak:
-                    CombinedEvaluationRow(title: "🔥 굽기", subtitle: "레어 ↔ 웰던", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "🔥 \(String(localized: "굽기"))", subtitle: String(localized: "레어 ↔ 웰던"), intensityValue: Binding(
                         get: { visit.steakDoneness ?? 5.0 },
                         set: { visit.steakDoneness = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.steakDonenessAppropriate ?? 3 },
                         set: { visit.steakDonenessAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "🥩 육즙", subtitle: "퍽퍽 ↔ 촉촉", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "🥩 \(String(localized: "육즙"))", subtitle: String(localized: "퍽퍽 ↔ 촉촉"), intensityValue: Binding(
                         get: { visit.steakJuiciness ?? 5.0 },
                         set: { visit.steakJuiciness = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.steakJuicinessAppropriate ?? 3 },
                         set: { visit.steakJuicinessAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "✨ 부드러움", subtitle: "질김 ↔ 부드러움", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "✨ \(String(localized: "부드러움"))", subtitle: String(localized: "질김 ↔ 부드러움"), intensityValue: Binding(
                         get: { visit.steakTenderness ?? 5.0 },
                         set: { visit.steakTenderness = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.steakTendernessAppropriate ?? 3 },
                         set: { visit.steakTendernessAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "🧂 간", subtitle: "싱거움 ↔ 짭짤", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "🧂 \(String(localized: "간"))", subtitle: String(localized: "싱거움 ↔ 짭짤"), intensityValue: Binding(
                         get: { visit.steakSeasoning ?? 5.0 },
                         set: { visit.steakSeasoning = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.steakSeasoningAppropriate ?? 3 },
                         set: { visit.steakSeasoningAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "🌿 육향", subtitle: "약함 ↔ 강함", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "🌿 \(String(localized: "육향"))", subtitle: String(localized: "약함 ↔ 강함"), intensityValue: Binding(
                         get: { visit.steakFlavor ?? 5.0 },
                         set: { visit.steakFlavor = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.steakFlavorAppropriate ?? 3 },
                         set: { visit.steakFlavorAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "🍖 마블링", subtitle: "적음 ↔ 많음", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "🍖 \(String(localized: "마블링"))", subtitle: String(localized: "적음 ↔ 많음"), intensityValue: Binding(
                         get: { visit.steakMarbling ?? 5.0 },
                         set: { visit.steakMarbling = $0 }
                     ), appropriatenessValue: Binding(
@@ -436,42 +436,42 @@ struct VisitDetailView: View {
                     ))
 
                 case .sushi:
-                    CombinedEvaluationRow(title: "🍚 샤리(밥)", subtitle: "흐물 ↔ 단단", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "🍚 \(String(localized: "샤리(밥)"))", subtitle: String(localized: "흐물 ↔ 단단"), intensityValue: Binding(
                         get: { visit.sushiShari ?? 5.0 },
                         set: { visit.sushiShari = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.sushiShariAppropriate ?? 3 },
                         set: { visit.sushiShariAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "🐟 네타(재료)", subtitle: "신선도", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "🐟 \(String(localized: "네타(재료)"))", subtitle: String(localized: "신선도"), intensityValue: Binding(
                         get: { visit.sushiNeta ?? 5.0 },
                         set: { visit.sushiNeta = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.sushiNetaAppropriate ?? 3 },
                         set: { visit.sushiNetaAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "🌿 와사비", subtitle: "약함 ↔ 강함", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "🌿 \(String(localized: "와사비"))", subtitle: String(localized: "약함 ↔ 강함"), intensityValue: Binding(
                         get: { visit.sushiWasabi ?? 5.0 },
                         set: { visit.sushiWasabi = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.sushiWasabiAppropriate ?? 3 },
                         set: { visit.sushiWasabiAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "⚖️ 밸런스", subtitle: "불균형 ↔ 조화", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "⚖️ \(String(localized: "밸런스"))", subtitle: String(localized: "불균형 ↔ 조화"), intensityValue: Binding(
                         get: { visit.sushiBalance ?? 5.0 },
                         set: { visit.sushiBalance = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.sushiBalanceAppropriate ?? 3 },
                         set: { visit.sushiBalanceAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "✋ 쥐기", subtitle: "풀림 ↔ 결속", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "✋ \(String(localized: "쥐기"))", subtitle: String(localized: "풀림 ↔ 결속"), intensityValue: Binding(
                         get: { visit.sushiGrip ?? 5.0 },
                         set: { visit.sushiGrip = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.sushiGripAppropriate ?? 3 },
                         set: { visit.sushiGripAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "🌡️ 온도", subtitle: "차가움 ↔ 따뜻함", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "🌡️ \(String(localized: "온도"))", subtitle: String(localized: "차가움 ↔ 따뜻함"), intensityValue: Binding(
                         get: { visit.sushiTemperature ?? 5.0 },
                         set: { visit.sushiTemperature = $0 }
                     ), appropriatenessValue: Binding(
@@ -480,42 +480,42 @@ struct VisitDetailView: View {
                     ))
 
                 case .ramen:
-                    CombinedEvaluationRow(title: "🥣 국물", subtitle: "깊이/감칠맛", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "🥣 \(String(localized: "국물"))", subtitle: String(localized: "깊이/감칠맛"), intensityValue: Binding(
                         get: { visit.ramenBroth ?? 5.0 },
                         set: { visit.ramenBroth = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.ramenBrothAppropriate ?? 3 },
                         set: { visit.ramenBrothAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "🍜 면발", subtitle: "부드러움 ↔ 쫄깃함", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "🍜 \(String(localized: "면발"))", subtitle: String(localized: "부드러움 ↔ 쫄깃함"), intensityValue: Binding(
                         get: { visit.ramenNoodle ?? 5.0 },
                         set: { visit.ramenNoodle = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.ramenNoodleAppropriate ?? 3 },
                         set: { visit.ramenNoodleAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "🥓 차슈", subtitle: "퍽퍽 ↔ 부드러움", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "🥓 \(String(localized: "차슈"))", subtitle: String(localized: "퍽퍽 ↔ 부드러움"), intensityValue: Binding(
                         get: { visit.ramenChashu ?? 5.0 },
                         set: { visit.ramenChashu = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.ramenChashuAppropriate ?? 3 },
                         set: { visit.ramenChashuAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "🥚 토핑", subtitle: "부실 ↔ 풍부", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "🥚 \(String(localized: "토핑"))", subtitle: String(localized: "부실 ↔ 풍부"), intensityValue: Binding(
                         get: { visit.ramenTopping ?? 5.0 },
                         set: { visit.ramenTopping = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.ramenToppingAppropriate ?? 3 },
                         set: { visit.ramenToppingAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "🔥 온도", subtitle: "미지근 ↔ 뜨거움", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "🔥 \(String(localized: "온도"))", subtitle: String(localized: "미지근 ↔ 뜨거움"), intensityValue: Binding(
                         get: { visit.ramenTemperature ?? 5.0 },
                         set: { visit.ramenTemperature = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.ramenTemperatureAppropriate ?? 3 },
                         set: { visit.ramenTemperatureAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "⚖️ 밸런스", subtitle: "불균형 ↔ 조화", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "⚖️ \(String(localized: "밸런스"))", subtitle: String(localized: "불균형 ↔ 조화"), intensityValue: Binding(
                         get: { visit.ramenBalance ?? 5.0 },
                         set: { visit.ramenBalance = $0 }
                     ), appropriatenessValue: Binding(
@@ -524,42 +524,42 @@ struct VisitDetailView: View {
                     ))
 
                 case .pizza:
-                    CombinedEvaluationRow(title: "🫓 도우", subtitle: "질김 ↔ 쫄깃함", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "🫓 \(String(localized: "도우"))", subtitle: String(localized: "질김 ↔ 쫄깃함"), intensityValue: Binding(
                         get: { visit.pizzaDough ?? 5.0 },
                         set: { visit.pizzaDough = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.pizzaDoughAppropriate ?? 3 },
                         set: { visit.pizzaDoughAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "🍅 소스", subtitle: "적음 ↔ 많음", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "🍅 \(String(localized: "소스"))", subtitle: String(localized: "적음 ↔ 많음"), intensityValue: Binding(
                         get: { visit.pizzaSauce ?? 5.0 },
                         set: { visit.pizzaSauce = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.pizzaSauceAppropriate ?? 3 },
                         set: { visit.pizzaSauceAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "🧀 치즈", subtitle: "적음 ↔ 많음", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "🧀 \(String(localized: "치즈"))", subtitle: String(localized: "적음 ↔ 많음"), intensityValue: Binding(
                         get: { visit.pizzaCheese ?? 5.0 },
                         set: { visit.pizzaCheese = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.pizzaCheeseAppropriate ?? 3 },
                         set: { visit.pizzaCheeseAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "🔥 굽기", subtitle: "덜익음 ↔ 바삭함", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "🔥 \(String(localized: "굽기"))", subtitle: String(localized: "덜익음 ↔ 바삭함"), intensityValue: Binding(
                         get: { visit.pizzaBaking ?? 5.0 },
                         set: { visit.pizzaBaking = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.pizzaBakingAppropriate ?? 3 },
                         set: { visit.pizzaBakingAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "🌟 토핑", subtitle: "부실 ↔ 풍부", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "🌟 \(String(localized: "토핑"))", subtitle: String(localized: "부실 ↔ 풍부"), intensityValue: Binding(
                         get: { visit.pizzaTopping ?? 5.0 },
                         set: { visit.pizzaTopping = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.pizzaToppingAppropriate ?? 3 },
                         set: { visit.pizzaToppingAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "⚖️ 밸런스", subtitle: "불균형 ↔ 조화", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "⚖️ \(String(localized: "밸런스"))", subtitle: String(localized: "불균형 ↔ 조화"), intensityValue: Binding(
                         get: { visit.pizzaBalance ?? 5.0 },
                         set: { visit.pizzaBalance = $0 }
                     ), appropriatenessValue: Binding(
@@ -568,42 +568,42 @@ struct VisitDetailView: View {
                     ))
 
                 case .wine:
-                    CombinedEvaluationRow(title: "💪 바디", subtitle: "가벼움 ↔ 묵직함", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "💪 \(String(localized: "바디"))", subtitle: String(localized: "가벼움 ↔ 묵직함"), intensityValue: Binding(
                         get: { visit.wineBody ?? 5.0 },
                         set: { visit.wineBody = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.wineBodyAppropriate ?? 3 },
                         set: { visit.wineBodyAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "🍇 타닌", subtitle: "약함 ↔ 떫음", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "🍇 \(String(localized: "타닌"))", subtitle: String(localized: "약함 ↔ 떫음"), intensityValue: Binding(
                         get: { visit.wineTannin ?? 5.0 },
                         set: { visit.wineTannin = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.wineTanninAppropriate ?? 3 },
                         set: { visit.wineTanninAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "🍋 산도", subtitle: "낮음 ↔ 높음", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "🍋 \(String(localized: "산도"))", subtitle: String(localized: "낮음 ↔ 높음"), intensityValue: Binding(
                         get: { visit.wineAcidity ?? 5.0 },
                         set: { visit.wineAcidity = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.wineAcidityAppropriate ?? 3 },
                         set: { visit.wineAcidityAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "🌸 아로마", subtitle: "단순 ↔ 복잡", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "🌸 \(String(localized: "아로마"))", subtitle: String(localized: "단순 ↔ 복잡"), intensityValue: Binding(
                         get: { visit.wineAroma ?? 5.0 },
                         set: { visit.wineAroma = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.wineAromaAppropriate ?? 3 },
                         set: { visit.wineAromaAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "✨ 피니시", subtitle: "짧음 ↔ 긴 여운", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "✨ \(String(localized: "피니시"))", subtitle: String(localized: "짧음 ↔ 긴 여운"), intensityValue: Binding(
                         get: { visit.wineFinish ?? 5.0 },
                         set: { visit.wineFinish = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.wineFinishAppropriate ?? 3 },
                         set: { visit.wineFinishAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "⚖️ 밸런스", subtitle: "불균형 ↔ 조화", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "⚖️ \(String(localized: "밸런스"))", subtitle: String(localized: "불균형 ↔ 조화"), intensityValue: Binding(
                         get: { visit.wineBalance ?? 5.0 },
                         set: { visit.wineBalance = $0 }
                     ), appropriatenessValue: Binding(
@@ -612,42 +612,42 @@ struct VisitDetailView: View {
                     ))
 
                 case .coffee:
-                    CombinedEvaluationRow(title: "🍋 산미", subtitle: "낮음 ↔ 밝음", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "🍋 \(String(localized: "산미"))", subtitle: String(localized: "낮음 ↔ 밝음"), intensityValue: Binding(
                         get: { visit.coffeeAcidity ?? 5.0 },
                         set: { visit.coffeeAcidity = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.coffeeAcidityAppropriate ?? 3 },
                         set: { visit.coffeeAcidityAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "💪 바디", subtitle: "가벼움 ↔ 묵직함", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "💪 \(String(localized: "바디"))", subtitle: String(localized: "가벼움 ↔ 묵직함"), intensityValue: Binding(
                         get: { visit.coffeeBody ?? 5.0 },
                         set: { visit.coffeeBody = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.coffeeBodyAppropriate ?? 3 },
                         set: { visit.coffeeBodyAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "🌸 향미", subtitle: "단순 ↔ 복잡", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "🌸 \(String(localized: "향미"))", subtitle: String(localized: "단순 ↔ 복잡"), intensityValue: Binding(
                         get: { visit.coffeeFlavor ?? 5.0 },
                         set: { visit.coffeeFlavor = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.coffeeFlavorAppropriate ?? 3 },
                         set: { visit.coffeeFlavorAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "✨ 후미", subtitle: "짧음 ↔ 긴 여운", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "✨ \(String(localized: "후미"))", subtitle: String(localized: "짧음 ↔ 긴 여운"), intensityValue: Binding(
                         get: { visit.coffeeAftertaste ?? 5.0 },
                         set: { visit.coffeeAftertaste = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.coffeeAftertasteAppropriate ?? 3 },
                         set: { visit.coffeeAftertasteAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "🍯 단맛", subtitle: "쓴맛 ↔ 단맛", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "🍯 \(String(localized: "단맛"))", subtitle: String(localized: "쓴맛 ↔ 단맛"), intensityValue: Binding(
                         get: { visit.coffeeSweetness ?? 5.0 },
                         set: { visit.coffeeSweetness = $0 }
                     ), appropriatenessValue: Binding(
                         get: { visit.coffeeSweetnessAppropriate ?? 3 },
                         set: { visit.coffeeSweetnessAppropriate = $0 }
                     ))
-                    CombinedEvaluationRow(title: "⚖️ 밸런스", subtitle: "불균형 ↔ 조화", intensityValue: Binding(
+                    CombinedEvaluationRow(title: "⚖️ \(String(localized: "밸런스"))", subtitle: String(localized: "불균형 ↔ 조화"), intensityValue: Binding(
                         get: { visit.coffeeBalance ?? 5.0 },
                         set: { visit.coffeeBalance = $0 }
                     ), appropriatenessValue: Binding(

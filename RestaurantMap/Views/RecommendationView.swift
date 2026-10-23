@@ -35,14 +35,23 @@ struct RecommendationView: View {
 
         var id: String { rawValue }
 
+        /// 화면에 보여 줄 이름 (rawValue 는 식별자로만 쓴다)
+        var title: String {
+            switch self {
+            case .hybrid: return String(localized: "종합 추천")
+            case .collaborative: return String(localized: "비슷한 입맛")
+            case .similar: return String(localized: "맛 유사도")
+            }
+        }
+
         var description: String {
             switch self {
             case .hybrid:
-                return "맛, 평점, 거리를 종합적으로 고려"
+                return String(localized: "맛, 평점, 거리를 종합적으로 고려")
             case .collaborative:
-                return "나와 입맛이 비슷한 사람들의 선택"
+                return String(localized: "나와 입맛이 비슷한 사람들의 선택")
             case .similar:
-                return "내가 좋아했던 맛과 비슷한 식당"
+                return String(localized: "내가 좋아했던 맛과 비슷한 식당")
             }
         }
 
@@ -131,7 +140,7 @@ struct RecommendationView: View {
                         VStack(spacing: 8) {
                             Image(systemName: mode.icon)
                                 .font(.title2)
-                            Text(mode.rawValue)
+                            Text(mode.title)
                                 .font(.caption)
                                 .fontWeight(.semibold)
                         }
@@ -370,7 +379,7 @@ struct RecommendationView: View {
 
         } catch {
             logger.error("Failed to load recommendations: \(error.localizedDescription)")
-            errorMessage = "추천을 불러오는데 실패했습니다: \(error.localizedDescription)"
+            errorMessage = String(localized: "추천을 불러오는데 실패했습니다: \(error.localizedDescription)")
         }
     }
 }
@@ -435,7 +444,7 @@ struct RecommendationCard: View {
 
                 DetailBadge(
                     icon: "person.2.fill",
-                    text: "\(recommendation.restaurant.visitCount)회",
+                    text: String(localized: "\(recommendation.restaurant.visitCount)회"),
                     color: .purple
                 )
 
@@ -520,15 +529,15 @@ struct SyncDataView: View {
                             VStack(alignment: .leading, spacing: 8) {
                                 InfoRow(
                                     icon: "person.fill",
-                                    text: "취향 프로필: \(tasteProfile != nil ? "있음" : "없음")"
+                                    text: String(localized: "취향 프로필: \(tasteProfile != nil ? String(localized: "있음") : String(localized: "없음"))")
                                 )
                                 InfoRow(
                                     icon: "fork.knife",
-                                    text: "식당: \(restaurants.count)개"
+                                    text: String(localized: "식당: \(restaurants.count)개")
                                 )
                                 InfoRow(
                                     icon: "calendar",
-                                    text: "방문 기록: \(restaurants.flatMap { $0.visits ?? [] }.count)개"
+                                    text: String(localized: "방문 기록: \(restaurants.flatMap { $0.visits ?? [] }.count)개")
                                 )
                             }
                             .padding()
@@ -643,7 +652,7 @@ struct SyncDataView: View {
         syncProgress = 0.0
 
         do {
-            syncMessage = "내 데이터 업로드 중..."
+            syncMessage = String(localized: "내 데이터 업로드 중...")
             syncProgress = 0.3
 
             try await FirebaseService.shared.syncAllData(
@@ -652,13 +661,13 @@ struct SyncDataView: View {
             )
 
             syncProgress = 1.0
-            syncMessage = "✅ 내 데이터 업로드 완료!"
+            syncMessage = String(localized: "✅ 내 데이터 업로드 완료!")
 
             try await Task.sleep(nanoseconds: 2_000_000_000)
             // dismiss() - 더미 데이터도 생성할 수 있도록 닫지 않음
 
         } catch {
-            syncMessage = "❌ 업로드 실패: \(error.localizedDescription)"
+            syncMessage = String(localized: "❌ 업로드 실패: \(error.localizedDescription)")
         }
 
         isSyncing = false
@@ -670,19 +679,19 @@ struct SyncDataView: View {
         syncProgress = 0.0
 
         do {
-            syncMessage = "더미 사용자 및 식당 생성 중..."
+            syncMessage = String(localized: "더미 사용자 및 식당 생성 중...")
             syncProgress = 0.2
 
             try await FirebaseService.shared.generateDummyData()
 
             syncProgress = 1.0
-            syncMessage = "✅ 더미 데이터 생성 완료!"
+            syncMessage = String(localized: "✅ 더미 데이터 생성 완료!")
 
             try await Task.sleep(nanoseconds: 2_000_000_000)
             dismiss()
 
         } catch {
-            syncMessage = "❌ 생성 실패: \(error.localizedDescription)"
+            syncMessage = String(localized: "❌ 생성 실패: \(error.localizedDescription)")
         }
 
         isGeneratingDummy = false

@@ -78,7 +78,7 @@ struct MenuListView: View {
                 }
             }
         }
-        .navigationTitle("\(restaurant.name)의 메뉴")
+        .navigationTitle(String(localized: "\(restaurant.name)의 메뉴"))
         .navigationBarTitleDisplayMode(.inline)
         .sheet(isPresented: $showingAddMenu) {
             AddMenuView(restaurant: restaurant)

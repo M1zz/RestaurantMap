@@ -20,7 +20,7 @@ struct AddMenuView: View {
                     HStack {
                         TextField("가격", text: $price)
                             .keyboardType(.numberPad)
-                        Text("원")
+                        Text(Locale.current.currencySymbol ?? "")
                             .foregroundStyle(.secondary)
                     }
 

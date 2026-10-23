@@ -54,7 +54,7 @@ struct RestaurantDetailView: View {
                 }
 
                 Section("방문 통계") {
-                    LabeledContent("총 방문 횟수", value: "\(restaurant.visitCount)회")
+                    LabeledContent("총 방문 횟수", value: String(localized: "\(restaurant.visitCount)회"))
 
                     if let lastVisit = restaurant.lastVisitDate {
                         LabeledContent("최근 방문일") {
@@ -172,7 +172,7 @@ struct RestaurantDetailView: View {
                         LabeledContent("식당 이름", value: restaurant.name)
                         LabeledContent("주소", value: restaurant.address)
                         if !restaurant.category.isEmpty {
-                            LabeledContent("카테고리", value: POICategoryMapper.toKorean(restaurant.category))
+                            LabeledContent("카테고리", value: POICategoryMapper.displayName(restaurant.category))
                         }
                         LabeledContent("음식 종류", value: restaurant.foodCategory.displayName)
                         if !restaurant.phoneNumber.isEmpty {
@@ -359,7 +359,7 @@ struct RestaurantDetailView: View {
                     }
                 }
                 ToolbarItem(placement: .primaryAction) {
-                    Button(isEditing ? "완료" : "편집") {
+                    Button(isEditing ? LocalizedStringKey("완료") : LocalizedStringKey("편집")) {
                         isEditing.toggle()
                     }
                 }

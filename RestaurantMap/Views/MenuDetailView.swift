@@ -27,7 +27,7 @@ struct MenuDetailView: View {
                         HStack {
                             TextField("가격", text: $editPrice)
                                 .keyboardType(.numberPad)
-                            Text("원")
+                            Text(Locale.current.currencySymbol ?? "")
                                 .foregroundStyle(.secondary)
                         }
 
@@ -129,7 +129,7 @@ struct MenuDetailView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(isEditing ? "완료" : "편집") {
+                    Button(isEditing ? LocalizedStringKey("완료") : LocalizedStringKey("편집")) {
                         if isEditing {
                             saveChanges()
                         } else {

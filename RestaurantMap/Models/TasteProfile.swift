@@ -45,14 +45,14 @@ final class TasteProfile {
     // 레이더 차트용 데이터
     var radarData: [(String, Double, String)] {
         [
-            ("맵기", spicy, "순한 ↔ 매운"),
-            ("진한맛", boldness, "담백 ↔ 진한"),
-            ("단맛", sweetness, "안좋아함 ↔ 좋아함"),
-            ("짠맛", saltiness, "싱거움 ↔ 짭짤"),
-            ("기름진", richness, "담백 ↔ 고소"),
-            ("본연의맛", naturalTaste, "양념 ↔ 재료맛"),
-            ("질감", texture, "부드러움 ↔ 쫄깃"),
-            ("조리법", cooking, "날것 ↔ 구이")
+            (String(localized: "맵기"), spicy, String(localized: "순한 ↔ 매운")),
+            (String(localized: "진한맛"), boldness, String(localized: "담백 ↔ 진한")),
+            (String(localized: "단맛"), sweetness, String(localized: "안좋아함 ↔ 좋아함")),
+            (String(localized: "짠맛"), saltiness, String(localized: "싱거움 ↔ 짭짤")),
+            (String(localized: "기름진"), richness, String(localized: "담백 ↔ 고소")),
+            (String(localized: "본연의맛"), naturalTaste, String(localized: "양념 ↔ 재료맛")),
+            (String(localized: "질감"), texture, String(localized: "부드러움 ↔ 쫄깃")),
+            (String(localized: "조리법"), cooking, String(localized: "날것 ↔ 구이"))
         ]
     }
 }

@@ -35,12 +35,12 @@ struct AddRestaurantView: View {
     private let logger = Logger(subsystem: "com.restaurantmap", category: "AddRestaurant")
 
     private let iconOptions = [
-        ("fork.knife", "포크&나이프"),
-        ("cup.and.saucer.fill", "카페"),
-        ("wineglass.fill", "술집"),
-        ("birthday.cake.fill", "디저트"),
-        ("basket.fill", "분식"),
-        ("takeoutbag.and.cup.and.straw.fill", "패스트푸드")
+        ("fork.knife", String(localized: "포크&나이프")),
+        ("cup.and.saucer.fill", String(localized: "카페")),
+        ("wineglass.fill", String(localized: "술집")),
+        ("birthday.cake.fill", String(localized: "디저트")),
+        ("basket.fill", String(localized: "분식")),
+        ("takeoutbag.and.cup.and.straw.fill", String(localized: "패스트푸드"))
     ]
 
 

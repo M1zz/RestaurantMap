@@ -70,11 +70,11 @@ struct TasteProfileView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.top, 8)
 
-            AttributeRowView(title: "🌶️ 맵기", value: profile.spicy, subtitle: "순한 ↔ 매운")
-            AttributeRowView(title: "💪 진한맛", value: profile.boldness, subtitle: "담백 ↔ 진한")
-            AttributeRowView(title: "🍯 단맛", value: profile.sweetness, subtitle: "안좋아함 ↔ 좋아함")
-            AttributeRowView(title: "🧂 짠맛", value: profile.saltiness, subtitle: "싱거움 ↔ 짭짤")
-            AttributeRowView(title: "🥓 기름진", value: profile.richness, subtitle: "담백 ↔ 고소")
+            AttributeRowView(title: String(localized: "🌶️ 맵기"), value: profile.spicy, subtitle: String(localized: "순한 ↔ 매운"))
+            AttributeRowView(title: String(localized: "💪 진한맛"), value: profile.boldness, subtitle: String(localized: "담백 ↔ 진한"))
+            AttributeRowView(title: String(localized: "🍯 단맛"), value: profile.sweetness, subtitle: String(localized: "안좋아함 ↔ 좋아함"))
+            AttributeRowView(title: String(localized: "🧂 짠맛"), value: profile.saltiness, subtitle: String(localized: "싱거움 ↔ 짭짤"))
+            AttributeRowView(title: String(localized: "🥓 기름진"), value: profile.richness, subtitle: String(localized: "담백 ↔ 고소"))
 
             Divider()
                 .padding(.vertical, 8)
@@ -83,9 +83,9 @@ struct TasteProfileView: View {
                 .font(.headline)
                 .frame(maxWidth: .infinity, alignment: .leading)
 
-            AttributeRowView(title: "🌿 본연의맛", value: profile.naturalTaste, subtitle: "양념 ↔ 재료맛")
-            AttributeRowView(title: "✨ 질감", value: profile.texture, subtitle: "부드러움 ↔ 쫄깃")
-            AttributeRowView(title: "🔥 조리법", value: profile.cooking, subtitle: "날것 ↔ 구이")
+            AttributeRowView(title: String(localized: "🌿 본연의맛"), value: profile.naturalTaste, subtitle: String(localized: "양념 ↔ 재료맛"))
+            AttributeRowView(title: String(localized: "✨ 질감"), value: profile.texture, subtitle: String(localized: "부드러움 ↔ 쫄깃"))
+            AttributeRowView(title: String(localized: "🔥 조리법"), value: profile.cooking, subtitle: String(localized: "날것 ↔ 구이"))
         }
         .padding(.horizontal)
     }
@@ -97,11 +97,11 @@ struct TasteProfileView: View {
                     .font(.headline)
                     .frame(maxWidth: .infinity, alignment: .leading)
 
-                SliderRowView(title: "🌶️ 맵기", subtitle: "순한 ↔ 매운", value: $profile.spicy)
-                SliderRowView(title: "💪 진한맛", subtitle: "담백 ↔ 진한", value: $profile.boldness)
-                SliderRowView(title: "🍯 단맛", subtitle: "안좋아함 ↔ 좋아함", value: $profile.sweetness)
-                SliderRowView(title: "🧂 짠맛", subtitle: "싱거움 ↔ 짭짤", value: $profile.saltiness)
-                SliderRowView(title: "🥓 기름진", subtitle: "담백 ↔ 고소", value: $profile.richness)
+                SliderRowView(title: String(localized: "🌶️ 맵기"), subtitle: String(localized: "순한 ↔ 매운"), value: $profile.spicy)
+                SliderRowView(title: String(localized: "💪 진한맛"), subtitle: String(localized: "담백 ↔ 진한"), value: $profile.boldness)
+                SliderRowView(title: String(localized: "🍯 단맛"), subtitle: String(localized: "안좋아함 ↔ 좋아함"), value: $profile.sweetness)
+                SliderRowView(title: String(localized: "🧂 짠맛"), subtitle: String(localized: "싱거움 ↔ 짭짤"), value: $profile.saltiness)
+                SliderRowView(title: String(localized: "🥓 기름진"), subtitle: String(localized: "담백 ↔ 고소"), value: $profile.richness)
             }
 
             Divider()
@@ -111,9 +111,9 @@ struct TasteProfileView: View {
                     .font(.headline)
                     .frame(maxWidth: .infinity, alignment: .leading)
 
-                SliderRowView(title: "🌿 본연의맛", subtitle: "양념 ↔ 재료맛", value: $profile.naturalTaste)
-                SliderRowView(title: "✨ 질감", subtitle: "부드러움 ↔ 쫄깃", value: $profile.texture)
-                SliderRowView(title: "🔥 조리법", subtitle: "날것 ↔ 구이", value: $profile.cooking)
+                SliderRowView(title: String(localized: "🌿 본연의맛"), subtitle: String(localized: "양념 ↔ 재료맛"), value: $profile.naturalTaste)
+                SliderRowView(title: String(localized: "✨ 질감"), subtitle: String(localized: "부드러움 ↔ 쫄깃"), value: $profile.texture)
+                SliderRowView(title: String(localized: "🔥 조리법"), subtitle: String(localized: "날것 ↔ 구이"), value: $profile.cooking)
             }
         }
         .padding(.horizontal)

@@ -8,8 +8,13 @@ enum RestaurantListType: String, Codable, CaseIterable {
     case wishlist = "가볼 곳"       // 가보고 싶은 식당 (위시리스트)
     case michelin = "미슐랭"        // 최고의 식당 (Top 6)
 
+    // rawValue 는 저장·비교용 식별자라 그대로 두고, 화면 표시만 현지화한다.
     var displayName: String {
-        rawValue
+        switch self {
+        case .visited: return String(localized: "가본 곳")
+        case .wishlist: return String(localized: "가볼 곳")
+        case .michelin: return String(localized: "미슐랭")
+        }
     }
 
     var icon: String {
@@ -158,12 +163,12 @@ final class Restaurant {
             let avgNaturalTaste = validVisits.compactMap { $0.naturalTaste }.average
 
             return [
-                ("맵기", avgSpicy),
-                ("진한맛", avgBoldness),
-                ("단맛", avgSweetness),
-                ("짠맛", avgSaltiness),
-                ("기름진", avgRichness),
-                ("본연의맛", avgNaturalTaste)
+                (String(localized: "맵기"), avgSpicy),
+                (String(localized: "진한맛"), avgBoldness),
+                (String(localized: "단맛"), avgSweetness),
+                (String(localized: "짠맛"), avgSaltiness),
+                (String(localized: "기름진"), avgRichness),
+                (String(localized: "본연의맛"), avgNaturalTaste)
             ]
 
         case .steak:
@@ -175,62 +180,62 @@ final class Restaurant {
             let avgMarbling = validVisits.compactMap { $0.steakMarbling }.average
 
             return [
-                ("굽기", avgDoneness),
-                ("육즙", avgJuiciness),
-                ("부드러움", avgTenderness),
-                ("간", avgSeasoning),
-                ("육향", avgFlavor),
-                ("마블링", avgMarbling)
+                (String(localized: "굽기"), avgDoneness),
+                (String(localized: "육즙"), avgJuiciness),
+                (String(localized: "부드러움"), avgTenderness),
+                (String(localized: "간"), avgSeasoning),
+                (String(localized: "육향"), avgFlavor),
+                (String(localized: "마블링"), avgMarbling)
             ]
 
         case .sushi:
             return [
-                ("샤리(밥)", validVisits.compactMap { $0.sushiShari }.average),
-                ("네타(재료)", validVisits.compactMap { $0.sushiNeta }.average),
-                ("와사비", validVisits.compactMap { $0.sushiWasabi }.average),
-                ("밸런스", validVisits.compactMap { $0.sushiBalance }.average),
-                ("쥐기", validVisits.compactMap { $0.sushiGrip }.average),
-                ("온도", validVisits.compactMap { $0.sushiTemperature }.average)
+                (String(localized: "샤리(밥)"), validVisits.compactMap { $0.sushiShari }.average),
+                (String(localized: "네타(재료)"), validVisits.compactMap { $0.sushiNeta }.average),
+                (String(localized: "와사비"), validVisits.compactMap { $0.sushiWasabi }.average),
+                (String(localized: "밸런스"), validVisits.compactMap { $0.sushiBalance }.average),
+                (String(localized: "쥐기"), validVisits.compactMap { $0.sushiGrip }.average),
+                (String(localized: "온도"), validVisits.compactMap { $0.sushiTemperature }.average)
             ]
 
         case .ramen:
             return [
-                ("국물", validVisits.compactMap { $0.ramenBroth }.average),
-                ("면발", validVisits.compactMap { $0.ramenNoodle }.average),
-                ("차슈", validVisits.compactMap { $0.ramenChashu }.average),
-                ("토핑", validVisits.compactMap { $0.ramenTopping }.average),
-                ("온도", validVisits.compactMap { $0.ramenTemperature }.average),
-                ("밸런스", validVisits.compactMap { $0.ramenBalance }.average)
+                (String(localized: "국물"), validVisits.compactMap { $0.ramenBroth }.average),
+                (String(localized: "면발"), validVisits.compactMap { $0.ramenNoodle }.average),
+                (String(localized: "차슈"), validVisits.compactMap { $0.ramenChashu }.average),
+                (String(localized: "토핑"), validVisits.compactMap { $0.ramenTopping }.average),
+                (String(localized: "온도"), validVisits.compactMap { $0.ramenTemperature }.average),
+                (String(localized: "밸런스"), validVisits.compactMap { $0.ramenBalance }.average)
             ]
 
         case .pizza:
             return [
-                ("도우", validVisits.compactMap { $0.pizzaDough }.average),
-                ("소스", validVisits.compactMap { $0.pizzaSauce }.average),
-                ("치즈", validVisits.compactMap { $0.pizzaCheese }.average),
-                ("굽기", validVisits.compactMap { $0.pizzaBaking }.average),
-                ("토핑", validVisits.compactMap { $0.pizzaTopping }.average),
-                ("밸런스", validVisits.compactMap { $0.pizzaBalance }.average)
+                (String(localized: "도우"), validVisits.compactMap { $0.pizzaDough }.average),
+                (String(localized: "소스"), validVisits.compactMap { $0.pizzaSauce }.average),
+                (String(localized: "치즈"), validVisits.compactMap { $0.pizzaCheese }.average),
+                (String(localized: "굽기"), validVisits.compactMap { $0.pizzaBaking }.average),
+                (String(localized: "토핑"), validVisits.compactMap { $0.pizzaTopping }.average),
+                (String(localized: "밸런스"), validVisits.compactMap { $0.pizzaBalance }.average)
             ]
 
         case .wine:
             return [
-                ("바디", validVisits.compactMap { $0.wineBody }.average),
-                ("타닌", validVisits.compactMap { $0.wineTannin }.average),
-                ("산도", validVisits.compactMap { $0.wineAcidity }.average),
-                ("아로마", validVisits.compactMap { $0.wineAroma }.average),
-                ("피니시", validVisits.compactMap { $0.wineFinish }.average),
-                ("밸런스", validVisits.compactMap { $0.wineBalance }.average)
+                (String(localized: "바디"), validVisits.compactMap { $0.wineBody }.average),
+                (String(localized: "타닌"), validVisits.compactMap { $0.wineTannin }.average),
+                (String(localized: "산도"), validVisits.compactMap { $0.wineAcidity }.average),
+                (String(localized: "아로마"), validVisits.compactMap { $0.wineAroma }.average),
+                (String(localized: "피니시"), validVisits.compactMap { $0.wineFinish }.average),
+                (String(localized: "밸런스"), validVisits.compactMap { $0.wineBalance }.average)
             ]
 
         case .coffee:
             return [
-                ("산미", validVisits.compactMap { $0.coffeeAcidity }.average),
-                ("바디", validVisits.compactMap { $0.coffeeBody }.average),
-                ("향미", validVisits.compactMap { $0.coffeeFlavor }.average),
-                ("후미", validVisits.compactMap { $0.coffeeAftertaste }.average),
-                ("단맛", validVisits.compactMap { $0.coffeeSweetness }.average),
-                ("밸런스", validVisits.compactMap { $0.coffeeBalance }.average)
+                (String(localized: "산미"), validVisits.compactMap { $0.coffeeAcidity }.average),
+                (String(localized: "바디"), validVisits.compactMap { $0.coffeeBody }.average),
+                (String(localized: "향미"), validVisits.compactMap { $0.coffeeFlavor }.average),
+                (String(localized: "후미"), validVisits.compactMap { $0.coffeeAftertaste }.average),
+                (String(localized: "단맛"), validVisits.compactMap { $0.coffeeSweetness }.average),
+                (String(localized: "밸런스"), validVisits.compactMap { $0.coffeeBalance }.average)
             ]
         }
     }
@@ -252,12 +257,12 @@ final class Restaurant {
             let avgNaturalTaste = validVisits.compactMap { $0.naturalTasteAppropriate }.map { Double($0) }.average * 2
 
             return [
-                ("맵기", avgSpicy),
-                ("진한맛", avgBoldness),
-                ("단맛", avgSweetness),
-                ("짠맛", avgSaltiness),
-                ("기름진", avgRichness),
-                ("본연의맛", avgNaturalTaste)
+                (String(localized: "맵기"), avgSpicy),
+                (String(localized: "진한맛"), avgBoldness),
+                (String(localized: "단맛"), avgSweetness),
+                (String(localized: "짠맛"), avgSaltiness),
+                (String(localized: "기름진"), avgRichness),
+                (String(localized: "본연의맛"), avgNaturalTaste)
             ]
 
         case .steak:
@@ -269,62 +274,62 @@ final class Restaurant {
             let avgMarbling = validVisits.compactMap { $0.steakMarblingAppropriate }.map { Double($0) }.average * 2
 
             return [
-                ("굽기", avgDoneness),
-                ("육즙", avgJuiciness),
-                ("부드러움", avgTenderness),
-                ("간", avgSeasoning),
-                ("육향", avgFlavor),
-                ("마블링", avgMarbling)
+                (String(localized: "굽기"), avgDoneness),
+                (String(localized: "육즙"), avgJuiciness),
+                (String(localized: "부드러움"), avgTenderness),
+                (String(localized: "간"), avgSeasoning),
+                (String(localized: "육향"), avgFlavor),
+                (String(localized: "마블링"), avgMarbling)
             ]
 
         case .sushi:
             return [
-                ("샤리(밥)", validVisits.compactMap { $0.sushiShariAppropriate }.map { Double($0) }.average * 2),
-                ("네타(재료)", validVisits.compactMap { $0.sushiNetaAppropriate }.map { Double($0) }.average * 2),
-                ("와사비", validVisits.compactMap { $0.sushiWasabiAppropriate }.map { Double($0) }.average * 2),
-                ("밸런스", validVisits.compactMap { $0.sushiBalanceAppropriate }.map { Double($0) }.average * 2),
-                ("쥐기", validVisits.compactMap { $0.sushiGripAppropriate }.map { Double($0) }.average * 2),
-                ("온도", validVisits.compactMap { $0.sushiTemperatureAppropriate }.map { Double($0) }.average * 2)
+                (String(localized: "샤리(밥)"), validVisits.compactMap { $0.sushiShariAppropriate }.map { Double($0) }.average * 2),
+                (String(localized: "네타(재료)"), validVisits.compactMap { $0.sushiNetaAppropriate }.map { Double($0) }.average * 2),
+                (String(localized: "와사비"), validVisits.compactMap { $0.sushiWasabiAppropriate }.map { Double($0) }.average * 2),
+                (String(localized: "밸런스"), validVisits.compactMap { $0.sushiBalanceAppropriate }.map { Double($0) }.average * 2),
+                (String(localized: "쥐기"), validVisits.compactMap { $0.sushiGripAppropriate }.map { Double($0) }.average * 2),
+                (String(localized: "온도"), validVisits.compactMap { $0.sushiTemperatureAppropriate }.map { Double($0) }.average * 2)
             ]
 
         case .ramen:
             return [
-                ("국물", validVisits.compactMap { $0.ramenBrothAppropriate }.map { Double($0) }.average * 2),
-                ("면발", validVisits.compactMap { $0.ramenNoodleAppropriate }.map { Double($0) }.average * 2),
-                ("차슈", validVisits.compactMap { $0.ramenChashuAppropriate }.map { Double($0) }.average * 2),
-                ("토핑", validVisits.compactMap { $0.ramenToppingAppropriate }.map { Double($0) }.average * 2),
-                ("온도", validVisits.compactMap { $0.ramenTemperatureAppropriate }.map { Double($0) }.average * 2),
-                ("밸런스", validVisits.compactMap { $0.ramenBalanceAppropriate }.map { Double($0) }.average * 2)
+                (String(localized: "국물"), validVisits.compactMap { $0.ramenBrothAppropriate }.map { Double($0) }.average * 2),
+                (String(localized: "면발"), validVisits.compactMap { $0.ramenNoodleAppropriate }.map { Double($0) }.average * 2),
+                (String(localized: "차슈"), validVisits.compactMap { $0.ramenChashuAppropriate }.map { Double($0) }.average * 2),
+                (String(localized: "토핑"), validVisits.compactMap { $0.ramenToppingAppropriate }.map { Double($0) }.average * 2),
+                (String(localized: "온도"), validVisits.compactMap { $0.ramenTemperatureAppropriate }.map { Double($0) }.average * 2),
+                (String(localized: "밸런스"), validVisits.compactMap { $0.ramenBalanceAppropriate }.map { Double($0) }.average * 2)
             ]
 
         case .pizza:
             return [
-                ("도우", validVisits.compactMap { $0.pizzaDoughAppropriate }.map { Double($0) }.average * 2),
-                ("소스", validVisits.compactMap { $0.pizzaSauceAppropriate }.map { Double($0) }.average * 2),
-                ("치즈", validVisits.compactMap { $0.pizzaCheeseAppropriate }.map { Double($0) }.average * 2),
-                ("굽기", validVisits.compactMap { $0.pizzaBakingAppropriate }.map { Double($0) }.average * 2),
-                ("토핑", validVisits.compactMap { $0.pizzaToppingAppropriate }.map { Double($0) }.average * 2),
-                ("밸런스", validVisits.compactMap { $0.pizzaBalanceAppropriate }.map { Double($0) }.average * 2)
+                (String(localized: "도우"), validVisits.compactMap { $0.pizzaDoughAppropriate }.map { Double($0) }.average * 2),
+                (String(localized: "소스"), validVisits.compactMap { $0.pizzaSauceAppropriate }.map { Double($0) }.average * 2),
+                (String(localized: "치즈"), validVisits.compactMap { $0.pizzaCheeseAppropriate }.map { Double($0) }.average * 2),
+                (String(localized: "굽기"), validVisits.compactMap { $0.pizzaBakingAppropriate }.map { Double($0) }.average * 2),
+                (String(localized: "토핑"), validVisits.compactMap { $0.pizzaToppingAppropriate }.map { Double($0) }.average * 2),
+                (String(localized: "밸런스"), validVisits.compactMap { $0.pizzaBalanceAppropriate }.map { Double($0) }.average * 2)
             ]
 
         case .wine:
             return [
-                ("바디", validVisits.compactMap { $0.wineBodyAppropriate }.map { Double($0) }.average * 2),
-                ("타닌", validVisits.compactMap { $0.wineTanninAppropriate }.map { Double($0) }.average * 2),
-                ("산도", validVisits.compactMap { $0.wineAcidityAppropriate }.map { Double($0) }.average * 2),
-                ("아로마", validVisits.compactMap { $0.wineAromaAppropriate }.map { Double($0) }.average * 2),
-                ("피니시", validVisits.compactMap { $0.wineFinishAppropriate }.map { Double($0) }.average * 2),
-                ("밸런스", validVisits.compactMap { $0.wineBalanceAppropriate }.map { Double($0) }.average * 2)
+                (String(localized: "바디"), validVisits.compactMap { $0.wineBodyAppropriate }.map { Double($0) }.average * 2),
+                (String(localized: "타닌"), validVisits.compactMap { $0.wineTanninAppropriate }.map { Double($0) }.average * 2),
+                (String(localized: "산도"), validVisits.compactMap { $0.wineAcidityAppropriate }.map { Double($0) }.average * 2),
+                (String(localized: "아로마"), validVisits.compactMap { $0.wineAromaAppropriate }.map { Double($0) }.average * 2),
+                (String(localized: "피니시"), validVisits.compactMap { $0.wineFinishAppropriate }.map { Double($0) }.average * 2),
+                (String(localized: "밸런스"), validVisits.compactMap { $0.wineBalanceAppropriate }.map { Double($0) }.average * 2)
             ]
 
         case .coffee:
             return [
-                ("산미", validVisits.compactMap { $0.coffeeAcidityAppropriate }.map { Double($0) }.average * 2),
-                ("바디", validVisits.compactMap { $0.coffeeBodyAppropriate }.map { Double($0) }.average * 2),
-                ("향미", validVisits.compactMap { $0.coffeeFlavorAppropriate }.map { Double($0) }.average * 2),
-                ("후미", validVisits.compactMap { $0.coffeeAftertasteAppropriate }.map { Double($0) }.average * 2),
-                ("단맛", validVisits.compactMap { $0.coffeeSweetnessAppropriate }.map { Double($0) }.average * 2),
-                ("밸런스", validVisits.compactMap { $0.coffeeBalanceAppropriate }.map { Double($0) }.average * 2)
+                (String(localized: "산미"), validVisits.compactMap { $0.coffeeAcidityAppropriate }.map { Double($0) }.average * 2),
+                (String(localized: "바디"), validVisits.compactMap { $0.coffeeBodyAppropriate }.map { Double($0) }.average * 2),
+                (String(localized: "향미"), validVisits.compactMap { $0.coffeeFlavorAppropriate }.map { Double($0) }.average * 2),
+                (String(localized: "후미"), validVisits.compactMap { $0.coffeeAftertasteAppropriate }.map { Double($0) }.average * 2),
+                (String(localized: "단맛"), validVisits.compactMap { $0.coffeeSweetnessAppropriate }.map { Double($0) }.average * 2),
+                (String(localized: "밸런스"), validVisits.compactMap { $0.coffeeBalanceAppropriate }.map { Double($0) }.average * 2)
             ]
         }
     }
