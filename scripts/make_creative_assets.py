@@ -22,7 +22,7 @@ ICON = ROOT / "RestaurantMap" / "Assets.xcassets" / "AppIcon.appiconset" / "imag
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
 # 앱 언어 코드 → App Store Connect 로케일 (make_marketing_screenshots.py 와 같다)
-STORE = {"ko": "ko", "en": "en-US", "en-GB": "en-GB", "ja": "ja", "zh-Hans": "zh-Hans", "zh-Hant": "zh-Hant", "ru": "ru", "es": "es-ES", "de": "de-DE", "fr": "fr-FR", "it": "it", "pt-BR": "pt-BR", "th": "th", "vi": "vi", "cs": "cs", "da": "da", "el": "el", "fi": "fi", "id": "id", "nb": "no", "nl": "nl-NL", "pl": "pl", "sv": "sv", "tr": "tr"}   # 스토어에는 한국어 한 가지
+STORE = {"ko": "ko", "en": "en-US", "en-GB": "en-GB", "ja": "ja", "zh-Hans": "zh-Hans", "zh-Hant": "zh-Hant", "ru": "ru", "es": "es-ES", "de": "de-DE", "fr": "fr-FR", "it": "it", "pt-BR": "pt-BR", "th": "th", "vi": "vi", "cs": "cs", "da": "da", "el": "el", "fi": "fi", "id": "id", "nb": "nb", "nl": "nl-NL", "pl": "pl", "sv": "sv", "tr": "tr"}   # 스토어에는 한국어 한 가지
 
 # (가로, 세로, 안전 영역 left, top, right, bottom)
 SPEC = {
@@ -39,21 +39,21 @@ SEARCH = {
     "ja": ("グルメ マップ", "お気に入りのお店を<br>地図に集めよう", "星とランキングで<br>自分だけのミシュランを"),
     "zh-Hans": ("美食地图", "把你找到的美食<br>都收进地图", "用星级和排名<br>打造专属米其林"),
     "zh-Hant": ("美食地圖", "把你找到的美食<br>都收進地圖", "用星等和排名<br>打造專屬米其林"),
-    "ru": ("карта ресторанов", "Любимые места —<br>на одной карте", "Оценки и рейтинг —<br>ваш личный «Мишлен»"),
-    "es": ("mapa de restaurantes", "Tus sitios favoritos,<br>en un solo mapa", "Con puntuaciones y ranking,<br>tu propio Michelin"),
-    "de": ("Restaurant-Karte", "Deine Lieblingsorte<br>auf einer Karte", "Mit Sternen und Rängen<br>dein eigener Michelin"),
-    "fr": ("carte des restaurants", "Vos adresses préférées<br>sur une seule carte", "Notes et classement :<br>votre propre Michelin"),
+    "ru": ("карта ресторанов", "Любимые места<br>на карте", "Звёзды и рейтинг:<br>ваш личный «Мишлен»"),
+    "es": ("mapa de restaurantes", "Tus favoritos<br>en un mapa", "Puntúa y ordena:<br>tu propio Michelin"),
+    "de": ("Restaurant-Karte", "Lieblingsorte<br>auf einer Karte", "Sterne und Ränge:<br>dein eigener Michelin"),
+    "fr": ("carte des restaurants", "Vos adresses<br>sur une carte", "Notes et classement :<br>votre propre Michelin"),
     "it": ("mappa ristoranti", "I tuoi posti preferiti<br>su un’unica mappa", "Voti e classifica:<br>il tuo Michelin personale"),
-    "pt-BR": ("mapa de restaurantes", "Seus lugares favoritos<br>em um só mapa", "Notas e ranking:<br>seu próprio Michelin"),
+    "pt-BR": ("mapa de restaurantes", "Seus favoritos<br>em um só mapa", "Notas e ranking:<br>seu próprio Michelin"),
     "th": ("แผนที่ร้านอาหาร", "เก็บร้านโปรด<br>ไว้ในแผนที่เดียว", "ให้ดาวและจัดอันดับ<br>สร้างมิชลินของคุณเอง"),
-    "vi": ("bản đồ quán ăn", "Gom quán yêu thích<br>vào một bản đồ", "Chấm sao và xếp hạng<br>Michelin của riêng bạn"),
+    "vi": ("bản đồ quán ăn", "Quán yêu thích<br>trên một bản đồ", "Chấm sao và xếp hạng<br>Michelin của riêng bạn"),
     "cs": ("mapa restaurací", "Oblíbená místa<br>na jedné mapě", "Hvězdy a pořadí:<br>váš vlastní Michelin"),
-    "da": ("restaurantkort", "Dine yndlingssteder<br>på ét kort", "Stjerner og rangering:<br>din egen Michelin"),
-    "el": ("χάρτης εστιατορίων", "Τα αγαπημένα σας μέρη<br>σε έναν χάρτη", "Αστέρια και κατάταξη:<br>το δικό σας Michelin"),
+    "da": ("restaurantkort", "Yndlingssteder<br>på ét kort", "Stjerner og rangering:<br>din egen Michelin"),
+    "el": ("χάρτης εστιατορίων", "Αγαπημένα μέρη<br>σε έναν χάρτη", "Αστέρια και σειρά:<br>το δικό σας Michelin"),
     "fi": ("ravintolakartta", "Suosikkipaikkasi<br>yhdellä kartalla", "Tähdet ja ranking:<br>oma Michelinisi"),
     "id": ("peta restoran", "Tempat favoritmu<br>dalam satu peta", "Bintang dan peringkat:<br>Michelin buatanmu sendiri"),
-    "nb": ("restaurantkart", "Favorittstedene dine<br>på ett kart", "Stjerner og rangering:<br>din egen Michelin"),
-    "nl": ("restaurantkaart", "Je favoriete plekken<br>op één kaart", "Sterren en ranking:<br>je eigen Michelin"),
+    "nb": ("restaurantkart", "Favorittsteder<br>på ett kart", "Stjerner og rangering:<br>din egen Michelin"),
+    "nl": ("restaurantkaart", "Favoriete plekken<br>op één kaart", "Sterren en ranking:<br>je eigen Michelin"),
     "pl": ("mapa restauracji", "Ulubione miejsca<br>na jednej mapie", "Gwiazdki i ranking:<br>Twój własny Michelin"),
     "sv": ("restaurangkarta", "Dina favoritställen<br>på en karta", "Stjärnor och rankning:<br>din egen Michelin"),
     "tr": ("restoran haritası", "Sevdiğin mekânlar<br>tek haritada", "Yıldız ve sıralamayla<br>kendi Michelin’in"),
@@ -77,9 +77,9 @@ HEADER = {
     "vi": ("Insaeng", "Chỉ giữ quán ngon thật<br>trên bản đồ của bạn"),
     "cs": ("Insaeng", "Jen opravdu dobrá místa<br>na vaší mapě"),
     "da": ("Insaeng", "Kun de rigtig gode steder<br>på dit kort"),
-    "el": ("Insaeng", "Μόνο τα πραγματικά καλά μέρη<br>στον χάρτη σας"),
+    "el": ("Insaeng", "Μόνο τα καλύτερα μέρη<br>στον χάρτη σας"),
     "fi": ("Insaeng", "Vain oikeasti hyvät paikat<br>omalle kartallesi"),
-    "id": ("Insaeng", "Hanya tempat yang benar-benar enak<br>di petamu"),
+    "id": ("Insaeng", "Hanya tempat terenak<br>di petamu"),
     "nb": ("Insaeng", "Bare de virkelig gode stedene<br>på kartet ditt"),
     "nl": ("Insaeng", "Alleen echt goede plekken<br>op jouw kaart"),
     "pl": ("Insaeng", "Tylko naprawdę dobre miejsca<br>na Twojej mapie"),
@@ -92,7 +92,10 @@ BASE_CSS = """
 * { margin:0; padding:0; box-sizing:border-box; }
 html,body { width:%(W)dpx; height:%(H)dpx; overflow:hidden; }
 body { background:#FBEBD7; position:relative;
-  font-family:-apple-system, "SF Pro Display", "Apple SD Gothic Neo", sans-serif; }
+  font-family:"SF Pro Display", -apple-system, "Hiragino Sans", "PingFang SC", sans-serif; }
+body:lang(ko) { font-family:"SF Pro Display", "Apple SD Gothic Neo", sans-serif; }
+body:lang(zh-Hant) { font-family:"SF Pro Display", "PingFang TC", sans-serif; }
+body:lang(ja) { font-family:"SF Pro Display", "Hiragino Sans", sans-serif; }
 .grid { position:absolute; inset:0; opacity:.55;
   background-image:linear-gradient(115deg, transparent 48%%, #F3D9BB 48%%, #F3D9BB 52%%, transparent 52%%),
                    linear-gradient(25deg, transparent 47%%, #F3D9BB 47%%, #F3D9BB 53%%, transparent 53%%);

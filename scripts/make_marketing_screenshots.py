@@ -17,7 +17,7 @@ CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 W, H = 1242, 2688   # 이 계정의 아이폰 제출 규격
 
 # 앱 언어 → App Store 로케일
-STORE = {"ko": "ko", "en": "en-US", "en-GB": "en-GB", "ja": "ja", "zh-Hans": "zh-Hans", "zh-Hant": "zh-Hant", "ru": "ru", "es": "es-ES", "de": "de-DE", "fr": "fr-FR", "it": "it", "pt-BR": "pt-BR", "th": "th", "vi": "vi", "cs": "cs", "da": "da", "el": "el", "fi": "fi", "id": "id", "nb": "no", "nl": "nl-NL", "pl": "pl", "sv": "sv", "tr": "tr"}
+STORE = {"ko": "ko", "en": "en-US", "en-GB": "en-GB", "ja": "ja", "zh-Hans": "zh-Hans", "zh-Hant": "zh-Hant", "ru": "ru", "es": "es-ES", "de": "de-DE", "fr": "fr-FR", "it": "it", "pt-BR": "pt-BR", "th": "th", "vi": "vi", "cs": "cs", "da": "da", "el": "el", "fi": "fi", "id": "id", "nb": "nb", "nl": "nl-NL", "pl": "pl", "sv": "sv", "tr": "tr"}
 
 # 파일 · 배치 · 언어별 (헤드라인, 보조 문장)
 SHOTS = [
@@ -35,10 +35,13 @@ THEME = dict(bg="#FBEBD7", ink="#2A2420", sub="#7A6656", dark_bg="#2A2420", dark
 BASE_CSS = """
 * { margin:0; padding:0; box-sizing:border-box; }
 html,body { width:%(W)dpx; height:%(H)dpx; overflow:hidden; }
-body { background:%(bg)s; font-family:-apple-system, "Apple SD Gothic Neo", "Hiragino Sans", sans-serif; position:relative; }
+body { background:%(bg)s; font-family:"SF Pro Display", -apple-system, "Hiragino Sans", "PingFang SC", sans-serif; position:relative; }
 .headline { font-size:96px; font-weight:800; color:%(ink)s; letter-spacing:-2px; line-height:1.22; text-wrap:balance; }
 .sub { font-size:50px; font-weight:500; color:%(sub)s; letter-spacing:-1px; line-height:1.35; text-wrap:balance; }
 :lang(ko) .headline, :lang(ko) .sub { word-break:keep-all; }
+:lang(ko) body, body:lang(ko) { font-family:"SF Pro Display", "Apple SD Gothic Neo", sans-serif; }
+body:lang(zh-Hant) { font-family:"SF Pro Display", "PingFang TC", sans-serif; }
+body:lang(ja) { font-family:"SF Pro Display", "Hiragino Sans", sans-serif; }
 .phone { background:%(frame)s; border-radius:112px; border:3px solid %(rim)s; padding:24px;
   box-shadow: 60px 90px 120px rgba(0,0,0,.24), 20px 30px 50px rgba(0,0,0,.14); }
 .phone img { width:100%%; display:block; border-radius:89px; }
