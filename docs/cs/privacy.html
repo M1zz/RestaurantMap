@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Zásady ochrany osobních údajů – Insaeng</title>
+<meta name="description" content="Jaké údaje aplikace Insaeng zpracovává, které záznamy zůstávají jen v zařízení, jak funguje vyhledávání míst a Firebase, odesílání zpětné vazby, vaše práva a kontakt.">
+<link rel="canonical" href="https://m1zz.github.io/RestaurantMap/cs/privacy.html">
+<link rel="alternate" hreflang="ko" href="https://m1zz.github.io/RestaurantMap/privacy.html">
+<link rel="alternate" hreflang="en" href="https://m1zz.github.io/RestaurantMap/en/privacy.html">
+<link rel="alternate" hreflang="ja" href="https://m1zz.github.io/RestaurantMap/ja/privacy.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/RestaurantMap/zh-Hans/privacy.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/RestaurantMap/zh-Hant/privacy.html">
+<link rel="alternate" hreflang="ru" href="https://m1zz.github.io/RestaurantMap/ru/privacy.html">
+<link rel="alternate" hreflang="es" href="https://m1zz.github.io/RestaurantMap/es/privacy.html">
+<link rel="alternate" hreflang="de" href="https://m1zz.github.io/RestaurantMap/de/privacy.html">
+<link rel="alternate" hreflang="fr" href="https://m1zz.github.io/RestaurantMap/fr/privacy.html">
+<link rel="alternate" hreflang="it" href="https://m1zz.github.io/RestaurantMap/it/privacy.html">
+<link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/RestaurantMap/pt-BR/privacy.html">
+<link rel="alternate" hreflang="th" href="https://m1zz.github.io/RestaurantMap/th/privacy.html">
+<link rel="alternate" hreflang="vi" href="https://m1zz.github.io/RestaurantMap/vi/privacy.html">
+<link rel="alternate" hreflang="cs" href="https://m1zz.github.io/RestaurantMap/cs/privacy.html">
+<link rel="alternate" hreflang="da" href="https://m1zz.github.io/RestaurantMap/da/privacy.html">
+<link rel="alternate" hreflang="el" href="https://m1zz.github.io/RestaurantMap/el/privacy.html">
+<link rel="alternate" hreflang="fi" href="https://m1zz.github.io/RestaurantMap/fi/privacy.html">
+<link rel="alternate" hreflang="id" href="https://m1zz.github.io/RestaurantMap/id/privacy.html">
+<link rel="alternate" hreflang="nb" href="https://m1zz.github.io/RestaurantMap/nb/privacy.html">
+<link rel="alternate" hreflang="nl" href="https://m1zz.github.io/RestaurantMap/nl/privacy.html">
+<link rel="alternate" hreflang="pl" href="https://m1zz.github.io/RestaurantMap/pl/privacy.html">
+<link rel="alternate" hreflang="sv" href="https://m1zz.github.io/RestaurantMap/sv/privacy.html">
+<link rel="alternate" hreflang="tr" href="https://m1zz.github.io/RestaurantMap/tr/privacy.html">
+<link rel="alternate" hreflang="en-GB" href="https://m1zz.github.io/RestaurantMap/en/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/RestaurantMap/privacy.html">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../icon.png">
+<link rel="apple-touch-icon" href="../icon.png">
+</head>
+<body>
+<div class="container">
+
+  <header class="site">
+    <img src="../icon.png" alt="Ikona aplikace Insaeng">
+    <div>
+      <div class="title">Insaeng</div>
+      <div class="subtitle">Hodnoťte a řaďte svá jídla</div>
+    </div>
+  </header>
+
+  <nav class="langs" aria-label="Jazyk">
+    <a href="../privacy.html" hreflang="ko" lang="ko">한국어</a>
+    <a href="../en/privacy.html" hreflang="en" lang="en">English</a>
+    <a href="../ja/privacy.html" hreflang="ja" lang="ja">日本語</a>
+    <a href="../zh-Hans/privacy.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+    <a href="../zh-Hant/privacy.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+    <a href="../ru/privacy.html" hreflang="ru" lang="ru">Русский</a>
+    <a href="../es/privacy.html" hreflang="es" lang="es">Español</a>
+    <a href="../de/privacy.html" hreflang="de" lang="de">Deutsch</a>
+    <a href="../fr/privacy.html" hreflang="fr" lang="fr">Français</a>
+    <a href="../it/privacy.html" hreflang="it" lang="it">Italiano</a>
+    <a href="../pt-BR/privacy.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+    <a href="../th/privacy.html" hreflang="th" lang="th">ไทย</a>
+    <a href="../vi/privacy.html" hreflang="vi" lang="vi">Tiếng Việt</a>
+    <a href="privacy.html" hreflang="cs" lang="cs" aria-current="true">Čeština</a>
+    <a href="../da/privacy.html" hreflang="da" lang="da">Dansk</a>
+    <a href="../el/privacy.html" hreflang="el" lang="el">Ελληνικά</a>
+    <a href="../fi/privacy.html" hreflang="fi" lang="fi">Suomi</a>
+    <a href="../id/privacy.html" hreflang="id" lang="id">Bahasa Indonesia</a>
+    <a href="../nb/privacy.html" hreflang="nb" lang="nb">Norsk bokmål</a>
+    <a href="../nl/privacy.html" hreflang="nl" lang="nl">Nederlands</a>
+    <a href="../pl/privacy.html" hreflang="pl" lang="pl">Polski</a>
+    <a href="../sv/privacy.html" hreflang="sv" lang="sv">Svenska</a>
+    <a href="../tr/privacy.html" hreflang="tr" lang="tr">Türkçe</a>
+  </nav>
+
+  <nav class="pages" aria-label="Stránky">
+    <a href="index.html">Domů</a>
+    <a href="support.html">Podpora</a>
+    <a href="privacy.html" aria-current="page">Ochrana osobních údajů</a>
+  </nav>
+
+  <main>
+    <h1>Zásady ochrany osobních údajů</h1>
+    <p class="lead">Účinnost od: 16. října 2026</p>
+
+    <p>
+      Vývojář aplikace Insaeng (Leeo, dále jen „vývojář“) při provozu aplikace pro iOS „Insaeng“ (dále jen „aplikace“)
+      dodržuje korejský zákon o ochraně osobních údajů (Personal Information Protection Act) a další související předpisy
+      a řídí se zásadou, že údaje uživatelů zpracovává jen v nezbytně nutném rozsahu.
+      Tyto zásady vysvětlují, jaké údaje aplikace zpracovává a jakým způsobem.
+    </p>
+
+    <div class="card">
+      <h3>Shrnutí</h3>
+      <ul>
+        <li>Aplikace nevyžaduje registraci ani přihlášení. Nežádá žádné údaje, podle kterých by vás bylo možné přímo identifikovat, jako je jméno, telefonní číslo nebo e-mail.</li>
+        <li>Seznam restaurací, záznamy návštěv, poznámky, hodnocení chuti a fotky se ukládají jen ve vašem zařízení a na servery vývojáře se neodesílají.</li>
+        <li>Když vyhledáváte místa nebo posouváte mapu, odesílá se hledaný výraz a poloha mapy službám pro vyhledávání míst (Kakao, Apple).</li>
+        <li>Aplikace obsahuje Google Firebase, takže se do Googlu mohou automaticky odesílat údaje o zařízení a aplikaci, údaje o používání a informace o chybách.</li>
+        <li>Zpětná vazba, kterou sami odešlete, a anonymní statistiky používání a hlášení chyb, ze kterých nelze poznat, kdo jste, se ukládají do úložiště iCloud vývojáře.</li>
+        <li>Aplikace nezobrazuje reklamy, nežádá o oprávnění ke sledování (App Tracking Transparency, ATT) a nesleduje vás napříč aplikacemi a weby jiných společností.</li>
+      </ul>
+    </div>
+
+    <h2>1. Zpracovávané údaje a způsob jejich získávání</h2>
+
+    <h3>A. Údaje uložené jen v zařízení</h3>
+    <p>Následující údaje, které do aplikace sami zadáte, se ukládají pouze v úložišti aplikace ve vašem zařízení a neodesílají se vývojáři ani třetím stranám.</p>
+    <ul>
+      <li>Údaje o restauracích: název, adresa, telefonní číslo, poloha (souřadnice), druh kuchyně, zařazení do Navštívené / Chci vyzkoušet, pořadí v Top 6</li>
+      <li>Záznamy návštěv: datum návštěvy, jídla, hvězdičky, poznámky, hodnocení chuti</li>
+      <li>Fotky přidané k záznamům návštěv (zmenšené přímo v zařízení a uložené v úložišti aplikace)</li>
+      <li>Uložená jídla, vlastní druhy kuchyně a chuťový profil vypočtený z hodnocení chuti</li>
+    </ul>
+    <p>
+      V nastavení je sice nabídka zálohování a obnovy přes iCloud, v současné verzi však nefunguje a záznamy se na iCloud neodesílají.
+      (Jako součást dat zařízení mohou být zahrnuty do celkové zálohy iPhonu.)
+    </p>
+
+    <h3>B. Údaje zpracovávané jen v zařízení</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Údaj</th><th>Účel zpracování</th><th>Způsob zpracování</th></tr></thead>
+        <tbody>
+          <tr><td>Poloha (při používání aplikace)</td><td>Zobrazení aktuální polohy na mapě, přidání restaurace na aktuální poloze, vyhledávání míst v okolí</td><td>Souřadnice se používají v zařízení; při vyhledávání míst se odesílají vyhledávací službě podle bodu 1-C. Historie polohy se neukládá.</td></tr>
+          <tr><td>Poloha (Vždy, volitelné)</td><td>Zjištění, zda jste pobyli v uložené restauraci a odešli, a odeslání připomenutí k zápisu návštěvy</td><td>Vzdálenost mezi aktuální polohou a polohou uložených restaurací se porovnává jen v zařízení. Trasy pohybu se neukládají ani neodesílají.</td></tr>
+          <tr><td>Fotoaparát, knihovna fotografií</td><td>Přidávání fotek k záznamům návštěv</td><td>Do úložiště aplikace se kopírují jen fotky, které vyberete nebo pořídíte. Nikam se neodesílají.</td></tr>
+          <tr><td>Oznámení</td><td>Připomenutí zápisu po návštěvě</td><td>Jde o místní oznámení naplánovaná v zařízení. Neprocházejí žádným push serverem.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>C. Vyhledávání míst (Kakao, Apple)</h3>
+    <p>
+      Když na mapě hledáte restauraci nebo posunutím mapy načítáte místa v okolí, aplikace odesílá službám pro vyhledávání míst tyto údaje:
+    </p>
+    <ul>
+      <li>Kakao Local API (Kakao Corp.): hledaný výraz, souřadnice středu mapy nebo aktuální polohy, okruh hledání</li>
+      <li>Vyhledávání v Apple Mapách (MapKit, Apple Inc.): hledaný výraz a zobrazená oblast mapy</li>
+    </ul>
+    <p>
+      Údaje, které by vás identifikovaly, se spolu s nimi neodesílají. Vzhledem k povaze internetové komunikace se však serverům těchto společností může předat vaše IP adresa;
+      ta se zpracovává podle zásad ochrany osobních údajů dané společnosti.
+      Když restauraci otevřete v Apple Mapách, KakaoMap nebo NAVER Map, předá se příslušné aplikaci název a souřadnice restaurace.
+    </p>
+
+    <h3>D. Údaje, které mohou být shromažďovány automaticky (Google Firebase)</h3>
+    <p>
+      Aplikace obsahuje Google Firebase SDK (Analytics, Crashlytics, Performance Monitoring aj.), které se inicializuje při spuštění aplikace.
+      Firebase přitom může automaticky shromažďovat a odesílat do Googlu tyto údaje:
+    </p>
+    <ul>
+      <li>Náhodně vytvořené identifikátory pro každou instalaci aplikace (ID instalace Firebase, ID instance aplikace)</li>
+      <li>Údaje o používání: události jako první spuštění, začátek relace nebo zobrazení obrazovky</li>
+      <li>Verze aplikace, model zařízení, verze operačního systému, jazyk zařízení a země či region odhadnuté z IP adresy</li>
+      <li>Informace o chybách při pádu aplikace a údaje o výkonu, například doba spuštění aplikace a doba odezvy sítě</li>
+    </ul>
+    <p>
+      Seznam restaurací, záznamy návštěv, fotky ani souřadnice polohy se do Firebase neodesílají.
+      Vývojář tyto údaje nespojuje s jinými údaji za účelem identifikace osob a nepoužívá je k reklamě ani marketingu.
+    </p>
+
+    <h3>E. Zpětná vazba, kterou odešlete sami</h3>
+    <p>
+      Když odešlete názor přes nabídku Podpora v nastavení nebo v odpovědi na otázku „Baví vás aplikace?“, uloží se do veřejného úložiště iCloud vývojáře (Apple CloudKit) tyto údaje:
+    </p>
+    <ul>
+      <li>Text, který jste napsali, a druh zpětné vazby</li>
+      <li>Jméno a e-mail, pokud jste je sami uvedli, abyste dostali odpověď (jen pokud je uvedete)</li>
+      <li>Verze aplikace, model zařízení a verze operačního systému, nastavení jazyka a regionu zařízení</li>
+    </ul>
+    <p>Pokud místo zpětné vazby pošlete e-mail, doručí se vývojáři přímo z vaší poštovní aplikace.</p>
+
+    <h3>F. Anonymní statistiky používání a hlášení chyb (Apple CloudKit)</h3>
+    <p>
+      Aby vývojář věděl, na kolika zařízeních se aplikace používá, a mohl opravovat chyby, odesílá aplikace do veřejného úložiště iCloud vývojáře (Apple CloudKit) tyto údaje.
+      Číst je může jen vývojář a odesílají se jen tehdy, když jste přihlášeni k iCloudu.
+    </p>
+    <ul>
+      <li>Náhodné ID vytvořené při instalaci aplikace (není propojené s vámi, s vaším Apple ID, zařízením ani jinými aplikacemi a při nové instalaci se změní)</li>
+      <li>Verze aplikace, verze operačního systému, nastavení jazyka a regionu zařízení</li>
+      <li>Počet spuštění aplikace, dny, kdy jste aplikaci otevřeli, datum instalace a počet dní od instalace</li>
+      <li>Názvy událostí v aplikaci, například zobrazení otázky na spokojenost nebo žádosti o recenzi (bez obsahu, který zadáte)</li>
+      <li>Hlášení chyb, když aplikace zamrzne nebo spadne (typ zařízení a technický popis chyby)</li>
+    </ul>
+    <p>
+      Seznam restaurací, záznamy návštěv, fotky, souřadnice polohy ani jméno či kontaktní údaje se neodesílají.
+      Aby se žádost o recenzi nezobrazovala příliš často, ukládá se datum posledního dotazu jen v zařízení.
+      Když klepnete na „Ano, baví“, otevře se okno pro hodnocení v App Store od Applu.
+    </p>
+
+    <h2>2. Účely zpracování</h2>
+    <ul>
+      <li>Poskytování funkcí aplikace, jako je ukládání restaurací a záznamů návštěv, zobrazení na mapě, vyhledávání míst a připomenutí po návštěvě</li>
+      <li>Opravy chyb a zlepšování stability a výkonu aplikace</li>
+      <li>Odpovídání na dotazy a zpětnou vazbu uživatelů</li>
+    </ul>
+    <p>K jiným účelům, jako je reklama, marketing nebo profilování, se údaje nepoužívají.</p>
+
+    <h2>3. Doba uchování a používání</h2>
+    <ul>
+      <li><strong>Údaje uložené v zařízení</strong>: uchovávají se, dokud je v aplikaci nesmažete nebo aplikaci neodstraníte. Volbou „Smazat všechna data“ v nastavení smažete najednou restaurace i záznamy návštěv; chcete-li beze zbytku smazat i fotky, odstraňte aplikaci.</li>
+      <li><strong>Údaje shromažďované službou Firebase</strong>: po uplynutí doby uchování nastavené u Googlu se automaticky smažou. Souhrnné statistiky, ze kterých nelze identifikovat jednotlivce, mohou být uchovány i poté.</li>
+      <li><strong>Zpětná vazba</strong>: uchovává se po dobu nutnou k vyřízení dotazu a zlepšování aplikace; na požádání ji bez zbytečného odkladu smažeme.</li>
+    </ul>
+
+    <h2>4. Poskytování údajů třetím stranám</h2>
+    <p>Vývojář osobní údaje uživatelů třetím stranám neposkytuje, s výjimkou případů, kdy to výslovně stanoví zákon.</p>
+
+    <h2>5. Zpracovatelé a předávání do zahraničí</h2>
+    <p>K poskytování funkcí aplikace a analýze chyb využíváme následující služby; některé údaje přitom mohou být předány do zahraničí.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Příjemce</th><th>Údaje</th><th>Účel</th><th>Země</th></tr></thead>
+        <tbody>
+          <tr><td>Google LLC (Firebase)</td><td>Údaje podle bodu 1-D</td><td>Statistiky používání aplikace, analýza chyb a výkonu</td><td>USA a další země s datovými centry Googlu</td></tr>
+          <tr><td>Apple Inc. (CloudKit)</td><td>Údaje podle bodu 1-E (pokud odešlete zpětnou vazbu) a bodu 1-F</td><td>Uchování zpětné vazby, anonymní statistiky používání a analýza chyb</td><td>USA a další země s datovými centry Applu</td></tr>
+          <tr><td>Apple Inc. (MapKit)</td><td>Údaje podle bodu 1-C (hledaný výraz, oblast mapy)</td><td>Vyhledávání míst</td><td>USA a další země s datovými centry Applu</td></tr>
+          <tr><td>Kakao Corp.</td><td>Údaje podle bodu 1-C (hledaný výraz, souřadnice)</td><td>Vyhledávání míst</td><td>Korejská republika</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      Přenos probíhá během používání aplikace přes šifrované spojení (HTTPS).
+      Související zásady: <a href="https://policies.google.com/privacy?hl=cs">Zásady ochrany soukromí Google</a>,
+      <a href="https://firebase.google.com/support/privacy">Ochrana soukromí ve Firebase</a>,
+      <a href="https://www.apple.com/legal/privacy/">Zásady ochrany osobních údajů Apple</a>,
+      <a href="https://www.kakao.com/policy/privacy">Zásady ochrany osobních údajů Kakao</a>.
+      Samostatné vypnutí odesílání do Firebase aplikace nenabízí. Pokud s ním nesouhlasíte, můžete aplikaci přestat používat a odstranit ji.
+    </p>
+
+    <h2>6. Oprávnění k přístupu do zařízení</h2>
+    <p>Aplikace žádá o následující oprávnění, která jsou všechna <strong>volitelná</strong>. I bez nich můžete restauraci přidat výběrem místa na mapě a zapisovat návštěvy. Oprávnění můžete kdykoli změnit v Nastavení iPhonu.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Oprávnění</th><th>Použití</th></tr></thead>
+        <tbody>
+          <tr><td>Poloha (při používání aplikace)</td><td>Zobrazení aktuální polohy na mapě, přidání restaurace na aktuální poloze, vyhledávání míst v okolí</td></tr>
+          <tr><td>Poloha (Vždy)</td><td>Připomenutí zápisu po návštěvě uložené restaurace (poloha se zjišťuje i tehdy, když aplikaci nepoužíváte)</td></tr>
+          <tr><td>Oznámení</td><td>Připomenutí zápisu po návštěvě</td></tr>
+          <tr><td>Fotoaparát</td><td>Pořizování fotek k záznamům návštěv</td></tr>
+          <tr><td>Knihovna fotografií</td><td>Výběr fotek k záznamům návštěv</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>7. Postup a způsob likvidace údajů</h2>
+    <p>
+      Údaje uložené v zařízení smaže systém iOS, jakmile je smažete v aplikaci nebo aplikaci odstraníte.
+      Údaje shromážděné službou Firebase Google automaticky smaže po uplynutí doby uvedené v bodě 3.
+      Zpětnou vazbu vývojář smaže z úložiště iCloud, jakmile splní účel, pro který byla uchovávána, nebo jakmile obdrží žádost o výmaz.
+    </p>
+
+    <h2>8. Vaše práva a jak je uplatnit</h2>
+    <ul>
+      <li>Přístup k poloze, oznámením, fotoaparátu a fotkám můžete kdykoli odvolat v Nastavení iPhonu.</li>
+      <li>Restaurace a záznamy návštěv můžete v aplikaci upravit nebo smazat; odstraněním aplikace smažete všechny údaje uložené v zařízení.</li>
+      <li>Pokud chcete požádat o přístup k osobním údajům, jejich opravu, výmaz nebo omezení zpracování, napište na níže uvedený e-mail. Vyřídíme to bez zbytečného odkladu. Vývojář však nemá k dispozici údaje, podle kterých by vás mohl identifikovat, a proto může být obtížné dohledat data Firebase konkrétního uživatele.</li>
+      <li>Svá práva můžete uplatnit také prostřednictvím zákonného zástupce nebo zmocněnce.</li>
+    </ul>
+
+    <h2>9. Nástroje pro automatické shromažďování údajů a jejich odmítnutí</h2>
+    <p>Aplikace nepoužívá webové soubory cookie. Firebase rozlišuje údaje o používání pomocí identifikátoru instalace uvedeného v bodě 1-D. Odstraněním aplikace identifikátor zanikne a při nové instalaci se vytvoří nový.</p>
+
+    <h2>10. Bezpečnostní opatření</h2>
+    <ul>
+      <li>Zpracováváme jen nezbytně nutné údaje a vaše záznamy zůstávají pouze v zařízení.</li>
+      <li>Veškerá komunikace s okolím probíhá přes šifrované spojení HTTPS.</li>
+      <li>Vývojář nesoustřeďuje záznamy uživatelů na žádném serveru, který provozuje.</li>
+    </ul>
+
+    <h2>11. Osobní údaje dětí</h2>
+    <p>Aplikace není určena dětem mladším 14 let a vědomě neshromažďuje osobní údaje dětí.</p>
+
+    <h2>12. Odpovědná osoba za ochranu osobních údajů</h2>
+    <div class="table-wrap">
+      <table>
+        <tbody>
+          <tr><th>Jméno</th><td>Leeo (vývojář aplikace Insaeng)</td></tr>
+          <tr><th>E-mail</th><td><a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>13. Možnosti nápravy při porušení práv</h2>
+    <p>Pokud potřebujete poradit nebo nahlásit porušení ochrany osobních údajů, můžete se obrátit na tyto instituce (Korejská republika):</p>
+    <ul>
+      <li>Výbor pro řešení sporů o osobní údaje (Personal Information Dispute Mediation Committee): 1833-6972 (www.kopico.go.kr)</li>
+      <li>Centrum pro hlášení porušení ochrany osobních údajů (KISA): 118 (privacy.kisa.or.kr)</li>
+      <li>Nejvyšší státní zastupitelství: 1301 (www.spo.go.kr)</li>
+      <li>Národní policejní ředitelství: 182 (ecrm.police.go.kr)</li>
+    </ul>
+
+    <h2>14. Změny těchto zásad</h2>
+    <p>
+      Tyto zásady jsou účinné od 16. října 2026.
+      Pokud se jejich obsah změní, oznámíme to na této stránce spolu s datem účinnosti.
+    </p>
+  </main>
+
+  <footer class="site">
+    © 2026 Leeo · <a href="support.html">Podpora</a> · <a href="privacy.html">Ochrana osobních údajů</a>
+  </footer>
+</div>
+</body>
+</html>

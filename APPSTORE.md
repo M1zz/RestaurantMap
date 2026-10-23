@@ -60,15 +60,15 @@ iCloud 백업
 
 ### 지원 URL
 
-https://m1zz.github.io/RestaurantMap/support.html
+https://m1zz.github.io/RestaurantMap/en/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/RestaurantMap/privacy.html
+https://m1zz.github.io/RestaurantMap/en/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/RestaurantMap/
+https://m1zz.github.io/RestaurantMap/en/
 
 ### 이름
 
@@ -116,15 +116,15 @@ Your records stay on your device, and you can back up to and restore from your o
 
 ### 지원 URL
 
-https://m1zz.github.io/RestaurantMap/support.html
+https://m1zz.github.io/RestaurantMap/en/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/RestaurantMap/privacy.html
+https://m1zz.github.io/RestaurantMap/en/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/RestaurantMap/
+https://m1zz.github.io/RestaurantMap/en/
 
 ### 이름
 
@@ -172,15 +172,15 @@ Your records stay on your device, and you can back up to and restore from your o
 
 ### 지원 URL
 
-https://m1zz.github.io/RestaurantMap/support.html
+https://m1zz.github.io/RestaurantMap/ja/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/RestaurantMap/privacy.html
+https://m1zz.github.io/RestaurantMap/ja/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/RestaurantMap/
+https://m1zz.github.io/RestaurantMap/ja/
 
 ### 이름
 
@@ -228,15 +228,15 @@ iCloudバックアップ
 
 ### 지원 URL
 
-https://m1zz.github.io/RestaurantMap/support.html
+https://m1zz.github.io/RestaurantMap/zh-Hans/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/RestaurantMap/privacy.html
+https://m1zz.github.io/RestaurantMap/zh-Hans/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/RestaurantMap/
+https://m1zz.github.io/RestaurantMap/zh-Hans/
 
 ### 이름
 
@@ -284,15 +284,15 @@ iCloud 备份
 
 ### 지원 URL
 
-https://m1zz.github.io/RestaurantMap/support.html
+https://m1zz.github.io/RestaurantMap/zh-Hant/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/RestaurantMap/privacy.html
+https://m1zz.github.io/RestaurantMap/zh-Hant/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/RestaurantMap/
+https://m1zz.github.io/RestaurantMap/zh-Hant/
 
 ### 이름
 
@@ -340,15 +340,15 @@ iCloud 備份
 
 ### 지원 URL
 
-https://m1zz.github.io/RestaurantMap/support.html
+https://m1zz.github.io/RestaurantMap/ru/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/RestaurantMap/privacy.html
+https://m1zz.github.io/RestaurantMap/ru/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/RestaurantMap/
+https://m1zz.github.io/RestaurantMap/ru/
 
 ### 이름
 
@@ -396,15 +396,15 @@ Insaeng — ваша личная гастрономическая карта, �
 
 ### 지원 URL
 
-https://m1zz.github.io/RestaurantMap/support.html
+https://m1zz.github.io/RestaurantMap/es/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/RestaurantMap/privacy.html
+https://m1zz.github.io/RestaurantMap/es/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/RestaurantMap/
+https://m1zz.github.io/RestaurantMap/es/
 
 ### 이름
 
@@ -452,15 +452,15 @@ Tus registros se guardan en el dispositivo y, cuando quieras, puedes copiarlos a
 
 ### 지원 URL
 
-https://m1zz.github.io/RestaurantMap/support.html
+https://m1zz.github.io/RestaurantMap/de/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/RestaurantMap/privacy.html
+https://m1zz.github.io/RestaurantMap/de/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/RestaurantMap/
+https://m1zz.github.io/RestaurantMap/de/
 
 ### 이름
 
@@ -508,15 +508,15 @@ Deine Einträge bleiben auf dem Gerät. Wann immer du möchtest, kannst du sie i
 
 ### 지원 URL
 
-https://m1zz.github.io/RestaurantMap/support.html
+https://m1zz.github.io/RestaurantMap/fr/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/RestaurantMap/privacy.html
+https://m1zz.github.io/RestaurantMap/fr/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/RestaurantMap/
+https://m1zz.github.io/RestaurantMap/fr/
 
 ### 이름
 
@@ -564,15 +564,15 @@ Vos données restent sur votre appareil, et vous pouvez les sauvegarder sur votr
 
 ### 지원 URL
 
-https://m1zz.github.io/RestaurantMap/support.html
+https://m1zz.github.io/RestaurantMap/it/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/RestaurantMap/privacy.html
+https://m1zz.github.io/RestaurantMap/it/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/RestaurantMap/
+https://m1zz.github.io/RestaurantMap/it/
 
 ### 이름
 
@@ -620,15 +620,15 @@ I tuoi dati restano sul dispositivo, e quando vuoi puoi salvarli sul tuo iCloud 
 
 ### 지원 URL
 
-https://m1zz.github.io/RestaurantMap/support.html
+https://m1zz.github.io/RestaurantMap/pt-BR/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/RestaurantMap/privacy.html
+https://m1zz.github.io/RestaurantMap/pt-BR/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/RestaurantMap/
+https://m1zz.github.io/RestaurantMap/pt-BR/
 
 ### 이름
 
@@ -676,15 +676,15 @@ Seus registros ficam no dispositivo e, quando quiser, você pode fazer backup no
 
 ### 지원 URL
 
-https://m1zz.github.io/RestaurantMap/support.html
+https://m1zz.github.io/RestaurantMap/th/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/RestaurantMap/privacy.html
+https://m1zz.github.io/RestaurantMap/th/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/RestaurantMap/
+https://m1zz.github.io/RestaurantMap/th/
 
 ### 이름
 
@@ -732,15 +732,15 @@ Insaeng คือแผนที่ร้านอาหารส่วนตั
 
 ### 지원 URL
 
-https://m1zz.github.io/RestaurantMap/support.html
+https://m1zz.github.io/RestaurantMap/vi/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/RestaurantMap/privacy.html
+https://m1zz.github.io/RestaurantMap/vi/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/RestaurantMap/
+https://m1zz.github.io/RestaurantMap/vi/
 
 ### 이름
 
@@ -788,15 +788,15 @@ Dữ liệu được lưu trên thiết bị, và bạn có thể sao lưu lên 
 
 ### 지원 URL
 
-https://m1zz.github.io/RestaurantMap/support.html
+https://m1zz.github.io/RestaurantMap/cs/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/RestaurantMap/privacy.html
+https://m1zz.github.io/RestaurantMap/cs/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/RestaurantMap/
+https://m1zz.github.io/RestaurantMap/cs/
 
 ### 이름
 
@@ -844,15 +844,15 @@ Záznamy zůstávají v zařízení a podle potřeby je můžete zazálohovat na
 
 ### 지원 URL
 
-https://m1zz.github.io/RestaurantMap/support.html
+https://m1zz.github.io/RestaurantMap/da/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/RestaurantMap/privacy.html
+https://m1zz.github.io/RestaurantMap/da/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/RestaurantMap/
+https://m1zz.github.io/RestaurantMap/da/
 
 ### 이름
 
@@ -900,15 +900,15 @@ Dine optegnelser ligger på enheden, og du kan når som helst tage backup til di
 
 ### 지원 URL
 
-https://m1zz.github.io/RestaurantMap/support.html
+https://m1zz.github.io/RestaurantMap/el/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/RestaurantMap/privacy.html
+https://m1zz.github.io/RestaurantMap/el/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/RestaurantMap/
+https://m1zz.github.io/RestaurantMap/el/
 
 ### 이름
 
@@ -956,15 +956,15 @@ Insaeng: Χάρτης εστιατορίων
 
 ### 지원 URL
 
-https://m1zz.github.io/RestaurantMap/support.html
+https://m1zz.github.io/RestaurantMap/fi/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/RestaurantMap/privacy.html
+https://m1zz.github.io/RestaurantMap/fi/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/RestaurantMap/
+https://m1zz.github.io/RestaurantMap/fi/
 
 ### 이름
 
@@ -1012,15 +1012,15 @@ Tietosi pysyvät laitteellasi, ja voit halutessasi varmuuskopioida ne omaan iClo
 
 ### 지원 URL
 
-https://m1zz.github.io/RestaurantMap/support.html
+https://m1zz.github.io/RestaurantMap/id/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/RestaurantMap/privacy.html
+https://m1zz.github.io/RestaurantMap/id/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/RestaurantMap/
+https://m1zz.github.io/RestaurantMap/id/
 
 ### 이름
 
@@ -1068,15 +1068,15 @@ Catatanmu tersimpan di perangkat, dan kapan saja kamu bisa mencadangkannya ke iC
 
 ### 지원 URL
 
-https://m1zz.github.io/RestaurantMap/support.html
+https://m1zz.github.io/RestaurantMap/nb/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/RestaurantMap/privacy.html
+https://m1zz.github.io/RestaurantMap/nb/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/RestaurantMap/
+https://m1zz.github.io/RestaurantMap/nb/
 
 ### 이름
 
@@ -1124,15 +1124,15 @@ Oppføringene dine ligger på enheten, og du kan når som helst sikkerhetskopier
 
 ### 지원 URL
 
-https://m1zz.github.io/RestaurantMap/support.html
+https://m1zz.github.io/RestaurantMap/nl/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/RestaurantMap/privacy.html
+https://m1zz.github.io/RestaurantMap/nl/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/RestaurantMap/
+https://m1zz.github.io/RestaurantMap/nl/
 
 ### 이름
 
@@ -1180,15 +1180,15 @@ Je gegevens blijven op je apparaat en je kunt ze wanneer je maar wilt in je eige
 
 ### 지원 URL
 
-https://m1zz.github.io/RestaurantMap/support.html
+https://m1zz.github.io/RestaurantMap/pl/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/RestaurantMap/privacy.html
+https://m1zz.github.io/RestaurantMap/pl/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/RestaurantMap/
+https://m1zz.github.io/RestaurantMap/pl/
 
 ### 이름
 
@@ -1236,15 +1236,15 @@ Twoje zapisy są na urządzeniu, a w każdej chwili możesz utworzyć ich kopię
 
 ### 지원 URL
 
-https://m1zz.github.io/RestaurantMap/support.html
+https://m1zz.github.io/RestaurantMap/sv/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/RestaurantMap/privacy.html
+https://m1zz.github.io/RestaurantMap/sv/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/RestaurantMap/
+https://m1zz.github.io/RestaurantMap/sv/
 
 ### 이름
 
@@ -1292,15 +1292,15 @@ Dina anteckningar finns kvar på enheten, och du kan när som helst säkerhetsko
 
 ### 지원 URL
 
-https://m1zz.github.io/RestaurantMap/support.html
+https://m1zz.github.io/RestaurantMap/tr/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/RestaurantMap/privacy.html
+https://m1zz.github.io/RestaurantMap/tr/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/RestaurantMap/
+https://m1zz.github.io/RestaurantMap/tr/
 
 ### 이름
 

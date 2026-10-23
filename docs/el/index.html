@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Insaeng – καταγράψτε στον χάρτη τα εστιατόρια που έχετε επισκεφθεί</title>
+<meta name="description" content="Εφαρμογή για iPhone που συγκεντρώνει σε έναν χάρτη τα εστιατόρια όπου έχετε πάει και όσα θέλετε να δοκιμάσετε. Σε κάθε επίσκεψη κρατάτε πιάτα, φωτογραφίες, αστέρια και βαθμολογία γεύσης. Με τον καιρό σχηματίζεται το προφίλ γούστου σας και το Top 6 σας.">
+<link rel="canonical" href="https://m1zz.github.io/RestaurantMap/el/">
+<link rel="alternate" hreflang="ko" href="https://m1zz.github.io/RestaurantMap/">
+<link rel="alternate" hreflang="en" href="https://m1zz.github.io/RestaurantMap/en/">
+<link rel="alternate" hreflang="ja" href="https://m1zz.github.io/RestaurantMap/ja/">
+<link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/RestaurantMap/zh-Hans/">
+<link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/RestaurantMap/zh-Hant/">
+<link rel="alternate" hreflang="ru" href="https://m1zz.github.io/RestaurantMap/ru/">
+<link rel="alternate" hreflang="es" href="https://m1zz.github.io/RestaurantMap/es/">
+<link rel="alternate" hreflang="de" href="https://m1zz.github.io/RestaurantMap/de/">
+<link rel="alternate" hreflang="fr" href="https://m1zz.github.io/RestaurantMap/fr/">
+<link rel="alternate" hreflang="it" href="https://m1zz.github.io/RestaurantMap/it/">
+<link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/RestaurantMap/pt-BR/">
+<link rel="alternate" hreflang="th" href="https://m1zz.github.io/RestaurantMap/th/">
+<link rel="alternate" hreflang="vi" href="https://m1zz.github.io/RestaurantMap/vi/">
+<link rel="alternate" hreflang="cs" href="https://m1zz.github.io/RestaurantMap/cs/">
+<link rel="alternate" hreflang="da" href="https://m1zz.github.io/RestaurantMap/da/">
+<link rel="alternate" hreflang="el" href="https://m1zz.github.io/RestaurantMap/el/">
+<link rel="alternate" hreflang="fi" href="https://m1zz.github.io/RestaurantMap/fi/">
+<link rel="alternate" hreflang="id" href="https://m1zz.github.io/RestaurantMap/id/">
+<link rel="alternate" hreflang="nb" href="https://m1zz.github.io/RestaurantMap/nb/">
+<link rel="alternate" hreflang="nl" href="https://m1zz.github.io/RestaurantMap/nl/">
+<link rel="alternate" hreflang="pl" href="https://m1zz.github.io/RestaurantMap/pl/">
+<link rel="alternate" hreflang="sv" href="https://m1zz.github.io/RestaurantMap/sv/">
+<link rel="alternate" hreflang="tr" href="https://m1zz.github.io/RestaurantMap/tr/">
+<link rel="alternate" hreflang="en-GB" href="https://m1zz.github.io/RestaurantMap/en/">
+<link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/RestaurantMap/">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../icon.png">
+<link rel="apple-touch-icon" href="../icon.png">
+</head>
+<body>
+<div class="container">
+
+  <header class="site">
+    <img src="../icon.png" alt="Εικονίδιο της εφαρμογής Insaeng">
+    <div>
+      <div class="title">Insaeng</div>
+      <div class="subtitle">Βαθμολογήστε και κατατάξτε</div>
+    </div>
+  </header>
+
+  <nav class="langs" aria-label="Γλώσσα">
+    <a href="../index.html" hreflang="ko" lang="ko">한국어</a>
+    <a href="../en/index.html" hreflang="en" lang="en">English</a>
+    <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a>
+    <a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+    <a href="../zh-Hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+    <a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a>
+    <a href="../es/index.html" hreflang="es" lang="es">Español</a>
+    <a href="../de/index.html" hreflang="de" lang="de">Deutsch</a>
+    <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a>
+    <a href="../it/index.html" hreflang="it" lang="it">Italiano</a>
+    <a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+    <a href="../th/index.html" hreflang="th" lang="th">ไทย</a>
+    <a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a>
+    <a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a>
+    <a href="../da/index.html" hreflang="da" lang="da">Dansk</a>
+    <a href="index.html" hreflang="el" lang="el" aria-current="true">Ελληνικά</a>
+    <a href="../fi/index.html" hreflang="fi" lang="fi">Suomi</a>
+    <a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a>
+    <a href="../nb/index.html" hreflang="nb" lang="nb">Norsk bokmål</a>
+    <a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a>
+    <a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a>
+    <a href="../sv/index.html" hreflang="sv" lang="sv">Svenska</a>
+    <a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a>
+  </nav>
+
+  <nav class="pages" aria-label="Σελίδες">
+    <a href="index.html" aria-current="page">Αρχική</a>
+    <a href="support.html">Υποστήριξη</a>
+    <a href="privacy.html">Πολιτική απορρήτου</a>
+  </nav>
+
+  <main>
+    <h1>Μην ξεχνάτε πια τα αγαπημένα σας εστιατόρια</h1>
+    <p class="lead">
+      Το Insaeng συγκεντρώνει σε έναν χάρτη τα εστιατόρια όπου έχετε ήδη πάει και εκείνα που θέλετε να δοκιμάσετε κάποια μέρα.
+      Σε κάθε επίσκεψη σημειώνετε τι φάγατε, προσθέτετε φωτογραφίες, αστέρια και βαθμολογία γεύσης.
+      Όσο πληθαίνουν οι καταγραφές, τόσο πιο καθαρά διαγράφεται ο δικός σας γαστρονομικός χάρτης και το γούστο σας.
+    </p>
+
+    <h2>Κύριες λειτουργίες</h2>
+    <div class="features">
+      <div class="card">
+        <h3>Βρείτε το στον χάρτη και αποθηκεύστε το αμέσως</h3>
+        <p>Αναζητήστε ένα εστιατόριο στον χάρτη ή πατήστε ένα κοντινό μέρος για να το προσθέσετε κατευθείαν στη λίστα σας. Μπορείτε επίσης να το προσθέσετε μόνοι σας στην τρέχουσα τοποθεσία σας ή σε ένα σημείο που διαλέγετε στον χάρτη.</p>
+      </div>
+      <div class="card">
+        <h3>Έχω πάει και Θέλω να πάω</h3>
+        <p>Κρατήστε χωριστά τα εστιατόρια που έχετε ήδη επισκεφθεί και όσα θέλετε να δοκιμάσετε κάποια μέρα. Μόλις πάτε, απλώς το μεταφέρετε στα «Έχω πάει».</p>
+      </div>
+      <div class="card">
+        <h3>Ιστορικό επισκέψεων</h3>
+        <p>Καταγράψτε ημερομηνία, πιάτα, φωτογραφίες, αστέρια και σημειώσεις. Αν προσθέσετε τα πιάτα κάθε εστιατορίου, την επόμενη φορά απλώς τα επιλέγετε.</p>
+      </div>
+      <div class="card">
+        <h3>Λεπτομερής βαθμολογία γεύσης</h3>
+        <p>Βαθμολογείτε χωριστά την ένταση της γεύσης – πόσο καυτερό, αλμυρό ή γλυκό ήταν – και πόσο σας άρεσε. Μπριζόλα, σούσι και ράμεν βαθμολογούνται με κριτήρια που ταιριάζουν στο κάθε πιάτο: ψήσιμο, ρύζι, ζωμός.</p>
+      </div>
+      <div class="card">
+        <h3>Το δικό μου Michelin Top 6</h3>
+        <p>Δώστε σειρά κατάταξης στα έξι πιο αγαπημένα σας εστιατόρια και κρατήστε τα μαζί. Όταν κάποιος σας ρωτήσει πού να φάει, τα έχετε έτοιμα να του τα δείξετε.</p>
+      </div>
+      <div class="card">
+        <h3>Προφίλ γούστου</h3>
+        <p>Με βάση τις βαθμολογίες γεύσης σας, βλέπετε με μια ματιά ποιες γεύσεις και ποιο στυλ φαγητού προτιμάτε.</p>
+      </div>
+      <div class="card">
+        <h3>Υπενθύμιση μετά την επίσκεψη</h3>
+        <p>Όταν μείνετε λίγη ώρα σε ένα αποθηκευμένο εστιατόριο και φύγετε, λίγο αργότερα λαμβάνετε την ειδοποίηση «Πώς ήταν η σημερινή σας επίσκεψη;», για να μην ξεχάσετε να την καταγράψετε. Αν δεν τη θέλετε, μπορείτε να την απενεργοποιήσετε.</p>
+      </div>
+      <div class="card">
+        <h3>Οδηγίες και κλήση</h3>
+        <p>Ανοίξτε ένα αποθηκευμένο εστιατόριο κατευθείαν στους Χάρτες της Apple, στο KakaoMap ή στο NAVER Map και πατήστε τον αριθμό τηλεφώνου για να καλέσετε αμέσως.</p>
+      </div>
+    </div>
+
+    <h2>Οι καταγραφές σας μένουν στο iPhone σας</h2>
+    <p>
+      Δεν χρειάζεται εγγραφή. Η λίστα εστιατορίων, οι επισκέψεις και οι φωτογραφίες αποθηκεύονται μόνο στο iPhone σας.
+      Για λεπτομέρειες, δείτε την <a href="privacy.html">πολιτική απορρήτου</a>.
+    </p>
+
+    <p><a href="https://apps.apple.com/app/id6755934548">Κατεβάστε το Insaeng από το App Store</a></p>
+
+    <div class="contact">
+      Αν κάτι σας δυσκολεύει ή σας λείπει κάποια λειτουργία, γράψτε μας στο <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a>.
+      Απαντήσεις σε συχνές ερωτήσεις θα βρείτε στη σελίδα <a href="support.html">Υποστήριξη</a>.
+    </div>
+  </main>
+
+  <footer class="site">
+    © 2026 Leeo · <a href="support.html">Υποστήριξη</a> · <a href="privacy.html">Πολιτική απορρήτου</a>
+  </footer>
+</div>
+</body>
+</html>
