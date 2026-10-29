@@ -3,6 +3,7 @@ import MapKit
 import SwiftData
 import CoreLocation
 import OSLog
+import LeeoKit
 
 struct RestaurantDetailView: View {
     @Environment(\.modelContext) private var modelContext
@@ -87,6 +88,14 @@ struct RestaurantDetailView: View {
                             }
                         }
                     }
+                }
+
+                // 응원 부탁 — 방문 기록을 꽤 쌓아 온 사람에게, 드물게(방문을 남기고 돌아온 자리)
+                Section {
+                    LeeoTipAskSlot<RestaurantMapSpec>(tipJar: RestaurantMapTip.tipJar,
+                                                      reached: RestaurantMapTipMoments.reachedNow(in: allRestaurants))
+                        .listRowInsets(EdgeInsets())
+                        .listRowBackground(Color.clear)
                 }
 
                 // 메뉴 목록

@@ -22,3 +22,32 @@ enum RestaurantMapSpec: LeeoAppSpec {
     /// 익명 사용 통계 → FeedbackHub. 없으면 bootstrap 이 스냅샷·app_open 을 건너뛴다.
     static let analytics: any LeeoAnalytics = LeeoUsageAnalytics(spec: RestaurantMapSpec.self)
 }
+
+// MARK: - 팁 (개발자 응원하기)
+
+/// 무료 앱이라 LeeoStore 가 없다. 팁 엔진을 여기 하나 두고, 앱을 열 때 `startStandalone()` 을 부른다.
+@MainActor
+enum RestaurantMapTip {
+    static let tipJar = LeeoTipJar(config: LeeoTipJarConfig(productIDs: [
+        "com.Ysoup.restaurantmap.tip.small",
+        "com.Ysoup.restaurantmap.tip.medium",
+        "com.Ysoup.restaurantmap.tip.large",
+    ]))
+}
+
+/// 팁을 부탁할 만한 순간 — 지금까지 남긴 방문 기록 수. 큰 것부터.
+enum RestaurantMapTipMoments {
+    static let visits = [200, 50, 20]
+
+    static func reached(visitCount n: Int) -> [LeeoTipMoment] {
+        visits.filter { n >= $0 }.map { threshold in
+            LeeoTipMoment(id: "visits.\(threshold)",
+                          message: String(localized: "지금까지 맛집 방문 \(n)번을 기록했어요",
+                                          comment: "Tip ask card: how many restaurant visits the person has logged so far"))
+        }
+    }
+
+    static func reachedNow(in restaurants: [Restaurant]) -> [LeeoTipMoment] {
+        reached(visitCount: restaurants.reduce(0) { $0 + ($1.visits?.count ?? 0) })
+    }
+}

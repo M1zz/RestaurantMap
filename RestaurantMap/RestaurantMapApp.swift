@@ -140,6 +140,7 @@ struct RestaurantMapApp: App {
         WindowGroup {
             ContentView()
                 .leeoSatisfactionCheck(RestaurantMapSpec.self)
+                .task { await RestaurantMapTip.tipJar.startStandalone() }
                 .task {
                     logger.info("RestaurantMap 앱 시작됨")
 
