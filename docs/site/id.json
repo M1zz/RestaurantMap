@@ -1,0 +1,403 @@
+{
+  "title": "Insaeng: simpan tempat makan favoritmu di peta",
+  "description": "Kumpulkan restoran yang sudah dan ingin dikunjungi di peta, lalu catat menu, foto, dan rasa. Gratis dan tersimpan hanya di iPhone-mu.",
+  "hero": {
+    "headline": "Tempat makan enak,\ntak akan terlupa lagi",
+    "lead": "Tandai di peta restoran yang sudah kamu datangi dan yang ingin dicoba, lalu setiap kunjungan catat menu yang dipesan, foto, dan rasanya. Saat bingung mau makan di mana, catatanmu sendiri punya jawabannya.",
+    "cta": "Unduh gratis di App Store",
+    "note": "Semua fitur gratis. Tanpa daftar akun, catatan tetap di iPhone-mu."
+  },
+  "demo": {
+    "title": "Coba nilai satu hidangan",
+    "lead": "Pilih jenis makanan, lalu atur seberapa kuat tiap rasa dan seberapa kamu suka. Kriteria dan perhitungannya sama dengan kunjungan di aplikasi.",
+    "note": "Seperti di aplikasi, skornya separuh dari bintang dan separuh dari kepuasan. Tidak ada yang disimpan di sini.",
+    "types": [
+      {
+        "emoji": "🍽️",
+        "name": "Umum",
+        "attrs": [
+          [
+            "🌶️",
+            "Kepedasan",
+            "Tidak pedas ↔ Pedas"
+          ],
+          [
+            "💪",
+            "Kekuatan rasa",
+            "Ringan ↔ Kuat"
+          ],
+          [
+            "🍯",
+            "Rasa manis",
+            "Tidak suka ↔ Suka"
+          ],
+          [
+            "🧂",
+            "Rasa asin",
+            "Hambar ↔ Asin"
+          ],
+          [
+            "🥓",
+            "Gurih",
+            "Ringan ↔ Gurih"
+          ],
+          [
+            "🌿",
+            "Rasa alami",
+            "Berbumbu ↔ Alami"
+          ]
+        ]
+      },
+      {
+        "emoji": "🥩",
+        "name": "Steak",
+        "attrs": [
+          [
+            "🔥",
+            "Kematangan",
+            "Rare ↔ Well-done"
+          ],
+          [
+            "🥩",
+            "Kandungan jus",
+            "Kering ↔ Juicy"
+          ],
+          [
+            "✨",
+            "Keempukan",
+            "Alot ↔ Empuk"
+          ],
+          [
+            "🧂",
+            "Bumbu",
+            "Hambar ↔ Asin"
+          ],
+          [
+            "🌿",
+            "Aroma daging",
+            "Lemah ↔ Kuat"
+          ],
+          [
+            "🍖",
+            "Marbling",
+            "Sedikit ↔ Banyak"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍣",
+        "name": "Sushi",
+        "attrs": [
+          [
+            "🍚",
+            "Shari (nasi)",
+            "Lembek ↔ Padat"
+          ],
+          [
+            "🐟",
+            "Neta (topping)",
+            "Kesegaran"
+          ],
+          [
+            "🌿",
+            "Wasabi",
+            "Lemah ↔ Kuat"
+          ],
+          [
+            "⚖️",
+            "Keseimbangan",
+            "Timpang ↔ Harmonis"
+          ],
+          [
+            "✋",
+            "Kepalan",
+            "Longgar ↔ Padat"
+          ],
+          [
+            "🌡️",
+            "Suhu",
+            "Dingin ↔ Hangat"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍜",
+        "name": "Ramen",
+        "attrs": [
+          [
+            "🥣",
+            "Kuah",
+            "Kedalaman/umami"
+          ],
+          [
+            "🍜",
+            "Mi",
+            "Lembut ↔ Kenyal"
+          ],
+          [
+            "🥓",
+            "Chashu",
+            "Kering ↔ Empuk"
+          ],
+          [
+            "🥚",
+            "Topping",
+            "Sedikit ↔ Melimpah"
+          ],
+          [
+            "🔥",
+            "Suhu",
+            "Hangat ↔ Panas"
+          ],
+          [
+            "⚖️",
+            "Keseimbangan",
+            "Timpang ↔ Harmonis"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍕",
+        "name": "Piza",
+        "attrs": [
+          [
+            "🫓",
+            "Adonan",
+            "Keras ↔ Kenyal"
+          ],
+          [
+            "🍅",
+            "Saus",
+            "Sedikit ↔ Banyak"
+          ],
+          [
+            "🧀",
+            "Keju",
+            "Sedikit ↔ Banyak"
+          ],
+          [
+            "🔥",
+            "Kematangan",
+            "Kurang matang ↔ Renyah"
+          ],
+          [
+            "🌟",
+            "Topping",
+            "Sedikit ↔ Melimpah"
+          ],
+          [
+            "⚖️",
+            "Keseimbangan",
+            "Timpang ↔ Harmonis"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍷",
+        "name": "Anggur",
+        "attrs": [
+          [
+            "💪",
+            "Kekentalan",
+            "Ringan ↔ Pekat"
+          ],
+          [
+            "🍇",
+            "Tanin",
+            "Lembut ↔ Sepat"
+          ],
+          [
+            "🍋",
+            "Keasaman",
+            "Rendah ↔ Tinggi"
+          ],
+          [
+            "🌸",
+            "Aroma",
+            "Sederhana ↔ Kompleks"
+          ],
+          [
+            "✨",
+            "Akhir rasa",
+            "Singkat ↔ Lama"
+          ],
+          [
+            "⚖️",
+            "Keseimbangan",
+            "Timpang ↔ Harmonis"
+          ]
+        ]
+      },
+      {
+        "emoji": "☕",
+        "name": "Kopi",
+        "attrs": [
+          [
+            "🍋",
+            "Keasaman",
+            "Rendah ↔ Cerah"
+          ],
+          [
+            "💪",
+            "Kekentalan",
+            "Ringan ↔ Pekat"
+          ],
+          [
+            "🌸",
+            "Cita rasa",
+            "Sederhana ↔ Kompleks"
+          ],
+          [
+            "✨",
+            "Sisa rasa",
+            "Singkat ↔ Lama"
+          ],
+          [
+            "🍯",
+            "Rasa manis",
+            "Pahit ↔ Manis"
+          ],
+          [
+            "⚖️",
+            "Keseimbangan",
+            "Timpang ↔ Harmonis"
+          ]
+        ]
+      }
+    ],
+    "rating": "Nilai",
+    "intensity": "Intensitas rasa",
+    "sat": "Kepuasan",
+    "low": "Tidak puas",
+    "high": "Sangat puas",
+    "shape": "Profil rasa",
+    "score": "Skor Michelin Riio"
+  },
+  "problem": {
+    "title": "Tempat itu enak, tapi dulu pesan apa, ya?",
+    "text": "Kamu ingat restoran itu enak, tapi namanya samar, dan apa yang dipesan atau apakah kuahnya keasinan sudah lupa sama sekali. Akhirnya cari lagi dan baca ulasan orang lain. Insaeng menyimpan apa yang kamu cicipi sendiri di peta, supaya pilihan berikutnya berdasarkan pengalamanmu."
+  },
+  "features": [
+    {
+      "title": "Sudah dikunjungi, Ingin ke sana, dan Michelin-mu sendiri",
+      "text": "Cari di peta atau ketuk tempat terdekat, langsung tersimpan. Pisahkan tempat yang sudah didatangi dari yang ingin dicoba, dan urutkan enam favoritmu dari 1 sampai 6.\nKalau ada yang minta rekomendasi, tinggal tunjukkan daftarnya.",
+      "shot": "02-list"
+    },
+    {
+      "title": "Pertanyaan yang cocok dengan hidangannya",
+      "text": "Seberapa kuat tiap rasa, seperti pedas atau asin, diatur dengan penggeser, dan seberapa kamu suka dinilai terpisah dari 1 sampai 5. Steak soal tingkat kematangan dan juiciness, sushi soal nasi dan ikan, ramen soal kuah dan mi.\nSetiap kunjungan juga menyimpan menu, foto, bintang, dan catatan.",
+      "shot": "04-taste-review"
+    },
+    {
+      "title": "Tempat yang layak didatangi lagi, terlihat dari angka",
+      "text": "Setelah beberapa kunjungan, tiap restoran menampilkan ringkasan dari rata-rata semua kunjungan dan Skor Michelin Riio dari 100 yang menggabungkan bintang dan kepuasan.\nSaat kamu meninggalkan restoran yang tersimpan, tak lama kemudian muncul pengingat untuk mencatat kunjungan.",
+      "shot": "03-detail"
+    }
+  ],
+  "steps": {
+    "title": "Mulai dalam tiga langkah",
+    "items": [
+      {
+        "title": "Simpan restoran",
+        "text": "Cari di peta atau ketuk tempat terdekat."
+      },
+      {
+        "title": "Catat kunjunganmu",
+        "text": "Menu, foto, bintang, dan rasa. Penilaian rasa boleh dilewati."
+      },
+      {
+        "title": "Pilih tujuan berikutnya",
+        "text": "Lihat Top 6 dan skornya, lalu buka rute di Apple Maps, Kakao Map, atau Naver Map."
+      }
+    ]
+  },
+  "reference": {
+    "title": "Yang dinilai untuk tiap jenis makanan",
+    "rows": [
+      [
+        "🍽️ Umum",
+        "Kepedasan, Kekuatan rasa, Rasa manis, Rasa asin, Gurih, Rasa alami"
+      ],
+      [
+        "🥩 Steak",
+        "Kematangan, Kandungan jus, Keempukan, Bumbu, Aroma daging, Marbling"
+      ],
+      [
+        "🍣 Sushi",
+        "Shari (nasi), Neta (topping), Wasabi, Keseimbangan, Kepalan, Suhu"
+      ],
+      [
+        "🍜 Ramen",
+        "Kuah, Mi, Chashu, Topping, Suhu, Keseimbangan"
+      ],
+      [
+        "🍕 Piza",
+        "Adonan, Saus, Keju, Kematangan, Topping, Keseimbangan"
+      ],
+      [
+        "🍷 Anggur",
+        "Kekentalan, Tanin, Keasaman, Aroma, Akhir rasa, Keseimbangan"
+      ],
+      [
+        "☕ Kopi",
+        "Keasaman, Kekentalan, Cita rasa, Sisa rasa, Rasa manis, Keseimbangan"
+      ]
+    ],
+    "note": "Makanan lain dinilai dengan kriteria umum di baris pertama. Kamu juga bisa membuat kategori sendiri."
+  },
+  "faq": {
+    "title": "Pertanyaan umum",
+    "items": [
+      {
+        "q": "Bagaimana cara menambahkan restoran?",
+        "a": "Ketik nama restoran di kolom pencarian di bagian atas peta, lalu ketuk “Tambahkan ke restoranku” di hasil pencarian. Kamu juga bisa langsung menambahkannya dengan mengetuk tempat di sekitar yang terlihat di peta. Kalau tempatnya tidak muncul di pencarian, tambahkan sendiri di lokasimu saat ini atau di titik yang kamu pilih di peta."
+      },
+      {
+        "q": "Apa itu Sudah dikunjungi, Ingin ke sana, dan Top 6?",
+        "a": "Sudah dikunjungi – restoran yang sudah pernah kamu datangi. Kamu bisa mencatat kunjungannya. Ingin ke sana – restoran yang ingin kamu coba suatu hari nanti. Setelah berkunjung, ubah menjadi Sudah dikunjungi di halaman detail restoran. Top 6 (Michelin-ku) – enam restoran paling favoritmu dengan peringkat 1 sampai 6. Restoran di daftar Ingin ke sana tidak bisa dimasukkan ke Top 6."
+      },
+      {
+        "q": "Apakah penilaian rasa wajib diisi?",
+        "a": "Tidak, itu opsional. Kalau dinilai, intensitas rasa dan kepuasan masuk ke ringkasan restoran dan dihitung dalam Skor Michelin Riio."
+      },
+      {
+        "q": "Kapan notifikasi “Bagaimana kunjunganmu hari ini?” muncul?",
+        "a": "Kalau kamu berada di dekat restoran yang tersimpan lebih dari 5 menit lalu pergi, notifikasi muncul sekitar 40 menit kemudian. Fitur ini memerlukan izin lokasi “Selalu” dan izin notifikasi. Kalau tidak ingin menerima notifikasi, matikan notifikasi di Pengaturan > Aplikasi > Insaeng, atau ubah lokasi menjadi “Saat Menggunakan App”. Pengecekan lokasi hanya dilakukan di perangkat. Rute perjalananmu tidak disimpan dan tidak dikirim ke mana pun."
+      },
+      {
+        "q": "Apakah aplikasi bisa dipakai tanpa izin lokasi?",
+        "a": "Bisa. Kamu bisa memilih titik sendiri di peta untuk menambahkan restoran dan mencatat kunjungan. Hanya tampilan lokasi saat ini dan pengingat setelah berkunjung yang tidak bisa dipakai."
+      },
+      {
+        "q": "Hasil pencarian tempat tidak muncul",
+        "a": "Pencarian tempat memerlukan koneksi internet. Coba cari lagi dengan nama lain atau kata kunci yang lebih pendek. Kalau tetap tidak ada, pilih titik di peta dan tambahkan sendiri."
+      },
+      {
+        "q": "Di mana catatanku disimpan? Apakah tersinkron dengan perangkat lain?",
+        "a": "Restoran, catatan kunjungan, dan foto hanya tersimpan di iPhone ini. Versi saat ini belum mendukung sinkronisasi dengan perangkat lain, dan fitur cadangkan dan pulihkan iCloud di pengaturan juga belum berfungsi. Namun, data aplikasi ikut tersimpan dalam cadangan iPhone secara keseluruhan (cadangan iCloud atau cadangan di komputer)."
+      },
+      {
+        "q": "Aku ingin menghapus semua catatan",
+        "a": "Ketuk “Hapus semua data” di pengaturan layar peta, maka restoran dan catatan kunjungan akan terhapus. Tindakan ini tidak dapat dibatalkan, jadi hati-hati. Untuk menghapus foto juga tanpa sisa, hapus aplikasinya."
+      },
+      {
+        "q": "Kalau aplikasi dihapus lalu dipasang lagi, apakah catatanku masih ada?",
+        "a": "Tidak. Catatan hanya tersimpan di perangkat, jadi ikut terhapus saat aplikasi dihapus. Pastikan dulu sebelum menghapus aplikasi."
+      },
+      {
+        "q": "Benar semuanya gratis?",
+        "a": "Benar. Semua fitur gratis, tanpa iklan dan tanpa akun. “Dukung Pengembang” di pengaturan sepenuhnya opsional dan tidak membuka fitur tambahan."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Pilih restoran berikutnya\ndari catatanmu sendiri",
+    "cta": "Unduh gratis di App Store"
+  },
+  "ui": {
+    "skip": "Langsung ke konten",
+    "languages": "Bahasa",
+    "privacy": "Kebijakan Privasi",
+    "contact": "Kalau jawabannya tidak ada di atas, kirim pesan langsung dari aplikasi di Pengaturan > Dukungan, atau kirim email ke {email}. Sertakan versi aplikasi, model iPhone, serta apa yang kamu lakukan di layar mana, supaya kami bisa mengeceknya lebih cepat."
+  }
+}

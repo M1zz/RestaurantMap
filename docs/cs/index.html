@@ -1,145 +1,176 @@
 <!doctype html>
 <html lang="cs">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="color-scheme" content="light dark">
-<title>Insaeng – zapisujte si restaurace, které jste navštívili, do mapy</title>
-<meta name="description" content="Aplikace pro iPhone, která na jedné mapě shromáždí restaurace, kde jste byli, i ty, které chcete vyzkoušet. Ke každé návštěvě si zapíšete jídla, fotky, hvězdičky a hodnocení chuti. Z vašich záznamů pak vznikne chuťový profil a vaše Top 6.">
-<link rel="canonical" href="https://m1zz.github.io/RestaurantMap/cs/">
-<link rel="alternate" hreflang="ko" href="https://m1zz.github.io/RestaurantMap/">
-<link rel="alternate" hreflang="en" href="https://m1zz.github.io/RestaurantMap/en/">
-<link rel="alternate" hreflang="ja" href="https://m1zz.github.io/RestaurantMap/ja/">
-<link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/RestaurantMap/zh-Hans/">
-<link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/RestaurantMap/zh-Hant/">
-<link rel="alternate" hreflang="ru" href="https://m1zz.github.io/RestaurantMap/ru/">
-<link rel="alternate" hreflang="es" href="https://m1zz.github.io/RestaurantMap/es/">
-<link rel="alternate" hreflang="de" href="https://m1zz.github.io/RestaurantMap/de/">
-<link rel="alternate" hreflang="fr" href="https://m1zz.github.io/RestaurantMap/fr/">
-<link rel="alternate" hreflang="it" href="https://m1zz.github.io/RestaurantMap/it/">
-<link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/RestaurantMap/pt-BR/">
-<link rel="alternate" hreflang="th" href="https://m1zz.github.io/RestaurantMap/th/">
-<link rel="alternate" hreflang="vi" href="https://m1zz.github.io/RestaurantMap/vi/">
-<link rel="alternate" hreflang="cs" href="https://m1zz.github.io/RestaurantMap/cs/">
-<link rel="alternate" hreflang="da" href="https://m1zz.github.io/RestaurantMap/da/">
-<link rel="alternate" hreflang="el" href="https://m1zz.github.io/RestaurantMap/el/">
-<link rel="alternate" hreflang="fi" href="https://m1zz.github.io/RestaurantMap/fi/">
-<link rel="alternate" hreflang="id" href="https://m1zz.github.io/RestaurantMap/id/">
-<link rel="alternate" hreflang="nb" href="https://m1zz.github.io/RestaurantMap/nb/">
-<link rel="alternate" hreflang="nl" href="https://m1zz.github.io/RestaurantMap/nl/">
-<link rel="alternate" hreflang="pl" href="https://m1zz.github.io/RestaurantMap/pl/">
-<link rel="alternate" hreflang="sv" href="https://m1zz.github.io/RestaurantMap/sv/">
-<link rel="alternate" hreflang="tr" href="https://m1zz.github.io/RestaurantMap/tr/">
-<link rel="alternate" hreflang="en-GB" href="https://m1zz.github.io/RestaurantMap/en/">
-<link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/RestaurantMap/">
-<link rel="stylesheet" href="../style.css">
-<link rel="icon" href="../icon.png">
-<link rel="apple-touch-icon" href="../icon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Insaeng: místa, kde vám chutnalo, na jedné mapě</title>
+  <meta name="description" content="Sbírejte na mapě restaurace, kde jste byli i kam se chystáte, a při každé návštěvě si zapište jídlo, fotky a chuť. Vše zdarma a jen ve vašem iPhonu.">
+  <meta name="theme-color" content="#B8461F" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6755934548">
+  <link rel="canonical" href="https://m1zz.github.io/RestaurantMap/cs/">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/RestaurantMap/">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/RestaurantMap/en/">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/RestaurantMap/ja/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/RestaurantMap/zh-Hans/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/RestaurantMap/zh-Hant/">
+  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/RestaurantMap/ru/">
+  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/RestaurantMap/es/">
+  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/RestaurantMap/de/">
+  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/RestaurantMap/fr/">
+  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/RestaurantMap/it/">
+  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/RestaurantMap/pt-BR/">
+  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/RestaurantMap/th/">
+  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/RestaurantMap/vi/">
+  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/RestaurantMap/cs/">
+  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/RestaurantMap/da/">
+  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/RestaurantMap/el/">
+  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/RestaurantMap/fi/">
+  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/RestaurantMap/id/">
+  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/RestaurantMap/nb/">
+  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/RestaurantMap/nl/">
+  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/RestaurantMap/pl/">
+  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/RestaurantMap/sv/">
+  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/RestaurantMap/tr/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/RestaurantMap/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Insaeng: místa, kde vám chutnalo, na jedné mapě">
+  <meta property="og:description" content="Sbírejte na mapě restaurace, kde jste byli i kam se chystáte, a při každé návštěvě si zapište jídlo, fotky a chuť. Vše zdarma a jen ve vašem iPhonu.">
+  <meta property="og:url" content="https://m1zz.github.io/RestaurantMap/cs/">
+  <meta property="og:image" content="https://m1zz.github.io/RestaurantMap/img/cs/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#B8461F}@media (prefers-color-scheme:dark){:root{--accent:#F08A62}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-<div class="container">
-
-  <header class="site">
-    <img src="../icon.png" alt="Ikona aplikace Insaeng">
-    <div>
-      <div class="title">Insaeng</div>
-      <div class="subtitle">Hodnoťte a řaďte svá jídla</div>
-    </div>
+  <a class="skip" href="#main">Přejít na obsah</a>
+  <header class="bar">
+    <a class="brand" href="../cs/"><img src="../icon.png" alt="" width="32" height="32">Insaeng</a>
+    <a class="lang-link" href="#languages">Jazyk</a>
   </header>
 
-  <nav class="langs" aria-label="Jazyk">
-    <a href="../index.html" hreflang="ko" lang="ko">한국어</a>
-    <a href="../en/index.html" hreflang="en" lang="en">English</a>
-    <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a>
-    <a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
-    <a href="../zh-Hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
-    <a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a>
-    <a href="../es/index.html" hreflang="es" lang="es">Español</a>
-    <a href="../de/index.html" hreflang="de" lang="de">Deutsch</a>
-    <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a>
-    <a href="../it/index.html" hreflang="it" lang="it">Italiano</a>
-    <a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
-    <a href="../th/index.html" hreflang="th" lang="th">ไทย</a>
-    <a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a>
-    <a href="index.html" hreflang="cs" lang="cs" aria-current="true">Čeština</a>
-    <a href="../da/index.html" hreflang="da" lang="da">Dansk</a>
-    <a href="../el/index.html" hreflang="el" lang="el">Ελληνικά</a>
-    <a href="../fi/index.html" hreflang="fi" lang="fi">Suomi</a>
-    <a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a>
-    <a href="../nb/index.html" hreflang="nb" lang="nb">Norsk bokmål</a>
-    <a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a>
-    <a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a>
-    <a href="../sv/index.html" hreflang="sv" lang="sv">Svenska</a>
-    <a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a>
-  </nav>
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>Místa, kde vám chutnalo,<br>už nezapomenete</h1>
+        <p class="lead">Označte na mapě restaurace, kde jste byli i kam se chystáte, a při každé návštěvě si zapište, co jste si dali, fotky a jak to chutnalo. Když nevíte, kam na jídlo, odpověď najdete ve vlastních záznamech.</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6755934548">Stáhnout zdarma v App Storu</a><a class="try" href="#try">Ohodnoťte jídlo ↓</a></div>
+        <p class="muted small">Všechny funkce jsou zdarma. Bez registrace, záznamy zůstávají ve vašem iPhonu.</p>
+      </div>
+      <div class="phone"><img src="../img/cs/01-map.jpg" alt="Místa, kde vám chutnalo, už nezapomenete" width="720" height="1564" decoding="async"></div>
+    </section>
 
-  <nav class="pages" aria-label="Stránky">
-    <a href="index.html" aria-current="page">Domů</a>
-    <a href="support.html">Podpora</a>
-    <a href="privacy.html">Ochrana osobních údajů</a>
-  </nav>
 
-  <main>
-    <h1>Na skvělé restaurace už nezapomenete</h1>
-    <p class="lead">
-      Insaeng je aplikace, která na jedné mapě shromáždí restaurace, kde jste už byli, i ty, které chcete jednou vyzkoušet.
-      Ke každé návštěvě si zapíšete, co jste jedli, přidáte fotky, hvězdičky a hodnocení chuti.
-      Čím víc záznamů přibude, tím jasněji se rýsuje vaše vlastní gastronomická mapa i váš vkus.
-    </p>
+    <section class="reveal" id="try">
+      <h2>Ohodnoťte jídlo</h2>
+      <p class="muted">Vyberte druh jídla a nastavte, jak výrazná byla každá chuť a jak vám chutnala. Stejná kritéria i stejný výpočet jako u návštěvy v aplikaci.</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;Ohodnoťte jídlo&quot;, &quot;lead&quot;: &quot;Vyberte druh jídla a nastavte, jak výrazná byla každá chuť a jak vám chutnala. Stejná kritéria i stejný výpočet jako u návštěvy v aplikaci.&quot;, &quot;note&quot;: &quot;Stejně jako v aplikaci tvoří skóre z poloviny hvězdičky a z poloviny spokojenost. Nic se tu neukládá.&quot;, &quot;types&quot;: [{&quot;emoji&quot;: &quot;🍽️&quot;, &quot;name&quot;: &quot;Obecné&quot;, &quot;attrs&quot;: [[&quot;🌶️&quot;, &quot;Pálivost&quot;, &quot;Jemné ↔ Pálivé&quot;], [&quot;💪&quot;, &quot;Výraznost&quot;, &quot;Jemné ↔ Výrazné&quot;], [&quot;🍯&quot;, &quot;Sladkost&quot;, &quot;Nemám rád ↔ Mám rád&quot;], [&quot;🧂&quot;, &quot;Slanost&quot;, &quot;Mdlé ↔ Slané&quot;], [&quot;🥓&quot;, &quot;Mastnost&quot;, &quot;Lehké ↔ Bohaté&quot;], [&quot;🌿&quot;, &quot;Přirozená chuť&quot;, &quot;Kořeněné ↔ Přirozené&quot;]]}, {&quot;emoji&quot;: &quot;🥩&quot;, &quot;name&quot;: &quot;Steak&quot;, &quot;attrs&quot;: [[&quot;🔥&quot;, &quot;Propečení&quot;, &quot;Krvavé ↔ Propečené&quot;], [&quot;🥩&quot;, &quot;Šťavnatost&quot;, &quot;Suché ↔ Šťavnaté&quot;], [&quot;✨&quot;, &quot;Křehkost&quot;, &quot;Tuhé ↔ Křehké&quot;], [&quot;🧂&quot;, &quot;Dochucení&quot;, &quot;Mdlé ↔ Slané&quot;], [&quot;🌿&quot;, &quot;Masová chuť&quot;, &quot;Slabé ↔ Silné&quot;], [&quot;🍖&quot;, &quot;Mramorování&quot;, &quot;Málo ↔ Hodně&quot;]]}, {&quot;emoji&quot;: &quot;🍣&quot;, &quot;name&quot;: &quot;Sushi&quot;, &quot;attrs&quot;: [[&quot;🍚&quot;, &quot;Shari (rýže)&quot;, &quot;Rozbředlá ↔ Pevná&quot;], [&quot;🐟&quot;, &quot;Neta (ryba)&quot;, &quot;Čerstvost&quot;], [&quot;🌿&quot;, &quot;Wasabi&quot;, &quot;Slabé ↔ Silné&quot;], [&quot;⚖️&quot;, &quot;Vyváženost&quot;, &quot;Nevyvážené ↔ Harmonické&quot;], [&quot;✋&quot;, &quot;Tvarování&quot;, &quot;Rozpadá se ↔ Drží&quot;], [&quot;🌡️&quot;, &quot;Teplota&quot;, &quot;Studené ↔ Teplé&quot;]]}, {&quot;emoji&quot;: &quot;🍜&quot;, &quot;name&quot;: &quot;Ramen&quot;, &quot;attrs&quot;: [[&quot;🥣&quot;, &quot;Vývar&quot;, &quot;Hloubka/umami&quot;], [&quot;🍜&quot;, &quot;Nudle&quot;, &quot;Měkké ↔ Pevné&quot;], [&quot;🥓&quot;, &quot;Chashu&quot;, &quot;Suché ↔ Křehké&quot;], [&quot;🥚&quot;, &quot;Přísady&quot;, &quot;Skromné ↔ Bohaté&quot;], [&quot;🔥&quot;, &quot;Teplota&quot;, &quot;Vlažné ↔ Horké&quot;], [&quot;⚖️&quot;, &quot;Vyváženost&quot;, &quot;Nevyvážené ↔ Harmonické&quot;]]}, {&quot;emoji&quot;: &quot;🍕&quot;, &quot;name&quot;: &quot;Pizza&quot;, &quot;attrs&quot;: [[&quot;🫓&quot;, &quot;Těsto&quot;, &quot;Tuhé ↔ Vláčné&quot;], [&quot;🍅&quot;, &quot;Omáčka&quot;, &quot;Málo ↔ Hodně&quot;], [&quot;🧀&quot;, &quot;Sýr&quot;, &quot;Málo ↔ Hodně&quot;], [&quot;🔥&quot;, &quot;Propečení&quot;, &quot;Nedopečené ↔ Křupavé&quot;], [&quot;🌟&quot;, &quot;Přísady&quot;, &quot;Skromné ↔ Bohaté&quot;], [&quot;⚖️&quot;, &quot;Vyváženost&quot;, &quot;Nevyvážené ↔ Harmonické&quot;]]}, {&quot;emoji&quot;: &quot;🍷&quot;, &quot;name&quot;: &quot;Víno&quot;, &quot;attrs&quot;: [[&quot;💪&quot;, &quot;Tělo&quot;, &quot;Lehké ↔ Plné&quot;], [&quot;🍇&quot;, &quot;Taniny&quot;, &quot;Jemné ↔ Svíravé&quot;], [&quot;🍋&quot;, &quot;Kyselost&quot;, &quot;Nízká ↔ Vysoká&quot;], [&quot;🌸&quot;, &quot;Aroma&quot;, &quot;Jednoduché ↔ Komplexní&quot;], [&quot;✨&quot;, &quot;Dochuť&quot;, &quot;Krátký ↔ Dlouhý&quot;], [&quot;⚖️&quot;, &quot;Vyváženost&quot;, &quot;Nevyvážené ↔ Harmonické&quot;]]}, {&quot;emoji&quot;: &quot;☕&quot;, &quot;name&quot;: &quot;Káva&quot;, &quot;attrs&quot;: [[&quot;🍋&quot;, &quot;Kyselost&quot;, &quot;Nízká ↔ Svěží&quot;], [&quot;💪&quot;, &quot;Tělo&quot;, &quot;Lehké ↔ Plné&quot;], [&quot;🌸&quot;, &quot;Chuť&quot;, &quot;Jednoduché ↔ Komplexní&quot;], [&quot;✨&quot;, &quot;Dochuť&quot;, &quot;Krátký ↔ Dlouhý&quot;], [&quot;🍯&quot;, &quot;Sladkost&quot;, &quot;Hořké ↔ Sladké&quot;], [&quot;⚖️&quot;, &quot;Vyváženost&quot;, &quot;Nevyvážené ↔ Harmonické&quot;]]}], &quot;rating&quot;: &quot;Hodnocení&quot;, &quot;intensity&quot;: &quot;Intenzita chuti&quot;, &quot;sat&quot;: &quot;Spokojenost&quot;, &quot;low&quot;: &quot;Nespokojen(a)&quot;, &quot;high&quot;: &quot;Velmi spokojen(a)&quot;, &quot;shape&quot;: &quot;Chuťový profil&quot;, &quot;score&quot;: &quot;Skóre Riio Michelin&quot;}"></div>
+    </section>
 
-    <h2>Hlavní funkce</h2>
-    <div class="features">
-      <div class="card">
-        <h3>Najděte na mapě a hned uložte</h3>
-        <p>Vyhledejte restauraci na mapě nebo klepněte na místo v okolí a rovnou si ji přidejte do seznamu. Restauraci můžete přidat i ručně – na své aktuální poloze nebo na místě, které vyberete na mapě.</p>
-      </div>
-      <div class="card">
-        <h3>Navštívené a Chci vyzkoušet</h3>
-        <p>Restaurace, kde jste už byli, a ty, kam se chcete jednou podívat, máte přehledně oddělené. Jakmile místo navštívíte, jednoduše ho přesunete mezi navštívené.</p>
-      </div>
-      <div class="card">
-        <h3>Deník návštěv</h3>
-        <p>Zapište si datum návštěvy, co jste jedli, fotky, hvězdičky a poznámky. Když si u restaurace uložíte jídla z nabídky, příště je při zápisu jen vyberete.</p>
-      </div>
-      <div class="card">
-        <h3>Podrobné hodnocení chuti</h3>
-        <p>Zvlášť hodnotíte intenzitu chuti – pálivost, slanost, sladkost – a zvlášť to, jak moc vám chutnala. Steak, sushi a rámen můžete hodnotit podle kritérií, která k nim patří: propečení, rýže, vývar.</p>
-      </div>
-      <div class="card">
-        <h3>Moje Michelin Top 6</h3>
-        <p>Šesti nejoblíbenějším restauracím dejte pořadí a mějte je pohromadě. Až se vás někdo zeptá, kam zajít na jídlo, hned mu je ukážete.</p>
-      </div>
-      <div class="card">
-        <h3>Chuťový profil</h3>
-        <p>Na základě vašich hodnocení chuti na první pohled uvidíte, jaké chutě a jaký styl jídla máte nejraději.</p>
-      </div>
-      <div class="card">
-        <h3>Připomenutí po návštěvě</h3>
-        <p>Když chvíli pobudete v uložené restauraci a odejdete, za nějakou dobu vám přijde upozornění „Jak se vám dnes líbilo?“, abyste nezapomněli na zápis. Pokud ho nechcete, můžete ho vypnout.</p>
-      </div>
-      <div class="card">
-        <h3>Navigace a volání</h3>
-        <p>Uloženou restauraci otevřete jedním klepnutím v Apple Mapách, KakaoMap nebo NAVER Map a klepnutím na telefonní číslo rovnou zavoláte.</p>
-      </div>
-    </div>
+    <section class="problem reveal">
+      <h2>Bylo to výborné, ale co jsem si to dal?</h2>
+      <p>Víte, že se vám restaurace líbila, ale název se vám rozplývá, a co jste si objednali nebo jestli byl vývar moc slaný, už vůbec nevíte. Tak znovu hledáte a čtete recenze cizích lidí. Insaeng uchová na mapě to, co jste sami ochutnali, abyste další podnik vybírali podle vlastní zkušenosti.</p>
+    </section>
 
-    <h2>Vaše záznamy zůstávají ve vašem iPhonu</h2>
-    <p>
-      Žádná registrace. Seznam restaurací, záznamy návštěv i fotky se ukládají jen ve vašem iPhonu.
-      Podrobnosti najdete v <a href="privacy.html">zásadách ochrany osobních údajů</a>.
-    </p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Navštívené, Chci vyzkoušet a vlastní Michelin</h2>
+        <p>Vyhledejte na mapě nebo klepněte na místo poblíž a hned je uložené. Oddělte podniky, kde jste byli, od těch, které chcete vyzkoušet, a šest oblíbených seřaďte od 1 do 6.<br>Když se vás někdo zeptá na tip, stačí ukázat seznam.</p>
+      </div>
+      <div class="phone"><img src="../img/cs/02-list.jpg" alt="Navštívené, Chci vyzkoušet a vlastní Michelin" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <p><a href="https://apps.apple.com/app/id6755934548">Stáhnout Insaeng z App Store</a></p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Otázky šité na míru jídlu</h2>
+        <p>Výraznost chuti, třeba pálivost nebo slanost, nastavíte posuvníkem a to, jak vám chutnala, hodnotíte zvlášť od 1 do 5. U steaku jde o propečení a šťavnatost, u sushi o rýži a rybu, u ramenu o vývar a nudle.<br>Každá návštěva uchová i jídlo, fotky, hvězdičky a poznámky.</p>
+      </div>
+      <div class="phone"><img src="../img/cs/04-taste-review.jpg" alt="Otázky šité na míru jídlu" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <div class="contact">
-      Pokud vás něco trápí nebo vám nějaká funkce chybí, napište nám na <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a>.
-      Odpovědi na časté dotazy najdete na stránce <a href="support.html">Podpora</a>.
-    </div>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Kam se vrátit, uvidíte v číslech</h2>
+        <p>S více návštěvami ukáže každá restaurace celkové hodnocení z průměru všech návštěv a skóre Riio Michelin ze 100, které spojuje hvězdičky a spokojenost.<br>Když odejdete z uložené restaurace, za chvíli přijde připomínka, abyste návštěvu zapsali.</p>
+      </div>
+      <div class="phone"><img src="../img/cs/03-detail.jpg" alt="Kam se vrátit, uvidíte v číslech" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="reveal">
+      <h2>Začněte ve třech krocích</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>Uložte restauraci</h3><p>Vyhledejte ji na mapě nebo klepněte na místo poblíž.</p></li>
+<li class="card"><span class="n">2</span><h3>Zapište návštěvu</h3><p>Jídlo, fotky, hvězdičky a chuť. Hodnocení chuti je dobrovolné.</p></li>
+<li class="card"><span class="n">3</span><h3>Vyberte další</h3><p>Podívejte se na top 6 a skóre a vyrazte s Apple Mapami, Kakao Map nebo Naver Map.</p></li></ol>
+    </section>
+
+    <section class="reveal" id="commands">
+      <h2>Co se hodnotí u jednotlivých jídel</h2>
+      <div class="card table">
+        <dl><div><dt>🍽️ Obecné</dt><dd>Pálivost, Výraznost, Sladkost, Slanost, Mastnost, Přirozená chuť</dd></div><div><dt>🥩 Steak</dt><dd>Propečení, Šťavnatost, Křehkost, Dochucení, Masová chuť, Mramorování</dd></div><div><dt>🍣 Sushi</dt><dd>Shari (rýže), Neta (ryba), Wasabi, Vyváženost, Tvarování, Teplota</dd></div><div><dt>🍜 Ramen</dt><dd>Vývar, Nudle, Chashu, Přísady, Teplota, Vyváženost</dd></div><div><dt>🍕 Pizza</dt><dd>Těsto, Omáčka, Sýr, Propečení, Přísady, Vyváženost</dd></div><div><dt>🍷 Víno</dt><dd>Tělo, Taniny, Kyselost, Aroma, Dochuť, Vyváženost</dd></div><div><dt>☕ Káva</dt><dd>Kyselost, Tělo, Chuť, Dochuť, Sladkost, Vyváženost</dd></div></dl>
+      </div>
+      <p class="muted">Ostatní jídla se hodnotí obecnými kritérii z prvního řádku. Můžete si vytvořit i vlastní kategorie.</p>
+    </section>
+
+
+
+    <section class="reveal" id="faq">
+      <h2>Časté dotazy</h2>
+      <div class="faq"><details><summary>Jak přidám restauraci?</summary><p>Do vyhledávacího pole nahoře na mapě zadejte název restaurace a ve výsledcích klepněte na „Přidat do mých restaurací“. Restauraci můžete přidat i přímo klepnutím na místo v okolí, které vidíte na mapě. Pokud se místo ve vyhledávání neobjeví, přidejte ho ručně na své aktuální poloze nebo na místě, které vyberete na mapě.</p></details>
+<details><summary>Co znamená Navštívené, Chci vyzkoušet a Top 6?</summary><p>Navštívené – restaurace, kde jste už byli. Můžete k nim zapisovat návštěvy. Chci vyzkoušet – restaurace, kam se chcete jednou podívat. Po návštěvě je v detailu restaurace přepněte na Navštívené. Top 6 (Moje Michelin) – šest nejoblíbenějších restaurací, kterým dáte pořadí od 1. do 6. místa. Restauraci ze seznamu Chci vyzkoušet nelze zařadit do Top 6.</p></details>
+<details><summary>Musím hodnotit chuť?</summary><p>Ne, je to dobrovolné. Když hodnotíte, výraznost chuti a spokojenost se promítnou do celkového hodnocení restaurace a počítají se do skóre Riio Michelin.</p></details>
+<details><summary>Kdy přijde upozornění „Jak se vám dnes líbilo?“</summary><p>Když pobudete u uložené restaurace déle než 5 minut a odejdete, upozornění přijde přibližně za 40 minut. Tato funkce vyžaduje polohu s volbou „Vždy“ a povolená oznámení. Pokud upozornění nechcete, vypněte oznámení v Nastavení &gt; Aplikace &gt; Insaeng nebo přepněte polohu na „Při používání aplikace“. Poloha se vyhodnocuje jen v zařízení. Trasy vašeho pohybu se neukládají ani nikam neodesílají.</p></details>
+<details><summary>Dá se aplikace používat bez přístupu k poloze?</summary><p>Ano. Restauraci přidáte tak, že místo vyberete přímo na mapě, a návštěvy zapisujete jako obvykle. Nebude fungovat jen zobrazení aktuální polohy a upozornění po návštěvě.</p></details>
+<details><summary>Vyhledávání nic nenachází</summary><p>Vyhledávání míst vyžaduje připojení k internetu. Zkuste jiný název nebo kratší klíčové slovo. Pokud místo stále nenajdete, vyberte ho na mapě a přidejte ručně.</p></details>
+<details><summary>Kde se záznamy ukládají? Synchronizují se s dalšími zařízeními?</summary><p>Restaurace, záznamy návštěv i fotky se ukládají jen v tomto iPhonu. Současná verze synchronizaci s dalšími zařízeními nepodporuje a zálohování a obnova přes iCloud v nastavení zatím nefungují. Data aplikace jsou ale součástí celkové zálohy iPhonu (záloha na iCloud nebo do počítače).</p></details>
+<details><summary>Chci smazat všechny záznamy</summary><p>V nastavení na obrazovce mapy klepněte na „Smazat všechna data“ a restaurace i záznamy návštěv se smažou. Tuto akci nelze vrátit zpět. Chcete-li beze zbytku smazat i fotky, odstraňte aplikaci.</p></details>
+<details><summary>Zůstanou mi záznamy, když aplikaci odinstaluji a znovu nainstaluji?</summary><p>Ne. Záznamy se ukládají jen v zařízení, takže se s odstraněním aplikace smažou i ony. Než aplikaci odstraníte, dobře si to rozmyslete.</p></details>
+<details><summary>Je opravdu všechno zdarma?</summary><p>Ano. Všechny funkce jsou zdarma, bez reklam a bez účtu. „Podpořit vývojáře“ v nastavení je zcela dobrovolné a nic dalšího neodemyká.</p></details></div>
+      <p class="contact">Pokud jste odpověď nenašli, pošlete nám zprávu přímo z aplikace v Nastavení &gt; Podpora nebo napište na <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a>. Uveďte prosím verzi aplikace, model iPhonu a na které obrazovce jste co dělali – pomůže nám to vše rychleji prověřit.</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>Další restauraci vyberte<br>podle vlastních záznamů</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6755934548">Stáhnout zdarma v App Storu</a>
+    </section>
   </main>
 
-  <footer class="site">
-    © 2026 Leeo · <a href="support.html">Podpora</a> · <a href="privacy.html">Ochrana osobních údajů</a>
+  <footer>
+    <nav id="languages" class="langs" aria-label="Jazyk"><a href="../" hreflang="ko" lang="ko">한국어</a>
+<a href="../en/" hreflang="en" lang="en">English</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../cs/" hreflang="cs" lang="cs" aria-current="page">Čeština</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a></nav>
+    <p><a href="privacy.html">Ochrana osobních údajů</a> · <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a> · © 2026 Leeo</p>
   </footer>
-</div>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

@@ -1,0 +1,403 @@
+{
+  "title": "Insaeng: místa, kde vám chutnalo, na jedné mapě",
+  "description": "Sbírejte na mapě restaurace, kde jste byli i kam se chystáte, a při každé návštěvě si zapište jídlo, fotky a chuť. Vše zdarma a jen ve vašem iPhonu.",
+  "hero": {
+    "headline": "Místa, kde vám chutnalo,\nuž nezapomenete",
+    "lead": "Označte na mapě restaurace, kde jste byli i kam se chystáte, a při každé návštěvě si zapište, co jste si dali, fotky a jak to chutnalo. Když nevíte, kam na jídlo, odpověď najdete ve vlastních záznamech.",
+    "cta": "Stáhnout zdarma v App Storu",
+    "note": "Všechny funkce jsou zdarma. Bez registrace, záznamy zůstávají ve vašem iPhonu."
+  },
+  "demo": {
+    "title": "Ohodnoťte jídlo",
+    "lead": "Vyberte druh jídla a nastavte, jak výrazná byla každá chuť a jak vám chutnala. Stejná kritéria i stejný výpočet jako u návštěvy v aplikaci.",
+    "note": "Stejně jako v aplikaci tvoří skóre z poloviny hvězdičky a z poloviny spokojenost. Nic se tu neukládá.",
+    "types": [
+      {
+        "emoji": "🍽️",
+        "name": "Obecné",
+        "attrs": [
+          [
+            "🌶️",
+            "Pálivost",
+            "Jemné ↔ Pálivé"
+          ],
+          [
+            "💪",
+            "Výraznost",
+            "Jemné ↔ Výrazné"
+          ],
+          [
+            "🍯",
+            "Sladkost",
+            "Nemám rád ↔ Mám rád"
+          ],
+          [
+            "🧂",
+            "Slanost",
+            "Mdlé ↔ Slané"
+          ],
+          [
+            "🥓",
+            "Mastnost",
+            "Lehké ↔ Bohaté"
+          ],
+          [
+            "🌿",
+            "Přirozená chuť",
+            "Kořeněné ↔ Přirozené"
+          ]
+        ]
+      },
+      {
+        "emoji": "🥩",
+        "name": "Steak",
+        "attrs": [
+          [
+            "🔥",
+            "Propečení",
+            "Krvavé ↔ Propečené"
+          ],
+          [
+            "🥩",
+            "Šťavnatost",
+            "Suché ↔ Šťavnaté"
+          ],
+          [
+            "✨",
+            "Křehkost",
+            "Tuhé ↔ Křehké"
+          ],
+          [
+            "🧂",
+            "Dochucení",
+            "Mdlé ↔ Slané"
+          ],
+          [
+            "🌿",
+            "Masová chuť",
+            "Slabé ↔ Silné"
+          ],
+          [
+            "🍖",
+            "Mramorování",
+            "Málo ↔ Hodně"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍣",
+        "name": "Sushi",
+        "attrs": [
+          [
+            "🍚",
+            "Shari (rýže)",
+            "Rozbředlá ↔ Pevná"
+          ],
+          [
+            "🐟",
+            "Neta (ryba)",
+            "Čerstvost"
+          ],
+          [
+            "🌿",
+            "Wasabi",
+            "Slabé ↔ Silné"
+          ],
+          [
+            "⚖️",
+            "Vyváženost",
+            "Nevyvážené ↔ Harmonické"
+          ],
+          [
+            "✋",
+            "Tvarování",
+            "Rozpadá se ↔ Drží"
+          ],
+          [
+            "🌡️",
+            "Teplota",
+            "Studené ↔ Teplé"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍜",
+        "name": "Ramen",
+        "attrs": [
+          [
+            "🥣",
+            "Vývar",
+            "Hloubka/umami"
+          ],
+          [
+            "🍜",
+            "Nudle",
+            "Měkké ↔ Pevné"
+          ],
+          [
+            "🥓",
+            "Chashu",
+            "Suché ↔ Křehké"
+          ],
+          [
+            "🥚",
+            "Přísady",
+            "Skromné ↔ Bohaté"
+          ],
+          [
+            "🔥",
+            "Teplota",
+            "Vlažné ↔ Horké"
+          ],
+          [
+            "⚖️",
+            "Vyváženost",
+            "Nevyvážené ↔ Harmonické"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍕",
+        "name": "Pizza",
+        "attrs": [
+          [
+            "🫓",
+            "Těsto",
+            "Tuhé ↔ Vláčné"
+          ],
+          [
+            "🍅",
+            "Omáčka",
+            "Málo ↔ Hodně"
+          ],
+          [
+            "🧀",
+            "Sýr",
+            "Málo ↔ Hodně"
+          ],
+          [
+            "🔥",
+            "Propečení",
+            "Nedopečené ↔ Křupavé"
+          ],
+          [
+            "🌟",
+            "Přísady",
+            "Skromné ↔ Bohaté"
+          ],
+          [
+            "⚖️",
+            "Vyváženost",
+            "Nevyvážené ↔ Harmonické"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍷",
+        "name": "Víno",
+        "attrs": [
+          [
+            "💪",
+            "Tělo",
+            "Lehké ↔ Plné"
+          ],
+          [
+            "🍇",
+            "Taniny",
+            "Jemné ↔ Svíravé"
+          ],
+          [
+            "🍋",
+            "Kyselost",
+            "Nízká ↔ Vysoká"
+          ],
+          [
+            "🌸",
+            "Aroma",
+            "Jednoduché ↔ Komplexní"
+          ],
+          [
+            "✨",
+            "Dochuť",
+            "Krátký ↔ Dlouhý"
+          ],
+          [
+            "⚖️",
+            "Vyváženost",
+            "Nevyvážené ↔ Harmonické"
+          ]
+        ]
+      },
+      {
+        "emoji": "☕",
+        "name": "Káva",
+        "attrs": [
+          [
+            "🍋",
+            "Kyselost",
+            "Nízká ↔ Svěží"
+          ],
+          [
+            "💪",
+            "Tělo",
+            "Lehké ↔ Plné"
+          ],
+          [
+            "🌸",
+            "Chuť",
+            "Jednoduché ↔ Komplexní"
+          ],
+          [
+            "✨",
+            "Dochuť",
+            "Krátký ↔ Dlouhý"
+          ],
+          [
+            "🍯",
+            "Sladkost",
+            "Hořké ↔ Sladké"
+          ],
+          [
+            "⚖️",
+            "Vyváženost",
+            "Nevyvážené ↔ Harmonické"
+          ]
+        ]
+      }
+    ],
+    "rating": "Hodnocení",
+    "intensity": "Intenzita chuti",
+    "sat": "Spokojenost",
+    "low": "Nespokojen(a)",
+    "high": "Velmi spokojen(a)",
+    "shape": "Chuťový profil",
+    "score": "Skóre Riio Michelin"
+  },
+  "problem": {
+    "title": "Bylo to výborné, ale co jsem si to dal?",
+    "text": "Víte, že se vám restaurace líbila, ale název se vám rozplývá, a co jste si objednali nebo jestli byl vývar moc slaný, už vůbec nevíte. Tak znovu hledáte a čtete recenze cizích lidí. Insaeng uchová na mapě to, co jste sami ochutnali, abyste další podnik vybírali podle vlastní zkušenosti."
+  },
+  "features": [
+    {
+      "title": "Navštívené, Chci vyzkoušet a vlastní Michelin",
+      "text": "Vyhledejte na mapě nebo klepněte na místo poblíž a hned je uložené. Oddělte podniky, kde jste byli, od těch, které chcete vyzkoušet, a šest oblíbených seřaďte od 1 do 6.\nKdyž se vás někdo zeptá na tip, stačí ukázat seznam.",
+      "shot": "02-list"
+    },
+    {
+      "title": "Otázky šité na míru jídlu",
+      "text": "Výraznost chuti, třeba pálivost nebo slanost, nastavíte posuvníkem a to, jak vám chutnala, hodnotíte zvlášť od 1 do 5. U steaku jde o propečení a šťavnatost, u sushi o rýži a rybu, u ramenu o vývar a nudle.\nKaždá návštěva uchová i jídlo, fotky, hvězdičky a poznámky.",
+      "shot": "04-taste-review"
+    },
+    {
+      "title": "Kam se vrátit, uvidíte v číslech",
+      "text": "S více návštěvami ukáže každá restaurace celkové hodnocení z průměru všech návštěv a skóre Riio Michelin ze 100, které spojuje hvězdičky a spokojenost.\nKdyž odejdete z uložené restaurace, za chvíli přijde připomínka, abyste návštěvu zapsali.",
+      "shot": "03-detail"
+    }
+  ],
+  "steps": {
+    "title": "Začněte ve třech krocích",
+    "items": [
+      {
+        "title": "Uložte restauraci",
+        "text": "Vyhledejte ji na mapě nebo klepněte na místo poblíž."
+      },
+      {
+        "title": "Zapište návštěvu",
+        "text": "Jídlo, fotky, hvězdičky a chuť. Hodnocení chuti je dobrovolné."
+      },
+      {
+        "title": "Vyberte další",
+        "text": "Podívejte se na top 6 a skóre a vyrazte s Apple Mapami, Kakao Map nebo Naver Map."
+      }
+    ]
+  },
+  "reference": {
+    "title": "Co se hodnotí u jednotlivých jídel",
+    "rows": [
+      [
+        "🍽️ Obecné",
+        "Pálivost, Výraznost, Sladkost, Slanost, Mastnost, Přirozená chuť"
+      ],
+      [
+        "🥩 Steak",
+        "Propečení, Šťavnatost, Křehkost, Dochucení, Masová chuť, Mramorování"
+      ],
+      [
+        "🍣 Sushi",
+        "Shari (rýže), Neta (ryba), Wasabi, Vyváženost, Tvarování, Teplota"
+      ],
+      [
+        "🍜 Ramen",
+        "Vývar, Nudle, Chashu, Přísady, Teplota, Vyváženost"
+      ],
+      [
+        "🍕 Pizza",
+        "Těsto, Omáčka, Sýr, Propečení, Přísady, Vyváženost"
+      ],
+      [
+        "🍷 Víno",
+        "Tělo, Taniny, Kyselost, Aroma, Dochuť, Vyváženost"
+      ],
+      [
+        "☕ Káva",
+        "Kyselost, Tělo, Chuť, Dochuť, Sladkost, Vyváženost"
+      ]
+    ],
+    "note": "Ostatní jídla se hodnotí obecnými kritérii z prvního řádku. Můžete si vytvořit i vlastní kategorie."
+  },
+  "faq": {
+    "title": "Časté dotazy",
+    "items": [
+      {
+        "q": "Jak přidám restauraci?",
+        "a": "Do vyhledávacího pole nahoře na mapě zadejte název restaurace a ve výsledcích klepněte na „Přidat do mých restaurací“. Restauraci můžete přidat i přímo klepnutím na místo v okolí, které vidíte na mapě. Pokud se místo ve vyhledávání neobjeví, přidejte ho ručně na své aktuální poloze nebo na místě, které vyberete na mapě."
+      },
+      {
+        "q": "Co znamená Navštívené, Chci vyzkoušet a Top 6?",
+        "a": "Navštívené – restaurace, kde jste už byli. Můžete k nim zapisovat návštěvy. Chci vyzkoušet – restaurace, kam se chcete jednou podívat. Po návštěvě je v detailu restaurace přepněte na Navštívené. Top 6 (Moje Michelin) – šest nejoblíbenějších restaurací, kterým dáte pořadí od 1. do 6. místa. Restauraci ze seznamu Chci vyzkoušet nelze zařadit do Top 6."
+      },
+      {
+        "q": "Musím hodnotit chuť?",
+        "a": "Ne, je to dobrovolné. Když hodnotíte, výraznost chuti a spokojenost se promítnou do celkového hodnocení restaurace a počítají se do skóre Riio Michelin."
+      },
+      {
+        "q": "Kdy přijde upozornění „Jak se vám dnes líbilo?“",
+        "a": "Když pobudete u uložené restaurace déle než 5 minut a odejdete, upozornění přijde přibližně za 40 minut. Tato funkce vyžaduje polohu s volbou „Vždy“ a povolená oznámení. Pokud upozornění nechcete, vypněte oznámení v Nastavení > Aplikace > Insaeng nebo přepněte polohu na „Při používání aplikace“. Poloha se vyhodnocuje jen v zařízení. Trasy vašeho pohybu se neukládají ani nikam neodesílají."
+      },
+      {
+        "q": "Dá se aplikace používat bez přístupu k poloze?",
+        "a": "Ano. Restauraci přidáte tak, že místo vyberete přímo na mapě, a návštěvy zapisujete jako obvykle. Nebude fungovat jen zobrazení aktuální polohy a upozornění po návštěvě."
+      },
+      {
+        "q": "Vyhledávání nic nenachází",
+        "a": "Vyhledávání míst vyžaduje připojení k internetu. Zkuste jiný název nebo kratší klíčové slovo. Pokud místo stále nenajdete, vyberte ho na mapě a přidejte ručně."
+      },
+      {
+        "q": "Kde se záznamy ukládají? Synchronizují se s dalšími zařízeními?",
+        "a": "Restaurace, záznamy návštěv i fotky se ukládají jen v tomto iPhonu. Současná verze synchronizaci s dalšími zařízeními nepodporuje a zálohování a obnova přes iCloud v nastavení zatím nefungují. Data aplikace jsou ale součástí celkové zálohy iPhonu (záloha na iCloud nebo do počítače)."
+      },
+      {
+        "q": "Chci smazat všechny záznamy",
+        "a": "V nastavení na obrazovce mapy klepněte na „Smazat všechna data“ a restaurace i záznamy návštěv se smažou. Tuto akci nelze vrátit zpět. Chcete-li beze zbytku smazat i fotky, odstraňte aplikaci."
+      },
+      {
+        "q": "Zůstanou mi záznamy, když aplikaci odinstaluji a znovu nainstaluji?",
+        "a": "Ne. Záznamy se ukládají jen v zařízení, takže se s odstraněním aplikace smažou i ony. Než aplikaci odstraníte, dobře si to rozmyslete."
+      },
+      {
+        "q": "Je opravdu všechno zdarma?",
+        "a": "Ano. Všechny funkce jsou zdarma, bez reklam a bez účtu. „Podpořit vývojáře“ v nastavení je zcela dobrovolné a nic dalšího neodemyká."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Další restauraci vyberte\npodle vlastních záznamů",
+    "cta": "Stáhnout zdarma v App Storu"
+  },
+  "ui": {
+    "skip": "Přejít na obsah",
+    "languages": "Jazyk",
+    "privacy": "Ochrana osobních údajů",
+    "contact": "Pokud jste odpověď nenašli, pošlete nám zprávu přímo z aplikace v Nastavení > Podpora nebo napište na {email}. Uveďte prosím verzi aplikace, model iPhonu a na které obrazovce jste co dělali – pomůže nám to vše rychleji prověřit."
+  }
+}

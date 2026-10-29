@@ -1,145 +1,176 @@
 <!doctype html>
 <html lang="ko">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="color-scheme" content="light dark">
-<title>인생 맛집 — 내가 다녀온 맛집을 지도에 기록하세요</title>
-<meta name="description" content="다녀온 식당과 가 보고 싶은 식당을 지도에 모으고, 방문할 때마다 메뉴·사진·별점·맛 평가를 남기는 iPhone 앱. 기록이 쌓이면 나의 취향 프로필과 탑6 맛집이 만들어집니다.">
-<link rel="canonical" href="https://m1zz.github.io/RestaurantMap/">
-<link rel="alternate" hreflang="ko" href="https://m1zz.github.io/RestaurantMap/">
-<link rel="alternate" hreflang="en" href="https://m1zz.github.io/RestaurantMap/en/">
-<link rel="alternate" hreflang="ja" href="https://m1zz.github.io/RestaurantMap/ja/">
-<link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/RestaurantMap/zh-Hans/">
-<link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/RestaurantMap/zh-Hant/">
-<link rel="alternate" hreflang="ru" href="https://m1zz.github.io/RestaurantMap/ru/">
-<link rel="alternate" hreflang="es" href="https://m1zz.github.io/RestaurantMap/es/">
-<link rel="alternate" hreflang="de" href="https://m1zz.github.io/RestaurantMap/de/">
-<link rel="alternate" hreflang="fr" href="https://m1zz.github.io/RestaurantMap/fr/">
-<link rel="alternate" hreflang="it" href="https://m1zz.github.io/RestaurantMap/it/">
-<link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/RestaurantMap/pt-BR/">
-<link rel="alternate" hreflang="th" href="https://m1zz.github.io/RestaurantMap/th/">
-<link rel="alternate" hreflang="vi" href="https://m1zz.github.io/RestaurantMap/vi/">
-<link rel="alternate" hreflang="cs" href="https://m1zz.github.io/RestaurantMap/cs/">
-<link rel="alternate" hreflang="da" href="https://m1zz.github.io/RestaurantMap/da/">
-<link rel="alternate" hreflang="el" href="https://m1zz.github.io/RestaurantMap/el/">
-<link rel="alternate" hreflang="fi" href="https://m1zz.github.io/RestaurantMap/fi/">
-<link rel="alternate" hreflang="id" href="https://m1zz.github.io/RestaurantMap/id/">
-<link rel="alternate" hreflang="nb" href="https://m1zz.github.io/RestaurantMap/nb/">
-<link rel="alternate" hreflang="nl" href="https://m1zz.github.io/RestaurantMap/nl/">
-<link rel="alternate" hreflang="pl" href="https://m1zz.github.io/RestaurantMap/pl/">
-<link rel="alternate" hreflang="sv" href="https://m1zz.github.io/RestaurantMap/sv/">
-<link rel="alternate" hreflang="tr" href="https://m1zz.github.io/RestaurantMap/tr/">
-<link rel="alternate" hreflang="en-GB" href="https://m1zz.github.io/RestaurantMap/en/">
-<link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/RestaurantMap/">
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="icon.png">
-<link rel="apple-touch-icon" href="icon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>인생 맛집: 다녀온 맛집을 지도에 기록하는 앱</title>
+  <meta name="description" content="가 본 식당과 가 보고 싶은 식당을 지도에 모으고, 갈 때마다 메뉴와 사진, 맛 평가를 남깁니다. 모든 기능이 무료이고 기록은 내 iPhone에만 저장됩니다.">
+  <meta name="theme-color" content="#B8461F" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6755934548">
+  <link rel="canonical" href="https://m1zz.github.io/RestaurantMap/">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/RestaurantMap/">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/RestaurantMap/en/">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/RestaurantMap/ja/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/RestaurantMap/zh-Hans/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/RestaurantMap/zh-Hant/">
+  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/RestaurantMap/ru/">
+  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/RestaurantMap/es/">
+  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/RestaurantMap/de/">
+  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/RestaurantMap/fr/">
+  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/RestaurantMap/it/">
+  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/RestaurantMap/pt-BR/">
+  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/RestaurantMap/th/">
+  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/RestaurantMap/vi/">
+  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/RestaurantMap/cs/">
+  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/RestaurantMap/da/">
+  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/RestaurantMap/el/">
+  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/RestaurantMap/fi/">
+  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/RestaurantMap/id/">
+  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/RestaurantMap/nb/">
+  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/RestaurantMap/nl/">
+  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/RestaurantMap/pl/">
+  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/RestaurantMap/sv/">
+  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/RestaurantMap/tr/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/RestaurantMap/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="인생 맛집: 다녀온 맛집을 지도에 기록하는 앱">
+  <meta property="og:description" content="가 본 식당과 가 보고 싶은 식당을 지도에 모으고, 갈 때마다 메뉴와 사진, 맛 평가를 남깁니다. 모든 기능이 무료이고 기록은 내 iPhone에만 저장됩니다.">
+  <meta property="og:url" content="https://m1zz.github.io/RestaurantMap/">
+  <meta property="og:image" content="https://m1zz.github.io/RestaurantMap/img/ko/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="icon.png">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="stylesheet" href="site.css">
+  <link rel="stylesheet" href="demo.css">
+  <style>:root{--accent:#B8461F}@media (prefers-color-scheme:dark){:root{--accent:#F08A62}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-<div class="container">
-
-  <header class="site">
-    <img src="icon.png" alt="인생 맛집 앱 아이콘">
-    <div>
-      <div class="title">인생 맛집</div>
-      <div class="subtitle">진짜 맛집을 찾아서</div>
-    </div>
+  <a class="skip" href="#main">본문으로 건너뛰기</a>
+  <header class="bar">
+    <a class="brand" href=""><img src="icon.png" alt="" width="32" height="32">인생 맛집</a>
+    <a class="lang-link" href="#languages">언어</a>
   </header>
 
-  <nav class="langs" aria-label="언어">
-    <a href="index.html" hreflang="ko" lang="ko" aria-current="true">한국어</a>
-    <a href="en/index.html" hreflang="en" lang="en">English</a>
-    <a href="ja/index.html" hreflang="ja" lang="ja">日本語</a>
-    <a href="zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
-    <a href="zh-Hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
-    <a href="ru/index.html" hreflang="ru" lang="ru">Русский</a>
-    <a href="es/index.html" hreflang="es" lang="es">Español</a>
-    <a href="de/index.html" hreflang="de" lang="de">Deutsch</a>
-    <a href="fr/index.html" hreflang="fr" lang="fr">Français</a>
-    <a href="it/index.html" hreflang="it" lang="it">Italiano</a>
-    <a href="pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
-    <a href="th/index.html" hreflang="th" lang="th">ไทย</a>
-    <a href="vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a>
-    <a href="cs/index.html" hreflang="cs" lang="cs">Čeština</a>
-    <a href="da/index.html" hreflang="da" lang="da">Dansk</a>
-    <a href="el/index.html" hreflang="el" lang="el">Ελληνικά</a>
-    <a href="fi/index.html" hreflang="fi" lang="fi">Suomi</a>
-    <a href="id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a>
-    <a href="nb/index.html" hreflang="nb" lang="nb">Norsk bokmål</a>
-    <a href="nl/index.html" hreflang="nl" lang="nl">Nederlands</a>
-    <a href="pl/index.html" hreflang="pl" lang="pl">Polski</a>
-    <a href="sv/index.html" hreflang="sv" lang="sv">Svenska</a>
-    <a href="tr/index.html" hreflang="tr" lang="tr">Türkçe</a>
-  </nav>
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>다녀온 맛집,<br>이제 잊지 마세요</h1>
+        <p class="lead">가 본 식당과 가 보고 싶은 식당을 지도에 모으고, 갈 때마다 먹은 메뉴와 사진, 맛 평가를 남깁니다. 다음에 어디 갈지 고민될 때 내 기록이 답해 줍니다.</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6755934548">App Store에서 무료로 받기</a><a class="try" href="#try">한 그릇 평가해 보기 ↓</a></div>
+        <p class="muted small">모든 기능이 무료입니다. 회원가입 없이 기록은 내 iPhone에만 남습니다.</p>
+      </div>
+      <div class="phone"><img src="img/ko/01-map.jpg" alt="다녀온 맛집, 이제 잊지 마세요" width="720" height="1564" decoding="async"></div>
+    </section>
 
-  <nav class="pages" aria-label="페이지">
-    <a href="index.html" aria-current="page">홈</a>
-    <a href="support.html">지원</a>
-    <a href="privacy.html">개인정보 처리방침</a>
-  </nav>
 
-  <main>
-    <h1>다녀온 맛집, 이제 잊지 마세요</h1>
-    <p class="lead">
-      인생 맛집은 내가 다녀온 식당과 가 보고 싶은 식당을 지도 위에 모아 두는 앱입니다.
-      방문할 때마다 먹은 메뉴, 사진, 별점, 맛 평가를 남기면
-      기록이 쌓일수록 나만의 맛집 지도와 취향이 또렷해집니다.
-    </p>
+    <section class="reveal" id="try">
+      <h2>한 그릇 평가해 보기</h2>
+      <p class="muted">음식 종류를 고르고 맛의 세기와 만족도를 매겨 보세요. 앱의 방문 기록과 같은 항목, 같은 계산입니다.</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;한 그릇 평가해 보기&quot;, &quot;lead&quot;: &quot;음식 종류를 고르고 맛의 세기와 만족도를 매겨 보세요. 앱의 방문 기록과 같은 항목, 같은 계산입니다.&quot;, &quot;note&quot;: &quot;점수는 앱과 같이 별점 절반, 만족도 절반으로 계산합니다. 웹 체험은 저장되지 않습니다.&quot;, &quot;types&quot;: [{&quot;emoji&quot;: &quot;🍽️&quot;, &quot;name&quot;: &quot;일반&quot;, &quot;attrs&quot;: [[&quot;🌶️&quot;, &quot;맵기&quot;, &quot;순한 ↔ 매운&quot;], [&quot;💪&quot;, &quot;진한맛&quot;, &quot;담백 ↔ 진한&quot;], [&quot;🍯&quot;, &quot;단맛&quot;, &quot;안좋아함 ↔ 좋아함&quot;], [&quot;🧂&quot;, &quot;짠맛&quot;, &quot;싱거움 ↔ 짭짤&quot;], [&quot;🥓&quot;, &quot;기름진&quot;, &quot;담백 ↔ 고소&quot;], [&quot;🌿&quot;, &quot;본연의맛&quot;, &quot;양념 ↔ 재료맛&quot;]]}, {&quot;emoji&quot;: &quot;🥩&quot;, &quot;name&quot;: &quot;스테이크&quot;, &quot;attrs&quot;: [[&quot;🔥&quot;, &quot;굽기&quot;, &quot;레어 ↔ 웰던&quot;], [&quot;🥩&quot;, &quot;육즙&quot;, &quot;퍽퍽 ↔ 촉촉&quot;], [&quot;✨&quot;, &quot;부드러움&quot;, &quot;질김 ↔ 부드러움&quot;], [&quot;🧂&quot;, &quot;간&quot;, &quot;싱거움 ↔ 짭짤&quot;], [&quot;🌿&quot;, &quot;육향&quot;, &quot;약함 ↔ 강함&quot;], [&quot;🍖&quot;, &quot;마블링&quot;, &quot;적음 ↔ 많음&quot;]]}, {&quot;emoji&quot;: &quot;🍣&quot;, &quot;name&quot;: &quot;초밥&quot;, &quot;attrs&quot;: [[&quot;🍚&quot;, &quot;샤리(밥)&quot;, &quot;흐물 ↔ 단단&quot;], [&quot;🐟&quot;, &quot;네타(재료)&quot;, &quot;신선도&quot;], [&quot;🌿&quot;, &quot;와사비&quot;, &quot;약함 ↔ 강함&quot;], [&quot;⚖️&quot;, &quot;밸런스&quot;, &quot;불균형 ↔ 조화&quot;], [&quot;✋&quot;, &quot;쥐기&quot;, &quot;풀림 ↔ 결속&quot;], [&quot;🌡️&quot;, &quot;온도&quot;, &quot;차가움 ↔ 따뜻함&quot;]]}, {&quot;emoji&quot;: &quot;🍜&quot;, &quot;name&quot;: &quot;라멘&quot;, &quot;attrs&quot;: [[&quot;🥣&quot;, &quot;국물&quot;, &quot;깊이/감칠맛&quot;], [&quot;🍜&quot;, &quot;면발&quot;, &quot;부드러움 ↔ 쫄깃함&quot;], [&quot;🥓&quot;, &quot;차슈&quot;, &quot;퍽퍽 ↔ 부드러움&quot;], [&quot;🥚&quot;, &quot;토핑&quot;, &quot;부실 ↔ 풍부&quot;], [&quot;🔥&quot;, &quot;온도&quot;, &quot;미지근 ↔ 뜨거움&quot;], [&quot;⚖️&quot;, &quot;밸런스&quot;, &quot;불균형 ↔ 조화&quot;]]}, {&quot;emoji&quot;: &quot;🍕&quot;, &quot;name&quot;: &quot;피자&quot;, &quot;attrs&quot;: [[&quot;🫓&quot;, &quot;도우&quot;, &quot;질김 ↔ 쫄깃함&quot;], [&quot;🍅&quot;, &quot;소스&quot;, &quot;적음 ↔ 많음&quot;], [&quot;🧀&quot;, &quot;치즈&quot;, &quot;적음 ↔ 많음&quot;], [&quot;🔥&quot;, &quot;굽기&quot;, &quot;덜익음 ↔ 바삭함&quot;], [&quot;🌟&quot;, &quot;토핑&quot;, &quot;부실 ↔ 풍부&quot;], [&quot;⚖️&quot;, &quot;밸런스&quot;, &quot;불균형 ↔ 조화&quot;]]}, {&quot;emoji&quot;: &quot;🍷&quot;, &quot;name&quot;: &quot;와인&quot;, &quot;attrs&quot;: [[&quot;💪&quot;, &quot;바디&quot;, &quot;가벼움 ↔ 묵직함&quot;], [&quot;🍇&quot;, &quot;타닌&quot;, &quot;약함 ↔ 떫음&quot;], [&quot;🍋&quot;, &quot;산도&quot;, &quot;낮음 ↔ 높음&quot;], [&quot;🌸&quot;, &quot;아로마&quot;, &quot;단순 ↔ 복잡&quot;], [&quot;✨&quot;, &quot;피니시&quot;, &quot;짧음 ↔ 긴 여운&quot;], [&quot;⚖️&quot;, &quot;밸런스&quot;, &quot;불균형 ↔ 조화&quot;]]}, {&quot;emoji&quot;: &quot;☕&quot;, &quot;name&quot;: &quot;커피&quot;, &quot;attrs&quot;: [[&quot;🍋&quot;, &quot;산미&quot;, &quot;낮음 ↔ 밝음&quot;], [&quot;💪&quot;, &quot;바디&quot;, &quot;가벼움 ↔ 묵직함&quot;], [&quot;🌸&quot;, &quot;향미&quot;, &quot;단순 ↔ 복잡&quot;], [&quot;✨&quot;, &quot;후미&quot;, &quot;짧음 ↔ 긴 여운&quot;], [&quot;🍯&quot;, &quot;단맛&quot;, &quot;쓴맛 ↔ 단맛&quot;], [&quot;⚖️&quot;, &quot;밸런스&quot;, &quot;불균형 ↔ 조화&quot;]]}], &quot;rating&quot;: &quot;별점&quot;, &quot;intensity&quot;: &quot;맛 강도&quot;, &quot;sat&quot;: &quot;만족도&quot;, &quot;low&quot;: &quot;불만족&quot;, &quot;high&quot;: &quot;매우만족&quot;, &quot;shape&quot;: &quot;맛의 형태&quot;, &quot;score&quot;: &quot;리이오미슐랭 점수&quot;}"></div>
+    </section>
 
-    <h2>주요 기능</h2>
-    <div class="features">
-      <div class="card">
-        <h3>지도에서 찾고 바로 저장</h3>
-        <p>지도에서 식당을 검색하거나 주변 장소를 눌러 바로 내 목록에 넣을 수 있습니다. 현재 위치나 지도에서 고른 자리에 직접 추가해도 됩니다.</p>
-      </div>
-      <div class="card">
-        <h3>가본 곳과 가볼 곳</h3>
-        <p>이미 다녀온 식당과 언젠가 가 보고 싶은 식당을 나눠 관리합니다. 가 보고 나면 가본 곳으로 옮기면 됩니다.</p>
-      </div>
-      <div class="card">
-        <h3>방문 기록</h3>
-        <p>방문 날짜, 먹은 메뉴, 사진, 별점, 메모를 남깁니다. 식당마다 메뉴를 등록해 두면 다음 방문 때 골라서 기록할 수 있습니다.</p>
-      </div>
-      <div class="card">
-        <h3>꼼꼼한 맛 평가</h3>
-        <p>맵기, 간, 단맛 같은 맛의 강도와 그 맛이 얼마나 마음에 들었는지를 따로 평가합니다. 스테이크, 초밥, 라멘은 굽기·샤리·국물처럼 음식에 맞는 항목으로 평가할 수 있습니다.</p>
-      </div>
-      <div class="card">
-        <h3>나의 미슐랭 탑6</h3>
-        <p>가장 아끼는 식당 여섯 곳에 순위를 매겨 따로 모아 봅니다. 누군가 맛집을 물어볼 때 바로 꺼내 보여 주세요.</p>
-      </div>
-      <div class="card">
-        <h3>취향 프로필</h3>
-        <p>쌓인 맛 평가를 바탕으로 내가 어떤 맛과 음식 스타일을 좋아하는지 한눈에 보여 줍니다.</p>
-      </div>
-      <div class="card">
-        <h3>방문 후 기록 알림</h3>
-        <p>저장해 둔 식당에 머물다 나오면 잠시 뒤 “오늘 방문은 어떠셨나요?” 알림으로 기록을 잊지 않게 도와줍니다. 원하지 않으면 끌 수 있습니다.</p>
-      </div>
-      <div class="card">
-        <h3>길찾기와 전화</h3>
-        <p>저장한 식당을 Apple 지도, 카카오맵, 네이버 지도에서 바로 열고, 전화번호를 눌러 바로 전화할 수 있습니다.</p>
-      </div>
-    </div>
+    <section class="problem reveal">
+      <h2>그 집, 뭐가 맛있었더라?</h2>
+      <p>분명 좋았던 식당인데 이름이 가물가물하고, 무엇을 시켰는지, 국물이 짰는지는 더 기억나지 않습니다. 결국 또 검색해서 남의 후기를 읽게 되죠. 인생 맛집은 내가 먹어 본 기록을 지도 위에 남겨, 다음 선택을 내 경험으로 하게 해 줍니다.</p>
+    </section>
 
-    <h2>기록은 내 iPhone에</h2>
-    <p>
-      회원가입이 없고, 식당 목록·방문 기록·사진은 모두 내 iPhone에만 저장됩니다.
-      자세한 내용은 <a href="privacy.html">개인정보 처리방침</a>을 확인해 주세요.
-    </p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>가본 곳, 가볼 곳, 그리고 나의 미슐랭</h2>
+        <p>지도에서 검색하거나 주변 장소를 눌러 바로 저장합니다. 다녀온 곳과 언젠가 가 볼 곳을 나눠 두고, 가장 아끼는 여섯 곳은 1위부터 6위까지 순위를 매겨 따로 모읍니다.<br>누가 맛집을 물으면 이 목록을 보여 주면 됩니다.</p>
+      </div>
+      <div class="phone"><img src="img/ko/02-list.jpg" alt="가본 곳, 가볼 곳, 그리고 나의 미슐랭" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <p><a href="https://apps.apple.com/kr/app/id6755934548">App Store에서 인생 맛집 받기</a></p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>음식에 맞는 질문으로 평가합니다</h2>
+        <p>맵기나 간 같은 맛의 세기는 슬라이더로, 그 맛이 얼마나 마음에 들었는지는 1부터 5까지 따로 매깁니다. 스테이크는 굽기와 육즙, 초밥은 샤리와 네타, 라멘은 국물과 면발처럼 음식마다 항목이 달라집니다.<br>방문 기록에는 메뉴, 사진, 별점, 메모도 함께 남습니다.</p>
+      </div>
+      <div class="phone"><img src="img/ko/04-taste-review.jpg" alt="음식에 맞는 질문으로 평가합니다" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <div class="contact">
-      불편한 점이나 바라는 기능이 있으면 <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a> 으로 알려 주세요.
-      자주 묻는 질문은 <a href="support.html">지원</a> 페이지에 있습니다.
-    </div>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>다시 갈 곳이 숫자로 보입니다</h2>
+        <p>방문이 쌓이면 식당 화면에 모든 방문의 평균으로 그린 총평이 나오고, 별점과 만족도를 합친 리이오미슐랭 점수가 100점 만점으로 매겨집니다.<br>저장한 식당에 머물다 나오면 잠시 뒤 기록하라는 알림이 와서 잊을 틈이 없습니다.</p>
+      </div>
+      <div class="phone"><img src="img/ko/03-detail.jpg" alt="다시 갈 곳이 숫자로 보입니다" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="reveal">
+      <h2>시작은 세 단계면 됩니다</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>식당을 저장합니다</h3><p>지도에서 검색하거나 주변 장소를 눌러 목록에 넣습니다.</p></li>
+<li class="card"><span class="n">2</span><h3>다녀오면 기록합니다</h3><p>메뉴, 사진, 별점, 맛 평가를 남깁니다. 맛 평가는 선택입니다.</p></li>
+<li class="card"><span class="n">3</span><h3>다음 갈 곳을 고릅니다</h3><p>탑6와 점수를 보고 Apple 지도, 카카오맵, 네이버 지도로 길을 찾습니다.</p></li></ol>
+    </section>
+
+    <section class="reveal" id="commands">
+      <h2>음식마다 다른 평가 항목</h2>
+      <div class="card table">
+        <dl><div><dt>🍽️ 일반</dt><dd>맵기, 진한맛, 단맛, 짠맛, 기름진, 본연의맛</dd></div><div><dt>🥩 스테이크</dt><dd>굽기, 육즙, 부드러움, 간, 육향, 마블링</dd></div><div><dt>🍣 초밥</dt><dd>샤리(밥), 네타(재료), 와사비, 밸런스, 쥐기, 온도</dd></div><div><dt>🍜 라멘</dt><dd>국물, 면발, 차슈, 토핑, 온도, 밸런스</dd></div><div><dt>🍕 피자</dt><dd>도우, 소스, 치즈, 굽기, 토핑, 밸런스</dd></div><div><dt>🍷 와인</dt><dd>바디, 타닌, 산도, 아로마, 피니시, 밸런스</dd></div><div><dt>☕ 커피</dt><dd>산미, 바디, 향미, 후미, 단맛, 밸런스</dd></div></dl>
+      </div>
+      <p class="muted">그 밖의 음식은 첫 줄의 일반 항목으로 평가합니다. 음식 분류는 직접 만들 수도 있습니다.</p>
+    </section>
+
+
+
+    <section class="reveal" id="faq">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq"><details><summary>식당은 어떻게 추가하나요?</summary><p>지도 위쪽 검색창에 식당 이름을 입력하고, 결과에서 “내 식당 목록에 추가”를 누르세요. 지도에 보이는 주변 장소를 눌러 바로 추가할 수도 있습니다. 검색에 나오지 않는 곳은 현재 위치나 지도에서 고른 자리에 직접 추가하면 됩니다.</p></details>
+<details><summary>가본 곳, 가볼 곳, 탑6는 무엇인가요?</summary><p>가본 곳: 이미 다녀온 식당입니다. 방문 기록을 남길 수 있습니다. 가볼 곳: 언젠가 가 보고 싶은 식당입니다. 다녀온 뒤 식당 상세 화면에서 가본 곳으로 바꿔 주세요. 탑6(나의 미슐랭): 가장 아끼는 식당 여섯 곳에 1위부터 6위까지 순위를 매깁니다. 가볼 곳은 탑6로 지정할 수 없습니다.</p></details>
+<details><summary>맛 평가는 꼭 해야 하나요?</summary><p>아니요, 선택 사항입니다. 평가해 두면 식당 화면의 총평 차트에 맛의 형태와 만족도가 쌓이고, 리이오미슐랭 점수에도 반영됩니다.</p></details>
+<details><summary>“오늘 방문은 어떠셨나요?” 알림은 언제 오나요?</summary><p>저장해 둔 식당 근처에 5분 넘게 머물다 떠나면 약 40분 뒤에 알림이 옵니다. 이 기능에는 위치 “항상 허용”과 알림 허용이 필요합니다. 알림을 받고 싶지 않으면 설정 &gt; 앱 &gt; 인생 맛집에서 알림을 끄거나 위치를 “앱을 사용하는 동안”으로 바꿔 주세요. 위치 확인은 기기 안에서만 이뤄지며, 이동 경로를 저장하거나 외부로 보내지 않습니다.</p></details>
+<details><summary>위치 권한을 허용하지 않으면 쓸 수 없나요?</summary><p>쓸 수 있습니다. 지도에서 직접 위치를 골라 식당을 추가하고 기록할 수 있습니다. 현재 위치 표시와 방문 후 알림만 쓸 수 없습니다.</p></details>
+<details><summary>장소 검색 결과가 나오지 않아요</summary><p>장소 검색에는 인터넷 연결이 필요합니다. 다른 이름이나 짧은 키워드로 다시 검색해 보세요. 그래도 없으면 지도에서 자리를 골라 직접 추가할 수 있습니다.</p></details>
+<details><summary>기록은 어디에 저장되나요? 다른 기기와 동기화되나요?</summary><p>식당, 방문 기록, 사진은 모두 이 iPhone에만 저장됩니다. 현재 버전은 다른 기기와의 동기화를 지원하지 않으며, 설정의 iCloud 백업·복구도 아직 동작하지 않습니다. iPhone 전체 백업(iCloud 백업 또는 컴퓨터 백업)에는 앱 데이터가 함께 포함됩니다.</p></details>
+<details><summary>기록을 모두 지우고 싶어요</summary><p>지도 화면의 설정에서 “모든 데이터 삭제”를 누르면 식당과 방문 기록이 지워집니다. 되돌릴 수 없으니 주의해 주세요. 사진까지 남김없이 지우려면 앱을 삭제하면 됩니다.</p></details>
+<details><summary>앱을 지웠다 다시 깔면 기록이 남아 있나요?</summary><p>아니요. 기록이 기기에만 저장되기 때문에 앱을 삭제하면 함께 지워집니다. 앱을 삭제하기 전에 꼭 확인해 주세요.</p></details>
+<details><summary>정말 모두 무료인가요?</summary><p>네, 모든 기능이 무료입니다. 광고도 회원가입도 없습니다. 설정의 개발자 응원하기는 원할 때만 하는 선택이고, 해도 기능은 같습니다.</p></details></div>
+      <p class="contact">위에 답이 없는 문제는 앱의 설정 &gt; 지원에서 바로 보내 주시거나 <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a>으로 메일을 보내 주세요. 앱 버전, iPhone 모델, 어떤 화면에서 무엇을 했는지 적어 주시면 더 빨리 확인할 수 있습니다.</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>다음 맛집은<br>내 기록에서 고르세요</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6755934548">App Store에서 무료로 받기</a>
+    </section>
   </main>
 
-  <footer class="site">
-    © 2026 Leeo · <a href="support.html">지원</a> · <a href="privacy.html">개인정보 처리방침</a>
+  <footer>
+    <nav id="languages" class="langs" aria-label="언어"><a href="" hreflang="ko" lang="ko" aria-current="page">한국어</a>
+<a href="en/" hreflang="en" lang="en">English</a>
+<a href="ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="es/" hreflang="es" lang="es">Español</a>
+<a href="de/" hreflang="de" lang="de">Deutsch</a>
+<a href="fr/" hreflang="fr" lang="fr">Français</a>
+<a href="it/" hreflang="it" lang="it">Italiano</a>
+<a href="pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="th/" hreflang="th" lang="th">ไทย</a>
+<a href="vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="da/" hreflang="da" lang="da">Dansk</a>
+<a href="el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="tr/" hreflang="tr" lang="tr">Türkçe</a></nav>
+    <p><a href="privacy.html">개인정보 처리방침</a> · <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a> · © 2026 Leeo</p>
   </footer>
-</div>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="demo.js"></script>
 </body>
 </html>

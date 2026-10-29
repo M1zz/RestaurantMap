@@ -1,0 +1,403 @@
+{
+  "title": "Insaeng: je beste maaltijden op één kaart",
+  "description": "Verzamel restaurants waar je was en die je wilt proberen op een kaart, en noteer gerecht, foto’s en smaak. Gratis en alleen op je iPhone.",
+  "hero": {
+    "headline": "Nooit meer vergeten\nwaar het zo lekker was",
+    "lead": "Zet de restaurants waar je was en die je wilt proberen op de kaart, en noteer bij elk bezoek wat je bestelde, foto’s en de smaak. Weet je niet waar je wilt eten? Je eigen notities hebben het antwoord.",
+    "cta": "Gratis downloaden in de App Store",
+    "note": "Alle functies zijn gratis. Geen registratie, alles blijft op je iPhone."
+  },
+  "demo": {
+    "title": "Beoordeel een gerecht",
+    "lead": "Kies een soort eten en stel in hoe sterk elke smaak was en hoe goed je hem vond. Dezelfde punten en dezelfde berekening als een bezoek in de app.",
+    "note": "Net als in de app telt de score voor de helft de sterren en voor de helft de tevredenheid. Hier wordt niets bewaard.",
+    "types": [
+      {
+        "emoji": "🍽️",
+        "name": "Algemeen",
+        "attrs": [
+          [
+            "🌶️",
+            "Pittigheid",
+            "Mild ↔ Pittig"
+          ],
+          [
+            "💪",
+            "Intensiteit",
+            "Mild ↔ Krachtig"
+          ],
+          [
+            "🍯",
+            "Zoetheid",
+            "Niet lekker ↔ Lekker"
+          ],
+          [
+            "🧂",
+            "Zoutheid",
+            "Flauw ↔ Zout"
+          ],
+          [
+            "🥓",
+            "Vettigheid",
+            "Licht ↔ Vol"
+          ],
+          [
+            "🌿",
+            "Eigen smaak",
+            "Gekruid ↔ Puur"
+          ]
+        ]
+      },
+      {
+        "emoji": "🥩",
+        "name": "Steak",
+        "attrs": [
+          [
+            "🔥",
+            "Garing",
+            "Rood ↔ Doorbakken"
+          ],
+          [
+            "🥩",
+            "Sappigheid",
+            "Droog ↔ Sappig"
+          ],
+          [
+            "✨",
+            "Malsheid",
+            "Taai ↔ Mals"
+          ],
+          [
+            "🧂",
+            "Kruiding",
+            "Flauw ↔ Zout"
+          ],
+          [
+            "🌿",
+            "Vleesaroma",
+            "Zwak ↔ Sterk"
+          ],
+          [
+            "🍖",
+            "Marmering",
+            "Weinig ↔ Veel"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍣",
+        "name": "Sushi",
+        "attrs": [
+          [
+            "🍚",
+            "Shari (rijst)",
+            "Papperig ↔ Stevig"
+          ],
+          [
+            "🐟",
+            "Neta (vis)",
+            "Versheid"
+          ],
+          [
+            "🌿",
+            "Wasabi",
+            "Zwak ↔ Sterk"
+          ],
+          [
+            "⚖️",
+            "Balans",
+            "Onevenwichtig ↔ Harmonieus"
+          ],
+          [
+            "✋",
+            "Vorm",
+            "Los ↔ Stevig"
+          ],
+          [
+            "🌡️",
+            "Temperatuur",
+            "Koud ↔ Warm"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍜",
+        "name": "Ramen",
+        "attrs": [
+          [
+            "🥣",
+            "Bouillon",
+            "Diepte/umami"
+          ],
+          [
+            "🍜",
+            "Noedels",
+            "Zacht ↔ Stevig"
+          ],
+          [
+            "🥓",
+            "Chashu",
+            "Droog ↔ Mals"
+          ],
+          [
+            "🥚",
+            "Toppings",
+            "Karig ↔ Royaal"
+          ],
+          [
+            "🔥",
+            "Temperatuur",
+            "Lauw ↔ Heet"
+          ],
+          [
+            "⚖️",
+            "Balans",
+            "Onevenwichtig ↔ Harmonieus"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍕",
+        "name": "Pizza",
+        "attrs": [
+          [
+            "🫓",
+            "Deeg",
+            "Taai ↔ Luchtig"
+          ],
+          [
+            "🍅",
+            "Saus",
+            "Weinig ↔ Veel"
+          ],
+          [
+            "🧀",
+            "Kaas",
+            "Weinig ↔ Veel"
+          ],
+          [
+            "🔥",
+            "Garing",
+            "Te zacht ↔ Krokant"
+          ],
+          [
+            "🌟",
+            "Toppings",
+            "Karig ↔ Royaal"
+          ],
+          [
+            "⚖️",
+            "Balans",
+            "Onevenwichtig ↔ Harmonieus"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍷",
+        "name": "Wijn",
+        "attrs": [
+          [
+            "💪",
+            "Body",
+            "Licht ↔ Vol"
+          ],
+          [
+            "🍇",
+            "Tannine",
+            "Zacht ↔ Stroef"
+          ],
+          [
+            "🍋",
+            "Zuurgraad",
+            "Laag ↔ Hoog"
+          ],
+          [
+            "🌸",
+            "Aroma",
+            "Eenvoudig ↔ Complex"
+          ],
+          [
+            "✨",
+            "Afdronk",
+            "Kort ↔ Lang"
+          ],
+          [
+            "⚖️",
+            "Balans",
+            "Onevenwichtig ↔ Harmonieus"
+          ]
+        ]
+      },
+      {
+        "emoji": "☕",
+        "name": "Koffie",
+        "attrs": [
+          [
+            "🍋",
+            "Zuurgraad",
+            "Laag ↔ Levendig"
+          ],
+          [
+            "💪",
+            "Body",
+            "Licht ↔ Vol"
+          ],
+          [
+            "🌸",
+            "Smaak",
+            "Eenvoudig ↔ Complex"
+          ],
+          [
+            "✨",
+            "Nasmaak",
+            "Kort ↔ Lang"
+          ],
+          [
+            "🍯",
+            "Zoetheid",
+            "Bitter ↔ Zoet"
+          ],
+          [
+            "⚖️",
+            "Balans",
+            "Onevenwichtig ↔ Harmonieus"
+          ]
+        ]
+      }
+    ],
+    "rating": "Beoordeling",
+    "intensity": "Smaakintensiteit",
+    "sat": "Tevredenheid",
+    "low": "Ontevreden",
+    "high": "Zeer tevreden",
+    "shape": "Smaakprofiel",
+    "score": "Riio Michelin-score"
+  },
+  "problem": {
+    "title": "Het was heerlijk, maar wat had ik nou besteld?",
+    "text": "Je weet nog dat het restaurant geweldig was, maar de naam is vaag, en wat je bestelde of de bouillon te zout was, weet je al helemaal niet meer. Dus zoek je opnieuw en lees je reviews van vreemden. Insaeng bewaart wat je zelf hebt geproefd op een kaart, zodat je volgende keuze op je eigen ervaring rust."
+  },
+  "features": [
+    {
+      "title": "Bezocht, Wil ik proeven en je eigen Michelin",
+      "text": "Zoek op de kaart of tik op een plek in de buurt en hij is meteen bewaard. Houd plekken waar je was apart van die je wilt proberen, en rangschik je zes favorieten van 1 tot 6.\nVraagt iemand om een tip, laat dan gewoon de lijst zien.",
+      "shot": "02-list"
+    },
+    {
+      "title": "Vragen die bij het gerecht passen",
+      "text": "Hoe sterk een smaak was, zoals pittig of zout, stel je in met een schuifregelaar, en hoe goed je het vond beoordeel je apart van 1 tot 5. Bij steak gaat het om garing en sappigheid, bij sushi om rijst en vis, bij ramen om bouillon en noedels.\nElk bezoek bewaart ook gerecht, foto’s, sterren en notities.",
+      "shot": "04-taste-review"
+    },
+    {
+      "title": "Waar je terug wilt, zie je in cijfers",
+      "text": "Na meerdere bezoeken toont elk restaurant een eindoordeel met het gemiddelde van alle bezoeken en een Riio Michelin-score op 100 die sterren en tevredenheid combineert.\nVerlaat je een bewaard restaurant, dan krijg je even later een herinnering om je bezoek te noteren.",
+      "shot": "03-detail"
+    }
+  ],
+  "steps": {
+    "title": "In drie stappen aan de slag",
+    "items": [
+      {
+        "title": "Bewaar een restaurant",
+        "text": "Zoek op de kaart of tik op een plek in de buurt."
+      },
+      {
+        "title": "Noteer je bezoek",
+        "text": "Gerecht, foto’s, sterren en smaak. De smaakbeoordeling is optioneel."
+      },
+      {
+        "title": "Kies het volgende",
+        "text": "Bekijk je top 6 en scores en navigeer met Apple Kaarten, Kakao Map of Naver Map."
+      }
+    ]
+  },
+  "reference": {
+    "title": "Wat je per soort eten beoordeelt",
+    "rows": [
+      [
+        "🍽️ Algemeen",
+        "Pittigheid, Intensiteit, Zoetheid, Zoutheid, Vettigheid, Eigen smaak"
+      ],
+      [
+        "🥩 Steak",
+        "Garing, Sappigheid, Malsheid, Kruiding, Vleesaroma, Marmering"
+      ],
+      [
+        "🍣 Sushi",
+        "Shari (rijst), Neta (vis), Wasabi, Balans, Vorm, Temperatuur"
+      ],
+      [
+        "🍜 Ramen",
+        "Bouillon, Noedels, Chashu, Toppings, Temperatuur, Balans"
+      ],
+      [
+        "🍕 Pizza",
+        "Deeg, Saus, Kaas, Garing, Toppings, Balans"
+      ],
+      [
+        "🍷 Wijn",
+        "Body, Tannine, Zuurgraad, Aroma, Afdronk, Balans"
+      ],
+      [
+        "☕ Koffie",
+        "Zuurgraad, Body, Smaak, Nasmaak, Zoetheid, Balans"
+      ]
+    ],
+    "note": "Al het andere eten beoordeel je met de algemene punten uit de eerste rij. Je kunt ook eigen categorieën maken."
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "items": [
+      {
+        "q": "Hoe voeg ik een restaurant toe?",
+        "a": "Typ de naam van het restaurant in het zoekveld boven de kaart en tik in de resultaten op ‘Toevoegen aan mijn restaurants’. Je kunt ook op een plek in de buurt tikken die op de kaart staat om die direct toe te voegen. Vind je een restaurant niet via zoeken, voeg het dan zelf toe op je huidige locatie of op een plek die je op de kaart kiest."
+      },
+      {
+        "q": "Wat betekenen Geweest, Nog proberen en Top 6?",
+        "a": "Geweest: restaurants waar je al bent geweest. Hier kun je je bezoeken vastleggen. Nog proberen: restaurants die je ooit nog wilt proberen. Ben je er geweest, zet het dan op het detailscherm van het restaurant over naar Geweest. Top 6 (jouw Michelin): rangschik je zes favoriete restaurants van 1 tot en met 6. Restaurants onder Nog proberen kunnen niet in je top 6."
+      },
+      {
+        "q": "Moet ik een smaakbeoordeling invullen?",
+        "a": "Nee, dat is optioneel. Als je beoordeelt, tellen smaakintensiteit en tevredenheid mee in het eindoordeel van het restaurant en in de Riio Michelin-score."
+      },
+      {
+        "q": "Wanneer krijg ik de melding ‘Hoe was je bezoek vandaag?’",
+        "a": "Als je langer dan 5 minuten bij een bewaard restaurant bent geweest en weer vertrekt, krijg je ongeveer 40 minuten later een melding. Hiervoor moet je locatietoegang op ‘Altijd’ zetten en meldingen toestaan. Wil je deze meldingen niet, zet dan in Instellingen > Apps > Insaeng de meldingen uit of zet locatietoegang op ‘Bij gebruik van app’. Je locatie wordt alleen op je toestel gecontroleerd. Je route wordt niet bewaard en nergens naartoe gestuurd."
+      },
+      {
+        "q": "Werkt de app ook zonder locatietoegang?",
+        "a": "Jazeker. Je kunt zelf een plek op de kaart kiezen om een restaurant toe te voegen en je bezoeken vast te leggen. Alleen je huidige locatie tonen en de herinnering na een bezoek werken dan niet."
+      },
+      {
+        "q": "Ik krijg geen zoekresultaten",
+        "a": "Voor het zoeken naar plekken heb je een internetverbinding nodig. Probeer het opnieuw met een andere naam of een korter zoekwoord. Lukt het nog steeds niet, kies dan een plek op de kaart en voeg het restaurant zelf toe."
+      },
+      {
+        "q": "Waar worden mijn gegevens bewaard? Worden ze gesynchroniseerd met andere apparaten?",
+        "a": "Je restaurants, bezoeken en foto's worden alleen op deze iPhone bewaard. De huidige versie synchroniseert niet met andere apparaten, en de iCloud-back-up en -herstelfunctie in de instellingen werkt nog niet. Een volledige back-up van je iPhone (via iCloud of via je computer) bevat de appgegevens wel."
+      },
+      {
+        "q": "Ik wil al mijn gegevens wissen",
+        "a": "Tik in de instellingen op het kaartscherm op ‘Alle gegevens wissen’ om je restaurants en bezoeken te verwijderen. Dit kun je niet ongedaan maken, dus let goed op. Wil je ook alle foto's volledig wissen, verwijder dan de app."
+      },
+      {
+        "q": "Blijven mijn gegevens bewaard als ik de app verwijder en opnieuw installeer?",
+        "a": "Nee. Je gegevens staan alleen op je toestel, dus als je de app verwijdert, worden ze ook gewist. Denk hier goed over na voordat je de app verwijdert."
+      },
+      {
+        "q": "Is echt alles gratis?",
+        "a": "Ja. Alle functies zijn gratis, zonder advertenties en zonder account. ‘Steun de ontwikkelaar’ in de instellingen is helemaal vrijwillig en ontgrendelt niets."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Kies je volgende restaurant\nuit je eigen notities",
+    "cta": "Gratis downloaden in de App Store"
+  },
+  "ui": {
+    "skip": "Naar de inhoud",
+    "languages": "Taal",
+    "privacy": "Privacybeleid",
+    "contact": "Staat je vraag er niet tussen? Stuur hem dan rechtstreeks via Instellingen > Ondersteuning in de app, of mail naar {email}. Vermeld je appversie, je iPhone-model en wat je op welk scherm deed, dan kunnen we sneller helpen."
+  }
+}

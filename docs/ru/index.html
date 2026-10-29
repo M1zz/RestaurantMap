@@ -1,145 +1,176 @@
 <!doctype html>
 <html lang="ru">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="color-scheme" content="light dark">
-<title>Insaeng: карта ресторанов — отмечайте любимые места на карте</title>
-<meta name="description" content="Приложение для iPhone, которое собирает на карте рестораны, где вы уже побывали, и те, куда хотите сходить. После каждого визита можно сохранить блюда, фото, оценку в звёздах и впечатления о вкусе. Чем больше записей, тем точнее ваш профиль вкуса и личный топ-6.">
-<link rel="canonical" href="https://m1zz.github.io/RestaurantMap/ru/">
-<link rel="alternate" hreflang="ko" href="https://m1zz.github.io/RestaurantMap/">
-<link rel="alternate" hreflang="en" href="https://m1zz.github.io/RestaurantMap/en/">
-<link rel="alternate" hreflang="ja" href="https://m1zz.github.io/RestaurantMap/ja/">
-<link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/RestaurantMap/zh-Hans/">
-<link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/RestaurantMap/zh-Hant/">
-<link rel="alternate" hreflang="ru" href="https://m1zz.github.io/RestaurantMap/ru/">
-<link rel="alternate" hreflang="es" href="https://m1zz.github.io/RestaurantMap/es/">
-<link rel="alternate" hreflang="de" href="https://m1zz.github.io/RestaurantMap/de/">
-<link rel="alternate" hreflang="fr" href="https://m1zz.github.io/RestaurantMap/fr/">
-<link rel="alternate" hreflang="it" href="https://m1zz.github.io/RestaurantMap/it/">
-<link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/RestaurantMap/pt-BR/">
-<link rel="alternate" hreflang="th" href="https://m1zz.github.io/RestaurantMap/th/">
-<link rel="alternate" hreflang="vi" href="https://m1zz.github.io/RestaurantMap/vi/">
-<link rel="alternate" hreflang="cs" href="https://m1zz.github.io/RestaurantMap/cs/">
-<link rel="alternate" hreflang="da" href="https://m1zz.github.io/RestaurantMap/da/">
-<link rel="alternate" hreflang="el" href="https://m1zz.github.io/RestaurantMap/el/">
-<link rel="alternate" hreflang="fi" href="https://m1zz.github.io/RestaurantMap/fi/">
-<link rel="alternate" hreflang="id" href="https://m1zz.github.io/RestaurantMap/id/">
-<link rel="alternate" hreflang="nb" href="https://m1zz.github.io/RestaurantMap/nb/">
-<link rel="alternate" hreflang="nl" href="https://m1zz.github.io/RestaurantMap/nl/">
-<link rel="alternate" hreflang="pl" href="https://m1zz.github.io/RestaurantMap/pl/">
-<link rel="alternate" hreflang="sv" href="https://m1zz.github.io/RestaurantMap/sv/">
-<link rel="alternate" hreflang="tr" href="https://m1zz.github.io/RestaurantMap/tr/">
-<link rel="alternate" hreflang="en-GB" href="https://m1zz.github.io/RestaurantMap/en/">
-<link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/RestaurantMap/">
-<link rel="stylesheet" href="../style.css">
-<link rel="icon" href="../icon.png">
-<link rel="apple-touch-icon" href="../icon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Insaeng: ваши любимые места на одной карте</title>
+  <meta name="description" content="Собирайте на карте рестораны, где были и куда хотите, и записывайте блюдо, фото и вкус после визита. Бесплатно, всё хранится на iPhone.">
+  <meta name="theme-color" content="#B8461F" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6755934548">
+  <link rel="canonical" href="https://m1zz.github.io/RestaurantMap/ru/">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/RestaurantMap/">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/RestaurantMap/en/">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/RestaurantMap/ja/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/RestaurantMap/zh-Hans/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/RestaurantMap/zh-Hant/">
+  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/RestaurantMap/ru/">
+  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/RestaurantMap/es/">
+  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/RestaurantMap/de/">
+  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/RestaurantMap/fr/">
+  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/RestaurantMap/it/">
+  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/RestaurantMap/pt-BR/">
+  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/RestaurantMap/th/">
+  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/RestaurantMap/vi/">
+  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/RestaurantMap/cs/">
+  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/RestaurantMap/da/">
+  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/RestaurantMap/el/">
+  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/RestaurantMap/fi/">
+  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/RestaurantMap/id/">
+  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/RestaurantMap/nb/">
+  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/RestaurantMap/nl/">
+  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/RestaurantMap/pl/">
+  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/RestaurantMap/sv/">
+  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/RestaurantMap/tr/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/RestaurantMap/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Insaeng: ваши любимые места на одной карте">
+  <meta property="og:description" content="Собирайте на карте рестораны, где были и куда хотите, и записывайте блюдо, фото и вкус после визита. Бесплатно, всё хранится на iPhone.">
+  <meta property="og:url" content="https://m1zz.github.io/RestaurantMap/ru/">
+  <meta property="og:image" content="https://m1zz.github.io/RestaurantMap/img/ru/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#B8461F}@media (prefers-color-scheme:dark){:root{--accent:#F08A62}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-<div class="container">
-
-  <header class="site">
-    <img src="../icon.png" alt="Значок приложения Insaeng">
-    <div>
-      <div class="title">Insaeng</div>
-      <div class="subtitle">Оценки и рейтинг любимых мест</div>
-    </div>
+  <a class="skip" href="#main">Перейти к содержимому</a>
+  <header class="bar">
+    <a class="brand" href="../ru/"><img src="../icon.png" alt="" width="32" height="32">Insaeng</a>
+    <a class="lang-link" href="#languages">Язык</a>
   </header>
 
-  <nav class="langs" aria-label="Язык">
-    <a href="../index.html" hreflang="ko" lang="ko">한국어</a>
-    <a href="../en/index.html" hreflang="en" lang="en">English</a>
-    <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a>
-    <a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
-    <a href="../zh-Hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
-    <a href="index.html" hreflang="ru" lang="ru" aria-current="true">Русский</a>
-    <a href="../es/index.html" hreflang="es" lang="es">Español</a>
-    <a href="../de/index.html" hreflang="de" lang="de">Deutsch</a>
-    <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a>
-    <a href="../it/index.html" hreflang="it" lang="it">Italiano</a>
-    <a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
-    <a href="../th/index.html" hreflang="th" lang="th">ไทย</a>
-    <a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a>
-    <a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a>
-    <a href="../da/index.html" hreflang="da" lang="da">Dansk</a>
-    <a href="../el/index.html" hreflang="el" lang="el">Ελληνικά</a>
-    <a href="../fi/index.html" hreflang="fi" lang="fi">Suomi</a>
-    <a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a>
-    <a href="../nb/index.html" hreflang="nb" lang="nb">Norsk bokmål</a>
-    <a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a>
-    <a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a>
-    <a href="../sv/index.html" hreflang="sv" lang="sv">Svenska</a>
-    <a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a>
-  </nav>
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>Больше не забывайте,<br>где было вкусно</h1>
+        <p class="lead">Отмечайте на карте рестораны, где уже были и куда хотите сходить, и после каждого визита записывайте, что заказали, фото и оценку вкуса. Когда не знаете, куда пойти, ответ уже в ваших записях.</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6755934548">Загрузить бесплатно в App Store</a><a class="try" href="#try">Оцените блюдо ↓</a></div>
+        <p class="muted small">Все функции бесплатны. Без регистрации, записи хранятся только на вашем iPhone.</p>
+      </div>
+      <div class="phone"><img src="../img/ru/01-map.jpg" alt="Больше не забывайте, где было вкусно" width="720" height="1564" decoding="async"></div>
+    </section>
 
-  <nav class="pages" aria-label="Страницы">
-    <a href="index.html" aria-current="page">Главная</a>
-    <a href="support.html">Поддержка</a>
-    <a href="privacy.html">Политика конфиденциальности</a>
-  </nav>
 
-  <main>
-    <h1>Больше никаких забытых ресторанов</h1>
-    <p class="lead">
-      Insaeng собирает на одной карте рестораны, где вы уже были, и те, куда давно хотите сходить.
-      После каждого визита отмечайте, что заказывали, добавляйте фото, ставьте звёзды и оценивайте вкус —
-      и с каждой записью ваша личная гастрономическая карта и ваши вкусы становятся всё нагляднее.
-    </p>
+    <section class="reveal" id="try">
+      <h2>Оцените блюдо</h2>
+      <p class="muted">Выберите вид блюда и отметьте насыщенность каждого вкуса и то, насколько он вам понравился. Те же пункты и тот же расчёт, что в приложении.</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;Оцените блюдо&quot;, &quot;lead&quot;: &quot;Выберите вид блюда и отметьте насыщенность каждого вкуса и то, насколько он вам понравился. Те же пункты и тот же расчёт, что в приложении.&quot;, &quot;note&quot;: &quot;Как и в приложении, оценка складывается наполовину из звёзд, наполовину из удовлетворённости. Здесь ничего не сохраняется.&quot;, &quot;types&quot;: [{&quot;emoji&quot;: &quot;🍽️&quot;, &quot;name&quot;: &quot;Общее&quot;, &quot;attrs&quot;: [[&quot;🌶️&quot;, &quot;Острота&quot;, &quot;Мягкий ↔ Острый&quot;], [&quot;💪&quot;, &quot;Насыщенность&quot;, &quot;Лёгкий ↔ Насыщенный&quot;], [&quot;🍯&quot;, &quot;Сладость&quot;, &quot;Не люблю ↔ Люблю&quot;], [&quot;🧂&quot;, &quot;Солёность&quot;, &quot;Пресно ↔ Солоно&quot;], [&quot;🥓&quot;, &quot;Жирность&quot;, &quot;Лёгкий ↔ Насыщенный&quot;], [&quot;🌿&quot;, &quot;Естественный вкус&quot;, &quot;Специи ↔ Продукт&quot;]]}, {&quot;emoji&quot;: &quot;🥩&quot;, &quot;name&quot;: &quot;Стейк&quot;, &quot;attrs&quot;: [[&quot;🔥&quot;, &quot;Прожарка&quot;, &quot;С кровью ↔ Прожаренный&quot;], [&quot;🥩&quot;, &quot;Сочность&quot;, &quot;Сухое ↔ Сочное&quot;], [&quot;✨&quot;, &quot;Нежность&quot;, &quot;Жёсткое ↔ Нежное&quot;], [&quot;🧂&quot;, &quot;Солёность&quot;, &quot;Пресно ↔ Солоно&quot;], [&quot;🌿&quot;, &quot;Мясной аромат&quot;, &quot;Слабый ↔ Сильный&quot;], [&quot;🍖&quot;, &quot;Мраморность&quot;, &quot;Мало ↔ Много&quot;]]}, {&quot;emoji&quot;: &quot;🍣&quot;, &quot;name&quot;: &quot;Суши&quot;, &quot;attrs&quot;: [[&quot;🍚&quot;, &quot;Шари (рис)&quot;, &quot;Рыхлый ↔ Плотный&quot;], [&quot;🐟&quot;, &quot;Нета (начинка)&quot;, &quot;Свежесть&quot;], [&quot;🌿&quot;, &quot;Васаби&quot;, &quot;Слабый ↔ Сильный&quot;], [&quot;⚖️&quot;, &quot;Баланс&quot;, &quot;Разлад ↔ Гармония&quot;], [&quot;✋&quot;, &quot;Формовка&quot;, &quot;Рассыпается ↔ Держит форму&quot;], [&quot;🌡️&quot;, &quot;Температура&quot;, &quot;Холодный ↔ Тёплый&quot;]]}, {&quot;emoji&quot;: &quot;🍜&quot;, &quot;name&quot;: &quot;Рамен&quot;, &quot;attrs&quot;: [[&quot;🥣&quot;, &quot;Бульон&quot;, &quot;Глубина/умами&quot;], [&quot;🍜&quot;, &quot;Лапша&quot;, &quot;Мягкая ↔ Упругая&quot;], [&quot;🥓&quot;, &quot;Чашу&quot;, &quot;Сухое ↔ Нежное&quot;], [&quot;🥚&quot;, &quot;Топпинги&quot;, &quot;Скудно ↔ Щедро&quot;], [&quot;🔥&quot;, &quot;Температура&quot;, &quot;Тёплый ↔ Горячий&quot;], [&quot;⚖️&quot;, &quot;Баланс&quot;, &quot;Разлад ↔ Гармония&quot;]]}, {&quot;emoji&quot;: &quot;🍕&quot;, &quot;name&quot;: &quot;Пицца&quot;, &quot;attrs&quot;: [[&quot;🫓&quot;, &quot;Тесто&quot;, &quot;Жёсткое ↔ Упругое&quot;], [&quot;🍅&quot;, &quot;Соус&quot;, &quot;Мало ↔ Много&quot;], [&quot;🧀&quot;, &quot;Сыр&quot;, &quot;Мало ↔ Много&quot;], [&quot;🔥&quot;, &quot;Прожарка&quot;, &quot;Недопечённое ↔ Хрустящее&quot;], [&quot;🌟&quot;, &quot;Топпинги&quot;, &quot;Скудно ↔ Щедро&quot;], [&quot;⚖️&quot;, &quot;Баланс&quot;, &quot;Разлад ↔ Гармония&quot;]]}, {&quot;emoji&quot;: &quot;🍷&quot;, &quot;name&quot;: &quot;Вино&quot;, &quot;attrs&quot;: [[&quot;💪&quot;, &quot;Тело&quot;, &quot;Лёгкое ↔ Плотное&quot;], [&quot;🍇&quot;, &quot;Танины&quot;, &quot;Мягкие ↔ Терпкие&quot;], [&quot;🍋&quot;, &quot;Кислотность&quot;, &quot;Низкая ↔ Высокая&quot;], [&quot;🌸&quot;, &quot;Аромат&quot;, &quot;Простой ↔ Сложный&quot;], [&quot;✨&quot;, &quot;Послевкусие&quot;, &quot;Короткое ↔ Долгое&quot;], [&quot;⚖️&quot;, &quot;Баланс&quot;, &quot;Разлад ↔ Гармония&quot;]]}, {&quot;emoji&quot;: &quot;☕&quot;, &quot;name&quot;: &quot;Кофе&quot;, &quot;attrs&quot;: [[&quot;🍋&quot;, &quot;Кислинка&quot;, &quot;Мягкая ↔ Яркая&quot;], [&quot;💪&quot;, &quot;Тело&quot;, &quot;Лёгкое ↔ Плотное&quot;], [&quot;🌸&quot;, &quot;Аромат&quot;, &quot;Простой ↔ Сложный&quot;], [&quot;✨&quot;, &quot;Послевкусие&quot;, &quot;Короткое ↔ Долгое&quot;], [&quot;🍯&quot;, &quot;Сладость&quot;, &quot;Горько ↔ Сладко&quot;], [&quot;⚖️&quot;, &quot;Баланс&quot;, &quot;Разлад ↔ Гармония&quot;]]}], &quot;rating&quot;: &quot;Оценка&quot;, &quot;intensity&quot;: &quot;Насыщенность вкуса&quot;, &quot;sat&quot;: &quot;Удовлетворённость&quot;, &quot;low&quot;: &quot;Не доволен&quot;, &quot;high&quot;: &quot;Очень доволен&quot;, &quot;shape&quot;: &quot;Профиль вкуса&quot;, &quot;score&quot;: &quot;Оценка Riio «Мишлен»&quot;}"></div>
+    </section>
 
-    <h2>Возможности</h2>
-    <div class="features">
-      <div class="card">
-        <h3>Нашли на карте — сохранили в одно касание</h3>
-        <p>Ищите ресторан на карте или коснитесь ближайшего заведения, чтобы сразу добавить его в свой список. Можно добавить место и вручную — по текущему местоположению или в любой точке карты.</p>
-      </div>
-      <div class="card">
-        <h3>«Были» и «Хочу пойти»</h3>
-        <p>Рестораны, где вы уже побывали, хранятся отдельно от тех, куда хочется когда-нибудь сходить. Побывали — просто перенесите место в «Были».</p>
-      </div>
-      <div class="card">
-        <h3>Дневник визитов</h3>
-        <p>Сохраняйте дату визита, заказанные блюда, фото, оценку в звёздах и заметки. Добавьте блюда ресторана один раз — и в следующий раз достаточно будет выбрать их из списка.</p>
-      </div>
-      <div class="card">
-        <h3>Подробная оценка вкуса</h3>
-        <p>Отдельно оценивайте, насколько выражен вкус — острота, солёность, сладость, — и насколько он вам понравился. Для стейка, суши и рамэна есть свои критерии: прожарка, рис, бульон.</p>
-      </div>
-      <div class="card">
-        <h3>Мой «Мишлен»: топ-6</h3>
-        <p>Расставьте по местам шесть самых любимых ресторанов и держите их в отдельном списке. Спросят, куда сходить, — сразу покажете.</p>
-      </div>
-      <div class="card">
-        <h3>Профиль вкуса</h3>
-        <p>На основе ваших оценок приложение наглядно показывает, какие вкусы и какие кухни вам нравятся больше всего.</p>
-      </div>
-      <div class="card">
-        <h3>Напоминание после визита</h3>
-        <p>Когда вы уходите из сохранённого ресторана, чуть позже придёт уведомление «Как вам сегодняшний визит?», чтобы вы не забыли сделать запись. Если не нужно, его можно отключить.</p>
-      </div>
-      <div class="card">
-        <h3>Маршрут и звонок</h3>
-        <p>Открывайте сохранённые рестораны в Apple Картах, KakaoMap или NAVER Map и звоните в одно касание по номеру телефона.</p>
-      </div>
-    </div>
+    <section class="problem reveal">
+      <h2>Там было вкусно, но что я заказывал?</h2>
+      <p>Вы точно помните, что ресторан понравился, но название уже стёрлось, а что вы заказывали и не был ли суп пересолен, не вспомнить совсем. И вы снова ищете и читаете чужие отзывы. Insaeng хранит на карте то, что вы попробовали сами, чтобы следующий выбор опирался на ваш опыт.</p>
+    </section>
 
-    <h2>Записи остаются на вашем iPhone</h2>
-    <p>
-      Регистрация не нужна: список ресторанов, дневник визитов и фото хранятся только на вашем iPhone.
-      Подробнее — в <a href="privacy.html">политике конфиденциальности</a>.
-    </p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Были, хочу пойти и ваш «Мишлен»</h2>
+        <p>Найдите место на карте или коснитесь ближайшего заведения, и оно сразу сохранится. Держите отдельно места, где уже были, и те, куда хотите сходить, а шесть любимых расставьте по местам с 1 по 6.<br>Когда спросят, куда сходить, просто покажите этот список.</p>
+      </div>
+      <div class="phone"><img src="../img/ru/02-list.jpg" alt="Были, хочу пойти и ваш «Мишлен»" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <p><a href="https://apps.apple.com/app/id6755934548">Загрузить Insaeng в App Store</a></p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Вопросы под конкретное блюдо</h2>
+        <p>Насыщенность вкуса, например остроту или солёность, задаёте ползунком, а то, насколько понравилось, отдельно оцениваете от 1 до 5. Для стейка это прожарка и сочность, для суши рис и рыба, для рамена бульон и лапша.<br>В записи о визите также остаются блюдо, фото, звёзды и заметки.</p>
+      </div>
+      <div class="phone"><img src="../img/ru/04-taste-review.jpg" alt="Вопросы под конкретное блюдо" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <div class="contact">
-      Что-то неудобно или не хватает какой-то функции? Напишите нам на <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a>.
-      Ответы на частые вопросы — на странице <a href="support.html">поддержки</a>.
-    </div>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Куда стоит вернуться, видно по цифрам</h2>
+        <p>Когда визитов становится больше, на странице ресторана появляется итоговая диаграмма по всем посещениям и оценка Riio «Мишлен» из 100, которая учитывает звёзды и удовлетворённость.<br>Когда вы уходите из сохранённого ресторана, чуть позже приходит напоминание записать визит.</p>
+      </div>
+      <div class="phone"><img src="../img/ru/03-detail.jpg" alt="Куда стоит вернуться, видно по цифрам" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="reveal">
+      <h2>Три шага, чтобы начать</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>Сохраните ресторан</h3><p>Найдите его на карте или коснитесь ближайшего места.</p></li>
+<li class="card"><span class="n">2</span><h3>Запишите визит</h3><p>Блюдо, фото, звёзды и оценка вкуса. Оценка вкуса по желанию.</p></li>
+<li class="card"><span class="n">3</span><h3>Выберите, куда дальше</h3><p>Посмотрите топ‑6 и оценки и проложите маршрут в Apple Картах, Kakao Map или Naver Map.</p></li></ol>
+    </section>
+
+    <section class="reveal" id="commands">
+      <h2>Что оценивается для разных блюд</h2>
+      <div class="card table">
+        <dl><div><dt>🍽️ Общее</dt><dd>Острота, Насыщенность, Сладость, Солёность, Жирность, Естественный вкус</dd></div><div><dt>🥩 Стейк</dt><dd>Прожарка, Сочность, Нежность, Солёность, Мясной аромат, Мраморность</dd></div><div><dt>🍣 Суши</dt><dd>Шари (рис), Нета (начинка), Васаби, Баланс, Формовка, Температура</dd></div><div><dt>🍜 Рамен</dt><dd>Бульон, Лапша, Чашу, Топпинги, Температура, Баланс</dd></div><div><dt>🍕 Пицца</dt><dd>Тесто, Соус, Сыр, Прожарка, Топпинги, Баланс</dd></div><div><dt>🍷 Вино</dt><dd>Тело, Танины, Кислотность, Аромат, Послевкусие, Баланс</dd></div><div><dt>☕ Кофе</dt><dd>Кислинка, Тело, Аромат, Послевкусие, Сладость, Баланс</dd></div></dl>
+      </div>
+      <p class="muted">Остальные блюда оцениваются по общему набору из первой строки. Можно создавать и свои категории.</p>
+    </section>
+
+
+
+    <section class="reveal" id="faq">
+      <h2>Частые вопросы</h2>
+      <div class="faq"><details><summary>Как добавить ресторан?</summary><p>Введите название ресторана в строку поиска вверху карты и в результатах коснитесь «Добавить в мои рестораны». Можно также коснуться ближайшего заведения на карте и сразу его добавить. Если места нет в поиске, добавьте его вручную: по текущему местоположению или в выбранной точке карты.</p></details>
+<details><summary>Что такое «Были», «Хочу пойти» и топ-6?</summary><p>Были: рестораны, где вы уже побывали. Для них можно вести дневник визитов. Хочу пойти: рестораны, куда хочется когда-нибудь сходить. Побывав там, переключите ресторан в «Были» на его странице. Топ-6 (Мой «Мишлен»): шесть самых любимых ресторанов с местами от 1-го до 6-го. Ресторан из списка «Хочу пойти» нельзя добавить в топ-6.</p></details>
+<details><summary>Обязательно ли оценивать вкус?</summary><p>Нет, это по желанию. Оценка добавляет насыщенность вкуса и удовлетворённость в итоговую диаграмму ресторана и учитывается в оценке Riio «Мишлен».</p></details>
+<details><summary>Когда приходит уведомление «Как вам сегодняшний визит?»</summary><p>Если вы пробыли рядом с сохранённым рестораном больше 5 минут, а затем ушли, уведомление придёт примерно через 40 минут. Для этого нужен доступ к геопозиции в режиме «Всегда» и разрешение на уведомления. Если уведомления не нужны, откройте «Настройки» &gt; «Приложения» &gt; Insaeng и отключите уведомления или переключите геопозицию на «При использовании приложения». Местоположение проверяется только на устройстве. Ваши перемещения не сохраняются и никуда не передаются.</p></details>
+<details><summary>Можно ли пользоваться приложением без доступа к геопозиции?</summary><p>Да. Вы можете сами выбирать точку на карте, чтобы добавлять рестораны и вести записи. Недоступны будут только отображение текущего местоположения и напоминания после визита.</p></details>
+<details><summary>Поиск мест ничего не находит</summary><p>Для поиска мест нужно подключение к интернету. Попробуйте другое название или более короткий запрос. Если места всё равно нет, выберите точку на карте и добавьте его вручную.</p></details>
+<details><summary>Где хранятся записи? Синхронизируются ли они с другими устройствами?</summary><p>Рестораны, дневник визитов и фото хранятся только на этом iPhone. Текущая версия не поддерживает синхронизацию с другими устройствами, а резервное копирование и восстановление через iCloud в настройках пока не работает. При этом полная резервная копия iPhone (в iCloud или на компьютере) включает данные приложения.</p></details>
+<details><summary>Хочу удалить все записи</summary><p>Откройте настройки на экране карты и коснитесь «Удалить все данные»: рестораны и дневник визитов будут удалены. Это действие нельзя отменить, поэтому будьте внимательны. Чтобы бесследно удалить и фото, удалите приложение.</p></details>
+<details><summary>Сохранятся ли записи, если удалить и заново установить приложение?</summary><p>Нет. Записи хранятся только на устройстве, поэтому удаляются вместе с приложением. Обязательно учтите это перед удалением.</p></details>
+<details><summary>Это правда всё бесплатно?</summary><p>Да, все функции бесплатны, без рекламы и регистрации. «Поддержать разработчика» в настройках — только по желанию и ничего дополнительно не открывает.</p></details></div>
+      <p class="contact">Если здесь нет ответа на ваш вопрос, отправьте его прямо из приложения через «Настройки» &gt; «Поддержка» или напишите на <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a>. Укажите версию приложения, модель iPhone, а также на каком экране и что вы делали — так мы разберёмся быстрее.</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>Следующий ресторан<br>выбирайте по своим записям</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6755934548">Загрузить бесплатно в App Store</a>
+    </section>
   </main>
 
-  <footer class="site">
-    © 2026 Leeo · <a href="support.html">Поддержка</a> · <a href="privacy.html">Политика конфиденциальности</a>
+  <footer>
+    <nav id="languages" class="langs" aria-label="Язык"><a href="../" hreflang="ko" lang="ko">한국어</a>
+<a href="../en/" hreflang="en" lang="en">English</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../ru/" hreflang="ru" lang="ru" aria-current="page">Русский</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a></nav>
+    <p><a href="privacy.html">Политика конфиденциальности</a> · <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a> · © 2026 Leeo</p>
   </footer>
-</div>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

@@ -1,0 +1,403 @@
+{
+  "title": "Insaeng: lưu những quán bạn đã ăn lên bản đồ",
+  "description": "Gom quán đã đến và muốn đến lên bản đồ, mỗi lần ghé ghi món, ảnh và hương vị. Miễn phí, dữ liệu chỉ nằm trên iPhone của bạn.",
+  "hero": {
+    "headline": "Quán ngon đã ghé,\nkhông còn quên nữa",
+    "lead": "Ghim lên bản đồ những quán đã đến và những quán muốn thử, mỗi lần ghé lại ghi món đã gọi, ảnh và hương vị. Khi phân vân không biết ăn ở đâu, chính ghi chép của bạn sẽ trả lời.",
+    "cta": "Tải miễn phí trên App Store",
+    "note": "Mọi tính năng đều miễn phí. Không cần đăng ký, dữ liệu chỉ nằm trên iPhone của bạn."
+  },
+  "demo": {
+    "title": "Thử chấm điểm một món",
+    "lead": "Chọn loại món, rồi chấm độ đậm của từng vị và mức bạn thích nó. Cùng tiêu chí và cùng cách tính như một lượt ghé trong ứng dụng.",
+    "note": "Giống trong ứng dụng, điểm gồm một nửa số sao, một nửa mức hài lòng. Ở đây không lưu gì cả.",
+    "types": [
+      {
+        "emoji": "🍽️",
+        "name": "Chung",
+        "attrs": [
+          [
+            "🌶️",
+            "Độ cay",
+            "Không cay ↔ Cay"
+          ],
+          [
+            "💪",
+            "Độ đậm",
+            "Thanh ↔ Đậm đà"
+          ],
+          [
+            "🍯",
+            "Độ ngọt",
+            "Không thích ↔ Thích"
+          ],
+          [
+            "🧂",
+            "Độ mặn",
+            "Nhạt ↔ Mặn"
+          ],
+          [
+            "🥓",
+            "Độ béo",
+            "Thanh ↔ Béo ngậy"
+          ],
+          [
+            "🌿",
+            "Vị nguyên bản",
+            "Tẩm ướp ↔ Nguyên vị"
+          ]
+        ]
+      },
+      {
+        "emoji": "🥩",
+        "name": "Bít tết",
+        "attrs": [
+          [
+            "🔥",
+            "Độ chín",
+            "Tái ↔ Chín kỹ"
+          ],
+          [
+            "🥩",
+            "Độ mọng nước",
+            "Khô ↔ Mọng nước"
+          ],
+          [
+            "✨",
+            "Độ mềm",
+            "Dai ↔ Mềm"
+          ],
+          [
+            "🧂",
+            "Độ nêm",
+            "Nhạt ↔ Mặn"
+          ],
+          [
+            "🌿",
+            "Mùi thịt",
+            "Nhẹ ↔ Mạnh"
+          ],
+          [
+            "🍖",
+            "Vân mỡ",
+            "Ít ↔ Nhiều"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍣",
+        "name": "Sushi",
+        "attrs": [
+          [
+            "🍚",
+            "Shari (cơm)",
+            "Nhão ↔ Chắc"
+          ],
+          [
+            "🐟",
+            "Neta (phần cá)",
+            "Độ tươi"
+          ],
+          [
+            "🌿",
+            "Wasabi",
+            "Nhẹ ↔ Mạnh"
+          ],
+          [
+            "⚖️",
+            "Cân bằng",
+            "Lệch ↔ Hài hòa"
+          ],
+          [
+            "✋",
+            "Độ nắm",
+            "Rời ↔ Chặt"
+          ],
+          [
+            "🌡️",
+            "Nhiệt độ",
+            "Lạnh ↔ Ấm"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍜",
+        "name": "Ramen",
+        "attrs": [
+          [
+            "🥣",
+            "Nước dùng",
+            "Độ sâu/vị umami"
+          ],
+          [
+            "🍜",
+            "Sợi mì",
+            "Mềm ↔ Dai"
+          ],
+          [
+            "🥓",
+            "Chashu",
+            "Khô ↔ Mềm"
+          ],
+          [
+            "🥚",
+            "Topping",
+            "Ít ↔ Đầy đặn"
+          ],
+          [
+            "🔥",
+            "Nhiệt độ",
+            "Âm ấm ↔ Nóng"
+          ],
+          [
+            "⚖️",
+            "Cân bằng",
+            "Lệch ↔ Hài hòa"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍕",
+        "name": "Pizza",
+        "attrs": [
+          [
+            "🫓",
+            "Đế bánh",
+            "Cứng ↔ Dai mềm"
+          ],
+          [
+            "🍅",
+            "Sốt",
+            "Ít ↔ Nhiều"
+          ],
+          [
+            "🧀",
+            "Phô mai",
+            "Ít ↔ Nhiều"
+          ],
+          [
+            "🔥",
+            "Độ chín",
+            "Chưa chín ↔ Giòn"
+          ],
+          [
+            "🌟",
+            "Topping",
+            "Ít ↔ Đầy đặn"
+          ],
+          [
+            "⚖️",
+            "Cân bằng",
+            "Lệch ↔ Hài hòa"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍷",
+        "name": "Rượu vang",
+        "attrs": [
+          [
+            "💪",
+            "Độ đậm",
+            "Nhẹ ↔ Đậm"
+          ],
+          [
+            "🍇",
+            "Tannin",
+            "Nhẹ ↔ Chát"
+          ],
+          [
+            "🍋",
+            "Độ chua",
+            "Thấp ↔ Cao"
+          ],
+          [
+            "🌸",
+            "Hương thơm",
+            "Đơn giản ↔ Phức tạp"
+          ],
+          [
+            "✨",
+            "Hậu vị",
+            "Ngắn ↔ Đọng lâu"
+          ],
+          [
+            "⚖️",
+            "Cân bằng",
+            "Lệch ↔ Hài hòa"
+          ]
+        ]
+      },
+      {
+        "emoji": "☕",
+        "name": "Cà phê",
+        "attrs": [
+          [
+            "🍋",
+            "Độ chua",
+            "Thấp ↔ Tươi sáng"
+          ],
+          [
+            "💪",
+            "Độ đậm",
+            "Nhẹ ↔ Đậm"
+          ],
+          [
+            "🌸",
+            "Hương vị",
+            "Đơn giản ↔ Phức tạp"
+          ],
+          [
+            "✨",
+            "Hậu vị",
+            "Ngắn ↔ Đọng lâu"
+          ],
+          [
+            "🍯",
+            "Độ ngọt",
+            "Đắng ↔ Ngọt"
+          ],
+          [
+            "⚖️",
+            "Cân bằng",
+            "Lệch ↔ Hài hòa"
+          ]
+        ]
+      }
+    ],
+    "rating": "Điểm đánh giá",
+    "intensity": "Độ đậm vị",
+    "sat": "Mức hài lòng",
+    "low": "Không hài lòng",
+    "high": "Rất hài lòng",
+    "shape": "Hồ sơ hương vị",
+    "score": "Điểm Michelin Riio"
+  },
+  "problem": {
+    "title": "Quán đó ngon lắm, mà mình gọi món gì nhỉ?",
+    "text": "Bạn nhớ là rất thích quán đó, nhưng tên thì lờ mờ, còn đã gọi món gì hay nước dùng có mặn không thì chịu. Thế là lại tìm kiếm và đọc đánh giá của người lạ. Insaeng giữ trên bản đồ những gì chính bạn đã nếm, để lần chọn quán tiếp theo dựa vào trải nghiệm của bạn."
+  },
+  "features": [
+    {
+      "title": "Đã đến, Muốn đến và Michelin của riêng bạn",
+      "text": "Tìm trên bản đồ hoặc chạm vào một địa điểm gần đó là lưu ngay. Tách riêng quán đã đến với quán muốn thử, và xếp hạng sáu quán yêu thích nhất từ 1 đến 6.\nKhi ai đó hỏi quán ngon, chỉ cần mở danh sách này ra.",
+      "shot": "02-list"
+    },
+    {
+      "title": "Câu hỏi hợp với từng món",
+      "text": "Độ đậm của từng vị, như cay hay mặn, chỉnh bằng thanh trượt, còn mức bạn thích thì chấm riêng từ 1 đến 5. Bít tết hỏi độ chín và độ mọng nước, sushi hỏi cơm và phần cá, ramen hỏi nước dùng và sợi mì.\nMỗi lượt ghé còn lưu món, ảnh, số sao và ghi chú.",
+      "shot": "04-taste-review"
+    },
+    {
+      "title": "Quán đáng quay lại, nhìn số là biết",
+      "text": "Ghé nhiều lần, trang của quán sẽ hiện nhận xét chung tính trung bình mọi lần ghé, cùng Điểm Michelin Riio trên thang 100 kết hợp số sao và mức hài lòng.\nRời một quán đã lưu, ít phút sau sẽ có thông báo nhắc bạn ghi lại.",
+      "shot": "03-detail"
+    }
+  ],
+  "steps": {
+    "title": "Bắt đầu với ba bước",
+    "items": [
+      {
+        "title": "Lưu quán",
+        "text": "Tìm trên bản đồ hoặc chạm vào địa điểm gần đó."
+      },
+      {
+        "title": "Ghé xong thì ghi",
+        "text": "Món, ảnh, số sao và hương vị. Chấm hương vị là tùy chọn."
+      },
+      {
+        "title": "Chọn quán tiếp theo",
+        "text": "Xem Top 6 và điểm, rồi chỉ đường bằng Apple Maps, Kakao Map hoặc Naver Map."
+      }
+    ]
+  },
+  "reference": {
+    "title": "Tiêu chí chấm theo từng loại món",
+    "rows": [
+      [
+        "🍽️ Chung",
+        "Độ cay, Độ đậm, Độ ngọt, Độ mặn, Độ béo, Vị nguyên bản"
+      ],
+      [
+        "🥩 Bít tết",
+        "Độ chín, Độ mọng nước, Độ mềm, Độ nêm, Mùi thịt, Vân mỡ"
+      ],
+      [
+        "🍣 Sushi",
+        "Shari (cơm), Neta (phần cá), Wasabi, Cân bằng, Độ nắm, Nhiệt độ"
+      ],
+      [
+        "🍜 Ramen",
+        "Nước dùng, Sợi mì, Chashu, Topping, Nhiệt độ, Cân bằng"
+      ],
+      [
+        "🍕 Pizza",
+        "Đế bánh, Sốt, Phô mai, Độ chín, Topping, Cân bằng"
+      ],
+      [
+        "🍷 Rượu vang",
+        "Độ đậm, Tannin, Độ chua, Hương thơm, Hậu vị, Cân bằng"
+      ],
+      [
+        "☕ Cà phê",
+        "Độ chua, Độ đậm, Hương vị, Hậu vị, Độ ngọt, Cân bằng"
+      ]
+    ],
+    "note": "Các món khác được chấm theo tiêu chí chung ở dòng đầu tiên. Bạn cũng có thể tự tạo danh mục món."
+  },
+  "faq": {
+    "title": "Câu hỏi thường gặp",
+    "items": [
+      {
+        "q": "Thêm quán như thế nào?",
+        "a": "Nhập tên quán vào ô tìm kiếm phía trên bản đồ, rồi chạm “Thêm vào danh sách quán của tôi” trong kết quả. Bạn cũng có thể chạm vào một địa điểm gần đó hiện trên bản đồ để thêm ngay. Quán không có trong kết quả tìm kiếm thì bạn tự thêm tại vị trí hiện tại hoặc tại điểm chọn trên bản đồ."
+      },
+      {
+        "q": "“Đã đến”, “Muốn đến” và Top 6 là gì?",
+        "a": "Đã đến – Những quán bạn đã ghé. Bạn có thể ghi nhật ký ghé quán. Muốn đến – Những quán bạn muốn ghé một ngày nào đó. Sau khi đi, hãy chuyển sang “Đã đến” trong màn hình chi tiết của quán. Top 6 (Michelin của tôi) – Xếp hạng sáu quán bạn yêu thích nhất từ hạng 1 đến hạng 6. Quán trong danh sách “Muốn đến” không thể đặt vào Top 6."
+      },
+      {
+        "q": "Có bắt buộc phải đánh giá hương vị không?",
+        "a": "Không, đó là tùy chọn. Nếu chấm, độ đậm vị và mức hài lòng sẽ được cộng vào nhận xét chung của quán và tính vào Điểm Michelin Riio."
+      },
+      {
+        "q": "Khi nào thông báo “Hôm nay ghé quán thế nào?” xuất hiện?",
+        "a": "Nếu bạn ở gần một quán đã lưu hơn 5 phút rồi rời đi, khoảng 40 phút sau thông báo sẽ đến. Tính năng này cần cho phép vị trí “Luôn luôn” và cho phép thông báo. Nếu không muốn nhận thông báo, hãy tắt thông báo trong Cài đặt > Ứng dụng > Insaeng hoặc đổi vị trí sang “Khi dùng ứng dụng”. Việc kiểm tra vị trí chỉ diễn ra trên thiết bị; ứng dụng không lưu lộ trình di chuyển và không gửi ra ngoài."
+      },
+      {
+        "q": "Không cho phép vị trí thì có dùng được không?",
+        "a": "Vẫn dùng được. Bạn có thể tự chọn vị trí trên bản đồ để thêm quán và ghi lại. Chỉ có tính năng hiển thị vị trí hiện tại và nhắc ghi lại sau khi ghé là không dùng được."
+      },
+      {
+        "q": "Tìm địa điểm không ra kết quả",
+        "a": "Tìm kiếm địa điểm cần có kết nối Internet. Hãy thử lại với tên khác hoặc từ khóa ngắn hơn. Nếu vẫn không có, bạn có thể chọn một điểm trên bản đồ và tự thêm quán."
+      },
+      {
+        "q": "Dữ liệu được lưu ở đâu? Có đồng bộ với thiết bị khác không?",
+        "a": "Quán, nhật ký ghé quán và ảnh đều chỉ được lưu trên iPhone này. Phiên bản hiện tại chưa hỗ trợ đồng bộ với thiết bị khác, và tính năng sao lưu, khôi phục iCloud trong phần cài đặt cũng chưa hoạt động. Dữ liệu của ứng dụng vẫn nằm trong bản sao lưu toàn bộ iPhone (sao lưu iCloud hoặc sao lưu trên máy tính)."
+      },
+      {
+        "q": "Tôi muốn xóa toàn bộ dữ liệu",
+        "a": "Trong phần cài đặt ở màn hình bản đồ, chạm “Xóa toàn bộ dữ liệu” để xóa quán và nhật ký ghé quán. Thao tác này không thể hoàn tác, hãy cẩn thận. Muốn xóa sạch cả ảnh thì hãy xóa ứng dụng."
+      },
+      {
+        "q": "Xóa rồi cài lại ứng dụng thì dữ liệu còn không?",
+        "a": "Không. Vì dữ liệu chỉ được lưu trên thiết bị nên khi xóa ứng dụng, dữ liệu cũng bị xóa theo. Hãy kiểm tra kỹ trước khi xóa ứng dụng."
+      },
+      {
+        "q": "Có thật là miễn phí hết không?",
+        "a": "Có. Mọi tính năng đều miễn phí, không quảng cáo, không cần tài khoản. Mục “Ủng hộ nhà phát triển” trong cài đặt là hoàn toàn tùy ý và không mở khóa thêm gì."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Quán tiếp theo,\nchọn từ ghi chép của bạn",
+    "cta": "Tải miễn phí trên App Store"
+  },
+  "ui": {
+    "skip": "Chuyển đến nội dung",
+    "languages": "Ngôn ngữ",
+    "privacy": "Chính sách quyền riêng tư",
+    "contact": "Nếu vấn đề của bạn chưa có câu trả lời ở trên, hãy gửi ngay trong ứng dụng tại Cài đặt > Hỗ trợ hoặc gửi email đến {email}. Nếu bạn ghi rõ phiên bản ứng dụng, mẫu iPhone và bạn đã làm gì ở màn hình nào, chúng tôi sẽ kiểm tra nhanh hơn."
+  }
+}

@@ -1,145 +1,176 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="color-scheme" content="light dark">
-<title>Insaeng Matjip: Food Map — Rate, rank and map your meals</title>
-<meta name="description" content="An iPhone app that maps the restaurants you’ve been to and the ones you want to try, and lets you log the dishes, photos, star ratings and taste notes from every visit. As your log grows, it builds your taste profile and your own Top 6.">
-<link rel="canonical" href="https://m1zz.github.io/RestaurantMap/en/">
-<link rel="alternate" hreflang="ko" href="https://m1zz.github.io/RestaurantMap/">
-<link rel="alternate" hreflang="en" href="https://m1zz.github.io/RestaurantMap/en/">
-<link rel="alternate" hreflang="ja" href="https://m1zz.github.io/RestaurantMap/ja/">
-<link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/RestaurantMap/zh-Hans/">
-<link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/RestaurantMap/zh-Hant/">
-<link rel="alternate" hreflang="ru" href="https://m1zz.github.io/RestaurantMap/ru/">
-<link rel="alternate" hreflang="es" href="https://m1zz.github.io/RestaurantMap/es/">
-<link rel="alternate" hreflang="de" href="https://m1zz.github.io/RestaurantMap/de/">
-<link rel="alternate" hreflang="fr" href="https://m1zz.github.io/RestaurantMap/fr/">
-<link rel="alternate" hreflang="it" href="https://m1zz.github.io/RestaurantMap/it/">
-<link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/RestaurantMap/pt-BR/">
-<link rel="alternate" hreflang="th" href="https://m1zz.github.io/RestaurantMap/th/">
-<link rel="alternate" hreflang="vi" href="https://m1zz.github.io/RestaurantMap/vi/">
-<link rel="alternate" hreflang="cs" href="https://m1zz.github.io/RestaurantMap/cs/">
-<link rel="alternate" hreflang="da" href="https://m1zz.github.io/RestaurantMap/da/">
-<link rel="alternate" hreflang="el" href="https://m1zz.github.io/RestaurantMap/el/">
-<link rel="alternate" hreflang="fi" href="https://m1zz.github.io/RestaurantMap/fi/">
-<link rel="alternate" hreflang="id" href="https://m1zz.github.io/RestaurantMap/id/">
-<link rel="alternate" hreflang="nb" href="https://m1zz.github.io/RestaurantMap/nb/">
-<link rel="alternate" hreflang="nl" href="https://m1zz.github.io/RestaurantMap/nl/">
-<link rel="alternate" hreflang="pl" href="https://m1zz.github.io/RestaurantMap/pl/">
-<link rel="alternate" hreflang="sv" href="https://m1zz.github.io/RestaurantMap/sv/">
-<link rel="alternate" hreflang="tr" href="https://m1zz.github.io/RestaurantMap/tr/">
-<link rel="alternate" hreflang="en-GB" href="https://m1zz.github.io/RestaurantMap/en/">
-<link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/RestaurantMap/">
-<link rel="stylesheet" href="../style.css">
-<link rel="icon" href="../icon.png">
-<link rel="apple-touch-icon" href="../icon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Insaeng Matjip: log the places you’ve eaten on a map</title>
+  <meta name="description" content="Map the restaurants you’ve tried and want to try, and log the dish, photos and taste each visit. Free, and it all stays on your iPhone.">
+  <meta name="theme-color" content="#B8461F" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6755934548">
+  <link rel="canonical" href="https://m1zz.github.io/RestaurantMap/en/">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/RestaurantMap/">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/RestaurantMap/en/">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/RestaurantMap/ja/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/RestaurantMap/zh-Hans/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/RestaurantMap/zh-Hant/">
+  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/RestaurantMap/ru/">
+  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/RestaurantMap/es/">
+  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/RestaurantMap/de/">
+  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/RestaurantMap/fr/">
+  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/RestaurantMap/it/">
+  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/RestaurantMap/pt-BR/">
+  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/RestaurantMap/th/">
+  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/RestaurantMap/vi/">
+  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/RestaurantMap/cs/">
+  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/RestaurantMap/da/">
+  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/RestaurantMap/el/">
+  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/RestaurantMap/fi/">
+  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/RestaurantMap/id/">
+  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/RestaurantMap/nb/">
+  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/RestaurantMap/nl/">
+  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/RestaurantMap/pl/">
+  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/RestaurantMap/sv/">
+  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/RestaurantMap/tr/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/RestaurantMap/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Insaeng Matjip: log the places you’ve eaten on a map">
+  <meta property="og:description" content="Map the restaurants you’ve tried and want to try, and log the dish, photos and taste each visit. Free, and it all stays on your iPhone.">
+  <meta property="og:url" content="https://m1zz.github.io/RestaurantMap/en/">
+  <meta property="og:image" content="https://m1zz.github.io/RestaurantMap/img/en/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#B8461F}@media (prefers-color-scheme:dark){:root{--accent:#F08A62}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-<div class="container">
-
-  <header class="site">
-    <img src="../icon.png" alt="Insaeng Matjip app icon">
-    <div>
-      <div class="title">Insaeng Matjip</div>
-      <div class="subtitle">Rate, rank and map your meals</div>
-    </div>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="bar">
+    <a class="brand" href="../en/"><img src="../icon.png" alt="" width="32" height="32">Insaeng Matjip</a>
+    <a class="lang-link" href="#languages">Language</a>
   </header>
 
-  <nav class="langs" aria-label="Language">
-    <a href="../index.html" hreflang="ko" lang="ko">한국어</a>
-    <a href="index.html" hreflang="en" lang="en" aria-current="true">English</a>
-    <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a>
-    <a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
-    <a href="../zh-Hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
-    <a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a>
-    <a href="../es/index.html" hreflang="es" lang="es">Español</a>
-    <a href="../de/index.html" hreflang="de" lang="de">Deutsch</a>
-    <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a>
-    <a href="../it/index.html" hreflang="it" lang="it">Italiano</a>
-    <a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
-    <a href="../th/index.html" hreflang="th" lang="th">ไทย</a>
-    <a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a>
-    <a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a>
-    <a href="../da/index.html" hreflang="da" lang="da">Dansk</a>
-    <a href="../el/index.html" hreflang="el" lang="el">Ελληνικά</a>
-    <a href="../fi/index.html" hreflang="fi" lang="fi">Suomi</a>
-    <a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a>
-    <a href="../nb/index.html" hreflang="nb" lang="nb">Norsk bokmål</a>
-    <a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a>
-    <a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a>
-    <a href="../sv/index.html" hreflang="sv" lang="sv">Svenska</a>
-    <a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a>
-  </nav>
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>Never forget<br>a great meal again</h1>
+        <p class="lead">Pin the restaurants you’ve been to and the ones you want to try, and log what you ordered, photos and how it tasted every time. When you can’t decide where to eat, your own notes have the answer.</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6755934548">Get it free on the App Store</a><a class="try" href="#try">Rate a dish ↓</a></div>
+        <p class="muted small">Every feature is free. No sign-up, and your records stay on your iPhone.</p>
+      </div>
+      <div class="phone"><img src="../img/en/01-map.jpg" alt="Never forget a great meal again" width="720" height="1564" decoding="async"></div>
+    </section>
 
-  <nav class="pages" aria-label="Pages">
-    <a href="index.html" aria-current="page">Home</a>
-    <a href="support.html">Support</a>
-    <a href="privacy.html">Privacy Policy</a>
-  </nav>
 
-  <main>
-    <h1>Never forget a great meal again</h1>
-    <p class="lead">
-      Insaeng Matjip keeps the restaurants you’ve been to, and the ones you’re dying to try, together on one map.
-      Log the dishes, photos, star ratings and taste notes from every visit,
-      and the more you log, the clearer your own food map and your taste become.
-    </p>
+    <section class="reveal" id="try">
+      <h2>Rate a dish</h2>
+      <p class="muted">Pick a type of food, then set how strong each flavor was and how much you liked it. Same criteria and same math as a visit in the app.</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;Rate a dish&quot;, &quot;lead&quot;: &quot;Pick a type of food, then set how strong each flavor was and how much you liked it. Same criteria and same math as a visit in the app.&quot;, &quot;note&quot;: &quot;As in the app, the score is half star rating, half satisfaction. Nothing you do here is saved.&quot;, &quot;types&quot;: [{&quot;emoji&quot;: &quot;🍽️&quot;, &quot;name&quot;: &quot;General&quot;, &quot;attrs&quot;: [[&quot;🌶️&quot;, &quot;Spiciness&quot;, &quot;Mild ↔ Spicy&quot;], [&quot;💪&quot;, &quot;Boldness&quot;, &quot;Light ↔ Bold&quot;], [&quot;🍯&quot;, &quot;Sweetness&quot;, &quot;Dislike ↔ Like&quot;], [&quot;🧂&quot;, &quot;Saltiness&quot;, &quot;Bland ↔ Salty&quot;], [&quot;🥓&quot;, &quot;Richness&quot;, &quot;Light ↔ Rich&quot;], [&quot;🌿&quot;, &quot;Natural Flavor&quot;, &quot;Seasoned ↔ Natural&quot;]]}, {&quot;emoji&quot;: &quot;🥩&quot;, &quot;name&quot;: &quot;Steak&quot;, &quot;attrs&quot;: [[&quot;🔥&quot;, &quot;Doneness&quot;, &quot;Rare ↔ Well-done&quot;], [&quot;🥩&quot;, &quot;Juiciness&quot;, &quot;Dry ↔ Juicy&quot;], [&quot;✨&quot;, &quot;Tenderness&quot;, &quot;Tough ↔ Tender&quot;], [&quot;🧂&quot;, &quot;Seasoning&quot;, &quot;Bland ↔ Salty&quot;], [&quot;🌿&quot;, &quot;Meaty Aroma&quot;, &quot;Weak ↔ Strong&quot;], [&quot;🍖&quot;, &quot;Marbling&quot;, &quot;Light ↔ Heavy&quot;]]}, {&quot;emoji&quot;: &quot;🍣&quot;, &quot;name&quot;: &quot;Sushi&quot;, &quot;attrs&quot;: [[&quot;🍚&quot;, &quot;Shari (Rice)&quot;, &quot;Mushy ↔ Firm&quot;], [&quot;🐟&quot;, &quot;Neta (Topping)&quot;, &quot;Freshness&quot;], [&quot;🌿&quot;, &quot;Wasabi&quot;, &quot;Weak ↔ Strong&quot;], [&quot;⚖️&quot;, &quot;Balance&quot;, &quot;Unbalanced ↔ Harmonious&quot;], [&quot;✋&quot;, &quot;Shaping&quot;, &quot;Loose ↔ Firm&quot;], [&quot;🌡️&quot;, &quot;Temperature&quot;, &quot;Cold ↔ Warm&quot;]]}, {&quot;emoji&quot;: &quot;🍜&quot;, &quot;name&quot;: &quot;Ramen&quot;, &quot;attrs&quot;: [[&quot;🥣&quot;, &quot;Broth&quot;, &quot;Depth/Umami&quot;], [&quot;🍜&quot;, &quot;Noodles&quot;, &quot;Soft ↔ Chewy&quot;], [&quot;🥓&quot;, &quot;Chashu&quot;, &quot;Dry ↔ Tender&quot;], [&quot;🥚&quot;, &quot;Toppings&quot;, &quot;Sparse ↔ Generous&quot;], [&quot;🔥&quot;, &quot;Temperature&quot;, &quot;Lukewarm ↔ Hot&quot;], [&quot;⚖️&quot;, &quot;Balance&quot;, &quot;Unbalanced ↔ Harmonious&quot;]]}, {&quot;emoji&quot;: &quot;🍕&quot;, &quot;name&quot;: &quot;Pizza&quot;, &quot;attrs&quot;: [[&quot;🫓&quot;, &quot;Dough&quot;, &quot;Tough ↔ Chewy&quot;], [&quot;🍅&quot;, &quot;Sauce&quot;, &quot;Light ↔ Heavy&quot;], [&quot;🧀&quot;, &quot;Cheese&quot;, &quot;Light ↔ Heavy&quot;], [&quot;🔥&quot;, &quot;Doneness&quot;, &quot;Underdone ↔ Crispy&quot;], [&quot;🌟&quot;, &quot;Toppings&quot;, &quot;Sparse ↔ Generous&quot;], [&quot;⚖️&quot;, &quot;Balance&quot;, &quot;Unbalanced ↔ Harmonious&quot;]]}, {&quot;emoji&quot;: &quot;🍷&quot;, &quot;name&quot;: &quot;Wine&quot;, &quot;attrs&quot;: [[&quot;💪&quot;, &quot;Body&quot;, &quot;Light ↔ Full&quot;], [&quot;🍇&quot;, &quot;Tannin&quot;, &quot;Soft ↔ Astringent&quot;], [&quot;🍋&quot;, &quot;Acidity&quot;, &quot;Low ↔ High&quot;], [&quot;🌸&quot;, &quot;Aroma&quot;, &quot;Simple ↔ Complex&quot;], [&quot;✨&quot;, &quot;Finish&quot;, &quot;Short ↔ Lingering&quot;], [&quot;⚖️&quot;, &quot;Balance&quot;, &quot;Unbalanced ↔ Harmonious&quot;]]}, {&quot;emoji&quot;: &quot;☕&quot;, &quot;name&quot;: &quot;Coffee&quot;, &quot;attrs&quot;: [[&quot;🍋&quot;, &quot;Acidity&quot;, &quot;Low ↔ Bright&quot;], [&quot;💪&quot;, &quot;Body&quot;, &quot;Light ↔ Full&quot;], [&quot;🌸&quot;, &quot;Flavor&quot;, &quot;Simple ↔ Complex&quot;], [&quot;✨&quot;, &quot;Aftertaste&quot;, &quot;Short ↔ Lingering&quot;], [&quot;🍯&quot;, &quot;Sweetness&quot;, &quot;Bitter ↔ Sweet&quot;], [&quot;⚖️&quot;, &quot;Balance&quot;, &quot;Unbalanced ↔ Harmonious&quot;]]}], &quot;rating&quot;: &quot;Rating&quot;, &quot;intensity&quot;: &quot;Flavor Intensity&quot;, &quot;sat&quot;: &quot;Satisfaction&quot;, &quot;low&quot;: &quot;Unsatisfied&quot;, &quot;high&quot;: &quot;Very satisfied&quot;, &quot;shape&quot;: &quot;Flavor Profile&quot;, &quot;score&quot;: &quot;Riio Michelin Score&quot;}"></div>
+    </section>
 
-    <h2>Features</h2>
-    <div class="features">
-      <div class="card">
-        <h3>Find it on the map, save it in a tap</h3>
-        <p>Search for a restaurant on the map, or tap a nearby place to add it straight to your list. You can also add one yourself at your current location or any spot you pick on the map.</p>
-      </div>
-      <div class="card">
-        <h3>Visited and Want to Go</h3>
-        <p>Keep the places you’ve already been separate from the ones you’d like to try someday. Once you’ve been, just move it to Visited.</p>
-      </div>
-      <div class="card">
-        <h3>Visit log</h3>
-        <p>Record the date, what you ate, photos, a star rating and notes. Save a restaurant’s dishes once, and next time you can simply pick them from the list.</p>
-      </div>
-      <div class="card">
-        <h3>Detailed taste ratings</h3>
-        <p>Rate how strong each flavor was, like spiciness, saltiness and sweetness, and separately how much you liked it. Steak, sushi and ramen get their own criteria, such as doneness, rice and broth.</p>
-      </div>
-      <div class="card">
-        <h3>My Michelin Top 6</h3>
-        <p>Rank your six favorite restaurants and keep them in a list of their own. Next time someone asks for a recommendation, it’s ready to show.</p>
-      </div>
-      <div class="card">
-        <h3>Taste Profile</h3>
-        <p>Based on your taste ratings, see at a glance which flavors and styles of food you love most.</p>
-      </div>
-      <div class="card">
-        <h3>After-visit reminders</h3>
-        <p>When you leave a restaurant you’ve saved, a gentle “How was your visit today?” notification arrives a little later so you don’t forget to log it. You can turn it off anytime.</p>
-      </div>
-      <div class="card">
-        <h3>Directions and calls</h3>
-        <p>Open any saved restaurant in Apple Maps, KakaoMap or NAVER Map, and tap its phone number to call right away.</p>
-      </div>
-    </div>
+    <section class="problem reveal">
+      <h2>That place was great, but what did I order?</h2>
+      <p>You remember loving a restaurant, but the name is fuzzy, and what you ordered or whether the broth was too salty is gone completely. So you end up searching again and reading strangers’ reviews. Insaeng Matjip keeps what you actually tasted on a map, so your next pick comes from your own experience.</p>
+    </section>
 
-    <h2>Your log stays on your iPhone</h2>
-    <p>
-      There’s no sign-up. Your restaurant list, visit log and photos are stored only on your iPhone.
-      For details, please see our <a href="privacy.html">Privacy Policy</a>.
-    </p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Visited, Want to Go, and your own Michelin</h2>
+        <p>Search the map or tap a nearby place to save it in one go. Keep the places you’ve been apart from the ones you want to try, and rank your six favorites from 1 to 6.<br>When someone asks for a recommendation, just show them the list.</p>
+      </div>
+      <div class="phone"><img src="../img/en/02-list.jpg" alt="Visited, Want to Go, and your own Michelin" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <p><a href="https://apps.apple.com/app/id6755934548">Get Insaeng Matjip on the App Store</a></p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Questions that fit the food</h2>
+        <p>Set how strong each flavor was, like heat or seasoning, with a slider, and rate separately from 1 to 5 how much you liked it. Steak asks about doneness and juiciness, sushi about the rice and the fish, ramen about the broth and the noodles.<br>Each visit also keeps the dish, photos, star rating and notes.</p>
+      </div>
+      <div class="phone"><img src="../img/en/04-taste-review.jpg" alt="Questions that fit the food" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <div class="contact">
-      Found a problem or have a feature in mind? Let us know at <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a>.
-      Answers to common questions are on the <a href="support.html">Support</a> page.
-    </div>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>See which places are worth going back to</h2>
+        <p>As visits add up, each restaurant shows an overall chart averaged across every visit, plus a Riio Michelin Score out of 100 that combines stars and satisfaction.<br>Leave a saved restaurant after a meal and a reminder to log it shows up a little later.</p>
+      </div>
+      <div class="phone"><img src="../img/en/03-detail.jpg" alt="See which places are worth going back to" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="reveal">
+      <h2>Three steps to start</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>Save a restaurant</h3><p>Search the map or tap a nearby place to add it.</p></li>
+<li class="card"><span class="n">2</span><h3>Log your visit</h3><p>Add the dish, photos, stars and a taste rating. The rating is optional.</p></li>
+<li class="card"><span class="n">3</span><h3>Pick your next meal</h3><p>Check your Top 6 and scores, then get directions in Apple Maps, Kakao Map or Naver Map.</p></li></ol>
+    </section>
+
+    <section class="reveal" id="commands">
+      <h2>What you rate, by type of food</h2>
+      <div class="card table">
+        <dl><div><dt>🍽️ General</dt><dd>Spiciness, Boldness, Sweetness, Saltiness, Richness, Natural Flavor</dd></div><div><dt>🥩 Steak</dt><dd>Doneness, Juiciness, Tenderness, Seasoning, Meaty Aroma, Marbling</dd></div><div><dt>🍣 Sushi</dt><dd>Shari (Rice), Neta (Topping), Wasabi, Balance, Shaping, Temperature</dd></div><div><dt>🍜 Ramen</dt><dd>Broth, Noodles, Chashu, Toppings, Temperature, Balance</dd></div><div><dt>🍕 Pizza</dt><dd>Dough, Sauce, Cheese, Doneness, Toppings, Balance</dd></div><div><dt>🍷 Wine</dt><dd>Body, Tannin, Acidity, Aroma, Finish, Balance</dd></div><div><dt>☕ Coffee</dt><dd>Acidity, Body, Flavor, Aftertaste, Sweetness, Balance</dd></div></dl>
+      </div>
+      <p class="muted">Everything else is rated with the general set in the first row. You can also create your own food categories.</p>
+    </section>
+
+
+
+    <section class="reveal" id="faq">
+      <h2>Frequently asked questions</h2>
+      <div class="faq"><details><summary>How do I add a restaurant?</summary><p>Type the restaurant’s name into the search bar at the top of the map, then tap “Add to My Restaurants” in the results. You can also tap a nearby place shown on the map to add it right away. If a place doesn’t show up in search, add it yourself at your current location or at a spot you pick on the map.</p></details>
+<details><summary>What are Visited, Want to Go and Top 6?</summary><p>Visited: restaurants you’ve already been to. You can log your visits to them. Want to Go: restaurants you’d like to try someday. After you’ve been, switch it to Visited on the restaurant’s detail screen. Top 6 (My Michelin): rank your six favorite restaurants from 1st to 6th. Restaurants marked Want to Go can’t be added to your Top 6.</p></details>
+<details><summary>Do I have to rate the taste?</summary><p>No, it’s optional. Rating it adds flavor profile and satisfaction to the restaurant’s overall chart and counts toward its Riio Michelin Score.</p></details>
+<details><summary>When does the “How was your visit today?” notification arrive?</summary><p>If you stay near a saved restaurant for more than 5 minutes and then leave, the notification arrives about 40 minutes later. This feature needs location access set to “Always” and notifications turned on. If you’d rather not get these notifications, go to Settings &gt; Apps &gt; Insaeng Matjip and turn off notifications, or change location access to “While Using the App”. Location checks happen only on your device. Your movements are never stored or sent anywhere.</p></details>
+<details><summary>Can I use the app without allowing location access?</summary><p>Yes. You can pick a spot on the map yourself to add and log restaurants. Only showing your current location and the after-visit notifications won’t be available.</p></details>
+<details><summary>Place search isn’t showing any results</summary><p>Place search needs an internet connection. Try searching again with a different name or a shorter keyword. If it still doesn’t appear, you can pick a spot on the map and add it yourself.</p></details>
+<details><summary>Where is my log stored? Does it sync with my other devices?</summary><p>Your restaurants, visit log and photos are all stored only on this iPhone. The current version doesn’t sync with other devices, and the iCloud backup and restore option in Settings doesn’t work yet. A full iPhone backup (iCloud Backup or a backup on your computer) does include the app’s data.</p></details>
+<details><summary>I want to erase everything</summary><p>Open Settings from the map screen and tap “Delete All Data” to erase your restaurants and visit log. This can’t be undone, so please be careful. To remove your photos too, delete the app.</p></details>
+<details><summary>If I delete and reinstall the app, will my log still be there?</summary><p>No. Because your log is stored only on your device, it’s erased along with the app. Please keep this in mind before deleting the app.</p></details>
+<details><summary>Is it really all free?</summary><p>Yes. Every feature is free, with no ads and no account. Support the Developer in Settings is entirely optional and doesn’t unlock anything.</p></details></div>
+      <p class="contact">If your question isn’t answered above, send it straight from Settings &gt; Support in the app, or email <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a>. Including your app version, iPhone model, and which screen you were on and what you did helps us look into it faster.</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>Pick your next meal<br>from your own notes</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6755934548">Get it free on the App Store</a>
+    </section>
   </main>
 
-  <footer class="site">
-    © 2026 Leeo · <a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a>
+  <footer>
+    <nav id="languages" class="langs" aria-label="Language"><a href="../" hreflang="ko" lang="ko">한국어</a>
+<a href="../en/" hreflang="en" lang="en" aria-current="page">English</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a></nav>
+    <p><a href="privacy.html">Privacy Policy</a> · <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a> · © 2026 Leeo</p>
   </footer>
-</div>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

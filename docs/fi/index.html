@@ -1,145 +1,176 @@
 <!doctype html>
 <html lang="fi">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="color-scheme" content="light dark">
-<title>Insaeng – merkitse käymäsi ravintolat kartalle</title>
-<meta name="description" content="iPhone-sovellus, joka kokoaa samalle kartalle ravintolat, joissa olet käynyt, ja ne, joihin haluat mennä. Tallenna jokaisesta käynnistä annokset, kuvat, tähdet ja makuarvio. Merkinnöistä muodostuu makuprofiilisi ja oma Top 6 -listasi.">
-<link rel="canonical" href="https://m1zz.github.io/RestaurantMap/fi/">
-<link rel="alternate" hreflang="ko" href="https://m1zz.github.io/RestaurantMap/">
-<link rel="alternate" hreflang="en" href="https://m1zz.github.io/RestaurantMap/en/">
-<link rel="alternate" hreflang="ja" href="https://m1zz.github.io/RestaurantMap/ja/">
-<link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/RestaurantMap/zh-Hans/">
-<link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/RestaurantMap/zh-Hant/">
-<link rel="alternate" hreflang="ru" href="https://m1zz.github.io/RestaurantMap/ru/">
-<link rel="alternate" hreflang="es" href="https://m1zz.github.io/RestaurantMap/es/">
-<link rel="alternate" hreflang="de" href="https://m1zz.github.io/RestaurantMap/de/">
-<link rel="alternate" hreflang="fr" href="https://m1zz.github.io/RestaurantMap/fr/">
-<link rel="alternate" hreflang="it" href="https://m1zz.github.io/RestaurantMap/it/">
-<link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/RestaurantMap/pt-BR/">
-<link rel="alternate" hreflang="th" href="https://m1zz.github.io/RestaurantMap/th/">
-<link rel="alternate" hreflang="vi" href="https://m1zz.github.io/RestaurantMap/vi/">
-<link rel="alternate" hreflang="cs" href="https://m1zz.github.io/RestaurantMap/cs/">
-<link rel="alternate" hreflang="da" href="https://m1zz.github.io/RestaurantMap/da/">
-<link rel="alternate" hreflang="el" href="https://m1zz.github.io/RestaurantMap/el/">
-<link rel="alternate" hreflang="fi" href="https://m1zz.github.io/RestaurantMap/fi/">
-<link rel="alternate" hreflang="id" href="https://m1zz.github.io/RestaurantMap/id/">
-<link rel="alternate" hreflang="nb" href="https://m1zz.github.io/RestaurantMap/nb/">
-<link rel="alternate" hreflang="nl" href="https://m1zz.github.io/RestaurantMap/nl/">
-<link rel="alternate" hreflang="pl" href="https://m1zz.github.io/RestaurantMap/pl/">
-<link rel="alternate" hreflang="sv" href="https://m1zz.github.io/RestaurantMap/sv/">
-<link rel="alternate" hreflang="tr" href="https://m1zz.github.io/RestaurantMap/tr/">
-<link rel="alternate" hreflang="en-GB" href="https://m1zz.github.io/RestaurantMap/en/">
-<link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/RestaurantMap/">
-<link rel="stylesheet" href="../style.css">
-<link rel="icon" href="../icon.png">
-<link rel="apple-touch-icon" href="../icon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Insaeng: hyvät ruokapaikat yhdellä kartalla</title>
+  <meta name="description" content="Kerää kartalle ravintolat, joissa olet käynyt ja joihin haluat, ja kirjaa annos, kuvat ja maku. Ilmainen, tiedot pysyvät iPhonessasi.">
+  <meta name="theme-color" content="#B8461F" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6755934548">
+  <link rel="canonical" href="https://m1zz.github.io/RestaurantMap/fi/">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/RestaurantMap/">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/RestaurantMap/en/">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/RestaurantMap/ja/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/RestaurantMap/zh-Hans/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/RestaurantMap/zh-Hant/">
+  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/RestaurantMap/ru/">
+  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/RestaurantMap/es/">
+  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/RestaurantMap/de/">
+  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/RestaurantMap/fr/">
+  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/RestaurantMap/it/">
+  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/RestaurantMap/pt-BR/">
+  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/RestaurantMap/th/">
+  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/RestaurantMap/vi/">
+  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/RestaurantMap/cs/">
+  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/RestaurantMap/da/">
+  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/RestaurantMap/el/">
+  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/RestaurantMap/fi/">
+  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/RestaurantMap/id/">
+  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/RestaurantMap/nb/">
+  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/RestaurantMap/nl/">
+  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/RestaurantMap/pl/">
+  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/RestaurantMap/sv/">
+  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/RestaurantMap/tr/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/RestaurantMap/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Insaeng: hyvät ruokapaikat yhdellä kartalla">
+  <meta property="og:description" content="Kerää kartalle ravintolat, joissa olet käynyt ja joihin haluat, ja kirjaa annos, kuvat ja maku. Ilmainen, tiedot pysyvät iPhonessasi.">
+  <meta property="og:url" content="https://m1zz.github.io/RestaurantMap/fi/">
+  <meta property="og:image" content="https://m1zz.github.io/RestaurantMap/img/fi/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#B8461F}@media (prefers-color-scheme:dark){:root{--accent:#F08A62}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-<div class="container">
-
-  <header class="site">
-    <img src="../icon.png" alt="Insaeng-sovelluksen kuvake">
-    <div>
-      <div class="title">Insaeng</div>
-      <div class="subtitle">Arvioi ja järjestä ateriasi</div>
-    </div>
+  <a class="skip" href="#main">Siirry sisältöön</a>
+  <header class="bar">
+    <a class="brand" href="../fi/"><img src="../icon.png" alt="" width="32" height="32">Insaeng</a>
+    <a class="lang-link" href="#languages">Kieli</a>
   </header>
 
-  <nav class="langs" aria-label="Kieli">
-    <a href="../index.html" hreflang="ko" lang="ko">한국어</a>
-    <a href="../en/index.html" hreflang="en" lang="en">English</a>
-    <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a>
-    <a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
-    <a href="../zh-Hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
-    <a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a>
-    <a href="../es/index.html" hreflang="es" lang="es">Español</a>
-    <a href="../de/index.html" hreflang="de" lang="de">Deutsch</a>
-    <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a>
-    <a href="../it/index.html" hreflang="it" lang="it">Italiano</a>
-    <a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
-    <a href="../th/index.html" hreflang="th" lang="th">ไทย</a>
-    <a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a>
-    <a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a>
-    <a href="../da/index.html" hreflang="da" lang="da">Dansk</a>
-    <a href="../el/index.html" hreflang="el" lang="el">Ελληνικά</a>
-    <a href="index.html" hreflang="fi" lang="fi" aria-current="true">Suomi</a>
-    <a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a>
-    <a href="../nb/index.html" hreflang="nb" lang="nb">Norsk bokmål</a>
-    <a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a>
-    <a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a>
-    <a href="../sv/index.html" hreflang="sv" lang="sv">Svenska</a>
-    <a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a>
-  </nav>
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>Hyvät ruokapaikat<br>eivät enää unohdu</h1>
+        <p class="lead">Merkitse kartalle ravintolat, joissa olet käynyt ja jotka haluat kokeilla, ja kirjaa joka käynnillä, mitä tilasit, kuvat ja maku. Kun et tiedä, missä syödä, vastaus löytyy omista muistiinpanoistasi.</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6755934548">Lataa ilmaiseksi App Storesta</a><a class="try" href="#try">Arvioi annos ↓</a></div>
+        <p class="muted small">Kaikki toiminnot ovat ilmaisia. Ei rekisteröitymistä, tiedot pysyvät iPhonessasi.</p>
+      </div>
+      <div class="phone"><img src="../img/fi/01-map.jpg" alt="Hyvät ruokapaikat eivät enää unohdu" width="720" height="1564" decoding="async"></div>
+    </section>
 
-  <nav class="pages" aria-label="Sivut">
-    <a href="index.html" aria-current="page">Etusivu</a>
-    <a href="support.html">Tuki</a>
-    <a href="privacy.html">Tietosuojakäytäntö</a>
-  </nav>
 
-  <main>
-    <h1>Hyvät ravintolat eivät enää unohdu</h1>
-    <p class="lead">
-      Insaeng kokoaa samalle kartalle ravintolat, joissa olet jo käynyt, ja ne, joihin haluat joskus mennä.
-      Kirjaa jokaisesta käynnistä syömäsi annokset, kuvat, tähdet ja makuarvio.
-      Mitä enemmän merkintöjä kertyy, sitä selvemmin oma ravintolakarttasi ja makusi hahmottuvat.
-    </p>
+    <section class="reveal" id="try">
+      <h2>Arvioi annos</h2>
+      <p class="muted">Valitse ruokalaji ja säädä, kuinka voimakas kukin maku oli ja kuinka paljon pidit siitä. Samat kohdat ja sama laskutapa kuin käynnissä sovelluksessa.</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;Arvioi annos&quot;, &quot;lead&quot;: &quot;Valitse ruokalaji ja säädä, kuinka voimakas kukin maku oli ja kuinka paljon pidit siitä. Samat kohdat ja sama laskutapa kuin käynnissä sovelluksessa.&quot;, &quot;note&quot;: &quot;Kuten sovelluksessa, pisteistä puolet tulee tähdistä ja puolet tyytyväisyydestä. Mitään ei tallenneta.&quot;, &quot;types&quot;: [{&quot;emoji&quot;: &quot;🍽️&quot;, &quot;name&quot;: &quot;Yleinen&quot;, &quot;attrs&quot;: [[&quot;🌶️&quot;, &quot;Tulisuus&quot;, &quot;Mieto ↔ Tulinen&quot;], [&quot;💪&quot;, &quot;Voimakkuus&quot;, &quot;Mieto ↔ Voimakas&quot;], [&quot;🍯&quot;, &quot;Makeus&quot;, &quot;En pidä ↔ Pidän&quot;], [&quot;🧂&quot;, &quot;Suolaisuus&quot;, &quot;Mauton ↔ Suolainen&quot;], [&quot;🥓&quot;, &quot;Rasvaisuus&quot;, &quot;Kevyt ↔ Täyteläinen&quot;], [&quot;🌿&quot;, &quot;Luontainen maku&quot;, &quot;Maustettu ↔ Luontainen&quot;]]}, {&quot;emoji&quot;: &quot;🥩&quot;, &quot;name&quot;: &quot;Pihvi&quot;, &quot;attrs&quot;: [[&quot;🔥&quot;, &quot;Kypsyys&quot;, &quot;Raaka ↔ Kypsä&quot;], [&quot;🥩&quot;, &quot;Mehukkuus&quot;, &quot;Kuiva ↔ Mehukas&quot;], [&quot;✨&quot;, &quot;Mureus&quot;, &quot;Sitkeä ↔ Murea&quot;], [&quot;🧂&quot;, &quot;Mausteisuus&quot;, &quot;Mauton ↔ Suolainen&quot;], [&quot;🌿&quot;, &quot;Lihan maku&quot;, &quot;Mieto ↔ Voimakas&quot;], [&quot;🍖&quot;, &quot;Marmorointi&quot;, &quot;Vähän ↔ Paljon&quot;]]}, {&quot;emoji&quot;: &quot;🍣&quot;, &quot;name&quot;: &quot;Sushi&quot;, &quot;attrs&quot;: [[&quot;🍚&quot;, &quot;Shari (riisi)&quot;, &quot;Mössö ↔ Kiinteä&quot;], [&quot;🐟&quot;, &quot;Neta (kala)&quot;, &quot;Tuoreus&quot;], [&quot;🌿&quot;, &quot;Wasabi&quot;, &quot;Mieto ↔ Voimakas&quot;], [&quot;⚖️&quot;, &quot;Tasapaino&quot;, &quot;Epätasapainoinen ↔ Harmoninen&quot;], [&quot;✋&quot;, &quot;Muotoilu&quot;, &quot;Löysä ↔ Tiivis&quot;], [&quot;🌡️&quot;, &quot;Lämpötila&quot;, &quot;Kylmä ↔ Lämmin&quot;]]}, {&quot;emoji&quot;: &quot;🍜&quot;, &quot;name&quot;: &quot;Ramen&quot;, &quot;attrs&quot;: [[&quot;🥣&quot;, &quot;Liemi&quot;, &quot;Syvyys/umami&quot;], [&quot;🍜&quot;, &quot;Nuudelit&quot;, &quot;Pehmeät ↔ Napakat&quot;], [&quot;🥓&quot;, &quot;Chashu&quot;, &quot;Kuiva ↔ Murea&quot;], [&quot;🥚&quot;, &quot;Täytteet&quot;, &quot;Niukka ↔ Runsas&quot;], [&quot;🔥&quot;, &quot;Lämpötila&quot;, &quot;Haalea ↔ Kuuma&quot;], [&quot;⚖️&quot;, &quot;Tasapaino&quot;, &quot;Epätasapainoinen ↔ Harmoninen&quot;]]}, {&quot;emoji&quot;: &quot;🍕&quot;, &quot;name&quot;: &quot;Pizza&quot;, &quot;attrs&quot;: [[&quot;🫓&quot;, &quot;Pohja&quot;, &quot;Sitkeä ↔ Kuohkea&quot;], [&quot;🍅&quot;, &quot;Kastike&quot;, &quot;Vähän ↔ Paljon&quot;], [&quot;🧀&quot;, &quot;Juusto&quot;, &quot;Vähän ↔ Paljon&quot;], [&quot;🔥&quot;, &quot;Kypsyys&quot;, &quot;Raaka ↔ Rapea&quot;], [&quot;🌟&quot;, &quot;Täytteet&quot;, &quot;Niukka ↔ Runsas&quot;], [&quot;⚖️&quot;, &quot;Tasapaino&quot;, &quot;Epätasapainoinen ↔ Harmoninen&quot;]]}, {&quot;emoji&quot;: &quot;🍷&quot;, &quot;name&quot;: &quot;Viini&quot;, &quot;attrs&quot;: [[&quot;💪&quot;, &quot;Täyteläisyys&quot;, &quot;Kevyt ↔ Täyteläinen&quot;], [&quot;🍇&quot;, &quot;Tanniinit&quot;, &quot;Pehmeä ↔ Kuivattava&quot;], [&quot;🍋&quot;, &quot;Hapokkuus&quot;, &quot;Matala ↔ Korkea&quot;], [&quot;🌸&quot;, &quot;Aromi&quot;, &quot;Yksinkertainen ↔ Monivivahteinen&quot;], [&quot;✨&quot;, &quot;Jälkimaku&quot;, &quot;Lyhyt ↔ Pitkä&quot;], [&quot;⚖️&quot;, &quot;Tasapaino&quot;, &quot;Epätasapainoinen ↔ Harmoninen&quot;]]}, {&quot;emoji&quot;: &quot;☕&quot;, &quot;name&quot;: &quot;Kahvi&quot;, &quot;attrs&quot;: [[&quot;🍋&quot;, &quot;Hapokkuus&quot;, &quot;Matala ↔ Raikas&quot;], [&quot;💪&quot;, &quot;Täyteläisyys&quot;, &quot;Kevyt ↔ Täyteläinen&quot;], [&quot;🌸&quot;, &quot;Maku&quot;, &quot;Yksinkertainen ↔ Monivivahteinen&quot;], [&quot;✨&quot;, &quot;Jälkimaku&quot;, &quot;Lyhyt ↔ Pitkä&quot;], [&quot;🍯&quot;, &quot;Makeus&quot;, &quot;Kitkerä ↔ Makea&quot;], [&quot;⚖️&quot;, &quot;Tasapaino&quot;, &quot;Epätasapainoinen ↔ Harmoninen&quot;]]}], &quot;rating&quot;: &quot;Arvio&quot;, &quot;intensity&quot;: &quot;Maun voimakkuus&quot;, &quot;sat&quot;: &quot;Tyytyväisyys&quot;, &quot;low&quot;: &quot;Tyytymätön&quot;, &quot;high&quot;: &quot;Erittäin tyytyväinen&quot;, &quot;shape&quot;: &quot;Makuprofiili&quot;, &quot;score&quot;: &quot;Riio Michelin -pisteet&quot;}"></div>
+    </section>
 
-    <h2>Tärkeimmät ominaisuudet</h2>
-    <div class="features">
-      <div class="card">
-        <h3>Etsi kartalta ja tallenna heti</h3>
-        <p>Hae ravintolaa kartalta tai napauta lähellä olevaa paikkaa, niin se lisätään suoraan listallesi. Voit myös lisätä ravintolan itse nykyiseen sijaintiisi tai kartalta valitsemaasi kohtaan.</p>
-      </div>
-      <div class="card">
-        <h3>Käyty ja Haluan käydä</h3>
-        <p>Pidä erillään ravintolat, joissa olet jo käynyt, ja ne, joihin haluat joskus mennä. Kun olet käynyt paikassa, siirrä se vain käytyihin.</p>
-      </div>
-      <div class="card">
-        <h3>Käyntiloki</h3>
-        <p>Kirjaa käyntipäivä, syömäsi annokset, kuvat, tähdet ja muistiinpanot. Kun lisäät ravintolan annokset valmiiksi, voit seuraavalla kerralla vain valita ne.</p>
-      </div>
-      <div class="card">
-        <h3>Tarkka makuarvio</h3>
-        <p>Arvioi erikseen maun voimakkuus – tulisuus, suolaisuus, makeus – ja se, kuinka paljon pidit siitä. Pihvin, sushin ja ramenin voit arvioida niille sopivilla kriteereillä: kypsyys, riisi ja liemi.</p>
-      </div>
-      <div class="card">
-        <h3>Oma Michelin Top 6</h3>
-        <p>Laita kuusi suosikkiravintolaasi järjestykseen ja pidä ne omana listanaan. Kun joku kysyy, missä kannattaa syödä, voit näyttää ne saman tien.</p>
-      </div>
-      <div class="card">
-        <h3>Makuprofiili</h3>
-        <p>Makuarvioidesi perusteella näet yhdellä silmäyksellä, millaisista mauista ja ruokatyyleistä pidät.</p>
-      </div>
-      <div class="card">
-        <h3>Muistutus käynnin jälkeen</h3>
-        <p>Kun olet viettänyt hetken tallentamassasi ravintolassa ja lähdet, saat vähän myöhemmin ilmoituksen ”Millainen tämänpäiväinen käyntisi oli?”, jotta kirjaus ei unohdu. Voit halutessasi poistaa sen käytöstä.</p>
-      </div>
-      <div class="card">
-        <h3>Reittiohjeet ja soittaminen</h3>
-        <p>Avaa tallentamasi ravintola suoraan Apple Kartoissa, KakaoMapissa tai NAVER Mapissa ja soita napauttamalla puhelinnumeroa.</p>
-      </div>
-    </div>
+    <section class="problem reveal">
+      <h2>Siellä oli hyvää, mutta mitä minä tilasinkaan?</h2>
+      <p>Muistat, että ravintola oli mahtava, mutta nimi on hämärä, ja mitä tilasit tai oliko liemi liian suolaista, et muista ollenkaan. Joten haet taas ja luet tuntemattomien arvosteluja. Insaeng säilyttää kartalla sen, mitä itse maistoit, jotta seuraava valinta perustuu omaan kokemukseesi.</p>
+    </section>
 
-    <h2>Merkintäsi pysyvät iPhonessasi</h2>
-    <p>
-      Rekisteröitymistä ei tarvita. Ravintolalista, käyntimerkinnät ja kuvat tallentuvat vain iPhoneesi.
-      Lisätietoja löydät <a href="privacy.html">tietosuojakäytännöstä</a>.
-    </p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Käyty, Haluan käydä ja oma Michelin</h2>
+        <p>Hae kartalta tai napauta lähellä olevaa paikkaa, niin se tallentuu heti. Pidä käydyt paikat erillään niistä, joita haluat kokeilla, ja järjestä kuusi suosikkiasi sijoille 1–6.<br>Kun joku kysyy hyvää paikkaa, näytä vain lista.</p>
+      </div>
+      <div class="phone"><img src="../img/fi/02-list.jpg" alt="Käyty, Haluan käydä ja oma Michelin" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <p><a href="https://apps.apple.com/app/id6755934548">Lataa Insaeng App Storesta</a></p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Kysymykset ruokalajin mukaan</h2>
+        <p>Maun voimakkuuden, kuten tulisuuden tai suolan, säädät liukusäätimellä, ja sen, kuinka paljon pidit, arvioit erikseen asteikolla 1–5. Pihvissä arvioidaan kypsyys ja mehukkuus, sushissa riisi ja kala, ramenissa liemi ja nuudelit.<br>Jokainen käynti tallentaa myös annoksen, kuvat, tähdet ja muistiinpanot.</p>
+      </div>
+      <div class="phone"><img src="../img/fi/04-taste-review.jpg" alt="Kysymykset ruokalajin mukaan" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <div class="contact">
-      Jos jokin hankaloittaa käyttöä tai kaipaat jotain ominaisuutta, kerro siitä osoitteeseen <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a>.
-      Vastauksia usein kysyttyihin kysymyksiin löydät <a href="support.html">Tuki</a>-sivulta.
-    </div>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Minne kannattaa palata, näkyy numeroina</h2>
+        <p>Käyntien karttuessa jokainen ravintola näyttää kokonaisarvion kaikkien käyntien keskiarvosta sekä Riio Michelin -pisteet sadasta, joissa yhdistyvät tähdet ja tyytyväisyys.<br>Kun lähdet tallennetusta ravintolasta, hetken päästä tulee muistutus kirjata käynti.</p>
+      </div>
+      <div class="phone"><img src="../img/fi/03-detail.jpg" alt="Minne kannattaa palata, näkyy numeroina" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="reveal">
+      <h2>Aloita kolmella askeleella</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>Tallenna ravintola</h3><p>Hae kartalta tai napauta lähellä olevaa paikkaa.</p></li>
+<li class="card"><span class="n">2</span><h3>Kirjaa käynti</h3><p>Annos, kuvat, tähdet ja maku. Makuarvio on vapaaehtoinen.</p></li>
+<li class="card"><span class="n">3</span><h3>Valitse seuraava</h3><p>Katso top 6 ja pisteet ja suunnista Apple Karttojen, Kakao Mapin tai Naver Mapin avulla.</p></li></ol>
+    </section>
+
+    <section class="reveal" id="commands">
+      <h2>Mitä arvioidaan ruokalajeittain</h2>
+      <div class="card table">
+        <dl><div><dt>🍽️ Yleinen</dt><dd>Tulisuus, Voimakkuus, Makeus, Suolaisuus, Rasvaisuus, Luontainen maku</dd></div><div><dt>🥩 Pihvi</dt><dd>Kypsyys, Mehukkuus, Mureus, Mausteisuus, Lihan maku, Marmorointi</dd></div><div><dt>🍣 Sushi</dt><dd>Shari (riisi), Neta (kala), Wasabi, Tasapaino, Muotoilu, Lämpötila</dd></div><div><dt>🍜 Ramen</dt><dd>Liemi, Nuudelit, Chashu, Täytteet, Lämpötila, Tasapaino</dd></div><div><dt>🍕 Pizza</dt><dd>Pohja, Kastike, Juusto, Kypsyys, Täytteet, Tasapaino</dd></div><div><dt>🍷 Viini</dt><dd>Täyteläisyys, Tanniinit, Hapokkuus, Aromi, Jälkimaku, Tasapaino</dd></div><div><dt>☕ Kahvi</dt><dd>Hapokkuus, Täyteläisyys, Maku, Jälkimaku, Makeus, Tasapaino</dd></div></dl>
+      </div>
+      <p class="muted">Muut ruoat arvioidaan ensimmäisen rivin yleisillä kohdilla. Voit myös luoda omia luokkia.</p>
+    </section>
+
+
+
+    <section class="reveal" id="faq">
+      <h2>Usein kysytyt kysymykset</h2>
+      <div class="faq"><details><summary>Miten lisään ravintolan?</summary><p>Kirjoita ravintolan nimi kartan yläreunan hakukenttään ja napauta tuloksissa ”Lisää omiin ravintoloihin”. Voit myös lisätä ravintolan suoraan napauttamalla kartalla näkyvää lähipaikkaa. Jos paikkaa ei löydy haulla, lisää se itse nykyiseen sijaintiisi tai kartalta valitsemaasi kohtaan.</p></details>
+<details><summary>Mitä ovat Käyty, Haluan käydä ja Top 6?</summary><p>Käyty – ravintolat, joissa olet jo käynyt. Niihin voi kirjata käyntejä. Haluan käydä – ravintolat, joihin haluat joskus mennä. Käynnin jälkeen vaihda ravintola käydyksi sen tietonäkymässä. Top 6 (Oma Michelin) – kuusi suosikkiravintolaasi järjestyksessä sijoilta 1–6. Haluan käydä -listalla olevaa ravintolaa ei voi lisätä Top 6:een.</p></details>
+<details><summary>Onko maku pakko arvioida?</summary><p>Ei, se on vapaaehtoista. Jos arvioit, maun voimakkuus ja tyytyväisyys lisätään ravintolan kokonaisarvioon ja ne vaikuttavat Riio Michelin -pisteisiin.</p></details>
+<details><summary>Milloin ilmoitus ”Millainen tämänpäiväinen käyntisi oli?” tulee?</summary><p>Kun olet viipynyt tallentamasi ravintolan lähellä yli 5 minuuttia ja lähdet, ilmoitus tulee noin 40 minuutin kuluttua. Toiminto vaatii, että sijainnin käyttö on asetettu tilaan ”Aina” ja ilmoitukset on sallittu. Jos et halua ilmoitusta, poista ilmoitukset käytöstä kohdassa Asetukset &gt; Apit &gt; Insaeng tai vaihda sijainniksi ”Kun appia käytetään”. Sijaintia tarkistetaan vain laitteella. Liikkumistasi ei tallenneta eikä lähetetä minnekään.</p></details>
+<details><summary>Voinko käyttää sovellusta ilman sijaintilupaa?</summary><p>Voit. Valitse kohta itse kartalta, niin voit lisätä ravintolan ja kirjata käyntejä. Vain nykyisen sijainnin näyttäminen ja käynnin jälkeinen muistutus eivät toimi.</p></details>
+<details><summary>Haku ei löydä mitään</summary><p>Paikkahaku vaatii internetyhteyden. Kokeile toista nimeä tai lyhyempää hakusanaa. Jos paikkaa ei vieläkään löydy, valitse kohta kartalta ja lisää se itse.</p></details>
+<details><summary>Mihin merkinnät tallentuvat? Synkronoituvatko ne muille laitteille?</summary><p>Ravintolat, käyntimerkinnät ja kuvat tallentuvat vain tähän iPhoneen. Nykyinen versio ei tue synkronointia muiden laitteiden kanssa, eikä asetusten iCloud-varmuuskopiointi ja -palautus vielä toimi. Sovelluksen tiedot sisältyvät kuitenkin iPhonen täyteen varmuuskopioon (iCloud-varmuuskopio tai varmuuskopio tietokoneelle).</p></details>
+<details><summary>Haluan poistaa kaikki merkinnät</summary><p>Napauta karttanäkymän asetuksissa ”Poista kaikki tiedot”, niin ravintolat ja käyntimerkinnät poistetaan. Tätä ei voi perua. Jos haluat poistaa jäljettömiin myös kuvat, poista sovellus.</p></details>
+<details><summary>Säilyvätkö merkinnät, jos poistan sovelluksen ja asennan sen uudelleen?</summary><p>Eivät. Merkinnät tallentuvat vain laitteelle, joten ne poistuvat sovelluksen mukana. Mieti siis tarkkaan ennen kuin poistat sovelluksen.</p></details>
+<details><summary>Onko kaikki todella ilmaista?</summary><p>Kyllä. Kaikki toiminnot ovat ilmaisia, ilman mainoksia ja ilman tiliä. Asetusten ”Tue kehittäjää” on täysin vapaaehtoinen eikä avaa mitään lisää.</p></details></div>
+      <p class="contact">Jos vastausta ei löytynyt, lähetä viesti suoraan sovelluksesta kohdasta Asetukset &gt; Tuki tai kirjoita osoitteeseen <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a>. Kerro sovelluksen versio, iPhonen malli ja mitä teit missäkin näkymässä – niin pääsemme asiaan nopeammin.</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>Valitse seuraava ravintola<br>omista muistiinpanoistasi</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6755934548">Lataa ilmaiseksi App Storesta</a>
+    </section>
   </main>
 
-  <footer class="site">
-    © 2026 Leeo · <a href="support.html">Tuki</a> · <a href="privacy.html">Tietosuojakäytäntö</a>
+  <footer>
+    <nav id="languages" class="langs" aria-label="Kieli"><a href="../" hreflang="ko" lang="ko">한국어</a>
+<a href="../en/" hreflang="en" lang="en">English</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../fi/" hreflang="fi" lang="fi" aria-current="page">Suomi</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a></nav>
+    <p><a href="privacy.html">Tietosuojakäytäntö</a> · <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a> · © 2026 Leeo</p>
   </footer>
-</div>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

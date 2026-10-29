@@ -1,0 +1,51 @@
+/* 인생맛집 웹 데모. 색은 앱과 같다: 맛의 형태는 파랑 선, 만족도는 초록 면, 별은 노랑. */
+.demo-card { display: grid; grid-template-columns: 1.15fr 1fr; gap: var(--s6); align-items: start; }
+
+.rm-types { display: flex; flex-wrap: wrap; gap: var(--s2); margin-bottom: var(--s4); }
+.rm-type { font: inherit; font-weight: 600; min-height: 44px; padding: 0 var(--s4); border: 0; border-radius: 999px;
+           background: var(--bg); color: var(--text); cursor: pointer; transition: background .15s var(--ease), transform .15s var(--ease); }
+.rm-type:active { transform: scale(.96); }
+.rm-type[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); }
+
+.rm-stars { display: flex; align-items: center; gap: var(--s1); margin-bottom: var(--s3); }
+.rm-stars span { font-weight: 600; margin-right: var(--s2); }
+.rm-stars button { width: 44px; height: 44px; border: 0; background: none; cursor: pointer; font-size: 1.75rem; line-height: 1;
+                   color: color-mix(in srgb, var(--muted) 35%, transparent); }
+.rm-stars button.on { color: #FFCC00; }
+
+.rm-rows { display: grid; gap: var(--s4); max-height: 560px; overflow-y: auto; padding-right: var(--s2); }
+.rm-row { background: var(--bg); border-radius: var(--r-inner); padding: var(--s4); display: grid; gap: var(--s2); }
+.rm-head { display: flex; justify-content: space-between; align-items: baseline; gap: var(--s3); flex-wrap: wrap; }
+.rm-slider { display: grid; gap: var(--s1); }
+.rm-slider input { width: 100%; height: 32px; accent-color: #0A84FF; cursor: pointer; }
+.rm-sats { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s2); }
+.rm-sats span { flex-basis: 100%; }
+.rm-sats button { width: 44px; height: 44px; border-radius: 50%; border: 0; cursor: pointer; font: inherit; font-weight: 600;
+                  background: color-mix(in srgb, var(--muted) 18%, transparent); color: var(--muted);
+                  transition: background .15s var(--ease), color .15s var(--ease); }
+.rm-sats button[aria-pressed="true"] { background: #0A84FF; color: #fff; }
+.rm-ends { display: flex; justify-content: space-between; width: calc(5 * 44px + 4 * var(--s2)); }
+
+.rm-result { position: sticky; top: var(--s5); text-align: center; }
+.rm-legend { display: flex; justify-content: center; gap: var(--s4); font-size: 0.875rem; }
+.rm-legend span::before { content: ""; display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: var(--s1); vertical-align: -1px; }
+.rm-shape::before { border: 2px solid #0A84FF; box-sizing: border-box; }
+.rm-sat::before { background: rgb(52 199 89 / .6); }
+.rm-radar { width: 100%; max-width: 380px; display: block; margin: var(--s2) auto; overflow: visible; }
+.rm-radar text { font-size: 12px; font-weight: 600; fill: var(--text); }
+.rm-grid { fill: none; stroke: color-mix(in srgb, var(--muted) 30%, transparent); stroke-width: 1; }
+.rm-fill { fill: rgb(52 199 89 / .5); }
+.rm-line { fill: none; stroke: #0A84FF; stroke-width: 2.5; stroke-linejoin: round; }
+.rm-score { display: flex; justify-content: center; align-items: baseline; gap: var(--s2); margin: 0 0 var(--s2); }
+.rm-score span { font-weight: 600; }
+.rm-score b { font-size: 2.5rem; letter-spacing: -0.02em; color: #248A3D; font-variant-numeric: tabular-nums; }
+.rm-score small { color: var(--muted); }
+
+@media (prefers-color-scheme: dark) {
+  .rm-score b { color: #30D158; }
+}
+@media (max-width: 760px) {
+  .demo-card { grid-template-columns: 1fr; }
+  .rm-result { position: static; order: -1; }
+  .rm-rows { max-height: 440px; }
+}

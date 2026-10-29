@@ -1,0 +1,403 @@
+{
+  "title": "Insaeng: dina bästa måltider på en karta",
+  "description": "Samla restauranger du besökt och vill testa på en karta, och skriv ner rätt, bilder och smak vid varje besök. Gratis och bara på din iPhone.",
+  "hero": {
+    "headline": "Glöm aldrig igen\nvar maten var god",
+    "lead": "Markera restaurangerna du besökt och vill testa på kartan, och skriv vid varje besök ner vad du beställde, bilder och smaken. När du inte vet var du ska äta har dina egna anteckningar svaret.",
+    "cta": "Hämta gratis på App Store",
+    "note": "Alla funktioner är gratis. Ingen registrering, allt stannar på din iPhone."
+  },
+  "demo": {
+    "title": "Betygsätt en rätt",
+    "lead": "Välj en typ av mat och ställ in hur stark varje smak var och hur mycket du gillade den. Samma kriterier och samma uträkning som ett besök i appen.",
+    "note": "Precis som i appen räknas poängen till hälften på stjärnor och till hälften på nöjdhet. Inget sparas här.",
+    "types": [
+      {
+        "emoji": "🍽️",
+        "name": "Allmänt",
+        "attrs": [
+          [
+            "🌶️",
+            "Hetta",
+            "Mild ↔ Het"
+          ],
+          [
+            "💪",
+            "Fyllighet",
+            "Mild ↔ Kraftig"
+          ],
+          [
+            "🍯",
+            "Sötma",
+            "Gillar inte ↔ Gillar"
+          ],
+          [
+            "🧂",
+            "Salthet",
+            "Blekt ↔ Salt"
+          ],
+          [
+            "🥓",
+            "Fetthet",
+            "Lätt ↔ Fyllig"
+          ],
+          [
+            "🌿",
+            "Naturlig smak",
+            "Kryddat ↔ Naturligt"
+          ]
+        ]
+      },
+      {
+        "emoji": "🥩",
+        "name": "Biff",
+        "attrs": [
+          [
+            "🔥",
+            "Stekgrad",
+            "Blodig ↔ Genomstekt"
+          ],
+          [
+            "🥩",
+            "Saftighet",
+            "Torrt ↔ Saftigt"
+          ],
+          [
+            "✨",
+            "Mörhet",
+            "Segt ↔ Mört"
+          ],
+          [
+            "🧂",
+            "Kryddning",
+            "Blekt ↔ Salt"
+          ],
+          [
+            "🌿",
+            "Köttsmak",
+            "Svag ↔ Kraftig"
+          ],
+          [
+            "🍖",
+            "Marmorering",
+            "Lite ↔ Mycket"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍣",
+        "name": "Sushi",
+        "attrs": [
+          [
+            "🍚",
+            "Shari (ris)",
+            "Grötig ↔ Fast"
+          ],
+          [
+            "🐟",
+            "Neta (fisk)",
+            "Färskhet"
+          ],
+          [
+            "🌿",
+            "Wasabi",
+            "Svag ↔ Kraftig"
+          ],
+          [
+            "⚖️",
+            "Balans",
+            "Obalanserad ↔ Harmonisk"
+          ],
+          [
+            "✋",
+            "Formning",
+            "Löst ↔ Fast"
+          ],
+          [
+            "🌡️",
+            "Temperatur",
+            "Kall ↔ Varm"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍜",
+        "name": "Ramen",
+        "attrs": [
+          [
+            "🥣",
+            "Buljong",
+            "Djup/umami"
+          ],
+          [
+            "🍜",
+            "Nudlar",
+            "Mjuka ↔ Spänstiga"
+          ],
+          [
+            "🥓",
+            "Chashu",
+            "Torrt ↔ Mört"
+          ],
+          [
+            "🥚",
+            "Toppings",
+            "Snålt ↔ Generöst"
+          ],
+          [
+            "🔥",
+            "Temperatur",
+            "Ljummen ↔ Het"
+          ],
+          [
+            "⚖️",
+            "Balans",
+            "Obalanserad ↔ Harmonisk"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍕",
+        "name": "Pizza",
+        "attrs": [
+          [
+            "🫓",
+            "Deg",
+            "Seg ↔ Luftig"
+          ],
+          [
+            "🍅",
+            "Sås",
+            "Lite ↔ Mycket"
+          ],
+          [
+            "🧀",
+            "Ost",
+            "Lite ↔ Mycket"
+          ],
+          [
+            "🔥",
+            "Stekgrad",
+            "Underbakad ↔ Krispig"
+          ],
+          [
+            "🌟",
+            "Toppings",
+            "Snålt ↔ Generöst"
+          ],
+          [
+            "⚖️",
+            "Balans",
+            "Obalanserad ↔ Harmonisk"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍷",
+        "name": "Vin",
+        "attrs": [
+          [
+            "💪",
+            "Fyllighet",
+            "Lätt ↔ Fyllig"
+          ],
+          [
+            "🍇",
+            "Tanniner",
+            "Mjuk ↔ Strävt"
+          ],
+          [
+            "🍋",
+            "Syra",
+            "Låg ↔ Hög"
+          ],
+          [
+            "🌸",
+            "Arom",
+            "Enkel ↔ Komplex"
+          ],
+          [
+            "✨",
+            "Eftersmak",
+            "Kort ↔ Lång"
+          ],
+          [
+            "⚖️",
+            "Balans",
+            "Obalanserad ↔ Harmonisk"
+          ]
+        ]
+      },
+      {
+        "emoji": "☕",
+        "name": "Kaffe",
+        "attrs": [
+          [
+            "🍋",
+            "Syrlighet",
+            "Låg ↔ Frisk"
+          ],
+          [
+            "💪",
+            "Fyllighet",
+            "Lätt ↔ Fyllig"
+          ],
+          [
+            "🌸",
+            "Smak",
+            "Enkel ↔ Komplex"
+          ],
+          [
+            "✨",
+            "Eftersmak",
+            "Kort ↔ Lång"
+          ],
+          [
+            "🍯",
+            "Sötma",
+            "Bitter ↔ Söt"
+          ],
+          [
+            "⚖️",
+            "Balans",
+            "Obalanserad ↔ Harmonisk"
+          ]
+        ]
+      }
+    ],
+    "rating": "Betyg",
+    "intensity": "Smakintensitet",
+    "sat": "Nöjdhet",
+    "low": "Missnöjd",
+    "high": "Mycket nöjd",
+    "shape": "Smakprofil",
+    "score": "Riio Michelin-poäng"
+  },
+  "problem": {
+    "title": "Det var gott, men vad var det jag beställde?",
+    "text": "Du minns att du gillade stället, men namnet är suddigt, och vad du beställde eller om buljongen var för salt minns du inte alls. Så du söker igen och läser främlingars recensioner. Insaeng sparar det du själv har smakat på en karta, så att nästa val bygger på din egen erfarenhet."
+  },
+  "features": [
+    {
+      "title": "Besökt, Vill besöka och din egen Michelin",
+      "text": "Sök på kartan eller tryck på ett ställe i närheten, så är det sparat. Håll ställen du varit på åtskilda från dem du vill testa, och ranka dina sex favoriter från 1 till 6.\nNär någon frågar efter ett tips visar du bara listan.",
+      "shot": "02-list"
+    },
+    {
+      "title": "Frågor som passar rätten",
+      "text": "Hur stark en smak var, till exempel hetta eller salt, ställer du in med ett reglage, och hur mycket du gillade den betygsätter du separat från 1 till 5. Biff handlar om stekgrad och saftighet, sushi om ris och fisk, ramen om buljong och nudlar.\nVarje besök sparar också rätt, bilder, stjärnor och anteckningar.",
+      "shot": "04-taste-review"
+    },
+    {
+      "title": "Vart det är värt att gå tillbaka syns i siffror",
+      "text": "Efter flera besök visar varje restaurang ett helhetsomdöme med snittet av alla besök och Riio Michelin-poäng av 100 som kombinerar stjärnor och nöjdhet.\nNär du lämnar en sparad restaurang kommer en påminnelse lite senare om att skriva ner besöket.",
+      "shot": "03-detail"
+    }
+  ],
+  "steps": {
+    "title": "Kom igång i tre steg",
+    "items": [
+      {
+        "title": "Spara en restaurang",
+        "text": "Sök på kartan eller tryck på ett ställe i närheten."
+      },
+      {
+        "title": "Skriv ner besöket",
+        "text": "Rätt, bilder, stjärnor och smak. Smakbetyget är frivilligt."
+      },
+      {
+        "title": "Välj nästa ställe",
+        "text": "Kolla din topp 6 och poängen, och hitta dit med Apple Kartor, Kakao Map eller Naver Map."
+      }
+    ]
+  },
+  "reference": {
+    "title": "Det här betygsätter du för varje typ av mat",
+    "rows": [
+      [
+        "🍽️ Allmänt",
+        "Hetta, Fyllighet, Sötma, Salthet, Fetthet, Naturlig smak"
+      ],
+      [
+        "🥩 Biff",
+        "Stekgrad, Saftighet, Mörhet, Kryddning, Köttsmak, Marmorering"
+      ],
+      [
+        "🍣 Sushi",
+        "Shari (ris), Neta (fisk), Wasabi, Balans, Formning, Temperatur"
+      ],
+      [
+        "🍜 Ramen",
+        "Buljong, Nudlar, Chashu, Toppings, Temperatur, Balans"
+      ],
+      [
+        "🍕 Pizza",
+        "Deg, Sås, Ost, Stekgrad, Toppings, Balans"
+      ],
+      [
+        "🍷 Vin",
+        "Fyllighet, Tanniner, Syra, Arom, Eftersmak, Balans"
+      ],
+      [
+        "☕ Kaffe",
+        "Syrlighet, Fyllighet, Smak, Eftersmak, Sötma, Balans"
+      ]
+    ],
+    "note": "All annan mat betygsätts med de allmänna kriterierna i första raden. Du kan också skapa egna kategorier."
+  },
+  "faq": {
+    "title": "Vanliga frågor",
+    "items": [
+      {
+        "q": "Hur lägger jag till en restaurang?",
+        "a": "Skriv restaurangens namn i sökfältet högst upp på kartan och tryck på ”Lägg till i min restauranglista” i resultatet. Du kan också trycka på ett ställe i närheten som syns på kartan och lägga till det direkt. Om ett ställe inte dyker upp i sökningen kan du lägga till det manuellt där du står eller på en plats du väljer på kartan."
+      },
+      {
+        "q": "Vad betyder Besökta, Att besöka och Topp 6?",
+        "a": "Besökta – restauranger du redan har varit på. Här kan du spara besöksloggar. Att besöka – restauranger du vill testa någon gång. När du har varit där byter du till Besökta på restaurangens detaljsida. Topp 6 (din egen Michelin) – ranka dina sex favoritrestauranger från 1 till 6. Ställen under Att besöka kan inte läggas i topp 6."
+      },
+      {
+        "q": "Måste jag göra smakomdömen?",
+        "a": "Nej, det är frivilligt. Om du betygsätter läggs smakintensitet och nöjdhet till restaurangens helhetsomdöme och räknas in i Riio Michelin-poängen."
+      },
+      {
+        "q": "När kommer notisen ”Hur var ditt besök i dag?”?",
+        "a": "Om du stannar mer än 5 minuter i närheten av en sparad restaurang och sedan går därifrån får du en notis ungefär 40 minuter senare. Funktionen kräver platsåtkomst ”Alltid” och att notiser är tillåtna. Om du inte vill ha notisen kan du stänga av notiser under Inställningar > Appar > Insaeng, eller ändra platsåtkomsten till ”När appen används”. Platskontrollen sker bara på enheten. Dina förflyttningar sparas inte och skickas inte någonstans."
+      },
+      {
+        "q": "Kan jag använda appen utan platsåtkomst?",
+        "a": "Ja. Du kan välja en plats på kartan själv för att lägga till och logga restauranger. Det enda du går miste om är att se din aktuella plats och påminnelsen efter besöket."
+      },
+      {
+        "q": "Platssökningen ger inga resultat",
+        "a": "Platssökning kräver internetanslutning. Prova ett annat namn eller ett kortare sökord. Hittar du fortfarande inget kan du välja platsen på kartan och lägga till den manuellt."
+      },
+      {
+        "q": "Var sparas mina loggar? Synkas de med andra enheter?",
+        "a": "Restauranger, besöksloggar och bilder sparas bara på den här iPhonen. Den nuvarande versionen har inte stöd för synkning med andra enheter, och iCloud-säkerhetskopiering och återställning i inställningarna fungerar inte ännu. Appens data ingår däremot i en fullständig säkerhetskopia av din iPhone (iCloud-säkerhetskopia eller säkerhetskopia på datorn)."
+      },
+      {
+        "q": "Jag vill radera alla mina loggar",
+        "a": "Tryck på ”Radera all data” i inställningarna från kartvyn så raderas restauranger och besöksloggar. Det går inte att ångra, så var försiktig. Om du vill att även bilderna ska försvinna helt tar du bort appen."
+      },
+      {
+        "q": "Finns mina loggar kvar om jag tar bort och installerar om appen?",
+        "a": "Nej. Eftersom loggarna bara sparas på enheten raderas de när du tar bort appen. Tänk på det innan du tar bort den."
+      },
+      {
+        "q": "Är verkligen allt gratis?",
+        "a": "Ja. Alla funktioner är gratis, utan reklam och utan konto. ”Stöd utvecklaren” i inställningarna är helt frivilligt och låser inte upp något."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Välj nästa restaurang\nutifrån dina egna anteckningar",
+    "cta": "Hämta gratis på App Store"
+  },
+  "ui": {
+    "skip": "Hoppa till innehållet",
+    "languages": "Språk",
+    "privacy": "Integritetspolicy",
+    "contact": "Hittar du inget svar ovan? Skicka ett meddelande direkt från Inställningar > Support i appen eller mejla {email}. Ange gärna appversion, iPhone-modell och vad du gjorde på vilken skärm, så kan vi hjälpa dig snabbare."
+  }
+}

@@ -1,145 +1,176 @@
 <!doctype html>
 <html lang="id">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="color-scheme" content="light dark">
-<title>Insaeng – catat restoran yang pernah kamu kunjungi di peta</title>
-<meta name="description" content="Aplikasi iPhone untuk mengumpulkan restoran yang sudah kamu kunjungi dan yang ingin kamu coba di satu peta. Catat menu, foto, bintang, dan penilaian rasa di setiap kunjungan. Dari catatanmu, terbentuklah profil selera dan Top 6 favoritmu.">
-<link rel="canonical" href="https://m1zz.github.io/RestaurantMap/id/">
-<link rel="alternate" hreflang="ko" href="https://m1zz.github.io/RestaurantMap/">
-<link rel="alternate" hreflang="en" href="https://m1zz.github.io/RestaurantMap/en/">
-<link rel="alternate" hreflang="ja" href="https://m1zz.github.io/RestaurantMap/ja/">
-<link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/RestaurantMap/zh-Hans/">
-<link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/RestaurantMap/zh-Hant/">
-<link rel="alternate" hreflang="ru" href="https://m1zz.github.io/RestaurantMap/ru/">
-<link rel="alternate" hreflang="es" href="https://m1zz.github.io/RestaurantMap/es/">
-<link rel="alternate" hreflang="de" href="https://m1zz.github.io/RestaurantMap/de/">
-<link rel="alternate" hreflang="fr" href="https://m1zz.github.io/RestaurantMap/fr/">
-<link rel="alternate" hreflang="it" href="https://m1zz.github.io/RestaurantMap/it/">
-<link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/RestaurantMap/pt-BR/">
-<link rel="alternate" hreflang="th" href="https://m1zz.github.io/RestaurantMap/th/">
-<link rel="alternate" hreflang="vi" href="https://m1zz.github.io/RestaurantMap/vi/">
-<link rel="alternate" hreflang="cs" href="https://m1zz.github.io/RestaurantMap/cs/">
-<link rel="alternate" hreflang="da" href="https://m1zz.github.io/RestaurantMap/da/">
-<link rel="alternate" hreflang="el" href="https://m1zz.github.io/RestaurantMap/el/">
-<link rel="alternate" hreflang="fi" href="https://m1zz.github.io/RestaurantMap/fi/">
-<link rel="alternate" hreflang="id" href="https://m1zz.github.io/RestaurantMap/id/">
-<link rel="alternate" hreflang="nb" href="https://m1zz.github.io/RestaurantMap/nb/">
-<link rel="alternate" hreflang="nl" href="https://m1zz.github.io/RestaurantMap/nl/">
-<link rel="alternate" hreflang="pl" href="https://m1zz.github.io/RestaurantMap/pl/">
-<link rel="alternate" hreflang="sv" href="https://m1zz.github.io/RestaurantMap/sv/">
-<link rel="alternate" hreflang="tr" href="https://m1zz.github.io/RestaurantMap/tr/">
-<link rel="alternate" hreflang="en-GB" href="https://m1zz.github.io/RestaurantMap/en/">
-<link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/RestaurantMap/">
-<link rel="stylesheet" href="../style.css">
-<link rel="icon" href="../icon.png">
-<link rel="apple-touch-icon" href="../icon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Insaeng: simpan tempat makan favoritmu di peta</title>
+  <meta name="description" content="Kumpulkan restoran yang sudah dan ingin dikunjungi di peta, lalu catat menu, foto, dan rasa. Gratis dan tersimpan hanya di iPhone-mu.">
+  <meta name="theme-color" content="#B8461F" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6755934548">
+  <link rel="canonical" href="https://m1zz.github.io/RestaurantMap/id/">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/RestaurantMap/">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/RestaurantMap/en/">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/RestaurantMap/ja/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/RestaurantMap/zh-Hans/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/RestaurantMap/zh-Hant/">
+  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/RestaurantMap/ru/">
+  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/RestaurantMap/es/">
+  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/RestaurantMap/de/">
+  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/RestaurantMap/fr/">
+  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/RestaurantMap/it/">
+  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/RestaurantMap/pt-BR/">
+  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/RestaurantMap/th/">
+  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/RestaurantMap/vi/">
+  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/RestaurantMap/cs/">
+  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/RestaurantMap/da/">
+  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/RestaurantMap/el/">
+  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/RestaurantMap/fi/">
+  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/RestaurantMap/id/">
+  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/RestaurantMap/nb/">
+  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/RestaurantMap/nl/">
+  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/RestaurantMap/pl/">
+  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/RestaurantMap/sv/">
+  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/RestaurantMap/tr/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/RestaurantMap/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Insaeng: simpan tempat makan favoritmu di peta">
+  <meta property="og:description" content="Kumpulkan restoran yang sudah dan ingin dikunjungi di peta, lalu catat menu, foto, dan rasa. Gratis dan tersimpan hanya di iPhone-mu.">
+  <meta property="og:url" content="https://m1zz.github.io/RestaurantMap/id/">
+  <meta property="og:image" content="https://m1zz.github.io/RestaurantMap/img/id/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#B8461F}@media (prefers-color-scheme:dark){:root{--accent:#F08A62}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-<div class="container">
-
-  <header class="site">
-    <img src="../icon.png" alt="Ikon aplikasi Insaeng">
-    <div>
-      <div class="title">Insaeng</div>
-      <div class="subtitle">Nilai dan peringkat makananmu</div>
-    </div>
+  <a class="skip" href="#main">Langsung ke konten</a>
+  <header class="bar">
+    <a class="brand" href="../id/"><img src="../icon.png" alt="" width="32" height="32">Insaeng</a>
+    <a class="lang-link" href="#languages">Bahasa</a>
   </header>
 
-  <nav class="langs" aria-label="Bahasa">
-    <a href="../index.html" hreflang="ko" lang="ko">한국어</a>
-    <a href="../en/index.html" hreflang="en" lang="en">English</a>
-    <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a>
-    <a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
-    <a href="../zh-Hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
-    <a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a>
-    <a href="../es/index.html" hreflang="es" lang="es">Español</a>
-    <a href="../de/index.html" hreflang="de" lang="de">Deutsch</a>
-    <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a>
-    <a href="../it/index.html" hreflang="it" lang="it">Italiano</a>
-    <a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
-    <a href="../th/index.html" hreflang="th" lang="th">ไทย</a>
-    <a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a>
-    <a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a>
-    <a href="../da/index.html" hreflang="da" lang="da">Dansk</a>
-    <a href="../el/index.html" hreflang="el" lang="el">Ελληνικά</a>
-    <a href="../fi/index.html" hreflang="fi" lang="fi">Suomi</a>
-    <a href="index.html" hreflang="id" lang="id" aria-current="true">Bahasa Indonesia</a>
-    <a href="../nb/index.html" hreflang="nb" lang="nb">Norsk bokmål</a>
-    <a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a>
-    <a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a>
-    <a href="../sv/index.html" hreflang="sv" lang="sv">Svenska</a>
-    <a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a>
-  </nav>
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>Tempat makan enak,<br>tak akan terlupa lagi</h1>
+        <p class="lead">Tandai di peta restoran yang sudah kamu datangi dan yang ingin dicoba, lalu setiap kunjungan catat menu yang dipesan, foto, dan rasanya. Saat bingung mau makan di mana, catatanmu sendiri punya jawabannya.</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6755934548">Unduh gratis di App Store</a><a class="try" href="#try">Coba nilai satu hidangan ↓</a></div>
+        <p class="muted small">Semua fitur gratis. Tanpa daftar akun, catatan tetap di iPhone-mu.</p>
+      </div>
+      <div class="phone"><img src="../img/id/01-map.jpg" alt="Tempat makan enak, tak akan terlupa lagi" width="720" height="1564" decoding="async"></div>
+    </section>
 
-  <nav class="pages" aria-label="Halaman">
-    <a href="index.html" aria-current="page">Beranda</a>
-    <a href="support.html">Dukungan</a>
-    <a href="privacy.html">Kebijakan Privasi</a>
-  </nav>
 
-  <main>
-    <h1>Jangan lupakan lagi restoran favoritmu</h1>
-    <p class="lead">
-      Insaeng mengumpulkan restoran yang sudah kamu kunjungi dan yang ingin kamu datangi suatu hari nanti di satu peta.
-      Setiap kali berkunjung, catat menu yang kamu makan, foto, bintang, dan penilaian rasa.
-      Makin banyak catatan, makin jelas pula peta kuliner pribadimu dan seleramu.
-    </p>
+    <section class="reveal" id="try">
+      <h2>Coba nilai satu hidangan</h2>
+      <p class="muted">Pilih jenis makanan, lalu atur seberapa kuat tiap rasa dan seberapa kamu suka. Kriteria dan perhitungannya sama dengan kunjungan di aplikasi.</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;Coba nilai satu hidangan&quot;, &quot;lead&quot;: &quot;Pilih jenis makanan, lalu atur seberapa kuat tiap rasa dan seberapa kamu suka. Kriteria dan perhitungannya sama dengan kunjungan di aplikasi.&quot;, &quot;note&quot;: &quot;Seperti di aplikasi, skornya separuh dari bintang dan separuh dari kepuasan. Tidak ada yang disimpan di sini.&quot;, &quot;types&quot;: [{&quot;emoji&quot;: &quot;🍽️&quot;, &quot;name&quot;: &quot;Umum&quot;, &quot;attrs&quot;: [[&quot;🌶️&quot;, &quot;Kepedasan&quot;, &quot;Tidak pedas ↔ Pedas&quot;], [&quot;💪&quot;, &quot;Kekuatan rasa&quot;, &quot;Ringan ↔ Kuat&quot;], [&quot;🍯&quot;, &quot;Rasa manis&quot;, &quot;Tidak suka ↔ Suka&quot;], [&quot;🧂&quot;, &quot;Rasa asin&quot;, &quot;Hambar ↔ Asin&quot;], [&quot;🥓&quot;, &quot;Gurih&quot;, &quot;Ringan ↔ Gurih&quot;], [&quot;🌿&quot;, &quot;Rasa alami&quot;, &quot;Berbumbu ↔ Alami&quot;]]}, {&quot;emoji&quot;: &quot;🥩&quot;, &quot;name&quot;: &quot;Steak&quot;, &quot;attrs&quot;: [[&quot;🔥&quot;, &quot;Kematangan&quot;, &quot;Rare ↔ Well-done&quot;], [&quot;🥩&quot;, &quot;Kandungan jus&quot;, &quot;Kering ↔ Juicy&quot;], [&quot;✨&quot;, &quot;Keempukan&quot;, &quot;Alot ↔ Empuk&quot;], [&quot;🧂&quot;, &quot;Bumbu&quot;, &quot;Hambar ↔ Asin&quot;], [&quot;🌿&quot;, &quot;Aroma daging&quot;, &quot;Lemah ↔ Kuat&quot;], [&quot;🍖&quot;, &quot;Marbling&quot;, &quot;Sedikit ↔ Banyak&quot;]]}, {&quot;emoji&quot;: &quot;🍣&quot;, &quot;name&quot;: &quot;Sushi&quot;, &quot;attrs&quot;: [[&quot;🍚&quot;, &quot;Shari (nasi)&quot;, &quot;Lembek ↔ Padat&quot;], [&quot;🐟&quot;, &quot;Neta (topping)&quot;, &quot;Kesegaran&quot;], [&quot;🌿&quot;, &quot;Wasabi&quot;, &quot;Lemah ↔ Kuat&quot;], [&quot;⚖️&quot;, &quot;Keseimbangan&quot;, &quot;Timpang ↔ Harmonis&quot;], [&quot;✋&quot;, &quot;Kepalan&quot;, &quot;Longgar ↔ Padat&quot;], [&quot;🌡️&quot;, &quot;Suhu&quot;, &quot;Dingin ↔ Hangat&quot;]]}, {&quot;emoji&quot;: &quot;🍜&quot;, &quot;name&quot;: &quot;Ramen&quot;, &quot;attrs&quot;: [[&quot;🥣&quot;, &quot;Kuah&quot;, &quot;Kedalaman/umami&quot;], [&quot;🍜&quot;, &quot;Mi&quot;, &quot;Lembut ↔ Kenyal&quot;], [&quot;🥓&quot;, &quot;Chashu&quot;, &quot;Kering ↔ Empuk&quot;], [&quot;🥚&quot;, &quot;Topping&quot;, &quot;Sedikit ↔ Melimpah&quot;], [&quot;🔥&quot;, &quot;Suhu&quot;, &quot;Hangat ↔ Panas&quot;], [&quot;⚖️&quot;, &quot;Keseimbangan&quot;, &quot;Timpang ↔ Harmonis&quot;]]}, {&quot;emoji&quot;: &quot;🍕&quot;, &quot;name&quot;: &quot;Piza&quot;, &quot;attrs&quot;: [[&quot;🫓&quot;, &quot;Adonan&quot;, &quot;Keras ↔ Kenyal&quot;], [&quot;🍅&quot;, &quot;Saus&quot;, &quot;Sedikit ↔ Banyak&quot;], [&quot;🧀&quot;, &quot;Keju&quot;, &quot;Sedikit ↔ Banyak&quot;], [&quot;🔥&quot;, &quot;Kematangan&quot;, &quot;Kurang matang ↔ Renyah&quot;], [&quot;🌟&quot;, &quot;Topping&quot;, &quot;Sedikit ↔ Melimpah&quot;], [&quot;⚖️&quot;, &quot;Keseimbangan&quot;, &quot;Timpang ↔ Harmonis&quot;]]}, {&quot;emoji&quot;: &quot;🍷&quot;, &quot;name&quot;: &quot;Anggur&quot;, &quot;attrs&quot;: [[&quot;💪&quot;, &quot;Kekentalan&quot;, &quot;Ringan ↔ Pekat&quot;], [&quot;🍇&quot;, &quot;Tanin&quot;, &quot;Lembut ↔ Sepat&quot;], [&quot;🍋&quot;, &quot;Keasaman&quot;, &quot;Rendah ↔ Tinggi&quot;], [&quot;🌸&quot;, &quot;Aroma&quot;, &quot;Sederhana ↔ Kompleks&quot;], [&quot;✨&quot;, &quot;Akhir rasa&quot;, &quot;Singkat ↔ Lama&quot;], [&quot;⚖️&quot;, &quot;Keseimbangan&quot;, &quot;Timpang ↔ Harmonis&quot;]]}, {&quot;emoji&quot;: &quot;☕&quot;, &quot;name&quot;: &quot;Kopi&quot;, &quot;attrs&quot;: [[&quot;🍋&quot;, &quot;Keasaman&quot;, &quot;Rendah ↔ Cerah&quot;], [&quot;💪&quot;, &quot;Kekentalan&quot;, &quot;Ringan ↔ Pekat&quot;], [&quot;🌸&quot;, &quot;Cita rasa&quot;, &quot;Sederhana ↔ Kompleks&quot;], [&quot;✨&quot;, &quot;Sisa rasa&quot;, &quot;Singkat ↔ Lama&quot;], [&quot;🍯&quot;, &quot;Rasa manis&quot;, &quot;Pahit ↔ Manis&quot;], [&quot;⚖️&quot;, &quot;Keseimbangan&quot;, &quot;Timpang ↔ Harmonis&quot;]]}], &quot;rating&quot;: &quot;Nilai&quot;, &quot;intensity&quot;: &quot;Intensitas rasa&quot;, &quot;sat&quot;: &quot;Kepuasan&quot;, &quot;low&quot;: &quot;Tidak puas&quot;, &quot;high&quot;: &quot;Sangat puas&quot;, &quot;shape&quot;: &quot;Profil rasa&quot;, &quot;score&quot;: &quot;Skor Michelin Riio&quot;}"></div>
+    </section>
 
-    <h2>Fitur utama</h2>
-    <div class="features">
-      <div class="card">
-        <h3>Cari di peta, langsung simpan</h3>
-        <p>Cari restoran di peta atau ketuk tempat di sekitar untuk langsung memasukkannya ke daftarmu. Kamu juga bisa menambahkannya sendiri di lokasimu saat ini atau di titik yang kamu pilih di peta.</p>
-      </div>
-      <div class="card">
-        <h3>Sudah dikunjungi dan Ingin ke sana</h3>
-        <p>Pisahkan restoran yang sudah kamu kunjungi dari yang ingin kamu coba suatu hari nanti. Setelah ke sana, tinggal pindahkan ke Sudah dikunjungi.</p>
-      </div>
-      <div class="card">
-        <h3>Catatan kunjungan</h3>
-        <p>Catat tanggal kunjungan, menu yang kamu makan, foto, bintang, dan catatan. Kalau menu restoran sudah kamu daftarkan, di kunjungan berikutnya kamu tinggal memilihnya.</p>
-      </div>
-      <div class="card">
-        <h3>Penilaian rasa yang detail</h3>
-        <p>Nilai secara terpisah seberapa kuat rasanya – pedas, asin, manis – dan seberapa kamu menyukainya. Steak, sushi, dan ramen bisa dinilai dengan kriteria yang pas untuk masing-masing: tingkat kematangan, nasi, dan kuah.</p>
-      </div>
-      <div class="card">
-        <h3>Michelin-ku: Top 6</h3>
-        <p>Beri peringkat enam restoran paling favoritmu dan kumpulkan di satu tempat. Saat ada yang bertanya di mana tempat makan enak, langsung tunjukkan.</p>
-      </div>
-      <div class="card">
-        <h3>Profil selera</h3>
-        <p>Berdasarkan penilaian rasa yang kamu kumpulkan, kamu bisa melihat sekilas rasa dan gaya makanan seperti apa yang kamu sukai.</p>
-      </div>
-      <div class="card">
-        <h3>Pengingat setelah berkunjung</h3>
-        <p>Setelah kamu berada di restoran yang tersimpan lalu pergi, tak lama kemudian muncul notifikasi “Bagaimana kunjunganmu hari ini?” supaya kamu tidak lupa mencatatnya. Kalau tidak mau, kamu bisa mematikannya.</p>
-      </div>
-      <div class="card">
-        <h3>Petunjuk arah dan telepon</h3>
-        <p>Buka restoran yang tersimpan langsung di Apple Maps, KakaoMap, atau NAVER Map, dan ketuk nomor teleponnya untuk langsung menelepon.</p>
-      </div>
-    </div>
+    <section class="problem reveal">
+      <h2>Tempat itu enak, tapi dulu pesan apa, ya?</h2>
+      <p>Kamu ingat restoran itu enak, tapi namanya samar, dan apa yang dipesan atau apakah kuahnya keasinan sudah lupa sama sekali. Akhirnya cari lagi dan baca ulasan orang lain. Insaeng menyimpan apa yang kamu cicipi sendiri di peta, supaya pilihan berikutnya berdasarkan pengalamanmu.</p>
+    </section>
 
-    <h2>Catatanmu tetap di iPhone-mu</h2>
-    <p>
-      Tanpa pendaftaran akun. Daftar restoran, catatan kunjungan, dan foto hanya tersimpan di iPhone-mu.
-      Selengkapnya, baca <a href="privacy.html">Kebijakan Privasi</a>.
-    </p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Sudah dikunjungi, Ingin ke sana, dan Michelin-mu sendiri</h2>
+        <p>Cari di peta atau ketuk tempat terdekat, langsung tersimpan. Pisahkan tempat yang sudah didatangi dari yang ingin dicoba, dan urutkan enam favoritmu dari 1 sampai 6.<br>Kalau ada yang minta rekomendasi, tinggal tunjukkan daftarnya.</p>
+      </div>
+      <div class="phone"><img src="../img/id/02-list.jpg" alt="Sudah dikunjungi, Ingin ke sana, dan Michelin-mu sendiri" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <p><a href="https://apps.apple.com/app/id6755934548">Unduh Insaeng di App Store</a></p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Pertanyaan yang cocok dengan hidangannya</h2>
+        <p>Seberapa kuat tiap rasa, seperti pedas atau asin, diatur dengan penggeser, dan seberapa kamu suka dinilai terpisah dari 1 sampai 5. Steak soal tingkat kematangan dan juiciness, sushi soal nasi dan ikan, ramen soal kuah dan mi.<br>Setiap kunjungan juga menyimpan menu, foto, bintang, dan catatan.</p>
+      </div>
+      <div class="phone"><img src="../img/id/04-taste-review.jpg" alt="Pertanyaan yang cocok dengan hidangannya" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <div class="contact">
-      Ada yang kurang nyaman atau fitur yang kamu inginkan? Kabari kami di <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a>.
-      Jawaban atas pertanyaan umum ada di halaman <a href="support.html">Dukungan</a>.
-    </div>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Tempat yang layak didatangi lagi, terlihat dari angka</h2>
+        <p>Setelah beberapa kunjungan, tiap restoran menampilkan ringkasan dari rata-rata semua kunjungan dan Skor Michelin Riio dari 100 yang menggabungkan bintang dan kepuasan.<br>Saat kamu meninggalkan restoran yang tersimpan, tak lama kemudian muncul pengingat untuk mencatat kunjungan.</p>
+      </div>
+      <div class="phone"><img src="../img/id/03-detail.jpg" alt="Tempat yang layak didatangi lagi, terlihat dari angka" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="reveal">
+      <h2>Mulai dalam tiga langkah</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>Simpan restoran</h3><p>Cari di peta atau ketuk tempat terdekat.</p></li>
+<li class="card"><span class="n">2</span><h3>Catat kunjunganmu</h3><p>Menu, foto, bintang, dan rasa. Penilaian rasa boleh dilewati.</p></li>
+<li class="card"><span class="n">3</span><h3>Pilih tujuan berikutnya</h3><p>Lihat Top 6 dan skornya, lalu buka rute di Apple Maps, Kakao Map, atau Naver Map.</p></li></ol>
+    </section>
+
+    <section class="reveal" id="commands">
+      <h2>Yang dinilai untuk tiap jenis makanan</h2>
+      <div class="card table">
+        <dl><div><dt>🍽️ Umum</dt><dd>Kepedasan, Kekuatan rasa, Rasa manis, Rasa asin, Gurih, Rasa alami</dd></div><div><dt>🥩 Steak</dt><dd>Kematangan, Kandungan jus, Keempukan, Bumbu, Aroma daging, Marbling</dd></div><div><dt>🍣 Sushi</dt><dd>Shari (nasi), Neta (topping), Wasabi, Keseimbangan, Kepalan, Suhu</dd></div><div><dt>🍜 Ramen</dt><dd>Kuah, Mi, Chashu, Topping, Suhu, Keseimbangan</dd></div><div><dt>🍕 Piza</dt><dd>Adonan, Saus, Keju, Kematangan, Topping, Keseimbangan</dd></div><div><dt>🍷 Anggur</dt><dd>Kekentalan, Tanin, Keasaman, Aroma, Akhir rasa, Keseimbangan</dd></div><div><dt>☕ Kopi</dt><dd>Keasaman, Kekentalan, Cita rasa, Sisa rasa, Rasa manis, Keseimbangan</dd></div></dl>
+      </div>
+      <p class="muted">Makanan lain dinilai dengan kriteria umum di baris pertama. Kamu juga bisa membuat kategori sendiri.</p>
+    </section>
+
+
+
+    <section class="reveal" id="faq">
+      <h2>Pertanyaan umum</h2>
+      <div class="faq"><details><summary>Bagaimana cara menambahkan restoran?</summary><p>Ketik nama restoran di kolom pencarian di bagian atas peta, lalu ketuk “Tambahkan ke restoranku” di hasil pencarian. Kamu juga bisa langsung menambahkannya dengan mengetuk tempat di sekitar yang terlihat di peta. Kalau tempatnya tidak muncul di pencarian, tambahkan sendiri di lokasimu saat ini atau di titik yang kamu pilih di peta.</p></details>
+<details><summary>Apa itu Sudah dikunjungi, Ingin ke sana, dan Top 6?</summary><p>Sudah dikunjungi – restoran yang sudah pernah kamu datangi. Kamu bisa mencatat kunjungannya. Ingin ke sana – restoran yang ingin kamu coba suatu hari nanti. Setelah berkunjung, ubah menjadi Sudah dikunjungi di halaman detail restoran. Top 6 (Michelin-ku) – enam restoran paling favoritmu dengan peringkat 1 sampai 6. Restoran di daftar Ingin ke sana tidak bisa dimasukkan ke Top 6.</p></details>
+<details><summary>Apakah penilaian rasa wajib diisi?</summary><p>Tidak, itu opsional. Kalau dinilai, intensitas rasa dan kepuasan masuk ke ringkasan restoran dan dihitung dalam Skor Michelin Riio.</p></details>
+<details><summary>Kapan notifikasi “Bagaimana kunjunganmu hari ini?” muncul?</summary><p>Kalau kamu berada di dekat restoran yang tersimpan lebih dari 5 menit lalu pergi, notifikasi muncul sekitar 40 menit kemudian. Fitur ini memerlukan izin lokasi “Selalu” dan izin notifikasi. Kalau tidak ingin menerima notifikasi, matikan notifikasi di Pengaturan &gt; Aplikasi &gt; Insaeng, atau ubah lokasi menjadi “Saat Menggunakan App”. Pengecekan lokasi hanya dilakukan di perangkat. Rute perjalananmu tidak disimpan dan tidak dikirim ke mana pun.</p></details>
+<details><summary>Apakah aplikasi bisa dipakai tanpa izin lokasi?</summary><p>Bisa. Kamu bisa memilih titik sendiri di peta untuk menambahkan restoran dan mencatat kunjungan. Hanya tampilan lokasi saat ini dan pengingat setelah berkunjung yang tidak bisa dipakai.</p></details>
+<details><summary>Hasil pencarian tempat tidak muncul</summary><p>Pencarian tempat memerlukan koneksi internet. Coba cari lagi dengan nama lain atau kata kunci yang lebih pendek. Kalau tetap tidak ada, pilih titik di peta dan tambahkan sendiri.</p></details>
+<details><summary>Di mana catatanku disimpan? Apakah tersinkron dengan perangkat lain?</summary><p>Restoran, catatan kunjungan, dan foto hanya tersimpan di iPhone ini. Versi saat ini belum mendukung sinkronisasi dengan perangkat lain, dan fitur cadangkan dan pulihkan iCloud di pengaturan juga belum berfungsi. Namun, data aplikasi ikut tersimpan dalam cadangan iPhone secara keseluruhan (cadangan iCloud atau cadangan di komputer).</p></details>
+<details><summary>Aku ingin menghapus semua catatan</summary><p>Ketuk “Hapus semua data” di pengaturan layar peta, maka restoran dan catatan kunjungan akan terhapus. Tindakan ini tidak dapat dibatalkan, jadi hati-hati. Untuk menghapus foto juga tanpa sisa, hapus aplikasinya.</p></details>
+<details><summary>Kalau aplikasi dihapus lalu dipasang lagi, apakah catatanku masih ada?</summary><p>Tidak. Catatan hanya tersimpan di perangkat, jadi ikut terhapus saat aplikasi dihapus. Pastikan dulu sebelum menghapus aplikasi.</p></details>
+<details><summary>Benar semuanya gratis?</summary><p>Benar. Semua fitur gratis, tanpa iklan dan tanpa akun. “Dukung Pengembang” di pengaturan sepenuhnya opsional dan tidak membuka fitur tambahan.</p></details></div>
+      <p class="contact">Kalau jawabannya tidak ada di atas, kirim pesan langsung dari aplikasi di Pengaturan &gt; Dukungan, atau kirim email ke <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a>. Sertakan versi aplikasi, model iPhone, serta apa yang kamu lakukan di layar mana, supaya kami bisa mengeceknya lebih cepat.</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>Pilih restoran berikutnya<br>dari catatanmu sendiri</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6755934548">Unduh gratis di App Store</a>
+    </section>
   </main>
 
-  <footer class="site">
-    © 2026 Leeo · <a href="support.html">Dukungan</a> · <a href="privacy.html">Kebijakan Privasi</a>
+  <footer>
+    <nav id="languages" class="langs" aria-label="Bahasa"><a href="../" hreflang="ko" lang="ko">한국어</a>
+<a href="../en/" hreflang="en" lang="en">English</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../id/" hreflang="id" lang="id" aria-current="page">Bahasa Indonesia</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a></nav>
+    <p><a href="privacy.html">Kebijakan Privasi</a> · <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a> · © 2026 Leeo</p>
   </footer>
-</div>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

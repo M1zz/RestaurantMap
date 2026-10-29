@@ -1,0 +1,403 @@
+{
+  "title": "Insaeng: miejsca, gdzie dobrze zjadłeś, na jednej mapie",
+  "description": "Zbieraj na mapie restauracje odwiedzone i do odwiedzenia, a po każdej wizycie zapisuj danie, zdjęcia i smak. Za darmo, tylko na iPhonie.",
+  "hero": {
+    "headline": "Miejsc, gdzie było pysznie,\njuż nie zapomnisz",
+    "lead": "Zaznacz na mapie restauracje, w których byłeś, i te, które chcesz odwiedzić, a przy każdej wizycie zapisz, co zamówiłeś, zdjęcia i smak. Gdy nie wiesz, gdzie zjeść, odpowiedź masz we własnych notatkach.",
+    "cta": "Pobierz za darmo z App Store",
+    "note": "Wszystkie funkcje są bezpłatne. Bez rejestracji, wszystko zostaje na Twoim iPhonie."
+  },
+  "demo": {
+    "title": "Oceń danie",
+    "lead": "Wybierz rodzaj jedzenia i ustaw, jak intensywny był każdy smak i jak bardzo Ci smakował. Te same kryteria i te same obliczenia co przy wizycie w aplikacji.",
+    "note": "Tak jak w aplikacji wynik to w połowie gwiazdki, w połowie zadowolenie. Nic tu nie jest zapisywane.",
+    "types": [
+      {
+        "emoji": "🍽️",
+        "name": "Ogólne",
+        "attrs": [
+          [
+            "🌶️",
+            "Ostrość",
+            "Łagodne ↔ Ostre"
+          ],
+          [
+            "💪",
+            "Wyrazistość",
+            "Łagodny ↔ Intensywny"
+          ],
+          [
+            "🍯",
+            "Słodycz",
+            "Nie lubię ↔ Lubię"
+          ],
+          [
+            "🧂",
+            "Słoność",
+            "Mdłe ↔ Słone"
+          ],
+          [
+            "🥓",
+            "Tłustość",
+            "Lekki ↔ Treściwy"
+          ],
+          [
+            "🌿",
+            "Naturalny smak",
+            "Doprawione ↔ Naturalne"
+          ]
+        ]
+      },
+      {
+        "emoji": "🥩",
+        "name": "Stek",
+        "attrs": [
+          [
+            "🔥",
+            "Wysmażenie",
+            "Krwisty ↔ Wysmażony"
+          ],
+          [
+            "🥩",
+            "Soczystość",
+            "Suche ↔ Soczyste"
+          ],
+          [
+            "✨",
+            "Kruchość",
+            "Twarde ↔ Kruche"
+          ],
+          [
+            "🧂",
+            "Przyprawienie",
+            "Mdłe ↔ Słone"
+          ],
+          [
+            "🌿",
+            "Aromat mięsa",
+            "Słaby ↔ Mocny"
+          ],
+          [
+            "🍖",
+            "Marmurkowatość",
+            "Mało ↔ Dużo"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍣",
+        "name": "Sushi",
+        "attrs": [
+          [
+            "🍚",
+            "Shari (ryż)",
+            "Rozmiękły ↔ Zwarty"
+          ],
+          [
+            "🐟",
+            "Neta (ryba)",
+            "Świeżość"
+          ],
+          [
+            "🌿",
+            "Wasabi",
+            "Słaby ↔ Mocny"
+          ],
+          [
+            "⚖️",
+            "Balans",
+            "Niezrównoważone ↔ Harmonijne"
+          ],
+          [
+            "✋",
+            "Formowanie",
+            "Luźne ↔ Zwarte"
+          ],
+          [
+            "🌡️",
+            "Temperatura",
+            "Zimne ↔ Ciepłe"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍜",
+        "name": "Ramen",
+        "attrs": [
+          [
+            "🥣",
+            "Bulion",
+            "Głębia/umami"
+          ],
+          [
+            "🍜",
+            "Makaron",
+            "Miękki ↔ Sprężysty"
+          ],
+          [
+            "🥓",
+            "Chashu",
+            "Suche ↔ Kruche"
+          ],
+          [
+            "🥚",
+            "Dodatki",
+            "Skąpo ↔ Obficie"
+          ],
+          [
+            "🔥",
+            "Temperatura",
+            "Letnie ↔ Gorące"
+          ],
+          [
+            "⚖️",
+            "Balans",
+            "Niezrównoważone ↔ Harmonijne"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍕",
+        "name": "Pizza",
+        "attrs": [
+          [
+            "🫓",
+            "Ciasto",
+            "Twarde ↔ Puszyste"
+          ],
+          [
+            "🍅",
+            "Sos",
+            "Mało ↔ Dużo"
+          ],
+          [
+            "🧀",
+            "Ser",
+            "Mało ↔ Dużo"
+          ],
+          [
+            "🔥",
+            "Wysmażenie",
+            "Niedopieczone ↔ Chrupiące"
+          ],
+          [
+            "🌟",
+            "Dodatki",
+            "Skąpo ↔ Obficie"
+          ],
+          [
+            "⚖️",
+            "Balans",
+            "Niezrównoważone ↔ Harmonijne"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍷",
+        "name": "Wino",
+        "attrs": [
+          [
+            "💪",
+            "Ciało",
+            "Lekkie ↔ Pełne"
+          ],
+          [
+            "🍇",
+            "Taniny",
+            "Łagodne ↔ Cierpkie"
+          ],
+          [
+            "🍋",
+            "Kwasowość",
+            "Niska ↔ Wysoka"
+          ],
+          [
+            "🌸",
+            "Aromat",
+            "Prosty ↔ Złożony"
+          ],
+          [
+            "✨",
+            "Finisz",
+            "Krótki ↔ Długi"
+          ],
+          [
+            "⚖️",
+            "Balans",
+            "Niezrównoważone ↔ Harmonijne"
+          ]
+        ]
+      },
+      {
+        "emoji": "☕",
+        "name": "Kawa",
+        "attrs": [
+          [
+            "🍋",
+            "Kwasowość",
+            "Niska ↔ Wyrazista"
+          ],
+          [
+            "💪",
+            "Ciało",
+            "Lekkie ↔ Pełne"
+          ],
+          [
+            "🌸",
+            "Smak",
+            "Prosty ↔ Złożony"
+          ],
+          [
+            "✨",
+            "Posmak",
+            "Krótki ↔ Długi"
+          ],
+          [
+            "🍯",
+            "Słodycz",
+            "Gorzkie ↔ Słodkie"
+          ],
+          [
+            "⚖️",
+            "Balans",
+            "Niezrównoważone ↔ Harmonijne"
+          ]
+        ]
+      }
+    ],
+    "rating": "Ocena",
+    "intensity": "Intensywność smaku",
+    "sat": "Zadowolenie",
+    "low": "Niezadowolony",
+    "high": "Bardzo zadowolony",
+    "shape": "Profil smaku",
+    "score": "Wynik Riio Michelin"
+  },
+  "problem": {
+    "title": "Było pyszne, ale co ja wtedy zamówiłem?",
+    "text": "Pamiętasz, że restauracja Ci się podobała, ale nazwa się zaciera, a co zamówiłeś albo czy rosół był za słony, nie pamiętasz wcale. Więc znów szukasz i czytasz opinie obcych ludzi. Insaeng zapisuje na mapie to, czego sam spróbowałeś, żeby kolejny wybór opierał się na Twoim doświadczeniu."
+  },
+  "features": [
+    {
+      "title": "Odwiedzone, Chcę odwiedzić i Twój własny Michelin",
+      "text": "Wyszukaj na mapie albo stuknij miejsce w pobliżu i od razu jest zapisane. Trzymaj osobno miejsca, w których byłeś, i te do spróbowania, a sześć ulubionych ułóż od 1 do 6.\nGdy ktoś zapyta o polecenie, po prostu pokaż listę.",
+      "shot": "02-list"
+    },
+    {
+      "title": "Pytania dopasowane do dania",
+      "text": "Intensywność smaku, np. ostrość czy słoność, ustawiasz suwakiem, a to, jak Ci smakowało, oceniasz osobno od 1 do 5. Przy steku liczy się wysmażenie i soczystość, przy sushi ryż i ryba, przy ramenie bulion i makaron.\nKażda wizyta zapisuje też danie, zdjęcia, gwiazdki i notatki.",
+      "shot": "04-taste-review"
+    },
+    {
+      "title": "Dokąd warto wrócić, widać w liczbach",
+      "text": "Po kilku wizytach każda restauracja pokazuje ocenę ogólną ze średniej wszystkich wizyt i Wynik Riio Michelin w skali do 100, który łączy gwiazdki i zadowolenie.\nGdy wychodzisz z zapisanej restauracji, chwilę później przychodzi przypomnienie, żeby zapisać wizytę.",
+      "shot": "03-detail"
+    }
+  ],
+  "steps": {
+    "title": "Zacznij w trzech krokach",
+    "items": [
+      {
+        "title": "Zapisz restaurację",
+        "text": "Wyszukaj ją na mapie albo stuknij miejsce w pobliżu."
+      },
+      {
+        "title": "Zapisz wizytę",
+        "text": "Danie, zdjęcia, gwiazdki i smak. Ocena smaku jest opcjonalna."
+      },
+      {
+        "title": "Wybierz kolejną",
+        "text": "Sprawdź top 6 i wyniki, a potem jedź z Mapami Apple, Kakao Map lub Naver Map."
+      }
+    ]
+  },
+  "reference": {
+    "title": "Co oceniasz przy każdym rodzaju jedzenia",
+    "rows": [
+      [
+        "🍽️ Ogólne",
+        "Ostrość, Wyrazistość, Słodycz, Słoność, Tłustość, Naturalny smak"
+      ],
+      [
+        "🥩 Stek",
+        "Wysmażenie, Soczystość, Kruchość, Przyprawienie, Aromat mięsa, Marmurkowatość"
+      ],
+      [
+        "🍣 Sushi",
+        "Shari (ryż), Neta (ryba), Wasabi, Balans, Formowanie, Temperatura"
+      ],
+      [
+        "🍜 Ramen",
+        "Bulion, Makaron, Chashu, Dodatki, Temperatura, Balans"
+      ],
+      [
+        "🍕 Pizza",
+        "Ciasto, Sos, Ser, Wysmażenie, Dodatki, Balans"
+      ],
+      [
+        "🍷 Wino",
+        "Ciało, Taniny, Kwasowość, Aromat, Finisz, Balans"
+      ],
+      [
+        "☕ Kawa",
+        "Kwasowość, Ciało, Smak, Posmak, Słodycz, Balans"
+      ]
+    ],
+    "note": "Pozostałe dania oceniasz według ogólnych kryteriów z pierwszego wiersza. Możesz też tworzyć własne kategorie."
+  },
+  "faq": {
+    "title": "Częste pytania",
+    "items": [
+      {
+        "q": "Jak dodać restaurację?",
+        "a": "Wpisz nazwę restauracji w polu wyszukiwania u góry mapy i w wynikach stuknij „Dodaj do moich restauracji”. Możesz też stuknąć miejsce w pobliżu widoczne na mapie i od razu je dodać. Lokal, którego nie ma w wynikach wyszukiwania, dodasz ręcznie w miejscu, w którym jesteś, lub w punkcie wybranym na mapie."
+      },
+      {
+        "q": "Czym są „Odwiedzone”, „Do odwiedzenia” i Top 6?",
+        "a": "Odwiedzone: restauracje, w których już byłeś. Możesz zapisywać w nich wizyty. Do odwiedzenia: restauracje, które chcesz kiedyś wypróbować. Po wizycie zmień status na „Odwiedzone” w szczegółach restauracji. Top 6 (moje Michelin): ranking sześciu restauracji, które cenisz najbardziej, od 1. do 6. miejsca. Miejsc z listy „Do odwiedzenia” nie można dodać do Top 6."
+      },
+      {
+        "q": "Czy ocena smaku jest obowiązkowa?",
+        "a": "Nie, to opcjonalne. Jeśli ocenisz, intensywność smaku i zadowolenie trafią do oceny ogólnej restauracji i liczą się do Wyniku Riio Michelin."
+      },
+      {
+        "q": "Kiedy pojawia się powiadomienie „Jak było dzisiaj?”",
+        "a": "Jeśli spędzisz ponad 5 minut w pobliżu zapisanej restauracji i potem odejdziesz, powiadomienie pojawi się po około 40 minutach. Ta funkcja wymaga dostępu do lokalizacji „Zawsze” i zgody na powiadomienia. Jeśli nie chcesz tych powiadomień, wyłącz je w Ustawienia > Aplikacje > Insaeng albo zmień dostęp do lokalizacji na „Podczas używania aplikacji”. Lokalizacja jest sprawdzana wyłącznie na urządzeniu. Trasy nie są zapisywane ani nigdzie wysyłane."
+      },
+      {
+        "q": "Czy mogę korzystać z aplikacji bez dostępu do lokalizacji?",
+        "a": "Tak. Restauracje możesz dodawać i opisywać, wybierając ich położenie bezpośrednio na mapie. Niedostępne będą tylko wyświetlanie bieżącej lokalizacji i przypomnienia po wizycie."
+      },
+      {
+        "q": "Wyszukiwanie miejsc nic nie zwraca",
+        "a": "Wyszukiwanie miejsc wymaga połączenia z internetem. Spróbuj innej nazwy lub krótszego słowa kluczowego. Jeśli nadal nic nie ma, wybierz miejsce na mapie i dodaj restaurację ręcznie."
+      },
+      {
+        "q": "Gdzie są zapisywane moje wpisy? Czy synchronizują się z innymi urządzeniami?",
+        "a": "Restauracje, dziennik wizyt i zdjęcia są przechowywane wyłącznie na tym iPhonie. Obecna wersja nie obsługuje synchronizacji z innymi urządzeniami, a kopia zapasowa i przywracanie z iCloud w ustawieniach jeszcze nie działają. Dane aplikacji trafiają natomiast do pełnej kopii zapasowej iPhone’a (w iCloud lub na komputerze)."
+      },
+      {
+        "q": "Chcę usunąć wszystkie wpisy",
+        "a": "W ustawieniach na ekranie mapy stuknij „Usuń wszystkie dane”, aby usunąć restauracje i dziennik wizyt. Tej operacji nie można cofnąć. Aby usunąć również wszystkie zdjęcia, usuń aplikację."
+      },
+      {
+        "q": "Czy po usunięciu i ponownej instalacji aplikacji moje wpisy zostaną?",
+        "a": "Nie. Wpisy są przechowywane tylko na urządzeniu, więc znikają razem z aplikacją. Zastanów się dobrze, zanim ją usuniesz."
+      },
+      {
+        "q": "Czy naprawdę wszystko jest za darmo?",
+        "a": "Tak. Wszystkie funkcje są bezpłatne, bez reklam i bez konta. „Wesprzyj twórcę” w ustawieniach jest całkowicie dobrowolne i niczego nie odblokowuje."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Kolejną restaurację\nwybierz z własnych notatek",
+    "cta": "Pobierz za darmo z App Store"
+  },
+  "ui": {
+    "skip": "Przejdź do treści",
+    "languages": "Język",
+    "privacy": "Polityka prywatności",
+    "contact": "Jeśli nie znalazłeś tu odpowiedzi, napisz do nas bezpośrednio z aplikacji w Ustawienia > Pomoc albo wyślij e-mail na {email}. Podaj wersję aplikacji, model iPhone’a oraz to, na jakim ekranie i co robiłeś, a szybciej zajmiemy się sprawą."
+  }
+}

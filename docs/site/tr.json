@@ -1,0 +1,403 @@
+{
+  "title": "Insaeng: lezzetli yemek yediğin yerler tek haritada",
+  "description": "Gittiğin ve gitmek istediğin restoranları haritada topla, her ziyarette yemeği, fotoğrafları ve lezzeti kaydet. Ücretsiz, iPhone’unda kalır.",
+  "hero": {
+    "headline": "Lezzetli yerleri\nartık unutmayacaksın",
+    "lead": "Gittiğin ve denemek istediğin restoranları haritaya işaretle, her ziyarette ne sipariş ettiğini, fotoğrafları ve lezzeti kaydet. Nerede yesem diye düşündüğünde cevap kendi notlarında.",
+    "cta": "App Store’dan ücretsiz indir",
+    "note": "Tüm özellikler ücretsiz. Üyelik yok, kayıtlar iPhone’unda kalır."
+  },
+  "demo": {
+    "title": "Bir tabağı puanla",
+    "lead": "Bir yemek türü seç, her tadın ne kadar yoğun olduğunu ve ne kadar beğendiğini ayarla. Uygulamadaki ziyaretle aynı ölçütler, aynı hesap.",
+    "note": "Uygulamadaki gibi puanın yarısı yıldızdan, yarısı memnuniyetten gelir. Burada hiçbir şey kaydedilmez.",
+    "types": [
+      {
+        "emoji": "🍽️",
+        "name": "Genel",
+        "attrs": [
+          [
+            "🌶️",
+            "Acılık",
+            "Hafif ↔ Acı"
+          ],
+          [
+            "💪",
+            "Yoğunluk",
+            "Hafif ↔ Yoğun"
+          ],
+          [
+            "🍯",
+            "Tatlılık",
+            "Sevmem ↔ Severim"
+          ],
+          [
+            "🧂",
+            "Tuzluluk",
+            "Tatsız ↔ Tuzlu"
+          ],
+          [
+            "🥓",
+            "Yağlılık",
+            "Hafif ↔ Doyurucu"
+          ],
+          [
+            "🌿",
+            "Doğal tat",
+            "Soslu ↔ Doğal"
+          ]
+        ]
+      },
+      {
+        "emoji": "🥩",
+        "name": "Biftek",
+        "attrs": [
+          [
+            "🔥",
+            "Pişme",
+            "Az pişmiş ↔ İyi pişmiş"
+          ],
+          [
+            "🥩",
+            "Sululuk",
+            "Kuru ↔ Sulu"
+          ],
+          [
+            "✨",
+            "Yumuşaklık",
+            "Sert ↔ Yumuşak"
+          ],
+          [
+            "🧂",
+            "Baharat",
+            "Tatsız ↔ Tuzlu"
+          ],
+          [
+            "🌿",
+            "Et aroması",
+            "Hafif ↔ Güçlü"
+          ],
+          [
+            "🍖",
+            "Mermerleşme",
+            "Az ↔ Çok"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍣",
+        "name": "Suşi",
+        "attrs": [
+          [
+            "🍚",
+            "Shari (pirinç)",
+            "Lapa ↔ Sıkı"
+          ],
+          [
+            "🐟",
+            "Neta (balık)",
+            "Tazelik"
+          ],
+          [
+            "🌿",
+            "Vasabi",
+            "Hafif ↔ Güçlü"
+          ],
+          [
+            "⚖️",
+            "Denge",
+            "Dengesiz ↔ Uyumlu"
+          ],
+          [
+            "✋",
+            "Şekil",
+            "Dağınık ↔ Sıkı"
+          ],
+          [
+            "🌡️",
+            "Sıcaklık",
+            "Soğuk ↔ Ilık"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍜",
+        "name": "Ramen",
+        "attrs": [
+          [
+            "🥣",
+            "Et suyu",
+            "Derinlik/umami"
+          ],
+          [
+            "🍜",
+            "Erişte",
+            "Yumuşak ↔ Diri"
+          ],
+          [
+            "🥓",
+            "Chashu",
+            "Kuru ↔ Yumuşak"
+          ],
+          [
+            "🥚",
+            "Malzemeler",
+            "Az ↔ Bol"
+          ],
+          [
+            "🔥",
+            "Sıcaklık",
+            "Ilık ↔ Sıcak"
+          ],
+          [
+            "⚖️",
+            "Denge",
+            "Dengesiz ↔ Uyumlu"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍕",
+        "name": "Pizza",
+        "attrs": [
+          [
+            "🫓",
+            "Hamur",
+            "Sert ↔ Yumuşak"
+          ],
+          [
+            "🍅",
+            "Sos",
+            "Az ↔ Çok"
+          ],
+          [
+            "🧀",
+            "Peynir",
+            "Az ↔ Çok"
+          ],
+          [
+            "🔥",
+            "Pişme",
+            "Az pişmiş ↔ Çıtır"
+          ],
+          [
+            "🌟",
+            "Malzemeler",
+            "Az ↔ Bol"
+          ],
+          [
+            "⚖️",
+            "Denge",
+            "Dengesiz ↔ Uyumlu"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍷",
+        "name": "Şarap",
+        "attrs": [
+          [
+            "💪",
+            "Gövde",
+            "Hafif ↔ Gövdeli"
+          ],
+          [
+            "🍇",
+            "Tanen",
+            "Yumuşak ↔ Buruk"
+          ],
+          [
+            "🍋",
+            "Asidite",
+            "Düşük ↔ Yüksek"
+          ],
+          [
+            "🌸",
+            "Aroma",
+            "Sade ↔ Karmaşık"
+          ],
+          [
+            "✨",
+            "Bitiş",
+            "Kısa ↔ Kalıcı"
+          ],
+          [
+            "⚖️",
+            "Denge",
+            "Dengesiz ↔ Uyumlu"
+          ]
+        ]
+      },
+      {
+        "emoji": "☕",
+        "name": "Kahve",
+        "attrs": [
+          [
+            "🍋",
+            "Asidite",
+            "Düşük ↔ Canlı"
+          ],
+          [
+            "💪",
+            "Gövde",
+            "Hafif ↔ Gövdeli"
+          ],
+          [
+            "🌸",
+            "Aroma",
+            "Sade ↔ Karmaşık"
+          ],
+          [
+            "✨",
+            "Ağızda kalan tat",
+            "Kısa ↔ Kalıcı"
+          ],
+          [
+            "🍯",
+            "Tatlılık",
+            "Acı ↔ Tatlı"
+          ],
+          [
+            "⚖️",
+            "Denge",
+            "Dengesiz ↔ Uyumlu"
+          ]
+        ]
+      }
+    ],
+    "rating": "Puan",
+    "intensity": "Lezzet yoğunluğu",
+    "sat": "Memnuniyet",
+    "low": "Memnun değil",
+    "high": "Çok memnun",
+    "shape": "Lezzet profili",
+    "score": "Riio Michelin puanı"
+  },
+  "problem": {
+    "title": "Çok güzeldi ama ne sipariş etmiştim?",
+    "text": "Restoranı çok sevdiğini hatırlıyorsun ama adı bulanık, ne sipariş ettiğini ya da çorbanın tuzlu olup olmadığını ise hiç hatırlamıyorsun. Sonunda yine arıyor, yabancıların yorumlarını okuyorsun. Insaeng kendi tattıklarını haritada saklar; bir sonraki seçimini kendi deneyiminle yaparsın."
+  },
+  "features": [
+    {
+      "title": "Gidilenler, Gitmek istediklerim ve kendi Michelin’in",
+      "text": "Haritada ara ya da yakındaki bir yere dokun, hemen kaydedilir. Gittiğin yerleri denemek istediklerinden ayrı tut, en sevdiğin altı yeri 1’den 6’ya sırala.\nBiri iyi bir yer sorduğunda listeyi göstermen yeter.",
+      "shot": "02-list"
+    },
+    {
+      "title": "Yemeğe göre sorular",
+      "text": "Acılık ya da tuz gibi bir tadın yoğunluğunu kaydırıcıyla ayarlarsın, ne kadar beğendiğini ise ayrıca 1’den 5’e puanlarsın. Biftekte pişme derecesi ve suluk, suşide pirinç ve balık, ramende et suyu ve erişte sorulur.\nHer ziyaret yemeği, fotoğrafları, yıldızları ve notları da saklar.",
+      "shot": "04-taste-review"
+    },
+    {
+      "title": "Tekrar gitmeye değer yerler rakamlarla görünür",
+      "text": "Ziyaretler arttıkça her restoranda tüm ziyaretlerin ortalamasıyla bir genel değerlendirme ve yıldızlarla memnuniyeti birleştiren, 100 üzerinden bir Riio Michelin puanı görünür.\nKaydettiğin bir restorandan çıktığında, biraz sonra ziyareti kaydetmeni hatırlatan bir bildirim gelir.",
+      "shot": "03-detail"
+    }
+  ],
+  "steps": {
+    "title": "Üç adımda başla",
+    "items": [
+      {
+        "title": "Restoranı kaydet",
+        "text": "Haritada ara ya da yakındaki bir yere dokun."
+      },
+      {
+        "title": "Ziyareti kaydet",
+        "text": "Yemek, fotoğraf, yıldız ve lezzet. Lezzet puanı isteğe bağlı."
+      },
+      {
+        "title": "Sıradakini seç",
+        "text": "Top 6’ya ve puanlara bak, Apple Haritalar, Kakao Map ya da Naver Map ile yol tarifi al."
+      }
+    ]
+  },
+  "reference": {
+    "title": "Yemek türüne göre puanlananlar",
+    "rows": [
+      [
+        "🍽️ Genel",
+        "Acılık, Yoğunluk, Tatlılık, Tuzluluk, Yağlılık, Doğal tat"
+      ],
+      [
+        "🥩 Biftek",
+        "Pişme, Sululuk, Yumuşaklık, Baharat, Et aroması, Mermerleşme"
+      ],
+      [
+        "🍣 Suşi",
+        "Shari (pirinç), Neta (balık), Vasabi, Denge, Şekil, Sıcaklık"
+      ],
+      [
+        "🍜 Ramen",
+        "Et suyu, Erişte, Chashu, Malzemeler, Sıcaklık, Denge"
+      ],
+      [
+        "🍕 Pizza",
+        "Hamur, Sos, Peynir, Pişme, Malzemeler, Denge"
+      ],
+      [
+        "🍷 Şarap",
+        "Gövde, Tanen, Asidite, Aroma, Bitiş, Denge"
+      ],
+      [
+        "☕ Kahve",
+        "Asidite, Gövde, Aroma, Ağızda kalan tat, Tatlılık, Denge"
+      ]
+    ],
+    "note": "Diğer yemekler ilk satırdaki genel ölçütlerle puanlanır. Kendi kategorilerini de oluşturabilirsin."
+  },
+  "faq": {
+    "title": "Sık sorulan sorular",
+    "items": [
+      {
+        "q": "Restoranı nasıl eklerim?",
+        "a": "Haritanın üstündeki arama alanına restoranın adını yaz ve sonuçlarda “Restoran listeme ekle”ye dokun. Haritada görünen yakındaki bir mekâna dokunarak da hemen ekleyebilirsin. Aramada çıkmayan bir yer varsa bulunduğun konuma ya da haritada seçtiğin bir noktaya kendin ekleyebilirsin."
+      },
+      {
+        "q": "Gittiklerim, Gideceklerim ve İlk 6 nedir?",
+        "a": "Gittiklerim: Daha önce gittiğin restoranlar. Bunlar için ziyaret kaydı tutabilirsin. Gideceklerim: Bir gün denemek istediğin restoranlar. Gittikten sonra restoranın ayrıntı ekranından “Gittiklerim”e taşı. İlk 6 (Kendi Michelin’in): En sevdiğin altı restoranı 1’den 6’ya kadar sıralarsın. “Gideceklerim” listesindeki restoranlar İlk 6’ya eklenemez."
+      },
+      {
+        "q": "Lezzet değerlendirmesi yapmak zorunlu mu?",
+        "a": "Hayır, isteğe bağlı. Puanlarsan lezzet yoğunluğu ve memnuniyet restoranın genel değerlendirmesine eklenir ve Riio Michelin puanına sayılır."
+      },
+      {
+        "q": "“Bugünkü ziyaretin nasıldı?” bildirimi ne zaman gelir?",
+        "a": "Kaydettiğin bir restoranın yakınında 5 dakikadan uzun kalıp ayrıldığında, yaklaşık 40 dakika sonra bildirim gelir. Bu özellik için konum erişimine “Her Zaman” izni ve bildirim izni gerekir. Bildirim almak istemiyorsan Ayarlar > Uygulamalar > Insaeng bölümünden bildirimleri kapat veya konum iznini “Uygulamayı Kullanırken” olarak değiştir. Konum kontrolü yalnızca cihazında yapılır; gittiğin yerler kaydedilmez ve hiçbir yere gönderilmez."
+      },
+      {
+        "q": "Konum iznini vermezsem uygulamayı kullanabilir miyim?",
+        "a": "Evet. Konumu haritada kendin seçerek restoran ekleyebilir ve kayıt tutabilirsin. Yalnızca mevcut konumunun gösterilmesi ve ziyaret sonrası bildirim kullanılamaz."
+      },
+      {
+        "q": "Mekân aramasında sonuç çıkmıyor",
+        "a": "Mekân araması için internet bağlantısı gerekir. Farklı bir adla ya da daha kısa bir anahtar kelimeyle yeniden ara. Yine de bulamazsan haritada bir nokta seçerek kendin ekleyebilirsin."
+      },
+      {
+        "q": "Kayıtlarım nerede saklanıyor? Diğer cihazlarla eşzamanlanıyor mu?",
+        "a": "Restoranlar, ziyaret kayıtları ve fotoğraflar yalnızca bu iPhone’da saklanır. Mevcut sürüm diğer cihazlarla eşzamanlamayı desteklemiyor; ayarlardaki iCloud yedekleme ve geri yükleme de henüz çalışmıyor. iPhone’unun tam yedeğinde (iCloud yedeği veya bilgisayar yedeği) uygulama verileri de yer alır."
+      },
+      {
+        "q": "Tüm kayıtlarımı silmek istiyorum",
+        "a": "Harita ekranındaki ayarlardan “Tüm verileri sil”e dokunduğunda restoranlar ve ziyaret kayıtları silinir. Bu işlem geri alınamaz, dikkatli ol. Fotoğraflar dahil her şeyi tamamen silmek için uygulamayı silmen yeterli."
+      },
+      {
+        "q": "Uygulamayı silip yeniden yüklersem kayıtlarım kalır mı?",
+        "a": "Hayır. Kayıtlar yalnızca cihazında saklandığı için uygulamayı sildiğinde onlar da silinir. Uygulamayı silmeden önce bunu mutlaka göz önünde bulundur."
+      },
+      {
+        "q": "Gerçekten her şey ücretsiz mi?",
+        "a": "Evet. Tüm özellikler ücretsiz; reklam yok, hesap yok. Ayarlardaki “Geliştiriciyi Destekleyin” tamamen isteğe bağlıdır ve hiçbir şeyin kilidini açmaz."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Sıradaki restoranı\nkendi notlarından seç",
+    "cta": "App Store’dan ücretsiz indir"
+  },
+  "ui": {
+    "skip": "İçeriğe geç",
+    "languages": "Dil",
+    "privacy": "Gizlilik Politikası",
+    "contact": "Sorunun yanıtı burada yoksa uygulamada Ayarlar > Destek bölümünden doğrudan bize yazabilir ya da {email} adresine e-posta gönderebilirsin. Uygulama sürümünü, iPhone modelini ve hangi ekranda ne yaptığını belirtirsen sorunu daha hızlı inceleyebiliriz."
+  }
+}

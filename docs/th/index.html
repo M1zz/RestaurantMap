@@ -1,145 +1,176 @@
 <!doctype html>
 <html lang="th">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="color-scheme" content="light dark">
-<title>Insaeng: แผนที่ร้านอาหาร – บันทึกร้านอร่อยที่คุณไปมาไว้บนแผนที่</title>
-<meta name="description" content="แอป iPhone ที่รวมร้านที่คุณเคยไปและร้านที่อยากไปไว้บนแผนที่ พร้อมบันทึกเมนู รูปภาพ คะแนนดาว และการประเมินรสชาติทุกครั้งที่ไป ยิ่งบันทึกมาก ก็ยิ่งได้โปรไฟล์รสนิยมและ Top 6 ร้านโปรดของคุณ">
-<link rel="canonical" href="https://m1zz.github.io/RestaurantMap/th/">
-<link rel="alternate" hreflang="ko" href="https://m1zz.github.io/RestaurantMap/">
-<link rel="alternate" hreflang="en" href="https://m1zz.github.io/RestaurantMap/en/">
-<link rel="alternate" hreflang="ja" href="https://m1zz.github.io/RestaurantMap/ja/">
-<link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/RestaurantMap/zh-Hans/">
-<link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/RestaurantMap/zh-Hant/">
-<link rel="alternate" hreflang="ru" href="https://m1zz.github.io/RestaurantMap/ru/">
-<link rel="alternate" hreflang="es" href="https://m1zz.github.io/RestaurantMap/es/">
-<link rel="alternate" hreflang="de" href="https://m1zz.github.io/RestaurantMap/de/">
-<link rel="alternate" hreflang="fr" href="https://m1zz.github.io/RestaurantMap/fr/">
-<link rel="alternate" hreflang="it" href="https://m1zz.github.io/RestaurantMap/it/">
-<link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/RestaurantMap/pt-BR/">
-<link rel="alternate" hreflang="th" href="https://m1zz.github.io/RestaurantMap/th/">
-<link rel="alternate" hreflang="vi" href="https://m1zz.github.io/RestaurantMap/vi/">
-<link rel="alternate" hreflang="cs" href="https://m1zz.github.io/RestaurantMap/cs/">
-<link rel="alternate" hreflang="da" href="https://m1zz.github.io/RestaurantMap/da/">
-<link rel="alternate" hreflang="el" href="https://m1zz.github.io/RestaurantMap/el/">
-<link rel="alternate" hreflang="fi" href="https://m1zz.github.io/RestaurantMap/fi/">
-<link rel="alternate" hreflang="id" href="https://m1zz.github.io/RestaurantMap/id/">
-<link rel="alternate" hreflang="nb" href="https://m1zz.github.io/RestaurantMap/nb/">
-<link rel="alternate" hreflang="nl" href="https://m1zz.github.io/RestaurantMap/nl/">
-<link rel="alternate" hreflang="pl" href="https://m1zz.github.io/RestaurantMap/pl/">
-<link rel="alternate" hreflang="sv" href="https://m1zz.github.io/RestaurantMap/sv/">
-<link rel="alternate" hreflang="tr" href="https://m1zz.github.io/RestaurantMap/tr/">
-<link rel="alternate" hreflang="en-GB" href="https://m1zz.github.io/RestaurantMap/en/">
-<link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/RestaurantMap/">
-<link rel="stylesheet" href="../style.css">
-<link rel="icon" href="../icon.png">
-<link rel="apple-touch-icon" href="../icon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Insaeng: บันทึกร้านที่เคยไปไว้บนแผนที่</title>
+  <meta name="description" content="รวมร้านที่เคยไปและร้านที่อยากไปไว้บนแผนที่ แล้วบันทึกเมนู รูปภาพ และรสชาติทุกครั้งที่ไป ใช้ฟรีทุกฟีเจอร์ และบันทึกเก็บไว้ใน iPhone ของคุณเท่านั้น">
+  <meta name="theme-color" content="#B8461F" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6755934548">
+  <link rel="canonical" href="https://m1zz.github.io/RestaurantMap/th/">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/RestaurantMap/">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/RestaurantMap/en/">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/RestaurantMap/ja/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/RestaurantMap/zh-Hans/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/RestaurantMap/zh-Hant/">
+  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/RestaurantMap/ru/">
+  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/RestaurantMap/es/">
+  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/RestaurantMap/de/">
+  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/RestaurantMap/fr/">
+  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/RestaurantMap/it/">
+  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/RestaurantMap/pt-BR/">
+  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/RestaurantMap/th/">
+  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/RestaurantMap/vi/">
+  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/RestaurantMap/cs/">
+  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/RestaurantMap/da/">
+  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/RestaurantMap/el/">
+  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/RestaurantMap/fi/">
+  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/RestaurantMap/id/">
+  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/RestaurantMap/nb/">
+  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/RestaurantMap/nl/">
+  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/RestaurantMap/pl/">
+  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/RestaurantMap/sv/">
+  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/RestaurantMap/tr/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/RestaurantMap/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Insaeng: บันทึกร้านที่เคยไปไว้บนแผนที่">
+  <meta property="og:description" content="รวมร้านที่เคยไปและร้านที่อยากไปไว้บนแผนที่ แล้วบันทึกเมนู รูปภาพ และรสชาติทุกครั้งที่ไป ใช้ฟรีทุกฟีเจอร์ และบันทึกเก็บไว้ใน iPhone ของคุณเท่านั้น">
+  <meta property="og:url" content="https://m1zz.github.io/RestaurantMap/th/">
+  <meta property="og:image" content="https://m1zz.github.io/RestaurantMap/img/th/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#B8461F}@media (prefers-color-scheme:dark){:root{--accent:#F08A62}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-<div class="container">
-
-  <header class="site">
-    <img src="../icon.png" alt="ไอคอนแอป Insaeng">
-    <div>
-      <div class="title">Insaeng</div>
-      <div class="subtitle">ให้คะแนนและจัดอันดับมื้อโปรด</div>
-    </div>
+  <a class="skip" href="#main">ข้ามไปยังเนื้อหา</a>
+  <header class="bar">
+    <a class="brand" href="../th/"><img src="../icon.png" alt="" width="32" height="32">Insaeng</a>
+    <a class="lang-link" href="#languages">ภาษา</a>
   </header>
 
-  <nav class="langs" aria-label="ภาษา">
-    <a href="../index.html" hreflang="ko" lang="ko">한국어</a>
-    <a href="../en/index.html" hreflang="en" lang="en">English</a>
-    <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a>
-    <a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
-    <a href="../zh-Hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
-    <a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a>
-    <a href="../es/index.html" hreflang="es" lang="es">Español</a>
-    <a href="../de/index.html" hreflang="de" lang="de">Deutsch</a>
-    <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a>
-    <a href="../it/index.html" hreflang="it" lang="it">Italiano</a>
-    <a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
-    <a href="index.html" hreflang="th" lang="th" aria-current="true">ไทย</a>
-    <a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a>
-    <a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a>
-    <a href="../da/index.html" hreflang="da" lang="da">Dansk</a>
-    <a href="../el/index.html" hreflang="el" lang="el">Ελληνικά</a>
-    <a href="../fi/index.html" hreflang="fi" lang="fi">Suomi</a>
-    <a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a>
-    <a href="../nb/index.html" hreflang="nb" lang="nb">Norsk bokmål</a>
-    <a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a>
-    <a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a>
-    <a href="../sv/index.html" hreflang="sv" lang="sv">Svenska</a>
-    <a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a>
-  </nav>
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>ร้านอร่อยที่เคยไป<br>ไม่มีวันลืมอีกต่อไป</h1>
+        <p class="lead">ปักหมุดร้านที่เคยไปและร้านที่อยากไปไว้บนแผนที่ แล้วบันทึกเมนูที่สั่ง รูปภาพ และรสชาติทุกครั้งที่ไป เวลาคิดไม่ออกว่าจะกินที่ไหน บันทึกของคุณเองจะให้คำตอบ</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6755934548">ดาวน์โหลดฟรีบน App Store</a><a class="try" href="#try">ลองให้คะแนนสักจาน ↓</a></div>
+        <p class="muted small">ใช้ได้ทุกฟีเจอร์ฟรี ไม่ต้องสมัครสมาชิก บันทึกอยู่ใน iPhone ของคุณเท่านั้น</p>
+      </div>
+      <div class="phone"><img src="../img/th/01-map.jpg" alt="ร้านอร่อยที่เคยไป ไม่มีวันลืมอีกต่อไป" width="720" height="1564" decoding="async"></div>
+    </section>
 
-  <nav class="pages" aria-label="หน้า">
-    <a href="index.html" aria-current="page">หน้าแรก</a>
-    <a href="support.html">ช่วยเหลือ</a>
-    <a href="privacy.html">นโยบายความเป็นส่วนตัว</a>
-  </nav>
 
-  <main>
-    <h1>ร้านอร่อยที่เคยไป จะไม่ลืมอีกต่อไป</h1>
-    <p class="lead">
-      Insaeng คือแอปที่รวมร้านอาหารที่คุณเคยไปและร้านที่อยากลองไว้บนแผนที่
-      ทุกครั้งที่ไป คุณบันทึกเมนูที่กิน รูปภาพ คะแนนดาว และการประเมินรสชาติได้
-      ยิ่งบันทึกมากเท่าไร แผนที่ร้านอร่อยในแบบของคุณและรสนิยมของคุณก็ยิ่งชัดเจนขึ้น
-    </p>
+    <section class="reveal" id="try">
+      <h2>ลองให้คะแนนสักจาน</h2>
+      <p class="muted">เลือกประเภทอาหาร แล้วให้คะแนนความเข้มข้นของแต่ละรสและความพึงพอใจ หัวข้อและวิธีคิดคะแนนเหมือนการบันทึกในแอปทุกอย่าง</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;ลองให้คะแนนสักจาน&quot;, &quot;lead&quot;: &quot;เลือกประเภทอาหาร แล้วให้คะแนนความเข้มข้นของแต่ละรสและความพึงพอใจ หัวข้อและวิธีคิดคะแนนเหมือนการบันทึกในแอปทุกอย่าง&quot;, &quot;note&quot;: &quot;เหมือนในแอป คะแนนคิดจากดาวครึ่งหนึ่งและความพึงพอใจอีกครึ่งหนึ่ง ข้อมูลในหน้านี้ไม่ถูกบันทึก&quot;, &quot;types&quot;: [{&quot;emoji&quot;: &quot;🍽️&quot;, &quot;name&quot;: &quot;ทั่วไป&quot;, &quot;attrs&quot;: [[&quot;🌶️&quot;, &quot;ความเผ็ด&quot;, &quot;ไม่เผ็ด ↔ เผ็ด&quot;], [&quot;💪&quot;, &quot;ความเข้มข้น&quot;, &quot;จืด ↔ เข้มข้น&quot;], [&quot;🍯&quot;, &quot;ความหวาน&quot;, &quot;ไม่ชอบ ↔ ชอบ&quot;], [&quot;🧂&quot;, &quot;ความเค็ม&quot;, &quot;จืด ↔ เค็ม&quot;], [&quot;🥓&quot;, &quot;ความมัน&quot;, &quot;จืด ↔ มันหอม&quot;], [&quot;🌿&quot;, &quot;รสธรรมชาติ&quot;, &quot;ปรุงรส ↔ รสวัตถุดิบ&quot;]]}, {&quot;emoji&quot;: &quot;🥩&quot;, &quot;name&quot;: &quot;สเต๊ก&quot;, &quot;attrs&quot;: [[&quot;🔥&quot;, &quot;ความสุก&quot;, &quot;แรร์ ↔ เวลดัน&quot;], [&quot;🥩&quot;, &quot;ความฉ่ำ&quot;, &quot;แห้ง ↔ ฉ่ำ&quot;], [&quot;✨&quot;, &quot;ความนุ่ม&quot;, &quot;เหนียว ↔ นุ่ม&quot;], [&quot;🧂&quot;, &quot;รสเค็ม&quot;, &quot;จืด ↔ เค็ม&quot;], [&quot;🌿&quot;, &quot;กลิ่นเนื้อ&quot;, &quot;อ่อน ↔ เข้ม&quot;], [&quot;🍖&quot;, &quot;ไขมันแทรก&quot;, &quot;น้อย ↔ มาก&quot;]]}, {&quot;emoji&quot;: &quot;🍣&quot;, &quot;name&quot;: &quot;ซูชิ&quot;, &quot;attrs&quot;: [[&quot;🍚&quot;, &quot;ชาริ (ข้าว)&quot;, &quot;เละ ↔ แน่น&quot;], [&quot;🐟&quot;, &quot;เนตะ (หน้าซูชิ)&quot;, &quot;ความสด&quot;], [&quot;🌿&quot;, &quot;วาซาบิ&quot;, &quot;อ่อน ↔ เข้ม&quot;], [&quot;⚖️&quot;, &quot;ความสมดุล&quot;, &quot;ไม่สมดุล ↔ กลมกล่อม&quot;], [&quot;✋&quot;, &quot;การปั้น&quot;, &quot;หลวม ↔ แน่น&quot;], [&quot;🌡️&quot;, &quot;อุณหภูมิ&quot;, &quot;เย็น ↔ อุ่น&quot;]]}, {&quot;emoji&quot;: &quot;🍜&quot;, &quot;name&quot;: &quot;ราเมง&quot;, &quot;attrs&quot;: [[&quot;🥣&quot;, &quot;น้ำซุป&quot;, &quot;ความกลมกล่อม/อูมามิ&quot;], [&quot;🍜&quot;, &quot;เส้น&quot;, &quot;นุ่ม ↔ เหนียวนุ่ม&quot;], [&quot;🥓&quot;, &quot;ชาชู&quot;, &quot;แห้ง ↔ นุ่ม&quot;], [&quot;🥚&quot;, &quot;ท็อปปิ้ง&quot;, &quot;น้อย ↔ จัดเต็ม&quot;], [&quot;🔥&quot;, &quot;อุณหภูมิ&quot;, &quot;อุ่น ↔ ร้อน&quot;], [&quot;⚖️&quot;, &quot;ความสมดุล&quot;, &quot;ไม่สมดุล ↔ กลมกล่อม&quot;]]}, {&quot;emoji&quot;: &quot;🍕&quot;, &quot;name&quot;: &quot;พิซซ่า&quot;, &quot;attrs&quot;: [[&quot;🫓&quot;, &quot;แป้ง&quot;, &quot;แข็ง ↔ หนึบนุ่ม&quot;], [&quot;🍅&quot;, &quot;ซอส&quot;, &quot;น้อย ↔ มาก&quot;], [&quot;🧀&quot;, &quot;ชีส&quot;, &quot;น้อย ↔ มาก&quot;], [&quot;🔥&quot;, &quot;ความสุก&quot;, &quot;ไม่สุก ↔ กรอบ&quot;], [&quot;🌟&quot;, &quot;ท็อปปิ้ง&quot;, &quot;น้อย ↔ จัดเต็ม&quot;], [&quot;⚖️&quot;, &quot;ความสมดุล&quot;, &quot;ไม่สมดุล ↔ กลมกล่อม&quot;]]}, {&quot;emoji&quot;: &quot;🍷&quot;, &quot;name&quot;: &quot;ไวน์&quot;, &quot;attrs&quot;: [[&quot;💪&quot;, &quot;บอดี้&quot;, &quot;เบา ↔ หนักแน่น&quot;], [&quot;🍇&quot;, &quot;แทนนิน&quot;, &quot;นุ่ม ↔ ฝาด&quot;], [&quot;🍋&quot;, &quot;ความเปรี้ยว&quot;, &quot;ต่ำ ↔ สูง&quot;], [&quot;🌸&quot;, &quot;กลิ่นหอม&quot;, &quot;เรียบง่าย ↔ ซับซ้อน&quot;], [&quot;✨&quot;, &quot;รสติดปลาย&quot;, &quot;สั้น ↔ ติดค้างนาน&quot;], [&quot;⚖️&quot;, &quot;ความสมดุล&quot;, &quot;ไม่สมดุล ↔ กลมกล่อม&quot;]]}, {&quot;emoji&quot;: &quot;☕&quot;, &quot;name&quot;: &quot;กาแฟ&quot;, &quot;attrs&quot;: [[&quot;🍋&quot;, &quot;ความเปรี้ยว&quot;, &quot;ต่ำ ↔ สดใส&quot;], [&quot;💪&quot;, &quot;บอดี้&quot;, &quot;เบา ↔ หนักแน่น&quot;], [&quot;🌸&quot;, &quot;กลิ่นรส&quot;, &quot;เรียบง่าย ↔ ซับซ้อน&quot;], [&quot;✨&quot;, &quot;รสติดปลาย&quot;, &quot;สั้น ↔ ติดค้างนาน&quot;], [&quot;🍯&quot;, &quot;ความหวาน&quot;, &quot;ขม ↔ หวาน&quot;], [&quot;⚖️&quot;, &quot;ความสมดุล&quot;, &quot;ไม่สมดุล ↔ กลมกล่อม&quot;]]}], &quot;rating&quot;: &quot;คะแนน&quot;, &quot;intensity&quot;: &quot;ความเข้มข้นของรสชาติ&quot;, &quot;sat&quot;: &quot;ความพึงพอใจ&quot;, &quot;low&quot;: &quot;ไม่พอใจ&quot;, &quot;high&quot;: &quot;พอใจมาก&quot;, &quot;shape&quot;: &quot;โปรไฟล์รสชาติ&quot;, &quot;score&quot;: &quot;คะแนนมิชลิน Riio&quot;}"></div>
+    </section>
 
-    <h2>ฟีเจอร์หลัก</h2>
-    <div class="features">
-      <div class="card">
-        <h3>ค้นหาบนแผนที่แล้วบันทึกได้ทันที</h3>
-        <p>ค้นหาร้านบนแผนที่ หรือแตะสถานที่ใกล้เคียงเพื่อเพิ่มลงในรายการของคุณได้ทันที จะเพิ่มร้านเองที่ตำแหน่งปัจจุบันหรือจุดที่เลือกบนแผนที่ก็ได้</p>
-      </div>
-      <div class="card">
-        <h3>เคยไปและอยากไป</h3>
-        <p>แยกจัดการร้านที่เคยไปแล้วกับร้านที่อยากไปสักวัน เมื่อไปมาแล้วก็แค่ย้ายไปไว้ในรายการ “เคยไป”</p>
-      </div>
-      <div class="card">
-        <h3>บันทึกการไปร้าน</h3>
-        <p>บันทึกวันที่ไป เมนูที่กิน รูปภาพ คะแนนดาว และโน้ต หากลงทะเบียนเมนูของแต่ละร้านไว้ ครั้งหน้าก็เลือกเมนูมาบันทึกได้เลย</p>
-      </div>
-      <div class="card">
-        <h3>ประเมินรสชาติอย่างละเอียด</h3>
-        <p>ประเมินแยกกันระหว่างความเข้มของรสชาติ เช่น ความเผ็ด ความเค็ม ความหวาน กับระดับที่คุณชอบรสชาตินั้น สเต๊ก ซูชิ และราเมนยังประเมินได้ด้วยหัวข้อที่เหมาะกับอาหารนั้น เช่น ระดับความสุก ข้าวซูชิ หรือน้ำซุป</p>
-      </div>
-      <div class="card">
-        <h3>มิชลินของฉัน: Top 6</h3>
-        <p>จัดอันดับร้านโปรดที่สุดหกร้านแล้วรวมไว้ดูแยกต่างหาก เวลามีใครถามหาร้านอร่อย ก็เปิดให้ดูได้ทันที</p>
-      </div>
-      <div class="card">
-        <h3>โปรไฟล์รสนิยม</h3>
-        <p>จากการประเมินรสชาติที่สะสมไว้ แอปจะแสดงให้เห็นในพริบตาว่าคุณชอบรสชาติและสไตล์อาหารแบบไหน</p>
-      </div>
-      <div class="card">
-        <h3>แจ้งเตือนให้บันทึกหลังไปร้าน</h3>
-        <p>เมื่อคุณอยู่ที่ร้านที่บันทึกไว้สักพักแล้วออกมา ไม่นานจะมีการแจ้งเตือน “วันนี้ไปร้านมาเป็นอย่างไรบ้าง?” ช่วยไม่ให้ลืมบันทึก หากไม่ต้องการก็ปิดได้</p>
-      </div>
-      <div class="card">
-        <h3>นำทางและโทร</h3>
-        <p>เปิดร้านที่บันทึกไว้ใน Apple Maps, KakaoMap หรือ NAVER Map ได้ทันที และแตะเบอร์โทรเพื่อโทรหาร้านได้เลย</p>
-      </div>
-    </div>
+    <section class="problem reveal">
+      <h2>ร้านนั้นอร่อยนะ แต่สั่งอะไรไปนะ</h2>
+      <p>จำได้ว่าร้านนั้นถูกใจมาก แต่ชื่อร้านเลือนไปแล้ว ส่วนเมนูที่สั่งหรือน้ำซุปเค็มไปไหมก็จำไม่ได้เลย สุดท้ายก็ต้องค้นหาใหม่และอ่านรีวิวของคนอื่น Insaeng เก็บสิ่งที่คุณได้ชิมเองไว้บนแผนที่ ให้การเลือกครั้งต่อไปมาจากประสบการณ์ของคุณ</p>
+    </section>
 
-    <h2>บันทึกของคุณอยู่ใน iPhone ของคุณ</h2>
-    <p>
-      ไม่ต้องสมัครสมาชิก รายการร้าน บันทึกการไปร้าน และรูปภาพทั้งหมดจัดเก็บไว้ใน iPhone ของคุณเท่านั้น
-      ดูรายละเอียดเพิ่มเติมได้ที่<a href="privacy.html">นโยบายความเป็นส่วนตัว</a>
-    </p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>เคยไป อยากไป และมิชลินของฉัน</h2>
+        <p>ค้นหาบนแผนที่หรือแตะสถานที่ใกล้ ๆ ก็บันทึกได้ทันที แยกร้านที่เคยไปกับร้านที่อยากไปไว้คนละกลุ่ม และจัดอันดับร้านโปรดหกร้านตั้งแต่อันดับ 1 ถึง 6<br>เวลามีคนถามหาร้านอร่อย ก็แค่เปิดรายการนี้ให้ดู</p>
+      </div>
+      <div class="phone"><img src="../img/th/02-list.jpg" alt="เคยไป อยากไป และมิชลินของฉัน" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <p><a href="https://apps.apple.com/app/id6755934548">ดาวน์โหลด Insaeng ใน App Store</a></p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>ให้คะแนนด้วยหัวข้อที่เข้ากับอาหาร</h2>
+        <p>ความเข้มข้นของรส เช่น ความเผ็ดหรือความเค็ม ปรับด้วยแถบเลื่อน ส่วนความชอบให้คะแนนแยกตั้งแต่ 1 ถึง 5 สเต๊กดูระดับความสุกและความฉ่ำ ซูชิดูข้าวและหน้าซูชิ ราเมนดูน้ำซุปและเส้น หัวข้อเปลี่ยนไปตามอาหาร<br>แต่ละครั้งที่ไปยังเก็บเมนู รูปภาพ ดาว และโน้ตไว้ด้วย</p>
+      </div>
+      <div class="phone"><img src="../img/th/04-taste-review.jpg" alt="ให้คะแนนด้วยหัวข้อที่เข้ากับอาหาร" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <div class="contact">
-      หากพบปัญหาหรืออยากได้ฟีเจอร์ใด แจ้งเราได้ที่ <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a>
-      คำถามที่พบบ่อยอยู่ในหน้า<a href="support.html">ช่วยเหลือ</a>
-    </div>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>ร้านที่ควรกลับไป ดูได้จากตัวเลข</h2>
+        <p>เมื่อไปหลายครั้ง หน้าร้านจะแสดงสรุปภาพรวมจากค่าเฉลี่ยทุกครั้งที่ไป และคะแนนมิชลิน Riio เต็ม 100 ที่รวมดาวกับความพึงพอใจไว้ด้วยกัน<br>เมื่อออกจากร้านที่บันทึกไว้ สักพักจะมีการแจ้งเตือนให้บันทึก จะได้ไม่ลืม</p>
+      </div>
+      <div class="phone"><img src="../img/th/03-detail.jpg" alt="ร้านที่ควรกลับไป ดูได้จากตัวเลข" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="reveal">
+      <h2>เริ่มได้ในสามขั้นตอน</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>บันทึกร้าน</h3><p>ค้นหาบนแผนที่หรือแตะสถานที่ใกล้ ๆ เพื่อเพิ่ม</p></li>
+<li class="card"><span class="n">2</span><h3>ไปแล้วจดไว้</h3><p>บันทึกเมนู รูปภาพ ดาว และรสชาติ การให้คะแนนรสชาติจะทำหรือไม่ก็ได้</p></li>
+<li class="card"><span class="n">3</span><h3>เลือกร้านต่อไป</h3><p>ดู Top 6 และคะแนน แล้วนำทางด้วย Apple Maps, Kakao Map หรือ Naver Map</p></li></ol>
+    </section>
+
+    <section class="reveal" id="commands">
+      <h2>หัวข้อการให้คะแนนตามประเภทอาหาร</h2>
+      <div class="card table">
+        <dl><div><dt>🍽️ ทั่วไป</dt><dd>ความเผ็ด · ความเข้มข้น · ความหวาน · ความเค็ม · ความมัน · รสธรรมชาติ</dd></div><div><dt>🥩 สเต๊ก</dt><dd>ความสุก · ความฉ่ำ · ความนุ่ม · รสเค็ม · กลิ่นเนื้อ · ไขมันแทรก</dd></div><div><dt>🍣 ซูชิ</dt><dd>ชาริ (ข้าว) · เนตะ (หน้าซูชิ) · วาซาบิ · ความสมดุล · การปั้น · อุณหภูมิ</dd></div><div><dt>🍜 ราเมง</dt><dd>น้ำซุป · เส้น · ชาชู · ท็อปปิ้ง · อุณหภูมิ · ความสมดุล</dd></div><div><dt>🍕 พิซซ่า</dt><dd>แป้ง · ซอส · ชีส · ความสุก · ท็อปปิ้ง · ความสมดุล</dd></div><div><dt>🍷 ไวน์</dt><dd>บอดี้ · แทนนิน · ความเปรี้ยว · กลิ่นหอม · รสติดปลาย · ความสมดุล</dd></div><div><dt>☕ กาแฟ</dt><dd>ความเปรี้ยว · บอดี้ · กลิ่นรส · รสติดปลาย · ความหวาน · ความสมดุล</dd></div></dl>
+      </div>
+      <p class="muted">อาหารอื่น ๆ ให้คะแนนด้วยหัวข้อทั่วไปในแถวแรก และสร้างหมวดอาหารเองได้ด้วย</p>
+    </section>
+
+
+
+    <section class="reveal" id="faq">
+      <h2>คำถามที่พบบ่อย</h2>
+      <div class="faq"><details><summary>เพิ่มร้านอาหารได้อย่างไร</summary><p>พิมพ์ชื่อร้านในช่องค้นหาด้านบนของแผนที่ แล้วแตะ “เพิ่มในรายการร้านของฉัน” จากผลการค้นหา จะแตะสถานที่ใกล้เคียงที่แสดงบนแผนที่เพื่อเพิ่มทันทีก็ได้ ร้านที่ค้นหาไม่เจอ ให้เพิ่มเองที่ตำแหน่งปัจจุบันหรือจุดที่เลือกบนแผนที่</p></details>
+<details><summary>“เคยไป” “อยากไป” และ Top 6 คืออะไร</summary><p>เคยไป – ร้านที่คุณไปมาแล้ว สามารถบันทึกการไปร้านได้ อยากไป – ร้านที่อยากไปสักวัน เมื่อไปมาแล้วให้เปลี่ยนเป็น “เคยไป” ในหน้ารายละเอียดของร้าน Top 6 (มิชลินของฉัน) – จัดอันดับร้านโปรดที่สุดหกร้านตั้งแต่อันดับ 1 ถึง 6 ร้านที่อยู่ในรายการ “อยากไป” ไม่สามารถตั้งเป็น Top 6 ได้</p></details>
+<details><summary>จำเป็นต้องประเมินรสชาติไหม</summary><p>ไม่จำเป็น ทำหรือไม่ก็ได้ ถ้าให้คะแนนไว้ ความเข้มข้นของรสและความพึงพอใจจะไปรวมในสรุปภาพรวมของร้าน และนับรวมในคะแนนมิชลิน Riio ด้วย</p></details>
+<details><summary>การแจ้งเตือน “วันนี้ไปร้านมาเป็นอย่างไรบ้าง?” จะมาเมื่อไร</summary><p>หากคุณอยู่ใกล้ร้านที่บันทึกไว้นานกว่า 5 นาทีแล้วออกไป การแจ้งเตือนจะมาประมาณ 40 นาทีหลังจากนั้น ฟีเจอร์นี้ต้องอนุญาตตำแหน่งแบบ “เสมอ” และอนุญาตการแจ้งเตือน หากไม่ต้องการรับการแจ้งเตือน ให้ปิดการแจ้งเตือนที่ ตั้งค่า &gt; แอป &gt; Insaeng หรือเปลี่ยนตำแหน่งเป็น “ขณะใช้แอป” การตรวจตำแหน่งเกิดขึ้นภายในอุปกรณ์เท่านั้น ไม่มีการเก็บเส้นทางการเดินทางหรือส่งออกไปภายนอก</p></details>
+<details><summary>ถ้าไม่อนุญาตตำแหน่ง จะใช้แอปไม่ได้หรือเปล่า</summary><p>ใช้ได้ คุณเลือกตำแหน่งบนแผนที่เองเพื่อเพิ่มร้านและบันทึกการไปร้านได้ มีเพียงการแสดงตำแหน่งปัจจุบันและการแจ้งเตือนหลังไปร้านเท่านั้นที่ใช้ไม่ได้</p></details>
+<details><summary>ค้นหาสถานที่แล้วไม่พบผลลัพธ์</summary><p>การค้นหาสถานที่ต้องเชื่อมต่ออินเทอร์เน็ต ลองค้นหาด้วยชื่ออื่นหรือคีย์เวิร์ดที่สั้นลง หากยังไม่พบ ให้เลือกจุดบนแผนที่แล้วเพิ่มร้านเอง</p></details>
+<details><summary>บันทึกเก็บไว้ที่ไหน ซิงค์กับอุปกรณ์อื่นได้ไหม</summary><p>ร้าน บันทึกการไปร้าน และรูปภาพ จัดเก็บไว้ใน iPhone เครื่องนี้เท่านั้น เวอร์ชันปัจจุบันยังไม่รองรับการซิงค์กับอุปกรณ์อื่น และการสำรองและกู้คืนข้อมูล iCloud ในการตั้งค่าก็ยังใช้งานไม่ได้ อย่างไรก็ตาม ข้อมูลของแอปจะรวมอยู่ในการสำรองข้อมูล iPhone ทั้งเครื่อง (สำรองข้อมูล iCloud หรือสำรองข้อมูลในคอมพิวเตอร์)</p></details>
+<details><summary>อยากลบบันทึกทั้งหมด</summary><p>ในการตั้งค่าของหน้าจอแผนที่ แตะ “ลบข้อมูลทั้งหมด” เพื่อลบร้านและบันทึกการไปร้าน การลบนี้ย้อนกลับไม่ได้ โปรดระวัง หากต้องการลบรูปภาพทั้งหมดด้วยโดยไม่เหลือเลย ให้ลบแอป</p></details>
+<details><summary>ถ้าลบแอปแล้วติดตั้งใหม่ บันทึกจะยังอยู่ไหม</summary><p>ไม่อยู่ เนื่องจากบันทึกจัดเก็บไว้ในอุปกรณ์เท่านั้น เมื่อลบแอปบันทึกก็จะถูกลบไปด้วย โปรดตรวจสอบให้ดีก่อนลบแอป</p></details>
+<details><summary>ใช้ฟรีทั้งหมดจริงไหม</summary><p>จริง ทุกฟีเจอร์ใช้ได้ฟรี ไม่มีโฆษณาและไม่ต้องสมัครบัญชี ส่วน “สนับสนุนผู้พัฒนา” ในการตั้งค่าจะทำหรือไม่ก็ได้ และไม่ได้ปลดล็อกอะไรเพิ่ม</p></details></div>
+      <p class="contact">หากปัญหาของคุณไม่มีคำตอบด้านบน ส่งถึงเราได้ทันทีที่ การตั้งค่า &gt; การสนับสนุน ในแอป หรือส่งอีเมลมาที่ <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a> หากแจ้งเวอร์ชันแอป รุ่น iPhone และสิ่งที่คุณทำในหน้าจอใดมาด้วย เราจะตรวจสอบได้เร็วขึ้น</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>ร้านต่อไป<br>เลือกจากบันทึกของคุณเอง</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6755934548">ดาวน์โหลดฟรีบน App Store</a>
+    </section>
   </main>
 
-  <footer class="site">
-    © 2026 Leeo · <a href="support.html">ช่วยเหลือ</a> · <a href="privacy.html">นโยบายความเป็นส่วนตัว</a>
+  <footer>
+    <nav id="languages" class="langs" aria-label="ภาษา"><a href="../" hreflang="ko" lang="ko">한국어</a>
+<a href="../en/" hreflang="en" lang="en">English</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../th/" hreflang="th" lang="th" aria-current="page">ไทย</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a></nav>
+    <p><a href="privacy.html">นโยบายความเป็นส่วนตัว</a> · <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a> · © 2026 Leeo</p>
   </footer>
-</div>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

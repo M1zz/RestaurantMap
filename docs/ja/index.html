@@ -1,145 +1,176 @@
 <!doctype html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="color-scheme" content="light dark">
-<title>人生グルメ — 行ったお店を地図に記録しよう</title>
-<meta name="description" content="行ったお店も、行ってみたいお店も地図にまとめて、訪れるたびにメニュー・写真・星評価・味の評価を残せるiPhoneアプリ。記録が増えるほど、あなたの好みのプロフィールとTop 6のお店ができあがります。">
-<link rel="canonical" href="https://m1zz.github.io/RestaurantMap/ja/">
-<link rel="alternate" hreflang="ko" href="https://m1zz.github.io/RestaurantMap/">
-<link rel="alternate" hreflang="en" href="https://m1zz.github.io/RestaurantMap/en/">
-<link rel="alternate" hreflang="ja" href="https://m1zz.github.io/RestaurantMap/ja/">
-<link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/RestaurantMap/zh-Hans/">
-<link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/RestaurantMap/zh-Hant/">
-<link rel="alternate" hreflang="ru" href="https://m1zz.github.io/RestaurantMap/ru/">
-<link rel="alternate" hreflang="es" href="https://m1zz.github.io/RestaurantMap/es/">
-<link rel="alternate" hreflang="de" href="https://m1zz.github.io/RestaurantMap/de/">
-<link rel="alternate" hreflang="fr" href="https://m1zz.github.io/RestaurantMap/fr/">
-<link rel="alternate" hreflang="it" href="https://m1zz.github.io/RestaurantMap/it/">
-<link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/RestaurantMap/pt-BR/">
-<link rel="alternate" hreflang="th" href="https://m1zz.github.io/RestaurantMap/th/">
-<link rel="alternate" hreflang="vi" href="https://m1zz.github.io/RestaurantMap/vi/">
-<link rel="alternate" hreflang="cs" href="https://m1zz.github.io/RestaurantMap/cs/">
-<link rel="alternate" hreflang="da" href="https://m1zz.github.io/RestaurantMap/da/">
-<link rel="alternate" hreflang="el" href="https://m1zz.github.io/RestaurantMap/el/">
-<link rel="alternate" hreflang="fi" href="https://m1zz.github.io/RestaurantMap/fi/">
-<link rel="alternate" hreflang="id" href="https://m1zz.github.io/RestaurantMap/id/">
-<link rel="alternate" hreflang="nb" href="https://m1zz.github.io/RestaurantMap/nb/">
-<link rel="alternate" hreflang="nl" href="https://m1zz.github.io/RestaurantMap/nl/">
-<link rel="alternate" hreflang="pl" href="https://m1zz.github.io/RestaurantMap/pl/">
-<link rel="alternate" hreflang="sv" href="https://m1zz.github.io/RestaurantMap/sv/">
-<link rel="alternate" hreflang="tr" href="https://m1zz.github.io/RestaurantMap/tr/">
-<link rel="alternate" hreflang="en-GB" href="https://m1zz.github.io/RestaurantMap/en/">
-<link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/RestaurantMap/">
-<link rel="stylesheet" href="../style.css">
-<link rel="icon" href="../icon.png">
-<link rel="apple-touch-icon" href="../icon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>人生グルメ：行ったお店を地図に記録するアプリ</title>
+  <meta name="description" content="行ったお店と行きたいお店を地図に集め、訪れるたびにメニュー・写真・味の評価を残せます。すべて無料で、記録はiPhoneの中だけに保存されます。">
+  <meta name="theme-color" content="#B8461F" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6755934548">
+  <link rel="canonical" href="https://m1zz.github.io/RestaurantMap/ja/">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/RestaurantMap/">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/RestaurantMap/en/">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/RestaurantMap/ja/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/RestaurantMap/zh-Hans/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/RestaurantMap/zh-Hant/">
+  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/RestaurantMap/ru/">
+  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/RestaurantMap/es/">
+  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/RestaurantMap/de/">
+  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/RestaurantMap/fr/">
+  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/RestaurantMap/it/">
+  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/RestaurantMap/pt-BR/">
+  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/RestaurantMap/th/">
+  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/RestaurantMap/vi/">
+  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/RestaurantMap/cs/">
+  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/RestaurantMap/da/">
+  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/RestaurantMap/el/">
+  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/RestaurantMap/fi/">
+  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/RestaurantMap/id/">
+  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/RestaurantMap/nb/">
+  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/RestaurantMap/nl/">
+  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/RestaurantMap/pl/">
+  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/RestaurantMap/sv/">
+  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/RestaurantMap/tr/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/RestaurantMap/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="人生グルメ：行ったお店を地図に記録するアプリ">
+  <meta property="og:description" content="行ったお店と行きたいお店を地図に集め、訪れるたびにメニュー・写真・味の評価を残せます。すべて無料で、記録はiPhoneの中だけに保存されます。">
+  <meta property="og:url" content="https://m1zz.github.io/RestaurantMap/ja/">
+  <meta property="og:image" content="https://m1zz.github.io/RestaurantMap/img/ja/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#B8461F}@media (prefers-color-scheme:dark){:root{--accent:#F08A62}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-<div class="container">
-
-  <header class="site">
-    <img src="../icon.png" alt="人生グルメのアプリアイコン">
-    <div>
-      <div class="title">人生グルメ</div>
-      <div class="subtitle">星とランキングで残すグルメ地図</div>
-    </div>
+  <a class="skip" href="#main">本文へスキップ</a>
+  <header class="bar">
+    <a class="brand" href="../ja/"><img src="../icon.png" alt="" width="32" height="32">人生グルメ</a>
+    <a class="lang-link" href="#languages">言語</a>
   </header>
 
-  <nav class="langs" aria-label="言語">
-    <a href="../index.html" hreflang="ko" lang="ko">한국어</a>
-    <a href="../en/index.html" hreflang="en" lang="en">English</a>
-    <a href="index.html" hreflang="ja" lang="ja" aria-current="true">日本語</a>
-    <a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
-    <a href="../zh-Hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
-    <a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a>
-    <a href="../es/index.html" hreflang="es" lang="es">Español</a>
-    <a href="../de/index.html" hreflang="de" lang="de">Deutsch</a>
-    <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a>
-    <a href="../it/index.html" hreflang="it" lang="it">Italiano</a>
-    <a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
-    <a href="../th/index.html" hreflang="th" lang="th">ไทย</a>
-    <a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a>
-    <a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a>
-    <a href="../da/index.html" hreflang="da" lang="da">Dansk</a>
-    <a href="../el/index.html" hreflang="el" lang="el">Ελληνικά</a>
-    <a href="../fi/index.html" hreflang="fi" lang="fi">Suomi</a>
-    <a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a>
-    <a href="../nb/index.html" hreflang="nb" lang="nb">Norsk bokmål</a>
-    <a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a>
-    <a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a>
-    <a href="../sv/index.html" hreflang="sv" lang="sv">Svenska</a>
-    <a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a>
-  </nav>
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>あのおいしいお店、<br>もう忘れない</h1>
+        <p class="lead">行ったお店と行きたいお店を地図に集め、訪れるたびに食べたメニュー、写真、味の評価を残します。次にどこへ行くか迷ったら、自分の記録が答えてくれます。</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6755934548">App Storeで無料ダウンロード</a><a class="try" href="#try">ひと皿評価してみる ↓</a></div>
+        <p class="muted small">すべての機能が無料です。会員登録は不要で、記録はiPhoneの中だけに残ります。</p>
+      </div>
+      <div class="phone"><img src="../img/ja/01-map.jpg" alt="あのおいしいお店、 もう忘れない" width="720" height="1564" decoding="async"></div>
+    </section>
 
-  <nav class="pages" aria-label="ページ">
-    <a href="index.html" aria-current="page">ホーム</a>
-    <a href="support.html">サポート</a>
-    <a href="privacy.html">プライバシーポリシー</a>
-  </nav>
 
-  <main>
-    <h1>行ったお店、もう忘れない</h1>
-    <p class="lead">
-      人生グルメは、行ったお店と行ってみたいお店を地図の上にまとめておけるアプリです。
-      訪れるたびに食べたメニュー、写真、星評価、味の評価を残していけば、
-      記録が増えるほど、自分だけのグルメ地図と好みがはっきり見えてきます。
-    </p>
+    <section class="reveal" id="try">
+      <h2>ひと皿評価してみる</h2>
+      <p class="muted">料理の種類を選んで、味の強さと満足度をつけてみてください。アプリの訪問記録と同じ項目、同じ計算です。</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;ひと皿評価してみる&quot;, &quot;lead&quot;: &quot;料理の種類を選んで、味の強さと満足度をつけてみてください。アプリの訪問記録と同じ項目、同じ計算です。&quot;, &quot;note&quot;: &quot;スコアはアプリと同じく、星の評価と満足度を半分ずつで計算します。ここでの操作は保存されません。&quot;, &quot;types&quot;: [{&quot;emoji&quot;: &quot;🍽️&quot;, &quot;name&quot;: &quot;一般&quot;, &quot;attrs&quot;: [[&quot;🌶️&quot;, &quot;辛さ&quot;, &quot;マイルド ↔ 辛い&quot;], [&quot;💪&quot;, &quot;濃さ&quot;, &quot;あっさり ↔ 濃厚&quot;], [&quot;🍯&quot;, &quot;甘さ&quot;, &quot;苦手 ↔ 好き&quot;], [&quot;🧂&quot;, &quot;塩気&quot;, &quot;薄味 ↔ しょっぱい&quot;], [&quot;🥓&quot;, &quot;脂っこさ&quot;, &quot;あっさり ↔ こってり&quot;], [&quot;🌿&quot;, &quot;素材の味&quot;, &quot;味付け ↔ 素材の味&quot;]]}, {&quot;emoji&quot;: &quot;🥩&quot;, &quot;name&quot;: &quot;ステーキ&quot;, &quot;attrs&quot;: [[&quot;🔥&quot;, &quot;焼き加減&quot;, &quot;レア ↔ ウェルダン&quot;], [&quot;🥩&quot;, &quot;肉汁&quot;, &quot;パサパサ ↔ ジューシー&quot;], [&quot;✨&quot;, &quot;柔らかさ&quot;, &quot;硬い ↔ 柔らかい&quot;], [&quot;🧂&quot;, &quot;塩加減&quot;, &quot;薄味 ↔ しょっぱい&quot;], [&quot;🌿&quot;, &quot;肉の香り&quot;, &quot;弱い ↔ 強い&quot;], [&quot;🍖&quot;, &quot;サシ&quot;, &quot;少なめ ↔ 多め&quot;]]}, {&quot;emoji&quot;: &quot;🍣&quot;, &quot;name&quot;: &quot;寿司&quot;, &quot;attrs&quot;: [[&quot;🍚&quot;, &quot;シャリ&quot;, &quot;柔らかい ↔ しっかり&quot;], [&quot;🐟&quot;, &quot;ネタ&quot;, &quot;鮮度&quot;], [&quot;🌿&quot;, &quot;わさび&quot;, &quot;弱い ↔ 強い&quot;], [&quot;⚖️&quot;, &quot;バランス&quot;, &quot;ちぐはぐ ↔ 調和&quot;], [&quot;✋&quot;, &quot;握り&quot;, &quot;ほどける ↔ まとまる&quot;], [&quot;🌡️&quot;, &quot;温度&quot;, &quot;冷たい ↔ 温かい&quot;]]}, {&quot;emoji&quot;: &quot;🍜&quot;, &quot;name&quot;: &quot;ラーメン&quot;, &quot;attrs&quot;: [[&quot;🥣&quot;, &quot;スープ&quot;, &quot;深み/旨味&quot;], [&quot;🍜&quot;, &quot;麺&quot;, &quot;柔らかい ↔ コシがある&quot;], [&quot;🥓&quot;, &quot;チャーシュー&quot;, &quot;パサパサ ↔ とろとろ&quot;], [&quot;🥚&quot;, &quot;トッピング&quot;, &quot;少なめ ↔ たっぷり&quot;], [&quot;🔥&quot;, &quot;温度&quot;, &quot;ぬるい ↔ 熱い&quot;], [&quot;⚖️&quot;, &quot;バランス&quot;, &quot;ちぐはぐ ↔ 調和&quot;]]}, {&quot;emoji&quot;: &quot;🍕&quot;, &quot;name&quot;: &quot;ピザ&quot;, &quot;attrs&quot;: [[&quot;🫓&quot;, &quot;生地&quot;, &quot;硬い ↔ もちもち&quot;], [&quot;🍅&quot;, &quot;ソース&quot;, &quot;少なめ ↔ 多め&quot;], [&quot;🧀&quot;, &quot;チーズ&quot;, &quot;少なめ ↔ 多め&quot;], [&quot;🔥&quot;, &quot;焼き加減&quot;, &quot;生焼け ↔ カリカリ&quot;], [&quot;🌟&quot;, &quot;トッピング&quot;, &quot;少なめ ↔ たっぷり&quot;], [&quot;⚖️&quot;, &quot;バランス&quot;, &quot;ちぐはぐ ↔ 調和&quot;]]}, {&quot;emoji&quot;: &quot;🍷&quot;, &quot;name&quot;: &quot;ワイン&quot;, &quot;attrs&quot;: [[&quot;💪&quot;, &quot;ボディ&quot;, &quot;軽い ↔ 重い&quot;], [&quot;🍇&quot;, &quot;タンニン&quot;, &quot;穏やか ↔ 渋い&quot;], [&quot;🍋&quot;, &quot;酸味&quot;, &quot;低い ↔ 高い&quot;], [&quot;🌸&quot;, &quot;アロマ&quot;, &quot;シンプル ↔ 複雑&quot;], [&quot;✨&quot;, &quot;余韻&quot;, &quot;短い ↔ 長い余韻&quot;], [&quot;⚖️&quot;, &quot;バランス&quot;, &quot;ちぐはぐ ↔ 調和&quot;]]}, {&quot;emoji&quot;: &quot;☕&quot;, &quot;name&quot;: &quot;コーヒー&quot;, &quot;attrs&quot;: [[&quot;🍋&quot;, &quot;酸味&quot;, &quot;控えめ ↔ 明るい&quot;], [&quot;💪&quot;, &quot;ボディ&quot;, &quot;軽い ↔ 重い&quot;], [&quot;🌸&quot;, &quot;香味&quot;, &quot;シンプル ↔ 複雑&quot;], [&quot;✨&quot;, &quot;後味&quot;, &quot;短い ↔ 長い余韻&quot;], [&quot;🍯&quot;, &quot;甘さ&quot;, &quot;苦い ↔ 甘い&quot;], [&quot;⚖️&quot;, &quot;バランス&quot;, &quot;ちぐはぐ ↔ 調和&quot;]]}], &quot;rating&quot;: &quot;評価&quot;, &quot;intensity&quot;: &quot;味の強さ&quot;, &quot;sat&quot;: &quot;満足度&quot;, &quot;low&quot;: &quot;不満&quot;, &quot;high&quot;: &quot;とても満足&quot;, &quot;shape&quot;: &quot;味のタイプ&quot;, &quot;score&quot;: &quot;リオ・ミシュランスコア&quot;}"></div>
+    </section>
 
-    <h2>主な機能</h2>
-    <div class="features">
-      <div class="card">
-        <h3>地図で探してすぐ保存</h3>
-        <p>地図でお店を検索したり、周辺のスポットをタップしたりするだけで、すぐに自分のリストに追加できます。現在地や地図上で選んだ場所に直接追加することもできます。</p>
-      </div>
-      <div class="card">
-        <h3>「行った」と「行きたい」</h3>
-        <p>すでに行ったお店と、いつか行ってみたいお店を分けて管理できます。行ってきたら「行った」に移すだけです。</p>
-      </div>
-      <div class="card">
-        <h3>訪問記録</h3>
-        <p>訪問日、食べたメニュー、写真、星評価、メモを残せます。お店ごとにメニューを登録しておけば、次に行ったときは選ぶだけで記録できます。</p>
-      </div>
-      <div class="card">
-        <h3>こだわりの味評価</h3>
-        <p>辛さ、塩加減、甘さといった味の強さと、その味がどれくらい気に入ったかを分けて評価できます。ステーキは焼き加減、寿司はシャリ、ラーメンはスープというように、料理に合った項目でも評価できます。</p>
-      </div>
-      <div class="card">
-        <h3>マイ・ミシュラン Top 6</h3>
-        <p>いちばん大切なお店6軒に順位をつけて、まとめて見られます。おすすめのお店を聞かれたら、さっと見せてあげましょう。</p>
-      </div>
-      <div class="card">
-        <h3>好みのプロフィール</h3>
-        <p>積み重ねた味の評価から、自分がどんな味や料理のスタイルが好きなのかをひと目で確認できます。</p>
-      </div>
-      <div class="card">
-        <h3>訪問後のお知らせ</h3>
-        <p>保存したお店でひと時を過ごして店を出ると、しばらくして「今日の訪問はいかがでしたか?」とお知らせが届き、記録のし忘れを防ぎます。不要ならオフにできます。</p>
-      </div>
-      <div class="card">
-        <h3>経路案内と電話</h3>
-        <p>保存したお店をApple マップ、KakaoMap、NAVER Mapですぐに開けて、電話番号をタップすればそのまま電話をかけられます。</p>
-      </div>
-    </div>
+    <section class="problem reveal">
+      <h2>あの店、何がおいしかったっけ？</h2>
+      <p>確かに気に入ったお店なのに名前がうろ覚えで、何を頼んだか、スープがしょっぱかったかはもっと思い出せない。結局また検索して他人の口コミを読むことになります。人生グルメは自分で味わった記録を地図に残し、次のお店選びを自分の経験で決められるようにします。</p>
+    </section>
 
-    <h2>記録はあなたのiPhoneの中に</h2>
-    <p>
-      会員登録は不要で、お店のリスト・訪問記録・写真はすべてあなたのiPhoneの中だけに保存されます。
-      詳しくは<a href="privacy.html">プライバシーポリシー</a>をご覧ください。
-    </p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>行った・行きたい、そしてマイ・ミシュラン</h2>
+        <p>地図で検索するか、近くの場所をタップしてすぐ保存。行ったお店といつか行きたいお店を分けておき、いちばん大切な6軒には1位から6位まで順位をつけてまとめます。<br>おすすめを聞かれたら、このリストを見せるだけです。</p>
+      </div>
+      <div class="phone"><img src="../img/ja/02-list.jpg" alt="行った・行きたい、そしてマイ・ミシュラン" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <p><a href="https://apps.apple.com/app/id6755934548">App Storeで人生グルメを入手</a></p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>料理に合わせた項目で評価</h2>
+        <p>辛さや塩加減のような味の強さはスライダーで、その味がどれだけ好みだったかは1から5で別々につけます。ステーキなら焼き加減と肉汁、寿司ならシャリとネタ、ラーメンならスープと麺と、料理ごとに項目が変わります。<br>訪問記録にはメニュー、写真、星の評価、メモも一緒に残ります。</p>
+      </div>
+      <div class="phone"><img src="../img/ja/04-taste-review.jpg" alt="料理に合わせた項目で評価" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <div class="contact">
-      使いにくい点やほしい機能があれば、<a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a> までお知らせください。
-      よくある質問は<a href="support.html">サポート</a>ページにまとめています。
-    </div>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>また行きたいお店が数字でわかる</h2>
+        <p>訪問が重なると、お店の画面に全訪問の平均で描いた総評が表示され、星の評価と満足度を合わせたリオ・ミシュランスコアが100点満点でつきます。<br>保存したお店で過ごして店を出ると、少しあとに記録を促す通知が届くので書き忘れません。</p>
+      </div>
+      <div class="phone"><img src="../img/ja/03-detail.jpg" alt="また行きたいお店が数字でわかる" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="reveal">
+      <h2>始め方は3ステップ</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>お店を保存する</h3><p>地図で検索するか、近くの場所をタップしてリストに入れます。</p></li>
+<li class="card"><span class="n">2</span><h3>行ったら記録する</h3><p>メニュー、写真、星、味の評価を残します。味の評価は任意です。</p></li>
+<li class="card"><span class="n">3</span><h3>次のお店を選ぶ</h3><p>トップ6とスコアを見て、Appleマップ、カカオマップ、NAVERマップで道案内。</p></li></ol>
+    </section>
+
+    <section class="reveal" id="commands">
+      <h2>料理ごとに変わる評価項目</h2>
+      <div class="card table">
+        <dl><div><dt>🍽️ 一般</dt><dd>辛さ、濃さ、甘さ、塩気、脂っこさ、素材の味</dd></div><div><dt>🥩 ステーキ</dt><dd>焼き加減、肉汁、柔らかさ、塩加減、肉の香り、サシ</dd></div><div><dt>🍣 寿司</dt><dd>シャリ、ネタ、わさび、バランス、握り、温度</dd></div><div><dt>🍜 ラーメン</dt><dd>スープ、麺、チャーシュー、トッピング、温度、バランス</dd></div><div><dt>🍕 ピザ</dt><dd>生地、ソース、チーズ、焼き加減、トッピング、バランス</dd></div><div><dt>🍷 ワイン</dt><dd>ボディ、タンニン、酸味、アロマ、余韻、バランス</dd></div><div><dt>☕ コーヒー</dt><dd>酸味、ボディ、香味、後味、甘さ、バランス</dd></div></dl>
+      </div>
+      <p class="muted">それ以外の料理は1行目の一般の項目で評価します。料理の分類は自分で作ることもできます。</p>
+    </section>
+
+
+
+    <section class="reveal" id="faq">
+      <h2>よくある質問</h2>
+      <div class="faq"><details><summary>お店はどうやって追加しますか?</summary><p>地図上部の検索欄にお店の名前を入力し、検索結果で「マイお店リストに追加」をタップしてください。 地図に表示されている周辺のスポットをタップして、そのまま追加することもできます。 検索に出てこないお店は、現在地や地図上で選んだ場所に直接追加できます。</p></details>
+<details><summary>「行った」「行きたい」「Top 6」とは何ですか?</summary><p>行った：すでに行ったことのあるお店です。訪問記録を残せます。 行きたい：いつか行ってみたいお店です。行ってきたら、お店の詳細画面で「行った」に切り替えてください。 Top 6(マイ・ミシュラン)：いちばん大切なお店6軒に1位から6位まで順位をつけます。「行きたい」のお店はTop 6に選べません。</p></details>
+<details><summary>味の評価は必ずしないといけませんか?</summary><p>いいえ、任意です。評価しておくと、お店の画面の総評チャートに味のタイプと満足度が重なり、リオ・ミシュランスコアにも反映されます。</p></details>
+<details><summary>「今日の訪問はいかがでしたか?」のお知らせはいつ届きますか?</summary><p>保存したお店の近くに5分以上滞在してから離れると、約40分後にお知らせが届きます。この機能を使うには、位置情報の「常に」とお知らせ(通知)の許可が必要です。 お知らせが不要な場合は、設定 &gt; アプリ &gt; 人生グルメ で通知をオフにするか、位置情報を「このAppの使用中のみ許可」に変更してください。 位置の確認は端末の中だけで行われ、移動経路を保存したり外部に送信したりすることはありません。</p></details>
+<details><summary>位置情報を許可しないと使えませんか?</summary><p>使えます。地図上で場所を選んでお店を追加し、記録することができます。使えなくなるのは、現在地の表示と訪問後のお知らせだけです。</p></details>
+<details><summary>スポット検索の結果が出てきません</summary><p>スポット検索にはインターネット接続が必要です。 別の名前や短いキーワードでもう一度検索してみてください。 それでも見つからない場合は、地図上で場所を選んで直接追加できます。</p></details>
+<details><summary>記録はどこに保存されますか? ほかの端末と同期されますか?</summary><p>お店、訪問記録、写真はすべてこのiPhoneの中だけに保存されます。現在のバージョンはほかの端末との同期に対応しておらず、設定にあるiCloudバックアップ・復元もまだ動作しません。iPhone全体のバックアップ(iCloudバックアップまたはコンピュータへのバックアップ)にはアプリのデータも含まれます。</p></details>
+<details><summary>記録をすべて消したいです</summary><p>地図画面の設定で「すべてのデータを削除」をタップすると、お店と訪問記録が削除されます。元に戻せないのでご注意ください。写真まで完全に消すには、アプリを削除してください。</p></details>
+<details><summary>アプリを削除して入れ直したら、記録は残っていますか?</summary><p>いいえ。記録は端末の中だけに保存されているため、アプリを削除すると一緒に消えてしまいます。アプリを削除する前に必ずご確認ください。</p></details>
+<details><summary>本当にすべて無料ですか？</summary><p>はい、すべての機能が無料です。広告もアカウント登録もありません。設定の「開発者を応援する」はお好みで、しても機能は変わりません。</p></details></div>
+      <p class="contact">上記で解決しない場合は、アプリの 設定 &gt; サポート から直接送っていただくか、<a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a> までメールでお問い合わせください。 アプリのバージョン、iPhoneの機種、どの画面で何をしたかを書いていただけると、より早く確認できます。</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>次のお店は<br>自分の記録から選ぼう</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6755934548">App Storeで無料ダウンロード</a>
+    </section>
   </main>
 
-  <footer class="site">
-    © 2026 Leeo · <a href="support.html">サポート</a> · <a href="privacy.html">プライバシーポリシー</a>
+  <footer>
+    <nav id="languages" class="langs" aria-label="言語"><a href="../" hreflang="ko" lang="ko">한국어</a>
+<a href="../en/" hreflang="en" lang="en">English</a>
+<a href="../ja/" hreflang="ja" lang="ja" aria-current="page">日本語</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a></nav>
+    <p><a href="privacy.html">プライバシーポリシー</a> · <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a> · © 2026 Leeo</p>
   </footer>
-</div>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

@@ -1,145 +1,176 @@
 <!doctype html>
 <html lang="da">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="color-scheme" content="light dark">
-<title>Insaeng – gem de restauranter, du har besøgt, på et kort</title>
-<meta name="description" content="En iPhone-app, der samler de restauranter, du har besøgt, og dem, du gerne vil prøve, på ét kort. Gem retter, billeder, stjerner og smagsbedømmelser for hvert besøg. Efterhånden får du din egen smagsprofil og din Top 6.">
-<link rel="canonical" href="https://m1zz.github.io/RestaurantMap/da/">
-<link rel="alternate" hreflang="ko" href="https://m1zz.github.io/RestaurantMap/">
-<link rel="alternate" hreflang="en" href="https://m1zz.github.io/RestaurantMap/en/">
-<link rel="alternate" hreflang="ja" href="https://m1zz.github.io/RestaurantMap/ja/">
-<link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/RestaurantMap/zh-Hans/">
-<link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/RestaurantMap/zh-Hant/">
-<link rel="alternate" hreflang="ru" href="https://m1zz.github.io/RestaurantMap/ru/">
-<link rel="alternate" hreflang="es" href="https://m1zz.github.io/RestaurantMap/es/">
-<link rel="alternate" hreflang="de" href="https://m1zz.github.io/RestaurantMap/de/">
-<link rel="alternate" hreflang="fr" href="https://m1zz.github.io/RestaurantMap/fr/">
-<link rel="alternate" hreflang="it" href="https://m1zz.github.io/RestaurantMap/it/">
-<link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/RestaurantMap/pt-BR/">
-<link rel="alternate" hreflang="th" href="https://m1zz.github.io/RestaurantMap/th/">
-<link rel="alternate" hreflang="vi" href="https://m1zz.github.io/RestaurantMap/vi/">
-<link rel="alternate" hreflang="cs" href="https://m1zz.github.io/RestaurantMap/cs/">
-<link rel="alternate" hreflang="da" href="https://m1zz.github.io/RestaurantMap/da/">
-<link rel="alternate" hreflang="el" href="https://m1zz.github.io/RestaurantMap/el/">
-<link rel="alternate" hreflang="fi" href="https://m1zz.github.io/RestaurantMap/fi/">
-<link rel="alternate" hreflang="id" href="https://m1zz.github.io/RestaurantMap/id/">
-<link rel="alternate" hreflang="nb" href="https://m1zz.github.io/RestaurantMap/nb/">
-<link rel="alternate" hreflang="nl" href="https://m1zz.github.io/RestaurantMap/nl/">
-<link rel="alternate" hreflang="pl" href="https://m1zz.github.io/RestaurantMap/pl/">
-<link rel="alternate" hreflang="sv" href="https://m1zz.github.io/RestaurantMap/sv/">
-<link rel="alternate" hreflang="tr" href="https://m1zz.github.io/RestaurantMap/tr/">
-<link rel="alternate" hreflang="en-GB" href="https://m1zz.github.io/RestaurantMap/en/">
-<link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/RestaurantMap/">
-<link rel="stylesheet" href="../style.css">
-<link rel="icon" href="../icon.png">
-<link rel="apple-touch-icon" href="../icon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Insaeng: dine bedste måltider på ét kort</title>
+  <meta name="description" content="Saml restauranter, du har besøgt og vil prøve, på et kort, og skriv ret, billeder og smag ned ved hvert besøg. Alt er gratis og bliver på din iPhone.">
+  <meta name="theme-color" content="#B8461F" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6755934548">
+  <link rel="canonical" href="https://m1zz.github.io/RestaurantMap/da/">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/RestaurantMap/">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/RestaurantMap/en/">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/RestaurantMap/ja/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/RestaurantMap/zh-Hans/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/RestaurantMap/zh-Hant/">
+  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/RestaurantMap/ru/">
+  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/RestaurantMap/es/">
+  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/RestaurantMap/de/">
+  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/RestaurantMap/fr/">
+  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/RestaurantMap/it/">
+  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/RestaurantMap/pt-BR/">
+  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/RestaurantMap/th/">
+  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/RestaurantMap/vi/">
+  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/RestaurantMap/cs/">
+  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/RestaurantMap/da/">
+  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/RestaurantMap/el/">
+  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/RestaurantMap/fi/">
+  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/RestaurantMap/id/">
+  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/RestaurantMap/nb/">
+  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/RestaurantMap/nl/">
+  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/RestaurantMap/pl/">
+  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/RestaurantMap/sv/">
+  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/RestaurantMap/tr/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/RestaurantMap/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Insaeng: dine bedste måltider på ét kort">
+  <meta property="og:description" content="Saml restauranter, du har besøgt og vil prøve, på et kort, og skriv ret, billeder og smag ned ved hvert besøg. Alt er gratis og bliver på din iPhone.">
+  <meta property="og:url" content="https://m1zz.github.io/RestaurantMap/da/">
+  <meta property="og:image" content="https://m1zz.github.io/RestaurantMap/img/da/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#B8461F}@media (prefers-color-scheme:dark){:root{--accent:#F08A62}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-<div class="container">
-
-  <header class="site">
-    <img src="../icon.png" alt="Appikon for Insaeng">
-    <div>
-      <div class="title">Insaeng</div>
-      <div class="subtitle">Bedøm og rangér dine måltider</div>
-    </div>
+  <a class="skip" href="#main">Gå til indhold</a>
+  <header class="bar">
+    <a class="brand" href="../da/"><img src="../icon.png" alt="" width="32" height="32">Insaeng</a>
+    <a class="lang-link" href="#languages">Sprog</a>
   </header>
 
-  <nav class="langs" aria-label="Sprog">
-    <a href="../index.html" hreflang="ko" lang="ko">한국어</a>
-    <a href="../en/index.html" hreflang="en" lang="en">English</a>
-    <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a>
-    <a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
-    <a href="../zh-Hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
-    <a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a>
-    <a href="../es/index.html" hreflang="es" lang="es">Español</a>
-    <a href="../de/index.html" hreflang="de" lang="de">Deutsch</a>
-    <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a>
-    <a href="../it/index.html" hreflang="it" lang="it">Italiano</a>
-    <a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
-    <a href="../th/index.html" hreflang="th" lang="th">ไทย</a>
-    <a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a>
-    <a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a>
-    <a href="index.html" hreflang="da" lang="da" aria-current="true">Dansk</a>
-    <a href="../el/index.html" hreflang="el" lang="el">Ελληνικά</a>
-    <a href="../fi/index.html" hreflang="fi" lang="fi">Suomi</a>
-    <a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a>
-    <a href="../nb/index.html" hreflang="nb" lang="nb">Norsk bokmål</a>
-    <a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a>
-    <a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a>
-    <a href="../sv/index.html" hreflang="sv" lang="sv">Svenska</a>
-    <a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a>
-  </nav>
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>Glem aldrig igen,<br>hvor maden var god</h1>
+        <p class="lead">Sæt nåle på kortet for de restauranter, du har besøgt og vil prøve, og skriv ved hvert besøg ned, hvad du bestilte, billeder og smagen. Når du ikke ved, hvor du skal spise, har dine egne noter svaret.</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6755934548">Hent gratis i App Store</a><a class="try" href="#try">Bedøm en ret ↓</a></div>
+        <p class="muted small">Alle funktioner er gratis. Ingen tilmelding, alt bliver på din iPhone.</p>
+      </div>
+      <div class="phone"><img src="../img/da/01-map.jpg" alt="Glem aldrig igen, hvor maden var god" width="720" height="1564" decoding="async"></div>
+    </section>
 
-  <nav class="pages" aria-label="Sider">
-    <a href="index.html" aria-current="page">Forside</a>
-    <a href="support.html">Support</a>
-    <a href="privacy.html">Privatlivspolitik</a>
-  </nav>
 
-  <main>
-    <h1>Glem aldrig en god restaurant igen</h1>
-    <p class="lead">
-      Insaeng samler de restauranter, du har besøgt, og dem, du gerne vil prøve, på ét kort.
-      For hvert besøg gemmer du, hvad du spiste, billeder, stjerner og en smagsbedømmelse.
-      Jo flere besøg du gemmer, jo tydeligere bliver dit eget restaurantkort og din smag.
-    </p>
+    <section class="reveal" id="try">
+      <h2>Bedøm en ret</h2>
+      <p class="muted">Vælg en type mad, og indstil hvor kraftig hver smag var, og hvor godt du kunne lide den. Samme kriterier og samme udregning som et besøg i appen.</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;Bedøm en ret&quot;, &quot;lead&quot;: &quot;Vælg en type mad, og indstil hvor kraftig hver smag var, og hvor godt du kunne lide den. Samme kriterier og samme udregning som et besøg i appen.&quot;, &quot;note&quot;: &quot;Som i appen tæller stjerner og tilfredshed hver det halve. Intet gemmes her.&quot;, &quot;types&quot;: [{&quot;emoji&quot;: &quot;🍽️&quot;, &quot;name&quot;: &quot;Generelt&quot;, &quot;attrs&quot;: [[&quot;🌶️&quot;, &quot;Styrke&quot;, &quot;Mild ↔ Stærk&quot;], [&quot;💪&quot;, &quot;Fylde&quot;, &quot;Mild ↔ Kraftig&quot;], [&quot;🍯&quot;, &quot;Sødme&quot;, &quot;Kan ikke lide ↔ Kan lide&quot;], [&quot;🧂&quot;, &quot;Salthed&quot;, &quot;Flad ↔ Salt&quot;], [&quot;🥓&quot;, &quot;Fedme&quot;, &quot;Let ↔ Fyldig&quot;], [&quot;🌿&quot;, &quot;Naturlig smag&quot;, &quot;Krydret ↔ Naturlig&quot;]]}, {&quot;emoji&quot;: &quot;🥩&quot;, &quot;name&quot;: &quot;Bøf&quot;, &quot;attrs&quot;: [[&quot;🔥&quot;, &quot;Stegning&quot;, &quot;Rød ↔ Gennemstegt&quot;], [&quot;🥩&quot;, &quot;Saftighed&quot;, &quot;Tørt ↔ Saftigt&quot;], [&quot;✨&quot;, &quot;Mørhed&quot;, &quot;Sejt ↔ Mørt&quot;], [&quot;🧂&quot;, &quot;Krydring&quot;, &quot;Flad ↔ Salt&quot;], [&quot;🌿&quot;, &quot;Kødsmag&quot;, &quot;Svag ↔ Kraftig&quot;], [&quot;🍖&quot;, &quot;Marmorering&quot;, &quot;Lidt ↔ Meget&quot;]]}, {&quot;emoji&quot;: &quot;🍣&quot;, &quot;name&quot;: &quot;Sushi&quot;, &quot;attrs&quot;: [[&quot;🍚&quot;, &quot;Shari (ris)&quot;, &quot;Grødet ↔ Fast&quot;], [&quot;🐟&quot;, &quot;Neta (fisk)&quot;, &quot;Friskhed&quot;], [&quot;🌿&quot;, &quot;Wasabi&quot;, &quot;Svag ↔ Kraftig&quot;], [&quot;⚖️&quot;, &quot;Balance&quot;, &quot;Ubalanceret ↔ Harmonisk&quot;], [&quot;✋&quot;, &quot;Formning&quot;, &quot;Løs ↔ Fast&quot;], [&quot;🌡️&quot;, &quot;Temperatur&quot;, &quot;Kold ↔ Lun&quot;]]}, {&quot;emoji&quot;: &quot;🍜&quot;, &quot;name&quot;: &quot;Ramen&quot;, &quot;attrs&quot;: [[&quot;🥣&quot;, &quot;Bouillon&quot;, &quot;Dybde/umami&quot;], [&quot;🍜&quot;, &quot;Nudler&quot;, &quot;Bløde ↔ Faste&quot;], [&quot;🥓&quot;, &quot;Chashu&quot;, &quot;Tørt ↔ Mørt&quot;], [&quot;🥚&quot;, &quot;Fyld&quot;, &quot;Sparsom ↔ Rigelig&quot;], [&quot;🔥&quot;, &quot;Temperatur&quot;, &quot;Lunken ↔ Varm&quot;], [&quot;⚖️&quot;, &quot;Balance&quot;, &quot;Ubalanceret ↔ Harmonisk&quot;]]}, {&quot;emoji&quot;: &quot;🍕&quot;, &quot;name&quot;: &quot;Pizza&quot;, &quot;attrs&quot;: [[&quot;🫓&quot;, &quot;Dej&quot;, &quot;Sej ↔ Luftig&quot;], [&quot;🍅&quot;, &quot;Sauce&quot;, &quot;Lidt ↔ Meget&quot;], [&quot;🧀&quot;, &quot;Ost&quot;, &quot;Lidt ↔ Meget&quot;], [&quot;🔥&quot;, &quot;Stegning&quot;, &quot;Underbagt ↔ Sprød&quot;], [&quot;🌟&quot;, &quot;Fyld&quot;, &quot;Sparsom ↔ Rigelig&quot;], [&quot;⚖️&quot;, &quot;Balance&quot;, &quot;Ubalanceret ↔ Harmonisk&quot;]]}, {&quot;emoji&quot;: &quot;🍷&quot;, &quot;name&quot;: &quot;Vin&quot;, &quot;attrs&quot;: [[&quot;💪&quot;, &quot;Fylde&quot;, &quot;Let ↔ Fyldig&quot;], [&quot;🍇&quot;, &quot;Tannin&quot;, &quot;Blød ↔ Stram&quot;], [&quot;🍋&quot;, &quot;Syre&quot;, &quot;Lav ↔ Høj&quot;], [&quot;🌸&quot;, &quot;Aroma&quot;, &quot;Enkel ↔ Kompleks&quot;], [&quot;✨&quot;, &quot;Eftersmag&quot;, &quot;Kort ↔ Lang&quot;], [&quot;⚖️&quot;, &quot;Balance&quot;, &quot;Ubalanceret ↔ Harmonisk&quot;]]}, {&quot;emoji&quot;: &quot;☕&quot;, &quot;name&quot;: &quot;Kaffe&quot;, &quot;attrs&quot;: [[&quot;🍋&quot;, &quot;Syrlighed&quot;, &quot;Lav ↔ Frisk&quot;], [&quot;💪&quot;, &quot;Fylde&quot;, &quot;Let ↔ Fyldig&quot;], [&quot;🌸&quot;, &quot;Aroma&quot;, &quot;Enkel ↔ Kompleks&quot;], [&quot;✨&quot;, &quot;Eftersmag&quot;, &quot;Kort ↔ Lang&quot;], [&quot;🍯&quot;, &quot;Sødme&quot;, &quot;Bitter ↔ Sød&quot;], [&quot;⚖️&quot;, &quot;Balance&quot;, &quot;Ubalanceret ↔ Harmonisk&quot;]]}], &quot;rating&quot;: &quot;Bedømmelse&quot;, &quot;intensity&quot;: &quot;Smagsintensitet&quot;, &quot;sat&quot;: &quot;Tilfredshed&quot;, &quot;low&quot;: &quot;Utilfreds&quot;, &quot;high&quot;: &quot;Meget tilfreds&quot;, &quot;shape&quot;: &quot;Smagsprofil&quot;, &quot;score&quot;: &quot;Riio Michelin-score&quot;}"></div>
+    </section>
 
-    <h2>Det kan appen</h2>
-    <div class="features">
-      <div class="card">
-        <h3>Find den på kortet, og gem den med det samme</h3>
-        <p>Søg efter en restaurant på kortet, eller tryk på et sted i nærheden for at føje det direkte til din liste. Du kan også selv tilføje en restaurant på din nuværende placering eller et sted, du vælger på kortet.</p>
-      </div>
-      <div class="card">
-        <h3>Besøgt og Vil derhen</h3>
-        <p>Hold de restauranter, du allerede har besøgt, adskilt fra dem, du gerne vil prøve en dag. Når du har været der, flytter du den bare over til Besøgt.</p>
-      </div>
-      <div class="card">
-        <h3>Besøgslog</h3>
-        <p>Gem dato, hvad du spiste, billeder, stjerner og noter. Har du tilføjet restaurantens retter, kan du bare vælge dem, næste gang du registrerer et besøg.</p>
-      </div>
-      <div class="card">
-        <h3>Grundig smagsbedømmelse</h3>
-        <p>Bedøm smagens styrke – hvor stærkt, salt eller sødt det er – og hvor godt du kunne lide den, hver for sig. Bøf, sushi og ramen kan bedømmes på det, der betyder noget for netop den ret: stegning, ris og bouillon.</p>
-      </div>
-      <div class="card">
-        <h3>Min Michelin Top 6</h3>
-        <p>Rangér dine seks yndlingsrestauranter, og saml dem ét sted. Når nogen spørger, hvor de skal spise, har du svaret lige ved hånden.</p>
-      </div>
-      <div class="card">
-        <h3>Smagsprofil</h3>
-        <p>Ud fra dine smagsbedømmelser kan du med ét blik se, hvilke smage og hvilken slags mad du bedst kan lide.</p>
-      </div>
-      <div class="card">
-        <h3>Påmindelse efter besøget</h3>
-        <p>Når du har været et stykke tid på en gemt restaurant og går igen, får du lidt senere en notifikation – „Hvordan var dit besøg i dag?“ – så du ikke glemmer at skrive det ned. Du kan slå den fra, hvis du ikke vil have den.</p>
-      </div>
-      <div class="card">
-        <h3>Rutevejledning og opkald</h3>
-        <p>Åbn en gemt restaurant direkte i Apple Kort, KakaoMap eller NAVER Map, og tryk på telefonnummeret for at ringe op med det samme.</p>
-      </div>
-    </div>
+    <section class="problem reveal">
+      <h2>Det var lækkert, men hvad bestilte jeg?</h2>
+      <p>Du husker, at du var vild med stedet, men navnet er uklart, og hvad du bestilte, eller om suppen var for salt, aner du ikke. Så du søger igen og læser fremmedes anmeldelser. Insaeng gemmer det, du selv har smagt, på et kort, så dit næste valg bygger på din egen erfaring.</p>
+    </section>
 
-    <h2>Dine noter bliver på din iPhone</h2>
-    <p>
-      Ingen oprettelse af konto. Din restaurantliste, dine besøg og dine billeder gemmes kun på din iPhone.
-      Læs mere i vores <a href="privacy.html">privatlivspolitik</a>.
-    </p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Besøgt, Vil derhen og din egen Michelin</h2>
+        <p>Søg på kortet, eller tryk på et sted i nærheden, så er det gemt. Hold steder, du har været, adskilt fra dem, du vil prøve, og ranger dine seks favoritter fra 1 til 6.<br>Når nogen spørger efter et godt sted, viser du bare listen.</p>
+      </div>
+      <div class="phone"><img src="../img/da/02-list.jpg" alt="Besøgt, Vil derhen og din egen Michelin" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <p><a href="https://apps.apple.com/app/id6755934548">Hent Insaeng i App Store</a></p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Spørgsmål der passer til retten</h2>
+        <p>Hvor kraftig en smag var, fx styrke eller salt, sætter du med en skyder, og hvor godt du kunne lide den, bedømmer du for sig fra 1 til 5. Bøf handler om stegning og saftighed, sushi om ris og fisk, ramen om bouillon og nudler.<br>Hvert besøg gemmer også ret, billeder, stjerner og noter.</p>
+      </div>
+      <div class="phone"><img src="../img/da/04-taste-review.jpg" alt="Spørgsmål der passer til retten" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <div class="contact">
-      Er der noget, der driller, eller savner du en funktion? Skriv til <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a>.
-      Svar på ofte stillede spørgsmål finder du på siden <a href="support.html">Support</a>.
-    </div>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Hvor det er værd at vende tilbage, kan ses i tal</h2>
+        <p>Efter flere besøg viser hver restaurant en samlet vurdering med gennemsnittet af alle besøg og en Riio Michelin-score ud af 100, der kombinerer stjerner og tilfredshed.<br>Når du forlader en gemt restaurant, kommer der lidt senere en påmindelse om at skrive besøget ned.</p>
+      </div>
+      <div class="phone"><img src="../img/da/03-detail.jpg" alt="Hvor det er værd at vende tilbage, kan ses i tal" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="reveal">
+      <h2>Kom i gang i tre trin</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>Gem en restaurant</h3><p>Søg på kortet, eller tryk på et sted i nærheden.</p></li>
+<li class="card"><span class="n">2</span><h3>Skriv besøget ned</h3><p>Ret, billeder, stjerner og smag. Smagsbedømmelsen er frivillig.</p></li>
+<li class="card"><span class="n">3</span><h3>Vælg det næste sted</h3><p>Tjek din top 6 og scorer, og find vej med Apple Kort, Kakao Map eller Naver Map.</p></li></ol>
+    </section>
+
+    <section class="reveal" id="commands">
+      <h2>Det bedømmer du for hver type mad</h2>
+      <div class="card table">
+        <dl><div><dt>🍽️ Generelt</dt><dd>Styrke, Fylde, Sødme, Salthed, Fedme, Naturlig smag</dd></div><div><dt>🥩 Bøf</dt><dd>Stegning, Saftighed, Mørhed, Krydring, Kødsmag, Marmorering</dd></div><div><dt>🍣 Sushi</dt><dd>Shari (ris), Neta (fisk), Wasabi, Balance, Formning, Temperatur</dd></div><div><dt>🍜 Ramen</dt><dd>Bouillon, Nudler, Chashu, Fyld, Temperatur, Balance</dd></div><div><dt>🍕 Pizza</dt><dd>Dej, Sauce, Ost, Stegning, Fyld, Balance</dd></div><div><dt>🍷 Vin</dt><dd>Fylde, Tannin, Syre, Aroma, Eftersmag, Balance</dd></div><div><dt>☕ Kaffe</dt><dd>Syrlighed, Fylde, Aroma, Eftersmag, Sødme, Balance</dd></div></dl>
+      </div>
+      <p class="muted">Al anden mad bedømmes med de generelle kriterier i første række. Du kan også lave dine egne kategorier.</p>
+    </section>
+
+
+
+    <section class="reveal" id="faq">
+      <h2>Ofte stillede spørgsmål</h2>
+      <div class="faq"><details><summary>Hvordan tilføjer jeg en restaurant?</summary><p>Skriv restaurantens navn i søgefeltet øverst på kortet, og tryk på „Føj til mine restauranter“ i resultaterne. Du kan også tilføje den direkte ved at trykke på et sted i nærheden, som vises på kortet. Dukker stedet ikke op i søgningen, kan du selv tilføje det på din nuværende placering eller et sted, du vælger på kortet.</p></details>
+<details><summary>Hvad er Besøgt, Vil derhen og Top 6?</summary><p>Besøgt – restauranter, du allerede har været på. Her kan du registrere dine besøg. Vil derhen – restauranter, du gerne vil prøve en dag. Når du har været der, skifter du den til Besøgt på restaurantens detaljeside. Top 6 (Min Michelin) – dine seks yndlingsrestauranter, rangeret fra nr. 1 til nr. 6. En restaurant på listen Vil derhen kan ikke sættes i Top 6.</p></details>
+<details><summary>Skal jeg bedømme smagen?</summary><p>Nej, det er frivilligt. Bedømmer du, indgår smagsintensitet og tilfredshed i restaurantens samlede vurdering og tæller med i Riio Michelin-scoren.</p></details>
+<details><summary>Hvornår kommer notifikationen „Hvordan var dit besøg i dag?“</summary><p>Når du har opholdt dig mere end 5 minutter ved en gemt restaurant og går igen, får du notifikationen ca. 40 minutter senere. Funktionen kræver, at placering er sat til „Altid“, og at notifikationer er slået til. Vil du ikke have notifikationen, kan du slå notifikationer fra under Indstillinger &gt; Apps &gt; Insaeng eller ændre placering til „Når appen er i brug“. Placeringen tjekkes kun på enheden. Dine bevægelser gemmes ikke og sendes ingen steder hen.</p></details>
+<details><summary>Kan jeg bruge appen uden adgang til placering?</summary><p>Ja. Du kan selv vælge et sted på kortet for at tilføje en restaurant og registrere besøg. Det er kun visning af din nuværende placering og påmindelsen efter besøget, der ikke virker.</p></details>
+<details><summary>Søgningen giver ingen resultater</summary><p>Stedsøgning kræver internetforbindelse. Prøv at søge igen med et andet navn eller et kortere søgeord. Finder du det stadig ikke, kan du vælge stedet på kortet og tilføje det selv.</p></details>
+<details><summary>Hvor gemmes mine data? Synkroniseres de med andre enheder?</summary><p>Restauranter, besøg og billeder gemmes kun på denne iPhone. Den nuværende version understøtter ikke synkronisering med andre enheder, og iCloud-sikkerhedskopiering og -gendannelse i indstillingerne virker endnu ikke. Appens data er dog med i en fuld sikkerhedskopi af din iPhone (iCloud-sikkerhedskopi eller sikkerhedskopi på computer).</p></details>
+<details><summary>Jeg vil slette alt</summary><p>Tryk på „Slet alle data“ i indstillingerne på kortskærmen, så slettes restauranter og besøg. Det kan ikke fortrydes. Vil du også fjerne alle billeder helt, skal du slette appen.</p></details>
+<details><summary>Har jeg stadig mine data, hvis jeg sletter og geninstallerer appen?</summary><p>Nej. Dine data gemmes kun på enheden og forsvinder derfor sammen med appen. Tænk dig om, før du sletter den.</p></details>
+<details><summary>Er det virkelig helt gratis?</summary><p>Ja. Alle funktioner er gratis, uden reklamer og uden konto. “Støt udvikleren” i indstillingerne er helt frivilligt og låser ikke noget op.</p></details></div>
+      <p class="contact">Fandt du ikke svaret? Send os en besked direkte fra appen under Indstillinger &gt; Support, eller skriv til <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a>. Skriv gerne appversion, iPhone-model, og hvad du gjorde på hvilken skærm – så kan vi hjælpe hurtigere.</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>Vælg din næste restaurant<br>ud fra dine egne noter</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6755934548">Hent gratis i App Store</a>
+    </section>
   </main>
 
-  <footer class="site">
-    © 2026 Leeo · <a href="support.html">Support</a> · <a href="privacy.html">Privatlivspolitik</a>
+  <footer>
+    <nav id="languages" class="langs" aria-label="Sprog"><a href="../" hreflang="ko" lang="ko">한국어</a>
+<a href="../en/" hreflang="en" lang="en">English</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../da/" hreflang="da" lang="da" aria-current="page">Dansk</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a></nav>
+    <p><a href="privacy.html">Privatlivspolitik</a> · <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a> · © 2026 Leeo</p>
   </footer>
-</div>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

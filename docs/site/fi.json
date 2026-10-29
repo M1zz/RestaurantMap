@@ -1,0 +1,403 @@
+{
+  "title": "Insaeng: hyvät ruokapaikat yhdellä kartalla",
+  "description": "Kerää kartalle ravintolat, joissa olet käynyt ja joihin haluat, ja kirjaa annos, kuvat ja maku. Ilmainen, tiedot pysyvät iPhonessasi.",
+  "hero": {
+    "headline": "Hyvät ruokapaikat\neivät enää unohdu",
+    "lead": "Merkitse kartalle ravintolat, joissa olet käynyt ja jotka haluat kokeilla, ja kirjaa joka käynnillä, mitä tilasit, kuvat ja maku. Kun et tiedä, missä syödä, vastaus löytyy omista muistiinpanoistasi.",
+    "cta": "Lataa ilmaiseksi App Storesta",
+    "note": "Kaikki toiminnot ovat ilmaisia. Ei rekisteröitymistä, tiedot pysyvät iPhonessasi."
+  },
+  "demo": {
+    "title": "Arvioi annos",
+    "lead": "Valitse ruokalaji ja säädä, kuinka voimakas kukin maku oli ja kuinka paljon pidit siitä. Samat kohdat ja sama laskutapa kuin käynnissä sovelluksessa.",
+    "note": "Kuten sovelluksessa, pisteistä puolet tulee tähdistä ja puolet tyytyväisyydestä. Mitään ei tallenneta.",
+    "types": [
+      {
+        "emoji": "🍽️",
+        "name": "Yleinen",
+        "attrs": [
+          [
+            "🌶️",
+            "Tulisuus",
+            "Mieto ↔ Tulinen"
+          ],
+          [
+            "💪",
+            "Voimakkuus",
+            "Mieto ↔ Voimakas"
+          ],
+          [
+            "🍯",
+            "Makeus",
+            "En pidä ↔ Pidän"
+          ],
+          [
+            "🧂",
+            "Suolaisuus",
+            "Mauton ↔ Suolainen"
+          ],
+          [
+            "🥓",
+            "Rasvaisuus",
+            "Kevyt ↔ Täyteläinen"
+          ],
+          [
+            "🌿",
+            "Luontainen maku",
+            "Maustettu ↔ Luontainen"
+          ]
+        ]
+      },
+      {
+        "emoji": "🥩",
+        "name": "Pihvi",
+        "attrs": [
+          [
+            "🔥",
+            "Kypsyys",
+            "Raaka ↔ Kypsä"
+          ],
+          [
+            "🥩",
+            "Mehukkuus",
+            "Kuiva ↔ Mehukas"
+          ],
+          [
+            "✨",
+            "Mureus",
+            "Sitkeä ↔ Murea"
+          ],
+          [
+            "🧂",
+            "Mausteisuus",
+            "Mauton ↔ Suolainen"
+          ],
+          [
+            "🌿",
+            "Lihan maku",
+            "Mieto ↔ Voimakas"
+          ],
+          [
+            "🍖",
+            "Marmorointi",
+            "Vähän ↔ Paljon"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍣",
+        "name": "Sushi",
+        "attrs": [
+          [
+            "🍚",
+            "Shari (riisi)",
+            "Mössö ↔ Kiinteä"
+          ],
+          [
+            "🐟",
+            "Neta (kala)",
+            "Tuoreus"
+          ],
+          [
+            "🌿",
+            "Wasabi",
+            "Mieto ↔ Voimakas"
+          ],
+          [
+            "⚖️",
+            "Tasapaino",
+            "Epätasapainoinen ↔ Harmoninen"
+          ],
+          [
+            "✋",
+            "Muotoilu",
+            "Löysä ↔ Tiivis"
+          ],
+          [
+            "🌡️",
+            "Lämpötila",
+            "Kylmä ↔ Lämmin"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍜",
+        "name": "Ramen",
+        "attrs": [
+          [
+            "🥣",
+            "Liemi",
+            "Syvyys/umami"
+          ],
+          [
+            "🍜",
+            "Nuudelit",
+            "Pehmeät ↔ Napakat"
+          ],
+          [
+            "🥓",
+            "Chashu",
+            "Kuiva ↔ Murea"
+          ],
+          [
+            "🥚",
+            "Täytteet",
+            "Niukka ↔ Runsas"
+          ],
+          [
+            "🔥",
+            "Lämpötila",
+            "Haalea ↔ Kuuma"
+          ],
+          [
+            "⚖️",
+            "Tasapaino",
+            "Epätasapainoinen ↔ Harmoninen"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍕",
+        "name": "Pizza",
+        "attrs": [
+          [
+            "🫓",
+            "Pohja",
+            "Sitkeä ↔ Kuohkea"
+          ],
+          [
+            "🍅",
+            "Kastike",
+            "Vähän ↔ Paljon"
+          ],
+          [
+            "🧀",
+            "Juusto",
+            "Vähän ↔ Paljon"
+          ],
+          [
+            "🔥",
+            "Kypsyys",
+            "Raaka ↔ Rapea"
+          ],
+          [
+            "🌟",
+            "Täytteet",
+            "Niukka ↔ Runsas"
+          ],
+          [
+            "⚖️",
+            "Tasapaino",
+            "Epätasapainoinen ↔ Harmoninen"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍷",
+        "name": "Viini",
+        "attrs": [
+          [
+            "💪",
+            "Täyteläisyys",
+            "Kevyt ↔ Täyteläinen"
+          ],
+          [
+            "🍇",
+            "Tanniinit",
+            "Pehmeä ↔ Kuivattava"
+          ],
+          [
+            "🍋",
+            "Hapokkuus",
+            "Matala ↔ Korkea"
+          ],
+          [
+            "🌸",
+            "Aromi",
+            "Yksinkertainen ↔ Monivivahteinen"
+          ],
+          [
+            "✨",
+            "Jälkimaku",
+            "Lyhyt ↔ Pitkä"
+          ],
+          [
+            "⚖️",
+            "Tasapaino",
+            "Epätasapainoinen ↔ Harmoninen"
+          ]
+        ]
+      },
+      {
+        "emoji": "☕",
+        "name": "Kahvi",
+        "attrs": [
+          [
+            "🍋",
+            "Hapokkuus",
+            "Matala ↔ Raikas"
+          ],
+          [
+            "💪",
+            "Täyteläisyys",
+            "Kevyt ↔ Täyteläinen"
+          ],
+          [
+            "🌸",
+            "Maku",
+            "Yksinkertainen ↔ Monivivahteinen"
+          ],
+          [
+            "✨",
+            "Jälkimaku",
+            "Lyhyt ↔ Pitkä"
+          ],
+          [
+            "🍯",
+            "Makeus",
+            "Kitkerä ↔ Makea"
+          ],
+          [
+            "⚖️",
+            "Tasapaino",
+            "Epätasapainoinen ↔ Harmoninen"
+          ]
+        ]
+      }
+    ],
+    "rating": "Arvio",
+    "intensity": "Maun voimakkuus",
+    "sat": "Tyytyväisyys",
+    "low": "Tyytymätön",
+    "high": "Erittäin tyytyväinen",
+    "shape": "Makuprofiili",
+    "score": "Riio Michelin -pisteet"
+  },
+  "problem": {
+    "title": "Siellä oli hyvää, mutta mitä minä tilasinkaan?",
+    "text": "Muistat, että ravintola oli mahtava, mutta nimi on hämärä, ja mitä tilasit tai oliko liemi liian suolaista, et muista ollenkaan. Joten haet taas ja luet tuntemattomien arvosteluja. Insaeng säilyttää kartalla sen, mitä itse maistoit, jotta seuraava valinta perustuu omaan kokemukseesi."
+  },
+  "features": [
+    {
+      "title": "Käyty, Haluan käydä ja oma Michelin",
+      "text": "Hae kartalta tai napauta lähellä olevaa paikkaa, niin se tallentuu heti. Pidä käydyt paikat erillään niistä, joita haluat kokeilla, ja järjestä kuusi suosikkiasi sijoille 1–6.\nKun joku kysyy hyvää paikkaa, näytä vain lista.",
+      "shot": "02-list"
+    },
+    {
+      "title": "Kysymykset ruokalajin mukaan",
+      "text": "Maun voimakkuuden, kuten tulisuuden tai suolan, säädät liukusäätimellä, ja sen, kuinka paljon pidit, arvioit erikseen asteikolla 1–5. Pihvissä arvioidaan kypsyys ja mehukkuus, sushissa riisi ja kala, ramenissa liemi ja nuudelit.\nJokainen käynti tallentaa myös annoksen, kuvat, tähdet ja muistiinpanot.",
+      "shot": "04-taste-review"
+    },
+    {
+      "title": "Minne kannattaa palata, näkyy numeroina",
+      "text": "Käyntien karttuessa jokainen ravintola näyttää kokonaisarvion kaikkien käyntien keskiarvosta sekä Riio Michelin -pisteet sadasta, joissa yhdistyvät tähdet ja tyytyväisyys.\nKun lähdet tallennetusta ravintolasta, hetken päästä tulee muistutus kirjata käynti.",
+      "shot": "03-detail"
+    }
+  ],
+  "steps": {
+    "title": "Aloita kolmella askeleella",
+    "items": [
+      {
+        "title": "Tallenna ravintola",
+        "text": "Hae kartalta tai napauta lähellä olevaa paikkaa."
+      },
+      {
+        "title": "Kirjaa käynti",
+        "text": "Annos, kuvat, tähdet ja maku. Makuarvio on vapaaehtoinen."
+      },
+      {
+        "title": "Valitse seuraava",
+        "text": "Katso top 6 ja pisteet ja suunnista Apple Karttojen, Kakao Mapin tai Naver Mapin avulla."
+      }
+    ]
+  },
+  "reference": {
+    "title": "Mitä arvioidaan ruokalajeittain",
+    "rows": [
+      [
+        "🍽️ Yleinen",
+        "Tulisuus, Voimakkuus, Makeus, Suolaisuus, Rasvaisuus, Luontainen maku"
+      ],
+      [
+        "🥩 Pihvi",
+        "Kypsyys, Mehukkuus, Mureus, Mausteisuus, Lihan maku, Marmorointi"
+      ],
+      [
+        "🍣 Sushi",
+        "Shari (riisi), Neta (kala), Wasabi, Tasapaino, Muotoilu, Lämpötila"
+      ],
+      [
+        "🍜 Ramen",
+        "Liemi, Nuudelit, Chashu, Täytteet, Lämpötila, Tasapaino"
+      ],
+      [
+        "🍕 Pizza",
+        "Pohja, Kastike, Juusto, Kypsyys, Täytteet, Tasapaino"
+      ],
+      [
+        "🍷 Viini",
+        "Täyteläisyys, Tanniinit, Hapokkuus, Aromi, Jälkimaku, Tasapaino"
+      ],
+      [
+        "☕ Kahvi",
+        "Hapokkuus, Täyteläisyys, Maku, Jälkimaku, Makeus, Tasapaino"
+      ]
+    ],
+    "note": "Muut ruoat arvioidaan ensimmäisen rivin yleisillä kohdilla. Voit myös luoda omia luokkia."
+  },
+  "faq": {
+    "title": "Usein kysytyt kysymykset",
+    "items": [
+      {
+        "q": "Miten lisään ravintolan?",
+        "a": "Kirjoita ravintolan nimi kartan yläreunan hakukenttään ja napauta tuloksissa ”Lisää omiin ravintoloihin”. Voit myös lisätä ravintolan suoraan napauttamalla kartalla näkyvää lähipaikkaa. Jos paikkaa ei löydy haulla, lisää se itse nykyiseen sijaintiisi tai kartalta valitsemaasi kohtaan."
+      },
+      {
+        "q": "Mitä ovat Käyty, Haluan käydä ja Top 6?",
+        "a": "Käyty – ravintolat, joissa olet jo käynyt. Niihin voi kirjata käyntejä. Haluan käydä – ravintolat, joihin haluat joskus mennä. Käynnin jälkeen vaihda ravintola käydyksi sen tietonäkymässä. Top 6 (Oma Michelin) – kuusi suosikkiravintolaasi järjestyksessä sijoilta 1–6. Haluan käydä -listalla olevaa ravintolaa ei voi lisätä Top 6:een."
+      },
+      {
+        "q": "Onko maku pakko arvioida?",
+        "a": "Ei, se on vapaaehtoista. Jos arvioit, maun voimakkuus ja tyytyväisyys lisätään ravintolan kokonaisarvioon ja ne vaikuttavat Riio Michelin -pisteisiin."
+      },
+      {
+        "q": "Milloin ilmoitus ”Millainen tämänpäiväinen käyntisi oli?” tulee?",
+        "a": "Kun olet viipynyt tallentamasi ravintolan lähellä yli 5 minuuttia ja lähdet, ilmoitus tulee noin 40 minuutin kuluttua. Toiminto vaatii, että sijainnin käyttö on asetettu tilaan ”Aina” ja ilmoitukset on sallittu. Jos et halua ilmoitusta, poista ilmoitukset käytöstä kohdassa Asetukset > Apit > Insaeng tai vaihda sijainniksi ”Kun appia käytetään”. Sijaintia tarkistetaan vain laitteella. Liikkumistasi ei tallenneta eikä lähetetä minnekään."
+      },
+      {
+        "q": "Voinko käyttää sovellusta ilman sijaintilupaa?",
+        "a": "Voit. Valitse kohta itse kartalta, niin voit lisätä ravintolan ja kirjata käyntejä. Vain nykyisen sijainnin näyttäminen ja käynnin jälkeinen muistutus eivät toimi."
+      },
+      {
+        "q": "Haku ei löydä mitään",
+        "a": "Paikkahaku vaatii internetyhteyden. Kokeile toista nimeä tai lyhyempää hakusanaa. Jos paikkaa ei vieläkään löydy, valitse kohta kartalta ja lisää se itse."
+      },
+      {
+        "q": "Mihin merkinnät tallentuvat? Synkronoituvatko ne muille laitteille?",
+        "a": "Ravintolat, käyntimerkinnät ja kuvat tallentuvat vain tähän iPhoneen. Nykyinen versio ei tue synkronointia muiden laitteiden kanssa, eikä asetusten iCloud-varmuuskopiointi ja -palautus vielä toimi. Sovelluksen tiedot sisältyvät kuitenkin iPhonen täyteen varmuuskopioon (iCloud-varmuuskopio tai varmuuskopio tietokoneelle)."
+      },
+      {
+        "q": "Haluan poistaa kaikki merkinnät",
+        "a": "Napauta karttanäkymän asetuksissa ”Poista kaikki tiedot”, niin ravintolat ja käyntimerkinnät poistetaan. Tätä ei voi perua. Jos haluat poistaa jäljettömiin myös kuvat, poista sovellus."
+      },
+      {
+        "q": "Säilyvätkö merkinnät, jos poistan sovelluksen ja asennan sen uudelleen?",
+        "a": "Eivät. Merkinnät tallentuvat vain laitteelle, joten ne poistuvat sovelluksen mukana. Mieti siis tarkkaan ennen kuin poistat sovelluksen."
+      },
+      {
+        "q": "Onko kaikki todella ilmaista?",
+        "a": "Kyllä. Kaikki toiminnot ovat ilmaisia, ilman mainoksia ja ilman tiliä. Asetusten ”Tue kehittäjää” on täysin vapaaehtoinen eikä avaa mitään lisää."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Valitse seuraava ravintola\nomista muistiinpanoistasi",
+    "cta": "Lataa ilmaiseksi App Storesta"
+  },
+  "ui": {
+    "skip": "Siirry sisältöön",
+    "languages": "Kieli",
+    "privacy": "Tietosuojakäytäntö",
+    "contact": "Jos vastausta ei löytynyt, lähetä viesti suoraan sovelluksesta kohdasta Asetukset > Tuki tai kirjoita osoitteeseen {email}. Kerro sovelluksen versio, iPhonen malli ja mitä teit missäkin näkymässä – niin pääsemme asiaan nopeammin."
+  }
+}

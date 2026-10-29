@@ -1,0 +1,403 @@
+{
+  "title": "Insaeng: i posti dove hai mangiato bene, su una mappa",
+  "description": "Raccogli su una mappa i ristoranti provati e da provare, e annota piatto, foto e sapore a ogni visita. Gratis e solo sul tuo iPhone.",
+  "hero": {
+    "headline": "Quel posto dove hai mangiato benissimo,\nnon lo dimentichi più",
+    "lead": "Segna sulla mappa i ristoranti dove sei stato e quelli da provare, e a ogni visita annota cosa hai ordinato, le foto e il sapore. Quando non sai dove andare, la risposta è nei tuoi appunti.",
+    "cta": "Scaricala gratis dall’App Store",
+    "note": "Tutte le funzioni sono gratuite. Nessuna registrazione, tutto resta sul tuo iPhone."
+  },
+  "demo": {
+    "title": "Valuta un piatto",
+    "lead": "Scegli un tipo di cucina e indica quanto era intenso ogni sapore e quanto ti è piaciuto. Stessi criteri e stesso calcolo di una visita nell’app.",
+    "note": "Come nell’app, il punteggio è per metà stelle e per metà soddisfazione. Qui non si salva nulla.",
+    "types": [
+      {
+        "emoji": "🍽️",
+        "name": "Generale",
+        "attrs": [
+          [
+            "🌶️",
+            "Piccantezza",
+            "Delicato ↔ Piccante"
+          ],
+          [
+            "💪",
+            "Intensità",
+            "Delicato ↔ Intenso"
+          ],
+          [
+            "🍯",
+            "Dolcezza",
+            "Non mi piace ↔ Mi piace"
+          ],
+          [
+            "🧂",
+            "Sapidità",
+            "Sciapo ↔ Salato"
+          ],
+          [
+            "🥓",
+            "Untuosità",
+            "Leggero ↔ Ricco"
+          ],
+          [
+            "🌿",
+            "Sapore naturale",
+            "Condito ↔ Naturale"
+          ]
+        ]
+      },
+      {
+        "emoji": "🥩",
+        "name": "Bistecca",
+        "attrs": [
+          [
+            "🔥",
+            "Cottura",
+            "Al sangue ↔ Ben cotto"
+          ],
+          [
+            "🥩",
+            "Succosità",
+            "Secco ↔ Succoso"
+          ],
+          [
+            "✨",
+            "Tenerezza",
+            "Duro ↔ Tenero"
+          ],
+          [
+            "🧂",
+            "Sapidità",
+            "Sciapo ↔ Salato"
+          ],
+          [
+            "🌿",
+            "Aroma di carne",
+            "Debole ↔ Intenso"
+          ],
+          [
+            "🍖",
+            "Marezzatura",
+            "Poco ↔ Tanto"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍣",
+        "name": "Sushi",
+        "attrs": [
+          [
+            "🍚",
+            "Shari (riso)",
+            "Molle ↔ Sodo"
+          ],
+          [
+            "🐟",
+            "Neta (pesce)",
+            "Freschezza"
+          ],
+          [
+            "🌿",
+            "Wasabi",
+            "Debole ↔ Intenso"
+          ],
+          [
+            "⚖️",
+            "Equilibrio",
+            "Squilibrato ↔ Armonioso"
+          ],
+          [
+            "✋",
+            "Modellatura",
+            "Sciolto ↔ Compatto"
+          ],
+          [
+            "🌡️",
+            "Temperatura",
+            "Freddo ↔ Tiepido"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍜",
+        "name": "Ramen",
+        "attrs": [
+          [
+            "🥣",
+            "Brodo",
+            "Profondità/umami"
+          ],
+          [
+            "🍜",
+            "Noodles",
+            "Morbidi ↔ Al dente"
+          ],
+          [
+            "🥓",
+            "Chashu",
+            "Secco ↔ Tenero"
+          ],
+          [
+            "🥚",
+            "Condimenti",
+            "Scarso ↔ Abbondante"
+          ],
+          [
+            "🔥",
+            "Temperatura",
+            "Tiepido ↔ Bollente"
+          ],
+          [
+            "⚖️",
+            "Equilibrio",
+            "Squilibrato ↔ Armonioso"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍕",
+        "name": "Pizza",
+        "attrs": [
+          [
+            "🫓",
+            "Impasto",
+            "Duro ↔ Soffice"
+          ],
+          [
+            "🍅",
+            "Salsa",
+            "Poco ↔ Tanto"
+          ],
+          [
+            "🧀",
+            "Formaggio",
+            "Poco ↔ Tanto"
+          ],
+          [
+            "🔥",
+            "Cottura",
+            "Poco cotto ↔ Croccante"
+          ],
+          [
+            "🌟",
+            "Condimenti",
+            "Scarso ↔ Abbondante"
+          ],
+          [
+            "⚖️",
+            "Equilibrio",
+            "Squilibrato ↔ Armonioso"
+          ]
+        ]
+      },
+      {
+        "emoji": "🍷",
+        "name": "Vino",
+        "attrs": [
+          [
+            "💪",
+            "Corpo",
+            "Leggero ↔ Corposo"
+          ],
+          [
+            "🍇",
+            "Tannini",
+            "Morbido ↔ Astringente"
+          ],
+          [
+            "🍋",
+            "Acidità",
+            "Bassa ↔ Alta"
+          ],
+          [
+            "🌸",
+            "Aroma",
+            "Semplice ↔ Complesso"
+          ],
+          [
+            "✨",
+            "Finale",
+            "Breve ↔ Persistente"
+          ],
+          [
+            "⚖️",
+            "Equilibrio",
+            "Squilibrato ↔ Armonioso"
+          ]
+        ]
+      },
+      {
+        "emoji": "☕",
+        "name": "Caffè",
+        "attrs": [
+          [
+            "🍋",
+            "Acidità",
+            "Bassa ↔ Vivace"
+          ],
+          [
+            "💪",
+            "Corpo",
+            "Leggero ↔ Corposo"
+          ],
+          [
+            "🌸",
+            "Aroma",
+            "Semplice ↔ Complesso"
+          ],
+          [
+            "✨",
+            "Retrogusto",
+            "Breve ↔ Persistente"
+          ],
+          [
+            "🍯",
+            "Dolcezza",
+            "Amaro ↔ Dolce"
+          ],
+          [
+            "⚖️",
+            "Equilibrio",
+            "Squilibrato ↔ Armonioso"
+          ]
+        ]
+      }
+    ],
+    "rating": "Valutazione",
+    "intensity": "Intensità del sapore",
+    "sat": "Soddisfazione",
+    "low": "Insoddisfatto",
+    "high": "Molto soddisfatto",
+    "shape": "Profilo del gusto",
+    "score": "Punteggio Riio Michelin"
+  },
+  "problem": {
+    "title": "Si mangiava benissimo, ma cosa avevo preso?",
+    "text": "Ricordi che il ristorante ti era piaciuto, ma il nome è sfocato, e cosa avevi ordinato o se il brodo era salato non lo ricordi proprio. Così cerchi di nuovo e leggi recensioni di sconosciuti. Insaeng tiene su una mappa ciò che hai assaggiato tu, così scegli il prossimo posto in base alla tua esperienza."
+  },
+  "features": [
+    {
+      "title": "Visitati, Da provare e il tuo Michelin",
+      "text": "Cerca sulla mappa o tocca un luogo vicino per salvarlo subito. Tieni separati i posti dove sei già stato da quelli da provare, e metti in classifica i tuoi sei preferiti dall’1 al 6.\nQuando qualcuno ti chiede un consiglio, mostragli la lista.",
+      "shot": "02-list"
+    },
+    {
+      "title": "Domande su misura per ogni piatto",
+      "text": "L’intensità di ogni sapore, come il piccante o il sale, si regola con un cursore, mentre quanto ti è piaciuto si valuta a parte da 1 a 5. Per la bistecca contano cottura e succosità, per il sushi riso e pesce, per il ramen brodo e noodle.\nOgni visita conserva anche piatto, foto, stelle e note.",
+      "shot": "04-taste-review"
+    },
+    {
+      "title": "Dove tornare, in numeri",
+      "text": "Con più visite, ogni ristorante mostra un giudizio complessivo con la media di tutte e un punteggio Riio Michelin su 100 che unisce stelle e soddisfazione.\nQuando esci da un ristorante salvato, poco dopo arriva un promemoria per annotare la visita.",
+      "shot": "03-detail"
+    }
+  ],
+  "steps": {
+    "title": "Si parte in tre passi",
+    "items": [
+      {
+        "title": "Salva un ristorante",
+        "text": "Cercalo sulla mappa o tocca un luogo vicino."
+      },
+      {
+        "title": "Annota la visita",
+        "text": "Piatto, foto, stelle e sapore. La valutazione del sapore è facoltativa."
+      },
+      {
+        "title": "Scegli il prossimo",
+        "text": "Guarda la tua top 6 e i punteggi, poi vai con Mappe, Kakao Map o Naver Map."
+      }
+    ]
+  },
+  "reference": {
+    "title": "Cosa si valuta, piatto per piatto",
+    "rows": [
+      [
+        "🍽️ Generale",
+        "Piccantezza, Intensità, Dolcezza, Sapidità, Untuosità, Sapore naturale"
+      ],
+      [
+        "🥩 Bistecca",
+        "Cottura, Succosità, Tenerezza, Sapidità, Aroma di carne, Marezzatura"
+      ],
+      [
+        "🍣 Sushi",
+        "Shari (riso), Neta (pesce), Wasabi, Equilibrio, Modellatura, Temperatura"
+      ],
+      [
+        "🍜 Ramen",
+        "Brodo, Noodles, Chashu, Condimenti, Temperatura, Equilibrio"
+      ],
+      [
+        "🍕 Pizza",
+        "Impasto, Salsa, Formaggio, Cottura, Condimenti, Equilibrio"
+      ],
+      [
+        "🍷 Vino",
+        "Corpo, Tannini, Acidità, Aroma, Finale, Equilibrio"
+      ],
+      [
+        "☕ Caffè",
+        "Acidità, Corpo, Aroma, Retrogusto, Dolcezza, Equilibrio"
+      ]
+    ],
+    "note": "Tutto il resto si valuta con i criteri generali della prima riga. Puoi anche creare categorie tue."
+  },
+  "faq": {
+    "title": "Domande frequenti",
+    "items": [
+      {
+        "q": "Come aggiungo un ristorante?",
+        "a": "Scrivi il nome del ristorante nel campo di ricerca in alto sulla mappa e tocca «Aggiungi ai miei ristoranti» nei risultati. Puoi anche toccare un luogo vicino mostrato sulla mappa per aggiungerlo subito. Se un locale non compare nella ricerca, aggiungilo a mano nella tua posizione attuale o nel punto che scegli sulla mappa."
+      },
+      {
+        "q": "Cosa sono «Visitati», «Da provare» e la Top 6?",
+        "a": "Visitati – I ristoranti dove sei già stato. Qui puoi annotare le visite. Da provare – I ristoranti che vuoi provare prima o poi. Dopo esserci stato, spostalo tra i Visitati dalla sua scheda dettagliata. Top 6 (Il mio Michelin) – I tuoi sei ristoranti preferiti, in classifica dal 1° al 6° posto. Un ristorante tra i «Da provare» non può entrare nella Top 6."
+      },
+      {
+        "q": "Devo per forza valutare il gusto?",
+        "a": "No, è facoltativa. Se valuti, intensità del sapore e soddisfazione si aggiungono al giudizio complessivo del ristorante e contano per il punteggio Riio Michelin."
+      },
+      {
+        "q": "Quando arriva la notifica «Com’è andata la visita di oggi?»",
+        "a": "Se ti fermi per più di 5 minuti vicino a un ristorante salvato e poi te ne vai, la notifica arriva circa 40 minuti dopo. Per questa funzione servono l’accesso alla posizione «Sempre» e il permesso per le notifiche. Se non vuoi ricevere queste notifiche, disattivale in Impostazioni > App > Insaeng oppure imposta la posizione su «Mentre usi l’app». Il controllo della posizione avviene solo sul dispositivo; i tuoi spostamenti non vengono né salvati né inviati all’esterno."
+      },
+      {
+        "q": "Posso usare l’app senza dare il permesso per la posizione?",
+        "a": "Sì. Puoi scegliere tu un punto sulla mappa per aggiungere ristoranti e annotare le visite. Non saranno disponibili solo la visualizzazione della posizione attuale e il promemoria dopo la visita."
+      },
+      {
+        "q": "La ricerca dei luoghi non trova nulla",
+        "a": "Per cercare i luoghi serve una connessione a Internet. Riprova con un altro nome o una parola chiave più breve. Se ancora non lo trovi, scegli un punto sulla mappa e aggiungilo a mano."
+      },
+      {
+        "q": "Dove vengono salvati i miei dati? Si sincronizzano con altri dispositivi?",
+        "a": "Ristoranti, visite e foto vengono salvati solo su questo iPhone. La versione attuale non supporta la sincronizzazione con altri dispositivi, e anche il backup e ripristino su iCloud nelle impostazioni non funziona ancora. I dati dell’app sono invece inclusi in un backup completo dell’iPhone (backup su iCloud o sul computer)."
+      },
+      {
+        "q": "Voglio cancellare tutto",
+        "a": "Nelle impostazioni della schermata della mappa tocca «Elimina tutti i dati» per cancellare ristoranti e visite. L’operazione non si può annullare, quindi fai attenzione. Per eliminare anche tutte le foto senza lasciare traccia, elimina l’app."
+      },
+      {
+        "q": "Se elimino e reinstallo l’app, ritrovo i miei dati?",
+        "a": "No. Poiché i dati sono salvati solo sul dispositivo, vengono cancellati insieme all’app. Tienilo presente prima di eliminarla."
+      },
+      {
+        "q": "È davvero tutto gratis?",
+        "a": "Sì. Tutte le funzioni sono gratuite, senza pubblicità né account. «Sostieni lo sviluppatore» nelle impostazioni è facoltativo e non sblocca nulla."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Il prossimo ristorante\nsceglilo dai tuoi appunti",
+    "cta": "Scaricala gratis dall’App Store"
+  },
+  "ui": {
+    "skip": "Vai al contenuto",
+    "languages": "Lingua",
+    "privacy": "Informativa sulla privacy",
+    "contact": "Per i problemi che non trovano risposta qui sopra, scrivici direttamente dall’app in Impostazioni > Assistenza oppure via e-mail a {email}. Se indichi la versione dell’app, il modello di iPhone e cosa stavi facendo e in quale schermata, potremo aiutarti più in fretta."
+  }
+}

@@ -1,145 +1,176 @@
 <!doctype html>
 <html lang="el">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="color-scheme" content="light dark">
-<title>Insaeng – καταγράψτε στον χάρτη τα εστιατόρια που έχετε επισκεφθεί</title>
-<meta name="description" content="Εφαρμογή για iPhone που συγκεντρώνει σε έναν χάρτη τα εστιατόρια όπου έχετε πάει και όσα θέλετε να δοκιμάσετε. Σε κάθε επίσκεψη κρατάτε πιάτα, φωτογραφίες, αστέρια και βαθμολογία γεύσης. Με τον καιρό σχηματίζεται το προφίλ γούστου σας και το Top 6 σας.">
-<link rel="canonical" href="https://m1zz.github.io/RestaurantMap/el/">
-<link rel="alternate" hreflang="ko" href="https://m1zz.github.io/RestaurantMap/">
-<link rel="alternate" hreflang="en" href="https://m1zz.github.io/RestaurantMap/en/">
-<link rel="alternate" hreflang="ja" href="https://m1zz.github.io/RestaurantMap/ja/">
-<link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/RestaurantMap/zh-Hans/">
-<link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/RestaurantMap/zh-Hant/">
-<link rel="alternate" hreflang="ru" href="https://m1zz.github.io/RestaurantMap/ru/">
-<link rel="alternate" hreflang="es" href="https://m1zz.github.io/RestaurantMap/es/">
-<link rel="alternate" hreflang="de" href="https://m1zz.github.io/RestaurantMap/de/">
-<link rel="alternate" hreflang="fr" href="https://m1zz.github.io/RestaurantMap/fr/">
-<link rel="alternate" hreflang="it" href="https://m1zz.github.io/RestaurantMap/it/">
-<link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/RestaurantMap/pt-BR/">
-<link rel="alternate" hreflang="th" href="https://m1zz.github.io/RestaurantMap/th/">
-<link rel="alternate" hreflang="vi" href="https://m1zz.github.io/RestaurantMap/vi/">
-<link rel="alternate" hreflang="cs" href="https://m1zz.github.io/RestaurantMap/cs/">
-<link rel="alternate" hreflang="da" href="https://m1zz.github.io/RestaurantMap/da/">
-<link rel="alternate" hreflang="el" href="https://m1zz.github.io/RestaurantMap/el/">
-<link rel="alternate" hreflang="fi" href="https://m1zz.github.io/RestaurantMap/fi/">
-<link rel="alternate" hreflang="id" href="https://m1zz.github.io/RestaurantMap/id/">
-<link rel="alternate" hreflang="nb" href="https://m1zz.github.io/RestaurantMap/nb/">
-<link rel="alternate" hreflang="nl" href="https://m1zz.github.io/RestaurantMap/nl/">
-<link rel="alternate" hreflang="pl" href="https://m1zz.github.io/RestaurantMap/pl/">
-<link rel="alternate" hreflang="sv" href="https://m1zz.github.io/RestaurantMap/sv/">
-<link rel="alternate" hreflang="tr" href="https://m1zz.github.io/RestaurantMap/tr/">
-<link rel="alternate" hreflang="en-GB" href="https://m1zz.github.io/RestaurantMap/en/">
-<link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/RestaurantMap/">
-<link rel="stylesheet" href="../style.css">
-<link rel="icon" href="../icon.png">
-<link rel="apple-touch-icon" href="../icon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Insaeng: τα μέρη που φάγατε καλά σε έναν χάρτη</title>
+  <meta name="description" content="Συγκεντρώστε σε χάρτη τα εστιατόρια που δοκιμάσατε και θέλετε, και σημειώστε πιάτο, φωτογραφίες και γεύση. Δωρεάν, μόνο στο iPhone σας.">
+  <meta name="theme-color" content="#B8461F" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6755934548">
+  <link rel="canonical" href="https://m1zz.github.io/RestaurantMap/el/">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/RestaurantMap/">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/RestaurantMap/en/">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/RestaurantMap/ja/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/RestaurantMap/zh-Hans/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/RestaurantMap/zh-Hant/">
+  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/RestaurantMap/ru/">
+  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/RestaurantMap/es/">
+  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/RestaurantMap/de/">
+  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/RestaurantMap/fr/">
+  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/RestaurantMap/it/">
+  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/RestaurantMap/pt-BR/">
+  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/RestaurantMap/th/">
+  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/RestaurantMap/vi/">
+  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/RestaurantMap/cs/">
+  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/RestaurantMap/da/">
+  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/RestaurantMap/el/">
+  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/RestaurantMap/fi/">
+  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/RestaurantMap/id/">
+  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/RestaurantMap/nb/">
+  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/RestaurantMap/nl/">
+  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/RestaurantMap/pl/">
+  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/RestaurantMap/sv/">
+  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/RestaurantMap/tr/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/RestaurantMap/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Insaeng: τα μέρη που φάγατε καλά σε έναν χάρτη">
+  <meta property="og:description" content="Συγκεντρώστε σε χάρτη τα εστιατόρια που δοκιμάσατε και θέλετε, και σημειώστε πιάτο, φωτογραφίες και γεύση. Δωρεάν, μόνο στο iPhone σας.">
+  <meta property="og:url" content="https://m1zz.github.io/RestaurantMap/el/">
+  <meta property="og:image" content="https://m1zz.github.io/RestaurantMap/img/el/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#B8461F}@media (prefers-color-scheme:dark){:root{--accent:#F08A62}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-<div class="container">
-
-  <header class="site">
-    <img src="../icon.png" alt="Εικονίδιο της εφαρμογής Insaeng">
-    <div>
-      <div class="title">Insaeng</div>
-      <div class="subtitle">Βαθμολογήστε και κατατάξτε</div>
-    </div>
+  <a class="skip" href="#main">Μετάβαση στο περιεχόμενο</a>
+  <header class="bar">
+    <a class="brand" href="../el/"><img src="../icon.png" alt="" width="32" height="32">Insaeng</a>
+    <a class="lang-link" href="#languages">Γλώσσα</a>
   </header>
 
-  <nav class="langs" aria-label="Γλώσσα">
-    <a href="../index.html" hreflang="ko" lang="ko">한국어</a>
-    <a href="../en/index.html" hreflang="en" lang="en">English</a>
-    <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a>
-    <a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
-    <a href="../zh-Hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
-    <a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a>
-    <a href="../es/index.html" hreflang="es" lang="es">Español</a>
-    <a href="../de/index.html" hreflang="de" lang="de">Deutsch</a>
-    <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a>
-    <a href="../it/index.html" hreflang="it" lang="it">Italiano</a>
-    <a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
-    <a href="../th/index.html" hreflang="th" lang="th">ไทย</a>
-    <a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a>
-    <a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a>
-    <a href="../da/index.html" hreflang="da" lang="da">Dansk</a>
-    <a href="index.html" hreflang="el" lang="el" aria-current="true">Ελληνικά</a>
-    <a href="../fi/index.html" hreflang="fi" lang="fi">Suomi</a>
-    <a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a>
-    <a href="../nb/index.html" hreflang="nb" lang="nb">Norsk bokmål</a>
-    <a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a>
-    <a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a>
-    <a href="../sv/index.html" hreflang="sv" lang="sv">Svenska</a>
-    <a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a>
-  </nav>
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>Εκείνο το υπέροχο μέρος,<br>δεν θα το ξεχάσετε ξανά</h1>
+        <p class="lead">Καρφιτσώστε στον χάρτη τα εστιατόρια όπου έχετε πάει και όσα θέλετε να δοκιμάσετε, και σε κάθε επίσκεψη σημειώστε τι παραγγείλατε, φωτογραφίες και τη γεύση. Όταν δεν ξέρετε πού να φάτε, οι δικές σας σημειώσεις έχουν την απάντηση.</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6755934548">Κατεβάστε το δωρεάν από το App Store</a><a class="try" href="#try">Βαθμολογήστε ένα πιάτο ↓</a></div>
+        <p class="muted small">Όλες οι λειτουργίες είναι δωρεάν. Χωρίς εγγραφή, όλα μένουν στο iPhone σας.</p>
+      </div>
+      <div class="phone"><img src="../img/el/01-map.jpg" alt="Εκείνο το υπέροχο μέρος, δεν θα το ξεχάσετε ξανά" width="720" height="1564" decoding="async"></div>
+    </section>
 
-  <nav class="pages" aria-label="Σελίδες">
-    <a href="index.html" aria-current="page">Αρχική</a>
-    <a href="support.html">Υποστήριξη</a>
-    <a href="privacy.html">Πολιτική απορρήτου</a>
-  </nav>
 
-  <main>
-    <h1>Μην ξεχνάτε πια τα αγαπημένα σας εστιατόρια</h1>
-    <p class="lead">
-      Το Insaeng συγκεντρώνει σε έναν χάρτη τα εστιατόρια όπου έχετε ήδη πάει και εκείνα που θέλετε να δοκιμάσετε κάποια μέρα.
-      Σε κάθε επίσκεψη σημειώνετε τι φάγατε, προσθέτετε φωτογραφίες, αστέρια και βαθμολογία γεύσης.
-      Όσο πληθαίνουν οι καταγραφές, τόσο πιο καθαρά διαγράφεται ο δικός σας γαστρονομικός χάρτης και το γούστο σας.
-    </p>
+    <section class="reveal" id="try">
+      <h2>Βαθμολογήστε ένα πιάτο</h2>
+      <p class="muted">Διαλέξτε είδος φαγητού και ορίστε πόσο έντονη ήταν κάθε γεύση και πόσο σας άρεσε. Ίδια κριτήρια και ίδιος υπολογισμός με μια επίσκεψη στην εφαρμογή.</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;Βαθμολογήστε ένα πιάτο&quot;, &quot;lead&quot;: &quot;Διαλέξτε είδος φαγητού και ορίστε πόσο έντονη ήταν κάθε γεύση και πόσο σας άρεσε. Ίδια κριτήρια και ίδιος υπολογισμός με μια επίσκεψη στην εφαρμογή.&quot;, &quot;note&quot;: &quot;Όπως στην εφαρμογή, η βαθμολογία είναι κατά το ήμισυ αστέρια και κατά το ήμισυ ικανοποίηση. Εδώ δεν αποθηκεύεται τίποτα.&quot;, &quot;types&quot;: [{&quot;emoji&quot;: &quot;🍽️&quot;, &quot;name&quot;: &quot;Γενικά&quot;, &quot;attrs&quot;: [[&quot;🌶️&quot;, &quot;Καυτερό&quot;, &quot;Ήπιο ↔ Καυτερό&quot;], [&quot;💪&quot;, &quot;Ένταση&quot;, &quot;Ελαφρύ ↔ Έντονο&quot;], [&quot;🍯&quot;, &quot;Γλυκύτητα&quot;, &quot;Δεν μου αρέσει ↔ Μου αρέσει&quot;], [&quot;🧂&quot;, &quot;Αλμύρα&quot;, &quot;Άνοστο ↔ Αλμυρό&quot;], [&quot;🥓&quot;, &quot;Λιπαρότητα&quot;, &quot;Ελαφρύ ↔ Πλούσιο&quot;], [&quot;🌿&quot;, &quot;Φυσική γεύση&quot;, &quot;Καρυκευμένο ↔ Φυσικό&quot;]]}, {&quot;emoji&quot;: &quot;🥩&quot;, &quot;name&quot;: &quot;Μπριζόλα&quot;, &quot;attrs&quot;: [[&quot;🔥&quot;, &quot;Ψήσιμο&quot;, &quot;Μισοψημένο ↔ Καλοψημένο&quot;], [&quot;🥩&quot;, &quot;Ζουμερότητα&quot;, &quot;Στεγνό ↔ Ζουμερό&quot;], [&quot;✨&quot;, &quot;Τρυφερότητα&quot;, &quot;Σκληρό ↔ Τρυφερό&quot;], [&quot;🧂&quot;, &quot;Αλάτι&quot;, &quot;Άνοστο ↔ Αλμυρό&quot;], [&quot;🌿&quot;, &quot;Άρωμα κρέατος&quot;, &quot;Ήπιο ↔ Έντονο&quot;], [&quot;🍖&quot;, &quot;Μαρμάρωμα&quot;, &quot;Λίγο ↔ Πολύ&quot;]]}, {&quot;emoji&quot;: &quot;🍣&quot;, &quot;name&quot;: &quot;Σούσι&quot;, &quot;attrs&quot;: [[&quot;🍚&quot;, &quot;Σάρι (ρύζι)&quot;, &quot;Λαπάς ↔ Σφιχτό&quot;], [&quot;🐟&quot;, &quot;Νέτα (ψάρι)&quot;, &quot;Φρεσκάδα&quot;], [&quot;🌿&quot;, &quot;Βασάμπι&quot;, &quot;Ήπιο ↔ Έντονο&quot;], [&quot;⚖️&quot;, &quot;Ισορροπία&quot;, &quot;Ασύμμετρο ↔ Αρμονικό&quot;], [&quot;✋&quot;, &quot;Πλάσιμο&quot;, &quot;Χαλαρό ↔ Σφιχτό&quot;], [&quot;🌡️&quot;, &quot;Θερμοκρασία&quot;, &quot;Κρύο ↔ Χλιαρό&quot;]]}, {&quot;emoji&quot;: &quot;🍜&quot;, &quot;name&quot;: &quot;Ράμεν&quot;, &quot;attrs&quot;: [[&quot;🥣&quot;, &quot;Ζωμός&quot;, &quot;Βάθος/ουμάμι&quot;], [&quot;🍜&quot;, &quot;Νουντλς&quot;, &quot;Μαλακά ↔ Σφιχτά&quot;], [&quot;🥓&quot;, &quot;Τσάσου&quot;, &quot;Στεγνό ↔ Τρυφερό&quot;], [&quot;🥚&quot;, &quot;Υλικά&quot;, &quot;Λίγο ↔ Άφθονο&quot;], [&quot;🔥&quot;, &quot;Θερμοκρασία&quot;, &quot;Χλιαρό ↔ Καυτό&quot;], [&quot;⚖️&quot;, &quot;Ισορροπία&quot;, &quot;Ασύμμετρο ↔ Αρμονικό&quot;]]}, {&quot;emoji&quot;: &quot;🍕&quot;, &quot;name&quot;: &quot;Πίτσα&quot;, &quot;attrs&quot;: [[&quot;🫓&quot;, &quot;Ζύμη&quot;, &quot;Σκληρή ↔ Αφράτη&quot;], [&quot;🍅&quot;, &quot;Σάλτσα&quot;, &quot;Λίγο ↔ Πολύ&quot;], [&quot;🧀&quot;, &quot;Τυρί&quot;, &quot;Λίγο ↔ Πολύ&quot;], [&quot;🔥&quot;, &quot;Ψήσιμο&quot;, &quot;Άψητο ↔ Τραγανό&quot;], [&quot;🌟&quot;, &quot;Υλικά&quot;, &quot;Λίγο ↔ Άφθονο&quot;], [&quot;⚖️&quot;, &quot;Ισορροπία&quot;, &quot;Ασύμμετρο ↔ Αρμονικό&quot;]]}, {&quot;emoji&quot;: &quot;🍷&quot;, &quot;name&quot;: &quot;Κρασί&quot;, &quot;attrs&quot;: [[&quot;💪&quot;, &quot;Σώμα&quot;, &quot;Ελαφρύ ↔ Γεμάτο&quot;], [&quot;🍇&quot;, &quot;Τανίνες&quot;, &quot;Απαλό ↔ Στυφό&quot;], [&quot;🍋&quot;, &quot;Οξύτητα&quot;, &quot;Χαμηλή ↔ Υψηλή&quot;], [&quot;🌸&quot;, &quot;Άρωμα&quot;, &quot;Απλό ↔ Σύνθετο&quot;], [&quot;✨&quot;, &quot;Επίγευση&quot;, &quot;Σύντομη ↔ Μακριά&quot;], [&quot;⚖️&quot;, &quot;Ισορροπία&quot;, &quot;Ασύμμετρο ↔ Αρμονικό&quot;]]}, {&quot;emoji&quot;: &quot;☕&quot;, &quot;name&quot;: &quot;Καφές&quot;, &quot;attrs&quot;: [[&quot;🍋&quot;, &quot;Οξύτητα&quot;, &quot;Χαμηλή ↔ Ζωηρή&quot;], [&quot;💪&quot;, &quot;Σώμα&quot;, &quot;Ελαφρύ ↔ Γεμάτο&quot;], [&quot;🌸&quot;, &quot;Γεύση&quot;, &quot;Απλό ↔ Σύνθετο&quot;], [&quot;✨&quot;, &quot;Επίγευση&quot;, &quot;Σύντομη ↔ Μακριά&quot;], [&quot;🍯&quot;, &quot;Γλυκύτητα&quot;, &quot;Πικρό ↔ Γλυκό&quot;], [&quot;⚖️&quot;, &quot;Ισορροπία&quot;, &quot;Ασύμμετρο ↔ Αρμονικό&quot;]]}], &quot;rating&quot;: &quot;Βαθμολογία&quot;, &quot;intensity&quot;: &quot;Ένταση γεύσης&quot;, &quot;sat&quot;: &quot;Ικανοποίηση&quot;, &quot;low&quot;: &quot;Δυσαρεστημένος&quot;, &quot;high&quot;: &quot;Πολύ ικανοποιημένος&quot;, &quot;shape&quot;: &quot;Γευστικό προφίλ&quot;, &quot;score&quot;: &quot;Βαθμολογία Riio Michelin&quot;}"></div>
+    </section>
 
-    <h2>Κύριες λειτουργίες</h2>
-    <div class="features">
-      <div class="card">
-        <h3>Βρείτε το στον χάρτη και αποθηκεύστε το αμέσως</h3>
-        <p>Αναζητήστε ένα εστιατόριο στον χάρτη ή πατήστε ένα κοντινό μέρος για να το προσθέσετε κατευθείαν στη λίστα σας. Μπορείτε επίσης να το προσθέσετε μόνοι σας στην τρέχουσα τοποθεσία σας ή σε ένα σημείο που διαλέγετε στον χάρτη.</p>
-      </div>
-      <div class="card">
-        <h3>Έχω πάει και Θέλω να πάω</h3>
-        <p>Κρατήστε χωριστά τα εστιατόρια που έχετε ήδη επισκεφθεί και όσα θέλετε να δοκιμάσετε κάποια μέρα. Μόλις πάτε, απλώς το μεταφέρετε στα «Έχω πάει».</p>
-      </div>
-      <div class="card">
-        <h3>Ιστορικό επισκέψεων</h3>
-        <p>Καταγράψτε ημερομηνία, πιάτα, φωτογραφίες, αστέρια και σημειώσεις. Αν προσθέσετε τα πιάτα κάθε εστιατορίου, την επόμενη φορά απλώς τα επιλέγετε.</p>
-      </div>
-      <div class="card">
-        <h3>Λεπτομερής βαθμολογία γεύσης</h3>
-        <p>Βαθμολογείτε χωριστά την ένταση της γεύσης – πόσο καυτερό, αλμυρό ή γλυκό ήταν – και πόσο σας άρεσε. Μπριζόλα, σούσι και ράμεν βαθμολογούνται με κριτήρια που ταιριάζουν στο κάθε πιάτο: ψήσιμο, ρύζι, ζωμός.</p>
-      </div>
-      <div class="card">
-        <h3>Το δικό μου Michelin Top 6</h3>
-        <p>Δώστε σειρά κατάταξης στα έξι πιο αγαπημένα σας εστιατόρια και κρατήστε τα μαζί. Όταν κάποιος σας ρωτήσει πού να φάει, τα έχετε έτοιμα να του τα δείξετε.</p>
-      </div>
-      <div class="card">
-        <h3>Προφίλ γούστου</h3>
-        <p>Με βάση τις βαθμολογίες γεύσης σας, βλέπετε με μια ματιά ποιες γεύσεις και ποιο στυλ φαγητού προτιμάτε.</p>
-      </div>
-      <div class="card">
-        <h3>Υπενθύμιση μετά την επίσκεψη</h3>
-        <p>Όταν μείνετε λίγη ώρα σε ένα αποθηκευμένο εστιατόριο και φύγετε, λίγο αργότερα λαμβάνετε την ειδοποίηση «Πώς ήταν η σημερινή σας επίσκεψη;», για να μην ξεχάσετε να την καταγράψετε. Αν δεν τη θέλετε, μπορείτε να την απενεργοποιήσετε.</p>
-      </div>
-      <div class="card">
-        <h3>Οδηγίες και κλήση</h3>
-        <p>Ανοίξτε ένα αποθηκευμένο εστιατόριο κατευθείαν στους Χάρτες της Apple, στο KakaoMap ή στο NAVER Map και πατήστε τον αριθμό τηλεφώνου για να καλέσετε αμέσως.</p>
-      </div>
-    </div>
+    <section class="problem reveal">
+      <h2>Ήταν υπέροχο, αλλά τι είχα παραγγείλει;</h2>
+      <p>Θυμάστε ότι το εστιατόριο σας άρεσε πολύ, αλλά το όνομα έχει θολώσει, και τι παραγγείλατε ή αν ο ζωμός ήταν αλμυρός δεν το θυμάστε καθόλου. Κι έτσι ψάχνετε ξανά και διαβάζετε κριτικές αγνώστων. Το Insaeng κρατά σε χάρτη ό,τι δοκιμάσατε εσείς, ώστε η επόμενη επιλογή να βασίζεται στη δική σας εμπειρία.</p>
+    </section>
 
-    <h2>Οι καταγραφές σας μένουν στο iPhone σας</h2>
-    <p>
-      Δεν χρειάζεται εγγραφή. Η λίστα εστιατορίων, οι επισκέψεις και οι φωτογραφίες αποθηκεύονται μόνο στο iPhone σας.
-      Για λεπτομέρειες, δείτε την <a href="privacy.html">πολιτική απορρήτου</a>.
-    </p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Έχω πάει, Θέλω να πάω και το δικό σας Michelin</h2>
+        <p>Αναζητήστε στον χάρτη ή πατήστε ένα κοντινό μέρος και αποθηκεύεται αμέσως. Κρατήστε χωριστά όσα έχετε επισκεφθεί από όσα θέλετε να δοκιμάσετε, και κατατάξτε τα έξι αγαπημένα σας από το 1 ως το 6.<br>Όταν κάποιος ζητήσει πρόταση, απλώς δείξτε τη λίστα.</p>
+      </div>
+      <div class="phone"><img src="../img/el/02-list.jpg" alt="Έχω πάει, Θέλω να πάω και το δικό σας Michelin" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <p><a href="https://apps.apple.com/app/id6755934548">Κατεβάστε το Insaeng από το App Store</a></p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Ερωτήσεις στα μέτρα κάθε πιάτου</h2>
+        <p>Την ένταση κάθε γεύσης, όπως το καυτερό ή το αλάτι, την ορίζετε με ρυθμιστικό, και το πόσο σας άρεσε το βαθμολογείτε χωριστά από 1 ως 5. Στη μπριζόλα μετράνε το ψήσιμο και η ζουμερότητα, στο σούσι το ρύζι και το ψάρι, στο ράμεν ο ζωμός και τα νουντλς.<br>Κάθε επίσκεψη κρατά επίσης πιάτο, φωτογραφίες, αστέρια και σημειώσεις.</p>
+      </div>
+      <div class="phone"><img src="../img/el/04-taste-review.jpg" alt="Ερωτήσεις στα μέτρα κάθε πιάτου" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <div class="contact">
-      Αν κάτι σας δυσκολεύει ή σας λείπει κάποια λειτουργία, γράψτε μας στο <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a>.
-      Απαντήσεις σε συχνές ερωτήσεις θα βρείτε στη σελίδα <a href="support.html">Υποστήριξη</a>.
-    </div>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Πού αξίζει να ξαναπάτε, φαίνεται με αριθμούς</h2>
+        <p>Με περισσότερες επισκέψεις, κάθε εστιατόριο δείχνει μια συνολική εκτίμηση από τον μέσο όρο όλων και μια Βαθμολογία Riio Michelin με άριστα το 100, που συνδυάζει αστέρια και ικανοποίηση.<br>Όταν φεύγετε από ένα αποθηκευμένο εστιατόριο, λίγο αργότερα έρχεται υπενθύμιση να καταγράψετε την επίσκεψη.</p>
+      </div>
+      <div class="phone"><img src="../img/el/03-detail.jpg" alt="Πού αξίζει να ξαναπάτε, φαίνεται με αριθμούς" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="reveal">
+      <h2>Ξεκινήστε σε τρία βήματα</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>Αποθηκεύστε ένα εστιατόριο</h3><p>Αναζητήστε το στον χάρτη ή πατήστε ένα κοντινό μέρος.</p></li>
+<li class="card"><span class="n">2</span><h3>Καταγράψτε την επίσκεψη</h3><p>Πιάτο, φωτογραφίες, αστέρια και γεύση. Η βαθμολογία γεύσης είναι προαιρετική.</p></li>
+<li class="card"><span class="n">3</span><h3>Διαλέξτε το επόμενο</h3><p>Δείτε το top 6 και τις βαθμολογίες και πηγαίνετε με Χάρτες Apple, Kakao Map ή Naver Map.</p></li></ol>
+    </section>
+
+    <section class="reveal" id="commands">
+      <h2>Τι βαθμολογείται ανά είδος φαγητού</h2>
+      <div class="card table">
+        <dl><div><dt>🍽️ Γενικά</dt><dd>Καυτερό, Ένταση, Γλυκύτητα, Αλμύρα, Λιπαρότητα, Φυσική γεύση</dd></div><div><dt>🥩 Μπριζόλα</dt><dd>Ψήσιμο, Ζουμερότητα, Τρυφερότητα, Αλάτι, Άρωμα κρέατος, Μαρμάρωμα</dd></div><div><dt>🍣 Σούσι</dt><dd>Σάρι (ρύζι), Νέτα (ψάρι), Βασάμπι, Ισορροπία, Πλάσιμο, Θερμοκρασία</dd></div><div><dt>🍜 Ράμεν</dt><dd>Ζωμός, Νουντλς, Τσάσου, Υλικά, Θερμοκρασία, Ισορροπία</dd></div><div><dt>🍕 Πίτσα</dt><dd>Ζύμη, Σάλτσα, Τυρί, Ψήσιμο, Υλικά, Ισορροπία</dd></div><div><dt>🍷 Κρασί</dt><dd>Σώμα, Τανίνες, Οξύτητα, Άρωμα, Επίγευση, Ισορροπία</dd></div><div><dt>☕ Καφές</dt><dd>Οξύτητα, Σώμα, Γεύση, Επίγευση, Γλυκύτητα, Ισορροπία</dd></div></dl>
+      </div>
+      <p class="muted">Τα υπόλοιπα φαγητά βαθμολογούνται με τα γενικά κριτήρια της πρώτης γραμμής. Μπορείτε επίσης να δημιουργήσετε δικές σας κατηγορίες.</p>
+    </section>
+
+
+
+    <section class="reveal" id="faq">
+      <h2>Συχνές ερωτήσεις</h2>
+      <div class="faq"><details><summary>Πώς προσθέτω ένα εστιατόριο;</summary><p>Πληκτρολογήστε το όνομα του εστιατορίου στο πεδίο αναζήτησης στο πάνω μέρος του χάρτη και πατήστε «Προσθήκη στα εστιατόριά μου» στα αποτελέσματα. Μπορείτε επίσης να το προσθέσετε κατευθείαν πατώντας ένα κοντινό μέρος που εμφανίζεται στον χάρτη. Αν το μέρος δεν βγαίνει στην αναζήτηση, προσθέστε το μόνοι σας στην τρέχουσα τοποθεσία σας ή σε σημείο που διαλέγετε στον χάρτη.</p></details>
+<details><summary>Τι σημαίνουν τα «Έχω πάει», «Θέλω να πάω» και Top 6;</summary><p>Έχω πάει – εστιατόρια που έχετε ήδη επισκεφθεί. Μπορείτε να καταγράφετε τις επισκέψεις σας. Θέλω να πάω – εστιατόρια που θέλετε να δοκιμάσετε κάποια μέρα. Αφού πάτε, αλλάξτε το σε «Έχω πάει» από τη σελίδα λεπτομερειών του εστιατορίου. Top 6 (Το δικό μου Michelin) – τα έξι πιο αγαπημένα σας εστιατόρια, με κατάταξη από την 1η έως την 6η θέση. Ένα εστιατόριο στη λίστα «Θέλω να πάω» δεν μπορεί να μπει στο Top 6.</p></details>
+<details><summary>Πρέπει οπωσδήποτε να βαθμολογήσω τη γεύση;</summary><p>Όχι, είναι προαιρετική. Αν βαθμολογήσετε, η ένταση γεύσης και η ικανοποίηση προστίθενται στη συνολική εκτίμηση του εστιατορίου και μετρούν στη Βαθμολογία Riio Michelin.</p></details>
+<details><summary>Πότε έρχεται η ειδοποίηση «Πώς ήταν η σημερινή σας επίσκεψη;»;</summary><p>Αν μείνετε πάνω από 5 λεπτά κοντά σε ένα αποθηκευμένο εστιατόριο και φύγετε, η ειδοποίηση έρχεται περίπου 40 λεπτά αργότερα. Η λειτουργία χρειάζεται πρόσβαση στην τοποθεσία με επιλογή «Πάντα» και ενεργές ειδοποιήσεις. Αν δεν θέλετε την ειδοποίηση, απενεργοποιήστε τις ειδοποιήσεις στις Ρυθμίσεις &gt; Εφαρμογές &gt; Insaeng ή αλλάξτε την τοποθεσία σε «Κατά τη χρήση της εφαρμογής». Ο έλεγχος τοποθεσίας γίνεται μόνο στη συσκευή. Οι διαδρομές σας δεν αποθηκεύονται και δεν αποστέλλονται πουθενά.</p></details>
+<details><summary>Μπορώ να τη χρησιμοποιήσω χωρίς πρόσβαση στην τοποθεσία;</summary><p>Ναι. Διαλέγετε μόνοι σας το σημείο στον χάρτη για να προσθέσετε ένα εστιατόριο και καταγράφετε κανονικά τις επισκέψεις. Μόνο η εμφάνιση της τρέχουσας τοποθεσίας και η υπενθύμιση μετά την επίσκεψη δεν θα λειτουργούν.</p></details>
+<details><summary>Η αναζήτηση δεν βγάζει αποτελέσματα</summary><p>Η αναζήτηση μερών απαιτεί σύνδεση στο διαδίκτυο. Δοκιμάστε ξανά με άλλο όνομα ή με πιο σύντομη λέξη-κλειδί. Αν πάλι δεν το βρίσκετε, διαλέξτε το σημείο στον χάρτη και προσθέστε το μόνοι σας.</p></details>
+<details><summary>Πού αποθηκεύονται οι καταγραφές; Συγχρονίζονται με άλλες συσκευές;</summary><p>Τα εστιατόρια, οι επισκέψεις και οι φωτογραφίες αποθηκεύονται μόνο σε αυτό το iPhone. Η τρέχουσα έκδοση δεν υποστηρίζει συγχρονισμό με άλλες συσκευές και η δημιουργία αντιγράφου ασφαλείας και η επαναφορά μέσω iCloud στις ρυθμίσεις δεν λειτουργούν ακόμη. Τα δεδομένα της εφαρμογής περιλαμβάνονται όμως στο πλήρες αντίγραφο ασφαλείας του iPhone (αντίγραφο στο iCloud ή σε υπολογιστή).</p></details>
+<details><summary>Θέλω να διαγράψω όλες τις καταγραφές</summary><p>Στις ρυθμίσεις της οθόνης του χάρτη πατήστε «Διαγραφή όλων των δεδομένων» και τα εστιατόρια και οι επισκέψεις θα διαγραφούν. Η ενέργεια δεν αναιρείται. Για να διαγράψετε εντελώς και τις φωτογραφίες, διαγράψτε την εφαρμογή.</p></details>
+<details><summary>Αν διαγράψω και εγκαταστήσω ξανά την εφαρμογή, θα έχω τις καταγραφές μου;</summary><p>Όχι. Οι καταγραφές αποθηκεύονται μόνο στη συσκευή, οπότε διαγράφονται μαζί με την εφαρμογή. Σκεφτείτε το καλά πριν τη διαγράψετε.</p></details>
+<details><summary>Είναι πραγματικά όλα δωρεάν;</summary><p>Ναι. Όλες οι λειτουργίες είναι δωρεάν, χωρίς διαφημίσεις και χωρίς λογαριασμό. Το «Στήριξε τον δημιουργό» στις ρυθμίσεις είναι εντελώς προαιρετικό και δεν ξεκλειδώνει τίποτα.</p></details></div>
+      <p class="contact">Αν δεν βρήκατε απάντηση, στείλτε μας μήνυμα απευθείας από την εφαρμογή στις Ρυθμίσεις &gt; Υποστήριξη ή γράψτε στο <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a>. Αναφέρετε την έκδοση της εφαρμογής, το μοντέλο του iPhone και τι κάνατε σε ποια οθόνη – έτσι θα το εξετάσουμε πιο γρήγορα.</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>Το επόμενο εστιατόριο,<br>από τις δικές σας σημειώσεις</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6755934548">Κατεβάστε το δωρεάν από το App Store</a>
+    </section>
   </main>
 
-  <footer class="site">
-    © 2026 Leeo · <a href="support.html">Υποστήριξη</a> · <a href="privacy.html">Πολιτική απορρήτου</a>
+  <footer>
+    <nav id="languages" class="langs" aria-label="Γλώσσα"><a href="../" hreflang="ko" lang="ko">한국어</a>
+<a href="../en/" hreflang="en" lang="en">English</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../el/" hreflang="el" lang="el" aria-current="page">Ελληνικά</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a></nav>
+    <p><a href="privacy.html">Πολιτική απορρήτου</a> · <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a> · © 2026 Leeo</p>
   </footer>
-</div>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

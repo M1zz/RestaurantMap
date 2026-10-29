@@ -1,145 +1,176 @@
 <!doctype html>
 <html lang="tr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="color-scheme" content="light dark">
-<title>Insaeng: Restoran Haritası — Gittiğin restoranları haritada sakla</title>
-<meta name="description" content="Gittiğin ve gitmek istediğin restoranları haritada topla; her ziyarette yediklerini, fotoğrafları, puanını ve lezzet değerlendirmeni kaydet. Kayıtlar biriktikçe damak tadı profilin ve İlk 6 restoranın ortaya çıkar. iPhone uygulaması.">
-<link rel="canonical" href="https://m1zz.github.io/RestaurantMap/tr/">
-<link rel="alternate" hreflang="ko" href="https://m1zz.github.io/RestaurantMap/">
-<link rel="alternate" hreflang="en" href="https://m1zz.github.io/RestaurantMap/en/">
-<link rel="alternate" hreflang="ja" href="https://m1zz.github.io/RestaurantMap/ja/">
-<link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/RestaurantMap/zh-Hans/">
-<link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/RestaurantMap/zh-Hant/">
-<link rel="alternate" hreflang="ru" href="https://m1zz.github.io/RestaurantMap/ru/">
-<link rel="alternate" hreflang="es" href="https://m1zz.github.io/RestaurantMap/es/">
-<link rel="alternate" hreflang="de" href="https://m1zz.github.io/RestaurantMap/de/">
-<link rel="alternate" hreflang="fr" href="https://m1zz.github.io/RestaurantMap/fr/">
-<link rel="alternate" hreflang="it" href="https://m1zz.github.io/RestaurantMap/it/">
-<link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/RestaurantMap/pt-BR/">
-<link rel="alternate" hreflang="th" href="https://m1zz.github.io/RestaurantMap/th/">
-<link rel="alternate" hreflang="vi" href="https://m1zz.github.io/RestaurantMap/vi/">
-<link rel="alternate" hreflang="cs" href="https://m1zz.github.io/RestaurantMap/cs/">
-<link rel="alternate" hreflang="da" href="https://m1zz.github.io/RestaurantMap/da/">
-<link rel="alternate" hreflang="el" href="https://m1zz.github.io/RestaurantMap/el/">
-<link rel="alternate" hreflang="fi" href="https://m1zz.github.io/RestaurantMap/fi/">
-<link rel="alternate" hreflang="id" href="https://m1zz.github.io/RestaurantMap/id/">
-<link rel="alternate" hreflang="nb" href="https://m1zz.github.io/RestaurantMap/nb/">
-<link rel="alternate" hreflang="nl" href="https://m1zz.github.io/RestaurantMap/nl/">
-<link rel="alternate" hreflang="pl" href="https://m1zz.github.io/RestaurantMap/pl/">
-<link rel="alternate" hreflang="sv" href="https://m1zz.github.io/RestaurantMap/sv/">
-<link rel="alternate" hreflang="tr" href="https://m1zz.github.io/RestaurantMap/tr/">
-<link rel="alternate" hreflang="en-GB" href="https://m1zz.github.io/RestaurantMap/en/">
-<link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/RestaurantMap/">
-<link rel="stylesheet" href="../style.css">
-<link rel="icon" href="../icon.png">
-<link rel="apple-touch-icon" href="../icon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Insaeng: lezzetli yemek yediğin yerler tek haritada</title>
+  <meta name="description" content="Gittiğin ve gitmek istediğin restoranları haritada topla, her ziyarette yemeği, fotoğrafları ve lezzeti kaydet. Ücretsiz, iPhone’unda kalır.">
+  <meta name="theme-color" content="#B8461F" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6755934548">
+  <link rel="canonical" href="https://m1zz.github.io/RestaurantMap/tr/">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/RestaurantMap/">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/RestaurantMap/en/">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/RestaurantMap/ja/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/RestaurantMap/zh-Hans/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/RestaurantMap/zh-Hant/">
+  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/RestaurantMap/ru/">
+  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/RestaurantMap/es/">
+  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/RestaurantMap/de/">
+  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/RestaurantMap/fr/">
+  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/RestaurantMap/it/">
+  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/RestaurantMap/pt-BR/">
+  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/RestaurantMap/th/">
+  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/RestaurantMap/vi/">
+  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/RestaurantMap/cs/">
+  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/RestaurantMap/da/">
+  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/RestaurantMap/el/">
+  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/RestaurantMap/fi/">
+  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/RestaurantMap/id/">
+  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/RestaurantMap/nb/">
+  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/RestaurantMap/nl/">
+  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/RestaurantMap/pl/">
+  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/RestaurantMap/sv/">
+  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/RestaurantMap/tr/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/RestaurantMap/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Insaeng: lezzetli yemek yediğin yerler tek haritada">
+  <meta property="og:description" content="Gittiğin ve gitmek istediğin restoranları haritada topla, her ziyarette yemeği, fotoğrafları ve lezzeti kaydet. Ücretsiz, iPhone’unda kalır.">
+  <meta property="og:url" content="https://m1zz.github.io/RestaurantMap/tr/">
+  <meta property="og:image" content="https://m1zz.github.io/RestaurantMap/img/tr/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#B8461F}@media (prefers-color-scheme:dark){:root{--accent:#F08A62}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-<div class="container">
-
-  <header class="site">
-    <img src="../icon.png" alt="Insaeng uygulama simgesi">
-    <div>
-      <div class="title">Insaeng</div>
-      <div class="subtitle">Yemeklerini puanla, sırala</div>
-    </div>
+  <a class="skip" href="#main">İçeriğe geç</a>
+  <header class="bar">
+    <a class="brand" href="../tr/"><img src="../icon.png" alt="" width="32" height="32">Insaeng</a>
+    <a class="lang-link" href="#languages">Dil</a>
   </header>
 
-  <nav class="langs" aria-label="Dil">
-    <a href="../index.html" hreflang="ko" lang="ko">한국어</a>
-    <a href="../en/index.html" hreflang="en" lang="en">English</a>
-    <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a>
-    <a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
-    <a href="../zh-Hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
-    <a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a>
-    <a href="../es/index.html" hreflang="es" lang="es">Español</a>
-    <a href="../de/index.html" hreflang="de" lang="de">Deutsch</a>
-    <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a>
-    <a href="../it/index.html" hreflang="it" lang="it">Italiano</a>
-    <a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
-    <a href="../th/index.html" hreflang="th" lang="th">ไทย</a>
-    <a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a>
-    <a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a>
-    <a href="../da/index.html" hreflang="da" lang="da">Dansk</a>
-    <a href="../el/index.html" hreflang="el" lang="el">Ελληνικά</a>
-    <a href="../fi/index.html" hreflang="fi" lang="fi">Suomi</a>
-    <a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a>
-    <a href="../nb/index.html" hreflang="nb" lang="nb">Norsk bokmål</a>
-    <a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a>
-    <a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a>
-    <a href="../sv/index.html" hreflang="sv" lang="sv">Svenska</a>
-    <a href="index.html" hreflang="tr" lang="tr" aria-current="true">Türkçe</a>
-  </nav>
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>Lezzetli yerleri<br>artık unutmayacaksın</h1>
+        <p class="lead">Gittiğin ve denemek istediğin restoranları haritaya işaretle, her ziyarette ne sipariş ettiğini, fotoğrafları ve lezzeti kaydet. Nerede yesem diye düşündüğünde cevap kendi notlarında.</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6755934548">App Store’dan ücretsiz indir</a><a class="try" href="#try">Bir tabağı puanla ↓</a></div>
+        <p class="muted small">Tüm özellikler ücretsiz. Üyelik yok, kayıtlar iPhone’unda kalır.</p>
+      </div>
+      <div class="phone"><img src="../img/tr/01-map.jpg" alt="Lezzetli yerleri artık unutmayacaksın" width="720" height="1564" decoding="async"></div>
+    </section>
 
-  <nav class="pages" aria-label="Sayfalar">
-    <a href="index.html" aria-current="page">Ana Sayfa</a>
-    <a href="support.html">Destek</a>
-    <a href="privacy.html">Gizlilik Politikası</a>
-  </nav>
 
-  <main>
-    <h1>Gittiğin güzel mekânları artık unutma</h1>
-    <p class="lead">
-      Insaeng, gittiğin ve gitmek istediğin restoranları tek bir haritada toplayan bir uygulama.
-      Her ziyarette yediğin yemekleri, fotoğrafları, puanını ve lezzet değerlendirmeni kaydet;
-      kayıtların arttıkça kendi restoran haritan ve damak tadın daha da netleşsin.
-    </p>
+    <section class="reveal" id="try">
+      <h2>Bir tabağı puanla</h2>
+      <p class="muted">Bir yemek türü seç, her tadın ne kadar yoğun olduğunu ve ne kadar beğendiğini ayarla. Uygulamadaki ziyaretle aynı ölçütler, aynı hesap.</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;Bir tabağı puanla&quot;, &quot;lead&quot;: &quot;Bir yemek türü seç, her tadın ne kadar yoğun olduğunu ve ne kadar beğendiğini ayarla. Uygulamadaki ziyaretle aynı ölçütler, aynı hesap.&quot;, &quot;note&quot;: &quot;Uygulamadaki gibi puanın yarısı yıldızdan, yarısı memnuniyetten gelir. Burada hiçbir şey kaydedilmez.&quot;, &quot;types&quot;: [{&quot;emoji&quot;: &quot;🍽️&quot;, &quot;name&quot;: &quot;Genel&quot;, &quot;attrs&quot;: [[&quot;🌶️&quot;, &quot;Acılık&quot;, &quot;Hafif ↔ Acı&quot;], [&quot;💪&quot;, &quot;Yoğunluk&quot;, &quot;Hafif ↔ Yoğun&quot;], [&quot;🍯&quot;, &quot;Tatlılık&quot;, &quot;Sevmem ↔ Severim&quot;], [&quot;🧂&quot;, &quot;Tuzluluk&quot;, &quot;Tatsız ↔ Tuzlu&quot;], [&quot;🥓&quot;, &quot;Yağlılık&quot;, &quot;Hafif ↔ Doyurucu&quot;], [&quot;🌿&quot;, &quot;Doğal tat&quot;, &quot;Soslu ↔ Doğal&quot;]]}, {&quot;emoji&quot;: &quot;🥩&quot;, &quot;name&quot;: &quot;Biftek&quot;, &quot;attrs&quot;: [[&quot;🔥&quot;, &quot;Pişme&quot;, &quot;Az pişmiş ↔ İyi pişmiş&quot;], [&quot;🥩&quot;, &quot;Sululuk&quot;, &quot;Kuru ↔ Sulu&quot;], [&quot;✨&quot;, &quot;Yumuşaklık&quot;, &quot;Sert ↔ Yumuşak&quot;], [&quot;🧂&quot;, &quot;Baharat&quot;, &quot;Tatsız ↔ Tuzlu&quot;], [&quot;🌿&quot;, &quot;Et aroması&quot;, &quot;Hafif ↔ Güçlü&quot;], [&quot;🍖&quot;, &quot;Mermerleşme&quot;, &quot;Az ↔ Çok&quot;]]}, {&quot;emoji&quot;: &quot;🍣&quot;, &quot;name&quot;: &quot;Suşi&quot;, &quot;attrs&quot;: [[&quot;🍚&quot;, &quot;Shari (pirinç)&quot;, &quot;Lapa ↔ Sıkı&quot;], [&quot;🐟&quot;, &quot;Neta (balık)&quot;, &quot;Tazelik&quot;], [&quot;🌿&quot;, &quot;Vasabi&quot;, &quot;Hafif ↔ Güçlü&quot;], [&quot;⚖️&quot;, &quot;Denge&quot;, &quot;Dengesiz ↔ Uyumlu&quot;], [&quot;✋&quot;, &quot;Şekil&quot;, &quot;Dağınık ↔ Sıkı&quot;], [&quot;🌡️&quot;, &quot;Sıcaklık&quot;, &quot;Soğuk ↔ Ilık&quot;]]}, {&quot;emoji&quot;: &quot;🍜&quot;, &quot;name&quot;: &quot;Ramen&quot;, &quot;attrs&quot;: [[&quot;🥣&quot;, &quot;Et suyu&quot;, &quot;Derinlik/umami&quot;], [&quot;🍜&quot;, &quot;Erişte&quot;, &quot;Yumuşak ↔ Diri&quot;], [&quot;🥓&quot;, &quot;Chashu&quot;, &quot;Kuru ↔ Yumuşak&quot;], [&quot;🥚&quot;, &quot;Malzemeler&quot;, &quot;Az ↔ Bol&quot;], [&quot;🔥&quot;, &quot;Sıcaklık&quot;, &quot;Ilık ↔ Sıcak&quot;], [&quot;⚖️&quot;, &quot;Denge&quot;, &quot;Dengesiz ↔ Uyumlu&quot;]]}, {&quot;emoji&quot;: &quot;🍕&quot;, &quot;name&quot;: &quot;Pizza&quot;, &quot;attrs&quot;: [[&quot;🫓&quot;, &quot;Hamur&quot;, &quot;Sert ↔ Yumuşak&quot;], [&quot;🍅&quot;, &quot;Sos&quot;, &quot;Az ↔ Çok&quot;], [&quot;🧀&quot;, &quot;Peynir&quot;, &quot;Az ↔ Çok&quot;], [&quot;🔥&quot;, &quot;Pişme&quot;, &quot;Az pişmiş ↔ Çıtır&quot;], [&quot;🌟&quot;, &quot;Malzemeler&quot;, &quot;Az ↔ Bol&quot;], [&quot;⚖️&quot;, &quot;Denge&quot;, &quot;Dengesiz ↔ Uyumlu&quot;]]}, {&quot;emoji&quot;: &quot;🍷&quot;, &quot;name&quot;: &quot;Şarap&quot;, &quot;attrs&quot;: [[&quot;💪&quot;, &quot;Gövde&quot;, &quot;Hafif ↔ Gövdeli&quot;], [&quot;🍇&quot;, &quot;Tanen&quot;, &quot;Yumuşak ↔ Buruk&quot;], [&quot;🍋&quot;, &quot;Asidite&quot;, &quot;Düşük ↔ Yüksek&quot;], [&quot;🌸&quot;, &quot;Aroma&quot;, &quot;Sade ↔ Karmaşık&quot;], [&quot;✨&quot;, &quot;Bitiş&quot;, &quot;Kısa ↔ Kalıcı&quot;], [&quot;⚖️&quot;, &quot;Denge&quot;, &quot;Dengesiz ↔ Uyumlu&quot;]]}, {&quot;emoji&quot;: &quot;☕&quot;, &quot;name&quot;: &quot;Kahve&quot;, &quot;attrs&quot;: [[&quot;🍋&quot;, &quot;Asidite&quot;, &quot;Düşük ↔ Canlı&quot;], [&quot;💪&quot;, &quot;Gövde&quot;, &quot;Hafif ↔ Gövdeli&quot;], [&quot;🌸&quot;, &quot;Aroma&quot;, &quot;Sade ↔ Karmaşık&quot;], [&quot;✨&quot;, &quot;Ağızda kalan tat&quot;, &quot;Kısa ↔ Kalıcı&quot;], [&quot;🍯&quot;, &quot;Tatlılık&quot;, &quot;Acı ↔ Tatlı&quot;], [&quot;⚖️&quot;, &quot;Denge&quot;, &quot;Dengesiz ↔ Uyumlu&quot;]]}], &quot;rating&quot;: &quot;Puan&quot;, &quot;intensity&quot;: &quot;Lezzet yoğunluğu&quot;, &quot;sat&quot;: &quot;Memnuniyet&quot;, &quot;low&quot;: &quot;Memnun değil&quot;, &quot;high&quot;: &quot;Çok memnun&quot;, &quot;shape&quot;: &quot;Lezzet profili&quot;, &quot;score&quot;: &quot;Riio Michelin puanı&quot;}"></div>
+    </section>
 
-    <h2>Öne çıkan özellikler</h2>
-    <div class="features">
-      <div class="card">
-        <h3>Haritada bul, hemen kaydet</h3>
-        <p>Haritada restoran ara ya da yakındaki bir mekâna dokunarak onu anında listene ekle. İstersen bulunduğun konuma veya haritada seçtiğin bir noktaya kendin de ekleyebilirsin.</p>
-      </div>
-      <div class="card">
-        <h3>Gittiklerim ve gideceklerim</h3>
-        <p>Daha önce gittiğin restoranlarla bir gün denemek istediklerini ayrı ayrı yönet. Gittikten sonra mekânı “Gittiklerim” listesine taşıman yeterli.</p>
-      </div>
-      <div class="card">
-        <h3>Ziyaret kayıtları</h3>
-        <p>Ziyaret tarihini, yediklerini, fotoğrafları, puanını ve notlarını kaydet. Her restoranın menüsünü önceden eklersen sonraki ziyaretinde yemekleri listeden seçerek kaydedebilirsin.</p>
-      </div>
-      <div class="card">
-        <h3>Ayrıntılı lezzet değerlendirmesi</h3>
-        <p>Acılık, tuzluluk, tatlılık gibi tatların yoğunluğunu ve bu tadı ne kadar beğendiğini ayrı ayrı değerlendir. Biftek, suşi ve ramen için pişme derecesi, pirinç ve et suyu gibi o yemeğe özel ölçütler kullanabilirsin.</p>
-      </div>
-      <div class="card">
-        <h3>Kendi Michelin İlk 6’n</h3>
-        <p>En sevdiğin altı restoranı sırala ve ayrı bir yerde topla. Biri sana iyi bir mekân sorduğunda hemen açıp göster.</p>
-      </div>
-      <div class="card">
-        <h3>Damak tadı profili</h3>
-        <p>Biriken lezzet değerlendirmelerine göre hangi tatları ve hangi mutfak tarzlarını sevdiğini tek bakışta gösterir.</p>
-      </div>
-      <div class="card">
-        <h3>Ziyaret sonrası hatırlatma</h3>
-        <p>Kaydettiğin bir restoranda vakit geçirip ayrıldığında, kısa bir süre sonra gelen “Bugünkü ziyaretin nasıldı?” bildirimi kaydetmeyi unutmamanı sağlar. İstemezsen kapatabilirsin.</p>
-      </div>
-      <div class="card">
-        <h3>Yol tarifi ve arama</h3>
-        <p>Kaydettiğin restoranı Apple Haritalar, KakaoMap veya NAVER Map’te hemen aç; telefon numarasına dokunarak doğrudan ara.</p>
-      </div>
-    </div>
+    <section class="problem reveal">
+      <h2>Çok güzeldi ama ne sipariş etmiştim?</h2>
+      <p>Restoranı çok sevdiğini hatırlıyorsun ama adı bulanık, ne sipariş ettiğini ya da çorbanın tuzlu olup olmadığını ise hiç hatırlamıyorsun. Sonunda yine arıyor, yabancıların yorumlarını okuyorsun. Insaeng kendi tattıklarını haritada saklar; bir sonraki seçimini kendi deneyiminle yaparsın.</p>
+    </section>
 
-    <h2>Kayıtların iPhone’unda kalır</h2>
-    <p>
-      Üyelik gerekmez; restoran listen, ziyaret kayıtların ve fotoğrafların yalnızca kendi iPhone’unda saklanır.
-      Ayrıntılar için <a href="privacy.html">Gizlilik Politikası</a>’na göz atabilirsin.
-    </p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Gidilenler, Gitmek istediklerim ve kendi Michelin’in</h2>
+        <p>Haritada ara ya da yakındaki bir yere dokun, hemen kaydedilir. Gittiğin yerleri denemek istediklerinden ayrı tut, en sevdiğin altı yeri 1’den 6’ya sırala.<br>Biri iyi bir yer sorduğunda listeyi göstermen yeter.</p>
+      </div>
+      <div class="phone"><img src="../img/tr/02-list.jpg" alt="Gidilenler, Gitmek istediklerim ve kendi Michelin’in" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <p><a href="https://apps.apple.com/app/id6755934548">Insaeng’i App Store’dan indir</a></p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Yemeğe göre sorular</h2>
+        <p>Acılık ya da tuz gibi bir tadın yoğunluğunu kaydırıcıyla ayarlarsın, ne kadar beğendiğini ise ayrıca 1’den 5’e puanlarsın. Biftekte pişme derecesi ve suluk, suşide pirinç ve balık, ramende et suyu ve erişte sorulur.<br>Her ziyaret yemeği, fotoğrafları, yıldızları ve notları da saklar.</p>
+      </div>
+      <div class="phone"><img src="../img/tr/04-taste-review.jpg" alt="Yemeğe göre sorular" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <div class="contact">
-      Bir sorun yaşarsan ya da görmek istediğin bir özellik varsa <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a> adresine yazabilirsin.
-      Sık sorulan sorular <a href="support.html">Destek</a> sayfasında.
-    </div>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Tekrar gitmeye değer yerler rakamlarla görünür</h2>
+        <p>Ziyaretler arttıkça her restoranda tüm ziyaretlerin ortalamasıyla bir genel değerlendirme ve yıldızlarla memnuniyeti birleştiren, 100 üzerinden bir Riio Michelin puanı görünür.<br>Kaydettiğin bir restorandan çıktığında, biraz sonra ziyareti kaydetmeni hatırlatan bir bildirim gelir.</p>
+      </div>
+      <div class="phone"><img src="../img/tr/03-detail.jpg" alt="Tekrar gitmeye değer yerler rakamlarla görünür" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="reveal">
+      <h2>Üç adımda başla</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>Restoranı kaydet</h3><p>Haritada ara ya da yakındaki bir yere dokun.</p></li>
+<li class="card"><span class="n">2</span><h3>Ziyareti kaydet</h3><p>Yemek, fotoğraf, yıldız ve lezzet. Lezzet puanı isteğe bağlı.</p></li>
+<li class="card"><span class="n">3</span><h3>Sıradakini seç</h3><p>Top 6’ya ve puanlara bak, Apple Haritalar, Kakao Map ya da Naver Map ile yol tarifi al.</p></li></ol>
+    </section>
+
+    <section class="reveal" id="commands">
+      <h2>Yemek türüne göre puanlananlar</h2>
+      <div class="card table">
+        <dl><div><dt>🍽️ Genel</dt><dd>Acılık, Yoğunluk, Tatlılık, Tuzluluk, Yağlılık, Doğal tat</dd></div><div><dt>🥩 Biftek</dt><dd>Pişme, Sululuk, Yumuşaklık, Baharat, Et aroması, Mermerleşme</dd></div><div><dt>🍣 Suşi</dt><dd>Shari (pirinç), Neta (balık), Vasabi, Denge, Şekil, Sıcaklık</dd></div><div><dt>🍜 Ramen</dt><dd>Et suyu, Erişte, Chashu, Malzemeler, Sıcaklık, Denge</dd></div><div><dt>🍕 Pizza</dt><dd>Hamur, Sos, Peynir, Pişme, Malzemeler, Denge</dd></div><div><dt>🍷 Şarap</dt><dd>Gövde, Tanen, Asidite, Aroma, Bitiş, Denge</dd></div><div><dt>☕ Kahve</dt><dd>Asidite, Gövde, Aroma, Ağızda kalan tat, Tatlılık, Denge</dd></div></dl>
+      </div>
+      <p class="muted">Diğer yemekler ilk satırdaki genel ölçütlerle puanlanır. Kendi kategorilerini de oluşturabilirsin.</p>
+    </section>
+
+
+
+    <section class="reveal" id="faq">
+      <h2>Sık sorulan sorular</h2>
+      <div class="faq"><details><summary>Restoranı nasıl eklerim?</summary><p>Haritanın üstündeki arama alanına restoranın adını yaz ve sonuçlarda “Restoran listeme ekle”ye dokun. Haritada görünen yakındaki bir mekâna dokunarak da hemen ekleyebilirsin. Aramada çıkmayan bir yer varsa bulunduğun konuma ya da haritada seçtiğin bir noktaya kendin ekleyebilirsin.</p></details>
+<details><summary>Gittiklerim, Gideceklerim ve İlk 6 nedir?</summary><p>Gittiklerim: Daha önce gittiğin restoranlar. Bunlar için ziyaret kaydı tutabilirsin. Gideceklerim: Bir gün denemek istediğin restoranlar. Gittikten sonra restoranın ayrıntı ekranından “Gittiklerim”e taşı. İlk 6 (Kendi Michelin’in): En sevdiğin altı restoranı 1’den 6’ya kadar sıralarsın. “Gideceklerim” listesindeki restoranlar İlk 6’ya eklenemez.</p></details>
+<details><summary>Lezzet değerlendirmesi yapmak zorunlu mu?</summary><p>Hayır, isteğe bağlı. Puanlarsan lezzet yoğunluğu ve memnuniyet restoranın genel değerlendirmesine eklenir ve Riio Michelin puanına sayılır.</p></details>
+<details><summary>“Bugünkü ziyaretin nasıldı?” bildirimi ne zaman gelir?</summary><p>Kaydettiğin bir restoranın yakınında 5 dakikadan uzun kalıp ayrıldığında, yaklaşık 40 dakika sonra bildirim gelir. Bu özellik için konum erişimine “Her Zaman” izni ve bildirim izni gerekir. Bildirim almak istemiyorsan Ayarlar &gt; Uygulamalar &gt; Insaeng bölümünden bildirimleri kapat veya konum iznini “Uygulamayı Kullanırken” olarak değiştir. Konum kontrolü yalnızca cihazında yapılır; gittiğin yerler kaydedilmez ve hiçbir yere gönderilmez.</p></details>
+<details><summary>Konum iznini vermezsem uygulamayı kullanabilir miyim?</summary><p>Evet. Konumu haritada kendin seçerek restoran ekleyebilir ve kayıt tutabilirsin. Yalnızca mevcut konumunun gösterilmesi ve ziyaret sonrası bildirim kullanılamaz.</p></details>
+<details><summary>Mekân aramasında sonuç çıkmıyor</summary><p>Mekân araması için internet bağlantısı gerekir. Farklı bir adla ya da daha kısa bir anahtar kelimeyle yeniden ara. Yine de bulamazsan haritada bir nokta seçerek kendin ekleyebilirsin.</p></details>
+<details><summary>Kayıtlarım nerede saklanıyor? Diğer cihazlarla eşzamanlanıyor mu?</summary><p>Restoranlar, ziyaret kayıtları ve fotoğraflar yalnızca bu iPhone’da saklanır. Mevcut sürüm diğer cihazlarla eşzamanlamayı desteklemiyor; ayarlardaki iCloud yedekleme ve geri yükleme de henüz çalışmıyor. iPhone’unun tam yedeğinde (iCloud yedeği veya bilgisayar yedeği) uygulama verileri de yer alır.</p></details>
+<details><summary>Tüm kayıtlarımı silmek istiyorum</summary><p>Harita ekranındaki ayarlardan “Tüm verileri sil”e dokunduğunda restoranlar ve ziyaret kayıtları silinir. Bu işlem geri alınamaz, dikkatli ol. Fotoğraflar dahil her şeyi tamamen silmek için uygulamayı silmen yeterli.</p></details>
+<details><summary>Uygulamayı silip yeniden yüklersem kayıtlarım kalır mı?</summary><p>Hayır. Kayıtlar yalnızca cihazında saklandığı için uygulamayı sildiğinde onlar da silinir. Uygulamayı silmeden önce bunu mutlaka göz önünde bulundur.</p></details>
+<details><summary>Gerçekten her şey ücretsiz mi?</summary><p>Evet. Tüm özellikler ücretsiz; reklam yok, hesap yok. Ayarlardaki “Geliştiriciyi Destekleyin” tamamen isteğe bağlıdır ve hiçbir şeyin kilidini açmaz.</p></details></div>
+      <p class="contact">Sorunun yanıtı burada yoksa uygulamada Ayarlar &gt; Destek bölümünden doğrudan bize yazabilir ya da <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a> adresine e-posta gönderebilirsin. Uygulama sürümünü, iPhone modelini ve hangi ekranda ne yaptığını belirtirsen sorunu daha hızlı inceleyebiliriz.</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>Sıradaki restoranı<br>kendi notlarından seç</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6755934548">App Store’dan ücretsiz indir</a>
+    </section>
   </main>
 
-  <footer class="site">
-    © 2026 Leeo · <a href="support.html">Destek</a> · <a href="privacy.html">Gizlilik Politikası</a>
+  <footer>
+    <nav id="languages" class="langs" aria-label="Dil"><a href="../" hreflang="ko" lang="ko">한국어</a>
+<a href="../en/" hreflang="en" lang="en">English</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../tr/" hreflang="tr" lang="tr" aria-current="page">Türkçe</a></nav>
+    <p><a href="privacy.html">Gizlilik Politikası</a> · <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a> · © 2026 Leeo</p>
   </footer>
-</div>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

@@ -1,145 +1,176 @@
 <!doctype html>
 <html lang="zh-Hant">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="color-scheme" content="light dark">
-<title>人生美食 — 把吃過的好店記在地圖上</title>
-<meta name="description" content="一款 iPhone App，把去過的餐廳和想去的餐廳都收進地圖，每次造訪都能記下菜色、照片、星等和口味評價。紀錄越多，越能整理出你的口味檔案和專屬 Top 6 好店。">
-<link rel="canonical" href="https://m1zz.github.io/RestaurantMap/zh-Hant/">
-<link rel="alternate" hreflang="ko" href="https://m1zz.github.io/RestaurantMap/">
-<link rel="alternate" hreflang="en" href="https://m1zz.github.io/RestaurantMap/en/">
-<link rel="alternate" hreflang="ja" href="https://m1zz.github.io/RestaurantMap/ja/">
-<link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/RestaurantMap/zh-Hans/">
-<link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/RestaurantMap/zh-Hant/">
-<link rel="alternate" hreflang="ru" href="https://m1zz.github.io/RestaurantMap/ru/">
-<link rel="alternate" hreflang="es" href="https://m1zz.github.io/RestaurantMap/es/">
-<link rel="alternate" hreflang="de" href="https://m1zz.github.io/RestaurantMap/de/">
-<link rel="alternate" hreflang="fr" href="https://m1zz.github.io/RestaurantMap/fr/">
-<link rel="alternate" hreflang="it" href="https://m1zz.github.io/RestaurantMap/it/">
-<link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/RestaurantMap/pt-BR/">
-<link rel="alternate" hreflang="th" href="https://m1zz.github.io/RestaurantMap/th/">
-<link rel="alternate" hreflang="vi" href="https://m1zz.github.io/RestaurantMap/vi/">
-<link rel="alternate" hreflang="cs" href="https://m1zz.github.io/RestaurantMap/cs/">
-<link rel="alternate" hreflang="da" href="https://m1zz.github.io/RestaurantMap/da/">
-<link rel="alternate" hreflang="el" href="https://m1zz.github.io/RestaurantMap/el/">
-<link rel="alternate" hreflang="fi" href="https://m1zz.github.io/RestaurantMap/fi/">
-<link rel="alternate" hreflang="id" href="https://m1zz.github.io/RestaurantMap/id/">
-<link rel="alternate" hreflang="nb" href="https://m1zz.github.io/RestaurantMap/nb/">
-<link rel="alternate" hreflang="nl" href="https://m1zz.github.io/RestaurantMap/nl/">
-<link rel="alternate" hreflang="pl" href="https://m1zz.github.io/RestaurantMap/pl/">
-<link rel="alternate" hreflang="sv" href="https://m1zz.github.io/RestaurantMap/sv/">
-<link rel="alternate" hreflang="tr" href="https://m1zz.github.io/RestaurantMap/tr/">
-<link rel="alternate" hreflang="en-GB" href="https://m1zz.github.io/RestaurantMap/en/">
-<link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/RestaurantMap/">
-<link rel="stylesheet" href="../style.css">
-<link rel="icon" href="../icon.png">
-<link rel="apple-touch-icon" href="../icon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>人生美食：把吃過的店記在地圖上</title>
+  <meta name="description" content="把去過和想去的餐廳收進地圖，每次去都記下菜色、照片和口味評價。所有功能免費，紀錄只儲存在你的 iPhone 上。">
+  <meta name="theme-color" content="#B8461F" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6755934548">
+  <link rel="canonical" href="https://m1zz.github.io/RestaurantMap/zh-Hant/">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/RestaurantMap/">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/RestaurantMap/en/">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/RestaurantMap/ja/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/RestaurantMap/zh-Hans/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/RestaurantMap/zh-Hant/">
+  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/RestaurantMap/ru/">
+  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/RestaurantMap/es/">
+  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/RestaurantMap/de/">
+  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/RestaurantMap/fr/">
+  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/RestaurantMap/it/">
+  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/RestaurantMap/pt-BR/">
+  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/RestaurantMap/th/">
+  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/RestaurantMap/vi/">
+  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/RestaurantMap/cs/">
+  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/RestaurantMap/da/">
+  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/RestaurantMap/el/">
+  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/RestaurantMap/fi/">
+  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/RestaurantMap/id/">
+  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/RestaurantMap/nb/">
+  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/RestaurantMap/nl/">
+  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/RestaurantMap/pl/">
+  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/RestaurantMap/sv/">
+  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/RestaurantMap/tr/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/RestaurantMap/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="人生美食：把吃過的店記在地圖上">
+  <meta property="og:description" content="把去過和想去的餐廳收進地圖，每次去都記下菜色、照片和口味評價。所有功能免費，紀錄只儲存在你的 iPhone 上。">
+  <meta property="og:url" content="https://m1zz.github.io/RestaurantMap/zh-Hant/">
+  <meta property="og:image" content="https://m1zz.github.io/RestaurantMap/img/zh-Hant/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#B8461F}@media (prefers-color-scheme:dark){:root{--accent:#F08A62}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-<div class="container">
-
-  <header class="site">
-    <img src="../icon.png" alt="人生美食 App 圖示">
-    <div>
-      <div class="title">人生美食</div>
-      <div class="subtitle">用星等與排名記錄你的美食</div>
-    </div>
+  <a class="skip" href="#main">跳到主要內容</a>
+  <header class="bar">
+    <a class="brand" href="../zh-Hant/"><img src="../icon.png" alt="" width="32" height="32">人生美食</a>
+    <a class="lang-link" href="#languages">語言</a>
   </header>
 
-  <nav class="langs" aria-label="語言">
-    <a href="../index.html" hreflang="ko" lang="ko">한국어</a>
-    <a href="../en/index.html" hreflang="en" lang="en">English</a>
-    <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a>
-    <a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
-    <a href="index.html" hreflang="zh-Hant" lang="zh-Hant" aria-current="true">繁體中文</a>
-    <a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a>
-    <a href="../es/index.html" hreflang="es" lang="es">Español</a>
-    <a href="../de/index.html" hreflang="de" lang="de">Deutsch</a>
-    <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a>
-    <a href="../it/index.html" hreflang="it" lang="it">Italiano</a>
-    <a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
-    <a href="../th/index.html" hreflang="th" lang="th">ไทย</a>
-    <a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a>
-    <a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a>
-    <a href="../da/index.html" hreflang="da" lang="da">Dansk</a>
-    <a href="../el/index.html" hreflang="el" lang="el">Ελληνικά</a>
-    <a href="../fi/index.html" hreflang="fi" lang="fi">Suomi</a>
-    <a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a>
-    <a href="../nb/index.html" hreflang="nb" lang="nb">Norsk bokmål</a>
-    <a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a>
-    <a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a>
-    <a href="../sv/index.html" hreflang="sv" lang="sv">Svenska</a>
-    <a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a>
-  </nav>
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>吃過的好店，<br>再也不會忘</h1>
+        <p class="lead">把去過和想去的餐廳收進地圖，每次去都記下點了什麼、拍的照片和口味評價。下次不知道去哪吃，自己的紀錄會給你答案。</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6755934548">在 App Store 免費下載</a><a class="try" href="#try">評一道菜試試 ↓</a></div>
+        <p class="muted small">所有功能免費。不需要註冊，紀錄只留在你的 iPhone 上。</p>
+      </div>
+      <div class="phone"><img src="../img/zh-Hant/01-map.jpg" alt="吃過的好店， 再也不會忘" width="720" height="1564" decoding="async"></div>
+    </section>
 
-  <nav class="pages" aria-label="頁面">
-    <a href="index.html" aria-current="page">首頁</a>
-    <a href="support.html">支援</a>
-    <a href="privacy.html">隱私權政策</a>
-  </nav>
 
-  <main>
-    <h1>吃過的好店，從此不再忘記</h1>
-    <p class="lead">
-      人生美食幫你把去過的餐廳和想去的餐廳都收進同一張地圖。
-      每次造訪時記下點了什麼菜、拍了哪些照片、給了幾顆星、口味如何，
-      紀錄越多，你專屬的美食地圖和口味偏好就越清楚。
-    </p>
+    <section class="reveal" id="try">
+      <h2>評一道菜試試</h2>
+      <p class="muted">選一種料理，替每種味道的濃淡和滿意度打分。項目和計算方式都和 App 裡的造訪紀錄一樣。</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;評一道菜試試&quot;, &quot;lead&quot;: &quot;選一種料理，替每種味道的濃淡和滿意度打分。項目和計算方式都和 App 裡的造訪紀錄一樣。&quot;, &quot;note&quot;: &quot;和 App 一樣，評分由星等和滿意度各占一半。這裡的操作不會被儲存。&quot;, &quot;types&quot;: [{&quot;emoji&quot;: &quot;🍽️&quot;, &quot;name&quot;: &quot;一般&quot;, &quot;attrs&quot;: [[&quot;🌶️&quot;, &quot;辣度&quot;, &quot;溫和 ↔ 辛辣&quot;], [&quot;💪&quot;, &quot;濃郁度&quot;, &quot;清淡 ↔ 濃重&quot;], [&quot;🍯&quot;, &quot;甜度&quot;, &quot;不喜歡 ↔ 喜歡&quot;], [&quot;🧂&quot;, &quot;鹹度&quot;, &quot;淡 ↔ 鹹&quot;], [&quot;🥓&quot;, &quot;油膩度&quot;, &quot;清淡 ↔ 香濃&quot;], [&quot;🌿&quot;, &quot;本味&quot;, &quot;調味 ↔ 原味&quot;]]}, {&quot;emoji&quot;: &quot;🥩&quot;, &quot;name&quot;: &quot;牛排&quot;, &quot;attrs&quot;: [[&quot;🔥&quot;, &quot;熟度&quot;, &quot;一分熟 ↔ 全熟&quot;], [&quot;🥩&quot;, &quot;肉汁&quot;, &quot;乾柴 ↔ 多汁&quot;], [&quot;✨&quot;, &quot;嫩度&quot;, &quot;柴 ↔ 嫩&quot;], [&quot;🧂&quot;, &quot;鹹淡&quot;, &quot;淡 ↔ 鹹&quot;], [&quot;🌿&quot;, &quot;肉香&quot;, &quot;弱 ↔ 強&quot;], [&quot;🍖&quot;, &quot;油花&quot;, &quot;少 ↔ 多&quot;]]}, {&quot;emoji&quot;: &quot;🍣&quot;, &quot;name&quot;: &quot;壽司&quot;, &quot;attrs&quot;: [[&quot;🍚&quot;, &quot;醋飯&quot;, &quot;鬆軟 ↔ 緊實&quot;], [&quot;🐟&quot;, &quot;魚生（食材）&quot;, &quot;新鮮度&quot;], [&quot;🌿&quot;, &quot;芥末&quot;, &quot;弱 ↔ 強&quot;], [&quot;⚖️&quot;, &quot;平衡&quot;, &quot;失衡 ↔ 和諧&quot;], [&quot;✋&quot;, &quot;捏製&quot;, &quot;鬆散 ↔ 緊實&quot;], [&quot;🌡️&quot;, &quot;溫度&quot;, &quot;涼 ↔ 溫&quot;]]}, {&quot;emoji&quot;: &quot;🍜&quot;, &quot;name&quot;: &quot;拉麵&quot;, &quot;attrs&quot;: [[&quot;🥣&quot;, &quot;湯頭&quot;, &quot;濃郁/鮮味&quot;], [&quot;🍜&quot;, &quot;麵條&quot;, &quot;軟 ↔ Q彈&quot;], [&quot;🥓&quot;, &quot;叉燒&quot;, &quot;柴 ↔ 軟嫩&quot;], [&quot;🥚&quot;, &quot;配料&quot;, &quot;寒酸 ↔ 豐富&quot;], [&quot;🔥&quot;, &quot;溫度&quot;, &quot;溫吞 ↔ 滾燙&quot;], [&quot;⚖️&quot;, &quot;平衡&quot;, &quot;失衡 ↔ 和諧&quot;]]}, {&quot;emoji&quot;: &quot;🍕&quot;, &quot;name&quot;: &quot;披薩&quot;, &quot;attrs&quot;: [[&quot;🫓&quot;, &quot;餅皮&quot;, &quot;硬 ↔ 有嚼勁&quot;], [&quot;🍅&quot;, &quot;醬料&quot;, &quot;少 ↔ 多&quot;], [&quot;🧀&quot;, &quot;起司&quot;, &quot;少 ↔ 多&quot;], [&quot;🔥&quot;, &quot;熟度&quot;, &quot;欠火 ↔ 酥脆&quot;], [&quot;🌟&quot;, &quot;配料&quot;, &quot;寒酸 ↔ 豐富&quot;], [&quot;⚖️&quot;, &quot;平衡&quot;, &quot;失衡 ↔ 和諧&quot;]]}, {&quot;emoji&quot;: &quot;🍷&quot;, &quot;name&quot;: &quot;葡萄酒&quot;, &quot;attrs&quot;: [[&quot;💪&quot;, &quot;醇厚度&quot;, &quot;輕盈 ↔ 厚重&quot;], [&quot;🍇&quot;, &quot;單寧&quot;, &quot;柔和 ↔ 澀&quot;], [&quot;🍋&quot;, &quot;酸度&quot;, &quot;低 ↔ 高&quot;], [&quot;🌸&quot;, &quot;香氣&quot;, &quot;簡單 ↔ 複雜&quot;], [&quot;✨&quot;, &quot;餘韻&quot;, &quot;短促 ↔ 餘韻悠長&quot;], [&quot;⚖️&quot;, &quot;平衡&quot;, &quot;失衡 ↔ 和諧&quot;]]}, {&quot;emoji&quot;: &quot;☕&quot;, &quot;name&quot;: &quot;咖啡&quot;, &quot;attrs&quot;: [[&quot;🍋&quot;, &quot;酸度&quot;, &quot;低 ↔ 明亮&quot;], [&quot;💪&quot;, &quot;醇厚度&quot;, &quot;輕盈 ↔ 厚重&quot;], [&quot;🌸&quot;, &quot;風味&quot;, &quot;簡單 ↔ 複雜&quot;], [&quot;✨&quot;, &quot;餘味&quot;, &quot;短促 ↔ 餘韻悠長&quot;], [&quot;🍯&quot;, &quot;甜度&quot;, &quot;苦 ↔ 甜&quot;], [&quot;⚖️&quot;, &quot;平衡&quot;, &quot;失衡 ↔ 和諧&quot;]]}], &quot;rating&quot;: &quot;評分&quot;, &quot;intensity&quot;: &quot;口味濃淡&quot;, &quot;sat&quot;: &quot;滿意度&quot;, &quot;low&quot;: &quot;不滿意&quot;, &quot;high&quot;: &quot;非常滿意&quot;, &quot;shape&quot;: &quot;口味類型&quot;, &quot;score&quot;: &quot;Riio 米其林評分&quot;}"></div>
+    </section>
 
-    <h2>主要功能</h2>
-    <div class="features">
-      <div class="card">
-        <h3>在地圖上找到，一點就存</h3>
-        <p>在地圖上搜尋餐廳，或點一下附近的地點，就能馬上加進你的清單。也可以在目前位置或地圖上任選一處直接新增。</p>
-      </div>
-      <div class="card">
-        <h3>去過與想去</h3>
-        <p>已經去過的餐廳和總有一天想去的餐廳分開管理。去過之後，把它移到「去過」就好。</p>
-      </div>
-      <div class="card">
-        <h3>造訪紀錄</h3>
-        <p>記下造訪日期、吃過的菜色、照片、星等和備忘。為每家餐廳登錄好菜色，下次造訪時直接挑選就能記錄。</p>
-      </div>
-      <div class="card">
-        <h3>細膩的口味評價</h3>
-        <p>辣度、鹹淡、甜度等口味的濃淡，和你對這個味道有多滿意，可以分開評價。牛排、壽司和拉麵還能依熟度、醋飯、湯頭等專屬項目來評價。</p>
-      </div>
-      <div class="card">
-        <h3>我的米其林 Top 6</h3>
-        <p>替你最珍愛的六家餐廳排出名次，另外收藏。有人問你哪裡好吃時，馬上就能拿出來給他看。</p>
-      </div>
-      <div class="card">
-        <h3>口味檔案</h3>
-        <p>根據累積的口味評價，一眼看出你偏愛哪些味道和哪種料理風格。</p>
-      </div>
-      <div class="card">
-        <h3>造訪後的紀錄提醒</h3>
-        <p>在已儲存的餐廳待過再離開，過一會兒就會收到「今天這家如何？」的通知，提醒你別忘了記錄。不需要的話可以關閉。</p>
-      </div>
-      <div class="card">
-        <h3>路線與撥號</h3>
-        <p>已儲存的餐廳可以直接在 Apple 地圖、KakaoMap、NAVER Map 中開啟，點一下電話號碼就能直接撥打。</p>
-      </div>
-    </div>
+    <section class="problem reveal">
+      <h2>那家店，到底什麼好吃？</h2>
+      <p>明明記得那家店很好吃，店名卻想不起來，點了什麼、湯是不是偏鹹就更記不得了。最後只好重新搜尋，看別人的評論。人生美食把你親口嚐過的紀錄留在地圖上，讓下一次選擇靠自己的經驗。</p>
+    </section>
 
-    <h2>紀錄只存在你的 iPhone 上</h2>
-    <p>
-      不需註冊，餐廳清單、造訪紀錄和照片都只儲存在你的 iPhone 上。
-      詳細內容請參閱<a href="privacy.html">隱私權政策</a>。
-    </p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>去過、想去，還有我的米其林</h2>
+        <p>在地圖上搜尋，或點一下附近的地點就能馬上儲存。去過的和總有一天想去的分開管理，最愛的六家還能從第 1 名排到第 6 名。<br>有人問你推薦哪家，直接把這份清單給他看。</p>
+      </div>
+      <div class="phone"><img src="../img/zh-Hant/02-list.jpg" alt="去過、想去，還有我的米其林" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <p><a href="https://apps.apple.com/app/id6755934548">在 App Store 下載人生美食</a></p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>依料理提問來評價</h2>
+        <p>辣度、鹹淡這類味道的濃淡用滑桿設定，喜不喜歡則另外從 1 到 5 打分。牛排看熟度和肉汁，壽司看醋飯和配料，拉麵看湯頭和麵條，每種料理的項目都不一樣。<br>造訪紀錄裡也會一起留下菜色、照片、星等和備註。</p>
+      </div>
+      <div class="phone"><img src="../img/zh-Hant/04-taste-review.jpg" alt="依料理提問來評價" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <div class="contact">
-      如有不便之處或希望新增的功能，歡迎寫信到 <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a> 告訴我們。
-      常見問題請見<a href="support.html">支援</a>頁面。
-    </div>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>值得再訪的店，一看分數就知道</h2>
+        <p>造訪次數多了，餐廳頁面會顯示依所有造訪平均繪製的總評圖，以及結合星等和滿意度、滿分 100 的 Riio 米其林評分。<br>在儲存的餐廳用完餐離開後，過一會兒會收到提醒你記錄的通知，不會忘記寫。</p>
+      </div>
+      <div class="phone"><img src="../img/zh-Hant/03-detail.jpg" alt="值得再訪的店，一看分數就知道" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="reveal">
+      <h2>三步開始</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>儲存餐廳</h3><p>在地圖上搜尋，或點一下附近的地點加入清單。</p></li>
+<li class="card"><span class="n">2</span><h3>去過就記錄</h3><p>記下菜色、照片、星等和口味評價。口味評價可自由選擇。</p></li>
+<li class="card"><span class="n">3</span><h3>挑下一家</h3><p>看看 Top 6 和評分，再用 Apple 地圖、Kakao 地圖或 Naver 地圖導航。</p></li></ol>
+    </section>
+
+    <section class="reveal" id="commands">
+      <h2>不同料理的評價項目</h2>
+      <div class="card table">
+        <dl><div><dt>🍽️ 一般</dt><dd>辣度、濃郁度、甜度、鹹度、油膩度、本味</dd></div><div><dt>🥩 牛排</dt><dd>熟度、肉汁、嫩度、鹹淡、肉香、油花</dd></div><div><dt>🍣 壽司</dt><dd>醋飯、魚生（食材）、芥末、平衡、捏製、溫度</dd></div><div><dt>🍜 拉麵</dt><dd>湯頭、麵條、叉燒、配料、溫度、平衡</dd></div><div><dt>🍕 披薩</dt><dd>餅皮、醬料、起司、熟度、配料、平衡</dd></div><div><dt>🍷 葡萄酒</dt><dd>醇厚度、單寧、酸度、香氣、餘韻、平衡</dd></div><div><dt>☕ 咖啡</dt><dd>酸度、醇厚度、風味、餘味、甜度、平衡</dd></div></dl>
+      </div>
+      <p class="muted">其他料理用第一行的一般項目來評價。也可以自己建立料理分類。</p>
+    </section>
+
+
+
+    <section class="reveal" id="faq">
+      <h2>常見問題</h2>
+      <div class="faq"><details><summary>要怎麼新增餐廳？</summary><p>在地圖上方的搜尋欄輸入餐廳名稱，然後在結果中點一下「加入我的餐廳清單」。 也可以點一下地圖上顯示的附近地點，直接新增。 搜尋不到的地方，可以在目前位置或地圖上選定的位置直接新增。</p></details>
+<details><summary>「去過」、「想去」和 Top 6 是什麼？</summary><p>去過：已經去過的餐廳，可以留下造訪紀錄。 想去：總有一天想去的餐廳。去過之後，請在餐廳詳細資訊畫面把它改成「去過」。 Top 6（我的米其林）：替你最珍愛的六家餐廳排出第 1 到第 6 名。標為「想去」的餐廳不能設為 Top 6。</p></details>
+<details><summary>一定要做口味評價嗎？</summary><p>不用，可以自由選擇。評價後，餐廳頁面的總評圖會疊上口味濃淡和滿意度，也會計入 Riio 米其林評分。</p></details>
+<details><summary>「今天這家如何？」的通知什麼時候會來？</summary><p>在已儲存的餐廳附近停留超過 5 分鐘再離開，大約 40 分鐘後就會收到通知。這項功能需要將位置權限設為「永遠」並允許通知。 如果不想收到通知，請前往「設定」&gt;「App」&gt;「人生美食」關閉通知，或將位置權限改為「使用 App 期間」。 位置判斷只在裝置上進行，不會儲存你的移動軌跡，也不會傳送到外部。</p></details>
+<details><summary>不允許位置權限就不能用嗎？</summary><p>可以用。你可以在地圖上自行選擇位置來新增並記錄餐廳，只是無法顯示目前位置，也收不到造訪後的通知。</p></details>
+<details><summary>地點搜尋沒有結果</summary><p>地點搜尋需要連上網路。 請換個名稱或用更短的關鍵字再搜尋一次。 仍然找不到的話，可以在地圖上選定位置直接新增。</p></details>
+<details><summary>紀錄存在哪裡？會和其他裝置同步嗎？</summary><p>餐廳、造訪紀錄和照片都只儲存在這支 iPhone 上。目前版本不支援與其他裝置同步，「設定」中的 iCloud 備份與還原也暫時無法使用。iPhone 的完整備份（iCloud 備份或電腦備份）會包含本 App 的資料。</p></details>
+<details><summary>我想清除所有紀錄</summary><p>在地圖畫面開啟「設定」，點一下「刪除所有資料」，即可清除餐廳和造訪紀錄。這個動作無法復原，請小心操作。如果要連照片一起徹底刪除，請刪除本 App。</p></details>
+<details><summary>刪除 App 再重新安裝，紀錄還會在嗎？</summary><p>不會。因為紀錄只儲存在裝置上，刪除 App 時會一併清除。刪除 App 前請務必確認。</p></details>
+<details><summary>真的全部免費嗎？</summary><p>是的，所有功能都免費，沒有廣告，也不用註冊。設定裡的「支持開發者」完全自由選擇，支持與否功能都一樣。</p></details></div>
+      <p class="contact">如果以上沒有你要的答案，請在 App 的「設定」&gt;「支援」中直接傳送給我們，或寫信到 <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a>。 附上 App 版本、iPhone 機型，以及在哪個畫面做了什麼操作，我們就能更快處理。</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>下一家餐廳，<br>從自己的紀錄裡挑</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6755934548">在 App Store 免費下載</a>
+    </section>
   </main>
 
-  <footer class="site">
-    © 2026 Leeo · <a href="support.html">支援</a> · <a href="privacy.html">隱私權政策</a>
+  <footer>
+    <nav id="languages" class="langs" aria-label="語言"><a href="../" hreflang="ko" lang="ko">한국어</a>
+<a href="../en/" hreflang="en" lang="en">English</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁體中文</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a></nav>
+    <p><a href="privacy.html">隱私權政策</a> · <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a> · © 2026 Leeo</p>
   </footer>
-</div>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

@@ -1,145 +1,176 @@
 <!doctype html>
 <html lang="vi">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="color-scheme" content="light dark">
-<title>Insaeng: Bản đồ quán ăn – lưu lại những quán ngon bạn đã đến trên bản đồ</title>
-<meta name="description" content="Ứng dụng iPhone giúp bạn gom những quán đã đến và những quán muốn thử lên bản đồ, mỗi lần ghé lại ghi món ăn, ảnh, số sao và đánh giá hương vị. Càng ghi nhiều, hồ sơ khẩu vị và Top 6 quán ruột của bạn càng hiện rõ.">
-<link rel="canonical" href="https://m1zz.github.io/RestaurantMap/vi/">
-<link rel="alternate" hreflang="ko" href="https://m1zz.github.io/RestaurantMap/">
-<link rel="alternate" hreflang="en" href="https://m1zz.github.io/RestaurantMap/en/">
-<link rel="alternate" hreflang="ja" href="https://m1zz.github.io/RestaurantMap/ja/">
-<link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/RestaurantMap/zh-Hans/">
-<link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/RestaurantMap/zh-Hant/">
-<link rel="alternate" hreflang="ru" href="https://m1zz.github.io/RestaurantMap/ru/">
-<link rel="alternate" hreflang="es" href="https://m1zz.github.io/RestaurantMap/es/">
-<link rel="alternate" hreflang="de" href="https://m1zz.github.io/RestaurantMap/de/">
-<link rel="alternate" hreflang="fr" href="https://m1zz.github.io/RestaurantMap/fr/">
-<link rel="alternate" hreflang="it" href="https://m1zz.github.io/RestaurantMap/it/">
-<link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/RestaurantMap/pt-BR/">
-<link rel="alternate" hreflang="th" href="https://m1zz.github.io/RestaurantMap/th/">
-<link rel="alternate" hreflang="vi" href="https://m1zz.github.io/RestaurantMap/vi/">
-<link rel="alternate" hreflang="cs" href="https://m1zz.github.io/RestaurantMap/cs/">
-<link rel="alternate" hreflang="da" href="https://m1zz.github.io/RestaurantMap/da/">
-<link rel="alternate" hreflang="el" href="https://m1zz.github.io/RestaurantMap/el/">
-<link rel="alternate" hreflang="fi" href="https://m1zz.github.io/RestaurantMap/fi/">
-<link rel="alternate" hreflang="id" href="https://m1zz.github.io/RestaurantMap/id/">
-<link rel="alternate" hreflang="nb" href="https://m1zz.github.io/RestaurantMap/nb/">
-<link rel="alternate" hreflang="nl" href="https://m1zz.github.io/RestaurantMap/nl/">
-<link rel="alternate" hreflang="pl" href="https://m1zz.github.io/RestaurantMap/pl/">
-<link rel="alternate" hreflang="sv" href="https://m1zz.github.io/RestaurantMap/sv/">
-<link rel="alternate" hreflang="tr" href="https://m1zz.github.io/RestaurantMap/tr/">
-<link rel="alternate" hreflang="en-GB" href="https://m1zz.github.io/RestaurantMap/en/">
-<link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/RestaurantMap/">
-<link rel="stylesheet" href="../style.css">
-<link rel="icon" href="../icon.png">
-<link rel="apple-touch-icon" href="../icon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Insaeng: lưu những quán bạn đã ăn lên bản đồ</title>
+  <meta name="description" content="Gom quán đã đến và muốn đến lên bản đồ, mỗi lần ghé ghi món, ảnh và hương vị. Miễn phí, dữ liệu chỉ nằm trên iPhone của bạn.">
+  <meta name="theme-color" content="#B8461F" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6755934548">
+  <link rel="canonical" href="https://m1zz.github.io/RestaurantMap/vi/">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/RestaurantMap/">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/RestaurantMap/en/">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/RestaurantMap/ja/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/RestaurantMap/zh-Hans/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/RestaurantMap/zh-Hant/">
+  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/RestaurantMap/ru/">
+  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/RestaurantMap/es/">
+  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/RestaurantMap/de/">
+  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/RestaurantMap/fr/">
+  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/RestaurantMap/it/">
+  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/RestaurantMap/pt-BR/">
+  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/RestaurantMap/th/">
+  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/RestaurantMap/vi/">
+  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/RestaurantMap/cs/">
+  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/RestaurantMap/da/">
+  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/RestaurantMap/el/">
+  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/RestaurantMap/fi/">
+  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/RestaurantMap/id/">
+  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/RestaurantMap/nb/">
+  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/RestaurantMap/nl/">
+  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/RestaurantMap/pl/">
+  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/RestaurantMap/sv/">
+  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/RestaurantMap/tr/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/RestaurantMap/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Insaeng: lưu những quán bạn đã ăn lên bản đồ">
+  <meta property="og:description" content="Gom quán đã đến và muốn đến lên bản đồ, mỗi lần ghé ghi món, ảnh và hương vị. Miễn phí, dữ liệu chỉ nằm trên iPhone của bạn.">
+  <meta property="og:url" content="https://m1zz.github.io/RestaurantMap/vi/">
+  <meta property="og:image" content="https://m1zz.github.io/RestaurantMap/img/vi/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#B8461F}@media (prefers-color-scheme:dark){:root{--accent:#F08A62}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-<div class="container">
-
-  <header class="site">
-    <img src="../icon.png" alt="Biểu tượng ứng dụng Insaeng">
-    <div>
-      <div class="title">Insaeng</div>
-      <div class="subtitle">Chấm điểm, xếp hạng bữa ngon</div>
-    </div>
+  <a class="skip" href="#main">Chuyển đến nội dung</a>
+  <header class="bar">
+    <a class="brand" href="../vi/"><img src="../icon.png" alt="" width="32" height="32">Insaeng</a>
+    <a class="lang-link" href="#languages">Ngôn ngữ</a>
   </header>
 
-  <nav class="langs" aria-label="Ngôn ngữ">
-    <a href="../index.html" hreflang="ko" lang="ko">한국어</a>
-    <a href="../en/index.html" hreflang="en" lang="en">English</a>
-    <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a>
-    <a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
-    <a href="../zh-Hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
-    <a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a>
-    <a href="../es/index.html" hreflang="es" lang="es">Español</a>
-    <a href="../de/index.html" hreflang="de" lang="de">Deutsch</a>
-    <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a>
-    <a href="../it/index.html" hreflang="it" lang="it">Italiano</a>
-    <a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
-    <a href="../th/index.html" hreflang="th" lang="th">ไทย</a>
-    <a href="index.html" hreflang="vi" lang="vi" aria-current="true">Tiếng Việt</a>
-    <a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a>
-    <a href="../da/index.html" hreflang="da" lang="da">Dansk</a>
-    <a href="../el/index.html" hreflang="el" lang="el">Ελληνικά</a>
-    <a href="../fi/index.html" hreflang="fi" lang="fi">Suomi</a>
-    <a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a>
-    <a href="../nb/index.html" hreflang="nb" lang="nb">Norsk bokmål</a>
-    <a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a>
-    <a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a>
-    <a href="../sv/index.html" hreflang="sv" lang="sv">Svenska</a>
-    <a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a>
-  </nav>
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>Quán ngon đã ghé,<br>không còn quên nữa</h1>
+        <p class="lead">Ghim lên bản đồ những quán đã đến và những quán muốn thử, mỗi lần ghé lại ghi món đã gọi, ảnh và hương vị. Khi phân vân không biết ăn ở đâu, chính ghi chép của bạn sẽ trả lời.</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6755934548">Tải miễn phí trên App Store</a><a class="try" href="#try">Thử chấm điểm một món ↓</a></div>
+        <p class="muted small">Mọi tính năng đều miễn phí. Không cần đăng ký, dữ liệu chỉ nằm trên iPhone của bạn.</p>
+      </div>
+      <div class="phone"><img src="../img/vi/01-map.jpg" alt="Quán ngon đã ghé, không còn quên nữa" width="720" height="1564" decoding="async"></div>
+    </section>
 
-  <nav class="pages" aria-label="Trang">
-    <a href="index.html" aria-current="page">Trang chủ</a>
-    <a href="support.html">Hỗ trợ</a>
-    <a href="privacy.html">Chính sách quyền riêng tư</a>
-  </nav>
 
-  <main>
-    <h1>Quán ngon đã ghé, giờ không còn quên nữa</h1>
-    <p class="lead">
-      Insaeng là ứng dụng gom những quán bạn đã đến và những quán bạn muốn thử lên cùng một bản đồ.
-      Mỗi lần ghé, bạn ghi lại món đã ăn, ảnh, số sao và đánh giá hương vị.
-      Càng ghi nhiều, bản đồ quán ngon của riêng bạn và khẩu vị của bạn càng rõ nét.
-    </p>
+    <section class="reveal" id="try">
+      <h2>Thử chấm điểm một món</h2>
+      <p class="muted">Chọn loại món, rồi chấm độ đậm của từng vị và mức bạn thích nó. Cùng tiêu chí và cùng cách tính như một lượt ghé trong ứng dụng.</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;Thử chấm điểm một món&quot;, &quot;lead&quot;: &quot;Chọn loại món, rồi chấm độ đậm của từng vị và mức bạn thích nó. Cùng tiêu chí và cùng cách tính như một lượt ghé trong ứng dụng.&quot;, &quot;note&quot;: &quot;Giống trong ứng dụng, điểm gồm một nửa số sao, một nửa mức hài lòng. Ở đây không lưu gì cả.&quot;, &quot;types&quot;: [{&quot;emoji&quot;: &quot;🍽️&quot;, &quot;name&quot;: &quot;Chung&quot;, &quot;attrs&quot;: [[&quot;🌶️&quot;, &quot;Độ cay&quot;, &quot;Không cay ↔ Cay&quot;], [&quot;💪&quot;, &quot;Độ đậm&quot;, &quot;Thanh ↔ Đậm đà&quot;], [&quot;🍯&quot;, &quot;Độ ngọt&quot;, &quot;Không thích ↔ Thích&quot;], [&quot;🧂&quot;, &quot;Độ mặn&quot;, &quot;Nhạt ↔ Mặn&quot;], [&quot;🥓&quot;, &quot;Độ béo&quot;, &quot;Thanh ↔ Béo ngậy&quot;], [&quot;🌿&quot;, &quot;Vị nguyên bản&quot;, &quot;Tẩm ướp ↔ Nguyên vị&quot;]]}, {&quot;emoji&quot;: &quot;🥩&quot;, &quot;name&quot;: &quot;Bít tết&quot;, &quot;attrs&quot;: [[&quot;🔥&quot;, &quot;Độ chín&quot;, &quot;Tái ↔ Chín kỹ&quot;], [&quot;🥩&quot;, &quot;Độ mọng nước&quot;, &quot;Khô ↔ Mọng nước&quot;], [&quot;✨&quot;, &quot;Độ mềm&quot;, &quot;Dai ↔ Mềm&quot;], [&quot;🧂&quot;, &quot;Độ nêm&quot;, &quot;Nhạt ↔ Mặn&quot;], [&quot;🌿&quot;, &quot;Mùi thịt&quot;, &quot;Nhẹ ↔ Mạnh&quot;], [&quot;🍖&quot;, &quot;Vân mỡ&quot;, &quot;Ít ↔ Nhiều&quot;]]}, {&quot;emoji&quot;: &quot;🍣&quot;, &quot;name&quot;: &quot;Sushi&quot;, &quot;attrs&quot;: [[&quot;🍚&quot;, &quot;Shari (cơm)&quot;, &quot;Nhão ↔ Chắc&quot;], [&quot;🐟&quot;, &quot;Neta (phần cá)&quot;, &quot;Độ tươi&quot;], [&quot;🌿&quot;, &quot;Wasabi&quot;, &quot;Nhẹ ↔ Mạnh&quot;], [&quot;⚖️&quot;, &quot;Cân bằng&quot;, &quot;Lệch ↔ Hài hòa&quot;], [&quot;✋&quot;, &quot;Độ nắm&quot;, &quot;Rời ↔ Chặt&quot;], [&quot;🌡️&quot;, &quot;Nhiệt độ&quot;, &quot;Lạnh ↔ Ấm&quot;]]}, {&quot;emoji&quot;: &quot;🍜&quot;, &quot;name&quot;: &quot;Ramen&quot;, &quot;attrs&quot;: [[&quot;🥣&quot;, &quot;Nước dùng&quot;, &quot;Độ sâu/vị umami&quot;], [&quot;🍜&quot;, &quot;Sợi mì&quot;, &quot;Mềm ↔ Dai&quot;], [&quot;🥓&quot;, &quot;Chashu&quot;, &quot;Khô ↔ Mềm&quot;], [&quot;🥚&quot;, &quot;Topping&quot;, &quot;Ít ↔ Đầy đặn&quot;], [&quot;🔥&quot;, &quot;Nhiệt độ&quot;, &quot;Âm ấm ↔ Nóng&quot;], [&quot;⚖️&quot;, &quot;Cân bằng&quot;, &quot;Lệch ↔ Hài hòa&quot;]]}, {&quot;emoji&quot;: &quot;🍕&quot;, &quot;name&quot;: &quot;Pizza&quot;, &quot;attrs&quot;: [[&quot;🫓&quot;, &quot;Đế bánh&quot;, &quot;Cứng ↔ Dai mềm&quot;], [&quot;🍅&quot;, &quot;Sốt&quot;, &quot;Ít ↔ Nhiều&quot;], [&quot;🧀&quot;, &quot;Phô mai&quot;, &quot;Ít ↔ Nhiều&quot;], [&quot;🔥&quot;, &quot;Độ chín&quot;, &quot;Chưa chín ↔ Giòn&quot;], [&quot;🌟&quot;, &quot;Topping&quot;, &quot;Ít ↔ Đầy đặn&quot;], [&quot;⚖️&quot;, &quot;Cân bằng&quot;, &quot;Lệch ↔ Hài hòa&quot;]]}, {&quot;emoji&quot;: &quot;🍷&quot;, &quot;name&quot;: &quot;Rượu vang&quot;, &quot;attrs&quot;: [[&quot;💪&quot;, &quot;Độ đậm&quot;, &quot;Nhẹ ↔ Đậm&quot;], [&quot;🍇&quot;, &quot;Tannin&quot;, &quot;Nhẹ ↔ Chát&quot;], [&quot;🍋&quot;, &quot;Độ chua&quot;, &quot;Thấp ↔ Cao&quot;], [&quot;🌸&quot;, &quot;Hương thơm&quot;, &quot;Đơn giản ↔ Phức tạp&quot;], [&quot;✨&quot;, &quot;Hậu vị&quot;, &quot;Ngắn ↔ Đọng lâu&quot;], [&quot;⚖️&quot;, &quot;Cân bằng&quot;, &quot;Lệch ↔ Hài hòa&quot;]]}, {&quot;emoji&quot;: &quot;☕&quot;, &quot;name&quot;: &quot;Cà phê&quot;, &quot;attrs&quot;: [[&quot;🍋&quot;, &quot;Độ chua&quot;, &quot;Thấp ↔ Tươi sáng&quot;], [&quot;💪&quot;, &quot;Độ đậm&quot;, &quot;Nhẹ ↔ Đậm&quot;], [&quot;🌸&quot;, &quot;Hương vị&quot;, &quot;Đơn giản ↔ Phức tạp&quot;], [&quot;✨&quot;, &quot;Hậu vị&quot;, &quot;Ngắn ↔ Đọng lâu&quot;], [&quot;🍯&quot;, &quot;Độ ngọt&quot;, &quot;Đắng ↔ Ngọt&quot;], [&quot;⚖️&quot;, &quot;Cân bằng&quot;, &quot;Lệch ↔ Hài hòa&quot;]]}], &quot;rating&quot;: &quot;Điểm đánh giá&quot;, &quot;intensity&quot;: &quot;Độ đậm vị&quot;, &quot;sat&quot;: &quot;Mức hài lòng&quot;, &quot;low&quot;: &quot;Không hài lòng&quot;, &quot;high&quot;: &quot;Rất hài lòng&quot;, &quot;shape&quot;: &quot;Hồ sơ hương vị&quot;, &quot;score&quot;: &quot;Điểm Michelin Riio&quot;}"></div>
+    </section>
 
-    <h2>Tính năng chính</h2>
-    <div class="features">
-      <div class="card">
-        <h3>Tìm trên bản đồ, lưu ngay</h3>
-        <p>Tìm quán trên bản đồ hoặc chạm vào một địa điểm gần đó để thêm ngay vào danh sách của bạn. Bạn cũng có thể tự thêm quán tại vị trí hiện tại hoặc tại điểm chọn trên bản đồ.</p>
-      </div>
-      <div class="card">
-        <h3>Đã đến và Muốn đến</h3>
-        <p>Quán đã đến và quán muốn ghé một ngày nào đó được quản lý riêng. Đi rồi thì chỉ cần chuyển sang “Đã đến”.</p>
-      </div>
-      <div class="card">
-        <h3>Nhật ký ghé quán</h3>
-        <p>Ghi ngày ghé, món đã ăn, ảnh, số sao và ghi chú. Nếu đã lưu thực đơn của quán, lần sau bạn chỉ cần chọn món để ghi lại.</p>
-      </div>
-      <div class="card">
-        <h3>Đánh giá hương vị chi tiết</h3>
-        <p>Chấm riêng độ đậm của từng vị như cay, mặn, ngọt và mức độ bạn thích vị đó. Bít tết, sushi và ramen còn được đánh giá theo tiêu chí riêng như độ chín, cơm sushi hay nước dùng.</p>
-      </div>
-      <div class="card">
-        <h3>Michelin của tôi: Top 6</h3>
-        <p>Xếp hạng sáu quán bạn yêu thích nhất và gom riêng một chỗ. Khi có ai hỏi quán ngon, bạn mở ra là có ngay.</p>
-      </div>
-      <div class="card">
-        <h3>Hồ sơ khẩu vị</h3>
-        <p>Dựa trên những đánh giá hương vị đã tích lũy, ứng dụng cho bạn thấy ngay mình thích vị gì và phong cách món ăn nào.</p>
-      </div>
-      <div class="card">
-        <h3>Nhắc ghi lại sau khi ghé</h3>
-        <p>Khi bạn ở một quán đã lưu một lúc rồi rời đi, ít phút sau sẽ có thông báo “Hôm nay ghé quán thế nào?” để bạn không quên ghi lại. Không muốn thì có thể tắt.</p>
-      </div>
-      <div class="card">
-        <h3>Chỉ đường và gọi điện</h3>
-        <p>Mở quán đã lưu ngay trong Apple Maps, KakaoMap hoặc NAVER Map, và chạm vào số điện thoại để gọi luôn.</p>
-      </div>
-    </div>
+    <section class="problem reveal">
+      <h2>Quán đó ngon lắm, mà mình gọi món gì nhỉ?</h2>
+      <p>Bạn nhớ là rất thích quán đó, nhưng tên thì lờ mờ, còn đã gọi món gì hay nước dùng có mặn không thì chịu. Thế là lại tìm kiếm và đọc đánh giá của người lạ. Insaeng giữ trên bản đồ những gì chính bạn đã nếm, để lần chọn quán tiếp theo dựa vào trải nghiệm của bạn.</p>
+    </section>
 
-    <h2>Dữ liệu nằm trên iPhone của bạn</h2>
-    <p>
-      Không cần đăng ký tài khoản. Danh sách quán, nhật ký ghé quán và ảnh đều chỉ được lưu trên iPhone của bạn.
-      Xem chi tiết trong <a href="privacy.html">Chính sách quyền riêng tư</a>.
-    </p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Đã đến, Muốn đến và Michelin của riêng bạn</h2>
+        <p>Tìm trên bản đồ hoặc chạm vào một địa điểm gần đó là lưu ngay. Tách riêng quán đã đến với quán muốn thử, và xếp hạng sáu quán yêu thích nhất từ 1 đến 6.<br>Khi ai đó hỏi quán ngon, chỉ cần mở danh sách này ra.</p>
+      </div>
+      <div class="phone"><img src="../img/vi/02-list.jpg" alt="Đã đến, Muốn đến và Michelin của riêng bạn" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <p><a href="https://apps.apple.com/app/id6755934548">Tải Insaeng trên App Store</a></p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Câu hỏi hợp với từng món</h2>
+        <p>Độ đậm của từng vị, như cay hay mặn, chỉnh bằng thanh trượt, còn mức bạn thích thì chấm riêng từ 1 đến 5. Bít tết hỏi độ chín và độ mọng nước, sushi hỏi cơm và phần cá, ramen hỏi nước dùng và sợi mì.<br>Mỗi lượt ghé còn lưu món, ảnh, số sao và ghi chú.</p>
+      </div>
+      <div class="phone"><img src="../img/vi/04-taste-review.jpg" alt="Câu hỏi hợp với từng món" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <div class="contact">
-      Nếu có điều gì chưa vừa ý hoặc bạn mong có tính năng nào, hãy cho chúng tôi biết qua <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a>.
-      Câu hỏi thường gặp có ở trang <a href="support.html">Hỗ trợ</a>.
-    </div>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Quán đáng quay lại, nhìn số là biết</h2>
+        <p>Ghé nhiều lần, trang của quán sẽ hiện nhận xét chung tính trung bình mọi lần ghé, cùng Điểm Michelin Riio trên thang 100 kết hợp số sao và mức hài lòng.<br>Rời một quán đã lưu, ít phút sau sẽ có thông báo nhắc bạn ghi lại.</p>
+      </div>
+      <div class="phone"><img src="../img/vi/03-detail.jpg" alt="Quán đáng quay lại, nhìn số là biết" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="reveal">
+      <h2>Bắt đầu với ba bước</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>Lưu quán</h3><p>Tìm trên bản đồ hoặc chạm vào địa điểm gần đó.</p></li>
+<li class="card"><span class="n">2</span><h3>Ghé xong thì ghi</h3><p>Món, ảnh, số sao và hương vị. Chấm hương vị là tùy chọn.</p></li>
+<li class="card"><span class="n">3</span><h3>Chọn quán tiếp theo</h3><p>Xem Top 6 và điểm, rồi chỉ đường bằng Apple Maps, Kakao Map hoặc Naver Map.</p></li></ol>
+    </section>
+
+    <section class="reveal" id="commands">
+      <h2>Tiêu chí chấm theo từng loại món</h2>
+      <div class="card table">
+        <dl><div><dt>🍽️ Chung</dt><dd>Độ cay, Độ đậm, Độ ngọt, Độ mặn, Độ béo, Vị nguyên bản</dd></div><div><dt>🥩 Bít tết</dt><dd>Độ chín, Độ mọng nước, Độ mềm, Độ nêm, Mùi thịt, Vân mỡ</dd></div><div><dt>🍣 Sushi</dt><dd>Shari (cơm), Neta (phần cá), Wasabi, Cân bằng, Độ nắm, Nhiệt độ</dd></div><div><dt>🍜 Ramen</dt><dd>Nước dùng, Sợi mì, Chashu, Topping, Nhiệt độ, Cân bằng</dd></div><div><dt>🍕 Pizza</dt><dd>Đế bánh, Sốt, Phô mai, Độ chín, Topping, Cân bằng</dd></div><div><dt>🍷 Rượu vang</dt><dd>Độ đậm, Tannin, Độ chua, Hương thơm, Hậu vị, Cân bằng</dd></div><div><dt>☕ Cà phê</dt><dd>Độ chua, Độ đậm, Hương vị, Hậu vị, Độ ngọt, Cân bằng</dd></div></dl>
+      </div>
+      <p class="muted">Các món khác được chấm theo tiêu chí chung ở dòng đầu tiên. Bạn cũng có thể tự tạo danh mục món.</p>
+    </section>
+
+
+
+    <section class="reveal" id="faq">
+      <h2>Câu hỏi thường gặp</h2>
+      <div class="faq"><details><summary>Thêm quán như thế nào?</summary><p>Nhập tên quán vào ô tìm kiếm phía trên bản đồ, rồi chạm “Thêm vào danh sách quán của tôi” trong kết quả. Bạn cũng có thể chạm vào một địa điểm gần đó hiện trên bản đồ để thêm ngay. Quán không có trong kết quả tìm kiếm thì bạn tự thêm tại vị trí hiện tại hoặc tại điểm chọn trên bản đồ.</p></details>
+<details><summary>“Đã đến”, “Muốn đến” và Top 6 là gì?</summary><p>Đã đến – Những quán bạn đã ghé. Bạn có thể ghi nhật ký ghé quán. Muốn đến – Những quán bạn muốn ghé một ngày nào đó. Sau khi đi, hãy chuyển sang “Đã đến” trong màn hình chi tiết của quán. Top 6 (Michelin của tôi) – Xếp hạng sáu quán bạn yêu thích nhất từ hạng 1 đến hạng 6. Quán trong danh sách “Muốn đến” không thể đặt vào Top 6.</p></details>
+<details><summary>Có bắt buộc phải đánh giá hương vị không?</summary><p>Không, đó là tùy chọn. Nếu chấm, độ đậm vị và mức hài lòng sẽ được cộng vào nhận xét chung của quán và tính vào Điểm Michelin Riio.</p></details>
+<details><summary>Khi nào thông báo “Hôm nay ghé quán thế nào?” xuất hiện?</summary><p>Nếu bạn ở gần một quán đã lưu hơn 5 phút rồi rời đi, khoảng 40 phút sau thông báo sẽ đến. Tính năng này cần cho phép vị trí “Luôn luôn” và cho phép thông báo. Nếu không muốn nhận thông báo, hãy tắt thông báo trong Cài đặt &gt; Ứng dụng &gt; Insaeng hoặc đổi vị trí sang “Khi dùng ứng dụng”. Việc kiểm tra vị trí chỉ diễn ra trên thiết bị; ứng dụng không lưu lộ trình di chuyển và không gửi ra ngoài.</p></details>
+<details><summary>Không cho phép vị trí thì có dùng được không?</summary><p>Vẫn dùng được. Bạn có thể tự chọn vị trí trên bản đồ để thêm quán và ghi lại. Chỉ có tính năng hiển thị vị trí hiện tại và nhắc ghi lại sau khi ghé là không dùng được.</p></details>
+<details><summary>Tìm địa điểm không ra kết quả</summary><p>Tìm kiếm địa điểm cần có kết nối Internet. Hãy thử lại với tên khác hoặc từ khóa ngắn hơn. Nếu vẫn không có, bạn có thể chọn một điểm trên bản đồ và tự thêm quán.</p></details>
+<details><summary>Dữ liệu được lưu ở đâu? Có đồng bộ với thiết bị khác không?</summary><p>Quán, nhật ký ghé quán và ảnh đều chỉ được lưu trên iPhone này. Phiên bản hiện tại chưa hỗ trợ đồng bộ với thiết bị khác, và tính năng sao lưu, khôi phục iCloud trong phần cài đặt cũng chưa hoạt động. Dữ liệu của ứng dụng vẫn nằm trong bản sao lưu toàn bộ iPhone (sao lưu iCloud hoặc sao lưu trên máy tính).</p></details>
+<details><summary>Tôi muốn xóa toàn bộ dữ liệu</summary><p>Trong phần cài đặt ở màn hình bản đồ, chạm “Xóa toàn bộ dữ liệu” để xóa quán và nhật ký ghé quán. Thao tác này không thể hoàn tác, hãy cẩn thận. Muốn xóa sạch cả ảnh thì hãy xóa ứng dụng.</p></details>
+<details><summary>Xóa rồi cài lại ứng dụng thì dữ liệu còn không?</summary><p>Không. Vì dữ liệu chỉ được lưu trên thiết bị nên khi xóa ứng dụng, dữ liệu cũng bị xóa theo. Hãy kiểm tra kỹ trước khi xóa ứng dụng.</p></details>
+<details><summary>Có thật là miễn phí hết không?</summary><p>Có. Mọi tính năng đều miễn phí, không quảng cáo, không cần tài khoản. Mục “Ủng hộ nhà phát triển” trong cài đặt là hoàn toàn tùy ý và không mở khóa thêm gì.</p></details></div>
+      <p class="contact">Nếu vấn đề của bạn chưa có câu trả lời ở trên, hãy gửi ngay trong ứng dụng tại Cài đặt &gt; Hỗ trợ hoặc gửi email đến <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a>. Nếu bạn ghi rõ phiên bản ứng dụng, mẫu iPhone và bạn đã làm gì ở màn hình nào, chúng tôi sẽ kiểm tra nhanh hơn.</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>Quán tiếp theo,<br>chọn từ ghi chép của bạn</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6755934548">Tải miễn phí trên App Store</a>
+    </section>
   </main>
 
-  <footer class="site">
-    © 2026 Leeo · <a href="support.html">Hỗ trợ</a> · <a href="privacy.html">Chính sách quyền riêng tư</a>
+  <footer>
+    <nav id="languages" class="langs" aria-label="Ngôn ngữ"><a href="../" hreflang="ko" lang="ko">한국어</a>
+<a href="../en/" hreflang="en" lang="en">English</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a>
+<a href="../vi/" hreflang="vi" lang="vi" aria-current="page">Tiếng Việt</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a></nav>
+    <p><a href="privacy.html">Chính sách quyền riêng tư</a> · <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a> · © 2026 Leeo</p>
   </footer>
-</div>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>
