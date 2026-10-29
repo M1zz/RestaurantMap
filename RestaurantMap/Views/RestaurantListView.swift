@@ -29,6 +29,7 @@ struct FractionalStarRatingView: View {
                 )
             }
         }
+        .starRatingLabel(rating)
     }
 
     private func fillAmount(for index: Int) -> Double {
@@ -111,7 +112,8 @@ struct RestaurantListView: View {
                         ForEach(michelinRestaurants) { restaurant in
                             Top6RestaurantRow(restaurant: restaurant)
                                 .contentShape(Rectangle())
-                                .onTapGesture {
+                                .accessibilityInputLabels([Text(verbatim: restaurant.name)])
+                                .accessibleTap {
                                     selectedRestaurant = restaurant
                                     showingDetail = true
                                 }
@@ -124,6 +126,7 @@ struct RestaurantListView: View {
                     HStack {
                         Image(systemName: "crown.fill")
                             .foregroundStyle(.yellow)
+                            .accessibilityHidden(true)
                         Text("나의 미슐랭")
                         Spacer()
                         Text("\(michelinRestaurants.count)")
@@ -149,7 +152,8 @@ struct RestaurantListView: View {
                         ForEach(visitedRestaurants) { restaurant in
                             RestaurantRow(restaurant: restaurant)
                                 .contentShape(Rectangle())
-                                .onTapGesture {
+                                .accessibilityInputLabels([Text(verbatim: restaurant.name)])
+                                .accessibleTap {
                                     selectedRestaurant = restaurant
                                     showingDetail = true
                                 }
@@ -162,6 +166,7 @@ struct RestaurantListView: View {
                     HStack {
                         Image(systemName: "checkmark.circle.fill")
                             .foregroundStyle(.green)
+                            .accessibilityHidden(true)
                         Text("가본 곳")
                         Spacer()
                         Text("\(visitedRestaurants.count)")
@@ -182,7 +187,8 @@ struct RestaurantListView: View {
                         ForEach(wishlistRestaurants) { restaurant in
                             RestaurantRow(restaurant: restaurant)
                                 .contentShape(Rectangle())
-                                .onTapGesture {
+                                .accessibilityInputLabels([Text(verbatim: restaurant.name)])
+                                .accessibleTap {
                                     selectedRestaurant = restaurant
                                     showingDetail = true
                                 }
@@ -195,6 +201,7 @@ struct RestaurantListView: View {
                     HStack {
                         Image(systemName: "star.circle.fill")
                             .foregroundStyle(.orange)
+                            .accessibilityHidden(true)
                         Text("가볼 곳")
                         Spacer()
                         Text("\(wishlistRestaurants.count)")
@@ -212,6 +219,7 @@ struct RestaurantListView: View {
                     } label: {
                         Image(systemName: "plus")
                     }
+                    .accessibilityLabel(Text("식당 추가"))
                 }
                 
                 ToolbarItem(placement: .navigationBarLeading) {
@@ -386,6 +394,8 @@ struct Top6RestaurantRow: View {
                     .foregroundStyle(.black)
             }
             .frame(width: 40)
+            .accessibilityElement(children: .ignore)
+            .accessibilityLabel(Text("\(restaurant.top6Rank ?? 0)위"))
 
             VStack(alignment: .leading, spacing: 6) {
                 // 이름 + 평균 별점
@@ -402,10 +412,11 @@ struct Top6RestaurantRow: View {
                                 .font(.system(size: 12))
                         }
                     }
+                    .starRatingLabel(restaurant.averageRating)
                 }
 
-                // 카테고리 + 마지막 방문일 + 총 방문횟수
-                HStack(spacing: 8) {
+                // 카테고리 + 마지막 방문일 + 총 방문횟수 (아주 큰 글씨에서는 위아래로)
+                AdaptiveStack(spacing: 8) {
                     // 카테고리 텍스트
                     Text(POICategoryMapper.displayName(restaurant.category.isEmpty ? "MKPOICategoryRestaurant" : restaurant.category))
                         .font(.caption)
@@ -422,6 +433,7 @@ struct Top6RestaurantRow: View {
                         HStack(spacing: 2) {
                             Image(systemName: "calendar")
                                 .font(.caption2)
+                                .accessibilityHidden(true)
                             Text(lastVisit, format: .dateTime.month().day())
                                 .font(.caption)
                         }
@@ -432,6 +444,7 @@ struct Top6RestaurantRow: View {
                     HStack(spacing: 2) {
                         Image(systemName: "figure.walk")
                             .font(.caption2)
+                            .accessibilityHidden(true)
                         Text("\(restaurant.visitCount)회")
                             .font(.caption)
                     }
@@ -478,8 +491,8 @@ struct RestaurantRow: View {
                     FractionalStarRatingView(rating: restaurant.averageRating)
                 }
 
-                // 카테고리 + 마지막 방문일 + 총 방문횟수
-                HStack(spacing: 8) {
+                // 카테고리 + 마지막 방문일 + 총 방문횟수 (아주 큰 글씨에서는 위아래로)
+                AdaptiveStack(spacing: 8) {
                     // 카테고리 텍스트
                     Text(POICategoryMapper.displayName(restaurant.category.isEmpty ? "MKPOICategoryRestaurant" : restaurant.category))
                         .font(.caption)
@@ -496,6 +509,7 @@ struct RestaurantRow: View {
                         HStack(spacing: 2) {
                             Image(systemName: "calendar")
                                 .font(.caption2)
+                                .accessibilityHidden(true)
                             Text(lastVisit, format: .dateTime.month().day())
                                 .font(.caption)
                         }
@@ -506,6 +520,7 @@ struct RestaurantRow: View {
                     HStack(spacing: 2) {
                         Image(systemName: "figure.walk")
                             .font(.caption2)
+                            .accessibilityHidden(true)
                         Text("\(restaurant.visitCount)회")
                             .font(.caption)
                     }

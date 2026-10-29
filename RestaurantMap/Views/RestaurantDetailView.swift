@@ -136,7 +136,7 @@ struct RestaurantDetailView: View {
                         ForEach(sortedVisits) { visit in
                             VisitRowView(visit: visit)
                                 .contentShape(Rectangle())
-                                .onTapGesture {
+                                .accessibleTap {
                                     logger.info("🔵 [방문 기록 탭] Date: \(visit.visitDate.formatted()), HasProfile: \(visit.hasTasteProfile)")
                                     selectedVisit = visit
                                 }
@@ -154,6 +154,7 @@ struct RestaurantDetailView: View {
                                 Image(systemName: "plus.circle.fill")
                                     .foregroundStyle(.blue)
                             }
+                            .accessibilityLabel(Text("방문 기록 추가"))
                         }
                     }
                 }
@@ -477,12 +478,14 @@ struct VisitRowView: View {
                             .font(.system(size: 12))
                     }
                 }
+                .starRatingLabel(Double(visit.rating))
             }
 
             if !visit.displayMenuName.isEmpty {
                 HStack(spacing: 4) {
                     Image(systemName: "fork.knife")
                         .font(.caption)
+                        .accessibilityHidden(true)
                     Text(visit.displayMenuName)
                         .font(.subheadline)
                         .fontWeight(.medium)

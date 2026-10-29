@@ -43,9 +43,10 @@ struct PhotoGalleryView: View {
             }
         }
         .frame(width: 100, height: 100)
-        .onTapGesture {
+        .accessibleTap {
             selectedPhotoIndex = index
         }
+        .accessibilityLabel(Text("사진"))
         .overlay(alignment: .topTrailing) {
             if isEditable {
                 deleteButton(for: index)
@@ -62,6 +63,7 @@ struct PhotoGalleryView: View {
                 .foregroundStyle(.white, .red)
                 .shadow(radius: 2)
         }
+        .accessibilityLabel(Text("사진 삭제"))
         .padding(4)
     }
 

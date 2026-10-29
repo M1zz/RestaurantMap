@@ -74,6 +74,7 @@ struct MenuListView: View {
                             Image(systemName: "plus.circle.fill")
                                 .foregroundStyle(.blue)
                         }
+                        .accessibilityLabel(Text("메뉴 추가"))
                     }
                 }
             }

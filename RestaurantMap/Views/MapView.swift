@@ -111,6 +111,7 @@ struct MapView: View {
     @State private var errorMessage: String?
     @State private var showingError = false
     @State private var showSettings = false  // 설정 화면 표시 여부
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion  // 지도 이동을 미끄러지지 않고 바로
 
     @StateObject private var kakaoService = KakaoLocalSearchService.shared
     private let logger = Logger(subsystem: "com.restaurantmap", category: "MapView")
@@ -161,6 +162,7 @@ struct MapView: View {
                             .font(.system(size: 20))
                             .foregroundStyle(.blue)
                     }
+                    .accessibilityLabel(Text("더 보기"))
                 }
             }
             .searchable(text: $searchText, prompt: "식당이나 장소 검색")
@@ -392,6 +394,7 @@ struct MapView: View {
                     .foregroundStyle(.white)
             }
         }
+        .accessibilityLabel(Text("주변 식당 보기"))
         .padding(.trailing, 16)
         .padding(.bottom, 16)
     }
@@ -459,7 +462,7 @@ struct MapView: View {
                         // 첫 번째 결과로 지도 이동 및 줌인
                         if let firstPlace = result.documents.first {
                             // 애니메이션과 함께 이동 (줌인된 상태 유지)
-                            withAnimation(.easeInOut(duration: 0.5)) {
+                            withAnimation(reduceMotion ? nil : .easeInOut(duration: 0.5)) {
                                 position = .region(MKCoordinateRegion(
                                     center: firstPlace.coordinate,
                                     span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
@@ -520,7 +523,7 @@ struct MapView: View {
                         // 첫 번째 결과로 지도 이동
                         if let firstResult = response.mapItems.first {
                             // 애니메이션과 함께 이동 (줌인된 상태 유지)
-                            withAnimation(.easeInOut(duration: 0.5)) {
+                            withAnimation(reduceMotion ? nil : .easeInOut(duration: 0.5)) {
                                 position = .region(MKCoordinateRegion(
                                     center: firstResult.placemark.coordinate,
                                     span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
@@ -790,6 +793,7 @@ struct TemporaryPinView: View {
             .font(.system(size: 40))
             .foregroundStyle(.orange)
             .shadow(radius: 3)
+            .accessibilityHidden(true)
     }
 }
 
@@ -836,7 +840,8 @@ struct NearbyPOIPinView: View {
             }
             .shadow(radius: 2)
         }
-        .onTapGesture(perform: onTap)
+        .accessibleTap(onTap)
+        .accessibilityLabel(Text(verbatim: mapItem.name ?? ""))
     }
 }
 
@@ -862,9 +867,11 @@ struct SearchResultPinView: View {
                 .foregroundStyle(.white)
         }
         .shadow(radius: 2)
-        .onTapGesture {
+        .accessibleTap {
             showingOptions = true
         }
+        .accessibilityLabel(Text(verbatim: mapItem.name ?? ""))
+        .accessibilityValue(Text("검색 결과"))
         .popover(isPresented: $showingOptions, arrowEdge: .bottom) {
                 VStack(spacing: 0) {
                     Button {
@@ -903,6 +910,7 @@ struct SearchResultPinView: View {
 struct RestaurantPinView: View {
     let restaurant: Restaurant
     let onTap: () -> Void
+    @Environment(\.accessibilityDifferentiateWithoutColor) private var differentiateWithoutColor
 
     var body: some View {
         ZStack {
@@ -932,7 +940,20 @@ struct RestaurantPinView: View {
                     .foregroundStyle(.white)
             }
         }
-        .onTapGesture(perform: onTap)
+        // 색을 구별하기 어려우면 저장한 식당 핀에 책갈피를 달아 검색 결과(파란 핀)와 모양으로도 가른다
+        .overlay(alignment: .topTrailing) {
+            if differentiateWithoutColor && !restaurant.isTop6 {
+                Image(systemName: "bookmark.fill")
+                    .font(.caption2)
+                    .foregroundStyle(.white)
+                    .padding(3)
+                    .background(.black.opacity(0.7), in: Circle())
+                    .offset(x: 6, y: -6)
+            }
+        }
+        .accessibleTap(onTap)
+        .accessibilityLabel(Text(verbatim: restaurant.name))
+        .accessibilityValue(restaurant.isTop6 ? Text("나의 미슐랭") : Text("저장한 식당"))
     }
 }
 
@@ -1066,6 +1087,7 @@ struct POIDetailView: View {
                         Image(systemName: "xmark.circle.fill")
                             .foregroundStyle(.gray)
                     }
+                    .accessibilityLabel(Text("닫기"))
                 }
             }
             .onAppear {
@@ -1250,7 +1272,9 @@ struct KakaoSearchResultPinView: View {
             }
             .shadow(color: .blue.opacity(0.5), radius: 4)
         }
-        .onTapGesture(perform: onTap)
+        .accessibleTap(onTap)
+        .accessibilityLabel(Text(verbatim: place.placeName))
+        .accessibilityValue(Text("검색 결과"))
     }
 }
 
@@ -1288,7 +1312,8 @@ struct KakaoPlacePinView: View {
             }
             .shadow(radius: 2)
         }
-        .onTapGesture(perform: onTap)
+        .accessibleTap(onTap)
+        .accessibilityLabel(Text(verbatim: place.placeName))
     }
 }
 
@@ -1405,6 +1430,7 @@ struct KakaoPlaceDetailView: View {
                         Image(systemName: "xmark.circle.fill")
                             .foregroundStyle(.gray)
                     }
+                    .accessibilityLabel(Text("닫기"))
                 }
             }
         }

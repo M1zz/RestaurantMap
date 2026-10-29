@@ -34,9 +34,10 @@ struct AddCustomCategoryView: View {
                                 .frame(width: 50, height: 50)
                                 .background(selectedIcon == icon ? Color.blue.opacity(0.2) : Color.clear)
                                 .cornerRadius(8)
-                                .onTapGesture {
+                                .accessibleTap {
                                     selectedIcon = icon
                                 }
+                                .accessibilityAddTraits(selectedIcon == icon ? .isSelected : [])
                         }
                     }
                     .padding(.vertical, 8)

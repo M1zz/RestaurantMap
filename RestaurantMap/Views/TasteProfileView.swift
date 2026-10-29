@@ -19,6 +19,8 @@ struct TasteProfileView: View {
                 VStack(spacing: 30) {
                     // 레이더 차트
                     RadarChartView(data: profile.radarData)
+                    // 같은 값을 아래 속성 줄들이 글로 읽어 준다
+                    .accessibilityHidden(true)
                         .frame(height: 300)
                         .padding()
 
@@ -176,6 +178,7 @@ struct AttributeRowView: View {
                 .foregroundStyle(.secondary)
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
+        .accessibilityElement(children: .combine)
     }
 }
 
@@ -200,6 +203,8 @@ struct SliderRowView: View {
 
             Slider(value: $value, in: 0...10, step: 1)
                 .tint(.blue)
+                .accessibilityLabel(Text(verbatim: title))
+                .accessibilityValue(Text(verbatim: "\(Int(value))"))
                 .contentShape(Rectangle())  // 터치 영역 명확히 지정
                 .gesture(DragGesture(minimumDistance: 0))  // 스크롤보다 슬라이더 우선
 

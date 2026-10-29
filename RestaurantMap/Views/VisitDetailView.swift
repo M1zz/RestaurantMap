@@ -154,7 +154,7 @@ struct VisitDetailView: View {
                                     Image(systemName: index <= visit.rating ? "star.fill" : "star")
                                         .foregroundStyle(index <= visit.rating ? .yellow : .gray)
                                         .font(.system(size: 28))
-                                        .onTapGesture {
+                                        .accessibleStar(index, rating: visit.rating) {
                                             visit.rating = index
                                         }
                                 }
@@ -190,6 +190,7 @@ struct VisitDetailView: View {
                                         .font(.system(size: 14))
                                 }
                             }
+                            .starRatingLabel(Double(visit.rating))
                         }
                     }
                 }
@@ -263,6 +264,7 @@ struct VisitDetailView: View {
                                                                 .foregroundStyle(.white, .red)
                                                                 .shadow(radius: 2)
                                                         }
+                                                        .accessibilityLabel(Text("사진 삭제"))
                                                         .padding(4)
                                                     }
                                             }

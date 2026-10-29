@@ -139,7 +139,7 @@ struct AddVisitView: View {
                                 Image(systemName: index <= rating ? "star.fill" : "star")
                                     .foregroundStyle(index <= rating ? .yellow : .gray)
                                     .font(.system(size: 28))
-                                    .onTapGesture {
+                                    .accessibleStar(index, rating: rating) {
                                         rating = index
                                     }
                             }
@@ -226,6 +226,7 @@ struct AddVisitView: View {
                                                     .foregroundStyle(.white, .red)
                                                     .shadow(radius: 2)
                                             }
+                                            .accessibilityLabel(Text("사진 삭제"))
                                             .padding(4)
                                         }
                                 }
@@ -655,6 +656,8 @@ struct CombinedEvaluationRow: View {
 
                 Slider(value: $intensityValue, in: 0...10, step: 0.5)
                     .tint(.blue)
+                    .accessibilityLabel(Text(verbatim: "\(title) ") + Text("맛 강도"))
+                    .accessibilityValue(Text(verbatim: intensityValue.formatted(.number.precision(.fractionLength(0...1)))))
             }
 
             // 만족도 평가
@@ -690,6 +693,8 @@ struct CombinedEvaluationRow: View {
                             }
                         }
                         .buttonStyle(.plain)
+                        .accessibilityLabel(Text("만족도") + Text(verbatim: " \(value)"))
+                        .accessibilityAddTraits(appropriatenessValue == value ? .isSelected : [])
                     }
                 }
             }

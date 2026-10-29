@@ -43,6 +43,7 @@ struct SimpleRecommendationView: View {
     @Binding var selectedTab: Int
     @Query private var allVisits: [Visit]
     @State private var recommendations: [RecommendedRestaurantItem] = []
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var isLoading = false
     @State private var selectedRecommendation: RecommendedRestaurantItem?
     @State private var showingDetail = false
@@ -67,7 +68,11 @@ struct SimpleRecommendationView: View {
                 if isLoading {
                     ProgressView("추천 분석 중...")
                 } else if recommendations.isEmpty {
-                    emptyView
+                    // 안내가 길어 아주 큰 글씨에서는 화면을 넘는다 — 그때만 스크롤
+                    ViewThatFits(in: .vertical) {
+                        emptyView
+                        ScrollView { emptyView }
+                    }
                 } else {
                     recommendationList
                 }
@@ -81,6 +86,7 @@ struct SimpleRecommendationView: View {
                     } label: {
                         Image(systemName: "arrow.clockwise")
                     }
+                    .accessibilityLabel(Text("새로고침"))
                 }
             }
             .onAppear {
@@ -121,11 +127,13 @@ struct SimpleRecommendationView: View {
             Image(systemName: "sparkles")
                 .font(.system(size: 60))
                 .foregroundStyle(.orange)
+                .accessibilityHidden(true)
 
             VStack(spacing: 12) {
                 Text("맞춤 추천을 받으려면")
                     .font(.title2)
                     .fontWeight(.bold)
+                    .accessibilityAddTraits(.isHeader)
 
                 // 현재 상태에 따른 안내
                 if restaurantCount == 0 {
@@ -164,6 +172,7 @@ struct SimpleRecommendationView: View {
                 HStack(alignment: .top, spacing: 12) {
                     Image(systemName: "1.circle.fill")
                         .font(.title2)
+                        .accessibilityLabel(Text(verbatim: "1"))
                         .foregroundStyle(.blue)
                     VStack(alignment: .leading, spacing: 4) {
                         Text("식당 추가하기")
@@ -177,6 +186,7 @@ struct SimpleRecommendationView: View {
                 HStack(alignment: .top, spacing: 12) {
                     Image(systemName: "2.circle.fill")
                         .font(.title2)
+                        .accessibilityLabel(Text(verbatim: "2"))
                         .foregroundStyle(.green)
                     VStack(alignment: .leading, spacing: 4) {
                         Text("별점 매기기")
@@ -190,6 +200,7 @@ struct SimpleRecommendationView: View {
                 HStack(alignment: .top, spacing: 12) {
                     Image(systemName: "3.circle.fill")
                         .font(.title2)
+                        .accessibilityLabel(Text(verbatim: "3"))
                         .foregroundStyle(.orange)
                     VStack(alignment: .leading, spacing: 4) {
                         Text("추천 받기")
@@ -262,7 +273,7 @@ struct SimpleRecommendationView: View {
                     )
                     .frame(width: 120, height: 120)
                     .rotationEffect(.degrees(-90))
-                    .animation(.easeInOut(duration: 1.0), value: evaluatedVisitsCount)
+                    .animation(reduceMotion ? nil : .easeInOut(duration: 1.0), value: evaluatedVisitsCount)
 
                 VStack(spacing: 4) {
                     Text("\(evaluatedVisitsCount)")
@@ -273,6 +284,10 @@ struct SimpleRecommendationView: View {
                         .foregroundStyle(.secondary)
                 }
             }
+            // 원 그래프 대신 "맛 평가 완료 3/5" 로
+            .accessibilityElement(children: .ignore)
+            .accessibilityLabel(Text("맛 평가 완료"))
+            .accessibilityValue(Text(verbatim: "\(evaluatedVisitsCount)/\(minimumEvaluationsRequired)"))
 
             // 텍스트 설명
             VStack(spacing: 8) {
@@ -308,7 +323,8 @@ struct SimpleRecommendationView: View {
                 ForEach(recommendations) { item in
                     RecommendationCard(item: item)
                         .padding(.horizontal)
-                        .onTapGesture {
+                        .accessibilityInputLabels([Text(verbatim: item.name)])
+                        .accessibleTap {
                             selectedRecommendation = item
                         }
                 }
@@ -514,6 +530,7 @@ struct RecommendationDetailView: View {
                                     .fontWeight(.bold)
                             }
                             .font(.title3)
+                            .starRatingLabel(recommendation.predictedRating)
                         }
                     }
                     .padding()
@@ -540,6 +557,7 @@ struct RecommendationDetailView: View {
                                             .font(.title3)
                                     }
                                 }
+                                .starRatingLabel(recommendation.predictedRating)
                             }
 
                             Spacer()
@@ -570,6 +588,8 @@ struct RecommendationDetailView: View {
 
                             // 레이더 차트
                             MatchRadarChartView(matchDetails: recommendation.matchDetails)
+                            // 꼭짓점의 "맛 취향 80%" 같은 글을 한 번에 읽어 준다
+                            .accessibilityElement(children: .combine)
 
                             // 유사 사용자 정보
                             HStack {
@@ -643,6 +663,8 @@ struct RecommendationDetailView: View {
 
                         // 사용자 평가 레이더 차트
                         UserReviewsRadarChartView(reviews: recommendation.userReviews)
+                        // 같은 점수를 아래 줄들이 글로 읽어 준다
+                        .accessibilityHidden(true)
 
                         // 점수 목록
                         VStack(spacing: 8) {
@@ -706,6 +728,7 @@ struct RecommendationDetailView: View {
                         Image(systemName: "xmark.circle.fill")
                             .foregroundStyle(.gray)
                     }
+                    .accessibilityLabel(Text("닫기"))
                 }
             }
         }
@@ -732,6 +755,7 @@ struct RecommendationCard: View {
                     Text(String(format: "%.1f", item.predictedRating))
                         .fontWeight(.bold)
                 }
+                .starRatingLabel(item.predictedRating)
             }
 
             Divider()
@@ -762,6 +786,7 @@ struct RecommendationCard: View {
                     }
                 }
                 .frame(height: 8)
+                .accessibilityHidden(true)   // 아래 "80% 매칭" 글이 같은 값을 말한다
 
                 Text("\(Int(item.matchScore))% 매칭")
                     .font(.caption2)
@@ -1100,7 +1125,7 @@ struct ReviewScoreRow: View {
             Text(title)
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
-                .frame(width: 60, alignment: .leading)
+                .frame(minWidth: 60, alignment: .leading)
 
             GeometryReader { geometry in
                 ZStack(alignment: .leading) {
@@ -1118,12 +1143,55 @@ struct ReviewScoreRow: View {
                 .font(.subheadline)
                 .fontWeight(.semibold)
                 .foregroundStyle(color)
-                .frame(width: 30, alignment: .trailing)
+                .frame(minWidth: 30, alignment: .trailing)
         }
+        .accessibilityElement(children: .combine)
     }
 }
 
 #Preview {
     ContentView()
         .modelContainer(for: [Restaurant.self, TasteProfile.self], inMemory: true)
+}
+
+// MARK: - 손쉬운 사용
+
+extension View {
+    /// 탭 제스처로 여는 행·카드·핀을 VoiceOver·음성 명령에서도 단추처럼 —
+    /// 한 덩어리로 읽고, 두 번 탭(또는 "탭")하면 같은 동작을 한다.
+    func accessibleTap(_ action: @escaping () -> Void) -> some View {
+        onTapGesture(perform: action)
+            .accessibilityElement(children: .combine)
+            .accessibilityAddTraits(.isButton)
+            .accessibilityAction(.default, action)
+    }
+
+    /// 별점 고르기의 별 하나 — "3점" 단추로 읽고, 고른 별까지는 '선택됨'
+    func accessibleStar(_ value: Int, rating: Int, select: @escaping () -> Void) -> some View {
+        onTapGesture(perform: select)
+            .accessibilityLabel(Text("\(value)점"))
+            .accessibilityAddTraits(value <= rating ? [.isButton, .isSelected] : .isButton)
+            .accessibilityAction(.default, select)
+    }
+
+    /// 별 여러 개로 그린 별점을 "별점 4.5점" 한 마디로
+    func starRatingLabel(_ rating: Double) -> some View {
+        accessibilityElement(children: .ignore)
+            .accessibilityLabel(Text("별점"))
+            .accessibilityValue(Text("\(rating.formatted(.number.precision(.fractionLength(0...1))))점"))
+    }
+}
+
+/// 평소엔 가로로, 손쉬운 사용 글자 크기에서는 세로로 쌓는다.
+struct AdaptiveStack<Content: View>: View {
+    var spacing: CGFloat? = nil
+    @ViewBuilder var content: Content
+    @Environment(\.dynamicTypeSize) private var typeSize
+
+    var body: some View {
+        let layout = typeSize.isAccessibilitySize
+            ? AnyLayout(VStackLayout(alignment: .leading, spacing: spacing))
+            : AnyLayout(HStackLayout(spacing: spacing))
+        layout { content }
+    }
 }

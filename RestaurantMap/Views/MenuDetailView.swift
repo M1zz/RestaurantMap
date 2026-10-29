@@ -188,6 +188,7 @@ struct MenuVisitRowView: View {
                             .font(.system(size: 12))
                     }
                 }
+                .starRatingLabel(Double(visit.rating))
             }
 
             if !visit.notes.isEmpty {

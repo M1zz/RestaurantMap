@@ -171,7 +171,7 @@ struct AddRestaurantView: View {
                                     Image(systemName: index <= rating ? "star.fill" : "star")
                                         .foregroundStyle(index <= rating ? .yellow : .gray)
                                         .font(.system(size: 24))
-                                        .onTapGesture {
+                                        .accessibleStar(index, rating: rating) {
                                             rating = index
                                         }
                                 }
@@ -227,9 +227,10 @@ struct AddRestaurantView: View {
                                                 .font(.caption)
                                                 .foregroundStyle(.secondary)
                                         }
-                                        .onTapGesture {
+                                        .accessibleTap {
                                             categoryIcon = icon
                                         }
+                                        .accessibilityAddTraits(categoryIcon == icon ? .isSelected : [])
                                     }
                                 }
                             }
@@ -259,6 +260,7 @@ struct AddRestaurantView: View {
                 
                 Section("메모") {
                     TextEditor(text: $notes)
+                        .accessibilityLabel(Text("메모"))
                         .frame(minHeight: 100)
                 }
             }

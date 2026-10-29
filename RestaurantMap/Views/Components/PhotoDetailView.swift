@@ -39,6 +39,7 @@ struct PhotoDetailView: View {
                             .font(.system(size: 30))
                             .foregroundStyle(.white.opacity(0.8), .black.opacity(0.5))
                     }
+                    .accessibilityLabel(Text("닫기"))
                     .padding()
                 }
                 Spacer()
@@ -89,6 +90,17 @@ struct ZoomableImageView: View {
                                 lastScale = 1.0
                                 lastOffset = .zero
                             }
+                        }
+                        .accessibilityLabel(Text("사진"))
+                        // VoiceOver 에서는 핀치 대신 확대/축소 동작으로
+                        .accessibilityZoomAction { action in
+                            switch action.direction {
+                            case .zoomIn: scale = min(scale * 1.5, 5)
+                            case .zoomOut:
+                                scale = max(scale / 1.5, 1)
+                                if scale == 1 { offset = .zero; lastOffset = .zero }
+                            }
+                            lastScale = scale
                         }
                 case .failure:
                     failurePlaceholder
