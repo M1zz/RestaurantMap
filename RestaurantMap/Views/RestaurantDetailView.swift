@@ -9,6 +9,8 @@ struct RestaurantDetailView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
     @Bindable var restaurant: Restaurant
+    /// 시트가 아니라 아이폰 듀오의 결과 쪽 판에 설 때, 닫기가 할 일(판을 비운다).
+    var onClose: (() -> Void)? = nil
     @Query private var allRestaurants: [Restaurant]
 
     @State private var showingDeleteAlert = false
@@ -364,12 +366,12 @@ struct RestaurantDetailView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("닫기") {
-                        dismiss()
+                    Button("닫기", systemImage: "xmark") {
+                        if let onClose { onClose() } else { dismiss() }
                     }
                 }
                 ToolbarItem(placement: .primaryAction) {
-                    Button(isEditing ? LocalizedStringKey("완료") : LocalizedStringKey("편집")) {
+                    Button(isEditing ? LocalizedStringKey("완료") : LocalizedStringKey("편집"), systemImage: isEditing ? "checkmark" : "pencil") {
                         isEditing.toggle()
                     }
                 }

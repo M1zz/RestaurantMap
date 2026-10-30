@@ -293,14 +293,14 @@ struct VisitDetailView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("닫기") {
+                    Button("닫기", systemImage: "xmark") {
                         logger.info("🔵 닫기 버튼 클릭")
                         dismiss()
                     }
                 }
 
                 ToolbarItem(placement: .primaryAction) {
-                    Button(isEditing ? LocalizedStringKey("완료") : LocalizedStringKey("편집")) {
+                    Button(isEditing ? LocalizedStringKey("완료") : LocalizedStringKey("편집"), systemImage: isEditing ? "checkmark" : "pencil") {
                         logger.info("🔵 편집 버튼 클릭 - isEditing: \(isEditing) -> \(!isEditing)")
 
                         if isEditing {

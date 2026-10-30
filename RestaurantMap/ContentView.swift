@@ -1,26 +1,32 @@
 import SwiftUI
 import SwiftData
+import LeeoKit
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var restaurants: [Restaurant]
     @State private var selectedTab = 0
+    /// 아이폰 듀오를 폈을 때 결과 쪽에 띄울 식당 (→ Views/FoldPanes.swift).
+    @State private var foldPick = FoldRestaurantPick()
+    @Environment(\.foldLayout) private var fold
 
     var body: some View {
         TabView(selection: $selectedTab) {
-            MapView(restaurants: restaurants)
+            // 아이폰 듀오를 펴면 왼쪽(세로면 아래)에 이 탭, 오른쪽(위)에 고른 식당 또는 취향이 선다.
+            // 접혀 있거나 보통 아이폰이면 `FoldTab` 은 이 탭만 그린다. 지금 화면 그대로.
+            FoldTab { MapView(restaurants: restaurants) }
                 .tabItem {
                     Label("지도", systemImage: "map")
                 }
                 .tag(0)
 
-            RestaurantListView(restaurants: restaurants)
+            FoldTab { RestaurantListView(restaurants: restaurants) }
                 .tabItem {
                     Label("목록", systemImage: "list.bullet")
                 }
                 .tag(1)
 
-            SimpleRecommendationView(restaurants: restaurants, selectedTab: $selectedTab)
+            FoldTab { SimpleRecommendationView(restaurants: restaurants, selectedTab: $selectedTab) }
                 .tabItem {
                     Label("추천", systemImage: "sparkles")
                 }
@@ -32,6 +38,13 @@ struct ContentView: View {
                 }
                 .tag(3)
         }
+        // 펴면 시스템 탭바 대신 고르는 쪽 판 바닥에 막대가 선다. 취향은 결과 쪽에 서 있다.
+        .foldTabBar(items: FoldTabs.items, selected: selectedTab == 3 ? 1 : selectedTab) { selectedTab = $0 }
+        .onChange(of: fold.isUnfolded, initial: true) { _, unfolded in
+            // 취향 탭에 있다가 펴면 목록으로. 취향은 결과 쪽 판에 그대로 보인다.
+            if unfolded, selectedTab == 3 { selectedTab = 1 }
+        }
+        .environment(foldPick)
     }
 }
 

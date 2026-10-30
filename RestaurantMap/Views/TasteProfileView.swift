@@ -49,7 +49,7 @@ struct TasteProfileView: View {
             .navigationTitle("취향 프로필")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(isEditing ? "완료" : "수정") {
+                    Button(isEditing ? "완료" : "수정", systemImage: isEditing ? "checkmark" : "pencil") {
                         withAnimation {
                             isEditing.toggle()
                             if !isEditing {

@@ -260,14 +260,14 @@ struct AddVisitView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("취소") {
+                    Button("취소", systemImage: "xmark") {
                         logger.info("🔵 취소 버튼 클릭")
                         dismiss()
                     }
                 }
 
                 ToolbarItem(placement: .primaryAction) {
-                    Button("저장") {
+                    Button("저장", systemImage: "checkmark") {
                         logger.info("🔵 저장 버튼 클릭")
                         saveVisit()
                     }

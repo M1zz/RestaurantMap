@@ -139,6 +139,8 @@ struct RestaurantMapApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                // 아이폰 듀오: 접힘을 재서 아래로 흘리고, 시트 · 알림창이 접힌 선을 비키게 한다.
+                .foldAware()
                 .leeoSatisfactionCheck(RestaurantMapSpec.self)
                 .task { await RestaurantMapTip.tipJar.startStandalone() }
                 .task {

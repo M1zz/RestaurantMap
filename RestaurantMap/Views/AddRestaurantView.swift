@@ -269,13 +269,13 @@ struct AddRestaurantView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("취소") {
+                    Button("취소", systemImage: "xmark") {
                         dismiss()
                     }
                 }
                 
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("저장") {
+                    Button("저장", systemImage: "checkmark") {
                         saveRestaurant()
                     }
                     .disabled(name.isEmpty || address.isEmpty)
@@ -360,13 +360,13 @@ struct MapSelectionView: View {
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .cancellationAction) {
-                        Button("취소") {
+                        Button("취소", systemImage: "xmark") {
                             dismiss()
                         }
                     }
                     
                     ToolbarItem(placement: .confirmationAction) {
-                        Button("선택") {
+                        Button("선택", systemImage: "checkmark") {
                             logger.info("위치 선택됨: 위도=\(selectedLocation.latitude), 경도=\(selectedLocation.longitude)")
                             coordinate = selectedLocation
                             dismiss()

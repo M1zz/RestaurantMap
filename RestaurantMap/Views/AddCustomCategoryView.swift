@@ -47,10 +47,10 @@ struct AddCustomCategoryView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("취소") { dismiss() }
+                    Button("취소", systemImage: "xmark") { dismiss() }
                 }
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("저장") {
+                    Button("저장", systemImage: "checkmark") {
                         repository.addCustomCategory(name: name, icon: selectedIcon)
                         dismiss()
                     }

@@ -1,4 +1,5 @@
 import SwiftUI
+import LeeoKit
 import SwiftData
 import OSLog
 
@@ -76,6 +77,8 @@ struct RestaurantListView: View {
     let restaurants: [Restaurant]
     @State private var showingAddSheet = false
     @State private var selectedRestaurant: Restaurant?
+    @Environment(\.foldLayout) private var fold
+    @Environment(FoldRestaurantPick.self) private var foldPick: FoldRestaurantPick?
     @State private var showingDetail = false
 
     private let logger = Logger(subsystem: "com.restaurantmap", category: "RestaurantList")
@@ -98,6 +101,13 @@ struct RestaurantListView: View {
             .sorted { $0.visitDate > $1.visitDate }
     }
 
+    /// 식당 자세히: 아이폰 듀오를 폈으면 결과 쪽 판에, 아니면 지금처럼 시트로.
+    private func openDetail(_ restaurant: Restaurant) {
+        if foldPick?.show(restaurant, in: fold) == true { return }
+        selectedRestaurant = restaurant
+        showingDetail = true
+    }
+
     var body: some View {
         NavigationStack {
             List {
@@ -114,8 +124,7 @@ struct RestaurantListView: View {
                                 .contentShape(Rectangle())
                                 .accessibilityInputLabels([Text(verbatim: restaurant.name)])
                                 .accessibleTap {
-                                    selectedRestaurant = restaurant
-                                    showingDetail = true
+                                    openDetail(restaurant)
                                 }
                         }
                         .onDelete { indexSet in
@@ -154,8 +163,7 @@ struct RestaurantListView: View {
                                 .contentShape(Rectangle())
                                 .accessibilityInputLabels([Text(verbatim: restaurant.name)])
                                 .accessibleTap {
-                                    selectedRestaurant = restaurant
-                                    showingDetail = true
+                                    openDetail(restaurant)
                                 }
                         }
                         .onDelete { indexSet in
@@ -189,8 +197,7 @@ struct RestaurantListView: View {
                                 .contentShape(Rectangle())
                                 .accessibilityInputLabels([Text(verbatim: restaurant.name)])
                                 .accessibleTap {
-                                    selectedRestaurant = restaurant
-                                    showingDetail = true
+                                    openDetail(restaurant)
                                 }
                         }
                         .onDelete { indexSet in

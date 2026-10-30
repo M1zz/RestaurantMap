@@ -637,7 +637,7 @@ struct SyncDataView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("닫기") {
+                    Button("닫기", systemImage: "xmark") {
                         dismiss()
                     }
                     .disabled(isSyncing || isGeneratingDummy)

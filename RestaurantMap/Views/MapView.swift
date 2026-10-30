@@ -1,4 +1,5 @@
 import SwiftUI
+import LeeoKit
 import MapKit
 import SwiftData
 import CoreLocation
@@ -87,6 +88,8 @@ struct MapView: View {
     @State private var showingAddSheet = false
     @State private var selectedCoordinate: CLLocationCoordinate2D?
     @State private var selectedRestaurant: Restaurant?
+    @Environment(\.foldLayout) private var fold
+    @Environment(FoldRestaurantPick.self) private var foldPick: FoldRestaurantPick?
     @State private var showingDetail = false
     @State private var temporaryPin: CLLocationCoordinate2D?
     @State private var searchText = ""
@@ -116,6 +119,13 @@ struct MapView: View {
     @StateObject private var kakaoService = KakaoLocalSearchService.shared
     private let logger = Logger(subsystem: "com.restaurantmap", category: "MapView")
     
+    /// 식당 자세히: 아이폰 듀오를 폈으면 결과 쪽 판에, 아니면 지금처럼 시트로.
+    private func openDetail(_ restaurant: Restaurant) {
+        if foldPick?.show(restaurant, in: fold) == true { return }
+        selectedRestaurant = restaurant
+        showingDetail = true
+    }
+
     var body: some View {
         NavigationStack {
             ZStack(alignment: .bottomTrailing) {
@@ -350,8 +360,7 @@ struct MapView: View {
             ForEach(restaurants) { restaurant in
                 Annotation(restaurant.name, coordinate: restaurant.coordinate) {
                     RestaurantPinView(restaurant: restaurant) {
-                        selectedRestaurant = restaurant
-                        showingDetail = true
+                        openDetail(restaurant)
                     }
                 }
             }

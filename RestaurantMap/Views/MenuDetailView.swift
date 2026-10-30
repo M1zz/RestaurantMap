@@ -129,7 +129,7 @@ struct MenuDetailView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(isEditing ? LocalizedStringKey("완료") : LocalizedStringKey("편집")) {
+                    Button(isEditing ? LocalizedStringKey("완료") : LocalizedStringKey("편집"), systemImage: isEditing ? "checkmark" : "pencil") {
                         if isEditing {
                             saveChanges()
                         } else {
@@ -141,11 +141,11 @@ struct MenuDetailView: View {
 
                 ToolbarItem(placement: .navigationBarLeading) {
                     if isEditing {
-                        Button("취소") {
+                        Button("취소", systemImage: "xmark") {
                             isEditing = false
                         }
                     } else {
-                        Button("닫기") {
+                        Button("닫기", systemImage: "xmark") {
                             dismiss()
                         }
                     }
