@@ -3,7 +3,7 @@ import LeeoKit
 
 enum RestaurantMapSpec: LeeoAppSpec {
     static let appName = "인생맛집"
-    static let developerEmail = "mizzking75@gmail.com"
+    static let developerEmail = "leeo@kakao.com"
     static let feedback = LeeoFeedbackConfig(containerIdentifier: "iCloud.com.Ysoup.FeedbackHub", appIdentifier: "com.Ysoup.restaurantmap")
 
     /// 정책 링크 — GitHub Pages(main:/docs)의 개인정보 처리방침 · 지원 · 소개 페이지.
