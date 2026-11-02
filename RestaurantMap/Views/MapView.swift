@@ -1200,7 +1200,7 @@ struct POIDetailView: View {
                     VStack(alignment: .leading, spacing: 8) {
                         Label("전화번호", systemImage: "phone.fill")
                             .font(.headline)
-                        Link(phone, destination: URL(string: "tel:\(phone.filter { !$0.isWhitespace && $0 != "-" })")!)
+                        Link(phone, destination: URL(string: "tel:\(phone.filter { $0.isASCII && ($0.isNumber || $0 == "+") })")!)
                             .font(.body)
                     }
                     .padding(.horizontal)
@@ -1391,7 +1391,7 @@ struct KakaoPlaceDetailView: View {
                         VStack(alignment: .leading, spacing: 8) {
                             Label("전화번호", systemImage: "phone.fill")
                                 .font(.headline)
-                            Link(place.phone, destination: URL(string: "tel:\(place.phone.filter { !$0.isWhitespace && $0 != "-" })")!)
+                            Link(place.phone, destination: URL(string: "tel:\(place.phone.filter { $0.isASCII && ($0.isNumber || $0 == "+") })")!)
                                 .font(.body)
                         }
                         .padding(.horizontal)
