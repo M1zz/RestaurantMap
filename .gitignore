@@ -2,3 +2,5 @@
 *.xcuserdatad/
 xcuserdata/
 **/xcshareddata/IDEWorkspaceChecks.plist
+
+build/
