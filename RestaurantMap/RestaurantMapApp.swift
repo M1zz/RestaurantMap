@@ -13,12 +13,16 @@ struct RestaurantMapApp: App {
     @Environment(\.scenePhase) private var scenePhase
 
     init() {
+        // LeeoKit — 백업 금고(예약된 복원 · 업데이트 직전 백업) · 사용량 기록 · 크래시 진단 · 익명 사용 통계 (FeedbackHub).
+        // 금고가 저장소보다 먼저 돌아야 해서 맨 앞에 둔다.
+        LeeoKit.bootstrap(RestaurantMapSpec.self)
+
         // Firebase 초기화
         FirebaseApp.configure()
         logger.info("🔥 Firebase configured")
 
-        // LeeoKit — 사용량 기록 · 크래시 진단 · 익명 사용 통계 (FeedbackHub)
-        LeeoKit.bootstrap(RestaurantMapSpec.self)
+        // 저장소는 금고 뒤에 연다 (프로퍼티 초기값으로 두면 init 보다 먼저 열린다)
+        sharedModelContainer = Self.makeModelContainer()
 
         // Siri · Spotlight 인텐트가 같은 저장소를 읽게 한다 (→ RestaurantIntents.swift).
         // 인텐트는 화면 없이 앱을 깨워 돌기도 해서, 화면이 아니라 여기서 넘긴다.
@@ -26,7 +30,9 @@ struct RestaurantMapApp: App {
         AppDependencyManager.shared.add(dependency: container)
     }
 
-    var sharedModelContainer: ModelContainer = {
+    let sharedModelContainer: ModelContainer
+
+    private static func makeModelContainer() -> ModelContainer {
         let logger = Logger(subsystem: "com.restaurantmap", category: "App")
         logger.info("ModelContainer 초기화 시작")
 
@@ -130,7 +136,7 @@ struct RestaurantMapApp: App {
                 return StoreFallback.memoryContainer(schema: schema, after: error)
             }
         }
-    }()
+    }
     
     var body: some Scene {
         WindowGroup {
