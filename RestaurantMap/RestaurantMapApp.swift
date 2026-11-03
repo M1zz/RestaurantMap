@@ -1,5 +1,6 @@
 import SwiftUI
 import SwiftData
+import AppIntents
 import OSLog
 import FirebaseCore
 import UserNotifications
@@ -9,6 +10,7 @@ import LeeoKit
 struct RestaurantMapApp: App {
     private let logger = Logger(subsystem: "com.restaurantmap", category: "App")
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    @Environment(\.scenePhase) private var scenePhase
 
     init() {
         // Firebase 초기화
@@ -17,6 +19,11 @@ struct RestaurantMapApp: App {
 
         // LeeoKit — 사용량 기록 · 크래시 진단 · 익명 사용 통계 (FeedbackHub)
         LeeoKit.bootstrap(RestaurantMapSpec.self)
+
+        // Siri · Spotlight 인텐트가 같은 저장소를 읽게 한다 (→ RestaurantIntents.swift).
+        // 인텐트는 화면 없이 앱을 깨워 돌기도 해서, 화면이 아니라 여기서 넘긴다.
+        let container = sharedModelContainer
+        AppDependencyManager.shared.add(dependency: container)
     }
 
     var sharedModelContainer: ModelContainer = {
@@ -133,6 +140,11 @@ struct RestaurantMapApp: App {
                 .foldAware()
                 .leeoSatisfactionCheck(RestaurantMapSpec.self)
                 .task { await RestaurantMapTip.tipJar.startStandalone() }
+                // Spotlight 에 싣는 식당을 지금 것에 맞춘다. 열 때 한 번, 뒤로 보낼 때마다.
+                .task { await RestaurantLibrary.reindex(sharedModelContainer) }
+                .onChange(of: scenePhase) { _, phase in
+                    if phase == .background { Task { await RestaurantLibrary.reindex(sharedModelContainer) } }
+                }
                 .task {
                     logger.info("RestaurantMap 앱 시작됨")
 

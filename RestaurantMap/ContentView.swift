@@ -6,6 +6,7 @@ struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var restaurants: [Restaurant]
     @State private var selectedTab = 0
+    @Bindable private var router = RestaurantRouter.shared
     /// 아이폰 듀오를 폈을 때 결과 쪽에 띄울 식당 (→ Views/FoldPanes.swift).
     @State private var foldPick = FoldRestaurantPick()
     @Environment(\.foldLayout) private var fold
@@ -37,6 +38,12 @@ struct ContentView: View {
                     Label("취향", systemImage: "person.crop.circle")
                 }
                 .tag(3)
+        }
+        // Siri · Spotlight 에서 고른 식당 (→ RestaurantIntents.swift)
+        .sheet(item: $router.restaurantID) { id in
+            if let restaurant = modelContext.model(for: id) as? Restaurant {
+                NavigationStack { RestaurantDetailView(restaurant: restaurant) }
+            }
         }
         // 펴면 시스템 탭바 대신 고르는 쪽 판 바닥에 막대가 선다. 취향은 결과 쪽에 서 있다.
         .foldTabBar(items: FoldTabs.items, selected: selectedTab == 3 ? 1 : selectedTab) { selectedTab = $0 }
