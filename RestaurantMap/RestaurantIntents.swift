@@ -157,8 +157,12 @@ struct WishlistIntent: AppIntent {
 /// 식당을 연다. Spotlight · Siri 결과를 누르면 여기로 온다.
 struct OpenRestaurantIntent: OpenIntent {
     static let title = LocalizedStringResource("맛집 열기", comment: "Siri/Spotlight: open a saved restaurant")
+    static let description = IntentDescription(
+        LocalizedStringResource("저장한 맛집을 앱에서 엽니다.", comment: "Siri: open restaurant description")
+    )
 
-    @Parameter(title: LocalizedStringResource("맛집", comment: "Siri: restaurant parameter"))
+    @Parameter(title: LocalizedStringResource("맛집", comment: "Siri: restaurant parameter"),
+               description: LocalizedStringResource("열어 볼 내 맛집", comment: "Siri: restaurant parameter description"))
     var target: RestaurantEntity
 
     init() {}
