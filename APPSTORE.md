@@ -64,6 +64,11 @@ Plus와 Pro는 주간, 월간, 연간 구독 또는 한 번 결제하는 평생 
 이전에 앱을 구입하신 분은 추가 결제 없이 Pro를 평생 쓸 수 있습니다.
 광고와 회원가입이 없고, 기록은 기기에 저장됩니다.
 
+구독 안내
+인생 맛집 Plus와 Pro 구독은 자동 갱신 구독입니다. 갱신일 24시간 전까지 해지하지 않으면 Apple 계정으로 자동 결제되며, 설정의 구독 관리에서 언제든 해지할 수 있습니다.
+이용약관(EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+개인정보처리방침: https://m1zz.github.io/RestaurantMap/privacy.html
+
 ## en
 
 ### 지원 URL
@@ -127,6 +132,11 @@ Pro includes everything in Plus, plus after-visit reminders and iCloud backup.
 Plus and Pro are available as a weekly, monthly, or yearly subscription, or as a one-time lifetime purchase. Subscriptions renew automatically unless canceled at least 24 hours before the end of the current period, and you can manage or cancel them in your App Store account settings.
 If you already bought the app, you keep Pro for life at no extra cost.
 No ads, no sign-up, and your records stay on your device.
+
+Subscriptions
+Insaeng Matjip Plus and Pro subscriptions renew automatically. Payment is charged to your Apple Account, and a subscription renews unless canceled at least 24 hours before the end of the current period. Manage or cancel anytime in Settings.
+Terms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacy Policy: https://m1zz.github.io/RestaurantMap/en/privacy.html
 
 ## en-GB
 
@@ -192,6 +202,11 @@ Plus and Pro are available as a weekly, monthly or yearly subscription, or as a 
 If you have already bought the app, you keep Pro for life at no extra cost.
 No ads, no sign-up, and your records stay on your device.
 
+Subscriptions
+Insaeng Matjip Plus and Pro subscriptions renew automatically. Payment is charged to your Apple Account, and a subscription renews unless cancelled at least 24 hours before the end of the current period. Manage or cancel at any time in Settings.
+Terms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacy Policy: https://m1zz.github.io/RestaurantMap/en/privacy.html
+
 ## ja
 
 ### 지원 URL
@@ -255,6 +270,11 @@ Proでは、Plusのすべての機能に加えて、訪問後の記録リマイ�
 PlusとProは、週・月・年の購読か、一度の支払いでずっと使える買い切りから選べます。購読は、期間終了の24時間前までに解約しない限り自動で更新され、App Storeのアカウント設定で管理・解約できます。
 すでにアプリを購入された方は、追加料金なしでProをずっとお使いいただけます。
 広告も会員登録もなく、記録は端末に保存されます。
+
+サブスクリプションについて
+人生グルメ PlusとProのサブスクリプションは自動更新です。期間終了の24時間前までに解約しない限り、Apple Accountに自動で請求され更新されます。設定のサブスクリプション管理からいつでも解約できます。
+利用規約（EULA）: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+プライバシーポリシー: https://m1zz.github.io/RestaurantMap/ja/privacy.html
 
 ## zh-Hans
 
@@ -320,6 +340,11 @@ Plus 和 Pro 可以选择按周、按月、按年订阅，或一次付费永久�
 已经购买过本 App 的用户，无需额外付费即可永久使用 Pro。
 没有广告，无需注册，记录保存在你的设备上。
 
+订阅说明
+人生美食 Plus 和 Pro 订阅均为自动续期订阅。费用从你的 Apple 账户扣除，除非在当期结束前至少 24 小时取消，否则将自动续期。可随时在“设置”中管理或取消。
+使用条款（EULA）: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+隐私政策: https://m1zz.github.io/RestaurantMap/zh-Hans/privacy.html
+
 ## zh-Hant
 
 ### 지원 URL
@@ -383,6 +408,11 @@ Pro 包含 Plus 的全部功能，並增加造訪後的記錄提醒和 iCloud �
 Plus 和 Pro 可以選擇每週、每月、每年訂閱，或一次付費永久使用。訂閱會自動續訂，除非在目前週期結束前至少 24 小時取消；你可以在 App Store 帳號設定中管理或取消訂閱。
 已經購買過本 App 的使用者，無需額外付費即可永久使用 Pro。
 沒有廣告，不需註冊，紀錄儲存在你的裝置上。
+
+訂閱說明
+人生美食 Plus 與 Pro 訂閱皆為自動續訂訂閱。費用會從你的 Apple 帳號扣款，除非在當期結束前至少 24 小時取消，否則將自動續訂。可隨時在「設定」中管理或取消。
+使用條款（EULA）: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+隱私權政策: https://m1zz.github.io/RestaurantMap/zh-Hant/privacy.html
 
 ## ru
 
@@ -448,6 +478,11 @@ Plus и Pro доступны как подписка на неделю, меся
 Если вы уже купили приложение, Pro остаётся у вас навсегда без доплаты.
 Без рекламы и регистрации, записи хранятся на устройстве.
 
+Подписки
+Insaeng Plus и Pro — подписки с автопродлением. Оплата списывается с вашего аккаунта Apple, и подписка продлевается, если не отменить её минимум за 24 часа до конца периода. Управлять подпиской и отменить её можно в Настройках.
+Условия использования (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Политика конфиденциальности: https://m1zz.github.io/RestaurantMap/ru/privacy.html
+
 ## es
 
 ### 지원 URL
@@ -511,6 +546,11 @@ Pro incluye todo lo de Plus, además de los recordatorios tras la visita y la co
 Plus y Pro se ofrecen como suscripción semanal, mensual o anual, o como compra única de por vida. Las suscripciones se renuevan automáticamente salvo que se cancelen al menos 24 horas antes del final del periodo actual, y puedes gestionarlas o cancelarlas en los ajustes de tu cuenta del App Store.
 Si ya compraste la app, conservas Pro de por vida sin pagar nada más.
 Sin anuncios, sin registro y con tus datos guardados en tu dispositivo.
+
+Suscripciones
+Las suscripciones a Insaeng Plus y Pro se renuevan automáticamente. El cargo se realiza en tu cuenta de Apple y la suscripción se renueva salvo que la canceles al menos 24 horas antes de que termine el periodo. Puedes gestionarla o cancelarla cuando quieras en Ajustes.
+Términos de uso (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Política de privacidad: https://m1zz.github.io/RestaurantMap/es/privacy.html
 
 ## de
 
@@ -576,6 +616,11 @@ Plus und Pro gibt es als Wochen-, Monats- oder Jahresabo oder als einmaligen Kau
 Wenn du die App schon gekauft hast, behältst du Pro ohne Aufpreis auf Lebenszeit.
 Keine Werbung, keine Anmeldung, und deine Einträge bleiben auf deinem Gerät.
 
+Abos
+Die Abos von Insaeng Plus und Pro verlängern sich automatisch. Die Zahlung erfolgt über deinen Apple Account. Das Abo verlängert sich, sofern du nicht mindestens 24 Stunden vor Ablauf des Zeitraums kündigst. Verwalten oder kündigen kannst du jederzeit in den Einstellungen.
+Nutzungsbedingungen (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Datenschutzerklärung: https://m1zz.github.io/RestaurantMap/de/privacy.html
+
 ## fr
 
 ### 지원 URL
@@ -639,6 +684,11 @@ Pro comprend tout Plus, ainsi que les rappels après la visite et la sauvegarde 
 Plus et Pro sont proposés en abonnement hebdomadaire, mensuel ou annuel, ou en achat unique à vie. Les abonnements se renouvellent automatiquement sauf résiliation au moins 24 heures avant la fin de la période en cours, et vous pouvez les gérer ou les résilier dans les réglages de votre compte App Store.
 Si vous avez déjà acheté l’app, vous gardez Pro à vie sans rien payer de plus.
 Sans publicité, sans inscription, et vos données restent sur votre appareil.
+
+Abonnements
+Les abonnements Insaeng Plus et Pro se renouvellent automatiquement. Le paiement est débité sur votre compte Apple, et l'abonnement est reconduit sauf résiliation au moins 24 heures avant la fin de la période en cours. Gérez-le ou résiliez-le à tout moment dans Réglages.
+Conditions d'utilisation (EULA) : https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Politique de confidentialité : https://m1zz.github.io/RestaurantMap/fr/privacy.html
 
 ## it
 
@@ -704,6 +754,11 @@ Plus e Pro sono disponibili con abbonamento settimanale, mensile o annuale, oppu
 Se hai già comprato l’app, Pro resta tuo a vita senza costi aggiuntivi.
 Niente pubblicità, niente registrazione, e i tuoi dati restano sul dispositivo.
 
+Abbonamenti
+Gli abbonamenti Insaeng Plus e Pro si rinnovano automaticamente. Il pagamento viene addebitato sul tuo Account Apple e l'abbonamento si rinnova se non lo disdici almeno 24 ore prima della fine del periodo. Puoi gestirlo o disdirlo in qualsiasi momento in Impostazioni.
+Condizioni d'uso (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Informativa sulla privacy: https://m1zz.github.io/RestaurantMap/it/privacy.html
+
 ## pt-BR
 
 ### 지원 URL
@@ -767,6 +822,11 @@ O Pro inclui tudo do Plus, mais os lembretes depois da visita e o backup no iClo
 Plus e Pro estão disponíveis em assinatura semanal, mensal ou anual, ou em compra única vitalícia. As assinaturas são renovadas automaticamente, a menos que sejam canceladas pelo menos 24 horas antes do fim do período atual, e você pode gerenciá-las ou cancelá-las nos ajustes da sua conta da App Store.
 Se você já comprou o app, continua com o Pro para sempre, sem pagar nada a mais.
 Sem anúncios, sem cadastro, e seus registros ficam no seu dispositivo.
+
+Assinaturas
+As assinaturas Insaeng Plus e Pro são renovadas automaticamente. A cobrança é feita na sua Conta Apple e a assinatura é renovada, a menos que você cancele pelo menos 24 horas antes do fim do período. Gerencie ou cancele quando quiser em Ajustes.
+Termos de Uso (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Política de Privacidade: https://m1zz.github.io/RestaurantMap/pt-BR/privacy.html
 
 ## th
 
@@ -832,6 +892,11 @@ Plus และ Pro เลือกได้ทั้งแบบสมัคร�
 ผู้ที่ซื้อแอปไปแล้วใช้ Pro ได้ตลอดไปโดยไม่ต้องจ่ายเพิ่ม
 ไม่มีโฆษณา ไม่ต้องสมัครสมาชิก และบันทึกของคุณเก็บไว้บนเครื่อง
 
+การสมัครสมาชิก
+Insaeng Plus และ Pro เป็นการสมัครสมาชิกที่ต่ออายุอัตโนมัติ ระบบจะเรียกเก็บเงินจากบัญชี Apple ของคุณและต่ออายุ เว้นแต่จะยกเลิกอย่างน้อย 24 ชั่วโมงก่อนสิ้นสุดรอบ จัดการหรือยกเลิกได้ทุกเมื่อในการตั้งค่า
+ข้อกำหนดการใช้งาน (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+นโยบายความเป็นส่วนตัว: https://m1zz.github.io/RestaurantMap/th/privacy.html
+
 ## vi
 
 ### 지원 URL
@@ -895,6 +960,11 @@ Pro gồm mọi tính năng của Plus, thêm lời nhắc ghi chép sau khi gh�
 Plus và Pro có gói đăng ký theo tuần, tháng, năm hoặc mua một lần dùng trọn đời. Gói đăng ký tự động gia hạn trừ khi bạn hủy ít nhất 24 giờ trước khi kỳ hiện tại kết thúc, và bạn có thể quản lý hoặc hủy trong cài đặt tài khoản App Store.
 Nếu đã mua ứng dụng trước đây, bạn tiếp tục dùng Pro trọn đời mà không phải trả thêm.
 Không quảng cáo, không cần đăng ký và dữ liệu được lưu trên thiết bị của bạn.
+
+Gói đăng ký
+Insaeng Plus và Pro là các gói đăng ký tự động gia hạn. Phí được tính vào Tài khoản Apple của bạn và tự gia hạn trừ khi bạn hủy ít nhất 24 giờ trước khi kỳ hạn kết thúc. Bạn có thể quản lý hoặc hủy bất cứ lúc nào trong Cài đặt.
+Điều khoản sử dụng (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Chính sách quyền riêng tư: https://m1zz.github.io/RestaurantMap/vi/privacy.html
 
 ## cs
 
@@ -960,6 +1030,11 @@ Plus a Pro jsou k dispozici jako týdenní, měsíční nebo roční předplatn�
 Pokud jste si aplikaci už koupili, Pro vám zůstává napořád bez doplatku.
 Bez reklam a bez registrace, záznamy zůstávají v zařízení.
 
+Předplatné
+Insaeng Plus a Pro jsou automaticky obnovovaná předplatná. Platba se strhává z vašeho účtu Apple a předplatné se obnoví, pokud ho nezrušíte alespoň 24 hodin před koncem období. Spravovat nebo zrušit ho můžete kdykoli v Nastavení.
+Podmínky použití (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Zásady ochrany osobních údajů: https://m1zz.github.io/RestaurantMap/cs/privacy.html
+
 ## da
 
 ### 지원 URL
@@ -1023,6 +1098,11 @@ Pro rummer alt i Plus og derudover påmindelser efter besøget og iCloud-backup.
 Plus og Pro fås som abonnement pr. uge, måned eller år eller som et engangskøb for altid. Abonnementer fornyes automatisk, medmindre de opsiges mindst 24 timer før den aktuelle periode udløber, og du kan administrere og opsige dem i dine App Store-kontoindstillinger.
 Har du allerede købt appen, beholder du Pro for altid uden ekstra betaling.
 Ingen reklamer, ingen tilmelding, og dine optegnelser bliver på enheden.
+
+Abonnementer
+Insaeng Plus og Pro er abonnementer, der fornyes automatisk. Betalingen trækkes på din Apple-konto, og abonnementet fornyes, medmindre du opsiger det mindst 24 timer før perioden slutter. Administrer eller opsig når som helst i Indstillinger.
+Brugsvilkår (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privatlivspolitik: https://m1zz.github.io/RestaurantMap/da/privacy.html
 
 ## el
 
@@ -1088,6 +1168,11 @@ Insaeng: Χάρτης εστιατορίων
 Αν έχετε ήδη αγοράσει την εφαρμογή, κρατάτε το Pro για πάντα χωρίς επιπλέον χρέωση.
 Χωρίς διαφημίσεις και χωρίς εγγραφή, οι καταγραφές μένουν στη συσκευή σας.
 
+Συνδρομές
+Τα Insaeng Plus και Pro είναι συνδρομές με αυτόματη ανανέωση. Η χρέωση γίνεται στον λογαριασμό Apple σας και η συνδρομή ανανεώνεται, εκτός αν την ακυρώσετε τουλάχιστον 24 ώρες πριν λήξει η περίοδος. Μπορείτε να τη διαχειριστείτε ή να την ακυρώσετε οποτεδήποτε από τις Ρυθμίσεις.
+Όροι χρήσης (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Πολιτική απορρήτου: https://m1zz.github.io/RestaurantMap/el/privacy.html
+
 ## fi
 
 ### 지원 URL
@@ -1151,6 +1236,11 @@ Pro sisältää kaiken Plussan lisäksi käynnin jälkeiset muistutukset ja iClo
 Plus ja Pro ovat saatavilla viikko-, kuukausi- tai vuositilauksena tai kertaostona, joka on voimassa pysyvästi. Tilaus uusiutuu automaattisesti, ellei sitä peruta viimeistään 24 tuntia ennen kuluvan jakson päättymistä. Voit hallita ja perua tilauksia App Store -tilisi asetuksissa.
 Jos olet jo ostanut sovelluksen, Pro on käytössäsi pysyvästi ilman lisämaksua.
 Ei mainoksia eikä rekisteröitymistä, ja tietosi pysyvät laitteellasi.
+
+Tilaukset
+Insaeng Plus ja Pro ovat automaattisesti uusiutuvia tilauksia. Maksu veloitetaan Apple-tililtäsi, ja tilaus uusiutuu, ellei sitä peruta vähintään 24 tuntia ennen jakson päättymistä. Hallitse tai peru milloin tahansa Asetuksissa.
+Käyttöehdot (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Tietosuojakäytäntö: https://m1zz.github.io/RestaurantMap/fi/privacy.html
 
 ## id
 
@@ -1216,6 +1306,11 @@ Plus dan Pro tersedia sebagai langganan mingguan, bulanan, atau tahunan, atau se
 Kalau kamu sudah membeli aplikasinya, Pro tetap bisa kamu pakai selamanya tanpa biaya tambahan.
 Tanpa iklan dan tanpa daftar akun, catatanmu tersimpan di perangkat.
 
+Langganan
+Insaeng Plus dan Pro adalah langganan yang diperpanjang otomatis. Pembayaran ditagihkan ke Akun Apple kamu dan langganan diperpanjang kecuali dibatalkan paling lambat 24 jam sebelum periode berakhir. Kelola atau batalkan kapan saja di Pengaturan.
+Ketentuan Penggunaan (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Kebijakan Privasi: https://m1zz.github.io/RestaurantMap/id/privacy.html
+
 ## nb
 
 ### 지원 URL
@@ -1279,6 +1374,11 @@ Pro har alt i Plus, i tillegg til påminnelser etter besøket og iCloud-sikkerhe
 Plus og Pro finnes som abonnement per uke, måned eller år, eller som et engangskjøp for alltid. Abonnementer fornyes automatisk med mindre de sies opp minst 24 timer før gjeldende periode utløper, og du kan administrere og si dem opp i App Store-kontoinnstillingene.
 Har du allerede kjøpt appen, beholder du Pro for alltid uten ekstra kostnad.
 Ingen reklame, ingen registrering, og oppføringene dine blir på enheten.
+
+Abonnementer
+Insaeng Plus og Pro er abonnementer som fornyes automatisk. Betalingen belastes Apple-kontoen din, og abonnementet fornyes med mindre du sier det opp minst 24 timer før perioden er over. Administrer eller si opp når som helst i Innstillinger.
+Bruksvilkår (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Personvernerklæring: https://m1zz.github.io/RestaurantMap/nb/privacy.html
 
 ## nl
 
@@ -1344,6 +1444,11 @@ Plus en Pro zijn er als abonnement per week, maand of jaar, of als eenmalige aan
 Heb je de app al eerder gekocht, dan houd je Pro voor altijd, zonder extra kosten.
 Geen advertenties, geen registratie, en je gegevens blijven op je apparaat.
 
+Abonnementen
+Insaeng Plus en Pro zijn automatisch verlengende abonnementen. De betaling loopt via je Apple Account en het abonnement wordt verlengd tenzij je minstens 24 uur voor het einde van de periode opzegt. Beheer of zeg op wanneer je wilt in Instellingen.
+Gebruiksvoorwaarden (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacybeleid: https://m1zz.github.io/RestaurantMap/nl/privacy.html
+
 ## pl
 
 ### 지원 URL
@@ -1407,6 +1512,11 @@ Pro zawiera wszystko z Plus, a do tego przypomnienia po wizycie i kopię w iClou
 Plus i Pro są dostępne jako subskrypcja tygodniowa, miesięczna lub roczna albo jako jednorazowy zakup na zawsze. Subskrypcja odnawia się automatycznie, jeśli nie anulujesz jej co najmniej 24 godziny przed końcem bieżącego okresu. Możesz nią zarządzać i ją anulować w ustawieniach konta App Store.
 Jeśli aplikacja jest już przez Ciebie kupiona, Pro zostaje z Tobą na zawsze bez dopłaty.
 Bez reklam i rejestracji, a zapisy zostają na urządzeniu.
+
+Subskrypcje
+Insaeng Plus i Pro to subskrypcje odnawiane automatycznie. Opłata jest pobierana z Twojego konta Apple, a subskrypcja odnawia się, jeśli nie anulujesz jej co najmniej 24 godziny przed końcem okresu. Zarządzaj nią lub anuluj ją w dowolnej chwili w Ustawieniach.
+Warunki korzystania (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Polityka prywatności: https://m1zz.github.io/RestaurantMap/pl/privacy.html
 
 ## sv
 
@@ -1472,6 +1582,11 @@ Plus och Pro finns som prenumeration per vecka, månad eller år, eller som ett 
 Har du redan köpt appen behåller du Pro för alltid utan extra kostnad.
 Ingen reklam, ingen registrering, och dina anteckningar stannar på enheten.
 
+Prenumerationer
+Insaeng Plus och Pro är prenumerationer som förnyas automatiskt. Betalningen dras från ditt Apple-konto och prenumerationen förnyas om du inte avslutar den minst 24 timmar innan perioden slutar. Hantera eller avsluta när som helst i Inställningar.
+Användarvillkor (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Integritetspolicy: https://m1zz.github.io/RestaurantMap/sv/privacy.html
+
 ## tr
 
 ### 지원 URL
@@ -1535,6 +1650,11 @@ Pro, Plus’taki her şeye ek olarak ziyaret sonrası hatırlatmaları ve iCloud
 Plus ve Pro haftalık, aylık veya yıllık abonelik ya da tek seferlik ömür boyu satın alma olarak sunulur. Abonelik, geçerli dönemin bitiminden en az 24 saat önce iptal edilmezse otomatik olarak yenilenir. Aboneliğinizi App Store hesap ayarlarınızdan yönetebilir ve iptal edebilirsiniz.
 Uygulamayı daha önce satın aldıysanız Pro’yu ek ücret ödemeden ömür boyu kullanırsınız.
 Reklam ve üyelik yoktur, kayıtlarınız aygıtınızda saklanır.
+
+Abonelikler
+Insaeng Plus ve Pro otomatik yenilenen aboneliklerdir. Ödeme Apple Hesabınızdan alınır ve abonelik, dönem bitmeden en az 24 saat önce iptal edilmezse yenilenir. Ayarlar'dan istediğiniz zaman yönetebilir veya iptal edebilirsiniz.
+Kullanım Koşulları (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Gizlilik Politikası: https://m1zz.github.io/RestaurantMap/tr/privacy.html
 
 ## 손쉬운 사용
 
