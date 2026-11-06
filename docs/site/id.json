@@ -1,11 +1,11 @@
 {
   "title": "Insaeng: simpan tempat makan favoritmu di peta",
-  "description": "Kumpulkan restoran yang sudah dan ingin dikunjungi di peta, lalu catat menu, foto, dan rasa. Gratis dan tersimpan hanya di iPhone-mu.",
+  "description": "Kumpulkan restoran yang sudah dan ingin dikunjungi di peta, lalu catat menu, foto, dan rasa. Gratis hingga 30 tempat, tersimpan di iPhone-mu.",
   "hero": {
     "headline": "Tempat makan enak,\ntak akan terlupa lagi",
     "lead": "Tandai di peta restoran yang sudah kamu datangi dan yang ingin dicoba, lalu setiap kunjungan catat menu yang dipesan, foto, dan rasanya. Saat bingung mau makan di mana, catatanmu sendiri punya jawabannya.",
     "cta": "Unduh gratis di App Store",
-    "note": "Semua fitur gratis. Tanpa daftar akun, catatan tetap di iPhone-mu."
+    "note": "Catat hingga 30 restoran secara gratis. Tanpa daftar akun, catatan tetap di iPhone-mu."
   },
   "demo": {
     "title": "Coba nilai satu hidangan",
@@ -280,7 +280,7 @@
   "features": [
     {
       "title": "Sudah dikunjungi, Ingin ke sana, dan Michelin-mu sendiri",
-      "text": "Cari di peta atau ketuk tempat terdekat, langsung tersimpan. Pisahkan tempat yang sudah didatangi dari yang ingin dicoba, dan urutkan enam favoritmu dari 1 sampai 6.\nKalau ada yang minta rekomendasi, tinggal tunjukkan daftarnya.",
+      "text": "Cari di peta atau ketuk tempat terdekat, langsung tersimpan. Pisahkan tempat yang sudah didatangi dari yang ingin dicoba, dan dengan Plus, urutkan enam favoritmu dari 1 sampai 6.\nKalau ada yang minta rekomendasi, tinggal tunjukkan daftarnya.",
       "shot": "02-list"
     },
     {
@@ -290,7 +290,7 @@
     },
     {
       "title": "Tempat yang layak didatangi lagi, terlihat dari angka",
-      "text": "Setelah beberapa kunjungan, tiap restoran menampilkan ringkasan dari rata-rata semua kunjungan dan Skor Michelin Riio dari 100 yang menggabungkan bintang dan kepuasan.\nSaat kamu meninggalkan restoran yang tersimpan, tak lama kemudian muncul pengingat untuk mencatat kunjungan.",
+      "text": "Setelah beberapa kunjungan, tiap restoran menampilkan ringkasan dari rata-rata semua kunjungan dan Skor Michelin Riio dari 100 yang menggabungkan bintang dan kepuasan.\nDengan Pro, saat kamu meninggalkan restoran yang tersimpan, tak lama kemudian muncul pengingat untuk mencatat kunjungan.",
       "shot": "03-detail"
     }
   ],
@@ -343,7 +343,7 @@
         "Keasaman, Kekentalan, Cita rasa, Sisa rasa, Rasa manis, Keseimbangan"
       ]
     ],
-    "note": "Makanan lain dinilai dengan kriteria umum di baris pertama. Kamu juga bisa membuat kategori sendiri."
+    "note": "Makanan lain dinilai dengan kriteria umum di baris pertama. Dengan Plus, kamu juga bisa membuat kategori sendiri."
   },
   "faq": {
     "title": "Pertanyaan umum",
@@ -354,7 +354,7 @@
       },
       {
         "q": "Apa itu Sudah dikunjungi, Ingin ke sana, dan Top 6?",
-        "a": "Sudah dikunjungi – restoran yang sudah pernah kamu datangi. Kamu bisa mencatat kunjungannya. Ingin ke sana – restoran yang ingin kamu coba suatu hari nanti. Setelah berkunjung, ubah menjadi Sudah dikunjungi di halaman detail restoran. Top 6 (Michelin-ku) – enam restoran paling favoritmu dengan peringkat 1 sampai 6. Restoran di daftar Ingin ke sana tidak bisa dimasukkan ke Top 6."
+        "a": "Sudah dikunjungi – restoran yang sudah pernah kamu datangi. Kamu bisa mencatat kunjungannya. Ingin ke sana – restoran yang ingin kamu coba suatu hari nanti. Setelah berkunjung, ubah menjadi Sudah dikunjungi di halaman detail restoran. Top 6 (Michelin-ku) – enam restoran paling favoritmu dengan peringkat 1 sampai 6. Restoran di daftar Ingin ke sana tidak bisa dimasukkan ke Top 6. Top 6 termasuk dalam Plus."
       },
       {
         "q": "Apakah penilaian rasa wajib diisi?",
@@ -362,7 +362,7 @@
       },
       {
         "q": "Kapan notifikasi “Bagaimana kunjunganmu hari ini?” muncul?",
-        "a": "Kalau kamu berada di dekat restoran yang tersimpan lebih dari 5 menit lalu pergi, notifikasi muncul sekitar 40 menit kemudian. Fitur ini memerlukan izin lokasi “Selalu” dan izin notifikasi. Kalau tidak ingin menerima notifikasi, matikan notifikasi di Pengaturan > Aplikasi > Insaeng, atau ubah lokasi menjadi “Saat Menggunakan App”. Pengecekan lokasi hanya dilakukan di perangkat. Rute perjalananmu tidak disimpan dan tidak dikirim ke mana pun."
+        "a": "Ini fitur Pro. Kalau kamu berada di dekat restoran yang tersimpan lebih dari 5 menit lalu pergi, notifikasi muncul sekitar 40 menit kemudian. Fitur ini memerlukan izin lokasi “Selalu” dan izin notifikasi. Kalau tidak ingin menerima notifikasi, matikan notifikasi di Pengaturan > Aplikasi > Insaeng, atau ubah lokasi menjadi “Saat Menggunakan App”. Pengecekan lokasi hanya dilakukan di perangkat. Rute perjalananmu tidak disimpan dan tidak dikirim ke mana pun."
       },
       {
         "q": "Apakah aplikasi bisa dipakai tanpa izin lokasi?",
@@ -374,7 +374,7 @@
       },
       {
         "q": "Di mana catatanku disimpan? Apakah tersinkron dengan perangkat lain?",
-        "a": "Restoran, catatan kunjungan, dan foto hanya tersimpan di iPhone ini. Versi saat ini belum mendukung sinkronisasi dengan perangkat lain, dan fitur cadangkan dan pulihkan iCloud di pengaturan juga belum berfungsi. Namun, data aplikasi ikut tersimpan dalam cadangan iPhone secara keseluruhan (cadangan iCloud atau cadangan di komputer)."
+        "a": "Restoran, catatan kunjungan, dan foto tersimpan di iPhone ini dan tidak tersinkron dengan perangkat lain. Dengan Pro, kamu bisa mencadangkan catatan beserta fotonya ke iCloud milikmu sendiri dan memulihkannya dari pengaturan. Siapa pun bisa mengekspor restoran dan kunjungan ke file CSV di Pengaturan > Kelola data, dan data aplikasi juga ikut tersimpan dalam cadangan iPhone secara keseluruhan (cadangan iCloud atau cadangan di komputer)."
       },
       {
         "q": "Aku ingin menghapus semua catatan",
@@ -382,11 +382,11 @@
       },
       {
         "q": "Kalau aplikasi dihapus lalu dipasang lagi, apakah catatanku masih ada?",
-        "a": "Tidak. Catatan hanya tersimpan di perangkat, jadi ikut terhapus saat aplikasi dihapus. Pastikan dulu sebelum menghapus aplikasi."
+        "a": "Saat aplikasi dihapus, catatan yang tersimpan di perangkat ikut terhapus. Kalau kamu sudah mencadangkannya ke iCloud dengan Pro, catatan beserta fotonya bisa dipulihkan dari pengaturan setelah aplikasi dipasang lagi. Pastikan dulu sebelum menghapus aplikasi."
       },
       {
-        "q": "Benar semuanya gratis?",
-        "a": "Benar. Semua fitur gratis, tanpa iklan dan tanpa akun. “Dukung Pengembang” di pengaturan sepenuhnya opsional dan tidak membuka fitur tambahan."
+        "q": "Apa saja yang bisa dipakai gratis?",
+        "a": "Kamu bisa menyimpan hingga 30 restoran secara gratis (Sudah dikunjungi dan Ingin ke sana digabung) serta memakai catatan kunjungan, penilaian rasa untuk tiap jenis makanan, petunjuk arah, telepon, dan ekspor CSV. Catatan lebih dari 30 tempat selalu bisa dilihat, diubah, dan dihapus. Plus menambahkan restoran tanpa batas, jenis makanan buatan sendiri, Top 6, dan pengeditan profil selera, sedangkan Pro menambahkan pengingat setelah berkunjung dan cadangan iCloud. Pilih langganan mingguan, bulanan, atau tahunan, atau sekali bayar untuk selamanya. Kalau kamu sudah membeli aplikasinya, Pro tetap jadi milikmu selamanya. Tanpa iklan dan tanpa akun."
       }
     ]
   },

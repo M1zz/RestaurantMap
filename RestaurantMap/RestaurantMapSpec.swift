@@ -13,8 +13,21 @@ enum RestaurantMapSpec: LeeoAppSpec {
         marketingURL: URL(string: "https://m1zz.github.io/RestaurantMap/")!
     )
 
-    /// 인앱 결제 없음 (StoreKit 미사용).
-    static let monetization = LeeoMonetization.free
+    /// 수익모델 — 무료 다운로드 + 무료 · Plus · Pro. 칸마다 주 · 월 · 연 구독과 평생.
+    /// (1.0.2 빌드 5 까지는 유료 다운로드였다. 그때 산 사람은 Pro 평생 → RestaurantPlan.boughtTheApp)
+    /// 무엇이 어느 칸에서 열리는지는 `RestaurantFeature.tier` 한 곳, 상품은 `RestaurantPlan` 에 있다.
+    static let monetization = LeeoMonetization.freemiumSubscription(
+        LeeoSubscriptionConfig(
+            productIDs: RestaurantPlan.productIDs,
+            // 자체 약관이 없으므로 애플 표준 사용권 계약(EULA)을 건다. 구독을 파는 앱의 심사 필수 항목이다.
+            termsURL: URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/")!,
+            entitlementIDs: RestaurantPlan.entitlementIDs,
+            gate: LeeoGatePolicy(
+                // 한도는 새 식당을 저장할 때만 본다. 이미 저장한 식당은 보기 · 고치기 · 지우기 모두 그대로다.
+                freeLimits: [RestaurantFeature.restaurants.rawValue: RestaurantPlan.freeRestaurants],
+                proOnly: [RestaurantFeature.visitReminder.rawValue, RestaurantFeature.backup.rawValue]),
+            // 개발자 응원하기(팁) — 소모성 셋. 기능을 열지 않는다.
+            tipJar: LeeoTipJarConfig(productIDs: RestaurantPlan.tipProductIDs)))
 
     /// App Store 앱 ID — 리뷰 링크 · 친구에게 소개하기에 쓴다.
     static var appStoreID: String? { "6755934548" }
@@ -25,14 +38,10 @@ enum RestaurantMapSpec: LeeoAppSpec {
 
 // MARK: - 팁 (개발자 응원하기)
 
-/// 무료 앱이라 LeeoStore 가 없다. 팁 엔진을 여기 하나 두고, 앱을 열 때 `startStandalone()` 을 부른다.
+/// 팁 엔진은 LeeoStore 안에 있다 (결제 리스너가 하나여야 팁 거래를 서로 다투지 않는다).
 @MainActor
 enum RestaurantMapTip {
-    static let tipJar = LeeoTipJar(config: LeeoTipJarConfig(productIDs: [
-        "com.Ysoup.restaurantmap.tip.small",
-        "com.Ysoup.restaurantmap.tip.medium",
-        "com.Ysoup.restaurantmap.tip.large",
-    ]))
+    static var tipJar: LeeoTipJar { Purchases.shared.tipJar }
 }
 
 /// 팁을 부탁할 만한 순간 — 지금까지 남긴 방문 기록 수. 큰 것부터.

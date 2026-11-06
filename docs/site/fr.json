@@ -1,11 +1,11 @@
 {
   "title": "Insaeng: vos bonnes adresses sur une carte",
-  "description": "Réunissez sur une carte vos restaurants testés et à tester, et notez plat, photos et saveurs à chaque visite. Gratuit, et tout reste sur votre iPhone.",
+  "description": "Réunissez sur une carte vos restaurants testés et à tester, et notez plat, photos et saveurs à chaque visite. Gratuit jusqu’à 30 adresses, sur votre iPhone.",
   "hero": {
     "headline": "Vos bonnes adresses,\nvous ne les oublierez plus",
     "lead": "Épinglez les restaurants où vous êtes allé et ceux à tester, et notez à chaque visite ce que vous avez commandé, vos photos et le goût. Quand vous hésitez, vos propres notes ont la réponse.",
     "cta": "Télécharger gratuitement sur l’App Store",
-    "note": "Toutes les fonctions sont gratuites. Sans inscription, tout reste sur votre iPhone."
+    "note": "Jusqu’à 30 restaurants gratuitement. Sans inscription, tout reste sur votre iPhone."
   },
   "demo": {
     "title": "Notez un plat",
@@ -280,7 +280,7 @@
   "features": [
     {
       "title": "Déjà allé, À tester et votre propre Michelin",
-      "text": "Cherchez sur la carte ou touchez un lieu proche pour l’enregistrer aussitôt. Séparez les adresses déjà faites de celles à tester, et classez vos six préférées de 1 à 6.\nQuand on vous demande une bonne adresse, montrez simplement la liste.",
+      "text": "Cherchez sur la carte ou touchez un lieu proche pour l’enregistrer aussitôt. Séparez les adresses déjà faites de celles à tester, et avec Plus, classez vos six préférées de 1 à 6.\nQuand on vous demande une bonne adresse, montrez simplement la liste.",
       "shot": "02-list"
     },
     {
@@ -290,7 +290,7 @@
     },
     {
       "title": "Les adresses où retourner, en chiffres",
-      "text": "Au fil des visites, chaque restaurant affiche un avis global moyen de toutes vos venues et un score Riio Michelin sur 100 qui combine étoiles et satisfaction.\nQuand vous quittez un restaurant enregistré, un rappel arrive peu après pour noter la visite.",
+      "text": "Au fil des visites, chaque restaurant affiche un avis global moyen de toutes vos venues et un score Riio Michelin sur 100 qui combine étoiles et satisfaction.\nAvec Pro, quand vous quittez un restaurant enregistré, un rappel arrive peu après pour noter la visite.",
       "shot": "03-detail"
     }
   ],
@@ -343,7 +343,7 @@
         "Acidité, Corps, Arômes, Arrière-goût, Douceur, Équilibre"
       ]
     ],
-    "note": "Les autres plats se notent avec les critères généraux de la première ligne. Vous pouvez aussi créer vos propres catégories."
+    "note": "Les autres plats se notent avec les critères généraux de la première ligne. Avec Plus, vous pouvez aussi créer vos propres catégories."
   },
   "faq": {
     "title": "Questions fréquentes",
@@ -354,7 +354,7 @@
       },
       {
         "q": "Que signifient « Déjà allé », « À tester » et le Top 6 ?",
-        "a": "Déjà allé – Les restaurants où vous êtes déjà allé. Vous pouvez y noter vos visites. À tester – Les restaurants que vous voulez découvrir un jour. Une fois sur place, passez-le dans « Déjà allé » depuis sa fiche détaillée. Top 6 (Mon Michelin) – Vos six restaurants préférés, classés de la 1 re à la 6 e place. Un restaurant « À tester » ne peut pas entrer dans le Top 6."
+        "a": "Déjà allé – Les restaurants où vous êtes déjà allé. Vous pouvez y noter vos visites. À tester – Les restaurants que vous voulez découvrir un jour. Une fois sur place, passez-le dans « Déjà allé » depuis sa fiche détaillée. Top 6 (Mon Michelin) – Vos six restaurants préférés, classés de la 1 re à la 6 e place. Un restaurant « À tester » ne peut pas entrer dans le Top 6. Le Top 6 fait partie de Plus."
       },
       {
         "q": "Dois-je forcément évaluer le goût ?",
@@ -362,7 +362,7 @@
       },
       {
         "q": "Quand arrive la notification « Comment s’est passée votre visite ? » ?",
-        "a": "Si vous restez plus de 5 minutes près d’un restaurant enregistré puis repartez, la notification arrive environ 40 minutes plus tard. Il faut pour cela autoriser la position « Toujours » et les notifications. Si vous ne voulez pas de ces notifications, désactivez-les dans Réglages > Apps > Insaeng, ou passez l’accès à la position sur « Lorsque l’app est active ». La vérification de la position se fait uniquement sur l’appareil ; vos déplacements ne sont ni enregistrés ni transmis à l’extérieur."
+        "a": "Cette fonction fait partie de Pro. Si vous restez plus de 5 minutes près d’un restaurant enregistré puis repartez, la notification arrive environ 40 minutes plus tard. Il faut pour cela autoriser la position « Toujours » et les notifications. Si vous ne voulez pas de ces notifications, désactivez-les dans Réglages > Apps > Insaeng, ou passez l’accès à la position sur « Lorsque l’app est active ». La vérification de la position se fait uniquement sur l’appareil ; vos déplacements ne sont ni enregistrés ni transmis à l’extérieur."
       },
       {
         "q": "Puis-je utiliser l’app sans autoriser la position ?",
@@ -374,7 +374,7 @@
       },
       {
         "q": "Où sont enregistrées mes données ? Sont-elles synchronisées avec mes autres appareils ?",
-        "a": "Les restaurants, les visites et les photos sont enregistrés uniquement sur cet iPhone. La version actuelle ne permet pas la synchronisation avec d’autres appareils, et la sauvegarde et la restauration iCloud proposées dans les réglages ne fonctionnent pas encore. Les données de l’app sont en revanche incluses dans une sauvegarde complète de l’iPhone (sauvegarde iCloud ou sur ordinateur)."
+        "a": "Les restaurants, les visites et les photos sont enregistrés sur cet iPhone et ne sont pas synchronisés avec vos autres appareils. Avec Pro, vous pouvez sauvegarder vos données, photos comprises, sur votre propre iCloud et les restaurer depuis les réglages. Tout le monde peut exporter restaurants et visites dans un fichier CSV depuis Réglages > Gestion des données, et une sauvegarde complète de l’iPhone (sauvegarde iCloud ou sur ordinateur) inclut aussi les données de l’app."
       },
       {
         "q": "Je veux tout effacer",
@@ -382,11 +382,11 @@
       },
       {
         "q": "Si je supprime puis réinstalle l’app, est-ce que je retrouve mes données ?",
-        "a": "Non. Vos données étant enregistrées uniquement sur l’appareil, elles sont effacées avec l’app. Pensez-y avant de la supprimer."
+        "a": "Supprimer l’app efface aussi les données enregistrées sur l’appareil. Si vous les avez sauvegardées sur iCloud avec Pro, vous pourrez les restaurer, photos comprises, depuis les réglages après la réinstallation. Pensez-y avant de la supprimer."
       },
       {
-        "q": "Tout est vraiment gratuit ?",
-        "a": "Oui. Toutes les fonctions sont gratuites, sans publicité ni compte. « Soutenir le développeur » dans les réglages est entièrement facultatif et ne débloque rien."
+        "q": "Que peut-on faire gratuitement ?",
+        "a": "Vous pouvez enregistrer gratuitement jusqu’à 30 restaurants, « Déjà allé » et « À tester » confondus, et utiliser le journal de visites, la notation par type de cuisine, l’itinéraire, l’appel et l’export CSV. Au-delà de 30 adresses, tout reste consultable, modifiable et supprimable. Plus ajoute les restaurants illimités, vos propres types de cuisine, le Top 6 et la modification de votre profil de goût, et Pro y ajoute les rappels après la visite et la sauvegarde iCloud. Choisissez un abonnement hebdomadaire, mensuel ou annuel, ou un achat unique à vie. Si vous avez déjà acheté l’app, vous gardez Pro à vie. Sans publicité ni compte."
       }
     ]
   },

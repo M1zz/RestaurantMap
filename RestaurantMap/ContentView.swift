@@ -10,6 +10,9 @@ struct ContentView: View {
     /// 아이폰 듀오를 폈을 때 결과 쪽에 띄울 식당 (→ Views/FoldPanes.swift).
     @State private var foldPick = FoldRestaurantPick()
     @Environment(\.foldLayout) private var fold
+    @State private var purchases = Purchases.shared
+    /// 구독 6개월째 · 갱신 7일 전의 '평생으로 바꾸기' 제안 (→ LeeoGraduation).
+    @State private var showsGraduation = false
 
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -52,6 +55,16 @@ struct ContentView: View {
             if unfolded, selectedTab == 3 { selectedTab = 1 }
         }
         .environment(foldPick)
+        .sheet(isPresented: $showsGraduation) {
+            LeeoGraduationOfferView(graduate: purchases.product(RestaurantPlan.graduateID)) {
+                await purchases.refresh()
+            }
+        }
+        .onChange(of: purchases.graduationIsDue, initial: true) { _, due in
+            guard due, !showsGraduation, router.restaurantID == nil else { return }
+            purchases.markGraduationOffered()
+            showsGraduation = true
+        }
     }
 }
 

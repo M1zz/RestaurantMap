@@ -7,6 +7,8 @@ struct TasteProfileView: View {
 
     @State private var profile: TasteProfile
     @State private var isEditing = false
+    @State private var purchases = Purchases.shared
+    @State private var paywallFeature: RestaurantFeature?
 
     init() {
         // 초기 프로필 생성
@@ -50,6 +52,11 @@ struct TasteProfileView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(isEditing ? "완료" : "수정", systemImage: isEditing ? "checkmark" : "pencil") {
+                        // 보기는 누구나. 내 입맛대로 고치는 것은 Plus.
+                        guard isEditing || purchases.allows(.tasteProfile) else {
+                            paywallFeature = .tasteProfile
+                            return
+                        }
                         withAnimation {
                             isEditing.toggle()
                             if !isEditing {
@@ -62,6 +69,7 @@ struct TasteProfileView: View {
             .onAppear {
                 loadProfile()
             }
+            .paywall(for: $paywallFeature)
         }
     }
 

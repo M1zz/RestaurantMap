@@ -1,11 +1,11 @@
 {
   "title": "Insaeng Matjip: log the places you’ve eaten on a map",
-  "description": "Map the restaurants you’ve tried and want to try, and log the dish, photos and taste each visit. Free, and it all stays on your iPhone.",
+  "description": "Map the restaurants you’ve tried and want to try, and log the dish, photos and taste each visit. Free for up to 30 places, all on your iPhone.",
   "hero": {
     "headline": "Never forget\na great meal again",
     "lead": "Pin the restaurants you’ve been to and the ones you want to try, and log what you ordered, photos and how it tasted every time. When you can’t decide where to eat, your own notes have the answer.",
     "cta": "Get it free on the App Store",
-    "note": "Every feature is free. No sign-up, and your records stay on your iPhone."
+    "note": "Log up to 30 restaurants for free. No sign-up, and your records stay on your iPhone."
   },
   "demo": {
     "title": "Rate a dish",
@@ -280,7 +280,7 @@
   "features": [
     {
       "title": "Visited, Want to Go, and your own Michelin",
-      "text": "Search the map or tap a nearby place to save it in one go. Keep the places you’ve been apart from the ones you want to try, and rank your six favorites from 1 to 6.\nWhen someone asks for a recommendation, just show them the list.",
+      "text": "Search the map or tap a nearby place to save it in one go. Keep the places you’ve been apart from the ones you want to try, and with Plus, rank your six favorites from 1 to 6.\nWhen someone asks for a recommendation, just show them the list.",
       "shot": "02-list"
     },
     {
@@ -290,7 +290,7 @@
     },
     {
       "title": "See which places are worth going back to",
-      "text": "As visits add up, each restaurant shows an overall chart averaged across every visit, plus a Riio Michelin Score out of 100 that combines stars and satisfaction.\nLeave a saved restaurant after a meal and a reminder to log it shows up a little later.",
+      "text": "As visits add up, each restaurant shows an overall chart averaged across every visit, plus a Riio Michelin Score out of 100 that combines stars and satisfaction.\nWith Pro, leave a saved restaurant after a meal and a reminder to log it shows up a little later.",
       "shot": "03-detail"
     }
   ],
@@ -343,7 +343,7 @@
         "Acidity, Body, Flavor, Aftertaste, Sweetness, Balance"
       ]
     ],
-    "note": "Everything else is rated with the general set in the first row. You can also create your own food categories."
+    "note": "Everything else is rated with the general set in the first row. With Plus, you can also create your own food categories."
   },
   "faq": {
     "title": "Frequently asked questions",
@@ -354,7 +354,7 @@
       },
       {
         "q": "What are Visited, Want to Go and Top 6?",
-        "a": "Visited: restaurants you’ve already been to. You can log your visits to them. Want to Go: restaurants you’d like to try someday. After you’ve been, switch it to Visited on the restaurant’s detail screen. Top 6 (My Michelin): rank your six favorite restaurants from 1st to 6th. Restaurants marked Want to Go can’t be added to your Top 6."
+        "a": "Visited: restaurants you’ve already been to. You can log your visits to them. Want to Go: restaurants you’d like to try someday. After you’ve been, switch it to Visited on the restaurant’s detail screen. Top 6 (My Michelin): rank your six favorite restaurants from 1st to 6th. Restaurants marked Want to Go can’t be added to your Top 6. Top 6 is part of Plus."
       },
       {
         "q": "Do I have to rate the taste?",
@@ -362,7 +362,7 @@
       },
       {
         "q": "When does the “How was your visit today?” notification arrive?",
-        "a": "If you stay near a saved restaurant for more than 5 minutes and then leave, the notification arrives about 40 minutes later. This feature needs location access set to “Always” and notifications turned on. If you’d rather not get these notifications, go to Settings > Apps > Insaeng Matjip and turn off notifications, or change location access to “While Using the App”. Location checks happen only on your device. Your movements are never stored or sent anywhere."
+        "a": "This is a Pro feature. If you stay near a saved restaurant for more than 5 minutes and then leave, the notification arrives about 40 minutes later. This feature needs location access set to “Always” and notifications turned on. If you’d rather not get these notifications, go to Settings > Apps > Insaeng Matjip and turn off notifications, or change location access to “While Using the App”. Location checks happen only on your device. Your movements are never stored or sent anywhere."
       },
       {
         "q": "Can I use the app without allowing location access?",
@@ -374,7 +374,7 @@
       },
       {
         "q": "Where is my log stored? Does it sync with my other devices?",
-        "a": "Your restaurants, visit log and photos are all stored only on this iPhone. The current version doesn’t sync with other devices, and the iCloud backup and restore option in Settings doesn’t work yet. A full iPhone backup (iCloud Backup or a backup on your computer) does include the app’s data."
+        "a": "Your restaurants, visit log and photos are stored on this iPhone and don’t sync with other devices. With Pro, you can back up everything, photos included, to your own iCloud and restore it from Settings. Anyone can export restaurants and visits as a CSV file from Settings > Data Management, and a full iPhone backup (iCloud Backup or a backup on your computer) also includes the app’s data."
       },
       {
         "q": "I want to erase everything",
@@ -382,11 +382,11 @@
       },
       {
         "q": "If I delete and reinstall the app, will my log still be there?",
-        "a": "No. Because your log is stored only on your device, it’s erased along with the app. Please keep this in mind before deleting the app."
+        "a": "Deleting the app also erases the records stored on your device. If you backed up to iCloud with Pro, you can restore them, photos included, from Settings after reinstalling. Please keep this in mind before deleting the app."
       },
       {
-        "q": "Is it really all free?",
-        "a": "Yes. Every feature is free, with no ads and no account. Support the Developer in Settings is entirely optional and doesn’t unlock anything."
+        "q": "How much can I do for free?",
+        "a": "You can save up to 30 restaurants for free, Visited and Want to Go combined, and use visit logs, taste ratings for each type of food, directions, calling and CSV export. Anything past 30 places can always be viewed, edited and deleted. Plus adds unlimited restaurants, your own food types, Top 6 and editing your taste profile, and Pro adds after-visit reminders and iCloud backup on top. Pick a weekly, monthly or yearly subscription, or pay once for lifetime access. If you already bought the app, you keep Pro for life. No ads, no account."
       }
     ]
   },

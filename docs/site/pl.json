@@ -1,11 +1,11 @@
 {
   "title": "Insaeng: miejsca, gdzie dobrze zjadłeś, na jednej mapie",
-  "description": "Zbieraj na mapie restauracje odwiedzone i do odwiedzenia, a po każdej wizycie zapisuj danie, zdjęcia i smak. Za darmo, tylko na iPhonie.",
+  "description": "Zbieraj na mapie restauracje odwiedzone i do odwiedzenia, a po każdej wizycie zapisuj danie, zdjęcia i smak. Do 30 miejsc za darmo, wszystko na iPhonie.",
   "hero": {
     "headline": "Miejsc, gdzie było pysznie,\njuż nie zapomnisz",
     "lead": "Zaznacz na mapie restauracje, w których byłeś, i te, które chcesz odwiedzić, a przy każdej wizycie zapisz, co zamówiłeś, zdjęcia i smak. Gdy nie wiesz, gdzie zjeść, odpowiedź masz we własnych notatkach.",
     "cta": "Pobierz za darmo z App Store",
-    "note": "Wszystkie funkcje są bezpłatne. Bez rejestracji, wszystko zostaje na Twoim iPhonie."
+    "note": "Do 30 restauracji zapiszesz za darmo. Bez rejestracji, wszystko zostaje na Twoim iPhonie."
   },
   "demo": {
     "title": "Oceń danie",
@@ -280,7 +280,7 @@
   "features": [
     {
       "title": "Odwiedzone, Chcę odwiedzić i Twój własny Michelin",
-      "text": "Wyszukaj na mapie albo stuknij miejsce w pobliżu i od razu jest zapisane. Trzymaj osobno miejsca, w których byłeś, i te do spróbowania, a sześć ulubionych ułóż od 1 do 6.\nGdy ktoś zapyta o polecenie, po prostu pokaż listę.",
+      "text": "Wyszukaj na mapie albo stuknij miejsce w pobliżu i od razu jest zapisane. Trzymaj osobno miejsca, w których byłeś, i te do spróbowania, a z Plus ułóż sześć ulubionych od 1 do 6.\nGdy ktoś zapyta o polecenie, po prostu pokaż listę.",
       "shot": "02-list"
     },
     {
@@ -290,7 +290,7 @@
     },
     {
       "title": "Dokąd warto wrócić, widać w liczbach",
-      "text": "Po kilku wizytach każda restauracja pokazuje ocenę ogólną ze średniej wszystkich wizyt i Wynik Riio Michelin w skali do 100, który łączy gwiazdki i zadowolenie.\nGdy wychodzisz z zapisanej restauracji, chwilę później przychodzi przypomnienie, żeby zapisać wizytę.",
+      "text": "Po kilku wizytach każda restauracja pokazuje ocenę ogólną ze średniej wszystkich wizyt i Wynik Riio Michelin w skali do 100, który łączy gwiazdki i zadowolenie.\nZ Pro, gdy wychodzisz z zapisanej restauracji, chwilę później przychodzi przypomnienie, żeby zapisać wizytę.",
       "shot": "03-detail"
     }
   ],
@@ -343,7 +343,7 @@
         "Kwasowość, Ciało, Smak, Posmak, Słodycz, Balans"
       ]
     ],
-    "note": "Pozostałe dania oceniasz według ogólnych kryteriów z pierwszego wiersza. Możesz też tworzyć własne kategorie."
+    "note": "Pozostałe dania oceniasz według ogólnych kryteriów z pierwszego wiersza. Z Plus możesz też tworzyć własne kategorie."
   },
   "faq": {
     "title": "Częste pytania",
@@ -354,7 +354,7 @@
       },
       {
         "q": "Czym są „Odwiedzone”, „Do odwiedzenia” i Top 6?",
-        "a": "Odwiedzone: restauracje, w których już byłeś. Możesz zapisywać w nich wizyty. Do odwiedzenia: restauracje, które chcesz kiedyś wypróbować. Po wizycie zmień status na „Odwiedzone” w szczegółach restauracji. Top 6 (moje Michelin): ranking sześciu restauracji, które cenisz najbardziej, od 1. do 6. miejsca. Miejsc z listy „Do odwiedzenia” nie można dodać do Top 6."
+        "a": "Odwiedzone: restauracje, w których już byłeś. Możesz zapisywać w nich wizyty. Do odwiedzenia: restauracje, które chcesz kiedyś wypróbować. Po wizycie zmień status na „Odwiedzone” w szczegółach restauracji. Top 6 (moje Michelin): ranking sześciu restauracji, które cenisz najbardziej, od 1. do 6. miejsca. Miejsc z listy „Do odwiedzenia” nie można dodać do Top 6. Top 6 jest częścią Plus."
       },
       {
         "q": "Czy ocena smaku jest obowiązkowa?",
@@ -362,7 +362,7 @@
       },
       {
         "q": "Kiedy pojawia się powiadomienie „Jak było dzisiaj?”",
-        "a": "Jeśli spędzisz ponad 5 minut w pobliżu zapisanej restauracji i potem odejdziesz, powiadomienie pojawi się po około 40 minutach. Ta funkcja wymaga dostępu do lokalizacji „Zawsze” i zgody na powiadomienia. Jeśli nie chcesz tych powiadomień, wyłącz je w Ustawienia > Aplikacje > Insaeng albo zmień dostęp do lokalizacji na „Podczas używania aplikacji”. Lokalizacja jest sprawdzana wyłącznie na urządzeniu. Trasy nie są zapisywane ani nigdzie wysyłane."
+        "a": "To funkcja Pro. Jeśli spędzisz ponad 5 minut w pobliżu zapisanej restauracji i potem odejdziesz, powiadomienie pojawi się po około 40 minutach. Ta funkcja wymaga dostępu do lokalizacji „Zawsze” i zgody na powiadomienia. Jeśli nie chcesz tych powiadomień, wyłącz je w Ustawienia > Aplikacje > Insaeng albo zmień dostęp do lokalizacji na „Podczas używania aplikacji”. Lokalizacja jest sprawdzana wyłącznie na urządzeniu. Trasy nie są zapisywane ani nigdzie wysyłane."
       },
       {
         "q": "Czy mogę korzystać z aplikacji bez dostępu do lokalizacji?",
@@ -374,7 +374,7 @@
       },
       {
         "q": "Gdzie są zapisywane moje wpisy? Czy synchronizują się z innymi urządzeniami?",
-        "a": "Restauracje, dziennik wizyt i zdjęcia są przechowywane wyłącznie na tym iPhonie. Obecna wersja nie obsługuje synchronizacji z innymi urządzeniami, a kopia zapasowa i przywracanie z iCloud w ustawieniach jeszcze nie działają. Dane aplikacji trafiają natomiast do pełnej kopii zapasowej iPhone’a (w iCloud lub na komputerze)."
+        "a": "Restauracje, dziennik wizyt i zdjęcia są przechowywane na tym iPhonie i nie synchronizują się z innymi urządzeniami. Z Pro możesz w ustawieniach zrobić kopię wpisów razem ze zdjęciami we własnym iCloud i je przywrócić. Restauracje i wizyty każdy może wyeksportować do pliku CSV w Ustawienia > Zarządzanie danymi, a dane aplikacji trafiają też do pełnej kopii zapasowej iPhone’a (w iCloud lub na komputerze)."
       },
       {
         "q": "Chcę usunąć wszystkie wpisy",
@@ -382,11 +382,11 @@
       },
       {
         "q": "Czy po usunięciu i ponownej instalacji aplikacji moje wpisy zostaną?",
-        "a": "Nie. Wpisy są przechowywane tylko na urządzeniu, więc znikają razem z aplikacją. Zastanów się dobrze, zanim ją usuniesz."
+        "a": "Po usunięciu aplikacji wpisy zapisane na urządzeniu znikają razem z nią. Jeśli z Pro masz ich kopię w iCloud, po ponownej instalacji przywrócisz je w ustawieniach razem ze zdjęciami. Zastanów się dobrze, zanim ją usuniesz."
       },
       {
-        "q": "Czy naprawdę wszystko jest za darmo?",
-        "a": "Tak. Wszystkie funkcje są bezpłatne, bez reklam i bez konta. „Wesprzyj twórcę” w ustawieniach jest całkowicie dobrowolne i niczego nie odblokowuje."
+        "q": "Co mogę robić za darmo?",
+        "a": "Za darmo zapiszesz do 30 restauracji (łącznie „Odwiedzone” i „Do odwiedzenia”) i skorzystasz z dziennika wizyt, oceny smaku dla każdego rodzaju dania, nawigacji, dzwonienia i eksportu do CSV. Wpisy ponad 30 miejsc zawsze możesz przeglądać, edytować i usuwać. Plus dodaje nielimitowaną liczbę restauracji, własne rodzaje dań, Top 6 i edycję profilu smaku, a Pro dodatkowo przypomnienia po wizycie i kopię w iCloud. Do wyboru jest subskrypcja tygodniowa, miesięczna lub roczna albo jednorazowy zakup na zawsze. Jeśli aplikacja jest już przez Ciebie kupiona, Pro zostaje z Tobą na zawsze. Bez reklam i bez konta."
       }
     ]
   },

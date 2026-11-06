@@ -1,0 +1,338 @@
+{
+  "identifier": "235A21C6-B218-4039-B0F5-A14D43907F0F",
+  "nonRenewingSubscriptions": [],
+  "products": [
+    {
+      "displayPrice": "17.99",
+      "familyShareable": true,
+      "internalID": "C43B4049-CF66-4FC6-A35C-5EEF578C0300",
+      "localizations": [
+        {
+          "description": "Unlimited places, once and forever",
+          "displayName": "Insaeng Matjip Plus Lifetime",
+          "locale": "en_US"
+        },
+        {
+          "description": "식당 무제한, 한 번 결제로 평생",
+          "displayName": "인생 맛집 Plus 평생",
+          "locale": "ko_KR"
+        }
+      ],
+      "productID": "com.Ysoup.restaurantmap.plus.lifetime",
+      "referenceName": "Plus Lifetime",
+      "type": "NonConsumable"
+    },
+    {
+      "displayPrice": "26.99",
+      "familyShareable": true,
+      "internalID": "346C735A-B3BF-4013-BB5F-3364E78389C5",
+      "localizations": [
+        {
+          "description": "Everything in Pro, once and forever",
+          "displayName": "Insaeng Matjip Pro Lifetime",
+          "locale": "en_US"
+        },
+        {
+          "description": "Pro의 모든 기능, 한 번 결제로 평생",
+          "displayName": "인생 맛집 Pro 평생",
+          "locale": "ko_KR"
+        }
+      ],
+      "productID": "com.Ysoup.restaurantmap.pro.lifetime",
+      "referenceName": "Pro Lifetime",
+      "type": "NonConsumable"
+    },
+    {
+      "displayPrice": "8.99",
+      "familyShareable": true,
+      "internalID": "E9756530-8622-4A7F-B1B0-EB5811F3C27C",
+      "localizations": [
+        {
+          "description": "Upgrade your Plus Lifetime to Pro",
+          "displayName": "Plus to Pro Lifetime",
+          "locale": "en_US"
+        },
+        {
+          "description": "Plus 평생을 Pro 평생으로 올려요",
+          "displayName": "Plus 평생에서 Pro 평생으로",
+          "locale": "ko_KR"
+        }
+      ],
+      "productID": "com.Ysoup.restaurantmap.pro.upgrade",
+      "referenceName": "Plus to Pro Lifetime Upgrade",
+      "type": "NonConsumable"
+    },
+    {
+      "displayPrice": "17.99",
+      "familyShareable": true,
+      "internalID": "4BFD0D45-9CA8-41C0-B9AA-9EEE1C4AA23D",
+      "localizations": [
+        {
+          "description": "Pro forever for subscribers",
+          "displayName": "Insaeng Matjip Pro Lifetime",
+          "locale": "en_US"
+        },
+        {
+          "description": "구독하던 분께 드리는 Pro 평생",
+          "displayName": "인생 맛집 Pro 평생 (구독 졸업)",
+          "locale": "ko_KR"
+        }
+      ],
+      "productID": "com.Ysoup.restaurantmap.pro.graduate",
+      "referenceName": "Pro Lifetime for Subscribers",
+      "type": "NonConsumable"
+    },
+    {
+      "displayPrice": "0.99",
+      "familyShareable": false,
+      "internalID": "2790E8F9-5B83-48D2-9343-9ED9ACC116A7",
+      "localizations": [
+        {
+          "description": "Cheer on the developer. Unlocks nothing.",
+          "displayName": "Small Tip",
+          "locale": "en_US"
+        },
+        {
+          "description": "개발자를 응원해요. 기능은 바뀌지 않아요.",
+          "displayName": "작은 응원",
+          "locale": "ko_KR"
+        }
+      ],
+      "productID": "com.Ysoup.restaurantmap.tip.small",
+      "referenceName": "Small Tip",
+      "type": "Consumable"
+    },
+    {
+      "displayPrice": "2.99",
+      "familyShareable": false,
+      "internalID": "522DEE32-71D3-466D-AD84-52A4ED635511",
+      "localizations": [
+        {
+          "description": "Cheer on the developer. Unlocks nothing.",
+          "displayName": "Medium Tip",
+          "locale": "en_US"
+        },
+        {
+          "description": "개발자를 응원해요. 기능은 바뀌지 않아요.",
+          "displayName": "든든한 응원",
+          "locale": "ko_KR"
+        }
+      ],
+      "productID": "com.Ysoup.restaurantmap.tip.medium",
+      "referenceName": "Medium Tip",
+      "type": "Consumable"
+    },
+    {
+      "displayPrice": "9.99",
+      "familyShareable": false,
+      "internalID": "B355206C-7772-479B-85B7-8537F87F94F7",
+      "localizations": [
+        {
+          "description": "Cheer on the developer. Unlocks nothing.",
+          "displayName": "Large Tip",
+          "locale": "en_US"
+        },
+        {
+          "description": "개발자를 응원해요. 기능은 바뀌지 않아요.",
+          "displayName": "큰 응원",
+          "locale": "ko_KR"
+        }
+      ],
+      "productID": "com.Ysoup.restaurantmap.tip.large",
+      "referenceName": "Large Tip",
+      "type": "Consumable"
+    }
+  ],
+  "settings": {
+    "_applicationInternalID": "6755934548",
+    "_developerTeamID": "",
+    "_failTransactionsEnabled": false,
+    "_lastSynchronizedDate": 0,
+    "_locale": "en_US",
+    "_storefront": "USA",
+    "_storeKitErrors": []
+  },
+  "subscriptionGroups": [
+    {
+      "id": "3792434D-170A-4BE5-ABA0-8DC2490DC39B",
+      "localizations": [],
+      "name": "Insaeng Matjip Plans",
+      "subscriptions": [
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "0.99",
+          "familyShareable": false,
+          "groupNumber": 2,
+          "internalID": "B3531BE5-6357-46E6-A400-AFB69BA61BB2",
+          "localizations": [
+            {
+              "description": "Unlimited places, your own way",
+              "displayName": "Insaeng Matjip Plus Weekly",
+              "locale": "en_US"
+            },
+            {
+              "description": "식당 수 제한 없이 내 입맛대로 정리",
+              "displayName": "인생 맛집 Plus 주간",
+              "locale": "ko_KR"
+            }
+          ],
+          "productID": "com.Ysoup.restaurantmap.plus.weekly",
+          "recurringSubscriptionPeriod": "P1W",
+          "referenceName": "Plus Weekly",
+          "subscriptionGroupID": "3792434D-170A-4BE5-ABA0-8DC2490DC39B",
+          "type": "RecurringSubscription",
+          "winbackOffers": []
+        },
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "1.99",
+          "familyShareable": false,
+          "groupNumber": 2,
+          "internalID": "ACA704BB-8992-4ADF-952B-CAC986877E51",
+          "localizations": [
+            {
+              "description": "Unlimited places, your own way",
+              "displayName": "Insaeng Matjip Plus Monthly",
+              "locale": "en_US"
+            },
+            {
+              "description": "식당 수 제한 없이 내 입맛대로 정리",
+              "displayName": "인생 맛집 Plus 월간",
+              "locale": "ko_KR"
+            }
+          ],
+          "productID": "com.Ysoup.restaurantmap.plus.monthly",
+          "recurringSubscriptionPeriod": "P1M",
+          "referenceName": "Plus Monthly",
+          "subscriptionGroupID": "3792434D-170A-4BE5-ABA0-8DC2490DC39B",
+          "type": "RecurringSubscription",
+          "winbackOffers": []
+        },
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "5.99",
+          "familyShareable": false,
+          "groupNumber": 2,
+          "internalID": "A2B31EFD-24FE-4B26-88CC-E0BC90D61583",
+          "localizations": [
+            {
+              "description": "Unlimited places, your own way",
+              "displayName": "Insaeng Matjip Plus Yearly",
+              "locale": "en_US"
+            },
+            {
+              "description": "식당 수 제한 없이 내 입맛대로 정리",
+              "displayName": "인생 맛집 Plus 연간",
+              "locale": "ko_KR"
+            }
+          ],
+          "productID": "com.Ysoup.restaurantmap.plus.yearly",
+          "recurringSubscriptionPeriod": "P1Y",
+          "referenceName": "Plus Yearly",
+          "subscriptionGroupID": "3792434D-170A-4BE5-ABA0-8DC2490DC39B",
+          "type": "RecurringSubscription",
+          "winbackOffers": [],
+          "introductoryOffer": {
+            "displayPrice": "2.99",
+            "internalID": "6802B832-8DFB-4A2D-9EB9-B0CF9F3F8C8E",
+            "numberOfPeriods": 1,
+            "paymentMode": "payUpFront",
+            "subscriptionPeriod": "P1Y"
+          }
+        },
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "1.49",
+          "familyShareable": false,
+          "groupNumber": 1,
+          "internalID": "CC631ADB-6083-4634-BFF9-F5FDEA4908A9",
+          "localizations": [
+            {
+              "description": "Visit reminders and iCloud backup",
+              "displayName": "Insaeng Matjip Pro Weekly",
+              "locale": "en_US"
+            },
+            {
+              "description": "다녀온 뒤 기록 알림과 iCloud 백업",
+              "displayName": "인생 맛집 Pro 주간",
+              "locale": "ko_KR"
+            }
+          ],
+          "productID": "com.Ysoup.restaurantmap.pro.weekly",
+          "recurringSubscriptionPeriod": "P1W",
+          "referenceName": "Pro Weekly",
+          "subscriptionGroupID": "3792434D-170A-4BE5-ABA0-8DC2490DC39B",
+          "type": "RecurringSubscription",
+          "winbackOffers": []
+        },
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "2.99",
+          "familyShareable": false,
+          "groupNumber": 1,
+          "internalID": "2A1F131F-5C42-451A-94B3-7BA811D36595",
+          "localizations": [
+            {
+              "description": "Visit reminders and iCloud backup",
+              "displayName": "Insaeng Matjip Pro Monthly",
+              "locale": "en_US"
+            },
+            {
+              "description": "다녀온 뒤 기록 알림과 iCloud 백업",
+              "displayName": "인생 맛집 Pro 월간",
+              "locale": "ko_KR"
+            }
+          ],
+          "productID": "com.Ysoup.restaurantmap.pro.monthly",
+          "recurringSubscriptionPeriod": "P1M",
+          "referenceName": "Pro Monthly",
+          "subscriptionGroupID": "3792434D-170A-4BE5-ABA0-8DC2490DC39B",
+          "type": "RecurringSubscription",
+          "winbackOffers": []
+        },
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "8.99",
+          "familyShareable": false,
+          "groupNumber": 1,
+          "internalID": "D5D38A50-384A-4132-BFB5-54AD32DD3297",
+          "localizations": [
+            {
+              "description": "Visit reminders and iCloud backup",
+              "displayName": "Insaeng Matjip Pro Yearly",
+              "locale": "en_US"
+            },
+            {
+              "description": "다녀온 뒤 기록 알림과 iCloud 백업",
+              "displayName": "인생 맛집 Pro 연간",
+              "locale": "ko_KR"
+            }
+          ],
+          "productID": "com.Ysoup.restaurantmap.pro.yearly",
+          "recurringSubscriptionPeriod": "P1Y",
+          "referenceName": "Pro Yearly",
+          "subscriptionGroupID": "3792434D-170A-4BE5-ABA0-8DC2490DC39B",
+          "type": "RecurringSubscription",
+          "winbackOffers": [],
+          "introductoryOffer": {
+            "displayPrice": "4.49",
+            "internalID": "F4B8BDC0-C59B-4C70-A952-F4CE9A6E9548",
+            "numberOfPeriods": 1,
+            "paymentMode": "payUpFront",
+            "subscriptionPeriod": "P1Y"
+          }
+        }
+      ]
+    }
+  ],
+  "version": {
+    "major": 3,
+    "minor": 0
+  }
+}

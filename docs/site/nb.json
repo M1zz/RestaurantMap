@@ -1,11 +1,11 @@
 {
   "title": "Insaeng: de beste måltidene dine på ett kart",
-  "description": "Samle restauranter du har besøkt og vil prøve på et kart, og noter rett, bilder og smak ved hvert besøk. Alt er gratis og blir på din iPhone.",
+  "description": "Samle restauranter du har besøkt og vil prøve på et kart, og noter rett, bilder og smak ved hvert besøk. Gratis for opptil 30 steder, alt på din iPhone.",
   "hero": {
     "headline": "Glem aldri igjen\nhvor maten var god",
     "lead": "Marker restaurantene du har besøkt og vil prøve på kartet, og noter ved hvert besøk hva du bestilte, bilder og smaken. Når du ikke vet hvor du skal spise, har dine egne notater svaret.",
     "cta": "Last ned gratis i App Store",
-    "note": "Alle funksjoner er gratis. Ingen registrering, alt blir på din iPhone."
+    "note": "Opptil 30 restauranter er gratis. Ingen registrering, alt blir på din iPhone."
   },
   "demo": {
     "title": "Vurder en rett",
@@ -280,7 +280,7 @@
   "features": [
     {
       "title": "Besøkt, Vil dit og din egen Michelin",
-      "text": "Søk på kartet eller trykk på et sted i nærheten, så er det lagret. Hold steder du har vært, atskilt fra dem du vil prøve, og ranger de seks favorittene dine fra 1 til 6.\nNår noen spør etter et godt sted, viser du bare listen.",
+      "text": "Søk på kartet eller trykk på et sted i nærheten, så er det lagret. Hold steder du har vært, atskilt fra dem du vil prøve, og ranger med Plus de seks favorittene dine fra 1 til 6.\nNår noen spør etter et godt sted, viser du bare listen.",
       "shot": "02-list"
     },
     {
@@ -290,7 +290,7 @@
     },
     {
       "title": "Hvor det er verdt å dra tilbake, ser du i tall",
-      "text": "Etter flere besøk viser hver restaurant en samlet vurdering med snittet av alle besøk og en Riio Michelin-poengsum av 100 som kombinerer stjerner og tilfredshet.\nNår du forlater en lagret restaurant, kommer det litt senere en påminnelse om å notere besøket.",
+      "text": "Etter flere besøk viser hver restaurant en samlet vurdering med snittet av alle besøk og en Riio Michelin-poengsum av 100 som kombinerer stjerner og tilfredshet.\nMed Pro kommer det litt etter at du har forlatt en lagret restaurant, en påminnelse om å notere besøket.",
       "shot": "03-detail"
     }
   ],
@@ -343,7 +343,7 @@
         "Syrlighet, Fylde, Aroma, Ettersmak, Sødme, Balanse"
       ]
     ],
-    "note": "All annen mat vurderes med de generelle kriteriene i første rad. Du kan også lage egne kategorier."
+    "note": "All annen mat vurderes med de generelle kriteriene i første rad. Med Plus kan du også lage egne kategorier."
   },
   "faq": {
     "title": "Vanlige spørsmål",
@@ -354,7 +354,7 @@
       },
       {
         "q": "Hva betyr Besøkt, Vil prøve og Topp 6?",
-        "a": "Besøkt: restauranter du allerede har vært på. Her kan du føre besøkslogg. Vil prøve: restauranter du har lyst til å prøve en dag. Når du har vært der, endrer du dem til Besøkt på restaurantsiden. Topp 6 (din egen Michelin): rangér de seks restaurantene du liker best, fra 1 til 6. Steder under Vil prøve kan ikke settes på topp 6."
+        "a": "Besøkt: restauranter du allerede har vært på. Her kan du føre besøkslogg. Vil prøve: restauranter du har lyst til å prøve en dag. Når du har vært der, endrer du dem til Besøkt på restaurantsiden. Topp 6 (din egen Michelin): rangér de seks restaurantene du liker best, fra 1 til 6. Steder under Vil prøve kan ikke settes på topp 6. Topp 6 er en del av Plus."
       },
       {
         "q": "Må jeg vurdere smaken?",
@@ -362,7 +362,7 @@
       },
       {
         "q": "Når kommer varselet «Hvordan var besøket i dag?»",
-        "a": "Har du vært i nærheten av en lagret restaurant i mer enn fem minutter og går derfra, får du varselet omtrent 40 minutter senere. Funksjonen krever posisjonstilgangen «Alltid» og at varsler er slått på. Vil du ikke ha varselet, slår du av varsler under Innstillinger > Apper > Insaeng, eller endrer posisjonstilgangen til «Når appen er i bruk». Posisjonen sjekkes bare på enheten. Bevegelsene dine lagres ikke og sendes ikke noe sted."
+        "a": "Dette er en Pro-funksjon. Har du vært i nærheten av en lagret restaurant i mer enn fem minutter og går derfra, får du varselet omtrent 40 minutter senere. Funksjonen krever posisjonstilgangen «Alltid» og at varsler er slått på. Vil du ikke ha varselet, slår du av varsler under Innstillinger > Apper > Insaeng, eller endrer posisjonstilgangen til «Når appen er i bruk». Posisjonen sjekkes bare på enheten. Bevegelsene dine lagres ikke og sendes ikke noe sted."
       },
       {
         "q": "Kan jeg bruke appen uten posisjonstilgang?",
@@ -374,7 +374,7 @@
       },
       {
         "q": "Hvor lagres notatene mine? Synkroniseres de med andre enheter?",
-        "a": "Restauranter, besøkslogg og bilder lagres bare på denne iPhonen. Den nåværende versjonen støtter ikke synkronisering med andre enheter, og iCloud-sikkerhetskopiering og -gjenoppretting i innstillingene fungerer ikke ennå. En full sikkerhetskopi av iPhonen (i iCloud eller på en datamaskin) tar med appdataene."
+        "a": "Restauranter, besøkslogg og bilder lagres på denne iPhonen og synkroniseres ikke med andre enheter. Med Pro kan du sikkerhetskopiere notatene dine, bilder også, til din egen iCloud og gjenopprette dem fra innstillingene. Alle kan eksportere restauranter og besøk som en CSV-fil under Innstillinger > Databehandling, og en full sikkerhetskopi av iPhonen (i iCloud eller på en datamaskin) tar også med appdataene."
       },
       {
         "q": "Jeg vil slette alt",
@@ -382,11 +382,11 @@
       },
       {
         "q": "Er notatene mine der hvis jeg sletter og installerer appen på nytt?",
-        "a": "Nei. Siden alt bare lagres på enheten, forsvinner det sammen med appen. Tenk deg om før du sletter den."
+        "a": "Når du sletter appen, forsvinner også det som er lagret på enheten. Har du tatt sikkerhetskopi til iCloud med Pro, kan du gjenopprette det, bilder også, fra innstillingene når appen er installert på nytt. Tenk deg om før du sletter den."
       },
       {
-        "q": "Er alt virkelig gratis?",
-        "a": "Ja. Alle funksjoner er gratis, uten reklame og uten konto. «Støtt utvikleren» i innstillingene er helt frivillig og låser ikke opp noe."
+        "q": "Hvor mye kan jeg bruke gratis?",
+        "a": "Gratis kan du lagre opptil 30 restauranter, Besøkt og Vil prøve til sammen, og bruke besøkslogg, smaksvurdering for hver type mat, veibeskrivelse, ringing og CSV-eksport. Alt over 30 steder kan du alltid se, endre og slette. Plus gir ubegrenset antall restauranter, egne mattyper, Topp 6 og redigering av smaksprofilen, og Pro legger til påminnelser etter besøket og iCloud-sikkerhetskopi. Velg abonnement per uke, måned eller år, eller betal én gang for alltid. Har du allerede kjøpt appen, beholder du Pro for alltid. Ingen reklame, ingen konto."
       }
     ]
   },

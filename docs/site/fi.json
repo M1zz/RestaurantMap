@@ -1,11 +1,11 @@
 {
   "title": "Insaeng: hyvät ruokapaikat yhdellä kartalla",
-  "description": "Kerää kartalle ravintolat, joissa olet käynyt ja joihin haluat, ja kirjaa annos, kuvat ja maku. Ilmainen, tiedot pysyvät iPhonessasi.",
+  "description": "Kerää kartalle ravintolat, joissa olet käynyt ja joihin haluat, ja kirjaa annos, kuvat ja maku. Ilmainen 30 paikkaan asti, tiedot pysyvät iPhonessasi.",
   "hero": {
     "headline": "Hyvät ruokapaikat\neivät enää unohdu",
     "lead": "Merkitse kartalle ravintolat, joissa olet käynyt ja jotka haluat kokeilla, ja kirjaa joka käynnillä, mitä tilasit, kuvat ja maku. Kun et tiedä, missä syödä, vastaus löytyy omista muistiinpanoistasi.",
     "cta": "Lataa ilmaiseksi App Storesta",
-    "note": "Kaikki toiminnot ovat ilmaisia. Ei rekisteröitymistä, tiedot pysyvät iPhonessasi."
+    "note": "30 ravintolaa voit kirjata ilmaiseksi. Ei rekisteröitymistä, tiedot pysyvät iPhonessasi."
   },
   "demo": {
     "title": "Arvioi annos",
@@ -280,7 +280,7 @@
   "features": [
     {
       "title": "Käyty, Haluan käydä ja oma Michelin",
-      "text": "Hae kartalta tai napauta lähellä olevaa paikkaa, niin se tallentuu heti. Pidä käydyt paikat erillään niistä, joita haluat kokeilla, ja järjestä kuusi suosikkiasi sijoille 1–6.\nKun joku kysyy hyvää paikkaa, näytä vain lista.",
+      "text": "Hae kartalta tai napauta lähellä olevaa paikkaa, niin se tallentuu heti. Pidä käydyt paikat erillään niistä, joita haluat kokeilla, ja järjestä Plussalla kuusi suosikkiasi sijoille 1–6.\nKun joku kysyy hyvää paikkaa, näytä vain lista.",
       "shot": "02-list"
     },
     {
@@ -290,7 +290,7 @@
     },
     {
       "title": "Minne kannattaa palata, näkyy numeroina",
-      "text": "Käyntien karttuessa jokainen ravintola näyttää kokonaisarvion kaikkien käyntien keskiarvosta sekä Riio Michelin -pisteet sadasta, joissa yhdistyvät tähdet ja tyytyväisyys.\nKun lähdet tallennetusta ravintolasta, hetken päästä tulee muistutus kirjata käynti.",
+      "text": "Käyntien karttuessa jokainen ravintola näyttää kokonaisarvion kaikkien käyntien keskiarvosta sekä Riio Michelin -pisteet sadasta, joissa yhdistyvät tähdet ja tyytyväisyys.\nPro-tilauksella saat hetki sen jälkeen, kun lähdet tallennetusta ravintolasta, muistutuksen kirjata käynti.",
       "shot": "03-detail"
     }
   ],
@@ -343,7 +343,7 @@
         "Hapokkuus, Täyteläisyys, Maku, Jälkimaku, Makeus, Tasapaino"
       ]
     ],
-    "note": "Muut ruoat arvioidaan ensimmäisen rivin yleisillä kohdilla. Voit myös luoda omia luokkia."
+    "note": "Muut ruoat arvioidaan ensimmäisen rivin yleisillä kohdilla. Plussalla voit myös luoda omia luokkia."
   },
   "faq": {
     "title": "Usein kysytyt kysymykset",
@@ -354,7 +354,7 @@
       },
       {
         "q": "Mitä ovat Käyty, Haluan käydä ja Top 6?",
-        "a": "Käyty – ravintolat, joissa olet jo käynyt. Niihin voi kirjata käyntejä. Haluan käydä – ravintolat, joihin haluat joskus mennä. Käynnin jälkeen vaihda ravintola käydyksi sen tietonäkymässä. Top 6 (Oma Michelin) – kuusi suosikkiravintolaasi järjestyksessä sijoilta 1–6. Haluan käydä -listalla olevaa ravintolaa ei voi lisätä Top 6:een."
+        "a": "Käyty – ravintolat, joissa olet jo käynyt. Niihin voi kirjata käyntejä. Haluan käydä – ravintolat, joihin haluat joskus mennä. Käynnin jälkeen vaihda ravintola käydyksi sen tietonäkymässä. Top 6 (Oma Michelin) – kuusi suosikkiravintolaasi järjestyksessä sijoilta 1–6. Haluan käydä -listalla olevaa ravintolaa ei voi lisätä Top 6:een. Top 6 kuuluu Plussaan."
       },
       {
         "q": "Onko maku pakko arvioida?",
@@ -362,7 +362,7 @@
       },
       {
         "q": "Milloin ilmoitus ”Millainen tämänpäiväinen käyntisi oli?” tulee?",
-        "a": "Kun olet viipynyt tallentamasi ravintolan lähellä yli 5 minuuttia ja lähdet, ilmoitus tulee noin 40 minuutin kuluttua. Toiminto vaatii, että sijainnin käyttö on asetettu tilaan ”Aina” ja ilmoitukset on sallittu. Jos et halua ilmoitusta, poista ilmoitukset käytöstä kohdassa Asetukset > Apit > Insaeng tai vaihda sijainniksi ”Kun appia käytetään”. Sijaintia tarkistetaan vain laitteella. Liikkumistasi ei tallenneta eikä lähetetä minnekään."
+        "a": "Tämä on Pro-ominaisuus. Kun olet viipynyt tallentamasi ravintolan lähellä yli 5 minuuttia ja lähdet, ilmoitus tulee noin 40 minuutin kuluttua. Toiminto vaatii, että sijainnin käyttö on asetettu tilaan ”Aina” ja ilmoitukset on sallittu. Jos et halua ilmoitusta, poista ilmoitukset käytöstä kohdassa Asetukset > Apit > Insaeng tai vaihda sijainniksi ”Kun appia käytetään”. Sijaintia tarkistetaan vain laitteella. Liikkumistasi ei tallenneta eikä lähetetä minnekään."
       },
       {
         "q": "Voinko käyttää sovellusta ilman sijaintilupaa?",
@@ -374,7 +374,7 @@
       },
       {
         "q": "Mihin merkinnät tallentuvat? Synkronoituvatko ne muille laitteille?",
-        "a": "Ravintolat, käyntimerkinnät ja kuvat tallentuvat vain tähän iPhoneen. Nykyinen versio ei tue synkronointia muiden laitteiden kanssa, eikä asetusten iCloud-varmuuskopiointi ja -palautus vielä toimi. Sovelluksen tiedot sisältyvät kuitenkin iPhonen täyteen varmuuskopioon (iCloud-varmuuskopio tai varmuuskopio tietokoneelle)."
+        "a": "Ravintolat, käyntimerkinnät ja kuvat tallentuvat tähän iPhoneen, eivätkä ne synkronoidu muille laitteille. Prolla voit varmuuskopioida merkintäsi kuvineen omaan iCloudiisi ja palauttaa ne asetuksista. Kuka tahansa voi viedä ravintolat ja käynnit CSV-tiedostoksi kohdassa Asetukset > Tietojen hallinta, ja sovelluksen tiedot sisältyvät myös iPhonen täyteen varmuuskopioon (iCloud-varmuuskopio tai varmuuskopio tietokoneelle)."
       },
       {
         "q": "Haluan poistaa kaikki merkinnät",
@@ -382,11 +382,11 @@
       },
       {
         "q": "Säilyvätkö merkinnät, jos poistan sovelluksen ja asennan sen uudelleen?",
-        "a": "Eivät. Merkinnät tallentuvat vain laitteelle, joten ne poistuvat sovelluksen mukana. Mieti siis tarkkaan ennen kuin poistat sovelluksen."
+        "a": "Kun poistat sovelluksen, laitteelle tallennetut merkinnät poistuvat sen mukana. Jos olet varmuuskopioinut ne iCloudiin Prolla, voit palauttaa ne kuvineen asetuksista asennettuasi sovelluksen uudelleen. Mieti siis tarkkaan ennen kuin poistat sovelluksen."
       },
       {
-        "q": "Onko kaikki todella ilmaista?",
-        "a": "Kyllä. Kaikki toiminnot ovat ilmaisia, ilman mainoksia ja ilman tiliä. Asetusten ”Tue kehittäjää” on täysin vapaaehtoinen eikä avaa mitään lisää."
+        "q": "Mitä voin käyttää ilmaiseksi?",
+        "a": "Ilmaiseksi voit tallentaa enintään 30 ravintolaa, Käyty ja Haluan käydä yhteensä, ja käyttää käyntimerkintöjä, ruokalajikohtaisia makuarvioita, reittiohjeita, soittamista ja CSV-vientiä. Yli 30 paikan merkintöjä voit aina katsoa, muokata ja poistaa. Plus tuo rajattomasti ravintoloita, omat ruokatyypit, Top 6:n ja makuprofiilin muokkauksen, ja Pro lisää niihin käynnin jälkeiset muistutukset ja iCloud-varmuuskopion. Valitse viikko-, kuukausi- tai vuositilaus tai kertamaksu, joka on voimassa ikuisesti. Jos olet jo ostanut sovelluksen, Pro on sinun pysyvästi. Ei mainoksia, ei tiliä."
       }
     ]
   },

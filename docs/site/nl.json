@@ -1,11 +1,11 @@
 {
   "title": "Insaeng: je beste maaltijden op één kaart",
-  "description": "Verzamel restaurants waar je was en die je wilt proberen op een kaart, en noteer gerecht, foto’s en smaak. Gratis en alleen op je iPhone.",
+  "description": "Verzamel restaurants waar je was en die je wilt proberen op een kaart, en noteer gerecht, foto’s en smaak. Gratis tot 30 plekken, alles op je iPhone.",
   "hero": {
     "headline": "Nooit meer vergeten\nwaar het zo lekker was",
     "lead": "Zet de restaurants waar je was en die je wilt proberen op de kaart, en noteer bij elk bezoek wat je bestelde, foto’s en de smaak. Weet je niet waar je wilt eten? Je eigen notities hebben het antwoord.",
     "cta": "Gratis downloaden in de App Store",
-    "note": "Alle functies zijn gratis. Geen registratie, alles blijft op je iPhone."
+    "note": "Tot 30 restaurants leg je gratis vast. Geen registratie, alles blijft op je iPhone."
   },
   "demo": {
     "title": "Beoordeel een gerecht",
@@ -280,7 +280,7 @@
   "features": [
     {
       "title": "Bezocht, Wil ik proeven en je eigen Michelin",
-      "text": "Zoek op de kaart of tik op een plek in de buurt en hij is meteen bewaard. Houd plekken waar je was apart van die je wilt proberen, en rangschik je zes favorieten van 1 tot 6.\nVraagt iemand om een tip, laat dan gewoon de lijst zien.",
+      "text": "Zoek op de kaart of tik op een plek in de buurt en hij is meteen bewaard. Houd plekken waar je was apart van die je wilt proberen, en rangschik met Plus je zes favorieten van 1 tot 6.\nVraagt iemand om een tip, laat dan gewoon de lijst zien.",
       "shot": "02-list"
     },
     {
@@ -290,7 +290,7 @@
     },
     {
       "title": "Waar je terug wilt, zie je in cijfers",
-      "text": "Na meerdere bezoeken toont elk restaurant een eindoordeel met het gemiddelde van alle bezoeken en een Riio Michelin-score op 100 die sterren en tevredenheid combineert.\nVerlaat je een bewaard restaurant, dan krijg je even later een herinnering om je bezoek te noteren.",
+      "text": "Na meerdere bezoeken toont elk restaurant een eindoordeel met het gemiddelde van alle bezoeken en een Riio Michelin-score op 100 die sterren en tevredenheid combineert.\nMet Pro krijg je even nadat je een bewaard restaurant verlaat een herinnering om je bezoek te noteren.",
       "shot": "03-detail"
     }
   ],
@@ -343,7 +343,7 @@
         "Zuurgraad, Body, Smaak, Nasmaak, Zoetheid, Balans"
       ]
     ],
-    "note": "Al het andere eten beoordeel je met de algemene punten uit de eerste rij. Je kunt ook eigen categorieën maken."
+    "note": "Al het andere eten beoordeel je met de algemene punten uit de eerste rij. Met Plus kun je ook eigen categorieën maken."
   },
   "faq": {
     "title": "Veelgestelde vragen",
@@ -354,7 +354,7 @@
       },
       {
         "q": "Wat betekenen Geweest, Nog proberen en Top 6?",
-        "a": "Geweest: restaurants waar je al bent geweest. Hier kun je je bezoeken vastleggen. Nog proberen: restaurants die je ooit nog wilt proberen. Ben je er geweest, zet het dan op het detailscherm van het restaurant over naar Geweest. Top 6 (jouw Michelin): rangschik je zes favoriete restaurants van 1 tot en met 6. Restaurants onder Nog proberen kunnen niet in je top 6."
+        "a": "Geweest: restaurants waar je al bent geweest. Hier kun je je bezoeken vastleggen. Nog proberen: restaurants die je ooit nog wilt proberen. Ben je er geweest, zet het dan op het detailscherm van het restaurant over naar Geweest. Top 6 (jouw Michelin): rangschik je zes favoriete restaurants van 1 tot en met 6. Restaurants onder Nog proberen kunnen niet in je top 6. De top 6 hoort bij Plus."
       },
       {
         "q": "Moet ik een smaakbeoordeling invullen?",
@@ -362,7 +362,7 @@
       },
       {
         "q": "Wanneer krijg ik de melding ‘Hoe was je bezoek vandaag?’",
-        "a": "Als je langer dan 5 minuten bij een bewaard restaurant bent geweest en weer vertrekt, krijg je ongeveer 40 minuten later een melding. Hiervoor moet je locatietoegang op ‘Altijd’ zetten en meldingen toestaan. Wil je deze meldingen niet, zet dan in Instellingen > Apps > Insaeng de meldingen uit of zet locatietoegang op ‘Bij gebruik van app’. Je locatie wordt alleen op je toestel gecontroleerd. Je route wordt niet bewaard en nergens naartoe gestuurd."
+        "a": "Dit is een Pro-functie. Als je langer dan 5 minuten bij een bewaard restaurant bent geweest en weer vertrekt, krijg je ongeveer 40 minuten later een melding. Hiervoor moet je locatietoegang op ‘Altijd’ zetten en meldingen toestaan. Wil je deze meldingen niet, zet dan in Instellingen > Apps > Insaeng de meldingen uit of zet locatietoegang op ‘Bij gebruik van app’. Je locatie wordt alleen op je toestel gecontroleerd. Je route wordt niet bewaard en nergens naartoe gestuurd."
       },
       {
         "q": "Werkt de app ook zonder locatietoegang?",
@@ -374,7 +374,7 @@
       },
       {
         "q": "Waar worden mijn gegevens bewaard? Worden ze gesynchroniseerd met andere apparaten?",
-        "a": "Je restaurants, bezoeken en foto's worden alleen op deze iPhone bewaard. De huidige versie synchroniseert niet met andere apparaten, en de iCloud-back-up en -herstelfunctie in de instellingen werkt nog niet. Een volledige back-up van je iPhone (via iCloud of via je computer) bevat de appgegevens wel."
+        "a": "Je restaurants, bezoeken en foto's worden op deze iPhone bewaard en niet gesynchroniseerd met andere apparaten. Met Pro kun je je gegevens, inclusief foto's, via de instellingen in je eigen iCloud back-uppen en terugzetten. Iedereen kan restaurants en bezoeken exporteren als CSV-bestand via Instellingen > Gegevensbeheer, en een volledige back-up van je iPhone (via iCloud of via je computer) bevat de appgegevens ook."
       },
       {
         "q": "Ik wil al mijn gegevens wissen",
@@ -382,11 +382,11 @@
       },
       {
         "q": "Blijven mijn gegevens bewaard als ik de app verwijder en opnieuw installeer?",
-        "a": "Nee. Je gegevens staan alleen op je toestel, dus als je de app verwijdert, worden ze ook gewist. Denk hier goed over na voordat je de app verwijdert."
+        "a": "Als je de app verwijdert, worden de gegevens op je toestel ook gewist. Heb je met Pro een back-up in iCloud gemaakt, dan kun je die na het opnieuw installeren via de instellingen terugzetten, inclusief foto's. Denk hier goed over na voordat je de app verwijdert."
       },
       {
-        "q": "Is echt alles gratis?",
-        "a": "Ja. Alle functies zijn gratis, zonder advertenties en zonder account. ‘Steun de ontwikkelaar’ in de instellingen is helemaal vrijwillig en ontgrendelt niets."
+        "q": "Wat kan ik gratis doen?",
+        "a": "Gratis bewaar je tot 30 restaurants, Geweest en Nog proberen samen, en gebruik je bezoeken, smaakbeoordelingen per soort eten, routebeschrijving, bellen en CSV-export. Alles boven de 30 plekken kun je altijd bekijken, aanpassen en verwijderen. Plus voegt onbeperkt restaurants, eigen soorten eten, de top 6 en het aanpassen van je smaakprofiel toe; Pro voegt daar herinneringen na een bezoek en iCloud-back-up aan toe. Kies een abonnement per week, maand of jaar, of betaal één keer voor altijd. Heb je de app al gekocht, dan houd je Pro voor altijd. Geen advertenties, geen account."
       }
     ]
   },

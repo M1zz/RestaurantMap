@@ -5,6 +5,8 @@ struct CustomCategorySettingsView: View {
     @State private var showingAddSheet = false
     @State private var showingDeleteAlert = false
     @State private var categoryToDelete: FoodCategory?
+    @State private var purchases = Purchases.shared
+    @State private var paywallFeature: RestaurantFeature?
 
     var body: some View {
         List {
@@ -29,10 +31,15 @@ struct CustomCategorySettingsView: View {
                 }
                 .onDelete(perform: deleteCategories)
 
+                // 이미 더한 종류는 그대로 쓰고 지울 수 있다. 새로 더하는 것만 Plus.
                 Button {
-                    showingAddSheet = true
+                    if purchases.allows(.customCategory) {
+                        showingAddSheet = true
+                    } else {
+                        paywallFeature = .customCategory
+                    }
                 } label: {
-                    Label("새 종류 추가", systemImage: "plus.circle.fill")
+                    LockedLabel(title: "새 종류 추가", systemImage: "plus.circle.fill", feature: .customCategory)
                 }
             } header: {
                 Text("내가 추가한 종류")
@@ -47,6 +54,7 @@ struct CustomCategorySettingsView: View {
         .sheet(isPresented: $showingAddSheet) {
             AddCustomCategoryView()
         }
+        .paywall(for: $paywallFeature)
     }
 
     private func deleteCategories(at offsets: IndexSet) {

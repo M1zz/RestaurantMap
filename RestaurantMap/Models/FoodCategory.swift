@@ -285,6 +285,15 @@ class FoodCategoryRepository: ObservableObject {
         saveCustomCategories()
     }
 
+    /// iCloud 백업에서 되살린 종류를 더한다. 이미 있는 것(같은 id)은 그대로 둔다.
+    func mergeCustomCategories(_ categories: [FoodCategory]) {
+        let known = Set(customCategories.map(\.id))
+        let added = categories.filter { $0.isCustom && !known.contains($0.id) }
+        guard !added.isEmpty else { return }
+        customCategories.append(contentsOf: added)
+        saveCustomCategories()
+    }
+
     func findCategory(by id: UUID) -> FoodCategory? {
         if let builtIn = Self.builtInCategories.first(where: { $0.id == id }) {
             return builtIn

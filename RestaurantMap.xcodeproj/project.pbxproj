@@ -93,6 +93,10 @@
 		BCD42C458D49EBB6323B677B /* AppShortcuts.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 456D6B249D1FA6B6D46886F4 /* AppShortcuts.xcstrings */; };
 		EF58C461041A18D03924B4D3 /* LeeoKit in Frameworks */ = {isa = PBXBuildFile; productRef = EA31E41C51A96BFB1501A4EF /* LeeoKit */; };
 		F3FEC8CF47B74E084FAE9776 /* RestaurantMapRoadmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5D58AA1008E7DFAC23E8AB /* RestaurantMapRoadmap.swift */; };
+		151514A90D2E4946AE362F3D /* RestaurantPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C64975CA314B3499093F64 /* RestaurantPlan.swift */; };
+		77DACCC5DB194131A765577B /* Purchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A219B8DCC8D437793BA34E6 /* Purchases.swift */; };
+		9C9CE270D40F482D9D22F474 /* RestaurantExport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A098629C0D400DBFE7ADB4 /* RestaurantExport.swift */; };
+		A30AA134B7BF40F3AAEAD4CC /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62444744C4054ABCBC3AB63E /* PaywallView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,6 +140,11 @@
 		E98A59A68B9CAA9DA38753A9 /* Localizable.xcstrings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		F7A40CB361376D1A3B48AD2E /* PhotoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMap/Views/Components/PhotoDetailView.swift; sourceTree = "<group>"; };
 		FE5D58AA1008E7DFAC23E8AB /* RestaurantMapRoadmap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RestaurantMapRoadmap.swift; sourceTree = "<group>"; };
+		49C64975CA314B3499093F64 /* RestaurantPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantPlan.swift; sourceTree = "<group>"; };
+		0A219B8DCC8D437793BA34E6 /* Purchases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purchases.swift; sourceTree = "<group>"; };
+		68A098629C0D400DBFE7ADB4 /* RestaurantExport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantExport.swift; sourceTree = "<group>"; };
+		62444744C4054ABCBC3AB63E /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		85CA67302DD84009BCCD521C /* Products.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Products.storekit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +210,9 @@
 		1A000028 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				68A098629C0D400DBFE7ADB4 /* RestaurantExport.swift */,
+				0A219B8DCC8D437793BA34E6 /* Purchases.swift */,
+				49C64975CA314B3499093F64 /* RestaurantPlan.swift */,
 				17E8C84619F1DE96AB117EB1 /* PhotoStorageManager.swift */,
 				1A000026 /* VisitReminderManager.swift */,
 				1A00002A /* CloudKitBackupService.swift */,
@@ -219,6 +231,7 @@
 		1AFFFFF5 /* RestaurantMap */ = {
 			isa = PBXGroup;
 			children = (
+				85CA67302DD84009BCCD521C /* Products.storekit */,
 				9C994B0B2EEBF60500FBC8F6 /* RestaurantMap.entitlements */,
 				5861852A2EE08D8F00320D6B /* Info.plist */,
 				586184B72EE0838100320D6B /* GoogleService-Info.plist */,
@@ -253,6 +266,7 @@
 		1AFFFFF7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				62444744C4054ABCBC3AB63E /* PaywallView.swift */,
 				1A000006 /* MapView.swift */,
 				1A000008 /* RestaurantListView.swift */,
 				1A00000A /* AddRestaurantView.swift */,
@@ -388,6 +402,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A30AA134B7BF40F3AAEAD4CC /* PaywallView.swift in Sources */,
+				9C9CE270D40F482D9D22F474 /* RestaurantExport.swift in Sources */,
+				77DACCC5DB194131A765577B /* Purchases.swift in Sources */,
+				151514A90D2E4946AE362F3D /* RestaurantPlan.swift in Sources */,
 				1A000003 /* ContentView.swift in Sources */,
 				1A000005 /* Restaurant.swift in Sources */,
 				1A000007 /* MapView.swift in Sources */,

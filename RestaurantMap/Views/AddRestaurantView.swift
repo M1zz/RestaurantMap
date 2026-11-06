@@ -32,6 +32,12 @@ struct AddRestaurantView: View {
     @State private var region: MKCoordinateRegion
     @State private var showingMap = false
 
+    /// 무료 한도(식당 30곳)를 세는 데 쓴다. 가본 곳 · 가볼 곳을 합친다.
+    @Query private var savedRestaurants: [Restaurant]
+    @State private var purchases = Purchases.shared
+    @State private var paywallFeature: RestaurantFeature?
+    @State private var pendingSave = false
+
     private let logger = Logger(subsystem: "com.restaurantmap", category: "AddRestaurant")
 
     private let iconOptions = [
@@ -187,7 +193,18 @@ struct AddRestaurantView: View {
                 Section("카테고리 설정") {
                     // 탑6는 가본곳일 때만 설정 가능
                     if listType == .visited {
-                        Toggle("나의 최애 탑6", isOn: $isTop6)
+                        Toggle(isOn: Binding(
+                            get: { isTop6 },
+                            set: { on in
+                                if on && !purchases.allows(.top6) {
+                                    paywallFeature = .top6
+                                } else {
+                                    isTop6 = on
+                                }
+                            }
+                        )) {
+                            LockedLabel(title: "나의 최애 탑6", feature: .top6)
+                        }
 
                         if isTop6 {
                             Picker("랭킹", selection: $top6Rank) {
@@ -276,13 +293,26 @@ struct AddRestaurantView: View {
                 
                 ToolbarItem(placement: .confirmationAction) {
                     Button("저장", systemImage: "checkmark") {
-                        saveRestaurant()
+                        if purchases.canAddRestaurant(having: savedRestaurants.count) {
+                            saveRestaurant()
+                        } else {
+                            // 적은 내용은 그대로 둔다. Plus 를 열고 돌아오면 바로 저장된다.
+                            paywallFeature = .restaurants
+                        }
                     }
                     .disabled(name.isEmpty || address.isEmpty)
                 }
             }
             .sheet(isPresented: $showingMap) {
                 MapSelectionView(coordinate: $selectedCoordinate)
+            }
+            .sheet(item: $paywallFeature, onDismiss: {
+                // 막혀서 페이월에 갔다가 열고 돌아왔으면 하던 저장을 마친다.
+                if pendingSave, purchases.canAddRestaurant(having: savedRestaurants.count) { saveRestaurant() }
+                pendingSave = false
+            }) { feature in
+                PaywallView(highlight: feature)
+                    .onAppear { pendingSave = feature == .restaurants }
             }
             .onAppear {
                 logger.info("AddRestaurantView appeared")

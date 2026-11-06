@@ -4,13 +4,23 @@ import SwiftData
 import OSLog
 
 /// CloudKit을 사용한 데이터 백업/복구 서비스
+///
+/// 내 iCloud 개인 데이터베이스(`iCloud.com.Ysoup.restaurantmap`)에 백업 한 벌을 둔다.
+///  · `BackupData/latest` — 식당 · 방문 기록 · 메뉴 · 취향 · 직접 추가한 음식 종류를 담은 JSON 파일(에셋)
+///  · `BackupPhoto/photo.<방문 사진 ID>.<파일명>` — 방문 사진 한 장씩. 이미 올린 사진은 다시 올리지 않는다.
+/// 레코드 ID 로만 읽고 써서 쿼리 인덱스가 필요 없다. ⚠️ 두 레코드 타입을 Production 스키마에 배포해야 한다.
+///
+/// 백업은 Pro, 되살리기는 누구나 (내 기록을 되찾는 길은 잠그지 않는다).
 @Observable
 class CloudKitBackupService {
     static let shared = CloudKitBackupService()
 
     private let logger = Logger(subsystem: "com.restaurantmap", category: "CloudKitBackup")
 
+    private let containerIdentifier = "iCloud.com.Ysoup.restaurantmap"
     private let recordType = "BackupData"
+    private let photoRecordType = "BackupPhoto"
+    private var backupRecordID: CKRecord.ID { CKRecord.ID(recordName: "latest") }
 
     // 상태
     var isBackingUp = false
@@ -25,9 +35,7 @@ class CloudKitBackupService {
 
     // CloudKit 컨테이너를 안전하게 가져오는 메서드
     private func getContainer() -> CKContainer? {
-        // CloudKit Capability가 추가되지 않았으면 nil 반환
-        // 이렇게 하면 EXC_BREAKPOINT 에러를 완전히 회피
-        return nil  // 임시로 비활성화 - CloudKit Capability를 추가한 후 CKContainer.default()로 변경
+        CKContainer(identifier: containerIdentifier)
     }
 
     // MARK: - Public Methods
@@ -35,8 +43,8 @@ class CloudKitBackupService {
     /// iCloud 계정 상태 확인
     func checkiCloudStatus() async -> Bool {
         guard let container = getContainer() else {
-            errorMessage = String(localized: "CloudKit을 사용할 수 없습니다.\n\nXcode에서 Signing & Capabilities 탭으로 이동하여:\n1. '+ Capability' 클릭\n2. 'iCloud' 추가\n3. 'CloudKit' 체크박스 활성화")
-            logger.error("❌ CloudKit Capability가 추가되지 않음")
+            errorMessage = BackupError.cloudKitNotAvailable.localizedDescription
+            logger.error("❌ CloudKit 컨테이너를 열지 못함")
             return false
         }
 
@@ -84,15 +92,20 @@ class CloudKitBackupService {
             progressMessage = String(localized: "데이터 수집 중...")
             let backupData = try await fetchLocalData(modelContainer: modelContainer)
 
-            // 2. 기존 백업 삭제
-            progressMessage = String(localized: "기존 백업 정리 중...")
-            try await deleteExistingBackups()
+            // 2. 사진 올리기 (지난 백업에 이미 있는 사진은 건너뛴다)
+            progressMessage = String(localized: "사진 올리는 중...")
+            let previous = try? await fetchFromCloudKit()
+            let previousPhotos = Set(previous?.photoRecordNames ?? [])
+            try await uploadPhotos(of: backupData, skipping: previousPhotos)
 
-            // 3. 새 백업 저장
-            progressMessage = String(localized: "CloudKit에 저장 중...")
+            // 3. 새 백업 저장 (같은 자리에 덮어쓴다)
+            progressMessage = String(localized: "iCloud에 저장 중...")
             try await saveToCloudKit(data: backupData)
 
-            // 4. 마지막 백업 시간 저장
+            // 4. 이제 어느 방문에도 없는 사진은 지운다
+            try? await deletePhotos(named: previousPhotos.subtracting(backupData.photoRecordNames))
+
+            // 5. 마지막 백업 시간 저장
             lastBackupDate = Date()
             saveLastBackupDate()
 
@@ -127,13 +140,21 @@ class CloudKitBackupService {
                 return false
             }
 
-            // 2. 로컬 데이터 삭제
+            // 2. 사진을 먼저 다 받아 둔다 — 받다가 끊겨도 이 기기의 기록은 그대로 남게
+            progressMessage = String(localized: "사진 받는 중...")
+            let photos = try await downloadPhotos(of: backupData)
+            defer { try? FileManager.default.removeItem(at: photos.folder) }
+
+            // 3. 로컬 데이터 삭제
             progressMessage = String(localized: "기존 데이터 정리 중...")
             try await deleteLocalData(modelContainer: modelContainer)
 
-            // 3. 복구된 데이터 저장
+            // 4. 복구된 데이터 저장
             progressMessage = String(localized: "데이터 복구 중...")
             try await restoreLocalData(modelContainer: modelContainer, data: backupData)
+            for photo in photos.files {
+                PhotoStorageManager.shared.importPhoto(from: photo.url, filename: photo.filename, for: photo.visitID)
+            }
 
             progressMessage = String(localized: "복구 완료!")
             logger.info("복구 성공")
@@ -188,6 +209,10 @@ class CloudKitBackupService {
                     visitDate: visit.visitDate,
                     notes: visit.notes,
                     rating: visit.rating,
+                    menuItem: visit.menuItem,
+                    menuName: visit.menu?.name,
+                    photoId: visit.photoId,
+                    photoFilenames: visit.photoFilenames,
                     // 일반
                     spicy: visit.spicy,
                     boldness: visit.boldness,
@@ -301,7 +326,10 @@ class CloudKitBackupService {
                 categoryIcon: restaurant.categoryIcon,
                 foodCategoryId: restaurant.foodCategoryId,
                 isWishlist: restaurant.isWishlist,
-                visits: visits
+                visits: visits,
+                menus: (restaurant.menus ?? []).map {
+                    BackupMenu(name: $0.name, price: $0.price, menuDescription: $0.menuDescription, isSignature: $0.isSignature)
+                }
             )
             backupRestaurants.append(backupRestaurant)
         }
@@ -324,75 +352,124 @@ class CloudKitBackupService {
         return BackupData(
             restaurants: backupRestaurants,
             tasteProfiles: backupProfiles,
+            customCategories: FoodCategoryRepository.shared.customCategories,
             backupDate: Date()
         )
     }
 
-    /// CloudKit에 데이터 저장
+    /// CloudKit에 데이터 저장 — JSON 을 파일 에셋으로 (레코드 1MB 한도를 넘지 않게)
     private func saveToCloudKit(data: BackupData) async throws {
         guard let container = getContainer() else {
             throw BackupError.cloudKitNotAvailable
         }
 
-        let privateDB = container.privateCloudDatabase
-
         let encoder = JSONEncoder()
         encoder.dateEncodingStrategy = .iso8601
-        let jsonData = try encoder.encode(data)
+        let file = FileManager.default.temporaryDirectory.appendingPathComponent("backup-\(UUID().uuidString).json")
+        try encoder.encode(data).write(to: file)
+        defer { try? FileManager.default.removeItem(at: file) }
 
-        let record = CKRecord(recordType: recordType)
-        record["jsonData"] = jsonData as CKRecordValue
+        let record = CKRecord(recordType: recordType, recordID: backupRecordID)
+        record["payload"] = CKAsset(fileURL: file)
         record["backupDate"] = data.backupDate as CKRecordValue
 
-        try await privateDB.save(record)
+        try await save([record], in: container.privateCloudDatabase)
         logger.info("CloudKit에 백업 저장 완료")
     }
 
-    /// 기존 백업 삭제
-    private func deleteExistingBackups() async throws {
-        guard let container = getContainer() else {
-            throw BackupError.cloudKitNotAvailable
-        }
-
-        let privateDB = container.privateCloudDatabase
-        let query = CKQuery(recordType: recordType, predicate: NSPredicate(value: true))
-
-        let (results, _) = try await privateDB.records(matching: query)
-
-        for (recordID, _) in results {
-            try await privateDB.deleteRecord(withID: recordID)
-        }
-
-        logger.info("기존 백업 삭제 완료")
-    }
-
-    /// CloudKit에서 데이터 가져오기
+    /// CloudKit에서 데이터 가져오기. 백업이 없으면 nil.
     private func fetchFromCloudKit() async throws -> BackupData? {
         guard let container = getContainer() else {
             throw BackupError.cloudKitNotAvailable
         }
 
-        let privateDB = container.privateCloudDatabase
-        let query = CKQuery(recordType: recordType, predicate: NSPredicate(value: true))
-        query.sortDescriptors = [NSSortDescriptor(key: "backupDate", ascending: false)]
-
-        let (results, _) = try await privateDB.records(matching: query, resultsLimit: 1)
-
-        guard let (_, result) = results.first else {
+        let record: CKRecord
+        do {
+            record = try await container.privateCloudDatabase.record(for: backupRecordID)
+        } catch let error as CKError where error.code == .unknownItem {
             return nil
         }
 
-        let record = try result.get()
-
-        guard let jsonData = record["jsonData"] as? Data else {
+        guard let url = (record["payload"] as? CKAsset)?.fileURL,
+              let jsonData = try? Data(contentsOf: url) else {
             throw BackupError.invalidData
         }
 
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
-        let backupData = try decoder.decode(BackupData.self, from: jsonData)
+        return try decoder.decode(BackupData.self, from: jsonData)
+    }
 
-        return backupData
+    /// 방문 사진을 한 장씩 레코드로 올린다. `skipping` 에 있는 것(지난 백업에 이미 있는 사진)은 건너뛴다.
+    private func uploadPhotos(of data: BackupData, skipping uploaded: Set<String>) async throws {
+        guard let container = getContainer() else { throw BackupError.cloudKitNotAvailable }
+
+        var records: [CKRecord] = []
+        for visit in data.allVisits {
+            guard let photoId = visit.photoId else { continue }
+            for filename in visit.photoFilenames ?? [] {
+                let name = BackupData.photoRecordName(photoId: photoId, filename: filename)
+                guard !uploaded.contains(name),
+                      let url = PhotoStorageManager.shared.photoURL(for: filename, visitID: photoId) else { continue }
+                let record = CKRecord(recordType: photoRecordType, recordID: CKRecord.ID(recordName: name))
+                record["image"] = CKAsset(fileURL: url)
+                records.append(record)
+            }
+        }
+
+        // 한 번에 너무 많이 보내면 CloudKit 이 거절한다 — 나눠서 보낸다.
+        for start in stride(from: 0, to: records.count, by: 20) {
+            progressMessage = String(localized: "사진 올리는 중... (\(start)/\(records.count))")
+            try await save(Array(records[start..<min(start + 20, records.count)]), in: container.privateCloudDatabase)
+        }
+        logger.info("사진 \(records.count)장 올림")
+    }
+
+    /// 백업의 사진을 임시 폴더에 받아 둔다. 백업에서 사라진 사진(지워진 레코드)은 건너뛴다.
+    private func downloadPhotos(of data: BackupData) async throws -> (folder: URL, files: [(url: URL, filename: String, visitID: UUID)]) {
+        guard let container = getContainer() else { throw BackupError.cloudKitNotAvailable }
+
+        let folder = FileManager.default.temporaryDirectory.appendingPathComponent("restore-\(UUID().uuidString)", isDirectory: true)
+        try FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true)
+
+        var wanted: [(id: CKRecord.ID, filename: String, visitID: UUID)] = []
+        for visit in data.allVisits {
+            guard let photoId = visit.photoId else { continue }
+            for filename in visit.photoFilenames ?? [] {
+                wanted.append((CKRecord.ID(recordName: BackupData.photoRecordName(photoId: photoId, filename: filename)), filename, photoId))
+            }
+        }
+
+        var files: [(url: URL, filename: String, visitID: UUID)] = []
+        for start in stride(from: 0, to: wanted.count, by: 20) {
+            let batch = Array(wanted[start..<min(start + 20, wanted.count)])
+            let results = try await container.privateCloudDatabase.records(for: batch.map(\.id))
+            for item in batch {
+                guard case .success(let record)? = results[item.id],
+                      let source = (record["image"] as? CKAsset)?.fileURL else { continue }
+                let target = folder.appendingPathComponent("\(item.visitID.uuidString)-\(item.filename)")
+                try FileManager.default.copyItem(at: source, to: target)
+                files.append((target, item.filename, item.visitID))
+            }
+        }
+        return (folder, files)
+    }
+
+    private func deletePhotos(named names: Set<String>) async throws {
+        guard !names.isEmpty, let container = getContainer() else { return }
+        let ids = names.map { CKRecord.ID(recordName: $0) }
+        for start in stride(from: 0, to: ids.count, by: 100) {
+            _ = try await container.privateCloudDatabase.modifyRecords(
+                saving: [], deleting: Array(ids[start..<min(start + 100, ids.count)]))
+        }
+    }
+
+    /// 레코드를 덮어쓰며 저장한다. 하나라도 실패하면 그 오류를 던진다.
+    private func save(_ records: [CKRecord], in database: CKDatabase) async throws {
+        let (results, _) = try await database.modifyRecords(saving: records, deleting: [], savePolicy: .allKeys)
+        for (_, result) in results {
+            if case .failure(let error) = result { throw error }
+        }
     }
 
     /// 로컬 데이터 삭제
@@ -430,6 +507,9 @@ class CloudKitBackupService {
     private func restoreLocalData(modelContainer: ModelContainer, data: BackupData) throws {
         let context = modelContainer.mainContext
 
+        // 직접 추가한 음식 종류를 먼저 되살린다 — 식당이 그 종류를 가리키므로
+        FoodCategoryRepository.shared.mergeCustomCategories(data.customCategories ?? [])
+
         // Restaurant 및 Visit 복구
         for backupRestaurant in data.restaurants {
             // foodCategoryId를 FoodCategory로 변환
@@ -461,6 +541,16 @@ class CloudKitBackupService {
 
             context.insert(restaurant)
 
+            // 메뉴 복구
+            var menusByName: [String: MenuItem] = [:]
+            for backupMenu in backupRestaurant.menus ?? [] {
+                let menu = MenuItem(name: backupMenu.name, price: backupMenu.price,
+                                    menuDescription: backupMenu.menuDescription, isSignature: backupMenu.isSignature,
+                                    restaurant: restaurant)
+                context.insert(menu)
+                menusByName[menu.name] = menu
+            }
+
             // Visit 복구
             for backupVisit in backupRestaurant.visits {
                 let visit = Visit(
@@ -469,6 +559,12 @@ class CloudKitBackupService {
                     notes: backupVisit.notes,
                     rating: backupVisit.rating
                 )
+                visit.menuItem = backupVisit.menuItem ?? ""
+                visit.menu = backupVisit.menuName.flatMap { menusByName[$0] }
+                if let photoId = backupVisit.photoId {
+                    visit.photoId = photoId
+                    visit.photoFilenames = backupVisit.photoFilenames ?? []
+                }
 
                 // 일반
                 visit.spicy = backupVisit.spicy
@@ -612,7 +708,30 @@ class CloudKitBackupService {
 struct BackupData: Codable {
     let restaurants: [BackupRestaurant]
     let tasteProfiles: [BackupTasteProfile]
+    /// 직접 추가한 음식 종류 (없던 시절의 백업은 nil)
+    var customCategories: [FoodCategory]? = nil
     let backupDate: Date
+
+    var allVisits: [BackupVisit] { restaurants.flatMap(\.visits) }
+
+    /// 이 백업이 가리키는 사진 레코드 이름 전부.
+    var photoRecordNames: [String] {
+        allVisits.flatMap { visit -> [String] in
+            guard let photoId = visit.photoId else { return [] }
+            return (visit.photoFilenames ?? []).map { Self.photoRecordName(photoId: photoId, filename: $0) }
+        }
+    }
+
+    static func photoRecordName(photoId: UUID, filename: String) -> String {
+        "photo.\(photoId.uuidString).\(filename)"
+    }
+}
+
+struct BackupMenu: Codable {
+    let name: String
+    let price: Int?
+    let menuDescription: String
+    let isSignature: Bool
 }
 
 struct BackupRestaurant: Codable {
@@ -631,12 +750,18 @@ struct BackupRestaurant: Codable {
     let foodCategoryId: String
     let isWishlist: Bool
     let visits: [BackupVisit]
+    var menus: [BackupMenu]? = nil
 }
 
 struct BackupVisit: Codable {
     let visitDate: Date
     let notes: String
     let rating: Int
+    var menuItem: String? = nil
+    /// 고른 메뉴의 이름 (같은 식당의 `menus` 중 하나)
+    var menuName: String? = nil
+    var photoId: UUID? = nil
+    var photoFilenames: [String]? = nil
 
     // 일반 맛 취향
     let spicy: Double?
@@ -766,7 +891,7 @@ enum BackupError: LocalizedError {
         case .noBackupFound:
             return String(localized: "백업 데이터를 찾을 수 없습니다")
         case .cloudKitNotAvailable:
-            return String(localized: "CloudKit을 사용할 수 없습니다. Xcode에서 iCloud Capability를 추가하세요.")
+            return String(localized: "iCloud를 사용할 수 없어요. 설정에서 iCloud에 로그인했는지 확인해 주세요.")
         }
     }
 }

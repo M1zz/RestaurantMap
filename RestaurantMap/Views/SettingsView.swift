@@ -1,5 +1,6 @@
 import SwiftUI
 import SwiftData
+import StoreKit
 import LeeoKit
 
 struct SettingsView: View {
@@ -16,9 +17,17 @@ struct SettingsView: View {
 
     @Query private var restaurants: [Restaurant]
 
+    @State private var purchases = Purchases.shared
+    @State private var reminder = VisitReminderManager.shared
+    @State private var paywallFeature: RestaurantFeature?
+    @State private var showsPaywall = false
+    @State private var showsGraduation = false
+    @State private var showsManageSubscription = false
+
     var body: some View {
         NavigationStack {
             List {
+                plansSection
                 // 데이터 현황
                 Section {
                     HStack {
@@ -45,9 +54,18 @@ struct SettingsView: View {
                     } label: {
                         Label("음식 종류 관리", systemImage: "list.bullet")
                     }
+                    ShareLink(item: RestaurantExport(restaurants: restaurants),
+                              preview: SharePreview(RestaurantExport.fileName)) {
+                        Label("식당 · 방문 기록 CSV로 내보내기", systemImage: "tablecells")
+                    }
+                    .disabled(restaurants.isEmpty)
                 } header: {
                     Text("데이터 관리")
+                } footer: {
+                    Text("내보내기는 어느 칸이든 무료예요.")
                 }
+
+                reminderSection
 
                 // iCloud 백업
                 Section {
@@ -61,12 +79,16 @@ struct SettingsView: View {
                         }
                     }
 
-                    // 백업 버튼
+                    // 백업 버튼 (Pro)
                     Button {
-                        showBackupAlert = true
+                        if purchases.allows(.backup) {
+                            showBackupAlert = true
+                        } else {
+                            paywallFeature = .backup
+                        }
                     } label: {
                         HStack {
-                            Label("iCloud에 백업", systemImage: "icloud.and.arrow.up")
+                            LockedLabel(title: "iCloud에 백업", systemImage: "icloud.and.arrow.up", feature: .backup)
                             Spacer()
                             if backupService.isBackingUp {
                                 ProgressView()
@@ -75,7 +97,7 @@ struct SettingsView: View {
                     }
                     .disabled(backupService.isBackingUp || backupService.isRestoring)
 
-                    // 복구 버튼
+                    // 복구 버튼 — 내 기록을 되찾는 길은 잠그지 않는다
                     Button {
                         showRestoreAlert = true
                     } label: {
@@ -101,7 +123,7 @@ struct SettingsView: View {
                             Text(error)
                                 .foregroundColor(.red)
                         }
-                        Text("iCloud에 로그인되어 있어야 백업/복구가 가능합니다.")
+                        Text("방문 기록과 사진을 내 iCloud에 백업해요. iCloud에 로그인되어 있어야 백업/복구가 가능합니다.")
                     }
                 }
 
@@ -147,6 +169,15 @@ struct SettingsView: View {
             }
             .navigationTitle("설정")
             .navigationBarTitleDisplayMode(.inline)
+            .manageSubscriptionsSheet(isPresented: $showsManageSubscription)
+            .paywall(for: $paywallFeature)
+            .sheet(isPresented: $showsPaywall) { PaywallView() }
+            .sheet(isPresented: $showsGraduation) {
+                LeeoGraduationOfferView(graduate: purchases.product(RestaurantPlan.graduateID)) {
+                    await purchases.refresh()
+                }
+            }
+            .task { await purchases.refresh() }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("완료", systemImage: "checkmark") {
@@ -186,6 +217,82 @@ struct SettingsView: View {
                 Button("확인", role: .cancel) { }
             } message: {
                 Text(resultMessage)
+            }
+        }
+    }
+
+    // MARK: - 인생 맛집 Plus · Pro
+
+    private var plansSection: some View {
+        Section {
+            if purchases.tier == .pro {
+                Label {
+                    Text(String(localized: "\(RestaurantTier.pro.title) 사용 중"))
+                } icon: {
+                    Image(systemName: "checkmark.seal.fill").foregroundStyle(.green)
+                }
+            } else {
+                Button {
+                    showsPaywall = true
+                } label: {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(purchases.tier == .plus ? RestaurantTier.pro.title : String(localized: "인생 맛집 Plus · Pro"))
+                            .font(.body.weight(.semibold))
+                        Text(statusLine)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+            }
+            // 구독 중인 사람에게는 늘 평생으로 바꾸는 길이 있다.
+            if purchases.subscription != nil {
+                Button(LeeoLadderText.manageSubscription) { showsManageSubscription = true }
+                if purchases.product(RestaurantPlan.graduateID) != nil, !purchases.ownsLifetime(.pro) {
+                    Button(LeeoLadderText.switchToLifetimeEntry) { showsGraduation = true }
+                }
+            }
+            Button("구매 복원") {
+                Task { await purchases.restore() }
+            }
+            .disabled(purchases.isWorking)
+        } header: {
+            Text("인생 맛집 Plus · Pro")
+        } footer: {
+            if let message = purchases.failureMessage {
+                Text(message)
+            }
+        }
+    }
+
+    /// 지금 칸을 한 줄로. 아직 App Store 에 묻는 중이면 '무료'라고 단정하지 않는다.
+    private var statusLine: String {
+        guard purchases.isKnown else { return String(localized: "확인 중…") }
+        return purchases.tier == .plus
+            ? String(localized: "\(RestaurantTier.plus.title) 사용 중")
+            : String(localized: "식당 무제한, 나의 탑6, 다녀온 뒤 기록 알림, iCloud 백업")
+    }
+
+    // MARK: - 다녀온 뒤 기록 알림 (Pro)
+
+    private var reminderSection: some View {
+        Section {
+            Toggle(isOn: Binding(
+                get: { purchases.allows(.visitReminder) && reminder.wantsReminders },
+                set: { on in
+                    guard purchases.allows(.visitReminder) else {
+                        if on { paywallFeature = .visitReminder }
+                        return
+                    }
+                    reminder.wantsReminders = on
+                    Task { await reminder.apply(allowed: true) }
+                }
+            )) {
+                LockedLabel(title: "다녀온 뒤 기록 알림", systemImage: "bell.badge", feature: .visitReminder)
+            }
+        } footer: {
+            if reminder.notificationsDenied && reminder.wantsReminders {
+                Text("알림이 꺼져 있어요. 설정 앱 ▸ 알림에서 인생 맛집을 허용해 주세요.")
+            } else {
+                Text("저장한 식당에 5분 넘게 머물다 나오면 40분 뒤에 방문 기록을 남기라고 알려 드려요. 위치를 '항상' 허용해야 해요.")
             }
         }
     }

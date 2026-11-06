@@ -11,6 +11,7 @@ struct RestaurantMapApp: App {
     private let logger = Logger(subsystem: "com.restaurantmap", category: "App")
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @Environment(\.scenePhase) private var scenePhase
+    @State private var purchases = Purchases.shared
 
     init() {
         // LeeoKit — 백업 금고(예약된 복원 · 업데이트 직전 백업) · 사용량 기록 · 크래시 진단 · 익명 사용 통계 (FeedbackHub).
@@ -145,37 +146,27 @@ struct RestaurantMapApp: App {
                 // 아이폰 듀오: 접힘을 재서 아래로 흘리고, 시트 · 알림창이 접힌 선을 비키게 한다.
                 .foldAware()
                 .leeoSatisfactionCheck(RestaurantMapSpec.self)
-                .task { await RestaurantMapTip.tipJar.startStandalone() }
                 // Spotlight 에 싣는 식당을 지금 것에 맞춘다. 열 때 한 번, 뒤로 보낼 때마다.
                 .task { await RestaurantLibrary.reindex(sharedModelContainer) }
                 .onChange(of: scenePhase) { _, phase in
                     if phase == .background { Task { await RestaurantLibrary.reindex(sharedModelContainer) } }
+                    // 다른 기기에서 산 것 · 구독 만료 · 환불을 앞으로 나올 때마다 맞춘다.
+                    if phase == .active { Task { await purchases.refresh() } }
                 }
                 .task {
                     logger.info("RestaurantMap 앱 시작됨")
-
-                    // VisitReminderManager 설정 및 시작
-                    await setupVisitReminder()
+                    VisitReminderManager.shared.configure(with: sharedModelContainer)
+                    await VisitReminderManager.shared.carryOverEarlierChoice()
+                    // 칸을 App Store 에 물은 뒤에 다녀온 뒤 기록 알림을 켜거나 끈다.
+                    await purchases.refresh()
+                    await VisitReminderManager.shared.apply(allowed: purchases.allows(.visitReminder))
+                }
+                // Pro 를 사거나 구독이 끝나면 알림도 따라 켜지거나 꺼진다.
+                .onChange(of: purchases.allows(.visitReminder)) { _, allowed in
+                    Task { await VisitReminderManager.shared.apply(allowed: allowed) }
                 }
         }
         .modelContainer(sharedModelContainer)
-    }
-
-    /// 방문 리마인더 서비스 설정
-    private func setupVisitReminder() async {
-        let reminderManager = VisitReminderManager.shared
-
-        // ModelContainer 설정
-        reminderManager.configure(with: sharedModelContainer)
-
-        // 알림 권한 요청
-        let granted = await reminderManager.requestNotificationPermission()
-        if granted {
-            logger.info("알림 권한 허용됨, 위치 모니터링 시작")
-            reminderManager.startMonitoring()
-        } else {
-            logger.warning("알림 권한이 거부되어 방문 리마인더가 비활성화됨")
-        }
     }
 }
 

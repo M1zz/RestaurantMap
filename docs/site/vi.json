@@ -1,11 +1,11 @@
 {
   "title": "Insaeng: lưu những quán bạn đã ăn lên bản đồ",
-  "description": "Gom quán đã đến và muốn đến lên bản đồ, mỗi lần ghé ghi món, ảnh và hương vị. Miễn phí, dữ liệu chỉ nằm trên iPhone của bạn.",
+  "description": "Gom quán đã đến và muốn đến lên bản đồ, mỗi lần ghé ghi món, ảnh và hương vị. Miễn phí tới 30 quán, dữ liệu nằm trên iPhone của bạn.",
   "hero": {
     "headline": "Quán ngon đã ghé,\nkhông còn quên nữa",
     "lead": "Ghim lên bản đồ những quán đã đến và những quán muốn thử, mỗi lần ghé lại ghi món đã gọi, ảnh và hương vị. Khi phân vân không biết ăn ở đâu, chính ghi chép của bạn sẽ trả lời.",
     "cta": "Tải miễn phí trên App Store",
-    "note": "Mọi tính năng đều miễn phí. Không cần đăng ký, dữ liệu chỉ nằm trên iPhone của bạn."
+    "note": "Lưu miễn phí tới 30 quán. Không cần đăng ký, dữ liệu nằm trên iPhone của bạn."
   },
   "demo": {
     "title": "Thử chấm điểm một món",
@@ -280,7 +280,7 @@
   "features": [
     {
       "title": "Đã đến, Muốn đến và Michelin của riêng bạn",
-      "text": "Tìm trên bản đồ hoặc chạm vào một địa điểm gần đó là lưu ngay. Tách riêng quán đã đến với quán muốn thử, và xếp hạng sáu quán yêu thích nhất từ 1 đến 6.\nKhi ai đó hỏi quán ngon, chỉ cần mở danh sách này ra.",
+      "text": "Tìm trên bản đồ hoặc chạm vào một địa điểm gần đó là lưu ngay. Tách riêng quán đã đến với quán muốn thử, và với Plus, xếp hạng sáu quán yêu thích nhất từ 1 đến 6.\nKhi ai đó hỏi quán ngon, chỉ cần mở danh sách này ra.",
       "shot": "02-list"
     },
     {
@@ -290,7 +290,7 @@
     },
     {
       "title": "Quán đáng quay lại, nhìn số là biết",
-      "text": "Ghé nhiều lần, trang của quán sẽ hiện nhận xét chung tính trung bình mọi lần ghé, cùng Điểm Michelin Riio trên thang 100 kết hợp số sao và mức hài lòng.\nRời một quán đã lưu, ít phút sau sẽ có thông báo nhắc bạn ghi lại.",
+      "text": "Ghé nhiều lần, trang của quán sẽ hiện nhận xét chung tính trung bình mọi lần ghé, cùng Điểm Michelin Riio trên thang 100 kết hợp số sao và mức hài lòng.\nVới Pro, rời một quán đã lưu, ít phút sau sẽ có thông báo nhắc bạn ghi lại.",
       "shot": "03-detail"
     }
   ],
@@ -343,7 +343,7 @@
         "Độ chua, Độ đậm, Hương vị, Hậu vị, Độ ngọt, Cân bằng"
       ]
     ],
-    "note": "Các món khác được chấm theo tiêu chí chung ở dòng đầu tiên. Bạn cũng có thể tự tạo danh mục món."
+    "note": "Các món khác được chấm theo tiêu chí chung ở dòng đầu tiên. Với Plus, bạn cũng có thể tự tạo danh mục món."
   },
   "faq": {
     "title": "Câu hỏi thường gặp",
@@ -354,7 +354,7 @@
       },
       {
         "q": "“Đã đến”, “Muốn đến” và Top 6 là gì?",
-        "a": "Đã đến – Những quán bạn đã ghé. Bạn có thể ghi nhật ký ghé quán. Muốn đến – Những quán bạn muốn ghé một ngày nào đó. Sau khi đi, hãy chuyển sang “Đã đến” trong màn hình chi tiết của quán. Top 6 (Michelin của tôi) – Xếp hạng sáu quán bạn yêu thích nhất từ hạng 1 đến hạng 6. Quán trong danh sách “Muốn đến” không thể đặt vào Top 6."
+        "a": "Đã đến – Những quán bạn đã ghé. Bạn có thể ghi nhật ký ghé quán. Muốn đến – Những quán bạn muốn ghé một ngày nào đó. Sau khi đi, hãy chuyển sang “Đã đến” trong màn hình chi tiết của quán. Top 6 (Michelin của tôi) – Xếp hạng sáu quán bạn yêu thích nhất từ hạng 1 đến hạng 6. Quán trong danh sách “Muốn đến” không thể đặt vào Top 6. Top 6 là tính năng của Plus."
       },
       {
         "q": "Có bắt buộc phải đánh giá hương vị không?",
@@ -362,7 +362,7 @@
       },
       {
         "q": "Khi nào thông báo “Hôm nay ghé quán thế nào?” xuất hiện?",
-        "a": "Nếu bạn ở gần một quán đã lưu hơn 5 phút rồi rời đi, khoảng 40 phút sau thông báo sẽ đến. Tính năng này cần cho phép vị trí “Luôn luôn” và cho phép thông báo. Nếu không muốn nhận thông báo, hãy tắt thông báo trong Cài đặt > Ứng dụng > Insaeng hoặc đổi vị trí sang “Khi dùng ứng dụng”. Việc kiểm tra vị trí chỉ diễn ra trên thiết bị; ứng dụng không lưu lộ trình di chuyển và không gửi ra ngoài."
+        "a": "Đây là tính năng của Pro. Nếu bạn ở gần một quán đã lưu hơn 5 phút rồi rời đi, khoảng 40 phút sau thông báo sẽ đến. Tính năng này cần cho phép vị trí “Luôn luôn” và cho phép thông báo. Nếu không muốn nhận thông báo, hãy tắt thông báo trong Cài đặt > Ứng dụng > Insaeng hoặc đổi vị trí sang “Khi dùng ứng dụng”. Việc kiểm tra vị trí chỉ diễn ra trên thiết bị; ứng dụng không lưu lộ trình di chuyển và không gửi ra ngoài."
       },
       {
         "q": "Không cho phép vị trí thì có dùng được không?",
@@ -374,7 +374,7 @@
       },
       {
         "q": "Dữ liệu được lưu ở đâu? Có đồng bộ với thiết bị khác không?",
-        "a": "Quán, nhật ký ghé quán và ảnh đều chỉ được lưu trên iPhone này. Phiên bản hiện tại chưa hỗ trợ đồng bộ với thiết bị khác, và tính năng sao lưu, khôi phục iCloud trong phần cài đặt cũng chưa hoạt động. Dữ liệu của ứng dụng vẫn nằm trong bản sao lưu toàn bộ iPhone (sao lưu iCloud hoặc sao lưu trên máy tính)."
+        "a": "Quán, nhật ký ghé quán và ảnh được lưu trên iPhone này và không đồng bộ với thiết bị khác. Với Pro, bạn có thể sao lưu dữ liệu, kể cả ảnh, lên iCloud của mình và khôi phục trong phần cài đặt. Ai cũng có thể xuất quán và nhật ký ghé quán ra tệp CSV trong Cài đặt > Quản lý dữ liệu, và bản sao lưu toàn bộ iPhone (sao lưu iCloud hoặc sao lưu trên máy tính) cũng có dữ liệu của ứng dụng."
       },
       {
         "q": "Tôi muốn xóa toàn bộ dữ liệu",
@@ -382,11 +382,11 @@
       },
       {
         "q": "Xóa rồi cài lại ứng dụng thì dữ liệu còn không?",
-        "a": "Không. Vì dữ liệu chỉ được lưu trên thiết bị nên khi xóa ứng dụng, dữ liệu cũng bị xóa theo. Hãy kiểm tra kỹ trước khi xóa ứng dụng."
+        "a": "Khi xóa ứng dụng, dữ liệu lưu trên thiết bị cũng bị xóa theo. Nếu đã sao lưu lên iCloud bằng Pro, bạn có thể khôi phục cả ảnh trong phần cài đặt sau khi cài lại. Hãy kiểm tra kỹ trước khi xóa ứng dụng."
       },
       {
-        "q": "Có thật là miễn phí hết không?",
-        "a": "Có. Mọi tính năng đều miễn phí, không quảng cáo, không cần tài khoản. Mục “Ủng hộ nhà phát triển” trong cài đặt là hoàn toàn tùy ý và không mở khóa thêm gì."
+        "q": "Miễn phí thì dùng được đến đâu?",
+        "a": "Bạn lưu miễn phí tới 30 quán, tính chung “Đã đến” và “Muốn đến”, và dùng đủ nhật ký ghé quán, chấm hương vị theo từng loại món, chỉ đường, gọi điện và xuất CSV. Dữ liệu vượt quá 30 quán vẫn luôn xem, sửa và xóa được. Plus thêm số quán không giới hạn, tự thêm loại món, Top 6 và chỉnh hồ sơ khẩu vị; Pro có thêm lời nhắc ghi chép sau khi ghé và sao lưu iCloud. Bạn chọn gói theo tuần, tháng, năm hoặc trả một lần dùng trọn đời. Nếu đã mua ứng dụng trước đây, bạn vẫn dùng Pro trọn đời. Không quảng cáo, không cần tài khoản."
       }
     ]
   },

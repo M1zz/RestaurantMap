@@ -5,6 +5,9 @@ import SwiftData
 import OSLog
 
 /// 저장된 가게 근처 방문 후 40분 뒤 리뷰 요청 푸시 알림을 관리하는 서비스
+///
+/// 설정 ▸ '다녀온 뒤 기록 알림' 을 켠 사람만 돈다 (Pro). 앱을 열 때 저절로 권한을 묻거나 위치를 따라가지 않는다.
+/// 켜고 끄는 길은 `apply(allowed:)` 하나다 — 켠 사람이고 칸이 허락할 때만 위치를 본다.
 @Observable
 class VisitReminderManager: NSObject, CLLocationManagerDelegate {
     static let shared = VisitReminderManager()
@@ -21,6 +24,48 @@ class VisitReminderManager: NSObject, CLLocationManagerDelegate {
     private var currentlyVisitingRestaurant: (id: String, name: String, enteredAt: Date)?
     private var scheduledNotificationId: String?
     private var lastCheckedRestaurants: [RestaurantLocation] = []
+
+    /// 지금 위치를 보고 있는가. 꺼져 있으면 위치 권한이 바뀌어도 따라가지 않는다.
+    private(set) var isActive = false
+
+    /// 알림을 허락받지 못해 켜지 못했는가 (설정에서 그렇다고 알린다).
+    private(set) var notificationsDenied = false
+
+    // MARK: - 켜고 끄기
+
+    private static let enabledKey = "visitReminder.enabled"
+
+    /// 사용자가 이 알림을 원하는가. 처음엔 꺼져 있다.
+    var wantsReminders = UserDefaults.standard.bool(forKey: VisitReminderManager.enabledKey) {
+        didSet { UserDefaults.standard.set(wantsReminders, forKey: Self.enabledKey) }
+    }
+
+    /// 예전 빌드는 앱을 열 때마다 알림을 켰다. 그때 알림을 허락한 사람은 켜 둔 채로 잇는다 (한 번만 본다).
+    func carryOverEarlierChoice() async {
+        guard UserDefaults.standard.object(forKey: Self.enabledKey) == nil else { return }
+        let settings = await UNUserNotificationCenter.current().notificationSettings()
+        wantsReminders = settings.authorizationStatus == .authorized
+    }
+
+    /// 원하는 사람이고 칸이 허락하면 켜고, 아니면 끈다.
+    func apply(allowed: Bool) async {
+        guard allowed, wantsReminders else {
+            if isActive { stopMonitoring() }
+            isActive = false
+            cancelScheduledNotification()
+            return
+        }
+        guard await requestNotificationPermission() else {
+            notificationsDenied = true
+            if isActive { stopMonitoring() }
+            isActive = false
+            return
+        }
+        notificationsDenied = false
+        guard !isActive else { return }
+        isActive = true
+        startMonitoring()
+    }
 
     // 간단한 레스토랑 위치 정보 구조체
     private struct RestaurantLocation {
@@ -124,12 +169,14 @@ class VisitReminderManager: NSObject, CLLocationManagerDelegate {
     // MARK: - CLLocationManagerDelegate
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let currentLocation = locations.last else { return }
+        guard isActive, let currentLocation = locations.last else { return }
 
         checkProximityToRestaurants(currentLocation: currentLocation)
     }
 
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        // 꺼져 있으면 권한이 바뀌어도 위치를 따라가지 않는다 (만들어질 때도 한 번 불린다).
+        guard isActive else { return }
         switch manager.authorizationStatus {
         case .authorizedAlways:
             locationManager.startUpdatingLocation()

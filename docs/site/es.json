@@ -1,11 +1,11 @@
 {
   "title": "Insaeng: guarda en un mapa dónde has comido bien",
-  "description": "Reúne en un mapa los restaurantes probados y por probar, y anota plato, fotos y sabor en cada visita. Gratis y solo en tu iPhone.",
+  "description": "Reúne en un mapa los restaurantes probados y por probar, y anota plato, fotos y sabor en cada visita. Gratis hasta 30 sitios y solo en tu iPhone.",
   "hero": {
     "headline": "Ese sitio donde comiste tan bien,\nya no se te olvida",
     "lead": "Marca en el mapa los restaurantes donde has estado y los que quieres probar, y en cada visita anota qué pediste, las fotos y cómo sabía. Cuando no sepas dónde comer, tus notas tendrán la respuesta.",
     "cta": "Descárgala gratis en el App Store",
-    "note": "Todas las funciones son gratis. Sin registro: tus notas se quedan en tu iPhone."
+    "note": "Guarda hasta 30 restaurantes gratis. Sin registro: tus notas se quedan en tu iPhone."
   },
   "demo": {
     "title": "Valora un plato",
@@ -280,7 +280,7 @@
   "features": [
     {
       "title": "Visitados, Quiero ir y tu propio Michelin",
-      "text": "Busca en el mapa o toca un lugar cercano y se guarda al momento. Separa los sitios donde ya has estado de los que quieres probar, y ordena tus seis favoritos del 1 al 6.\nCuando alguien te pida una recomendación, enséñale la lista.",
+      "text": "Busca en el mapa o toca un lugar cercano y se guarda al momento. Separa los sitios donde ya has estado de los que quieres probar, y con Plus ordena tus seis favoritos del 1 al 6.\nCuando alguien te pida una recomendación, enséñale la lista.",
       "shot": "02-list"
     },
     {
@@ -290,7 +290,7 @@
     },
     {
       "title": "Los sitios a los que volver, en números",
-      "text": "Con varias visitas, cada restaurante muestra una valoración global con la media de todas ellas y una puntuación Riio Michelin sobre 100 que combina estrellas y satisfacción.\nAl salir de un restaurante guardado, poco después te llega un aviso para anotar la visita.",
+      "text": "Con varias visitas, cada restaurante muestra una valoración global con la media de todas ellas y una puntuación Riio Michelin sobre 100 que combina estrellas y satisfacción.\nCon Pro, al salir de un restaurante guardado, poco después te llega un aviso para anotar la visita.",
       "shot": "03-detail"
     }
   ],
@@ -343,7 +343,7 @@
         "Acidez, Cuerpo, Sabor, Regusto, Dulzor, Equilibrio"
       ]
     ],
-    "note": "El resto de comidas se valoran con los criterios generales de la primera fila. También puedes crear tus propias categorías."
+    "note": "El resto de comidas se valoran con los criterios generales de la primera fila. Con Plus también puedes crear tus propias categorías."
   },
   "faq": {
     "title": "Preguntas frecuentes",
@@ -354,7 +354,7 @@
       },
       {
         "q": "¿Qué son Visitados, Quiero ir y Top 6?",
-        "a": "Visitados : restaurantes donde ya has estado. Puedes registrar tus visitas. Quiero ir : restaurantes que te gustaría probar algún día. Cuando hayas ido, cámbialo a Visitados desde la pantalla de detalles del restaurante. Top 6 (Mi Michelin) : ordena del 1.º al 6.º tus seis restaurantes favoritos. Un restaurante marcado como «Quiero ir» no puede entrar en el Top 6."
+        "a": "Visitados : restaurantes donde ya has estado. Puedes registrar tus visitas. Quiero ir : restaurantes que te gustaría probar algún día. Cuando hayas ido, cámbialo a Visitados desde la pantalla de detalles del restaurante. Top 6 (Mi Michelin) : ordena del 1.º al 6.º tus seis restaurantes favoritos. Un restaurante marcado como «Quiero ir» no puede entrar en el Top 6. El Top 6 forma parte de Plus."
       },
       {
         "q": "¿Tengo que valorar el sabor obligatoriamente?",
@@ -362,7 +362,7 @@
       },
       {
         "q": "¿Cuándo llega el aviso de «¿Qué tal la visita de hoy?»?",
-        "a": "Si pasas más de 5 minutos cerca de un restaurante guardado y luego te vas, el aviso llega unos 40 minutos después. Para esta función hace falta permitir el acceso a la ubicación «Siempre» y las notificaciones. Si no quieres recibir estos avisos, ve a Ajustes > Apps > Insaeng y desactiva las notificaciones, o cambia la ubicación a «Cuando se use la app». La ubicación solo se comprueba en tu dispositivo. Tus desplazamientos no se guardan ni se envían a ningún sitio."
+        "a": "Esta función es de Pro. Si pasas más de 5 minutos cerca de un restaurante guardado y luego te vas, el aviso llega unos 40 minutos después. Para esta función hace falta permitir el acceso a la ubicación «Siempre» y las notificaciones. Si no quieres recibir estos avisos, ve a Ajustes > Apps > Insaeng y desactiva las notificaciones, o cambia la ubicación a «Cuando se use la app». La ubicación solo se comprueba en tu dispositivo. Tus desplazamientos no se guardan ni se envían a ningún sitio."
       },
       {
         "q": "¿Puedo usar la app sin dar acceso a la ubicación?",
@@ -374,7 +374,7 @@
       },
       {
         "q": "¿Dónde se guardan mis registros? ¿Se sincronizan con otros dispositivos?",
-        "a": "Los restaurantes, las visitas y las fotos se guardan solo en este iPhone. La versión actual no se sincroniza con otros dispositivos, y la copia de seguridad y restauración de iCloud que aparece en Ajustes todavía no funciona. Eso sí, la copia de seguridad completa del iPhone (copia en iCloud o en el ordenador) incluye los datos de la app."
+        "a": "Los restaurantes, las visitas y las fotos se guardan en este iPhone y no se sincronizan con otros dispositivos. Con Pro puedes hacer una copia de seguridad de tus registros, fotos incluidas, en tu propio iCloud y restaurarla desde Ajustes. Cualquiera puede exportar restaurantes y visitas a un archivo CSV desde Ajustes > Gestión de datos, y la copia de seguridad completa del iPhone (copia en iCloud o en el ordenador) también incluye los datos de la app."
       },
       {
         "q": "Quiero borrarlo todo",
@@ -382,11 +382,11 @@
       },
       {
         "q": "Si elimino la app y la vuelvo a instalar, ¿siguen ahí mis registros?",
-        "a": "No. Como los registros se guardan solo en el dispositivo, se borran junto con la app. Tenlo muy en cuenta antes de eliminarla."
+        "a": "Al eliminar la app se borran también los registros guardados en el dispositivo. Si hiciste una copia en iCloud con Pro, puedes restaurarlos, fotos incluidas, desde Ajustes después de reinstalarla. Tenlo muy en cuenta antes de eliminarla."
       },
       {
-        "q": "¿De verdad es todo gratis?",
-        "a": "Sí. Todas las funciones son gratis, sin anuncios y sin cuenta. «Apoya al desarrollador» en Ajustes es totalmente opcional y no desbloquea nada."
+        "q": "¿Qué puedo hacer gratis?",
+        "a": "Puedes guardar gratis hasta 30 restaurantes, sumando Visitados y Quiero ir, y usar el registro de visitas, la valoración por tipo de comida, las indicaciones, las llamadas y la exportación a CSV. Lo que pase de 30 sitios siempre se puede ver, editar y borrar. Plus añade restaurantes ilimitados, tus propios tipos de comida, el Top 6 y la edición de tu perfil de gustos, y Pro suma a todo eso los recordatorios tras la visita y la copia de seguridad en iCloud. Elige una suscripción semanal, mensual o anual, o un pago único de por vida. Si ya compraste la app, conservas Pro para siempre. Sin anuncios y sin cuenta."
       }
     ]
   },

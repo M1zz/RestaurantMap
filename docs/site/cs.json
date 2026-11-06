@@ -1,11 +1,11 @@
 {
   "title": "Insaeng: místa, kde vám chutnalo, na jedné mapě",
-  "description": "Sbírejte na mapě restaurace, kde jste byli i kam se chystáte, a při každé návštěvě si zapište jídlo, fotky a chuť. Vše zdarma a jen ve vašem iPhonu.",
+  "description": "Sbírejte na mapě restaurace, kde jste byli i kam se chystáte, a při každé návštěvě si zapište jídlo, fotky a chuť. Až 30 míst zdarma, vše ve vašem iPhonu.",
   "hero": {
     "headline": "Místa, kde vám chutnalo,\nuž nezapomenete",
     "lead": "Označte na mapě restaurace, kde jste byli i kam se chystáte, a při každé návštěvě si zapište, co jste si dali, fotky a jak to chutnalo. Když nevíte, kam na jídlo, odpověď najdete ve vlastních záznamech.",
     "cta": "Stáhnout zdarma v App Storu",
-    "note": "Všechny funkce jsou zdarma. Bez registrace, záznamy zůstávají ve vašem iPhonu."
+    "note": "Až 30 restaurací si zapíšete zdarma. Bez registrace, záznamy zůstávají ve vašem iPhonu."
   },
   "demo": {
     "title": "Ohodnoťte jídlo",
@@ -280,7 +280,7 @@
   "features": [
     {
       "title": "Navštívené, Chci vyzkoušet a vlastní Michelin",
-      "text": "Vyhledejte na mapě nebo klepněte na místo poblíž a hned je uložené. Oddělte podniky, kde jste byli, od těch, které chcete vyzkoušet, a šest oblíbených seřaďte od 1 do 6.\nKdyž se vás někdo zeptá na tip, stačí ukázat seznam.",
+      "text": "Vyhledejte na mapě nebo klepněte na místo poblíž a hned je uložené. Oddělte podniky, kde jste byli, od těch, které chcete vyzkoušet, a s Plus seřaďte šest oblíbených od 1 do 6.\nKdyž se vás někdo zeptá na tip, stačí ukázat seznam.",
       "shot": "02-list"
     },
     {
@@ -290,7 +290,7 @@
     },
     {
       "title": "Kam se vrátit, uvidíte v číslech",
-      "text": "S více návštěvami ukáže každá restaurace celkové hodnocení z průměru všech návštěv a skóre Riio Michelin ze 100, které spojuje hvězdičky a spokojenost.\nKdyž odejdete z uložené restaurace, za chvíli přijde připomínka, abyste návštěvu zapsali.",
+      "text": "S více návštěvami ukáže každá restaurace celkové hodnocení z průměru všech návštěv a skóre Riio Michelin ze 100, které spojuje hvězdičky a spokojenost.\nS Pro vám po odchodu z uložené restaurace za chvíli přijde připomínka, abyste návštěvu zapsali.",
       "shot": "03-detail"
     }
   ],
@@ -343,7 +343,7 @@
         "Kyselost, Tělo, Chuť, Dochuť, Sladkost, Vyváženost"
       ]
     ],
-    "note": "Ostatní jídla se hodnotí obecnými kritérii z prvního řádku. Můžete si vytvořit i vlastní kategorie."
+    "note": "Ostatní jídla se hodnotí obecnými kritérii z prvního řádku. S Plus si můžete vytvořit i vlastní kategorie."
   },
   "faq": {
     "title": "Časté dotazy",
@@ -354,7 +354,7 @@
       },
       {
         "q": "Co znamená Navštívené, Chci vyzkoušet a Top 6?",
-        "a": "Navštívené – restaurace, kde jste už byli. Můžete k nim zapisovat návštěvy. Chci vyzkoušet – restaurace, kam se chcete jednou podívat. Po návštěvě je v detailu restaurace přepněte na Navštívené. Top 6 (Moje Michelin) – šest nejoblíbenějších restaurací, kterým dáte pořadí od 1. do 6. místa. Restauraci ze seznamu Chci vyzkoušet nelze zařadit do Top 6."
+        "a": "Navštívené – restaurace, kde jste už byli. Můžete k nim zapisovat návštěvy. Chci vyzkoušet – restaurace, kam se chcete jednou podívat. Po návštěvě je v detailu restaurace přepněte na Navštívené. Top 6 (Moje Michelin) – šest nejoblíbenějších restaurací, kterým dáte pořadí od 1. do 6. místa. Restauraci ze seznamu Chci vyzkoušet nelze zařadit do Top 6. Top 6 je součástí Plus."
       },
       {
         "q": "Musím hodnotit chuť?",
@@ -362,7 +362,7 @@
       },
       {
         "q": "Kdy přijde upozornění „Jak se vám dnes líbilo?“",
-        "a": "Když pobudete u uložené restaurace déle než 5 minut a odejdete, upozornění přijde přibližně za 40 minut. Tato funkce vyžaduje polohu s volbou „Vždy“ a povolená oznámení. Pokud upozornění nechcete, vypněte oznámení v Nastavení > Aplikace > Insaeng nebo přepněte polohu na „Při používání aplikace“. Poloha se vyhodnocuje jen v zařízení. Trasy vašeho pohybu se neukládají ani nikam neodesílají."
+        "a": "Jde o funkci Pro. Když pobudete u uložené restaurace déle než 5 minut a odejdete, upozornění přijde přibližně za 40 minut. Tato funkce vyžaduje polohu s volbou „Vždy“ a povolená oznámení. Pokud upozornění nechcete, vypněte oznámení v Nastavení > Aplikace > Insaeng nebo přepněte polohu na „Při používání aplikace“. Poloha se vyhodnocuje jen v zařízení. Trasy vašeho pohybu se neukládají ani nikam neodesílají."
       },
       {
         "q": "Dá se aplikace používat bez přístupu k poloze?",
@@ -374,7 +374,7 @@
       },
       {
         "q": "Kde se záznamy ukládají? Synchronizují se s dalšími zařízeními?",
-        "a": "Restaurace, záznamy návštěv i fotky se ukládají jen v tomto iPhonu. Současná verze synchronizaci s dalšími zařízeními nepodporuje a zálohování a obnova přes iCloud v nastavení zatím nefungují. Data aplikace jsou ale součástí celkové zálohy iPhonu (záloha na iCloud nebo do počítače)."
+        "a": "Restaurace, záznamy návštěv i fotky se ukládají v tomto iPhonu a se zařízeními se nesynchronizují. S Pro můžete v nastavení zazálohovat na vlastní iCloud všechno včetně fotek a znovu to obnovit. Restaurace a návštěvy může kdokoli exportovat do souboru CSV v Nastavení > Správa dat a data aplikace jsou také součástí celkové zálohy iPhonu (záloha na iCloud nebo do počítače)."
       },
       {
         "q": "Chci smazat všechny záznamy",
@@ -382,11 +382,11 @@
       },
       {
         "q": "Zůstanou mi záznamy, když aplikaci odinstaluji a znovu nainstaluji?",
-        "a": "Ne. Záznamy se ukládají jen v zařízení, takže se s odstraněním aplikace smažou i ony. Než aplikaci odstraníte, dobře si to rozmyslete."
+        "a": "Když aplikaci odstraníte, smažou se i záznamy uložené v zařízení. Pokud jste je s Pro zazálohovali na iCloud, po nové instalaci je v nastavení obnovíte i s fotkami. Než aplikaci odstraníte, dobře si to rozmyslete."
       },
       {
-        "q": "Je opravdu všechno zdarma?",
-        "a": "Ano. Všechny funkce jsou zdarma, bez reklam a bez účtu. „Podpořit vývojáře“ v nastavení je zcela dobrovolné a nic dalšího neodemyká."
+        "q": "Co všechno můžu používat zdarma?",
+        "a": "Zdarma si uložíte až 30 restaurací (Navštívené a Chci vyzkoušet dohromady) a můžete používat deník návštěv, hodnocení chuti podle druhu jídla, navigaci, volání i export do CSV. Záznamy nad 30 míst můžete vždy zobrazit, upravit i smazat. Plus přidává neomezený počet restaurací, vlastní druhy jídel, Top 6 a úpravu chuťového profilu, Pro k tomu navíc připomínky po návštěvě a zálohu na iCloud. Vybrat si můžete týdenní, měsíční nebo roční předplatné, nebo jednorázový nákup napořád. Pokud jste si aplikaci už koupili, Pro vám zůstává napořád. Bez reklam a bez účtu."
       }
     ]
   },

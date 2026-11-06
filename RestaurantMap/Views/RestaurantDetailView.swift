@@ -18,6 +18,8 @@ struct RestaurantDetailView: View {
     @State private var selectedVisit: Visit?
     @State private var isEditing = false
     @State private var showingTop6LimitAlert = false
+    @State private var purchases = Purchases.shared
+    @State private var paywallFeature: RestaurantFeature?
 
     private let logger = Logger(subsystem: "com.restaurantmap", category: "RestaurantDetail")
 
@@ -92,12 +94,14 @@ struct RestaurantDetailView: View {
                     }
                 }
 
-                // 응원 부탁 — 방문 기록을 꽤 쌓아 온 사람에게, 드물게(방문을 남기고 돌아온 자리)
-                Section {
-                    LeeoTipAskSlot<RestaurantMapSpec>(tipJar: RestaurantMapTip.tipJar,
-                                                      reached: RestaurantMapTipMoments.reachedNow(in: allRestaurants))
-                        .listRowInsets(EdgeInsets())
-                        .listRowBackground(Color.clear)
+                // 응원 부탁 — 이미 Pro 인 사람에게만, 방문 기록을 꽤 쌓아 온 때 드물게(방문을 남기고 돌아온 자리)
+                if purchases.tier == .pro {
+                    Section {
+                        LeeoTipAskSlot<RestaurantMapSpec>(tipJar: RestaurantMapTip.tipJar,
+                                                          reached: RestaurantMapTipMoments.reachedNow(in: allRestaurants))
+                            .listRowInsets(EdgeInsets())
+                            .listRowBackground(Color.clear)
+                    }
                 }
 
                 // 메뉴 목록
@@ -237,13 +241,16 @@ struct RestaurantDetailView: View {
 
                 Section {
                     if isEditing && restaurant.listType == .visited {
-                        Toggle("나의 최애 탑6", isOn: Binding(
+                        Toggle(isOn: Binding(
                             get: { restaurant.isTop6 },
                             set: { newValue in
                                 // 탑6를 켜려고 할 때
                                 if newValue && !restaurant.isTop6 {
-                                    // 현재 탑6가 6개 이상이면 경고
-                                    if top6Count >= 6 {
+                                    if !purchases.allows(.top6) {
+                                        // 순위 매기기는 Plus. 이미 정한 탑6는 그대로 보이고 뺄 수 있다.
+                                        paywallFeature = .top6
+                                    } else if top6Count >= 6 {
+                                        // 현재 탑6가 6개 이상이면 경고
                                         showingTop6LimitAlert = true
                                     } else {
                                         restaurant.isTop6 = true
@@ -256,7 +263,9 @@ struct RestaurantDetailView: View {
                                     }
                                 }
                             }
-                        ))
+                        )) {
+                            LockedLabel(title: "나의 최애 탑6", feature: .top6)
+                        }
 
                         if restaurant.isTop6 {
                             Picker("랭킹", selection: $restaurant.top6Rank) {
@@ -389,6 +398,7 @@ struct RestaurantDetailView: View {
             } message: {
                 Text("탑6는 최대 6개까지만 지정할 수 있습니다. 다른 식당의 탑6를 해제한 후 다시 시도해주세요.")
             }
+            .paywall(for: $paywallFeature)
             .sheet(isPresented: $showingAddVisit) {
                 AddVisitView(restaurant: restaurant)
             }

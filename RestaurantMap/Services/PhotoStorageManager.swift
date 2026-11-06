@@ -119,6 +119,23 @@ final class PhotoStorageManager {
         return fileURL
     }
 
+    /// 다른 곳(iCloud 백업)에서 받은 사진 파일을 그 방문의 자리에 둔다. 같은 이름이 있으면 바꾼다.
+    @discardableResult
+    func importPhoto(from source: URL, filename: String, for visitID: UUID) -> Bool {
+        guard let directoryURL = createVisitDirectory(for: visitID) else { return false }
+        let target = directoryURL.appendingPathComponent(filename)
+        do {
+            if FileManager.default.fileExists(atPath: target.path) {
+                try FileManager.default.removeItem(at: target)
+            }
+            try FileManager.default.copyItem(at: source, to: target)
+            return true
+        } catch {
+            print("❌ 사진 가져오기 실패: \(filename) - \(error.localizedDescription)")
+            return false
+        }
+    }
+
     // MARK: - Private Methods
 
     /// 이미지 압축 (리사이징 + JPEG 압축)

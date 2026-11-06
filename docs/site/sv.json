@@ -1,11 +1,11 @@
 {
   "title": "Insaeng: dina bästa måltider på en karta",
-  "description": "Samla restauranger du besökt och vill testa på en karta, och skriv ner rätt, bilder och smak vid varje besök. Gratis och bara på din iPhone.",
+  "description": "Samla restauranger du besökt och vill testa på en karta, och skriv ner rätt, bilder och smak vid varje besök. Gratis för upp till 30 ställen, allt på din iPhone.",
   "hero": {
     "headline": "Glöm aldrig igen\nvar maten var god",
     "lead": "Markera restaurangerna du besökt och vill testa på kartan, och skriv vid varje besök ner vad du beställde, bilder och smaken. När du inte vet var du ska äta har dina egna anteckningar svaret.",
     "cta": "Hämta gratis på App Store",
-    "note": "Alla funktioner är gratis. Ingen registrering, allt stannar på din iPhone."
+    "note": "Upp till 30 restauranger är gratis. Ingen registrering, allt stannar på din iPhone."
   },
   "demo": {
     "title": "Betygsätt en rätt",
@@ -280,7 +280,7 @@
   "features": [
     {
       "title": "Besökt, Vill besöka och din egen Michelin",
-      "text": "Sök på kartan eller tryck på ett ställe i närheten, så är det sparat. Håll ställen du varit på åtskilda från dem du vill testa, och ranka dina sex favoriter från 1 till 6.\nNär någon frågar efter ett tips visar du bara listan.",
+      "text": "Sök på kartan eller tryck på ett ställe i närheten, så är det sparat. Håll ställen du varit på åtskilda från dem du vill testa, och ranka med Plus dina sex favoriter från 1 till 6.\nNär någon frågar efter ett tips visar du bara listan.",
       "shot": "02-list"
     },
     {
@@ -290,7 +290,7 @@
     },
     {
       "title": "Vart det är värt att gå tillbaka syns i siffror",
-      "text": "Efter flera besök visar varje restaurang ett helhetsomdöme med snittet av alla besök och Riio Michelin-poäng av 100 som kombinerar stjärnor och nöjdhet.\nNär du lämnar en sparad restaurang kommer en påminnelse lite senare om att skriva ner besöket.",
+      "text": "Efter flera besök visar varje restaurang ett helhetsomdöme med snittet av alla besök och Riio Michelin-poäng av 100 som kombinerar stjärnor och nöjdhet.\nMed Pro kommer en påminnelse om att skriva ner besöket en stund efter att du lämnat en sparad restaurang.",
       "shot": "03-detail"
     }
   ],
@@ -343,7 +343,7 @@
         "Syrlighet, Fyllighet, Smak, Eftersmak, Sötma, Balans"
       ]
     ],
-    "note": "All annan mat betygsätts med de allmänna kriterierna i första raden. Du kan också skapa egna kategorier."
+    "note": "All annan mat betygsätts med de allmänna kriterierna i första raden. Med Plus kan du också skapa egna kategorier."
   },
   "faq": {
     "title": "Vanliga frågor",
@@ -354,7 +354,7 @@
       },
       {
         "q": "Vad betyder Besökta, Att besöka och Topp 6?",
-        "a": "Besökta – restauranger du redan har varit på. Här kan du spara besöksloggar. Att besöka – restauranger du vill testa någon gång. När du har varit där byter du till Besökta på restaurangens detaljsida. Topp 6 (din egen Michelin) – ranka dina sex favoritrestauranger från 1 till 6. Ställen under Att besöka kan inte läggas i topp 6."
+        "a": "Besökta – restauranger du redan har varit på. Här kan du spara besöksloggar. Att besöka – restauranger du vill testa någon gång. När du har varit där byter du till Besökta på restaurangens detaljsida. Topp 6 (din egen Michelin) – ranka dina sex favoritrestauranger från 1 till 6. Ställen under Att besöka kan inte läggas i topp 6. Topp 6 ingår i Plus."
       },
       {
         "q": "Måste jag göra smakomdömen?",
@@ -362,7 +362,7 @@
       },
       {
         "q": "När kommer notisen ”Hur var ditt besök i dag?”?",
-        "a": "Om du stannar mer än 5 minuter i närheten av en sparad restaurang och sedan går därifrån får du en notis ungefär 40 minuter senare. Funktionen kräver platsåtkomst ”Alltid” och att notiser är tillåtna. Om du inte vill ha notisen kan du stänga av notiser under Inställningar > Appar > Insaeng, eller ändra platsåtkomsten till ”När appen används”. Platskontrollen sker bara på enheten. Dina förflyttningar sparas inte och skickas inte någonstans."
+        "a": "Det här är en Pro-funktion. Om du stannar mer än 5 minuter i närheten av en sparad restaurang och sedan går därifrån får du en notis ungefär 40 minuter senare. Funktionen kräver platsåtkomst ”Alltid” och att notiser är tillåtna. Om du inte vill ha notisen kan du stänga av notiser under Inställningar > Appar > Insaeng, eller ändra platsåtkomsten till ”När appen används”. Platskontrollen sker bara på enheten. Dina förflyttningar sparas inte och skickas inte någonstans."
       },
       {
         "q": "Kan jag använda appen utan platsåtkomst?",
@@ -374,7 +374,7 @@
       },
       {
         "q": "Var sparas mina loggar? Synkas de med andra enheter?",
-        "a": "Restauranger, besöksloggar och bilder sparas bara på den här iPhonen. Den nuvarande versionen har inte stöd för synkning med andra enheter, och iCloud-säkerhetskopiering och återställning i inställningarna fungerar inte ännu. Appens data ingår däremot i en fullständig säkerhetskopia av din iPhone (iCloud-säkerhetskopia eller säkerhetskopia på datorn)."
+        "a": "Restauranger, besöksloggar och bilder sparas på den här iPhonen och synkas inte med andra enheter. Med Pro kan du säkerhetskopiera dina loggar, bilder också, till din egen iCloud och återställa dem från inställningarna. Alla kan exportera restauranger och besök som en CSV-fil under Inställningar > Datahantering, och en fullständig säkerhetskopia av din iPhone (iCloud-säkerhetskopia eller säkerhetskopia på datorn) innehåller också appens data."
       },
       {
         "q": "Jag vill radera alla mina loggar",
@@ -382,11 +382,11 @@
       },
       {
         "q": "Finns mina loggar kvar om jag tar bort och installerar om appen?",
-        "a": "Nej. Eftersom loggarna bara sparas på enheten raderas de när du tar bort appen. Tänk på det innan du tar bort den."
+        "a": "När du tar bort appen raderas även loggarna som finns på enheten. Har du säkerhetskopierat till iCloud med Pro kan du återställa dem, bilder också, från inställningarna när appen är installerad igen. Tänk på det innan du tar bort den."
       },
       {
-        "q": "Är verkligen allt gratis?",
-        "a": "Ja. Alla funktioner är gratis, utan reklam och utan konto. ”Stöd utvecklaren” i inställningarna är helt frivilligt och låser inte upp något."
+        "q": "Hur mycket kan jag använda gratis?",
+        "a": "Gratis kan du spara upp till 30 restauranger, Besökta och Att besöka sammanlagt, och använda besöksloggar, smakbetyg för varje sorts mat, vägbeskrivning, samtal och CSV-export. Allt utöver 30 ställen kan du alltid visa, ändra och radera. Plus ger obegränsat antal restauranger, egna matsorter, Topp 6 och redigering av din smakprofil, och Pro lägger till påminnelser efter besöket och iCloud-säkerhetskopiering. Välj prenumeration per vecka, månad eller år, eller betala en gång för alltid. Har du redan köpt appen behåller du Pro för alltid. Ingen reklam, inget konto."
       }
     ]
   },

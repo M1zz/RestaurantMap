@@ -1,11 +1,11 @@
 {
   "title": "Insaeng: lezzetli yemek yediğin yerler tek haritada",
-  "description": "Gittiğin ve gitmek istediğin restoranları haritada topla, her ziyarette yemeği, fotoğrafları ve lezzeti kaydet. Ücretsiz, iPhone’unda kalır.",
+  "description": "Gittiğin ve gitmek istediğin restoranları haritada topla, her ziyarette yemeği, fotoğrafları ve lezzeti kaydet. 30 yere kadar ücretsiz, iPhone’unda kalır.",
   "hero": {
     "headline": "Lezzetli yerleri\nartık unutmayacaksın",
     "lead": "Gittiğin ve denemek istediğin restoranları haritaya işaretle, her ziyarette ne sipariş ettiğini, fotoğrafları ve lezzeti kaydet. Nerede yesem diye düşündüğünde cevap kendi notlarında.",
     "cta": "App Store’dan ücretsiz indir",
-    "note": "Tüm özellikler ücretsiz. Üyelik yok, kayıtlar iPhone’unda kalır."
+    "note": "30 restorana kadar ücretsiz kaydedersin. Üyelik yok, kayıtlar iPhone’unda kalır."
   },
   "demo": {
     "title": "Bir tabağı puanla",
@@ -280,7 +280,7 @@
   "features": [
     {
       "title": "Gidilenler, Gitmek istediklerim ve kendi Michelin’in",
-      "text": "Haritada ara ya da yakındaki bir yere dokun, hemen kaydedilir. Gittiğin yerleri denemek istediklerinden ayrı tut, en sevdiğin altı yeri 1’den 6’ya sırala.\nBiri iyi bir yer sorduğunda listeyi göstermen yeter.",
+      "text": "Haritada ara ya da yakındaki bir yere dokun, hemen kaydedilir. Gittiğin yerleri denemek istediklerinden ayrı tut, Plus ile en sevdiğin altı yeri 1’den 6’ya sırala.\nBiri iyi bir yer sorduğunda listeyi göstermen yeter.",
       "shot": "02-list"
     },
     {
@@ -290,7 +290,7 @@
     },
     {
       "title": "Tekrar gitmeye değer yerler rakamlarla görünür",
-      "text": "Ziyaretler arttıkça her restoranda tüm ziyaretlerin ortalamasıyla bir genel değerlendirme ve yıldızlarla memnuniyeti birleştiren, 100 üzerinden bir Riio Michelin puanı görünür.\nKaydettiğin bir restorandan çıktığında, biraz sonra ziyareti kaydetmeni hatırlatan bir bildirim gelir.",
+      "text": "Ziyaretler arttıkça her restoranda tüm ziyaretlerin ortalamasıyla bir genel değerlendirme ve yıldızlarla memnuniyeti birleştiren, 100 üzerinden bir Riio Michelin puanı görünür.\nPro ile kaydettiğin bir restorandan çıktığında, biraz sonra ziyareti kaydetmeni hatırlatan bir bildirim gelir.",
       "shot": "03-detail"
     }
   ],
@@ -343,7 +343,7 @@
         "Asidite, Gövde, Aroma, Ağızda kalan tat, Tatlılık, Denge"
       ]
     ],
-    "note": "Diğer yemekler ilk satırdaki genel ölçütlerle puanlanır. Kendi kategorilerini de oluşturabilirsin."
+    "note": "Diğer yemekler ilk satırdaki genel ölçütlerle puanlanır. Plus ile kendi kategorilerini de oluşturabilirsin."
   },
   "faq": {
     "title": "Sık sorulan sorular",
@@ -354,7 +354,7 @@
       },
       {
         "q": "Gittiklerim, Gideceklerim ve İlk 6 nedir?",
-        "a": "Gittiklerim: Daha önce gittiğin restoranlar. Bunlar için ziyaret kaydı tutabilirsin. Gideceklerim: Bir gün denemek istediğin restoranlar. Gittikten sonra restoranın ayrıntı ekranından “Gittiklerim”e taşı. İlk 6 (Kendi Michelin’in): En sevdiğin altı restoranı 1’den 6’ya kadar sıralarsın. “Gideceklerim” listesindeki restoranlar İlk 6’ya eklenemez."
+        "a": "Gittiklerim: Daha önce gittiğin restoranlar. Bunlar için ziyaret kaydı tutabilirsin. Gideceklerim: Bir gün denemek istediğin restoranlar. Gittikten sonra restoranın ayrıntı ekranından “Gittiklerim”e taşı. İlk 6 (Kendi Michelin’in): En sevdiğin altı restoranı 1’den 6’ya kadar sıralarsın. “Gideceklerim” listesindeki restoranlar İlk 6’ya eklenemez. İlk 6, Plus’a dahildir."
       },
       {
         "q": "Lezzet değerlendirmesi yapmak zorunlu mu?",
@@ -362,7 +362,7 @@
       },
       {
         "q": "“Bugünkü ziyaretin nasıldı?” bildirimi ne zaman gelir?",
-        "a": "Kaydettiğin bir restoranın yakınında 5 dakikadan uzun kalıp ayrıldığında, yaklaşık 40 dakika sonra bildirim gelir. Bu özellik için konum erişimine “Her Zaman” izni ve bildirim izni gerekir. Bildirim almak istemiyorsan Ayarlar > Uygulamalar > Insaeng bölümünden bildirimleri kapat veya konum iznini “Uygulamayı Kullanırken” olarak değiştir. Konum kontrolü yalnızca cihazında yapılır; gittiğin yerler kaydedilmez ve hiçbir yere gönderilmez."
+        "a": "Bu bir Pro özelliğidir. Kaydettiğin bir restoranın yakınında 5 dakikadan uzun kalıp ayrıldığında, yaklaşık 40 dakika sonra bildirim gelir. Bu özellik için konum erişimine “Her Zaman” izni ve bildirim izni gerekir. Bildirim almak istemiyorsan Ayarlar > Uygulamalar > Insaeng bölümünden bildirimleri kapat veya konum iznini “Uygulamayı Kullanırken” olarak değiştir. Konum kontrolü yalnızca cihazında yapılır; gittiğin yerler kaydedilmez ve hiçbir yere gönderilmez."
       },
       {
         "q": "Konum iznini vermezsem uygulamayı kullanabilir miyim?",
@@ -374,7 +374,7 @@
       },
       {
         "q": "Kayıtlarım nerede saklanıyor? Diğer cihazlarla eşzamanlanıyor mu?",
-        "a": "Restoranlar, ziyaret kayıtları ve fotoğraflar yalnızca bu iPhone’da saklanır. Mevcut sürüm diğer cihazlarla eşzamanlamayı desteklemiyor; ayarlardaki iCloud yedekleme ve geri yükleme de henüz çalışmıyor. iPhone’unun tam yedeğinde (iCloud yedeği veya bilgisayar yedeği) uygulama verileri de yer alır."
+        "a": "Restoranlar, ziyaret kayıtları ve fotoğraflar bu iPhone’da saklanır ve diğer cihazlarla eşzamanlanmaz. Pro ile kayıtlarını fotoğraflarıyla birlikte ayarlardan kendi iCloud’una yedekleyip geri yükleyebilirsin. Restoranları ve ziyaretleri herkes Ayarlar > Veri yönetimi bölümünden CSV dosyası olarak dışa aktarabilir; iPhone’unun tam yedeğinde (iCloud yedeği veya bilgisayar yedeği) de uygulama verileri yer alır."
       },
       {
         "q": "Tüm kayıtlarımı silmek istiyorum",
@@ -382,11 +382,11 @@
       },
       {
         "q": "Uygulamayı silip yeniden yüklersem kayıtlarım kalır mı?",
-        "a": "Hayır. Kayıtlar yalnızca cihazında saklandığı için uygulamayı sildiğinde onlar da silinir. Uygulamayı silmeden önce bunu mutlaka göz önünde bulundur."
+        "a": "Uygulamayı sildiğinde cihazda saklanan kayıtlar da silinir. Pro ile iCloud’a yedeklediysen, yeniden yükledikten sonra ayarlardan fotoğraflarıyla birlikte geri yükleyebilirsin. Uygulamayı silmeden önce bunu mutlaka göz önünde bulundur."
       },
       {
-        "q": "Gerçekten her şey ücretsiz mi?",
-        "a": "Evet. Tüm özellikler ücretsiz; reklam yok, hesap yok. Ayarlardaki “Geliştiriciyi Destekleyin” tamamen isteğe bağlıdır ve hiçbir şeyin kilidini açmaz."
+        "q": "Ücretsiz olarak neler yapabilirim?",
+        "a": "Gittiklerim ve Gideceklerim toplamında 30 restorana kadar ücretsiz kaydedebilir; ziyaret kayıtları, yemek türüne göre lezzet değerlendirmesi, yol tarifi, arama ve CSV dışa aktarma özelliklerini kullanabilirsin. 30 yerin üstündeki kayıtları her zaman görüntüleyebilir, düzenleyebilir ve silebilirsin. Plus sınırsız restoran, kendi yemek türlerin, İlk 6 ve zevk profilini düzenlemeyi ekler; Pro bunlara ziyaret sonrası hatırlatmaları ve iCloud yedeğini de katar. Haftalık, aylık veya yıllık abonelik ya da tek seferlik ömür boyu satın alma arasından seçebilirsin. Uygulamayı daha önce satın aldıysan Pro ömür boyu seninle. Reklam yok, hesap yok."
       }
     ]
   },
