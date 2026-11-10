@@ -94,7 +94,7 @@
       <h3>Kort fortalt</h3>
       <ul>
         <li>Der er ingen kontooprettelse eller login. Appen beder ikke om oplysninger, der direkte kan identificere dig, som navn, telefonnummer eller e-mail.</li>
-        <li>Restaurantliste, besøg, noter, smagsbedømmelser og billeder gemmes kun på din enhed og sendes ikke til udviklerens servere.</li>
+        <li>Restaurantliste, besøg, noter, smagsbedømmelser og billeder gemmes på din enhed og i din egen iCloud og sendes ikke til udviklerens servere.</li>
         <li>Når du søger efter steder eller flytter kortet, sendes søgeord og kortets placering til stedsøgningstjenester (Kakao, Apple).</li>
         <li>Appen indeholder Google Firebase, så oplysninger om enhed og app, brugsdata og fejloplysninger kan blive sendt automatisk til Google.</li>
         <li>Feedback, du selv sender, samt anonym brugsstatistik og fejlrapporter, som ikke kan knyttes til dig, sendes til udviklerens iCloud-lager.</li>
@@ -104,14 +104,15 @@
 
     <h2>1. Hvilke oplysninger der behandles, og hvordan de indsamles</h2>
 
-    <h3>A. Oplysninger, der kun gemmes på enheden</h3>
-    <p>Følgende oplysninger, som du selv indtaster i appen, gemmes kun i appens lager på din enhed og sendes hverken til udvikleren eller til tredjeparter.</p>
+    <h3>A. Oplysninger, der gemmes på enheden og i din egen iCloud</h3>
+    <p>Følgende oplysninger, som du selv indtaster i appen, gemmes i appens lager på din enhed og, hvis du er logget ind på iCloud, også i din egen iCloud. De sendes hverken til udvikleren eller til tredjeparter.</p>
     <ul>
       <li>Restaurantoplysninger: navn, adresse, telefonnummer, placering (koordinater), køkkentype, Besøgt/Vil derhen, placering i Top 6</li>
       <li>Besøg: dato, retter, stjerner, noter, smagsbedømmelse</li>
       <li>Billeder tilføjet til besøg (skaleret ned på enheden og gemt i appens lager)</li>
       <li>Retter, du har tilføjet, egne køkkentyper og den smagsprofil, der beregnes ud fra dine smagsbedømmelser</li>
     </ul>
+    <p><strong>iCloud-synkronisering.</strong> Er du logget ind på iCloud, gemmes oplysningerne ovenfor og dine besøgsbilleder også i din egen private iCloud-database (Apple CloudKit) og holdes i takt med dine andre enheder på samme Apple-konto. Udvikleren og andre kan ikke se dem. Slår du iCloud fra, stopper synkroniseringen, og dine data bliver på enheden; det, der ligger tilbage i iCloud, kan slettes under Indstillinger ▸ Apple-konto ▸ iCloud ▸ Administrer lagringsplads.</p>
     <p>
       Starter du selv en sikkerhedskopi til iCloud i indstillingerne med Pro, gemmes dine restauranter, besøg, menuer, smagsdata, egne madtyper og besøgsbilleder i din egen private iCloud-database (Apple CloudKit). Desuden uploader appen én gang om dagen en automatisk sikkerhedskopi til din egen private iCloud-database, når du er logget ind på iCloud, så dine data ikke går tabt. Udvikleren kan ikke se nogen af de to sikkerhedskopier.
       (De kan dog indgå som enhedsdata i en fuld sikkerhedskopi af din iPhone.)
@@ -264,7 +265,7 @@
 
     <h2>10. Sikkerhedsforanstaltninger</h2>
     <ul>
-      <li>Vi behandler kun de nødvendige oplysninger, og dine noter bliver på enheden.</li>
+      <li>Vi behandler kun de nødvendige oplysninger, og dine noter bliver på enheden og i din egen iCloud.</li>
       <li>Al kommunikation udadtil foregår via krypteret HTTPS.</li>
       <li>Udvikleren samler ikke brugernes data på servere, som udvikleren driver.</li>
     </ul>

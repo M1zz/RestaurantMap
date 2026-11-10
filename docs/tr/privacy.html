@@ -93,7 +93,7 @@
       <h3>Özetle</h3>
       <ul>
         <li>Üyelik veya oturum açma yoktur. Ad, telefon numarası ya da e-posta gibi seni doğrudan tanımlayabilecek bilgiler istenmez.</li>
-        <li>Restoran listesi, ziyaret kayıtları, notlar, lezzet değerlendirmeleri ve fotoğraflar yalnızca cihazında saklanır ve Geliştiricinin sunucularına gönderilmez.</li>
+        <li>Restoran listesi, ziyaret kayıtları, notlar, lezzet değerlendirmeleri ve fotoğraflar cihazında ve kendi iCloud'unda saklanır; Geliştiricinin sunucularına gönderilmez.</li>
         <li>Mekân aradığında veya haritayı kaydırdığında arama terimin ve harita konumu mekân arama hizmetlerine (Kakao, Apple) gönderilir.</li>
         <li>Uygulama Google Firebase içerir; bu nedenle cihaz ve uygulama bilgileri, kullanım kayıtları ve hata bilgileri otomatik olarak Google’a gönderilebilir.</li>
         <li>Kendi gönderdiğin geri bildirimler ile kimliğini ortaya koymayan anonim kullanım istatistikleri ve hata raporları Geliştiricinin iCloud depolama alanına iletilir.</li>
@@ -103,14 +103,15 @@
 
     <h2>1. İşlenen bilgiler ve toplanma yöntemi</h2>
 
-    <h3>A. Yalnızca cihazda saklanan bilgiler</h3>
-    <p>Uygulamaya kendin girdiğin aşağıdaki bilgiler yalnızca cihazındaki uygulama depolama alanında saklanır; Geliştiriciye veya üçüncü taraflara gönderilmez.</p>
+    <h3>A. Cihazda ve kendi iCloud'unda saklanan bilgiler</h3>
+    <p>Uygulamaya kendin girdiğin aşağıdaki bilgiler cihazındaki uygulama depolama alanında ve, iCloud'da oturum açtıysan, kendi iCloud'unda saklanır; Geliştiriciye veya üçüncü taraflara gönderilmez.</p>
     <ul>
       <li>Restoran bilgileri: ad, adres, telefon numarası, konum (koordinatlar), mutfak türü, “Gittiklerim/Gideceklerim” ayrımı, İlk 6 sırası</li>
       <li>Ziyaret kayıtları: ziyaret tarihi, yemekler, puan, notlar, lezzet değerlendirmesi</li>
       <li>Ziyaret kayıtlarına eklenen fotoğraflar (cihazda küçültülerek uygulama depolama alanında saklanır)</li>
       <li>Eklediğin menüler, kendi oluşturduğun mutfak türleri ve lezzet değerlendirmelerinden hesaplanan damak tadı profili</li>
     </ul>
+    <p><strong>iCloud eşzamanlama.</strong> iCloud'da oturum açmışsan yukarıdaki bilgiler ve ziyaret fotoğrafları kendi özel iCloud depolama alanında (Apple CloudKit) da saklanır ve aynı Apple Hesabı'ndaki diğer aygıtlarınla otomatik olarak eşlenir. Geliştirici ve başkaları göremez. iCloud'u kapatırsan eşzamanlama durur ve kayıtlar aygıtında kalır; iCloud'da kalanları Ayarlar ▸ Apple Hesabı ▸ iCloud ▸ Saklama Alanını Yönet bölümünden silebilirsin.</p>
     <p>
       Pro ile ayarlardan iCloud yedeklemesini kendiniz başlatırsanız restoranlar, ziyaret kayıtları, menüler, damak zevki verileri, kendi eklediğiniz yemek türleri ve ziyaret fotoğrafları kendi özel iCloud depolama alanınıza (Apple CloudKit) kaydedilir. Ayrıca kayıtlarınız kaybolmasın diye uygulama, iCloud’da oturum açmışsanız günde bir kez otomatik bir yedeği kendi özel iCloud depolama alanınıza yükler. Geliştirici bu iki yedeğin hiçbirini göremez.
       (Kayıtlar, iPhone’unun tam yedeğine cihaz verisi olarak dahil olabilir.)
@@ -263,7 +264,7 @@
 
     <h2>10. Güvenlik önlemleri</h2>
     <ul>
-      <li>Yalnızca gereken asgari bilgi işlenir; senin oluşturduğun kayıtlar yalnızca cihazında tutulur.</li>
+      <li>Yalnızca gereken asgari bilgi işlenir; senin oluşturduğun kayıtlar yalnızca cihazında ve kendi iCloud'unda tutulur.</li>
       <li>Dışarıyla tüm iletişim şifreli HTTPS üzerinden yapılır.</li>
       <li>Kullanıcı kayıtları Geliştiricinin işlettiği herhangi bir sunucuda toplanmaz.</li>
     </ul>

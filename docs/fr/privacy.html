@@ -93,7 +93,7 @@
       <h3>L’essentiel en bref</h3>
       <ul>
         <li>Il n’y a ni inscription ni connexion. L’app ne demande aucune information permettant de vous identifier directement, comme votre nom, votre numéro de téléphone ou votre adresse e-mail.</li>
-        <li>Votre liste de restaurants, vos visites, vos notes, vos appréciations du goût et vos photos sont enregistrées uniquement sur votre appareil et ne sont pas envoyées aux serveurs du développeur.</li>
+        <li>Votre liste de restaurants, vos visites, vos notes, vos appréciations du goût et vos photos sont enregistrées sur votre appareil et dans votre propre iCloud, et ne sont pas envoyées aux serveurs du développeur.</li>
         <li>Lorsque vous recherchez un lieu ou déplacez la carte, le terme recherché et la position de la carte sont transmis aux services de recherche de lieux (Kakao, Apple).</li>
         <li>L’app intègre Google Firebase : des informations sur l’appareil et l’app, des données d’utilisation et des informations d’erreur peuvent être transmises automatiquement à Google.</li>
         <li>Les commentaires que vous envoyez vous-même, ainsi que des statistiques d’utilisation et des rapports d’erreur anonymes qui ne permettent pas de vous identifier, sont transmis à l’espace de stockage iCloud du développeur.</li>
@@ -103,14 +103,15 @@
 
     <h2>1. Données traitées et mode de collecte</h2>
 
-    <h3>a) Données enregistrées uniquement sur l’appareil</h3>
-    <p>Les données suivantes, que vous saisissez vous-même dans l’app, sont enregistrées uniquement dans l’espace de stockage de l’app sur votre appareil et ne sont transmises ni au développeur ni à des tiers.</p>
+    <h3>a) Données enregistrées sur l’appareil et dans votre propre iCloud</h3>
+    <p>Les données suivantes, que vous saisissez vous-même dans l’app, sont enregistrées dans l’espace de stockage de l’app sur votre appareil et, si vous êtes connecté à iCloud, dans votre propre iCloud. Elles ne sont transmises ni au développeur ni à des tiers.</p>
     <ul>
       <li>Informations sur les restaurants : nom, adresse, numéro de téléphone, emplacement (coordonnées), type de cuisine, classement « Déjà allé » ou « À tester », rang dans le Top 6</li>
       <li>Visites : date de visite, plats, note en étoiles, remarques, appréciation du goût</li>
       <li>Photos ajoutées aux visites (réduites sur l’appareil puis conservées dans l’espace de stockage de l’app)</li>
       <li>Plats enregistrés, types de cuisine créés par vous et profil de goût calculé à partir de vos appréciations</li>
     </ul>
+    <p><strong>Synchronisation iCloud.</strong> Si vous êtes connecté à iCloud, les informations ci-dessus et vos photos de visite sont aussi enregistrées dans votre propre base privée iCloud (Apple CloudKit) et tenues à jour avec vos autres appareils du même compte Apple. Ni le Développeur ni personne d’autre ne peut les voir. Si vous désactivez iCloud, la synchronisation s’arrête et vos données restent sur l’appareil ; ce qui reste dans iCloud peut être supprimé dans Réglages ▸ Compte Apple ▸ iCloud ▸ Gérer le stockage.</p>
     <p>
       Si vous lancez une sauvegarde iCloud depuis les réglages avec Pro, vos restaurants, visites, menus, données de goût, types de plats personnels et photos de visite sont enregistrés dans votre propre base privée iCloud (Apple CloudKit). Par ailleurs, pour que vos données ne se perdent pas, l’app envoie une sauvegarde automatique une fois par jour dans votre propre base privée iCloud lorsque vous êtes connecté à iCloud. Le Développeur n’a accès à aucune de ces deux sauvegardes.
       (Elles peuvent toutefois figurer, en tant que données de l’appareil, dans une sauvegarde complète de votre iPhone.)
@@ -263,7 +264,7 @@
 
     <h2>10. Mesures de sécurité</h2>
     <ul>
-      <li>Seules les données strictement nécessaires sont traitées, et vos données restent sur votre appareil.</li>
+      <li>Seules les données strictement nécessaires sont traitées, et vos données restent sur votre appareil et dans votre propre iCloud.</li>
       <li>Toutes les communications avec l’extérieur sont chiffrées en HTTPS.</li>
       <li>Le développeur ne centralise pas les données des utilisateurs sur ses propres serveurs.</li>
     </ul>

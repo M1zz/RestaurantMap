@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <title>개인정보 처리방침 — 인생 맛집</title>
-<meta name="description" content="인생 맛집 앱이 처리하는 정보, 기기에만 저장되는 기록, 장소 검색과 Firebase, 피드백 보내기, 이용자의 권리와 연락처를 안내합니다.">
+<meta name="description" content="인생 맛집 앱이 처리하는 정보, 기기와 본인 iCloud에 저장되는 기록, 장소 검색과 Firebase, 피드백 보내기, 이용자의 권리와 연락처를 안내합니다.">
 <link rel="canonical" href="https://m1zz.github.io/RestaurantMap/privacy.html">
 <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/RestaurantMap/privacy.html">
 <link rel="alternate" hreflang="en" href="https://m1zz.github.io/RestaurantMap/en/privacy.html">
@@ -93,7 +93,7 @@
       <h3>한눈에 보기</h3>
       <ul>
         <li>회원가입과 로그인이 없습니다. 이름·전화번호·이메일처럼 이용자를 직접 알아볼 수 있는 정보를 요구하지 않습니다.</li>
-        <li>식당 목록, 방문 기록, 메모, 맛 평가, 사진은 이용자 기기에만 저장되며 개발자 서버로 보내지 않습니다.</li>
+        <li>식당 목록, 방문 기록, 메모, 맛 평가, 사진은 이용자 기기와 이용자 본인의 iCloud에 저장되며 개발자 서버로 보내지 않습니다.</li>
         <li>장소를 검색하거나 지도를 움직일 때 검색어와 지도 위치가 장소 검색 서비스(카카오, Apple)로 전송됩니다.</li>
         <li>앱에는 Google Firebase가 포함되어 있어 기기·앱 정보와 이용 기록, 오류 정보가 자동으로 Google에 전송될 수 있습니다.</li>
         <li>이용자가 직접 보내는 피드백과, 누구인지 알 수 없는 익명 사용 통계·오류 보고가 개발자의 iCloud 저장소로 전달됩니다.</li>
@@ -103,14 +103,15 @@
 
     <h2>1. 처리하는 정보의 항목과 수집 방법</h2>
 
-    <h3>가. 기기에만 저장되는 정보</h3>
-    <p>이용자가 앱에 직접 입력한 다음 정보는 이용자 기기의 앱 저장 공간에만 저장되며, 개발자나 제3자에게 전송되지 않습니다.</p>
+    <h3>가. 기기와 이용자 본인의 iCloud에 저장되는 정보</h3>
+    <p>이용자가 앱에 직접 입력한 다음 정보는 이용자 기기의 앱 저장 공간에 저장되고, iCloud에 로그인한 경우 이용자 본인의 iCloud에도 저장됩니다. 개발자나 제3자에게 전송되지 않습니다.</p>
     <ul>
       <li>식당 정보: 이름, 주소, 전화번호, 위치(좌표), 음식 종류, 가본 곳·가볼 곳 구분, 탑6 순위</li>
       <li>방문 기록: 방문 날짜, 메뉴, 별점, 메모, 맛 평가</li>
       <li>방문 기록에 넣은 사진 (기기 안에서 크기를 줄여 앱 저장 공간에 보관)</li>
       <li>등록한 메뉴, 직접 만든 음식 종류, 맛 평가를 바탕으로 계산한 취향 프로필</li>
     </ul>
+    <p><strong>iCloud 동기화.</strong> iCloud에 로그인되어 있으면 위 정보와 방문 사진은 이용자 본인의 iCloud 비공개 저장소(Apple CloudKit)에도 저장되어, 같은 Apple 계정의 다른 기기와 자동으로 맞춰집니다. 개발자나 다른 사람은 볼 수 없습니다. iCloud를 끄면 동기화가 멈추고 기록은 기기에 그대로 남으며, iCloud에 남은 기록은 설정 ▸ Apple 계정 ▸ iCloud ▸ 저장 공간 관리에서 지울 수 있습니다.</p>
     <p>
       Pro에서 설정의 iCloud 백업을 직접 실행하면 식당, 방문 기록, 메뉴, 취향 정보, 직접 추가한 음식 종류와 방문 사진이 이용자 본인의 iCloud 비공개 저장소(Apple CloudKit)에 저장됩니다. 또한 기록이 사라지지 않도록, iCloud에 로그인한 경우 앱이 하루 한 번 자동 백업을 이용자 본인의 iCloud 비공개 저장소에 올립니다. 두 백업 모두 개발자는 볼 수 없습니다.
       (iPhone 전체 백업에는 기기 데이터로 함께 포함될 수 있습니다.)
@@ -263,7 +264,7 @@
 
     <h2>10. 안전성 확보 조치</h2>
     <ul>
-      <li>필요한 최소한의 정보만 처리하고, 이용자가 남긴 기록은 기기 안에만 둡니다.</li>
+      <li>필요한 최소한의 정보만 처리하고, 이용자가 남긴 기록은 기기와 이용자 본인의 iCloud에만 둡니다.</li>
       <li>외부와의 통신은 모두 암호화된 HTTPS로 합니다.</li>
       <li>개발자가 운영하는 서버에 이용자 기록을 모으지 않습니다.</li>
     </ul>

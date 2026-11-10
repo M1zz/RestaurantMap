@@ -93,7 +93,7 @@
       <h3>Resumo</h3>
       <ul>
         <li>Não há cadastro nem login. O app não pede informações que identifiquem você diretamente, como nome, telefone ou e-mail.</li>
-        <li>A lista de restaurantes, os registros de visitas, as anotações, as avaliações de sabor e as fotos ficam salvos somente no seu aparelho e não são enviados aos servidores do desenvolvedor.</li>
+        <li>A lista de restaurantes, os registros de visitas, as anotações, as avaliações de sabor e as fotos ficam salvos no seu aparelho e no seu próprio iCloud, e não são enviados aos servidores do desenvolvedor.</li>
         <li>Quando você busca um lugar ou move o mapa, o termo buscado e a posição do mapa são enviados aos serviços de busca de lugares (Kakao, Apple).</li>
         <li>O app inclui o Google Firebase, por isso informações do aparelho e do app, dados de uso e informações de erro podem ser enviados automaticamente ao Google.</li>
         <li>O feedback que você mesmo envia, além de estatísticas de uso e relatórios de erro anônimos que não permitem identificar você, é transmitido ao armazenamento do iCloud do desenvolvedor.</li>
@@ -103,14 +103,15 @@
 
     <h2>1. Dados tratados e forma de coleta</h2>
 
-    <h3>a) Dados salvos somente no aparelho</h3>
-    <p>Os dados a seguir, que você mesmo insere no app, ficam salvos apenas no armazenamento do app no seu aparelho e não são transmitidos ao desenvolvedor nem a terceiros.</p>
+    <h3>a) Dados salvos no aparelho e no seu próprio iCloud</h3>
+    <p>Os dados a seguir, que você mesmo insere no app, ficam salvos no armazenamento do app no seu aparelho e, se você estiver conectado ao iCloud, também no seu próprio iCloud. Não são transmitidos ao desenvolvedor nem a terceiros.</p>
     <ul>
       <li>Dados dos restaurantes: nome, endereço, telefone, localização (coordenadas), tipo de comida, classificação como “Já fui” ou “Quero ir”, posição no Top 6</li>
       <li>Registros de visitas: data da visita, pratos, estrelas, anotações, avaliações de sabor</li>
       <li>Fotos adicionadas aos registros de visitas (reduzidas no próprio aparelho e guardadas no armazenamento do app)</li>
       <li>Pratos cadastrados, tipos de comida criados por você e o perfil de gosto calculado a partir das suas avaliações</li>
     </ul>
+    <p><strong>Sincronização com o iCloud.</strong> Se você estiver conectado ao iCloud, as informações acima e as fotos das visitas também ficam salvas no seu próprio banco de dados privado do iCloud (Apple CloudKit) e são mantidas em dia com seus outros aparelhos da mesma Conta Apple. O desenvolvedor e outras pessoas não conseguem vê-las. Se você desativar o iCloud, a sincronização para e seus registros continuam no aparelho; o que ficar no iCloud pode ser apagado em Ajustes ▸ Conta Apple ▸ iCloud ▸ Gerenciar Armazenamento.</p>
     <p>
       Se você fizer backup no iCloud pelos ajustes com o Pro, seus restaurantes, visitas, cardápios, dados de gosto, tipos de comida criados por você e fotos das visitas são guardados no seu próprio banco de dados privado do iCloud (Apple CloudKit). Além disso, para que seus registros não se percam, o app envia um backup automático uma vez por dia para o seu próprio banco de dados privado do iCloud quando você está conectado ao iCloud. O desenvolvedor não consegue ver nenhum dos dois backups.
       (Eles podem, porém, fazer parte de um backup completo do iPhone como dados do aparelho.)
@@ -263,7 +264,7 @@
 
     <h2>10. Medidas de segurança</h2>
     <ul>
-      <li>Só são tratados os dados mínimos necessários, e os seus registros ficam no seu aparelho.</li>
+      <li>Só são tratados os dados mínimos necessários, e os seus registros ficam no seu aparelho e no seu próprio iCloud.</li>
       <li>Toda a comunicação externa é feita por HTTPS criptografado.</li>
       <li>O desenvolvedor não reúne registros dos usuários em servidores próprios.</li>
     </ul>

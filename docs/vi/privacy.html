@@ -93,7 +93,7 @@
       <h3>Tóm tắt nhanh</h3>
       <ul>
         <li>Không cần đăng ký hay đăng nhập. Ứng dụng không yêu cầu thông tin có thể nhận diện trực tiếp bạn như họ tên, số điện thoại hay email.</li>
-        <li>Danh sách quán, nhật ký ghé quán, ghi chú, đánh giá hương vị và ảnh chỉ được lưu trên thiết bị của bạn và không được gửi đến máy chủ của nhà phát triển.</li>
+        <li>Danh sách quán, nhật ký ghé quán, ghi chú, đánh giá hương vị và ảnh được lưu trên thiết bị của bạn và trong iCloud của chính bạn, không được gửi đến máy chủ của nhà phát triển.</li>
         <li>Khi bạn tìm địa điểm hoặc di chuyển bản đồ, từ khóa tìm kiếm và vị trí bản đồ sẽ được gửi đến dịch vụ tìm kiếm địa điểm (Kakao, Apple).</li>
         <li>Ứng dụng có tích hợp Google Firebase, nên thông tin thiết bị và ứng dụng, lịch sử sử dụng và thông tin lỗi có thể được tự động gửi đến Google.</li>
         <li>Góp ý do bạn tự gửi, cùng với thống kê sử dụng và báo cáo lỗi ẩn danh không thể nhận diện bạn, được chuyển đến kho lưu trữ iCloud của nhà phát triển.</li>
@@ -103,14 +103,15 @@
 
     <h2>1. Loại thông tin được xử lý và cách thu thập</h2>
 
-    <h3>a. Thông tin chỉ lưu trên thiết bị</h3>
-    <p>Các thông tin sau do bạn tự nhập vào ứng dụng chỉ được lưu trong bộ nhớ của ứng dụng trên thiết bị của bạn và không được gửi cho nhà phát triển hay bên thứ ba.</p>
+    <h3>a. Thông tin lưu trên thiết bị và trong iCloud của chính bạn</h3>
+    <p>Các thông tin sau do bạn tự nhập vào ứng dụng được lưu trong bộ nhớ của ứng dụng trên thiết bị của bạn và, nếu bạn đã đăng nhập iCloud, trong iCloud của chính bạn. Chúng không được gửi cho nhà phát triển hay bên thứ ba.</p>
     <ul>
       <li>Thông tin quán: tên, địa chỉ, số điện thoại, vị trí (tọa độ), loại món, phân loại “Đã đến” hay “Muốn đến”, thứ hạng trong Top 6</li>
       <li>Nhật ký ghé quán: ngày ghé, món ăn, số sao, ghi chú, đánh giá hương vị</li>
       <li>Ảnh đính kèm nhật ký ghé quán (được thu nhỏ ngay trên thiết bị rồi lưu trong bộ nhớ của ứng dụng)</li>
       <li>Món đã lưu, loại món do bạn tự tạo và hồ sơ khẩu vị được tính từ các đánh giá hương vị</li>
     </ul>
+    <p><strong>Đồng bộ iCloud.</strong> Nếu bạn đã đăng nhập iCloud, các thông tin trên và ảnh ghé quán cũng được lưu vào kho riêng tư trên iCloud của chính bạn (Apple CloudKit) và tự động đồng bộ với các thiết bị khác dùng cùng Tài khoản Apple. Nhà phát triển và người khác không thể xem. Tắt iCloud sẽ dừng đồng bộ và dữ liệu vẫn nằm trên thiết bị; dữ liệu còn lại trong iCloud có thể xóa tại Cài đặt ▸ Tài khoản Apple ▸ iCloud ▸ Quản lý dung lượng.</p>
     <p>
       Với Pro, khi bạn tự chạy sao lưu iCloud trong phần cài đặt, quán, nhật ký ghé quán, thực đơn, dữ liệu khẩu vị, loại món tự thêm và ảnh ghé quán được lưu vào kho riêng tư trên iCloud của chính bạn (Apple CloudKit). Ngoài ra, để dữ liệu không bị mất, ứng dụng tự động tải bản sao lưu lên kho riêng tư trên iCloud của chính bạn mỗi ngày một lần nếu bạn đã đăng nhập iCloud. Nhà phát triển không thể xem cả hai bản sao lưu này.
       (Dữ liệu vẫn có thể nằm trong bản sao lưu toàn bộ iPhone dưới dạng dữ liệu của thiết bị.)
@@ -263,7 +264,7 @@
 
     <h2>10. Biện pháp bảo đảm an toàn</h2>
     <ul>
-      <li>Chỉ xử lý thông tin ở mức tối thiểu cần thiết và giữ dữ liệu của người dùng ngay trên thiết bị.</li>
+      <li>Chỉ xử lý thông tin ở mức tối thiểu cần thiết và giữ dữ liệu của người dùng trên thiết bị và trong iCloud của chính họ.</li>
       <li>Mọi kết nối ra bên ngoài đều dùng HTTPS được mã hóa.</li>
       <li>Nhà phát triển không tập hợp dữ liệu người dùng trên máy chủ do mình vận hành.</li>
     </ul>

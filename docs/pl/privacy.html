@@ -93,7 +93,7 @@
       <h3>W skrócie</h3>
       <ul>
         <li>Nie ma rejestracji ani logowania. Aplikacja nie prosi o informacje, które bezpośrednio identyfikują użytkownika, takie jak imię i nazwisko, numer telefonu czy adres e-mail.</li>
-        <li>Lista restauracji, dziennik wizyt, notatki, oceny smaku i zdjęcia są przechowywane wyłącznie na urządzeniu użytkownika i nie są wysyłane na serwery Twórcy.</li>
+        <li>Lista restauracji, dziennik wizyt, notatki, oceny smaku i zdjęcia są przechowywane na urządzeniu użytkownika i w jego własnym iCloud i nie są wysyłane na serwery Twórcy.</li>
         <li>Podczas wyszukiwania miejsc lub przesuwania mapy wpisane zapytanie i położenie mapy są przesyłane do usług wyszukiwania miejsc (Kakao, Apple).</li>
         <li>Aplikacja zawiera Google Firebase, dlatego informacje o urządzeniu i aplikacji, dane o korzystaniu oraz informacje o błędach mogą być automatycznie przesyłane do Google.</li>
         <li>Opinie wysyłane przez użytkownika oraz anonimowe statystyki użytkowania i raporty błędów, które nie pozwalają ustalić tożsamości użytkownika, trafiają do magazynu iCloud Twórcy.</li>
@@ -103,14 +103,15 @@
 
     <h2>1. Rodzaje przetwarzanych informacji i sposób ich zbierania</h2>
 
-    <h3>A. Informacje przechowywane wyłącznie na urządzeniu</h3>
-    <p>Poniższe informacje, które użytkownik sam wprowadza do Aplikacji, są przechowywane wyłącznie w pamięci Aplikacji na jego urządzeniu i nie są przekazywane Twórcy ani osobom trzecim.</p>
+    <h3>A. Informacje przechowywane na urządzeniu i we własnym iCloud użytkownika</h3>
+    <p>Poniższe informacje, które użytkownik sam wprowadza do Aplikacji, są przechowywane w pamięci Aplikacji na jego urządzeniu, a po zalogowaniu do iCloud także w jego własnym iCloud. Nie są przekazywane Twórcy ani osobom trzecim.</p>
     <ul>
       <li>Informacje o restauracjach: nazwa, adres, numer telefonu, położenie (współrzędne), rodzaj kuchni, status „Odwiedzone” lub „Do odwiedzenia”, miejsce w Top 6</li>
       <li>Dziennik wizyt: data wizyty, dania, ocena, notatki, ocena smaku</li>
       <li>Zdjęcia dodane do wpisów o wizytach (zmniejszane na urządzeniu i przechowywane w pamięci Aplikacji)</li>
       <li>Dodane pozycje menu, własne rodzaje kuchni oraz profil smaku obliczony na podstawie ocen smaku</li>
     </ul>
+    <p><strong>Synchronizacja iCloud.</strong> Jeśli jesteś zalogowany do iCloud, powyższe informacje i zdjęcia z wizyt są zapisywane także w Twoim prywatnym magazynie iCloud (Apple CloudKit) i automatycznie uzgadniane z innymi urządzeniami na tym samym koncie Apple. Twórca ani nikt inny ich nie widzi. Po wyłączeniu iCloud synchronizacja ustaje, a wpisy pozostają na urządzeniu; to, co zostało w iCloud, można usunąć w Ustawienia ▸ Konto Apple ▸ iCloud ▸ Zarządzaj pamięcią.</p>
     <p>
       Jeśli z Pro samodzielnie uruchomisz w ustawieniach kopię zapasową w iCloud, restauracje, wizyty, menu, dane o guście, własne rodzaje jedzenia i zdjęcia z wizyt trafią do Twojego prywatnego magazynu iCloud (Apple CloudKit). Ponadto, aby wpisy nie przepadły, Aplikacja raz dziennie przesyła automatyczną kopię zapasową do Twojego prywatnego magazynu iCloud, jeśli jesteś zalogowany do iCloud. Twórca nie ma wglądu w żadną z tych kopii.
       (Dane mogą jednak zostać uwzględnione jako dane urządzenia w pełnej kopii zapasowej iPhone’a).
@@ -263,7 +264,7 @@
 
     <h2>10. Środki bezpieczeństwa</h2>
     <ul>
-      <li>Przetwarzamy tylko niezbędne minimum informacji, a wpisy użytkownika pozostają wyłącznie na urządzeniu.</li>
+      <li>Przetwarzamy tylko niezbędne minimum informacji, a wpisy użytkownika pozostają wyłącznie na urządzeniu i w jego własnym iCloud.</li>
       <li>Cała komunikacja z zewnętrznymi serwerami odbywa się przez szyfrowane połączenie HTTPS.</li>
       <li>Twórca nie gromadzi wpisów użytkowników na żadnym własnym serwerze.</li>
     </ul>

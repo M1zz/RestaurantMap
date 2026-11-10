@@ -93,7 +93,7 @@
       <h3>At a glance</h3>
       <ul>
         <li>There is no sign-up or login. We never ask for information that directly identifies you, such as your name, phone number or email address.</li>
-        <li>Your restaurant list, visit log, notes, taste ratings and photos are stored only on your device and are never sent to the Developer’s servers.</li>
+        <li>Your restaurant list, visit log, notes, taste ratings and photos are stored on your device and in your own iCloud, and are never sent to the Developer’s servers.</li>
         <li>When you search for places or move the map, your search terms and map location are sent to place search services (Kakao and Apple).</li>
         <li>The App includes Google Firebase, so device and app information, usage data and error information may be sent to Google automatically.</li>
         <li>Feedback you choose to send, along with anonymous usage statistics and error reports that cannot identify you, is delivered to the Developer’s iCloud storage.</li>
@@ -103,14 +103,15 @@
 
     <h2>1. Information we process and how it is collected</h2>
 
-    <h3>1.1 Information stored only on your device</h3>
-    <p>The following information you enter into the App is stored only in the App’s storage on your device and is never sent to the Developer or any third party.</p>
+    <h3>1.1 Information stored on your device and in your own iCloud</h3>
+    <p>The following information you enter into the App is stored in the App’s storage on your device and, when you are signed in to iCloud, in your own iCloud. It is never sent to the Developer or any third party.</p>
     <ul>
       <li>Restaurant details: name, address, phone number, location (coordinates), cuisine type, Visited / Want to Go status, and Top 6 rank</li>
       <li>Visit log: visit date, dishes, star rating, notes and taste ratings</li>
       <li>Photos added to your visit log (resized on the device and kept in the App’s storage)</li>
       <li>Dishes you register, cuisine types you create, and the Taste Profile calculated from your taste ratings</li>
     </ul>
+    <p><strong>iCloud sync.</strong> When you are signed in to iCloud, the information above and your visit photos are also stored in your own private iCloud database (Apple CloudKit) and kept in step with your other devices on the same Apple Account. The Developer and other people cannot see it. Turning iCloud off stops syncing and your records stay on the device; anything left in iCloud can be deleted under Settings ▸ Apple Account ▸ iCloud ▸ Manage Storage.</p>
     <p>
       If you run iCloud backup from Settings with Pro, your restaurants, visit log, menus, taste data, custom food types and visit photos are stored in your own private iCloud database (Apple CloudKit). In addition, so your records are never lost, the App uploads an automatic backup once a day to your own private iCloud database when you are signed in to iCloud. The Developer cannot see either backup.
       (Your data may be included as device data in a full iPhone backup.)
@@ -263,7 +264,7 @@
 
     <h2>10. Security measures</h2>
     <ul>
-      <li>Only the minimum necessary information is processed, and the logs you create stay on your device.</li>
+      <li>Only the minimum necessary information is processed, and the logs you create stay on your device and in your own iCloud.</li>
       <li>All communication with external services uses encrypted HTTPS.</li>
       <li>User logs are not collected on any server operated by the Developer.</li>
     </ul>

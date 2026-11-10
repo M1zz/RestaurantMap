@@ -94,7 +94,7 @@
       <h3>Lyhyesti</h3>
       <ul>
         <li>Rekisteröitymistä tai kirjautumista ei ole. Sovellus ei pyydä tietoja, joista sinut voisi suoraan tunnistaa, kuten nimeä, puhelinnumeroa tai sähköpostiosoitetta.</li>
-        <li>Ravintolalista, käyntimerkinnät, muistiinpanot, makuarviot ja kuvat tallentuvat vain laitteellesi, eikä niitä lähetetä kehittäjän palvelimille.</li>
+        <li>Ravintolalista, käyntimerkinnät, muistiinpanot, makuarviot ja kuvat tallentuvat laitteellesi ja omaan iCloudiisi, eikä niitä lähetetä kehittäjän palvelimille.</li>
         <li>Kun haet paikkoja tai liikutat karttaa, hakusana ja kartan sijainti lähetetään paikkahakupalveluille (Kakao, Apple).</li>
         <li>Sovellus sisältää Google Firebasen, joten laite- ja sovellustietoja, käyttötietoja ja virhetietoja voi siirtyä automaattisesti Googlelle.</li>
         <li>Itse lähettämäsi palaute sekä nimettömät käyttötilastot ja virheraportit, joista ei voi päätellä, kuka olet, välitetään kehittäjän iCloud-tallennustilaan.</li>
@@ -104,14 +104,15 @@
 
     <h2>1. Käsiteltävät tiedot ja niiden keruutapa</h2>
 
-    <h3>A. Vain laitteelle tallennettavat tiedot</h3>
-    <p>Seuraavat itse sovellukseen syöttämäsi tiedot tallentuvat vain sovelluksen tallennustilaan laitteellasi, eikä niitä lähetetä kehittäjälle tai kolmansille osapuolille.</p>
+    <h3>A. Laitteelle ja omaan iCloudiisi tallennettavat tiedot</h3>
+    <p>Seuraavat itse sovellukseen syöttämäsi tiedot tallentuvat sovelluksen tallennustilaan laitteellasi ja, jos olet kirjautunut iCloudiin, myös omaan iCloudiisi. Niitä ei lähetetä kehittäjälle tai kolmansille osapuolille.</p>
     <ul>
       <li>Ravintolatiedot: nimi, osoite, puhelinnumero, sijainti (koordinaatit), keittiötyyppi, Käyty/Haluan käydä -jako, sija Top 6 -listalla</li>
       <li>Käyntimerkinnät: käyntipäivä, annokset, tähdet, muistiinpanot, makuarvio</li>
       <li>Käyntimerkintöihin lisätyt kuvat (pienennetään laitteella ja säilytetään sovelluksen tallennustilassa)</li>
       <li>Lisäämäsi annokset, itse luomasi keittiötyypit ja makuarvioiden perusteella laskettu makuprofiili</li>
     </ul>
+    <p><strong>iCloud-synkronointi.</strong> Kun olet kirjautunut iCloudiin, yllä mainitut tiedot ja käyntien kuvat tallentuvat myös omaan yksityiseen iCloud-tietokantaasi (Apple CloudKit) ja pysyvät ajan tasalla muiden saman Apple-tilin laitteidesi kanssa. Kehittäjä tai muut eivät näe niitä. Jos poistat iCloudin käytöstä, synkronointi loppuu ja merkinnät jäävät laitteelle; iCloudiin jääneet tiedot voi poistaa kohdassa Asetukset ▸ Apple-tili ▸ iCloud ▸ Hallitse tallennustilaa.</p>
     <p>
       Jos käynnistät Prolla itse iCloud-varmuuskopion asetuksista, ravintolasi, käyntisi, ruokalistat, makutietosi, itse lisäämäsi ruokalajit ja käyntien kuvat tallentuvat omaan yksityiseen iCloud-tietokantaasi (Apple CloudKit). Lisäksi sovellus lataa kerran päivässä automaattisen varmuuskopion omaan yksityiseen iCloud-tietokantaasi, kun olet kirjautunut iCloudiin, jotta merkintäsi eivät katoa. Kehittäjä ei näe kumpaakaan varmuuskopiota.
       (Ne voivat kuitenkin sisältyä laitteen tietoina iPhonen täyteen varmuuskopioon.)
@@ -264,7 +265,7 @@
 
     <h2>10. Tietoturvatoimet</h2>
     <ul>
-      <li>Käsittelemme vain välttämättömät tiedot, ja merkintäsi pysyvät vain laitteella.</li>
+      <li>Käsittelemme vain välttämättömät tiedot, ja merkintäsi pysyvät vain laitteella ja omassa iCloudissasi.</li>
       <li>Kaikki ulkoinen tiedonsiirto tapahtuu salatun HTTPS-yhteyden kautta.</li>
       <li>Kehittäjä ei kokoa käyttäjien merkintöjä ylläpitämilleen palvelimille.</li>
     </ul>

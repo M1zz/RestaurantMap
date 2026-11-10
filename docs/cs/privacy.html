@@ -94,7 +94,7 @@
       <h3>Shrnutí</h3>
       <ul>
         <li>Aplikace nevyžaduje registraci ani přihlášení. Nežádá žádné údaje, podle kterých by vás bylo možné přímo identifikovat, jako je jméno, telefonní číslo nebo e-mail.</li>
-        <li>Seznam restaurací, záznamy návštěv, poznámky, hodnocení chuti a fotky se ukládají jen ve vašem zařízení a na servery vývojáře se neodesílají.</li>
+        <li>Seznam restaurací, záznamy návštěv, poznámky, hodnocení chuti a fotky se ukládají ve vašem zařízení a ve vašem vlastním iCloudu a na servery vývojáře se neodesílají.</li>
         <li>Když vyhledáváte místa nebo posouváte mapu, odesílá se hledaný výraz a poloha mapy službám pro vyhledávání míst (Kakao, Apple).</li>
         <li>Aplikace obsahuje Google Firebase, takže se do Googlu mohou automaticky odesílat údaje o zařízení a aplikaci, údaje o používání a informace o chybách.</li>
         <li>Zpětná vazba, kterou sami odešlete, a anonymní statistiky používání a hlášení chyb, ze kterých nelze poznat, kdo jste, se ukládají do úložiště iCloud vývojáře.</li>
@@ -104,14 +104,15 @@
 
     <h2>1. Zpracovávané údaje a způsob jejich získávání</h2>
 
-    <h3>A. Údaje uložené jen v zařízení</h3>
-    <p>Následující údaje, které do aplikace sami zadáte, se ukládají pouze v úložišti aplikace ve vašem zařízení a neodesílají se vývojáři ani třetím stranám.</p>
+    <h3>A. Údaje uložené v zařízení a ve vašem vlastním iCloudu</h3>
+    <p>Následující údaje, které do aplikace sami zadáte, se ukládají v úložišti aplikace ve vašem zařízení a, pokud jste přihlášeni k iCloudu, také ve vašem vlastním iCloudu. Neodesílají se vývojáři ani třetím stranám.</p>
     <ul>
       <li>Údaje o restauracích: název, adresa, telefonní číslo, poloha (souřadnice), druh kuchyně, zařazení do Navštívené / Chci vyzkoušet, pořadí v Top 6</li>
       <li>Záznamy návštěv: datum návštěvy, jídla, hvězdičky, poznámky, hodnocení chuti</li>
       <li>Fotky přidané k záznamům návštěv (zmenšené přímo v zařízení a uložené v úložišti aplikace)</li>
       <li>Uložená jídla, vlastní druhy kuchyně a chuťový profil vypočtený z hodnocení chuti</li>
     </ul>
+    <p><strong>Synchronizace iCloud.</strong> Pokud jste přihlášeni k iCloudu, uvedené údaje a fotky z návštěv se ukládají také do vašeho soukromého úložiště iCloud (Apple CloudKit) a automaticky se sladí s vašimi dalšími zařízeními se stejným účtem Apple. Vývojář ani nikdo jiný je nevidí. Když iCloud vypnete, synchronizace se zastaví a záznamy zůstanou v zařízení; co zůstane v iCloudu, lze smazat v Nastavení ▸ Účet Apple ▸ iCloud ▸ Spravovat úložiště.</p>
     <p>
       Pokud s Pro sami spustíte zálohu na iCloud v nastavení, restaurace, záznamy návštěv, menu, údaje o chuti, vlastní druhy jídel i fotky z návštěv se uloží do vašeho soukromého úložiště iCloud (Apple CloudKit). Aby se záznamy neztratily, aplikace navíc jednou denně nahraje automatickou zálohu do vašeho soukromého úložiště iCloud, pokud jste k iCloudu přihlášeni. Do žádné z těchto záloh vývojář nevidí.
       (Jako součást dat zařízení mohou být zahrnuty do celkové zálohy iPhonu.)
@@ -264,7 +265,7 @@
 
     <h2>10. Bezpečnostní opatření</h2>
     <ul>
-      <li>Zpracováváme jen nezbytně nutné údaje a vaše záznamy zůstávají pouze v zařízení.</li>
+      <li>Zpracováváme jen nezbytně nutné údaje a vaše záznamy zůstávají pouze v zařízení a ve vašem vlastním iCloudu.</li>
       <li>Veškerá komunikace s okolím probíhá přes šifrované spojení HTTPS.</li>
       <li>Vývojář nesoustřeďuje záznamy uživatelů na žádném serveru, který provozuje.</li>
     </ul>

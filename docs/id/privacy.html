@@ -94,7 +94,7 @@
       <h3>Ringkasan</h3>
       <ul>
         <li>Tidak ada pendaftaran akun maupun login. Aplikasi tidak meminta informasi yang dapat mengidentifikasi Anda secara langsung, seperti nama, nomor telepon, atau email.</li>
-        <li>Daftar restoran, catatan kunjungan, catatan, penilaian rasa, dan foto hanya disimpan di perangkat Anda dan tidak dikirim ke server Pengembang.</li>
+        <li>Daftar restoran, catatan kunjungan, catatan, penilaian rasa, dan foto disimpan di perangkat Anda dan di iCloud milik Anda sendiri, dan tidak dikirim ke server Pengembang.</li>
         <li>Saat Anda mencari tempat atau menggeser peta, kata kunci pencarian dan posisi peta dikirim ke layanan pencarian tempat (Kakao, Apple).</li>
         <li>Aplikasi menyertakan Google Firebase, sehingga informasi perangkat dan aplikasi, data penggunaan, serta informasi kesalahan dapat dikirim secara otomatis ke Google.</li>
         <li>Masukan yang Anda kirim sendiri, serta statistik penggunaan anonim dan laporan kesalahan yang tidak dapat menunjukkan siapa Anda, dikirim ke penyimpanan iCloud milik Pengembang.</li>
@@ -104,14 +104,15 @@
 
     <h2>1. Jenis informasi yang diproses dan cara pengumpulannya</h2>
 
-    <h3>A. Informasi yang hanya disimpan di perangkat</h3>
-    <p>Informasi berikut yang Anda masukkan sendiri ke Aplikasi hanya disimpan di ruang penyimpanan Aplikasi di perangkat Anda dan tidak dikirim ke Pengembang maupun pihak ketiga.</p>
+    <h3>A. Informasi yang disimpan di perangkat dan di iCloud milik Anda sendiri</h3>
+    <p>Informasi berikut yang Anda masukkan sendiri ke Aplikasi disimpan di ruang penyimpanan Aplikasi di perangkat Anda dan, jika Anda masuk ke iCloud, juga di iCloud milik Anda sendiri. Informasi ini tidak dikirim ke Pengembang maupun pihak ketiga.</p>
     <ul>
       <li>Informasi restoran: nama, alamat, nomor telepon, lokasi (koordinat), jenis masakan, kategori Sudah dikunjungi / Ingin ke sana, peringkat Top 6</li>
       <li>Catatan kunjungan: tanggal kunjungan, menu, bintang, catatan, penilaian rasa</li>
       <li>Foto yang ditambahkan ke catatan kunjungan (diperkecil di dalam perangkat dan disimpan di ruang penyimpanan Aplikasi)</li>
       <li>Menu yang didaftarkan, jenis masakan buatan sendiri, dan profil selera yang dihitung dari penilaian rasa</li>
     </ul>
+    <p><strong>Sinkronisasi iCloud.</strong> Jika Anda masuk ke iCloud, informasi di atas dan foto kunjungan juga disimpan di penyimpanan iCloud pribadi milik Anda sendiri (Apple CloudKit) dan otomatis diselaraskan dengan perangkat lain pada Akun Apple yang sama. Pengembang dan orang lain tidak dapat melihatnya. Mematikan iCloud menghentikan sinkronisasi dan catatan tetap ada di perangkat; data yang tersisa di iCloud bisa dihapus di Pengaturan ▸ Akun Apple ▸ iCloud ▸ Kelola Penyimpanan.</p>
     <p>
       Jika Anda menjalankan pencadangan iCloud dari pengaturan dengan Pro, restoran, catatan kunjungan, menu, data selera, jenis makanan yang Anda tambahkan sendiri, dan foto kunjungan disimpan di penyimpanan iCloud pribadi milik Anda sendiri (Apple CloudKit). Selain itu, agar catatan tidak hilang, aplikasi mengunggah cadangan otomatis sekali sehari ke penyimpanan iCloud pribadi milik Anda sendiri jika Anda masuk ke iCloud. Pengembang tidak dapat melihat kedua cadangan tersebut.
       (Catatan tersebut dapat ikut tersimpan sebagai data perangkat dalam cadangan iPhone secara keseluruhan.)
@@ -264,7 +265,7 @@
 
     <h2>10. Langkah-langkah pengamanan</h2>
     <ul>
-      <li>Kami hanya memproses informasi minimum yang diperlukan, dan catatan Anda tetap berada di dalam perangkat.</li>
+      <li>Kami hanya memproses informasi minimum yang diperlukan, dan catatan Anda tetap berada di perangkat dan di iCloud milik Anda sendiri.</li>
       <li>Semua komunikasi dengan pihak luar dilakukan melalui HTTPS terenkripsi.</li>
       <li>Pengembang tidak mengumpulkan catatan pengguna di server yang dioperasikannya.</li>
     </ul>
