@@ -29,6 +29,19 @@ struct RestaurantMapApp: App {
         // 인텐트는 화면 없이 앱을 깨워 돌기도 해서, 화면이 아니라 여기서 넘긴다.
         let container = sharedModelContainer
         AppDependencyManager.shared.add(dependency: container)
+        #if DEBUG
+        CloudKitSchemaWarmup.runIfRequested(container) {
+            let restaurant = Restaurant(name: "표본", address: "", latitude: 0, longitude: 0)
+            let menu = MenuItem(name: "표본 메뉴", restaurant: restaurant)
+            let visit = Visit(restaurant: restaurant)
+            visit.menu = menu
+            // 작은 사진과 큰 사진(CKAsset 으로 나가는 크기)을 하나씩 — 두 저장 꼴의 필드가 다 생기게
+            let small = VisitPhoto(data: Data(repeating: 1, count: 2_048), sortOrder: 0)
+            let large = VisitPhoto(data: Data(repeating: 2, count: 1_500_000), sortOrder: 1)
+            visit.photos = [small, large]
+            return [restaurant, menu, visit, small, large, TasteProfile()]
+        }
+        #endif
     }
 
     let sharedModelContainer: ModelContainer

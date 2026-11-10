@@ -87,6 +87,7 @@
 		58A77BC82EEC79B90068B8C2 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 58A77BC72EEC79B90068B8C2 /* FirebaseStorageCombine-Community */; };
 		5E000B9D5DE2612D8295E49E /* PhotoStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E8C84619F1DE96AB117EB1 /* PhotoStorageManager.swift */; };
 		7A1C0DE12A7ACEE6 /* PhotoMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1C0DE0ACDD4F2D /* PhotoMigration.swift */; };
+		7A1C0DE3AB000001 /* CloudKitSchemaWarmup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1C0DE2AB000001 /* CloudKitSchemaWarmup.swift */; };
 		60D48A4C54ED925C4780FF67 /* CustomCategorySettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD27675423ADDCC051FA3D1 /* CustomCategorySettingsView.swift */; };
 		680EB723127B1C8190CB6588 /* RestaurantMapSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54692912D3196B73FF3330D8 /* RestaurantMapSpec.swift */; };
 		A000BD0DB6806D29A2895F2B /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E98A59A68B9CAA9DA38753A9 /* Localizable.xcstrings */; };
@@ -105,6 +106,7 @@
 		130C9D405E83F0E949E172F4 /* AddCustomCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMap/Views/AddCustomCategoryView.swift; sourceTree = "<group>"; };
 		17E8C84619F1DE96AB117EB1 /* PhotoStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStorageManager.swift; sourceTree = "<group>"; };
 		7A1C0DE0ACDD4F2D /* PhotoMigration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMigration.swift; sourceTree = "<group>"; };
+		7A1C0DE2AB000001 /* CloudKitSchemaWarmup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitSchemaWarmup.swift; sourceTree = "<group>"; };
 		1A000000 /* RestaurantMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMapApp.swift; sourceTree = "<group>"; };
 		1A000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1A000004 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				49C64975CA314B3499093F64 /* RestaurantPlan.swift */,
 				17E8C84619F1DE96AB117EB1 /* PhotoStorageManager.swift */,
 				7A1C0DE0ACDD4F2D /* PhotoMigration.swift */,
+				7A1C0DE2AB000001 /* CloudKitSchemaWarmup.swift */,
 				1A000026 /* VisitReminderManager.swift */,
 				1A00002A /* CloudKitBackupService.swift */,
 			);
@@ -435,6 +438,7 @@
 				1A000001 /* RestaurantMapApp.swift in Sources */,
 				5E000B9D5DE2612D8295E49E /* PhotoStorageManager.swift in Sources */,
 				7A1C0DE12A7ACEE6 /* PhotoMigration.swift in Sources */,
+				7A1C0DE3AB000001 /* CloudKitSchemaWarmup.swift in Sources */,
 				16F26C12F5687998036CE66B /* HeroImageView.swift in Sources */,
 				02D2DB7D53AEABF344566792 /* PhotoDetailView.swift in Sources */,
 				052AC2EDD33E8042077FA16E /* PhotoGalleryView.swift in Sources */,
