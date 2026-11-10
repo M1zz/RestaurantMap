@@ -28,18 +28,19 @@ enum RestaurantListType: String, Codable, CaseIterable {
 
 @Model
 final class Restaurant {
-    var name: String
-    var address: String
-    var latitude: Double
-    var longitude: Double
-    var notes: String
-    var rating: Int
-    var visitDate: Date
-    var category: String
-    var phoneNumber: String
-    var isTop6: Bool
+    // CloudKit 동기화 규칙: 모든 속성은 옵셔널이거나 기본값이 있고, 관계는 옵셔널이다. 저장 파일은 그대로다.
+    var name: String = ""
+    var address: String = ""
+    var latitude: Double = 0
+    var longitude: Double = 0
+    var notes: String = ""
+    var rating: Int = 0
+    var visitDate: Date = Date()
+    var category: String = ""
+    var phoneNumber: String = ""
+    var isTop6: Bool = false
     var top6Rank: Int?
-    var categoryIcon: String
+    var categoryIcon: String = "fork.knife"
     var foodCategoryId: String = FoodCategoryRepository.builtInCategories[0].id.uuidString
     var isWishlist: Bool = false  // 가볼 곳 여부 (Boolean은 마이그레이션이 안전함)
 

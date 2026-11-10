@@ -1,16 +1,23 @@
 import Foundation
 import SwiftData
+import UIKit
 
 @Model
 final class Visit {
     var restaurant: Restaurant?
     var menu: MenuItem? // 선택한 메뉴 (메뉴 등록된 경우)
-    var visitDate: Date
-    var notes: String
-    var rating: Int
+    // CloudKit 동기화 규칙: 모든 속성은 옵셔널이거나 기본값이 있고, 관계는 옵셔널이다.
+    var visitDate: Date = Date()
+    var notes: String = ""
+    var rating: Int = 0
     var menuItem: String = "" // 먹은 메뉴 이름 (텍스트, 하위 호환용)
-    var photoFilenames: [String] = [] // 방문 사진 파일명 배열
-    var photoId: UUID = UUID() // 사진 저장용 UUID (PersistentIdentifier 대신 사용)
+    /// 옛 저장 방식의 사진 파일명. 첫 실행 때 `photos` 로 옮기고 비운다(→ PhotoMigration). 새로 쓰지 않는다.
+    var photoFilenames: [String] = []
+    var photoId: UUID = UUID() // 방문을 가리키는 고정 ID (백업 레코드 이름 · 옛 사진 폴더 이름)
+
+    /// 방문 사진. 기록과 함께 iCloud 로 따라간다.
+    @Relationship(deleteRule: .cascade, inverse: \VisitPhoto.visit)
+    var photos: [VisitPhoto]?
 
     // 일반 맛 취향 프로필 - 강도 (0-10)
     var spicy: Double?
@@ -144,18 +151,27 @@ final class Visit {
     }
 
     // 사진 관련 computed properties
-    var photoURLs: [URL] {
-        photoFilenames.compactMap { filename in
-            PhotoStorageManager.shared.photoURL(for: filename, visitID: self.photoId)
-        }
+    /// 넣은 순서대로.
+    var sortedPhotos: [VisitPhoto] {
+        (photos ?? []).sorted { ($0.sortOrder, $0.createdAt) < ($1.sortOrder, $1.createdAt) }
     }
 
-    var heroImageURL: URL? {
-        photoURLs.first
+    var heroPhoto: VisitPhoto? {
+        sortedPhotos.first
     }
 
     var hasPhotos: Bool {
-        !photoFilenames.isEmpty
+        !(photos?.isEmpty ?? true)
+    }
+
+    /// 사진을 줄여(≤1024px · ≤800KB JPEG) 기록에 붙인다. 이 방문이 컨텍스트에 들어갈 때 사진도 같이 들어간다.
+    @discardableResult
+    func addPhoto(_ image: UIImage) -> VisitPhoto? {
+        guard let data = PhotoStorageManager.shared.jpegData(for: image) else { return nil }
+        let photo = VisitPhoto(data: data, sortOrder: (sortedPhotos.last?.sortOrder ?? -1) + 1)
+        if photos == nil { photos = [] }
+        photos?.append(photo)
+        return photo
     }
 
     // 취향이 평가되었는지 확인

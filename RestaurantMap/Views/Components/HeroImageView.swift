@@ -2,30 +2,25 @@ import SwiftUI
 
 /// 방문 상세 화면 상단의 큰 히어로 이미지
 struct HeroImageView: View {
-    let imageURL: URL?
+    let data: Data?
     let height: CGFloat
 
-    init(imageURL: URL?, height: CGFloat = 250) {
-        self.imageURL = imageURL
+    init(data: Data?, height: CGFloat = 250) {
+        self.data = data
         self.height = height
     }
 
     var body: some View {
-        AsyncImage(url: imageURL) { phase in
-            switch phase {
-            case .success(let image):
-                image
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(height: height)
-                    .clipped()
-            case .failure:
-                failurePlaceholder
-            case .empty:
-                loadingPlaceholder
-            @unknown default:
-                loadingPlaceholder
-            }
+        PhotoDataImage(data: data) { image in
+            image
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(height: height)
+                .clipped()
+        } loading: {
+            loadingPlaceholder
+        } failure: {
+            failurePlaceholder
         }
         .frame(height: height)
     }

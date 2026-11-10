@@ -3,21 +3,22 @@ import SwiftData
 
 @Model
 final class TasteProfile {
-    var userId: String
+    // CloudKit 동기화 규칙: 모든 속성에 기본값을 둔다.
+    var userId: String = "default"
 
     // 맛 선호도 (0-10)
-    var spicy: Double          // 맵기: 순한맛 ↔ 매운맛
-    var boldness: Double       // 진한맛: 담백 ↔ 진하고 자극적
-    var sweetness: Double      // 단맛: 싫어함 ↔ 좋아함
-    var saltiness: Double      // 짠맛: 싱거움 ↔ 짭짤함
-    var richness: Double       // 기름진: 담백 ↔ 고소하고 기름진
+    var spicy: Double = 5.0          // 맵기: 순한맛 ↔ 매운맛
+    var boldness: Double = 5.0       // 진한맛: 담백 ↔ 진하고 자극적
+    var sweetness: Double = 5.0      // 단맛: 싫어함 ↔ 좋아함
+    var saltiness: Double = 5.0      // 짠맛: 싱거움 ↔ 짭짤함
+    var richness: Double = 5.0       // 기름진: 담백 ↔ 고소하고 기름진
 
     // 음식 스타일 (0-10)
-    var naturalTaste: Double   // 본연의맛: 양념 강조 ↔ 재료 본연의 맛
-    var texture: Double        // 질감다양: 부드러움 ↔ 쫄깃/바삭함
-    var cooking: Double        // 조리법: 생/날것 ↔ 구이/튀김
+    var naturalTaste: Double = 5.0   // 본연의맛: 양념 강조 ↔ 재료 본연의 맛
+    var texture: Double = 5.0        // 질감다양: 부드러움 ↔ 쫄깃/바삭함
+    var cooking: Double = 5.0        // 조리법: 생/날것 ↔ 구이/튀김
 
-    var updatedAt: Date
+    var updatedAt: Date = Date()
 
     init(
         userId: String = "default",

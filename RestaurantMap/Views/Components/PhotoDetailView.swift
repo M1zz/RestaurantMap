@@ -2,14 +2,14 @@ import SwiftUI
 
 /// 전체화면 사진 뷰어 (스와이프로 이동, 핀치 줌 지원)
 struct PhotoDetailView: View {
-    let photoURLs: [URL]
+    let photos: [VisitPhoto]
     let initialIndex: Int
 
     @State private var currentIndex: Int
     @Environment(\.dismiss) private var dismiss
 
-    init(photoURLs: [URL], initialIndex: Int) {
-        self.photoURLs = photoURLs
+    init(photos: [VisitPhoto], initialIndex: Int) {
+        self.photos = photos
         self.initialIndex = initialIndex
         self._currentIndex = State(initialValue: initialIndex)
     }
@@ -20,8 +20,8 @@ struct PhotoDetailView: View {
                 .ignoresSafeArea()
 
             TabView(selection: $currentIndex) {
-                ForEach(Array(photoURLs.enumerated()), id: \.offset) { index, url in
-                    ZoomableImageView(url: url)
+                ForEach(Array(photos.enumerated()), id: \.element.id) { index, photo in
+                    ZoomableImageView(data: photo.data)
                         .tag(index)
                 }
             }
@@ -48,7 +48,7 @@ struct PhotoDetailView: View {
             // 페이지 인디케이터 (하단)
             VStack {
                 Spacer()
-                Text("\(currentIndex + 1) / \(photoURLs.count)")
+                Text("\(currentIndex + 1) / \(photos.count)")
                     .font(.caption)
                     .foregroundStyle(.white)
                     .padding(.horizontal, 12)
@@ -63,7 +63,7 @@ struct PhotoDetailView: View {
 
 // MARK: - Zoomable Image View
 struct ZoomableImageView: View {
-    let url: URL
+    let data: Data?
 
     @State private var scale: CGFloat = 1.0
     @State private var lastScale: CGFloat = 1.0
@@ -72,9 +72,7 @@ struct ZoomableImageView: View {
 
     var body: some View {
         GeometryReader { geometry in
-            AsyncImage(url: url) { phase in
-                switch phase {
-                case .success(let image):
+            PhotoDataImage(data: data) { image in
                     image
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -102,13 +100,10 @@ struct ZoomableImageView: View {
                             }
                             lastScale = scale
                         }
-                case .failure:
-                    failurePlaceholder
-                case .empty:
-                    loadingPlaceholder
-                @unknown default:
-                    loadingPlaceholder
-                }
+            } loading: {
+                loadingPlaceholder
+            } failure: {
+                failurePlaceholder
             }
             .frame(width: geometry.size.width, height: geometry.size.height)
         }

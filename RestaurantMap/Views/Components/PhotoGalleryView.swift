@@ -2,7 +2,7 @@ import SwiftUI
 
 /// 여러 사진을 그리드 레이아웃으로 표시하는 갤러리 뷰
 struct PhotoGalleryView: View {
-    let photoURLs: [URL]
+    let photos: [VisitPhoto]
     let isEditable: Bool
     let onDelete: ((Int) -> Void)?
 
@@ -14,33 +14,28 @@ struct PhotoGalleryView: View {
 
     var body: some View {
         LazyVGrid(columns: columns, spacing: 8) {
-            ForEach(Array(photoURLs.enumerated()), id: \.offset) { index, url in
-                photoThumbnail(for: url, at: index)
+            ForEach(Array(photos.enumerated()), id: \.element.id) { index, photo in
+                photoThumbnail(for: photo, at: index)
             }
         }
         .fullScreenCover(item: $selectedPhotoIndex) { index in
-            PhotoDetailView(photoURLs: photoURLs, initialIndex: index)
+            PhotoDetailView(photos: photos, initialIndex: index)
         }
     }
 
     @ViewBuilder
-    private func photoThumbnail(for url: URL, at index: Int) -> some View {
-        AsyncImage(url: url) { phase in
-            switch phase {
-            case .success(let image):
-                image
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 100, height: 100)
-                    .clipped()
-                    .cornerRadius(8)
-            case .failure:
-                failurePlaceholder
-            case .empty:
-                loadingPlaceholder
-            @unknown default:
-                loadingPlaceholder
-            }
+    private func photoThumbnail(for photo: VisitPhoto, at index: Int) -> some View {
+        PhotoDataImage(data: photo.data) { image in
+            image
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 100, height: 100)
+                .clipped()
+                .cornerRadius(8)
+        } loading: {
+            loadingPlaceholder
+        } failure: {
+            failurePlaceholder
         }
         .frame(width: 100, height: 100)
         .accessibleTap {
@@ -86,6 +81,34 @@ struct PhotoGalleryView: View {
                 Image(systemName: "photo.fill")
                     .foregroundStyle(.gray)
             }
+    }
+}
+
+/// 기록 안의 사진 데이터를 화면 밖에서 풀어 그린다 (AsyncImage 의 파일 URL 자리를 대신한다).
+struct PhotoDataImage<Content: View, Loading: View, Failure: View>: View {
+    let data: Data?
+    @ViewBuilder let content: (Image) -> Content
+    @ViewBuilder let loading: () -> Loading
+    @ViewBuilder let failure: () -> Failure
+
+    @State private var image: UIImage?
+    @State private var failed = false
+
+    var body: some View {
+        Group {
+            if let image {
+                content(Image(uiImage: image))
+            } else if failed {
+                failure()
+            } else {
+                loading()
+            }
+        }
+        .task(id: data?.count ?? 0) {
+            guard let data else { failed = true; return }
+            let decoded = await Task.detached(priority: .userInitiated) { UIImage(data: data) }.value
+            if let decoded { image = decoded } else { failed = true }
+        }
     }
 }
 

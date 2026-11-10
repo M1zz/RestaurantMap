@@ -3,7 +3,7 @@ import SwiftData
 
 @Model
 final class MenuItem {
-    var name: String
+    var name: String = "" // CloudKit 동기화 규칙: 기본값을 둔다
     var price: Int? // 가격 (원 단위, 옵셔널)
     var menuDescription: String = "" // 메뉴 설명
     var isSignature: Bool = false // 대표 메뉴 여부

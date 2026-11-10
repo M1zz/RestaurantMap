@@ -17,7 +17,9 @@ class CloudKitBackupService {
 
     private let logger = Logger(subsystem: "com.restaurantmap", category: "CloudKitBackup")
 
-    private let containerIdentifier = "iCloud.com.Ysoup.restaurantmap"
+    private let containerIdentifier = RestaurantMapApp.cloudContainer
+    /// 이번 백업에 올릴 사진 데이터. `fetchLocalData` 가 채우고 `uploadPhotos` 가 읽는다 (레코드 이름 → JPEG).
+    private var pendingPhotoData: [String: Data] = [:]
     private let recordType = "BackupData"
     private let photoRecordType = "BackupPhoto"
     private var backupRecordID: CKRecord.ID { CKRecord.ID(recordName: "latest") }
@@ -149,12 +151,10 @@ class CloudKitBackupService {
             progressMessage = String(localized: "기존 데이터 정리 중...")
             try await deleteLocalData(modelContainer: modelContainer)
 
-            // 4. 복구된 데이터 저장
+            // 4. 복구된 데이터 저장 — 사진은 기록 안(VisitPhoto)으로
             progressMessage = String(localized: "데이터 복구 중...")
-            try await restoreLocalData(modelContainer: modelContainer, data: backupData)
-            for photo in photos.files {
-                PhotoStorageManager.shared.importPhoto(from: photo.url, filename: photo.filename, for: photo.visitID)
-            }
+            let restored = try await restoreLocalData(modelContainer: modelContainer, data: backupData)
+            try await attachPhotos(photos.files, to: restored, modelContainer: modelContainer)
 
             progressMessage = String(localized: "복구 완료!")
             logger.info("복구 성공")
@@ -203,16 +203,24 @@ class CloudKitBackupService {
         // 변환
         var backupRestaurants: [BackupRestaurant] = []
 
+        pendingPhotoData = [:]
         for restaurant in restaurants {
-            let visits = restaurant.visits?.map { visit in
-                BackupVisit(
+            let visits = restaurant.visits?.map { visit -> BackupVisit in
+                // 사진은 기록 안(VisitPhoto)에 있다. 레코드 이름을 옛 파일 방식과 같은 꼴로 만들어 옛 백업과 섞여도 된다.
+                let photos = visit.sortedPhotos
+                for photo in photos {
+                    if let data = photo.data {
+                        pendingPhotoData[BackupData.photoRecordName(photoId: visit.photoId, filename: photo.filename)] = data
+                    }
+                }
+                return BackupVisit(
                     visitDate: visit.visitDate,
                     notes: visit.notes,
                     rating: visit.rating,
                     menuItem: visit.menuItem,
                     menuName: visit.menu?.name,
                     photoId: visit.photoId,
-                    photoFilenames: visit.photoFilenames,
+                    photoFilenames: photos.map(\.filename),
                     // 일반
                     spicy: visit.spicy,
                     boldness: visit.boldness,
@@ -404,13 +412,19 @@ class CloudKitBackupService {
     private func uploadPhotos(of data: BackupData, skipping uploaded: Set<String>) async throws {
         guard let container = getContainer() else { throw BackupError.cloudKitNotAvailable }
 
+        // CKAsset 은 파일 URL 을 받는다 — 기록 안의 데이터를 임시 폴더에 잠깐 쓴다.
+        let folder = FileManager.default.temporaryDirectory.appendingPathComponent("backup-\(UUID().uuidString)", isDirectory: true)
+        try FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true)
+        defer { try? FileManager.default.removeItem(at: folder) }
+
         var records: [CKRecord] = []
         for visit in data.allVisits {
             guard let photoId = visit.photoId else { continue }
             for filename in visit.photoFilenames ?? [] {
                 let name = BackupData.photoRecordName(photoId: photoId, filename: filename)
-                guard !uploaded.contains(name),
-                      let url = PhotoStorageManager.shared.photoURL(for: filename, visitID: photoId) else { continue }
+                guard !uploaded.contains(name), let bytes = pendingPhotoData[name] else { continue }
+                let url = folder.appendingPathComponent(name)
+                try bytes.write(to: url)
                 let record = CKRecord(recordType: photoRecordType, recordID: CKRecord.ID(recordName: name))
                 record["image"] = CKAsset(fileURL: url)
                 records.append(record)
@@ -502,10 +516,12 @@ class CloudKitBackupService {
         logger.info("로컬 데이터 삭제 완료")
     }
 
-    /// 복구된 데이터를 로컬에 저장
+    /// 복구된 데이터를 로컬에 저장. 되살린 방문을 사진 ID 로 돌려준다 (→ attachPhotos).
     @MainActor
-    private func restoreLocalData(modelContainer: ModelContainer, data: BackupData) throws {
+    @discardableResult
+    private func restoreLocalData(modelContainer: ModelContainer, data: BackupData) throws -> [UUID: Visit] {
         let context = modelContainer.mainContext
+        var restoredVisits: [UUID: Visit] = [:]
 
         // 직접 추가한 음식 종류를 먼저 되살린다 — 식당이 그 종류를 가리키므로
         FoodCategoryRepository.shared.mergeCustomCategories(data.customCategories ?? [])
@@ -563,7 +579,7 @@ class CloudKitBackupService {
                 visit.menu = backupVisit.menuName.flatMap { menusByName[$0] }
                 if let photoId = backupVisit.photoId {
                     visit.photoId = photoId
-                    visit.photoFilenames = backupVisit.photoFilenames ?? []
+                    restoredVisits[photoId] = visit
                 }
 
                 // 일반
@@ -690,6 +706,25 @@ class CloudKitBackupService {
 
         try context.save()
         logger.info("로컬 데이터 복구 완료: \(data.restaurants.count)개 식당")
+        return restoredVisits
+    }
+
+    /// 받아 둔 사진 파일을 되살린 방문의 기록 안(VisitPhoto)에 붙인다. 백업에 적힌 순서를 지킨다.
+    @MainActor
+    private func attachPhotos(_ files: [(url: URL, filename: String, visitID: UUID)],
+                              to visits: [UUID: Visit], modelContainer: ModelContainer) throws {
+        guard !files.isEmpty else { return }
+        let context = modelContainer.mainContext
+        var order: [UUID: Int] = [:]
+        for file in files {
+            guard let visit = visits[file.visitID], let data = try? Data(contentsOf: file.url) else { continue }
+            let photo = VisitPhoto(data: data, sortOrder: order[file.visitID, default: 0])
+            order[file.visitID, default: 0] += 1
+            context.insert(photo)
+            photo.visit = visit
+        }
+        try context.save()
+        logger.info("사진 \(files.count)장을 기록에 붙임")
     }
 
     // MARK: - UserDefaults

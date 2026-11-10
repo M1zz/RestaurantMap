@@ -40,7 +40,7 @@ struct RestaurantExport: Transferable {
             for visit in visits {
                 rows.append(place + [
                     visit.visitDate.formatted(day), visit.rating > 0 ? String(visit.rating) : "",
-                    visit.displayMenuName, visit.notes, visit.photoFilenames.isEmpty ? "" : String(visit.photoFilenames.count),
+                    visit.displayMenuName, visit.notes, visit.hasPhotos ? String(visit.photos?.count ?? 0) : "",
                 ])
             }
         }

@@ -452,9 +452,7 @@ struct AddVisitView: View {
 
         // 사진 저장
         for image in selectedPhotos {
-            if let filename = PhotoStorageManager.shared.savePhoto(image, for: visit.photoId) {
-                visit.photoFilenames.append(filename)
-            }
+            visit.addPhoto(image)
         }
         logger.info("  - \(selectedPhotos.count)장의 사진 저장됨")
 

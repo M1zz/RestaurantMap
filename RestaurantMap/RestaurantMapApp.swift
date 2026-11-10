@@ -33,6 +33,11 @@ struct RestaurantMapApp: App {
 
     let sharedModelContainer: ModelContainer
 
+    /// 앱 자체 iCloud 컨테이너. entitlements 에 이 이름이 있어야 1 단계가 열린다. 백업(CloudKitBackupService)도 같은 곳을 쓴다.
+    static let cloudContainer = "iCloud.com.Ysoup.restaurantmap"
+    /// 이번 실행이 iCloud 와 이어져 열렸는가 (makeModelContainer 가 한 번 정한다).
+    private(set) static var usesCloud = false
+
     private static func makeModelContainer() -> ModelContainer {
         let logger = Logger(subsystem: "com.restaurantmap", category: "App")
         logger.info("ModelContainer 초기화 시작")
@@ -41,19 +46,37 @@ struct RestaurantMapApp: App {
             Restaurant.self,
             TasteProfile.self,
             Visit.self,
+            VisitPhoto.self,
             MenuItem.self,
         ])
 
-        // CloudKit 통합 완전히 비활성화 (에러 방지)
+        // 2 단계용: 같은 파일을 기기 안에서만. 컨테이너를 비워 두면(.automatic) entitlements 의 첫
+        // 컨테이너가 잡히므로 .none 을 명시한다.
         let modelConfiguration = ModelConfiguration(
             schema: schema,
             isStoredInMemoryOnly: false,
-            cloudKitDatabase: .none  // CloudKit 비활성화
+            cloudKitDatabase: .none
         )
 
         do {
-            let container = try ModelContainer(for: schema, configurations: [modelConfiguration])
-            logger.info("ModelContainer 초기화 성공")
+            let container: ModelContainer
+            // 1. 사용자의 iCloud(앱 자체 컨테이너의 개인 데이터베이스). 기기에 있던 기록 · 사진은 그대로 올라가고,
+            //    새 기기는 계정에 있던 것을 받아 온다. 개발자는 볼 수 없다.
+            if let synced = try? ModelContainer(
+                for: schema,
+                configurations: [ModelConfiguration(schema: schema, isStoredInMemoryOnly: false,
+                                                    cloudKitDatabase: .private(cloudContainer))]
+            ) {
+                usesCloud = true
+                container = synced
+                logger.info("ModelContainer 초기화 성공 (iCloud)")
+            } else {
+                // 2. iCloud 와 잇지 못하는 빌드(entitlement 없음 · 시험)도 기록은 잃지 않는다.
+                container = try ModelContainer(for: schema, configurations: [modelConfiguration])
+                logger.info("ModelContainer 초기화 성공 (기기 안)")
+            }
+            // 파일로 두던 옛 방문 사진을 기록 안으로 — 그래야 iCloud 로 같이 따라간다.
+            PhotoMigration.run(container)
 
             // 기존 Restaurant 데이터를 UUID 기반 카테고리로 마이그레이션
             let context = container.mainContext

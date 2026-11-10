@@ -67,7 +67,7 @@ struct VisitDetailView: View {
 
     @State private var isEditing = false
     @State private var editingPhotos: [UIImage] = [] // 편집 중 추가할 새 사진들
-    @State private var photosToDelete: Set<String> = [] // 편집 중 삭제 표시된 사진 파일명들
+    @State private var photosToDelete: Set<UUID> = [] // 편집 중 삭제 표시된 사진들
 
     private let logger = Logger(subsystem: "com.restaurantmap", category: "VisitDetail")
 
@@ -75,9 +75,9 @@ struct VisitDetailView: View {
         NavigationStack {
             Form {
                 // 히어로 이미지 (읽기 모드만)
-                if !isEditing, let heroURL = visit.heroImageURL {
+                if !isEditing, let hero = visit.heroPhoto {
                     Section {
-                        HeroImageView(imageURL: heroURL)
+                        HeroImageView(data: hero.data)
                             .listRowInsets(EdgeInsets())
                     }
                 }
@@ -210,30 +210,21 @@ struct VisitDetailView: View {
                 }
 
                 // 사진 갤러리
-                if !visit.photoFilenames.isEmpty || isEditing {
+                if visit.hasPhotos || isEditing {
                     Section {
                         if isEditing {
                             // 편집 모드: 추가/삭제
                             PhotoPickerView(selectedImages: $editingPhotos)
 
-                            if !visit.photoURLs.isEmpty {
+                            // 삭제 표시된 사진은 빼고 보인다
+                            let remaining = visit.sortedPhotos.filter { !photosToDelete.contains($0.id) }
+                            if !remaining.isEmpty {
                                 PhotoGalleryView(
-                                    photoURLs: visit.photoURLs.filter { url in
-                                        // 삭제 표시된 사진 제외
-                                        let filename = url.lastPathComponent
-                                        return !photosToDelete.contains(filename)
-                                    },
+                                    photos: remaining,
                                     isEditable: true,
                                     onDelete: { index in
-                                        // 원본 photoURLs에서 index 계산 (필터링 전)
-                                        let filteredURLs = visit.photoURLs.filter { url in
-                                            let filename = url.lastPathComponent
-                                            return !photosToDelete.contains(filename)
-                                        }
-                                        if index < filteredURLs.count {
-                                            let urlToDelete = filteredURLs[index]
-                                            let filename = urlToDelete.lastPathComponent
-                                            photosToDelete.insert(filename)
+                                        if index < remaining.count {
+                                            photosToDelete.insert(remaining[index].id)
                                         }
                                     }
                                 )
@@ -274,16 +265,16 @@ struct VisitDetailView: View {
                             }
                         } else {
                             // 읽기 모드: 갤러리 표시
-                            if !visit.photoURLs.isEmpty {
+                            if visit.hasPhotos {
                                 PhotoGalleryView(
-                                    photoURLs: visit.photoURLs,
+                                    photos: visit.sortedPhotos,
                                     isEditable: false,
                                     onDelete: nil
                                 )
                             }
                         }
                     } header: {
-                        let currentPhotoCount = visit.photoFilenames.count - photosToDelete.count + editingPhotos.count
+                        let currentPhotoCount = (visit.photos?.count ?? 0) - photosToDelete.count + editingPhotos.count
                         Text("사진 (\(currentPhotoCount))")
                     }
                 }
@@ -307,18 +298,13 @@ struct VisitDetailView: View {
                             // 편집 완료: 사진 저장 및 삭제 처리
                             // 1. 새 사진 저장
                             for image in editingPhotos {
-                                if let filename = PhotoStorageManager.shared.savePhoto(image, for: visit.photoId) {
-                                    visit.photoFilenames.append(filename)
-                                }
+                                visit.addPhoto(image)
                             }
                             logger.info("  - \(editingPhotos.count)장의 새 사진 저장됨")
 
                             // 2. 표시된 사진 삭제
-                            for filename in photosToDelete {
-                                PhotoStorageManager.shared.deletePhoto(filename: filename, visitID: visit.photoId)
-                                if let index = visit.photoFilenames.firstIndex(of: filename) {
-                                    visit.photoFilenames.remove(at: index)
-                                }
+                            for photo in (visit.photos ?? []) where photosToDelete.contains(photo.id) {
+                                modelContext.delete(photo)
                             }
                             logger.info("  - \(photosToDelete.count)장의 사진 삭제됨")
 

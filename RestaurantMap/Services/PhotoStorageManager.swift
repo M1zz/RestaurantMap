@@ -1,8 +1,8 @@
 import UIKit
 import Foundation
 
-/// 방문 기록의 사진을 파일 시스템에 저장/로드/삭제하는 매니저
-/// Documents/VisitPhotos/{visitID}/ 디렉토리에 압축된 JPEG 형식으로 저장
+/// 방문 사진의 옛 저장소(Documents/VisitPhotos/{visitID}/)와 사진 압축.
+/// 사진은 이제 기록 안(`VisitPhoto`)에 들어간다. 파일 저장소는 옛 사진을 옮길 때(→ PhotoMigration)만 읽는다.
 final class PhotoStorageManager {
     static let shared = PhotoStorageManager()
 
@@ -137,6 +137,11 @@ final class PhotoStorageManager {
     }
 
     // MARK: - Private Methods
+
+    /// 기록에 넣을 사진 데이터. 리사이징 + JPEG 압축(~800KB 이하). (→ Visit.addPhoto)
+    func jpegData(for image: UIImage) -> Data? {
+        compressImage(image)
+    }
 
     /// 이미지 압축 (리사이징 + JPEG 압축)
     /// - Parameter image: 압축할 UIImage
