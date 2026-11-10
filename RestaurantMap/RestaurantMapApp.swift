@@ -30,7 +30,7 @@ struct RestaurantMapApp: App {
         let container = sharedModelContainer
         AppDependencyManager.shared.add(dependency: container)
         #if DEBUG
-        CloudKitSchemaWarmup.runIfRequested(container) {
+        CloudKitSchemaWarmup.runIfRequested(container, cloudContainer: Self.cloudContainer) {
             let restaurant = Restaurant(name: "표본", address: "", latitude: 0, longitude: 0)
             let menu = MenuItem(name: "표본 메뉴", restaurant: restaurant)
             let visit = Visit(restaurant: restaurant)
