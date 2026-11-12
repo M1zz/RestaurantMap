@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <title>Personvernerklæring — Insaeng: restaurantkart</title>
-<meta name="description" content="Hvilke opplysninger Insaeng behandler, hva som bare lagres på enheten, stedsøk og Firebase, tilbakemeldinger, rettighetene dine og hvordan du kontakter oss.">
+<meta name="description" content="Hvilke opplysninger Insaeng behandler, hva som bare lagres på enheten, stedsøk, tilbakemeldinger, rettighetene dine og hvordan du kontakter oss.">
 <link rel="canonical" href="https://m1zz.github.io/RestaurantMap/nb/privacy.html">
 <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/RestaurantMap/privacy.html">
 <link rel="alternate" hreflang="en" href="https://m1zz.github.io/RestaurantMap/en/privacy.html">
@@ -81,7 +81,7 @@
 
   <main>
     <h1>Personvernerklæring</h1>
-    <p class="lead">Gjelder fra: 16. oktober 2026</p>
+    <p class="lead">Gjelder fra: 12. november 2026</p>
 
     <p>
       Utvikleren av Insaeng (Leeo, heretter «utvikleren») tilbyr iOS-appen «Insaeng» (heretter «appen»),
@@ -96,7 +96,6 @@
         <li>Det finnes ingen registrering eller innlogging. Appen ber ikke om opplysninger som direkte identifiserer deg, som navn, telefonnummer eller e-postadresse.</li>
         <li>Restaurantlisten, besøksloggen, notater, smaksvurderinger og bilder lagres på enheten din og i din egen iCloud og sendes ikke til utviklerens servere.</li>
         <li>Når du søker etter steder eller flytter kartet, sendes søkeordet og kartposisjonen til stedsøketjenester (Kakao og Apple).</li>
-        <li>Appen inneholder Google Firebase, og opplysninger om enheten og appen, bruksdata og feilinformasjon kan automatisk bli sendt til Google.</li>
         <li>Tilbakemeldinger du selv sender, og anonym bruksstatistikk og feilrapporter som ikke kan knyttes til deg, overføres til utviklerens iCloud-lagring.</li>
         <li>Appen viser ingen reklame, ber ikke om tillatelse til appsporing (ATT) og sporer deg ikke på tvers av andre selskapers apper og nettsteder.</li>
       </ul>
@@ -145,23 +144,7 @@
       Åpner du en restaurant i Apple Kart, KakaoMap eller NAVER Map, overføres restaurantens navn og koordinater til den aktuelle appen.
     </p>
 
-    <h3>D. Opplysninger som kan samles inn automatisk (Google Firebase)</h3>
-    <p>
-      Appen inneholder Google Firebase SDK (blant annet Analytics, Crashlytics og Performance Monitoring), som startes når appen åpnes.
-      Firebase kan da automatisk samle inn følgende og sende det til Google:
-    </p>
-    <ul>
-      <li>Tilfeldig genererte identifikatorer for hver installasjon (Firebase-installasjons-ID, appinstans-ID)</li>
-      <li>Bruksdata: hendelser som første oppstart, start av økt og skjermvisninger</li>
-      <li>Appversjon, enhetsmodell, versjon av operativsystemet, enhetsspråk og land eller region anslått ut fra IP-adressen</li>
-      <li>Feilinformasjon når appen krasjer, og ytelsesdata som oppstartstid og responstid i nettverket</li>
-    </ul>
-    <p>
-      Restaurantlisten, besøksloggen, bilder og posisjonskoordinater sendes ikke til Firebase.
-      Utvikleren kobler ikke disse opplysningene med andre opplysninger for å identifisere enkeltpersoner, og bruker dem ikke til reklame eller markedsføring.
-    </p>
-
-    <h3>E. Tilbakemeldinger du selv sender</h3>
+    <h3>D. Tilbakemeldinger du selv sender</h3>
     <p>
       Sender du en tilbakemelding via hjelpemenyen i innstillingene eller spørsmålet «Liker du appen?», lagres følgende i utviklerens offentlige iCloud-lagring (Apple CloudKit):
     </p>
@@ -172,7 +155,7 @@
     </ul>
     <p>Sender du e-post i stedet, går den direkte til utvikleren fra e-postappen din.</p>
 
-    <h3>F. Anonym bruksstatistikk og feilrapporter (Apple CloudKit)</h3>
+    <h3>E. Anonym bruksstatistikk og feilrapporter (Apple CloudKit)</h3>
     <p>
       For å vite hvor mange enheter appen brukes på, og for å rette feil, sender appen følgende til utviklerens offentlige iCloud-lagring (Apple CloudKit).
       Bare utvikleren kan lese det, og det sendes bare når du er logget på iCloud.
@@ -201,7 +184,6 @@
     <h2>3. Lagringstid</h2>
     <ul>
       <li><strong>Opplysninger lagret på enheten</strong>: Beholdes til du sletter dem i appen eller sletter appen. Med «Slett alle data» i innstillingene kan du slette alle restauranter og hele besøksloggen på én gang. Vil du fjerne bildene også, må du slette appen.</li>
-      <li><strong>Opplysninger samlet inn av Firebase</strong>: Slettes automatisk når lagringstiden Google har satt, er utløpt. Aggregert statistikk som ikke kan knyttes til enkeltpersoner, kan bli liggende også etter dette.</li>
       <li><strong>Tilbakemeldinger</strong>: Oppbevares så lenge det trengs for å behandle henvendelsen og forbedre appen, og slettes uten ugrunnet opphold hvis du ber om det.</li>
     </ul>
 
@@ -214,8 +196,7 @@
       <table>
         <thead><tr><th>Mottaker</th><th>Opplysninger</th><th>Formål</th><th>Land</th></tr></thead>
         <tbody>
-          <tr><td>Google LLC (Firebase)</td><td>Punkt 1-D</td><td>Bruksstatistikk, feil- og ytelsesanalyse</td><td>USA og andre land der Google har datasentre</td></tr>
-          <tr><td>Apple Inc. (CloudKit)</td><td>Punkt 1-E (hvis du sender tilbakemelding) og punkt 1-F</td><td>Oppbevaring av tilbakemeldinger, anonym bruksstatistikk og feilanalyse</td><td>USA og andre land der Apple har datasentre</td></tr>
+          <tr><td>Apple Inc. (CloudKit)</td><td>Punkt 1-D (hvis du sender tilbakemelding) og punkt 1-E</td><td>Oppbevaring av tilbakemeldinger, anonym bruksstatistikk og feilanalyse</td><td>USA og andre land der Apple har datasentre</td></tr>
           <tr><td>Apple Inc. (MapKit)</td><td>Punkt 1-C (søkeord, kartutsnitt)</td><td>Stedsøk</td><td>USA og andre land der Apple har datasentre</td></tr>
           <tr><td>Kakao Corp.</td><td>Punkt 1-C (søkeord, koordinater)</td><td>Stedsøk</td><td>Sør-Korea</td></tr>
         </tbody>
@@ -223,11 +204,8 @@
     </div>
     <p>
       Overføringen skjer mens du bruker appen, over en kryptert forbindelse (HTTPS).
-      Aktuelle erklæringer: <a href="https://policies.google.com/privacy?hl=nb">Googles personvernerklæring</a>,
-      <a href="https://firebase.google.com/support/privacy">personvern i Firebase</a>,
-      <a href="https://www.apple.com/legal/privacy/">Apples personvernerklæring</a>,
+      Aktuelle erklæringer: <a href="https://www.apple.com/legal/privacy/">Apples personvernerklæring</a>,
       <a href="https://www.kakao.com/policy/privacy">Kakaos personvernerklæring</a>.
-      Det finnes ingen egen innstilling for å slå av bare overføringen til Firebase. Ønsker du ikke dette, kan du slutte å bruke appen og slette den.
     </p>
 
     <h2>6. Tilganger på enheten</h2>
@@ -248,7 +226,6 @@
     <h2>7. Sletting: fremgangsmåte og metode</h2>
     <p>
       Opplysninger som er lagret på enheten, slettes av iOS når du sletter dem i appen eller sletter appen.
-      Opplysninger samlet inn av Firebase slettes automatisk av Google når lagringstiden i punkt 3 er utløpt.
       Tilbakemeldinger slettes fra iCloud-lagringen av utvikleren når formålet med oppbevaringen er oppfylt, eller når vi mottar en forespørsel om sletting.
     </p>
 
@@ -256,12 +233,12 @@
     <ul>
       <li>Du kan når som helst trekke tilbake tilgang til posisjon, varsler, kamera og bilder i Innstillinger på iPhonen.</li>
       <li>Du kan endre eller slette restauranter og besøkslogg i appen, og sletter du appen, fjernes alt som er lagret på enheten.</li>
-      <li>Vil du ha innsyn i, rette, slette eller begrense behandlingen av personopplysningene dine, sender du en forespørsel til e-postadressen nedenfor. Vi handler uten ugrunnet opphold. Siden utvikleren ikke har opplysninger som identifiserer deg, kan det imidlertid være vanskelig å finne Firebase-data som gjelder akkurat deg.</li>
+      <li>Vil du ha innsyn i, rette, slette eller begrense behandlingen av personopplysningene dine, sender du en forespørsel til e-postadressen nedenfor. Vi handler uten ugrunnet opphold.</li>
       <li>Du kan også bruke rettighetene dine gjennom en verge eller en fullmektig.</li>
     </ul>
 
     <h2>9. Automatisk innsamling og hvordan du kan avslå den</h2>
-    <p>Appen bruker ikke informasjonskapsler (cookies). Firebase skiller bruksdata ved hjelp av installasjonsidentifikatoren i punkt 1-D. Sletter du appen, forsvinner identifikatoren, og ved ny installasjon opprettes en ny.</p>
+    <p>Appen bruker ikke informasjonskapsler (cookies). Anonym bruksstatistikk skilles bare ved hjelp av den tilfeldige ID-en i punkt 1-E. Sletter du appen, forsvinner ID-en, og ved ny installasjon opprettes en ny.</p>
 
     <h2>10. Sikkerhetstiltak</h2>
     <ul>
@@ -294,7 +271,7 @@
 
     <h2>14. Endringer i erklæringen</h2>
     <p>
-      Denne erklæringen gjelder fra 16. oktober 2026.
+      Denne erklæringen gjelder fra 12. november 2026.
       Ved endringer opplyser vi om det på denne siden, sammen med datoen endringene gjelder fra.
     </p>
   </main>

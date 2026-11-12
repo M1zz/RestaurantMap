@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <title>Tietosuojakäytäntö – Insaeng</title>
-<meta name="description" content="Mitä tietoja Insaeng käsittelee, mitkä merkinnät pysyvät vain laitteella, paikkahaku ja Firebase, palautteen lähettäminen, oikeutesi ja yhteystiedot.">
+<meta name="description" content="Mitä tietoja Insaeng käsittelee, mitkä merkinnät pysyvät vain laitteella, paikkahaku, palautteen lähettäminen, oikeutesi ja yhteystiedot.">
 <link rel="canonical" href="https://m1zz.github.io/RestaurantMap/fi/privacy.html">
 <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/RestaurantMap/privacy.html">
 <link rel="alternate" hreflang="en" href="https://m1zz.github.io/RestaurantMap/en/privacy.html">
@@ -81,7 +81,7 @@
 
   <main>
     <h1>Tietosuojakäytäntö</h1>
-    <p class="lead">Voimassa alkaen: 16. lokakuuta 2026</p>
+    <p class="lead">Voimassa alkaen: 12. marraskuuta 2026</p>
 
     <p>
       Insaengin kehittäjä (Leeo, jäljempänä ”kehittäjä”) noudattaa iOS-sovellusta ”Insaeng” (jäljempänä ”sovellus”) tarjotessaan
@@ -96,7 +96,6 @@
         <li>Rekisteröitymistä tai kirjautumista ei ole. Sovellus ei pyydä tietoja, joista sinut voisi suoraan tunnistaa, kuten nimeä, puhelinnumeroa tai sähköpostiosoitetta.</li>
         <li>Ravintolalista, käyntimerkinnät, muistiinpanot, makuarviot ja kuvat tallentuvat laitteellesi ja omaan iCloudiisi, eikä niitä lähetetä kehittäjän palvelimille.</li>
         <li>Kun haet paikkoja tai liikutat karttaa, hakusana ja kartan sijainti lähetetään paikkahakupalveluille (Kakao, Apple).</li>
-        <li>Sovellus sisältää Google Firebasen, joten laite- ja sovellustietoja, käyttötietoja ja virhetietoja voi siirtyä automaattisesti Googlelle.</li>
         <li>Itse lähettämäsi palaute sekä nimettömät käyttötilastot ja virheraportit, joista ei voi päätellä, kuka olet, välitetään kehittäjän iCloud-tallennustilaan.</li>
         <li>Sovelluksessa ei ole mainoksia, se ei pyydä seurantalupaa (App Tracking Transparency, ATT) eikä seuraa sinua muiden yritysten sovelluksissa ja verkkosivustoilla.</li>
       </ul>
@@ -145,23 +144,7 @@
       Kun avaat ravintolan Apple Kartoissa, KakaoMapissa tai NAVER Mapissa, ravintolan nimi ja koordinaatit välitetään kyseiselle sovellukselle.
     </p>
 
-    <h3>D. Automaattisesti kerättävät tiedot (Google Firebase)</h3>
-    <p>
-      Sovellus sisältää Google Firebase SDK:n (Analytics, Crashlytics, Performance Monitoring ym.), joka alustetaan sovelluksen käynnistyessä.
-      Tällöin Firebase voi kerätä automaattisesti seuraavat tiedot ja lähettää ne Googlelle:
-    </p>
-    <ul>
-      <li>Jokaiselle sovelluksen asennukselle satunnaisesti luotavat tunnisteet (Firebase-asennustunniste, sovellusinstanssin tunniste)</li>
-      <li>Käyttötiedot: sovelluksen tapahtumat, kuten ensimmäinen käynnistys, istunnon alku ja näkymien katselut</li>
-      <li>Sovelluksen versio, laitemalli, käyttöjärjestelmän versio, laitteen kieli sekä IP-osoitteesta päätelty maa tai alue</li>
-      <li>Virhetiedot sovelluksen kaatuessa sekä suorituskykytiedot, kuten sovelluksen käynnistysaika ja verkon vasteajat</li>
-    </ul>
-    <p>
-      Ravintolalistaa, käyntimerkintöjä, kuvia tai sijaintikoordinaatteja ei lähetetä Firebaseen.
-      Kehittäjä ei yhdistä näitä tietoja muihin tietoihin henkilöiden tunnistamiseksi eikä käytä niitä mainontaan tai markkinointiin.
-    </p>
-
-    <h3>E. Itse lähettämäsi palaute</h3>
+    <h3>D. Itse lähettämäsi palaute</h3>
     <p>
       Kun lähetät palautetta asetusten Tuki-valikosta tai vastaamalla kysymykseen ”Pidätkö sovelluksesta?”, seuraavat tiedot tallennetaan kehittäjän julkiseen iCloud-tallennustilaan (Apple CloudKit):
     </p>
@@ -172,7 +155,7 @@
     </ul>
     <p>Jos lähetät palautteen sijaan sähköpostia, se välittyy kehittäjälle suoraan sähköpostisovelluksestasi.</p>
 
-    <h3>F. Nimettömät käyttötilastot ja virheraportit (Apple CloudKit)</h3>
+    <h3>E. Nimettömät käyttötilastot ja virheraportit (Apple CloudKit)</h3>
     <p>
       Jotta kehittäjä tietää, kuinka monella laitteella sovellusta käytetään, ja voi korjata virheitä, sovellus lähettää seuraavat tiedot kehittäjän julkiseen iCloud-tallennustilaan (Apple CloudKit).
       Vain kehittäjä voi lukea ne, ja ne lähetetään vain, kun olet kirjautunut iCloudiin.
@@ -201,7 +184,6 @@
     <h2>3. Säilytys- ja käyttöaika</h2>
     <ul>
       <li><strong>Laitteelle tallennetut tiedot</strong>: säilytetään, kunnes poistat ne sovelluksessa tai poistat sovelluksen. Asetusten ”Poista kaikki tiedot” poistaa ravintolat ja käyntimerkinnät kerralla; jos haluat poistaa jäljettömiin myös kuvat, poista sovellus.</li>
-      <li><strong>Firebasen keräämät tiedot</strong>: poistetaan automaattisesti Googlen säilytysaika-asetusten mukaisen ajan kuluttua. Koostetilastoja, joista yksittäistä henkilöä ei voi tunnistaa, voidaan säilyttää tämänkin jälkeen.</li>
       <li><strong>Palaute</strong>: säilytetään niin kauan kuin on tarpeen yhteydenoton käsittelyä ja sovelluksen kehittämistä varten, ja poistetaan viipymättä pyynnöstäsi.</li>
     </ul>
 
@@ -214,8 +196,7 @@
       <table>
         <thead><tr><th>Vastaanottaja</th><th>Tiedot</th><th>Tarkoitus</th><th>Maa</th></tr></thead>
         <tbody>
-          <tr><td>Google LLC (Firebase)</td><td>Kohdan 1-D tiedot</td><td>Sovelluksen käyttötilastot, virhe- ja suorituskykyanalyysi</td><td>Yhdysvallat ja muut maat, joissa Googlella on datakeskuksia</td></tr>
-          <tr><td>Apple Inc. (CloudKit)</td><td>Kohdan 1-E tiedot (jos lähetät palautetta) ja kohdan 1-F tiedot</td><td>Palautteen säilyttäminen, nimettömät käyttötilastot ja virheanalyysi</td><td>Yhdysvallat ja muut maat, joissa Applella on datakeskuksia</td></tr>
+          <tr><td>Apple Inc. (CloudKit)</td><td>Kohdan 1-D tiedot (jos lähetät palautetta) ja kohdan 1-E tiedot</td><td>Palautteen säilyttäminen, nimettömät käyttötilastot ja virheanalyysi</td><td>Yhdysvallat ja muut maat, joissa Applella on datakeskuksia</td></tr>
           <tr><td>Apple Inc. (MapKit)</td><td>Kohdan 1-C tiedot (hakusana, kartta-alue)</td><td>Paikkahaku</td><td>Yhdysvallat ja muut maat, joissa Applella on datakeskuksia</td></tr>
           <tr><td>Kakao Corp.</td><td>Kohdan 1-C tiedot (hakusana, koordinaatit)</td><td>Paikkahaku</td><td>Etelä-Korea</td></tr>
         </tbody>
@@ -223,11 +204,8 @@
     </div>
     <p>
       Tiedot siirretään sovellusta käytettäessä salatun yhteyden (HTTPS) kautta.
-      Asiaan liittyvät käytännöt: <a href="https://policies.google.com/privacy?hl=fi">Googlen tietosuojakäytäntö</a>,
-      <a href="https://firebase.google.com/support/privacy">Firebasen tietosuoja</a>,
-      <a href="https://www.apple.com/legal/privacy/">Applen tietosuojakäytäntö</a>,
+      Asiaan liittyvät käytännöt: <a href="https://www.apple.com/legal/privacy/">Applen tietosuojakäytäntö</a>,
       <a href="https://www.kakao.com/policy/privacy">Kakaon tietosuojakäytäntö</a>.
-      Erillistä asetusta pelkän Firebase-tiedonsiirron poistamiseksi käytöstä ei ole. Jos et halua sitä, voit lopettaa sovelluksen käytön ja poistaa sen.
     </p>
 
     <h2>6. Laitteen käyttöoikeudet</h2>
@@ -248,7 +226,6 @@
     <h2>7. Tietojen hävittäminen</h2>
     <p>
       Laitteelle tallennetut tiedot poistuvat iOS:n toimesta, kun poistat ne sovelluksessa tai poistat sovelluksen.
-      Firebasen keräämät tiedot Google poistaa automaattisesti kohdassa 3 mainitun ajan kuluttua.
       Palautteen kehittäjä poistaa iCloud-tallennustilasta, kun säilyttämisen tarkoitus on täyttynyt tai kun poistopyyntö vastaanotetaan.
     </p>
 
@@ -256,12 +233,12 @@
     <ul>
       <li>Voit milloin tahansa perua sijainnin, ilmoitusten, kameran ja kuvien käyttöoikeudet iPhonen Asetuksissa.</li>
       <li>Voit muokata ja poistaa ravintoloita ja käyntimerkintöjä sovelluksessa, ja sovelluksen poistaminen poistaa kaikki laitteelle tallennetut tiedot.</li>
-      <li>Jos haluat tarkastaa, oikaista tai poistaa henkilötietojasi tai rajoittaa niiden käsittelyä, lähetä pyyntö alla olevaan sähköpostiosoitteeseen. Hoidamme asian viipymättä. Kehittäjällä ei kuitenkaan ole tietoja, joista sinut voisi tunnistaa, joten tietyn käyttäjän Firebase-tietojen löytäminen voi olla vaikeaa.</li>
+      <li>Jos haluat tarkastaa, oikaista tai poistaa henkilötietojasi tai rajoittaa niiden käsittelyä, lähetä pyyntö alla olevaan sähköpostiosoitteeseen. Hoidamme asian viipymättä.</li>
       <li>Voit käyttää oikeuksiasi myös laillisen edustajan tai valtuuttamasi asiamiehen välityksellä.</li>
     </ul>
 
     <h2>9. Automaattiset keruumenetelmät ja niistä kieltäytyminen</h2>
-    <p>Sovellus ei käytä evästeitä. Firebase erottelee käyttötiedot kohdan 1-D asennustunnisteen avulla. Kun poistat sovelluksen, tunniste katoaa, ja uudelleenasennuksessa luodaan uusi.</p>
+    <p>Sovellus ei käytä evästeitä. Nimettömät käyttötilastot erotellaan ainoastaan kohdan 1-E satunnaisen tunnisteen avulla. Kun poistat sovelluksen, tunniste katoaa, ja uudelleenasennuksessa luodaan uusi.</p>
 
     <h2>10. Tietoturvatoimet</h2>
     <ul>
@@ -294,7 +271,7 @@
 
     <h2>14. Käytännön muutokset</h2>
     <p>
-      Tämä käytäntö on voimassa 16. lokakuuta 2026 alkaen.
+      Tämä käytäntö on voimassa 12. marraskuuta 2026 alkaen.
       Jos sisältö muuttuu, ilmoitamme siitä tällä sivulla voimaantulopäivän kera.
     </p>
   </main>
