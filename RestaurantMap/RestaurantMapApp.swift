@@ -2,7 +2,6 @@ import SwiftUI
 import SwiftData
 import AppIntents
 import OSLog
-import FirebaseCore
 import UserNotifications
 import LeeoKit
 
@@ -17,10 +16,6 @@ struct RestaurantMapApp: App {
         // LeeoKit — 백업 금고(예약된 복원 · 업데이트 직전 백업) · 사용량 기록 · 크래시 진단 · 익명 사용 통계 (FeedbackHub).
         // 금고가 저장소보다 먼저 돌아야 해서 맨 앞에 둔다.
         LeeoKit.bootstrap(RestaurantMapSpec.self)
-
-        // Firebase 초기화
-        FirebaseApp.configure()
-        logger.info("🔥 Firebase configured")
 
         // 저장소는 금고 뒤에 연다 (프로퍼티 초기값으로 두면 init 보다 먼저 열린다)
         sharedModelContainer = Self.makeModelContainer()
