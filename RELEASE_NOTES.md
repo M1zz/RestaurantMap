@@ -7,194 +7,194 @@ App Store 의 "이 버전의 새로운 기능" 에 그대로 올라가는 글이
 
 ### 앱스토어 (한국어)
 
-Siri에게 근처 내 맛집을 물어볼 수 있어요
-iPhone 검색에서 맛집을 바로 찾아 열어요
+이제 Apple Vision Pro에서도 쓸 수 있어요
+기록과 사진이 iCloud로 기기 사이에 이어져요
+Siri와 iPhone 검색에서 맛집을 바로 찾아요
 매일 자동 백업하고 iCloud나 파일로 되살려요
-VoiceOver와 큰 글씨로 더 편하게 써요
 기록이 사라지거나 앱이 꺼지던 문제를 고쳤어요
 
 ### 앱스토어 (English)
 
-Ask Siri for your favorites nearby
-Open restaurants from iPhone search
+Now available on Apple Vision Pro
+Logs and photos sync via iCloud
+Find spots via Siri and iPhone search
 Daily backup, restore via iCloud or file
-Better with VoiceOver and larger text
 Fixed rare data loss and a crash
 
 ### App Store (en-GB)
 
-Ask Siri for your favourites nearby
-Open restaurants from iPhone search
+Now available on Apple Vision Pro
+Logs and photos sync via iCloud
+Find spots via Siri and iPhone search
 Daily backup, restore via iCloud or file
-Better with VoiceOver and larger text
 Fixed rare data loss and a crash
 
 ### 앱스토어 (日本語)
 
-近くのお気に入りのお店をSiriに聞けます
-iPhoneの検索からお店をすぐ開けます
+Apple Vision Proでも使えるようになりました
+記録と写真がiCloudで端末間に同期されます
+SiriやiPhoneの検索でお店をすぐ探せます
 毎日自動でバックアップ、iCloudからも復元
-VoiceOverや大きな文字で使いやすく
 記録が消えたり落ちたりする問題を修正
 
 ### 앱스토어 (简体中文)
 
-可以问 Siri 附近的收藏餐厅
-在 iPhone 搜索中直接打开餐厅
+现已支持 Apple Vision Pro
+记录和照片通过 iCloud 在设备间同步
+用 Siri 和 iPhone 搜索快速找到餐厅
 每天自动备份，可从 iCloud 或文件恢复
-VoiceOver 和大字体下更好用
 修复了记录丢失和闪退的问题
 
 ### 앱스토어 (繁體中文)
 
-可以問 Siri 附近的收藏餐廳
-在 iPhone 搜尋中直接打開餐廳
+現已支援 Apple Vision Pro
+紀錄與照片透過 iCloud 在裝置間同步
+用 Siri 和 iPhone 搜尋快速找到餐廳
 每天自動備份，可從 iCloud 或檔案還原
-VoiceOver 與大字體下更好用
 修正了紀錄遺失與閃退的問題
 
 ### 앱스토어 (Русский)
 
-Спросите Siri о любимых местах рядом
-Открывайте рестораны из поиска iPhone
+Теперь и на Apple Vision Pro
+Синхронизация записей и фото в iCloud
+Находите места через Siri и поиск iPhone
 Ежедневная копия, возврат из iCloud
-Удобнее с VoiceOver и крупным текстом
 Исправлены потеря данных и сбой
 
 ### 앱스토어 (Español)
 
-Pregunta a Siri por tus favoritos cerca
-Abre restaurantes desde la búsqueda
+Ya disponible en Apple Vision Pro
+Sincroniza registros y fotos con iCloud
+Encuentra sitios con Siri y la búsqueda
 Copia diaria y restauración desde iCloud
-Mejor con VoiceOver y texto grande
 Corregidos un cierre y pérdida de datos
 
 ### 앱스토어 (Deutsch)
 
-Frag Siri nach Favoriten in der Nähe
-Restaurants direkt in der iPhone-Suche
+Jetzt auch auf Apple Vision Pro
+Einträge und Fotos über iCloud synchron
+Schnell finden mit Siri und iPhone-Suche
 Tägliches Backup, Wiederherstellung
-Besser mit VoiceOver und großem Text
 Datenverlust und Absturz behoben
 
 ### 앱스토어 (Français)
 
-Demandez à Siri vos favoris à proximité
-Ouvrez un restaurant depuis la recherche
+Disponible sur Apple Vision Pro
+Carnet et photos synchronisés via iCloud
+Vos restaurants via Siri et la recherche
 Sauvegarde quotidienne et restauration
-Mieux avec VoiceOver et le texte agrandi
 Perte de données et plantage corrigés
 
 ### 앱스토어 (Italiano)
 
-Chiedi a Siri i preferiti vicini
-Apri i ristoranti dalla ricerca iPhone
+Ora disponibile su Apple Vision Pro
+Diario e foto sincronizzati con iCloud
+Trova i ristoranti con Siri e la ricerca
 Backup quotidiano e ripristino da iCloud
-Meglio con VoiceOver e testo grande
 Risolti perdita di dati e un arresto
 
 ### 앱스토어 (Português (Brasil))
 
-Peça à Siri os favoritos por perto
-Abra restaurantes pela busca do iPhone
+Agora disponível no Apple Vision Pro
+Registros e fotos sincronizam no iCloud
+Encontre lugares pela Siri e pela busca
 Backup diário e restauração pelo iCloud
-Melhor com VoiceOver e texto grande
 Corrigida perda de dados e travamento
 
 ### 앱스토어 (ไทย)
 
-ถาม Siri หาร้านโปรดใกล้ๆ ได้
-เปิดร้านได้จากการค้นหาบน iPhone
+ใช้งานบน Apple Vision Pro ได้แล้ว
+บันทึกและรูปภาพซิงค์ผ่าน iCloud
+หาร้านได้ทันทีด้วย Siri และการค้นหา
 สำรองทุกวัน กู้คืนจาก iCloud หรือไฟล์ได้
-ใช้ VoiceOver และตัวอักษรใหญ่ได้ดีขึ้น
 แก้ปัญหาข้อมูลหายและแอปปิดเอง
 
 ### 앱스토어 (Tiếng Việt)
 
-Hỏi Siri quán yêu thích gần đây
-Mở quán ăn ngay từ tìm kiếm iPhone
+Nay đã có trên Apple Vision Pro
+Nhật ký và ảnh đồng bộ qua iCloud
+Tìm quán bằng Siri và tìm kiếm iPhone
 Sao lưu mỗi ngày, khôi phục từ iCloud
-Dùng VoiceOver và chữ lớn dễ hơn
 Đã sửa lỗi mất dữ liệu và thoát app
 
 ### 앱스토어 (Čeština)
 
-Zeptejte se Siri na oblíbené poblíž
-Restaurace otevřete z hledání iPhonu
+Nově také na Apple Vision Pro
+Záznamy a fotky synchronizuje iCloud
+Restaurace najdete přes Siri a hledání
 Denní záloha a obnova z iCloudu
-Lepší s VoiceOver a velkým písmem
 Opravena ztráta dat a pád aplikace
 
 ### 앱스토어 (Dansk)
 
-Spørg Siri om favoritter i nærheden
-Åbn restauranter direkte fra søgning
+Nu også på Apple Vision Pro
+Logbog og fotos synkroniseres via iCloud
+Find restauranter med Siri og søgning
 Daglig backup og gendannelse fra iCloud
-Bedre med VoiceOver og stor tekst
 Rettet tab af data og et nedbrud
 
 ### 앱스토어 (Ελληνικά)
 
-Ρωτήστε τη Siri για αγαπημένα κοντά
-Ανοίξτε εστιατόρια από την αναζήτηση
+Τώρα και στο Apple Vision Pro
+Συγχρονισμός με iCloud σε κάθε συσκευή
+Βρείτε μαγαζιά με Siri και αναζήτηση
 Καθημερινό αντίγραφο και επαναφορά
-Καλύτερο με VoiceOver και μεγάλο κείμενο
 Λύθηκαν απώλεια δεδομένων και κολλήματα
 
 ### 앱스토어 (Suomi)
 
-Kysy Siriltä suosikkeja lähellä
-Avaa ravintolat suoraan iPhonen hausta
+Nyt myös Apple Vision Prolla
+Merkinnät ja kuvat synkassa iCloudissa
+Löydä ravintolat Sirillä ja haulla
 Päivittäinen varmuuskopio ja palautus
-Sujuvampi VoiceOver ja iso teksti
 Korjattu tietohävikki ja kaatuminen
 
 ### 앱스토어 (Bahasa Indonesia)
 
-Tanya Siri soal favorit di sekitar
-Buka restoran dari pencarian iPhone
+Kini tersedia di Apple Vision Pro
+Catatan dan foto tersinkron lewat iCloud
+Cari restoran lewat Siri dan pencarian
 Cadangan harian, pulihkan dari iCloud
-VoiceOver dan teks besar lebih nyaman
 Memperbaiki data hilang dan app tertutup
 
 ### 앱스토어 (Norsk bokmål)
 
-Spør Siri om favoritter i nærheten
-Åpne restauranter rett fra søk på iPhone
+Nå også på Apple Vision Pro
+Logg og bilder synkroniseres via iCloud
+Finn restauranter med Siri og søk
 Daglig sikkerhetskopi og gjenoppretting
-Bedre med VoiceOver og stor tekst
 Rettet tap av data og en krasj
 
 ### 앱스토어 (Nederlands)
 
-Vraag Siri naar favorieten in de buurt
-Open restaurants via zoeken op iPhone
+Nu ook op Apple Vision Pro
+Logboek en foto's gesynct via iCloud
+Vind restaurants met Siri en zoeken
 Dagelijkse back-up en terugzetten
-Beter met VoiceOver en grote tekst
 Gegevensverlies en crash opgelost
 
 ### 앱스토어 (Polski)
 
-Zapytaj Siri o ulubione w pobliżu
-Otwieraj restauracje z wyszukiwania
+Teraz także na Apple Vision Pro
+Wpisy i zdjęcia synchronizuje iCloud
+Szukaj restauracji z Siri i wyszukiwarką
 Codzienna kopia i przywracanie z iCloud
-Lepiej z VoiceOver i dużym tekstem
 Naprawiono utratę danych i awarię
 
 ### 앱스토어 (Svenska)
 
-Fråga Siri om favoriter i närheten
-Öppna restauranger direkt från sök
+Nu även på Apple Vision Pro
+Loggar och bilder synkas via iCloud
+Hitta restauranger med Siri och sök
 Daglig säkerhetskopia och återställning
-Bättre med VoiceOver och stor text
 Åtgärdat dataförlust och en krasch
 
 ### 앱스토어 (Türkçe)
 
-Siri’ye yakındaki favorileri sor
-Restoranları iPhone aramasından aç
+Artık Apple Vision Pro’da da
+Kayıt ve fotoğraflar iCloud’la eşzamanlı
+Siri ve iPhone aramasıyla restoran bul
 Günlük yedek, iCloud’dan geri yükleme
-VoiceOver ve büyük metinle daha iyi
 Veri kaybı ve çökme sorunu düzeltildi
 
 ## 1.0.1

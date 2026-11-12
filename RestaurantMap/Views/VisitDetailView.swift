@@ -279,7 +279,9 @@ struct VisitDetailView: View {
                     }
                 }
             }
+            #if !os(visionOS)
             .scrollDismissesKeyboard(.interactively)
+            #endif
             .navigationTitle(visit.restaurant?.name ?? String(localized: "방문 기록"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

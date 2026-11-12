@@ -55,6 +55,9 @@ struct ContentView: View {
             if unfolded, selectedTab == 3 { selectedTab = 1 }
         }
         .environment(foldPick)
+        #if DEBUG
+        .onAppear { if let scene = ScreenshotScene.current { selectedTab = scene.tab } }
+        #endif
         .sheet(isPresented: $showsGraduation) {
             LeeoGraduationOfferView(graduate: purchases.product(RestaurantPlan.graduateID)) {
                 await purchases.refresh()

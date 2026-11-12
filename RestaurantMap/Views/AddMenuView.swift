@@ -34,7 +34,9 @@ struct AddMenuView: View {
                     Text("대표 메뉴는 메뉴 목록 상단에 표시됩니다")
                 }
             }
+            #if !os(visionOS)
             .scrollDismissesKeyboard(.interactively)
+            #endif
             .navigationTitle("메뉴 추가")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

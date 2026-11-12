@@ -65,7 +65,10 @@ struct SettingsView: View {
                     Text("내보내기는 어느 칸이든 무료예요.")
                 }
 
+                #if !os(visionOS)
+                // 위치를 늘 봐야 하는 알림이라 Vision Pro 에는 없다.
                 reminderSection
+                #endif
 
                 // iCloud 백업
                 Section {

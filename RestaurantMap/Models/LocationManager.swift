@@ -15,6 +15,9 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     }
 
     func requestLocation() {
+        #if DEBUG
+        if ScreenshotScene.current != nil { return }  // 스크린샷 장면에는 권한 창이 없어야 한다
+        #endif
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
     }
@@ -30,6 +33,9 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     }
 
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        #if DEBUG
+        if ScreenshotScene.current != nil { return }  // 스크린샷 장면에는 권한 창이 없어야 한다
+        #endif
         authorizationStatus = manager.authorizationStatus
 
         switch authorizationStatus {

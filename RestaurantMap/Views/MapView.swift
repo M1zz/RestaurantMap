@@ -1462,6 +1462,9 @@ class LocationDelegate: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
 
     func requestLocation() {
+        #if DEBUG
+        if ScreenshotScene.current != nil { return }  // 스크린샷 장면에는 권한 창이 없어야 한다
+        #endif
         logger.info("위치 권한 요청 시작")
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
@@ -1480,6 +1483,9 @@ class LocationDelegate: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
 
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        #if DEBUG
+        if ScreenshotScene.current != nil { return }  // 스크린샷 장면에는 권한 창이 없어야 한다
+        #endif
         let status = manager.authorizationStatus
         logger.info("위치 권한 상태 변경: \(String(describing: status))")
 

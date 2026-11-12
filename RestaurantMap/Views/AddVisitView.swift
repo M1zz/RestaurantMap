@@ -255,7 +255,9 @@ struct AddVisitView: View {
                         .font(.caption)
                 }
             }
+            #if !os(visionOS)
             .scrollDismissesKeyboard(.interactively)
+            #endif
             .navigationTitle("방문 기록 추가")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

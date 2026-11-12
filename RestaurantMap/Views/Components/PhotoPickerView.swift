@@ -12,7 +12,11 @@ struct PhotoPickerView: View {
 
     // 카메라 사용 가능 여부 확인
     private var isCameraAvailable: Bool {
+        #if os(visionOS)
+        false
+        #else
         UIImagePickerController.isSourceTypeAvailable(.camera)
+        #endif
     }
 
     var body: some View {
@@ -43,9 +47,11 @@ struct PhotoPickerView: View {
             maxSelectionCount: 10,
             matching: .images
         )
+        #if !os(visionOS)
         .sheet(isPresented: $showingCamera) {
             CameraView(image: $cameraImage)
         }
+        #endif
         .onChange(of: photoPickerItems) { oldValue, newValue in
             Task {
                 await loadPhotosFromPicker(newValue)

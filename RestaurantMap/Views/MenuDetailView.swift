@@ -124,7 +124,9 @@ struct MenuDetailView: View {
                     Text("평가 히스토리 (\(sortedVisits.count))")
                 }
             }
+            #if !os(visionOS)
             .scrollDismissesKeyboard(.interactively)
+            #endif
             .navigationTitle(menuItem.name)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

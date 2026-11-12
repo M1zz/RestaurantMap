@@ -78,7 +78,9 @@ class VisitReminderManager: NSObject, CLLocationManagerDelegate {
         super.init()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        #if !os(visionOS)
         locationManager.allowsBackgroundLocationUpdates = true
+        #endif
         locationManager.pausesLocationUpdatesAutomatically = false
         locationManager.distanceFilter = 20 // 20미터마다 업데이트
     }
@@ -107,6 +109,10 @@ class VisitReminderManager: NSObject, CLLocationManagerDelegate {
 
     /// 위치 추적 시작
     func startMonitoring() {
+        #if os(visionOS)
+        // Vision Pro 를 들고 식당에 가지 않는다 — 다녀온 뒤 알림은 iPhone 에서만 돈다.
+        return
+        #else
         let status = locationManager.authorizationStatus
 
         switch status {
@@ -127,6 +133,7 @@ class VisitReminderManager: NSObject, CLLocationManagerDelegate {
         @unknown default:
             break
         }
+        #endif
     }
 
     /// 위치 추적 중지
@@ -183,7 +190,9 @@ class VisitReminderManager: NSObject, CLLocationManagerDelegate {
             refreshRestaurantList()
             logger.info("Always 위치 권한 허용됨")
         case .authorizedWhenInUse:
+            #if !os(visionOS)
             locationManager.requestAlwaysAuthorization()
+            #endif
             locationManager.startUpdatingLocation()
             refreshRestaurantList()
             logger.info("WhenInUse 위치 권한 허용됨, Always 권한 요청")

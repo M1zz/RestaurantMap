@@ -1,6 +1,8 @@
 import SwiftUI
 import UIKit
 
+#if !os(visionOS)  // Vision Pro 에는 사진 찍는 카메라가 없다
+
 /// 카메라로 사진을 촬영하기 위한 UIImagePickerController 래퍼
 struct CameraView: UIViewControllerRepresentable {
     @Binding var image: UIImage?
@@ -44,3 +46,4 @@ struct CameraView: UIViewControllerRepresentable {
         }
     }
 }
+#endif

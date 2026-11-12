@@ -281,7 +281,9 @@ struct AddRestaurantView: View {
                         .frame(minHeight: 100)
                 }
             }
+            #if !os(visionOS)
             .scrollDismissesKeyboard(.interactively)
+            #endif
             .navigationTitle("식당 추가")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
