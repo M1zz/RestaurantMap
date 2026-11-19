@@ -70,6 +70,6 @@ enum FoldTabs {
     static let items: [FoldTabBar<Int>.Item] = [
         .init(value: 0, title: String(localized: "지도"), symbol: "map"),
         .init(value: 1, title: String(localized: "목록"), symbol: "list.bullet"),
-        .init(value: 2, title: String(localized: "추천"), symbol: "sparkles"),
+        .init(value: 2, title: String(localized: "단골 후기"), symbol: "rosette"),
     ]
 }

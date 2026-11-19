@@ -41,6 +41,8 @@ final class Restaurant {
     var categoryIcon: String = "fork.knife"
     var foodCategoryId: String = FoodCategoryRepository.builtInCategories[0].id.uuidString
     var isWishlist: Bool = false  // 가볼 곳 여부 (Boolean은 마이그레이션이 안전함)
+    /// 공개한 단골 후기의 ID. 올리지 않았으면 nil (→ RegularReviews).
+    var sharedReviewID: String?
 
     // 방문 기록들
     @Relationship(deleteRule: .cascade, inverse: \Visit.restaurant)

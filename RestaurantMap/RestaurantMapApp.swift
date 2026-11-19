@@ -16,6 +16,8 @@ struct RestaurantMapApp: App {
         // LeeoKit — 백업 금고(예약된 복원 · 업데이트 직전 백업) · 사용량 기록 · 크래시 진단 · 익명 사용 통계 (FeedbackHub).
         // 금고가 저장소보다 먼저 돌아야 해서 맨 앞에 둔다.
         LeeoKit.bootstrap(RestaurantMapSpec.self)
+        // 단골 후기 공개를 심사 없이 끌 수 있는 스위치. 읽지 못하면 켠 채로 둔다.
+        LeeoRemoteFlags(spec: RestaurantMapSpec.self).refreshInBackground(RestaurantFlag.self)
 
         // 저장소는 금고 뒤에 연다 (프로퍼티 초기값으로 두면 init 보다 먼저 열린다)
         sharedModelContainer = Self.makeModelContainer()

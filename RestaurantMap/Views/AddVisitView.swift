@@ -483,6 +483,8 @@ struct AddVisitView: View {
             return
         }
         logger.info("  ✅ modelContext.save 완료")
+        let restaurant = restaurant
+        Task { await RegularReviews.shared.refreshSnapshot(for: restaurant) }
 
         dismiss()
         logger.info("  ✅ dismiss 호출")

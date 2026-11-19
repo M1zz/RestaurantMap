@@ -335,6 +335,7 @@ class CloudKitBackupService {
                 phoneNumber: restaurant.phoneNumber,
                 isTop6: restaurant.isTop6,
                 top6Rank: restaurant.top6Rank,
+                sharedReviewID: restaurant.sharedReviewID,
                 categoryIcon: restaurant.categoryIcon,
                 foodCategoryId: restaurant.foodCategoryId,
                 isWishlist: restaurant.isWishlist,
@@ -558,6 +559,7 @@ class CloudKitBackupService {
             )
             // 예전에 직접 고르던 탑6 — 쓰지 않지만 백업에 든 값은 그대로 되살린다
             restaurant.isTop6 = backupRestaurant.isTop6
+            restaurant.sharedReviewID = backupRestaurant.sharedReviewID
             restaurant.top6Rank = backupRestaurant.top6Rank
 
             context.insert(restaurant)
@@ -790,6 +792,8 @@ struct BackupRestaurant: Codable {
     let phoneNumber: String
     let isTop6: Bool
     let top6Rank: Int?
+    /// 공개한 단골 후기의 ID — 예전 백업에는 없다
+    var sharedReviewID: String?
     let categoryIcon: String
     let foodCategoryId: String
     let isWishlist: Bool

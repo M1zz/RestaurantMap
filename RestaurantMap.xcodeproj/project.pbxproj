@@ -15,6 +15,7 @@
 		1A000001 /* RestaurantMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000000 /* RestaurantMapApp.swift */; };
 		1A000003 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000002 /* ContentView.swift */; };
 		1A000005 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000004 /* Restaurant.swift */; };
+		ABCEAE8A2084D47ED45E0A3D /* RegularReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACEAE8A2084D47ED45E0A3D /* RegularReview.swift */; };
 		AB483B68ED8D13FB601C3544 /* Gourmet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA483B68ED8D13FB601C3544 /* Gourmet.swift */; };
 		AB16EADDC6616A5907499656 /* Regular.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA16EADDC6616A5907499656 /* Regular.swift */; };
 		1A000007 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000006 /* MapView.swift */; };
@@ -29,6 +30,8 @@
 		1A00001F /* Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A00001E /* Visit.swift */; };
 		7A1C0DE1E27C116D /* VisitPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1C0DE0457FA610 /* VisitPhoto.swift */; };
 		1A000021 /* AddVisitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000020 /* AddVisitView.swift */; };
+		AB44F927DBD74666AD4DCF3C /* ReviewFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA44F927DBD74666AD4DCF3C /* ReviewFeedView.swift */; };
+		ABFDA4457021684BED378416 /* RegularCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFDA4457021684BED378416 /* RegularCardView.swift */; };
 		1A000023 /* VisitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000022 /* VisitDetailView.swift */; };
 		1A000025 /* FoodCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000024 /* FoodCategory.swift */; };
 		1A000027 /* VisitReminderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000026 /* VisitReminderManager.swift */; };
@@ -41,6 +44,7 @@
 		41384CCCA61A204486C1128F /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697357049ED220481E397856 /* PhotoPickerView.swift */; };
 		5E000B9D5DE2612D8295E49E /* PhotoStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E8C84619F1DE96AB117EB1 /* PhotoStorageManager.swift */; };
 		7A1C0DE12A7ACEE6 /* PhotoMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1C0DE0ACDD4F2D /* PhotoMigration.swift */; };
+		ABE1F35ECB7FBE80C4C0DB71 /* RegularReviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1F35ECB7FBE80C4C0DB71 /* RegularReviews.swift */; };
 		ABD0A7243F2C862AB61229D2 /* KakaoLocalSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD0A7243F2C862AB61229D2 /* KakaoLocalSearchService.swift */; };
 		7A1C0DE3AB000001 /* CloudKitSchemaWarmup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1C0DE2AB000001 /* CloudKitSchemaWarmup.swift */; };
 		7A1C0DE5AB000001 /* ScreenshotSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1C0DE4AB000001 /* ScreenshotSeed.swift */; };
@@ -62,12 +66,14 @@
 		130C9D405E83F0E949E172F4 /* AddCustomCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMap/Views/AddCustomCategoryView.swift; sourceTree = "<group>"; };
 		17E8C84619F1DE96AB117EB1 /* PhotoStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStorageManager.swift; sourceTree = "<group>"; };
 		7A1C0DE0ACDD4F2D /* PhotoMigration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMigration.swift; sourceTree = "<group>"; };
+		AAE1F35ECB7FBE80C4C0DB71 /* RegularReviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularReviews.swift; sourceTree = "<group>"; };
 		AAD0A7243F2C862AB61229D2 /* KakaoLocalSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLocalSearchService.swift; sourceTree = "<group>"; };
 		7A1C0DE2AB000001 /* CloudKitSchemaWarmup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitSchemaWarmup.swift; sourceTree = "<group>"; };
 		7A1C0DE4AB000001 /* ScreenshotSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotSeed.swift; sourceTree = "<group>"; };
 		1A000000 /* RestaurantMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMapApp.swift; sourceTree = "<group>"; };
 		1A000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1A000004 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		AACEAE8A2084D47ED45E0A3D /* RegularReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularReview.swift; sourceTree = "<group>"; };
 		AA483B68ED8D13FB601C3544 /* Gourmet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gourmet.swift; sourceTree = "<group>"; };
 		AA16EADDC6616A5907499656 /* Regular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regular.swift; sourceTree = "<group>"; };
 		1A000006 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -83,6 +89,8 @@
 		1A00001E /* Visit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visit.swift; sourceTree = "<group>"; };
 		7A1C0DE0457FA610 /* VisitPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitPhoto.swift; sourceTree = "<group>"; };
 		1A000020 /* AddVisitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVisitView.swift; sourceTree = "<group>"; };
+		AA44F927DBD74666AD4DCF3C /* ReviewFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewFeedView.swift; sourceTree = "<group>"; };
+		AAFDA4457021684BED378416 /* RegularCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularCardView.swift; sourceTree = "<group>"; };
 		1A000022 /* VisitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitDetailView.swift; sourceTree = "<group>"; };
 		1A000024 /* FoodCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategory.swift; sourceTree = "<group>"; };
 		1A000026 /* VisitReminderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitReminderManager.swift; sourceTree = "<group>"; };
@@ -134,6 +142,7 @@
 				49C64975CA314B3499093F64 /* RestaurantPlan.swift */,
 				17E8C84619F1DE96AB117EB1 /* PhotoStorageManager.swift */,
 				7A1C0DE0ACDD4F2D /* PhotoMigration.swift */,
+				AAE1F35ECB7FBE80C4C0DB71 /* RegularReviews.swift */,
 				AAD0A7243F2C862AB61229D2 /* KakaoLocalSearchService.swift */,
 				7A1C0DE2AB000001 /* CloudKitSchemaWarmup.swift */,
 				7A1C0DE4AB000001 /* ScreenshotSeed.swift */,
@@ -179,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				1A000004 /* Restaurant.swift */,
+				AACEAE8A2084D47ED45E0A3D /* RegularReview.swift */,
 				AA483B68ED8D13FB601C3544 /* Gourmet.swift */,
 				AA16EADDC6616A5907499656 /* Regular.swift */,
 				1A00001A /* TasteProfile.swift */,
@@ -200,6 +210,8 @@
 				1A00000C /* RestaurantDetailView.swift */,
 				1A00001C /* TasteProfileView.swift */,
 				1A000020 /* AddVisitView.swift */,
+				AA44F927DBD74666AD4DCF3C /* ReviewFeedView.swift */,
+				AAFDA4457021684BED378416 /* RegularCardView.swift */,
 				1A000022 /* VisitDetailView.swift */,
 				1A00002C /* SettingsView.swift */,
 				1A000032 /* MenuListView.swift */,
@@ -334,6 +346,7 @@
 				151514A90D2E4946AE362F3D /* RestaurantPlan.swift in Sources */,
 				1A000003 /* ContentView.swift in Sources */,
 				1A000005 /* Restaurant.swift in Sources */,
+				ABCEAE8A2084D47ED45E0A3D /* RegularReview.swift in Sources */,
 				AB483B68ED8D13FB601C3544 /* Gourmet.swift in Sources */,
 				AB16EADDC6616A5907499656 /* Regular.swift in Sources */,
 				1A000007 /* MapView.swift in Sources */,
@@ -345,6 +358,8 @@
 				1A00001F /* Visit.swift in Sources */,
 				7A1C0DE1E27C116D /* VisitPhoto.swift in Sources */,
 				1A000021 /* AddVisitView.swift in Sources */,
+				AB44F927DBD74666AD4DCF3C /* ReviewFeedView.swift in Sources */,
+				ABFDA4457021684BED378416 /* RegularCardView.swift in Sources */,
 				1A000023 /* VisitDetailView.swift in Sources */,
 				1A000025 /* FoodCategory.swift in Sources */,
 				1A000027 /* VisitReminderManager.swift in Sources */,
@@ -357,6 +372,7 @@
 				1A000001 /* RestaurantMapApp.swift in Sources */,
 				5E000B9D5DE2612D8295E49E /* PhotoStorageManager.swift in Sources */,
 				7A1C0DE12A7ACEE6 /* PhotoMigration.swift in Sources */,
+				ABE1F35ECB7FBE80C4C0DB71 /* RegularReviews.swift in Sources */,
 				ABD0A7243F2C862AB61229D2 /* KakaoLocalSearchService.swift in Sources */,
 				7A1C0DE3AB000001 /* CloudKitSchemaWarmup.swift in Sources */,
 				7A1C0DE5AB000001 /* ScreenshotSeed.swift in Sources */,

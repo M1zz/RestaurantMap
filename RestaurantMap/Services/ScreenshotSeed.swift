@@ -6,7 +6,7 @@ import SwiftData
 /// 저장소를 예시 식당으로 채우고 그 장면을 연다. 식당 이름은 기기 언어를 따른다.
 /// → scripts/capture_vision_screenshots.sh
 enum ScreenshotScene: String {
-    case map, list, detail, taste
+    case map, list, detail, taste, reviews
 
     static var current: ScreenshotScene? {
         UserDefaults.standard.string(forKey: "screenshotScene").flatMap(Self.init(rawValue:))
@@ -17,6 +17,7 @@ enum ScreenshotScene: String {
         case .map: 0
         case .list, .detail: 1
         case .taste: 3
+        case .reviews: 2
         }
     }
 }

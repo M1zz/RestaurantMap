@@ -19,6 +19,7 @@ struct RestaurantDetailView: View {
     @State private var isEditing = false
     @State private var purchases = Purchases.shared
     @State private var paywallFeature: RestaurantFeature?
+    @State private var composingReview = false
 
     private let logger = Logger(subsystem: "com.restaurantmap", category: "RestaurantDetail")
 
@@ -61,6 +62,7 @@ struct RestaurantDetailView: View {
                 if !restaurant.isWishlist {
                     regularSection
                     gourmetSection
+                    shareSection
                 }
 
                 // 응원 부탁 — 이미 Pro 인 사람에게만, 방문 기록을 꽤 쌓아 온 때 드물게(방문을 남기고 돌아온 자리)
@@ -290,6 +292,7 @@ struct RestaurantDetailView: View {
                 Text("'\(restaurant.name)'과(와) 모든 방문 기록을 삭제하시겠습니까?")
             }
             .paywall(for: $paywallFeature)
+            .sheet(isPresented: $composingReview) { ReviewComposeView(restaurant: restaurant) }
             .sheet(isPresented: $showingAddVisit) {
                 AddVisitView(restaurant: restaurant)
             }
@@ -412,6 +415,30 @@ extension RestaurantDetailView {
                 Text(verbatim: hint)
             } else {
                 Text("직접 고르지 않아요. 다녀온 날이 쌓이면 앱이 인정해요.")
+            }
+        }
+    }
+
+    /// 단골이 된 집은 후기를 모두에게 올리거나, 카드 그림으로 내보낼 수 있다.
+    @ViewBuilder
+    var shareSection: some View {
+        if restaurant.regular.isRanked {
+            Section {
+                Button {
+                    composingReview = true
+                } label: {
+                    Label(restaurant.sharedReviewID == nil ? "단골 후기 올리기" : "올린 후기 고치기",
+                          systemImage: restaurant.sharedReviewID == nil ? "rosette" : "checkmark.seal")
+                }
+                .disabled(!RegularReviews.shared.isEnabled)
+                if let card = RegularReview(restaurant: restaurant, id: "card", text: "",
+                                            nickname: RegularReviews.shared.nickname, author: "") {
+                    RegularCardShareLink(review: card)
+                }
+            } header: {
+                Text("단골 후기")
+            } footer: {
+                Text("단골이 된 집만 후기를 올릴 수 있어요.")
             }
         }
     }
