@@ -4,10 +4,15 @@ import UserNotifications
 import SwiftData
 import OSLog
 
-/// 저장된 가게 근처 방문 후 40분 뒤 리뷰 요청 푸시 알림을 관리하는 서비스
+/// 저장한 가게에 다녀오면 40분 뒤 방문 기록을 남기라고 알린다.
 ///
 /// 설정 ▸ '다녀온 뒤 기록 알림' 을 켠 사람만 돈다 (Pro). 앱을 열 때 저절로 권한을 묻거나 위치를 따라가지 않는다.
 /// 켜고 끄는 길은 `apply(allowed:)` 하나다 — 켠 사람이고 칸이 허락할 때만 위치를 본다.
+///
+/// ⚠️ 위치를 계속 받지 않는다. 시스템의 **방문 감지**(`startMonitoringVisits`)만 쓴다 —
+///    어딘가에 머물다 떠나면 시스템이 한 번 알려 주고, 그때 저장한 가게 근처였는지만 본다.
+///    예전에는 백그라운드에서 최고 정확도 위치를 20m 마다 받아 배터리를 많이 썼다.
+///    앱이 꺼져 있어도 시스템이 깨워 주므로 `resume(allowed:)` 을 앱이 뜰 때마다 부른다.
 @Observable
 class VisitReminderManager: NSObject, CLLocationManagerDelegate {
     static let shared = VisitReminderManager()
@@ -16,14 +21,13 @@ class VisitReminderManager: NSObject, CLLocationManagerDelegate {
     private let logger = Logger(subsystem: "com.restaurantmap", category: "VisitReminder")
 
     // 설정값
-    private let proximityRadius: CLLocationDistance = 50 // 가게 근처 판정 반경 (미터)
-    private let reminderDelay: TimeInterval = 40 * 60 // 40분 (초 단위)
+    private let proximityRadius: CLLocationDistance = 100 // 가게 근처 판정 반경 (미터). 방문 감지는 GPS 보다 거칠다.
+    private let reminderDelay: TimeInterval = 40 * 60 // 떠난 뒤 40분
+    private let minimumStay: TimeInterval = 5 * 60 // 이만큼은 머물러야 다녀온 것으로 본다
 
     // 상태 추적
     private var modelContainer: ModelContainer?
-    private var currentlyVisitingRestaurant: (id: String, name: String, enteredAt: Date)?
     private var scheduledNotificationId: String?
-    private var lastCheckedRestaurants: [RestaurantLocation] = []
 
     /// 지금 위치를 보고 있는가. 꺼져 있으면 위치 권한이 바뀌어도 따라가지 않는다.
     private(set) var isActive = false
@@ -67,22 +71,18 @@ class VisitReminderManager: NSObject, CLLocationManagerDelegate {
         startMonitoring()
     }
 
-    // 간단한 레스토랑 위치 정보 구조체
-    private struct RestaurantLocation {
-        let id: String
-        let name: String
-        let coordinate: CLLocationCoordinate2D
+    /// 앱이 뜰 때(시스템이 방문을 알리려고 깨울 때 포함) 감지를 다시 건다. 권한을 묻지 않는다.
+    func resume(allowed: Bool) {
+        #if !os(visionOS)
+        guard allowed, wantsReminders, locationManager.authorizationStatus == .authorizedAlways else { return }
+        isActive = true
+        locationManager.startMonitoringVisits()
+        #endif
     }
 
     private override init() {
         super.init()
         locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        #if !os(visionOS)
-        locationManager.allowsBackgroundLocationUpdates = true
-        #endif
-        locationManager.pausesLocationUpdatesAutomatically = false
-        locationManager.distanceFilter = 20 // 20미터마다 업데이트
     }
 
     // MARK: - Public Methods
@@ -107,26 +107,17 @@ class VisitReminderManager: NSObject, CLLocationManagerDelegate {
         }
     }
 
-    /// 위치 추적 시작
+    /// 방문 감지 시작
     func startMonitoring() {
         #if os(visionOS)
         // Vision Pro 를 들고 식당에 가지 않는다 — 다녀온 뒤 알림은 iPhone 에서만 돈다.
         return
         #else
-        let status = locationManager.authorizationStatus
-
-        switch status {
+        switch locationManager.authorizationStatus {
         case .authorizedAlways:
-            locationManager.startUpdatingLocation()
-            refreshRestaurantList()
-            logger.info("위치 모니터링 시작됨 (Always 권한)")
-        case .authorizedWhenInUse:
-            // WhenInUse 권한일 경우 Always 권한 요청
-            locationManager.requestAlwaysAuthorization()
-            locationManager.startUpdatingLocation()
-            refreshRestaurantList()
-            logger.info("위치 모니터링 시작됨 (WhenInUse 권한, Always 권한 요청)")
-        case .notDetermined:
+            locationManager.startMonitoringVisits()
+        case .authorizedWhenInUse, .notDetermined:
+            // 앱이 꺼져 있을 때 다녀온 것을 알려면 '항상' 권한이 필요하다. 받으면 권한 변경 콜백에서 시작한다.
             locationManager.requestAlwaysAuthorization()
         case .denied, .restricted:
             logger.warning("위치 권한이 거부됨")
@@ -136,73 +127,40 @@ class VisitReminderManager: NSObject, CLLocationManagerDelegate {
         #endif
     }
 
-    /// 위치 추적 중지
+    /// 방문 감지 중지
     func stopMonitoring() {
-        locationManager.stopUpdatingLocation()
-        logger.info("위치 모니터링 중지됨")
-    }
-
-    /// 저장된 레스토랑 목록 새로고침
-    func refreshRestaurantList() {
-        guard let container = modelContainer else {
-            logger.warning("ModelContainer가 설정되지 않음")
-            return
-        }
-
-        Task { @MainActor in
-            do {
-                let context = container.mainContext
-                let descriptor = FetchDescriptor<Restaurant>()
-                let restaurants = try context.fetch(descriptor)
-
-                lastCheckedRestaurants = restaurants.map { restaurant in
-                    RestaurantLocation(
-                        id: restaurant.name + restaurant.address, // 고유 식별자
-                        name: restaurant.name,
-                        coordinate: CLLocationCoordinate2D(
-                            latitude: restaurant.latitude,
-                            longitude: restaurant.longitude
-                        )
-                    )
-                }
-
-                logger.info("레스토랑 목록 새로고침: \(self.lastCheckedRestaurants.count)개")
-            } catch {
-                logger.error("레스토랑 목록 가져오기 실패: \(error.localizedDescription)")
-            }
-        }
+        #if !os(visionOS)
+        locationManager.stopMonitoringVisits()
+        #endif
     }
 
     // MARK: - CLLocationManagerDelegate
 
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard isActive, let currentLocation = locations.last else { return }
-
-        checkProximityToRestaurants(currentLocation: currentLocation)
+    #if !os(visionOS)
+    /// 시스템이 "어딘가에 머물다 떠났다"고 알려 줄 때. 도착만 알린 것(아직 머무는 중)은 넘긴다.
+    func locationManager(_ manager: CLLocationManager, didVisit visit: CLVisit) {
+        guard isActive, visit.departureDate != .distantFuture, visit.arrivalDate != .distantPast,
+              visit.departureDate.timeIntervalSince(visit.arrivalDate) >= minimumStay else { return }
+        let place = CLLocation(latitude: visit.coordinate.latitude, longitude: visit.coordinate.longitude)
+        let radius = max(proximityRadius, visit.horizontalAccuracy)
+        let departure = visit.departureDate
+        Task { @MainActor in
+            guard let name = nearestRestaurantName(to: place, within: radius) else { return }
+            // 떠난 지 40분 되는 때. 시스템이 늦게 알려 줘 이미 지났으면 곧바로.
+            scheduleReminderNotification(restaurantName: name,
+                                         after: max(60, reminderDelay - Date().timeIntervalSince(departure)))
+        }
     }
+    #endif
 
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         // 꺼져 있으면 권한이 바뀌어도 위치를 따라가지 않는다 (만들어질 때도 한 번 불린다).
         guard isActive else { return }
-        switch manager.authorizationStatus {
-        case .authorizedAlways:
-            locationManager.startUpdatingLocation()
-            refreshRestaurantList()
-            logger.info("Always 위치 권한 허용됨")
-        case .authorizedWhenInUse:
-            #if !os(visionOS)
-            locationManager.requestAlwaysAuthorization()
-            #endif
-            locationManager.startUpdatingLocation()
-            refreshRestaurantList()
-            logger.info("WhenInUse 위치 권한 허용됨, Always 권한 요청")
-        case .denied, .restricted:
-            logger.warning("위치 권한이 거부됨")
-        case .notDetermined:
-            break
-        @unknown default:
-            break
+        #if !os(visionOS)
+        if manager.authorizationStatus == .authorizedAlways {
+            locationManager.startMonitoringVisits()
         }
+        #endif
     }
 
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -211,74 +169,18 @@ class VisitReminderManager: NSObject, CLLocationManagerDelegate {
 
     // MARK: - Private Methods
 
-    /// 현재 위치가 저장된 레스토랑 근처인지 확인
-    private func checkProximityToRestaurants(currentLocation: CLLocation) {
-        // 가장 가까운 레스토랑 찾기
-        var nearestRestaurant: RestaurantLocation?
-        var nearestDistance: CLLocationDistance = .infinity
-
-        for restaurant in lastCheckedRestaurants {
-            let restaurantLocation = CLLocation(
-                latitude: restaurant.coordinate.latitude,
-                longitude: restaurant.coordinate.longitude
-            )
-            let distance = currentLocation.distance(from: restaurantLocation)
-
-            if distance < proximityRadius && distance < nearestDistance {
-                nearestDistance = distance
-                nearestRestaurant = restaurant
-            }
-        }
-
-        // 상태 업데이트
-        if let restaurant = nearestRestaurant {
-            // 가게 근처에 있음
-            if currentlyVisitingRestaurant == nil || currentlyVisitingRestaurant?.id != restaurant.id {
-                // 새로운 가게에 도착
-                enterRestaurant(restaurant)
-            }
-        } else {
-            // 가게 근처에 없음
-            if currentlyVisitingRestaurant != nil {
-                // 가게를 떠남
-                leaveRestaurant()
-            }
-        }
-    }
-
-    /// 가게에 도착했을 때
-    private func enterRestaurant(_ restaurant: RestaurantLocation) {
-        // 이전 알림 취소
-        cancelScheduledNotification()
-
-        currentlyVisitingRestaurant = (
-            id: restaurant.id,
-            name: restaurant.name,
-            enteredAt: Date()
-        )
-
-        logger.info("가게 도착: \(restaurant.name)")
-    }
-
-    /// 가게를 떠났을 때
-    private func leaveRestaurant() {
-        guard let visiting = currentlyVisitingRestaurant else { return }
-
-        let stayDuration = Date().timeIntervalSince(visiting.enteredAt)
-
-        // 최소 5분 이상 머물렀을 때만 알림 예약
-        if stayDuration >= 5 * 60 {
-            scheduleReminderNotification(restaurantName: visiting.name)
-            logger.info("가게 떠남: \(visiting.name), 체류시간: \(Int(stayDuration / 60))분, 알림 예약됨")
-        } else {
-            logger.info("가게 떠남: \(visiting.name), 체류시간: \(Int(stayDuration / 60))분, 알림 예약 안함 (최소 체류시간 미달)")
-        }
-
-        currentlyVisitingRestaurant = nil
+    /// 그 자리에서 가장 가까운 저장한 가게. 반경 안에 없으면 nil.
+    @MainActor
+    private func nearestRestaurantName(to place: CLLocation, within radius: CLLocationDistance) -> String? {
+        guard let restaurants = try? modelContainer?.mainContext.fetch(FetchDescriptor<Restaurant>()) else { return nil }
+        return restaurants
+            .map { ($0.name, place.distance(from: CLLocation(latitude: $0.latitude, longitude: $0.longitude))) }
+            .filter { $0.1 <= radius }
+            .min { $0.1 < $1.1 }?.0
     }
 
     /// 40분 후 알림 예약
-    private func scheduleReminderNotification(restaurantName: String) {
+    private func scheduleReminderNotification(restaurantName: String, after delay: TimeInterval) {
         // 이전 알림 취소
         cancelScheduledNotification()
 
@@ -290,7 +192,7 @@ class VisitReminderManager: NSObject, CLLocationManagerDelegate {
         content.userInfo = ["restaurantName": restaurantName]
 
         let trigger = UNTimeIntervalNotificationTrigger(
-            timeInterval: reminderDelay,
+            timeInterval: delay,
             repeats: false
         )
 
@@ -306,7 +208,7 @@ class VisitReminderManager: NSObject, CLLocationManagerDelegate {
                 self?.logger.error("알림 예약 실패: \(error.localizedDescription)")
             } else {
                 self?.scheduledNotificationId = notificationId
-                self?.logger.info("알림 예약 완료: \(restaurantName), 40분 후 발송")
+                self?.logger.info("알림 예약 완료")
             }
         }
     }

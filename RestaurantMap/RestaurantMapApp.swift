@@ -26,6 +26,9 @@ struct RestaurantMapApp: App {
         // 인텐트는 화면 없이 앱을 깨워 돌기도 해서, 화면이 아니라 여기서 넘긴다.
         let container = sharedModelContainer
         AppDependencyManager.shared.add(dependency: container)
+        // 다녀온 뒤 알림: 시스템이 방문을 알리려고 앱을 깨웠을 때도 받을 수 있게 화면보다 먼저 건다.
+        VisitReminderManager.shared.configure(with: container)
+        VisitReminderManager.shared.resume(allowed: Purchases.shared.allows(.visitReminder))
         #if DEBUG
         ScreenshotSeed.runIfRequested(container)
         CloudKitSchemaWarmup.runIfRequested(container, cloudContainer: Self.cloudContainer) {
@@ -253,8 +256,8 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
     ) {
         let userInfo = response.notification.request.content.userInfo
         if let restaurantName = userInfo["restaurantName"] as? String {
-            logger.info("알림 탭됨: \(restaurantName)")
-            // TODO: 해당 레스토랑의 방문 기록 추가 화면으로 이동하는 로직 추가 가능
+            // 그 식당을 연다 — 거기서 바로 방문을 남긴다
+            Task { @MainActor in RestaurantRouter.shared.pendingName = restaurantName }
         }
         completionHandler()
     }

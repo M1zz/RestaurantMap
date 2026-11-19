@@ -55,6 +55,12 @@ struct ContentView: View {
             if unfolded, selectedTab == 3 { selectedTab = 1 }
         }
         .environment(foldPick)
+        // 다녀온 뒤 알림을 누르면 그 식당을 연다
+        .onChange(of: router.pendingName, initial: true) { _, name in
+            guard let name else { return }
+            router.pendingName = nil
+            router.restaurantID = restaurants.first { $0.name == name }?.persistentModelID
+        }
         #if DEBUG
         .onAppear { if let scene = ScreenshotScene.current { selectedTab = scene.tab } }
         #endif

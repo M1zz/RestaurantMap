@@ -24,6 +24,8 @@ final class RestaurantRouter {
     static let shared = RestaurantRouter()
     /// 열어 달라는 식당. ContentView 가 시트로 열고 비운다.
     var restaurantID: PersistentIdentifier?
+    /// 다녀온 뒤 알림을 눌러 들어온 식당 이름. ContentView 가 찾아서 `restaurantID` 로 바꾼다.
+    var pendingName: String?
 }
 
 extension PersistentIdentifier {
