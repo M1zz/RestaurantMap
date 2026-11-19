@@ -31,11 +31,15 @@ struct RestaurantMapApp: App {
         VisitReminderManager.shared.resume(allowed: Purchases.shared.allows(.visitReminder))
         #if DEBUG
         ScreenshotSeed.runIfRequested(container)
+        RegularReviews.shared.warmupSchemaIfRequested()
         CloudKitSchemaWarmup.runIfRequested(container, cloudContainer: Self.cloudContainer) {
             let restaurant = Restaurant(name: "표본", address: "", latitude: 0, longitude: 0)
             let menu = MenuItem(name: "표본 메뉴", restaurant: restaurant)
             let visit = Visit(restaurant: restaurant)
             visit.menu = menu
+            // 값이 비어 있으면 필드가 생기지 않는다 — 새로 더한 필드에 값을 넣어 둔다
+            restaurant.sharedReviewID = "warmup"
+            for criterion in GourmetCriterion.allCases { visit[criterion] = 5 }
             // 작은 사진과 큰 사진(CKAsset 으로 나가는 크기)을 하나씩 — 두 저장 꼴의 필드가 다 생기게
             let small = VisitPhoto(data: Data(repeating: 1, count: 2_048), sortOrder: 0)
             let large = VisitPhoto(data: Data(repeating: 2, count: 1_500_000), sortOrder: 1)
@@ -182,6 +186,10 @@ struct RestaurantMapApp: App {
                 .storeFallbackNotice()
                 // 아이폰 듀오: 접힘을 재서 아래로 흘리고, 시트 · 알림창이 접힌 선을 비키게 한다.
                 .foldAware()
+                // 처음 한 번, 이 앱이 무엇을 하는지 (→ WelcomeView.swift)
+                .welcomeOnce()
+                // 유료가 된 날 콘페티, 모든 사용자에게 한 번의 감사 (LeeoKit)
+                .leeoCelebrations(appName: RestaurantMapSpec.appName)
                 .leeoSatisfactionCheck(RestaurantMapSpec.self)
                 // 개발자가 보낸 의견에 답장하면, 앱이 앞으로 올 때 답장을 시트로 보여 준다 (LeeoKit).
                 .leeoFeedbackReplyNotice(RestaurantMapSpec.self)

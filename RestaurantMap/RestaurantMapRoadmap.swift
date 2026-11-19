@@ -7,8 +7,8 @@
 //  ⚠️ 개발하다 "이건 다음에" 가 생기면 **여기에 한 줄을 더한다.** 코드의 TODO 주석으로만 남기지 않는다.
 //     - 새 항목: `.planned`. 손대기 시작하면 `.building`. 내보내면 `.shipped("1.2.0")`.
 //     - id 는 한 번 정하면 바꾸지 않는다(문구는 바꿔도 된다). 다른 앱과 같은 피처는 같은 id 를 쓴다.
-//     - 문구는 사용자 말로 쓴다(내부 이름 · 기술 용어 금지). 영어는 RestaurantMap/Localizable.xcstrings 에 넣는다
-//       (한국어 전용 앱이라 카탈로그에는 이 화면 문구만 있다 — 영어가 빠지면 영어 쓰는 사람에게 한국어가 보인다).
+//     - 문구는 사용자 말로 쓴다(내부 이름 · 기술 용어 금지). 번역은 RestaurantMap/Localizable.xcstrings 에
+//       앱의 모든 언어(deploy.env 의 LOCALES)로 넣는다 — 빠지면 그 언어 쓰는 사람에게 한국어가 보인다.
 //     - 사용자에게 보일 만한 것만 적는다. 리팩터링 · 시험 · 빌드 설정은 `.sprintcommander/tasks.json` 의 몫이다.
 //
 
@@ -17,7 +17,24 @@ import LeeoKit
 
 extension RestaurantMapSpec {
     static var roadmap: [LeeoRoadmapItem] {[
+        // MARK: 다음 업데이트에 들어가요
+        .init(id: "regulars", status: .building,
+              title: NSLocalizedString("자주 가면 단골로 인정", comment: "Roadmap item: regulars are recognized by visits"),
+              detail: NSLocalizedString("다녀온 날을 세어 단골과 인생 맛집을 앱이 인정하고, 나의 미슐랭 순위를 매겨요.", comment: "Roadmap item detail: regulars")),
+        .init(id: "gourmet", status: .building,
+              title: NSLocalizedString("미식 기준으로 기록", comment: "Roadmap item: gourmet criteria"),
+              detail: NSLocalizedString("재료, 조리, 조화, 개성으로 음식을 적고, 갈 때마다 한결같은지 알려 줘요.", comment: "Roadmap item detail: gourmet criteria")),
+        .init(id: "reviews", status: .building,
+              title: NSLocalizedString("단골 후기", comment: "Roadmap item: reviews by regulars"),
+              detail: NSLocalizedString("네 번 넘게 간 단골만 올리는 후기를 보고, 내 단골집 후기도 올려요.", comment: "Roadmap item detail: reviews by regulars")),
+        .init(id: "list.search", status: .building,
+              title: NSLocalizedString("목록에서 찾기와 정렬", comment: "Roadmap item: list search and sort"),
+              detail: NSLocalizedString("이름, 동네, 메뉴로 찾고 자주 간 순, 별점 순으로 줄 세워요.", comment: "Roadmap item detail: list search and sort")),
+
         // MARK: 다음에 만들어요
+        .init(id: "reviews.nearby", status: .planned,
+              title: NSLocalizedString("내 주변 단골 후기", comment: "Roadmap item: nearby reviews"),
+              detail: NSLocalizedString("지금 있는 곳 가까이의 단골 후기를 먼저 보여 줘요.", comment: "Roadmap item detail: nearby reviews")),
         .init(id: "a11y.voiceover", status: .building,
               title: NSLocalizedString("VoiceOver로 더 편하게", comment: "Roadmap item: VoiceOver"),
               detail: NSLocalizedString("화면 읽기 기능이 단추와 내용을 빠짐없이, 알맞은 순서로 읽어 줘요.", comment: "Roadmap item detail: VoiceOver")),
@@ -36,13 +53,13 @@ extension RestaurantMapSpec {
         .init(id: "a11y.keyboard", status: .planned,
               title: NSLocalizedString("키보드로 조작하기", comment: "Roadmap item: keyboard control"),
               detail: NSLocalizedString("아이패드에서 키보드만으로 주요 기능을 쓸 수 있어요.", comment: "Roadmap item detail: keyboard control")),
-        .init(id: "lang.english", status: .planned,
+        .init(id: "lang.english", status: .shipped("1.0.2"),
               title: NSLocalizedString("영어 지원", comment: "Roadmap item: English"),
               detail: NSLocalizedString("앱을 영어로도 쓸 수 있어요.", comment: "Roadmap item detail: English")),
-        .init(id: "lang.more", status: .planned,
+        .init(id: "lang.more", status: .shipped("1.0.2"),
               title: NSLocalizedString("더 많은 언어", comment: "Roadmap item: more languages"),
               detail: NSLocalizedString("더 많은 나라 말로 앱을 쓸 수 있게 해요.", comment: "Roadmap item detail: more languages")),
-        .init(id: "onboarding", status: .planned,
+        .init(id: "onboarding", status: .building,
               title: NSLocalizedString("처음 쓰는 분을 위한 안내", comment: "Roadmap item: first-run guide"),
               detail: NSLocalizedString("처음 열었을 때 무엇을 할 수 있는지 짧게 보여 줘요.", comment: "Roadmap item detail: first-run guide")),
         .init(id: "whatsnew", status: .planned,
@@ -57,7 +74,7 @@ extension RestaurantMapSpec {
         .init(id: "widgets", status: .planned,
               title: NSLocalizedString("홈 화면 위젯", comment: "Roadmap item: home screen widgets"),
               detail: NSLocalizedString("앱을 열지 않고 홈 화면에서 내 맛집을 바로 확인해요.", comment: "Roadmap item detail: home screen widgets")),
-        .init(id: "shortcuts", status: .planned,
+        .init(id: "shortcuts", status: .shipped("1.0.2"),
               title: NSLocalizedString("Siri와 단축어", comment: "Roadmap item: Siri and Shortcuts"),
               detail: NSLocalizedString("Siri에게 말하거나 단축어로 바로 방문을 기록해요.", comment: "Roadmap item detail: Siri and Shortcuts")),
         .init(id: "siri-ai", status: .planned,
@@ -66,7 +83,7 @@ extension RestaurantMapSpec {
         .init(id: "lock.faceid", status: .planned,
               title: NSLocalizedString("Face ID 잠금", comment: "Roadmap item: Face ID lock"),
               detail: NSLocalizedString("Face ID나 Touch ID로 앱을 잠가 내 맛집 기록을 지켜요.", comment: "Roadmap item detail: Face ID lock")),
-        .init(id: "fold", status: .planned,
+        .init(id: "fold", status: .shipped("1.0.2"),
               title: NSLocalizedString("펼치는 아이폰 화면", comment: "Roadmap item: foldable iPhone layout"),
               detail: NSLocalizedString("펼치는 아이폰에서 넓은 화면을 두 쪽으로 나눠 써요.", comment: "Roadmap item detail: foldable iPhone layout")),
         .init(id: "autosave", status: .planned,

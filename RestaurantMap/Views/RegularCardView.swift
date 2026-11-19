@@ -114,9 +114,12 @@ struct RegularCardView: View {
             Text(verbatim: criterion.title)
                 .font(.caption)
                 .foregroundStyle(.secondary)
-            ProgressView(value: min(max(value, 0), 5), total: 5)
-                .tint(.orange)
-                .frame(width: 44)
+            // 도형으로 그린다 — 그림으로 내보낼 때(ImageRenderer) 시스템 진행 막대는 그려지지 않는다
+            ZStack(alignment: .leading) {
+                Capsule().fill(.gray.opacity(0.25))
+                Capsule().fill(.orange).frame(width: 44 * min(max(value, 0), 5) / 5)
+            }
+            .frame(width: 44, height: 4)
             Text(verbatim: value.formatted(.number.precision(.fractionLength(1))))
                 .font(.caption.monospacedDigit())
         }

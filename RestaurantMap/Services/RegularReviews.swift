@@ -242,6 +242,29 @@ final class RegularReviews {
 
 #if DEBUG
 extension RegularReviews {
+    /// 공개 DB 의 개발 스키마 만들기 — `-cloudKitSchemaWarmup` 으로 띄우면 후기 · 신고 표본을 올렸다가 30초 뒤 지운다.
+    /// 그 뒤 CloudKit 콘솔에서 색인을 달고 운영에 올린다 (→ docs/engineering/GOURMET.md).
+    func warmupSchemaIfRequested() {
+        guard CommandLine.arguments.contains("-cloudKitSchemaWarmup") else { return }
+        Task {
+            guard let author = await identify() else { print("☁️ 후기 스키마 워밍업: iCloud 로그인이 필요하다"); return }
+            let review = CKRecord(recordType: RegularReview.recordType, recordID: CKRecord.ID(recordName: "warmup-review"))
+            Self.samples[0].fill(review)
+            review["author"] = author
+            let report = CKRecord(recordType: "ReviewReport", recordID: CKRecord.ID(recordName: "warmup-report"))
+            for key in ["review", "author", "kind", "reason", "reporter", "text", "nickname", "placeName"] { report[key] = "warmup" }
+            do {
+                _ = try await database.modifyRecords(saving: [review, report], deleting: [], savePolicy: .allKeys)
+                print("☁️ 후기 스키마 워밍업: 표본 2개를 올렸다 — 30초 뒤 지운다")
+                try? await Task.sleep(for: .seconds(30))
+                _ = try await database.modifyRecords(saving: [], deleting: [review.recordID, report.recordID])
+                print("☁️ 후기 스키마 워밍업: 표본을 지웠다")
+            } catch {
+                print("☁️ 후기 스키마 워밍업 실패: \(error)")
+            }
+        }
+    }
+
     /// 스크린샷 장면에 세울 예시 후기. 네트워크를 타지 않는다.
     static var samples: [RegularReview] {
         let ko = Locale.preferredLanguages.first?.hasPrefix("ko") ?? false
