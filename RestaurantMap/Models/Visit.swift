@@ -19,6 +19,12 @@ final class Visit {
     @Relationship(deleteRule: .cascade, inverse: \VisitPhoto.visit)
     var photos: [VisitPhoto]?
 
+    // 미식 기준 (1-5, 모두 선택) — 접시 위의 음식만 본다 (→ Gourmet.swift)
+    var gourmetIngredient: Int?
+    var gourmetTechnique: Int?
+    var gourmetHarmony: Int?
+    var gourmetPersonality: Int?
+
     // 일반 맛 취향 프로필 - 강도 (0-10)
     var spicy: Double?
     var boldness: Double?

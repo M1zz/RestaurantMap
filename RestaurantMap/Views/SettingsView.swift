@@ -271,7 +271,7 @@ struct SettingsView: View {
         guard purchases.isKnown else { return String(localized: "확인 중…") }
         return purchases.tier == .plus
             ? String(localized: "\(RestaurantTier.plus.title) 사용 중")
-            : String(localized: "식당 무제한, 나의 탑6, 다녀온 뒤 기록 알림, iCloud 백업")
+            : String(localized: "식당 무제한, 다녀온 뒤 기록 알림, iCloud 백업")
     }
 
     // MARK: - 다녀온 뒤 기록 알림 (Pro)

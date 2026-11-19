@@ -20,28 +20,30 @@ struct RestaurantExport: Transferable {
         let header = [
             String(localized: "식당 이름"), String(localized: "구분"), String(localized: "음식 종류"),
             String(localized: "카테고리"), String(localized: "주소"), String(localized: "전화번호"),
-            String(localized: "위도"), String(localized: "경도"), String(localized: "탑6 순위"),
+            String(localized: "위도"), String(localized: "경도"), String(localized: "단골 인정"),
             String(localized: "식당 메모"), String(localized: "방문 날짜"), String(localized: "별점"),
             String(localized: "메뉴"), String(localized: "방문 메모"), String(localized: "사진 수"),
+        ] + GourmetCriterion.allCases.map(\.title) + [
         ]
         let day = Date.ISO8601FormatStyle().year().month().day()
         var rows = [header]
         for restaurant in restaurants.sorted(by: { $0.name.localizedStandardCompare($1.name) == .orderedAscending }) {
+            let regular = restaurant.regular
             let place = [
                 restaurant.name, restaurant.listType.displayName, restaurant.foodCategory.localizedName,
                 restaurant.category, restaurant.address, restaurant.phoneNumber,
                 String(restaurant.latitude), String(restaurant.longitude),
-                restaurant.top6Rank.map(String.init) ?? "", restaurant.notes,
+                regular.level > .none ? regular.title : "", restaurant.notes,
             ]
             let visits = (restaurant.visits ?? []).sorted { $0.visitDate < $1.visitDate }
             if visits.isEmpty {
-                rows.append(place + ["", "", "", "", ""])
+                rows.append(place + Array(repeating: "", count: 5 + GourmetCriterion.allCases.count))
             }
             for visit in visits {
                 rows.append(place + [
                     visit.visitDate.formatted(day), visit.rating > 0 ? String(visit.rating) : "",
                     visit.displayMenuName, visit.notes, visit.hasPhotos ? String(visit.photos?.count ?? 0) : "",
-                ])
+                ] + GourmetCriterion.allCases.map { visit[$0].map(String.init) ?? "" })
             }
         }
         self.rows = rows

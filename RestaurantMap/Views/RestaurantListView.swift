@@ -72,6 +72,35 @@ struct StarView: View {
     }
 }
 
+/// 목록 정렬. 고른 값은 다음에 열 때도 남는다.
+enum RestaurantSort: String, CaseIterable, Identifiable {
+    case recent, visits, rating, name
+
+    var id: String { rawValue }
+
+    var title: String {
+        switch self {
+        case .recent: String(localized: "최근 방문 순", comment: "List sort option")
+        case .visits: String(localized: "자주 간 순", comment: "List sort option")
+        case .rating: String(localized: "별점 높은 순", comment: "List sort option")
+        case .name: String(localized: "이름 순", comment: "List sort option")
+        }
+    }
+
+    func sorted(_ restaurants: [Restaurant]) -> [Restaurant] {
+        switch self {
+        case .recent:
+            restaurants.sorted { ($0.lastVisitDate ?? $0.visitDate) > ($1.lastVisitDate ?? $1.visitDate) }
+        case .visits:
+            restaurants.sorted { $0.regular.days > $1.regular.days }
+        case .rating:
+            restaurants.sorted { $0.averageRating > $1.averageRating }
+        case .name:
+            restaurants.sorted { $0.name.localizedStandardCompare($1.name) == .orderedAscending }
+        }
+    }
+}
+
 struct RestaurantListView: View {
     @Environment(\.modelContext) private var modelContext
     let restaurants: [Restaurant]
@@ -80,25 +109,44 @@ struct RestaurantListView: View {
     @Environment(\.foldLayout) private var fold
     @Environment(FoldRestaurantPick.self) private var foldPick: FoldRestaurantPick?
     @State private var showingDetail = false
+    @State private var searchText = ""
+    @AppStorage("list.sort") private var sort: RestaurantSort = .recent
+    /// 고른 음식 종류. nil 이면 전부.
+    @State private var categoryFilter: FoodCategory?
+    /// 지우기 전에 한 번 묻는다 — 방문 기록과 사진까지 같이 사라진다.
+    @State private var pendingDelete: Restaurant?
+    @State private var saveFailed = false
 
     private let logger = Logger(subsystem: "com.restaurantmap", category: "RestaurantList")
 
-    // 나의 미슐랭 (Top 6)
-    private var michelinRestaurants: [Restaurant] {
-        restaurants.filter { $0.listType == .michelin || $0.isTop6 }
-            .sorted { ($0.top6Rank ?? 99) < ($1.top6Rank ?? 99) }
+    private var isFiltering: Bool { !searchText.isEmpty || categoryFilter != nil }
+
+    /// 검색어 · 음식 종류로 거른 식당.
+    private var shown: [Restaurant] {
+        let query = searchText.trimmingCharacters(in: .whitespaces)
+        return restaurants.filter { restaurant in
+            if let categoryFilter, restaurant.foodCategory.id != categoryFilter.id { return false }
+            guard !query.isEmpty else { return true }
+            let menus = (restaurant.visits ?? []).map(\.displayMenuName) + (restaurant.menus ?? []).map(\.name)
+            return ([restaurant.name, restaurant.address, restaurant.notes, restaurant.foodCategory.localizedName] + menus)
+                .contains { $0.localizedCaseInsensitiveContains(query) }
+        }
     }
 
-    // 가본 곳 (visited)
-    private var visitedRestaurants: [Restaurant] {
-        restaurants.filter { $0.listType == .visited && !$0.isTop6 }
-            .sorted { $0.visitDate > $1.visitDate }
+    /// 나의 미슐랭 — 순위는 거르기 전 전체에서 매긴다. 걸러도 순위 숫자는 그대로다.
+    private var ranks: [PersistentIdentifier: Int] { restaurants.regularRanks() }
+
+    /// 지금 저장된 식당에 쓰인 음식 종류.
+    private var usedCategories: [FoodCategory] {
+        var seen = Set<UUID>()
+        return restaurants.map(\.foodCategory).filter { seen.insert($0.id).inserted }
+            .sorted { $0.localizedName.localizedStandardCompare($1.localizedName) == .orderedAscending }
     }
 
-    // 가볼 곳 (wishlist)
-    private var wishlistRestaurants: [Restaurant] {
-        restaurants.filter { $0.listType == .wishlist }
-            .sorted { $0.visitDate > $1.visitDate }
+    /// 단골까지 가장 가까운 집 — 나의 미슐랭이 비어 있을 때 길을 보여 준다.
+    private var closestCandidate: Restaurant? {
+        restaurants.filter { !$0.isWishlist && !$0.regular.isRanked }
+            .max { $0.regular.days < $1.regular.days }
     }
 
     /// 식당 자세히: 아이폰 듀오를 폈으면 결과 쪽 판에, 아니면 지금처럼 시트로.
@@ -109,116 +157,51 @@ struct RestaurantListView: View {
     }
 
     var body: some View {
+        let ranks = ranks
+        let shown = shown
+        let michelin = shown.filter { ranks[$0.persistentModelID] != nil }
+            .sorted { (ranks[$0.persistentModelID] ?? 99) < (ranks[$1.persistentModelID] ?? 99) }
+        let visited = sort.sorted(shown.filter { !$0.isWishlist && ranks[$0.persistentModelID] == nil })
+        let wishlist = sort.sorted(shown.filter(\.isWishlist))
+
         NavigationStack {
             List {
-                // 나의 미슐랭 (Top 6)
+                // 나의 미슐랭 — 자주 간 집을 앱이 줄 세운다
                 Section {
-                    if michelinRestaurants.isEmpty {
-                        Text("아직 탑6로 지정된 식당이 없습니다")
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
-                            .padding(.vertical, 8)
+                    if michelin.isEmpty {
+                        michelinEmptyRow
                     } else {
-                        ForEach(michelinRestaurants) { restaurant in
-                            Top6RestaurantRow(restaurant: restaurant)
-                                .contentShape(Rectangle())
-                                .accessibilityInputLabels([Text(verbatim: restaurant.name)])
-                                .accessibleTap {
-                                    openDetail(restaurant)
-                                }
-                        }
-                        .onDelete { indexSet in
-                            deleteMichelinRestaurants(at: indexSet)
-                        }
+                        rows(michelin, ranks: ranks)
                     }
                 } header: {
-                    HStack {
-                        Image(systemName: "crown.fill")
-                            .foregroundStyle(.yellow)
-                            .accessibilityHidden(true)
-                        Text("나의 미슐랭")
-                        Spacer()
-                        Text("\(michelinRestaurants.count)")
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
-                    }
-                    .font(.headline)
+                    sectionHeader("나의 미슐랭", symbol: "crown.fill", tint: .yellow, count: michelin.count)
                 } footer: {
-                    if !michelinRestaurants.isEmpty {
-                        Text("최고의 식당들입니다")
-                            .font(.caption2)
-                    }
+                    Text("직접 고르지 않아요. 네 번 넘게 찾은 단골집이 자주 간 순서로 여기에 올라와요.")
+                        .font(.caption2)
                 }
 
-                // 가본 곳
                 Section {
-                    if visitedRestaurants.isEmpty {
-                        Text("아직 방문한 식당이 없습니다")
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
-                            .padding(.vertical, 8)
+                    if visited.isEmpty {
+                        emptyRow(isFiltering ? "찾는 식당이 없습니다" : "아직 방문한 식당이 없습니다")
                     } else {
-                        ForEach(visitedRestaurants) { restaurant in
-                            RestaurantRow(restaurant: restaurant)
-                                .contentShape(Rectangle())
-                                .accessibilityInputLabels([Text(verbatim: restaurant.name)])
-                                .accessibleTap {
-                                    openDetail(restaurant)
-                                }
-                        }
-                        .onDelete { indexSet in
-                            deleteVisitedRestaurants(at: indexSet)
-                        }
+                        rows(visited, ranks: ranks)
                     }
                 } header: {
-                    HStack {
-                        Image(systemName: "checkmark.circle.fill")
-                            .foregroundStyle(.green)
-                            .accessibilityHidden(true)
-                        Text("가본 곳")
-                        Spacer()
-                        Text("\(visitedRestaurants.count)")
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
-                    }
-                    .font(.headline)
+                    sectionHeader("가본 곳", symbol: "checkmark.circle.fill", tint: .green, count: visited.count)
                 }
 
-                // 가볼 곳
                 Section {
-                    if wishlistRestaurants.isEmpty {
-                        Text("아직 가보고 싶은 식당이 없습니다")
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
-                            .padding(.vertical, 8)
+                    if wishlist.isEmpty {
+                        emptyRow(isFiltering ? "찾는 식당이 없습니다" : "아직 가보고 싶은 식당이 없습니다")
                     } else {
-                        ForEach(wishlistRestaurants) { restaurant in
-                            RestaurantRow(restaurant: restaurant)
-                                .contentShape(Rectangle())
-                                .accessibilityInputLabels([Text(verbatim: restaurant.name)])
-                                .accessibleTap {
-                                    openDetail(restaurant)
-                                }
-                        }
-                        .onDelete { indexSet in
-                            deleteWishlistRestaurants(at: indexSet)
-                        }
+                        rows(wishlist, ranks: ranks)
                     }
                 } header: {
-                    HStack {
-                        Image(systemName: "star.circle.fill")
-                            .foregroundStyle(.orange)
-                            .accessibilityHidden(true)
-                        Text("가볼 곳")
-                        Spacer()
-                        Text("\(wishlistRestaurants.count)")
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
-                    }
-                    .font(.headline)
+                    sectionHeader("가볼 곳", symbol: "star.circle.fill", tint: .orange, count: wishlist.count)
                 }
             }
             .navigationTitle("식당 목록")
+            .searchable(text: $searchText, prompt: Text("이름 · 동네 · 메뉴로 찾기"))
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
@@ -228,9 +211,25 @@ struct RestaurantListView: View {
                     }
                     .accessibilityLabel(Text("식당 추가"))
                 }
-                
+
                 ToolbarItem(placement: .navigationBarLeading) {
-                    EditButton()
+                    Menu {
+                        Picker("정렬", selection: $sort) {
+                            ForEach(RestaurantSort.allCases) { Text($0.title).tag($0) }
+                        }
+                        if usedCategories.count > 1 {
+                            Picker("음식 종류", selection: $categoryFilter) {
+                                Text("모든 종류").tag(nil as FoodCategory?)
+                                ForEach(usedCategories) { category in
+                                    Label(category.localizedName, systemImage: category.icon).tag(category as FoodCategory?)
+                                }
+                            }
+                        }
+                    } label: {
+                        Image(systemName: categoryFilter == nil
+                              ? "line.3.horizontal.decrease.circle" : "line.3.horizontal.decrease.circle.fill")
+                    }
+                    .accessibilityLabel(Text("정렬과 거르기"))
                 }
             }
             .sheet(isPresented: $showingAddSheet) {
@@ -252,6 +251,22 @@ struct RestaurantListView: View {
                     }
                 }
             }
+            .confirmationDialog(
+                Text("\(pendingDelete?.name ?? "") 지우기"),
+                isPresented: Binding(get: { pendingDelete != nil }, set: { if !$0 { pendingDelete = nil } }),
+                titleVisibility: .visible,
+                presenting: pendingDelete
+            ) { restaurant in
+                Button("지우기", role: .destructive) { delete(restaurant) }
+                Button("취소", role: .cancel) {}
+            } message: { restaurant in
+                if restaurant.visitCount > 0 {
+                    Text("방문 기록 \(restaurant.visitCount)개와 사진도 함께 지워져요. 되돌릴 수 없어요.")
+                } else {
+                    Text("되돌릴 수 없어요.")
+                }
+            }
+            .saveFailureAlert($saveFailed)
             .overlay {
                 if restaurants.isEmpty {
                     ContentUnavailableView {
@@ -268,203 +283,114 @@ struct RestaurantListView: View {
             }
         }
     }
-    
-    private func deleteMichelinRestaurants(at offsets: IndexSet) {
-        for index in offsets {
-            let restaurant = michelinRestaurants[index]
-            logger.info("미슐랭 식당 삭제: 이름=\(restaurant.name), 랭킹=\(restaurant.top6Rank ?? 0)")
-            modelContext.delete(restaurant)
-        }
-        logger.info("총 \(offsets.count)개의 미슐랭 식당 삭제됨")
-    }
 
-    private func deleteVisitedRestaurants(at offsets: IndexSet) {
-        for index in offsets {
-            let restaurant = visitedRestaurants[index]
-            logger.info("가본 곳 삭제: 이름=\(restaurant.name), 주소=\(restaurant.address)")
-            modelContext.delete(restaurant)
-        }
-        logger.info("총 \(offsets.count)개의 가본 곳 삭제됨")
-    }
-
-    private func deleteWishlistRestaurants(at offsets: IndexSet) {
-        for index in offsets {
-            let restaurant = wishlistRestaurants[index]
-            logger.info("가볼 곳 삭제: 이름=\(restaurant.name), 주소=\(restaurant.address)")
-            modelContext.delete(restaurant)
-        }
-        logger.info("총 \(offsets.count)개의 가볼 곳 삭제됨")
-    }
-}
-
-// MARK: - Ranked Restaurant Row (리이오미슐랭)
-struct RankedRestaurantRow: View {
-    let restaurant: Restaurant
-    let rank: Int
-
-    // 카테고리에 맞는 아이콘 반환
-    private var categoryIcon: String {
-        if !restaurant.category.isEmpty {
-            return POICategoryMapper.toIcon(restaurant.category)
-        }
-        return restaurant.categoryIcon
-    }
-
-    // 랭킹 메달 색상
-    private var medalColor: Color {
-        switch rank {
-        case 1: return .yellow
-        case 2: return .gray
-        case 3: return .orange
-        default: return .blue.opacity(0.7)
-        }
-    }
-
-    var body: some View {
-        HStack(spacing: 12) {
-            // 랭킹 배지
-            ZStack {
-                Circle()
-                    .fill(medalColor.opacity(0.2))
-                    .frame(width: 44, height: 44)
-                VStack(spacing: 0) {
-                    Text("\(rank)")
-                        .font(.system(size: 18, weight: .bold))
-                        .foregroundStyle(medalColor)
-                    if rank <= 3 {
-                        Image(systemName: "medal.fill")
-                            .font(.system(size: 10))
-                            .foregroundStyle(medalColor)
-                    }
+    private func rows(_ list: [Restaurant], ranks: [PersistentIdentifier: Int]) -> some View {
+        ForEach(list) { restaurant in
+            RestaurantRow(restaurant: restaurant, rank: ranks[restaurant.persistentModelID])
+                .contentShape(Rectangle())
+                .accessibilityInputLabels([Text(verbatim: restaurant.name)])
+                .accessibleTap {
+                    openDetail(restaurant)
                 }
-            }
-
-            VStack(alignment: .leading, spacing: 6) {
-                // 이름 + 점수
-                HStack {
-                    Text(restaurant.name)
-                        .font(.headline)
-
-                    Spacer()
-
-                    // 만족도 점수
-                    HStack(spacing: 4) {
-                        Image(systemName: "heart.fill")
-                            .font(.system(size: 10))
-                            .foregroundStyle(.green)
-                        Text(String(format: "%.0f", restaurant.satisfactionScore))
-                            .font(.subheadline)
-                            .fontWeight(.bold)
-                            .foregroundStyle(.green)
+                .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+                    Button {
+                        pendingDelete = restaurant
+                    } label: {
+                        Label("지우기", systemImage: "trash")
                     }
+                    .tint(.red)
                 }
-
-                // 별점 + 카테고리
-                HStack(spacing: 8) {
-                    // 별점
-                    FractionalStarRatingView(rating: restaurant.averageRating, starSize: 10)
-
-                    // 카테고리
-                    Text(POICategoryMapper.displayName(restaurant.category.isEmpty ? "MKPOICategoryRestaurant" : restaurant.category))
-                        .font(.caption2)
-                        .padding(.horizontal, 6)
-                        .padding(.vertical, 2)
-                        .background(.blue.opacity(0.1))
-                        .foregroundStyle(.blue)
-                        .clipShape(Capsule())
-
-                    Spacer()
-
-                    // 방문 횟수
-                    Text("\(restaurant.visitCount)회 방문")
-                        .font(.caption2)
-                        .foregroundStyle(.secondary)
-                }
-            }
         }
-        .padding(.vertical, 4)
     }
-}
 
-struct Top6RestaurantRow: View {
-    let restaurant: Restaurant
+    private func sectionHeader(_ title: LocalizedStringKey, symbol: String, tint: Color, count: Int) -> some View {
+        HStack {
+            Image(systemName: symbol)
+                .foregroundStyle(tint)
+                .accessibilityHidden(true)
+            Text(title)
+            Spacer()
+            Text("\(count)")
+                .font(.caption)
+                .foregroundStyle(.secondary)
+        }
+        .font(.headline)
+    }
 
-    var body: some View {
-        HStack(spacing: 12) {
-            // 랭킹 배지
-            ZStack {
-                Image(systemName: "star.fill")
-                    .font(.system(size: 36))
-                    .foregroundStyle(.yellow)
-                Text("\(restaurant.top6Rank ?? 0)")
-                    .font(.system(size: 16, weight: .bold))
-                    .foregroundStyle(.black)
-            }
-            .frame(width: 40)
-            .accessibilityElement(children: .ignore)
-            .accessibilityLabel(Text("\(restaurant.top6Rank ?? 0)위"))
+    private func emptyRow(_ text: LocalizedStringKey) -> some View {
+        Text(text)
+            .font(.subheadline)
+            .foregroundStyle(.secondary)
+            .padding(.vertical, 8)
+    }
 
-            VStack(alignment: .leading, spacing: 6) {
-                // 이름 + 평균 별점
-                HStack {
-                    Text(restaurant.name)
-                        .font(.headline)
-
-                    Spacer()
-
-                    HStack(spacing: 2) {
-                        ForEach(0..<5) { index in
-                            Image(systemName: index < Int(restaurant.averageRating.rounded()) ? "star.fill" : "star")
-                                .foregroundStyle(index < Int(restaurant.averageRating.rounded()) ? .yellow : .gray)
-                                .font(.system(size: 12))
-                        }
-                    }
-                    .starRatingLabel(restaurant.averageRating)
-                }
-
-                // 카테고리 + 마지막 방문일 + 총 방문횟수 (아주 큰 글씨에서는 위아래로)
-                AdaptiveStack(spacing: 8) {
-                    // 카테고리 텍스트
-                    Text(POICategoryMapper.displayName(restaurant.category.isEmpty ? "MKPOICategoryRestaurant" : restaurant.category))
-                        .font(.caption)
-                        .padding(.horizontal, 8)
-                        .padding(.vertical, 2)
-                        .background(.blue.opacity(0.1))
-                        .foregroundStyle(.blue)
-                        .clipShape(Capsule())
-
-                    Spacer()
-
-                    // 마지막 방문일
-                    if let lastVisit = restaurant.lastVisitDate {
-                        HStack(spacing: 2) {
-                            Image(systemName: "calendar")
-                                .font(.caption2)
-                                .accessibilityHidden(true)
-                            Text(lastVisit, format: .dateTime.month().day())
-                                .font(.caption)
-                        }
-                        .foregroundStyle(.secondary)
-                    }
-
-                    // 총 방문횟수
-                    HStack(spacing: 2) {
-                        Image(systemName: "figure.walk")
-                            .font(.caption2)
-                            .accessibilityHidden(true)
-                        Text("\(restaurant.visitCount)회")
-                            .font(.caption)
-                    }
+    @ViewBuilder
+    private var michelinEmptyRow: some View {
+        if isFiltering {
+            emptyRow("찾는 식당이 없습니다")
+        } else if let candidate = closestCandidate, let hint = candidate.regular.nextStep {
+            VStack(alignment: .leading, spacing: 4) {
+                Text("아직 단골집이 없어요")
+                    .font(.subheadline)
+                Text(verbatim: "\(candidate.name) — \(hint)")
+                    .font(.caption)
                     .foregroundStyle(.secondary)
-                }
             }
+            .padding(.vertical, 6)
+        } else {
+            emptyRow("아직 단골집이 없어요")
         }
-        .padding(.vertical, 4)
+    }
+
+    private func delete(_ restaurant: Restaurant) {
+        logger.info("식당 삭제: 방문 \(restaurant.visitCount)개")
+        modelContext.delete(restaurant)
+        do {
+            try modelContext.save()
+        } catch {
+            logger.error("삭제 저장 실패: \(error.localizedDescription)")
+            saveFailed = true
+        }
+    }
+}
+
+// MARK: - 단골 인정 표시
+
+/// 단골 단계 딱지 — "단골 · 5번". 한 번 가 본 곳에는 붙지 않는다.
+struct RegularBadge: View {
+    let regular: Regular
+
+    private var tint: Color {
+        if regular.isLapsed { return .secondary }
+        switch regular.level {
+        case .lifetime: return .orange
+        case .regular: return .pink
+        default: return .teal
+        }
+    }
+
+    var body: some View {
+        if regular.level > .none {
+            HStack(spacing: 3) {
+                Image(systemName: regular.level.symbol)
+                    .font(.caption2)
+                    .accessibilityHidden(true)
+                Text(verbatim: regular.title)
+                    .font(.caption.weight(.semibold))
+            }
+            .padding(.horizontal, 8)
+            .padding(.vertical, 2)
+            .background(tint.opacity(0.15))
+            .foregroundStyle(tint)
+            .clipShape(Capsule())
+        }
     }
 }
 
 struct RestaurantRow: View {
     let restaurant: Restaurant
+    /// 나의 미슐랭 순위. 순위에 없으면 nil.
+    var rank: Int? = nil
 
     // 카테고리에 맞는 아이콘 반환
     private var categoryIcon: String {
@@ -475,16 +401,24 @@ struct RestaurantRow: View {
     }
 
     var body: some View {
+        let regular = restaurant.regular
         HStack(spacing: 12) {
-            // 카테고리 아이콘
             ZStack {
                 Circle()
                     .fill(.yellow.opacity(0.3))
                     .frame(width: 40, height: 40)
-                Image(systemName: categoryIcon)
-                    .font(.system(size: 20))
-                    .foregroundStyle(.orange)
+                if let rank {
+                    Text(verbatim: "\(rank)")
+                        .font(.system(size: 18, weight: .bold, design: .rounded))
+                        .foregroundStyle(.orange)
+                } else {
+                    Image(systemName: categoryIcon)
+                        .font(.system(size: 20))
+                        .foregroundStyle(.orange)
+                }
             }
+            .accessibilityElement(children: .ignore)
+            .accessibilityLabel(rank.map { Text("\($0)위") } ?? Text(verbatim: ""))
 
             VStack(alignment: .leading, spacing: 6) {
                 // 이름 + 별점
@@ -498,16 +432,19 @@ struct RestaurantRow: View {
                     FractionalStarRatingView(rating: restaurant.averageRating)
                 }
 
-                // 카테고리 + 마지막 방문일 + 총 방문횟수 (아주 큰 글씨에서는 위아래로)
+                // 단골 딱지(없으면 음식 종류) + 마지막 방문일 + 다녀온 날 수 (아주 큰 글씨에서는 위아래로)
                 AdaptiveStack(spacing: 8) {
-                    // 카테고리 텍스트
-                    Text(POICategoryMapper.displayName(restaurant.category.isEmpty ? "MKPOICategoryRestaurant" : restaurant.category))
-                        .font(.caption)
-                        .padding(.horizontal, 8)
-                        .padding(.vertical, 2)
-                        .background(.blue.opacity(0.1))
-                        .foregroundStyle(.blue)
-                        .clipShape(Capsule())
+                    if regular.level > .none {
+                        RegularBadge(regular: regular)
+                    } else {
+                        Text(POICategoryMapper.displayName(restaurant.category.isEmpty ? "MKPOICategoryRestaurant" : restaurant.category))
+                            .font(.caption)
+                            .padding(.horizontal, 8)
+                            .padding(.vertical, 2)
+                            .background(.blue.opacity(0.1))
+                            .foregroundStyle(.blue)
+                            .clipShape(Capsule())
+                    }
 
                     Spacer()
 
@@ -523,21 +460,37 @@ struct RestaurantRow: View {
                         .foregroundStyle(.secondary)
                     }
 
-                    // 총 방문횟수
-                    HStack(spacing: 2) {
-                        Image(systemName: "figure.walk")
-                            .font(.caption2)
-                            .accessibilityHidden(true)
-                        Text("\(restaurant.visitCount)회")
-                            .font(.caption)
+                    // 다녀온 날 수
+                    if !restaurant.isWishlist {
+                        HStack(spacing: 2) {
+                            Image(systemName: "figure.walk")
+                                .font(.caption2)
+                                .accessibilityHidden(true)
+                            Text("\(regular.days)회")
+                                .font(.caption)
+                        }
+                        .foregroundStyle(.secondary)
                     }
-                    .foregroundStyle(.secondary)
                 }
             }
         }
         .padding(.vertical, 4)
     }
 }
+
+// MARK: - 저장 실패 알림
+
+extension View {
+    /// 저장이 실패하면 조용히 넘기지 않고 알린다.
+    func saveFailureAlert(_ isPresented: Binding<Bool>) -> some View {
+        alert("저장하지 못했어요", isPresented: isPresented) {
+            Button("확인", role: .cancel) {}
+        } message: {
+            Text("저장 공간이 부족하지 않은지 확인한 뒤 다시 해 주세요.")
+        }
+    }
+}
+
 
 // MARK: - Restaurant Detail Wrapper with Loading State
 struct RestaurantDetailViewWrapper: View {

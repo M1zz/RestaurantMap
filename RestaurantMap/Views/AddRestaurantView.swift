@@ -22,8 +22,7 @@ struct AddRestaurantView: View {
     @State private var phoneNumber = ""
     @State private var visitDate = Date()
     @State private var menuItem = "" // 첫 방문 시 먹은 메뉴
-    @State private var isTop6 = false
-    @State private var top6Rank: Int? = nil
+    @State private var saveFailed = false
     @State private var categoryIcon = "fork.knife"
     @State private var foodCategory: FoodCategory = FoodCategoryRepository.builtInCategories[0]
     @State private var listType: RestaurantListType = .visited // 가본곳/가볼곳 구분
@@ -154,13 +153,6 @@ struct AddRestaurantView: View {
                         Text(RestaurantListType.wishlist.displayName).tag(RestaurantListType.wishlist)
                     }
                     .pickerStyle(.segmented)
-                    .onChange(of: listType) { oldValue, newValue in
-                        // 가볼곳으로 변경하면 탑6 자동 해제
-                        if newValue == .wishlist {
-                            isTop6 = false
-                            top6Rank = nil
-                        }
-                    }
 
                     if listType == .visited {
                         DatePicker("방문 날짜", selection: $visitDate, displayedComponents: .date)
@@ -191,38 +183,7 @@ struct AddRestaurantView: View {
                 }
 
                 Section("카테고리 설정") {
-                    // 탑6는 가본곳일 때만 설정 가능
-                    if listType == .visited {
-                        Toggle(isOn: Binding(
-                            get: { isTop6 },
-                            set: { on in
-                                if on && !purchases.allows(.top6) {
-                                    paywallFeature = .top6
-                                } else {
-                                    isTop6 = on
-                                }
-                            }
-                        )) {
-                            LockedLabel(title: "나의 최애 탑6", feature: .top6)
-                        }
-
-                        if isTop6 {
-                            Picker("랭킹", selection: $top6Rank) {
-                                Text("선택 안함").tag(nil as Int?)
-                                ForEach(1...6, id: \.self) { rank in
-                                    HStack {
-                                        Image(systemName: "star.fill")
-                                            .foregroundStyle(.yellow)
-                                        Text("\(rank)위")
-                                    }
-                                    .tag(rank as Int?)
-                                }
-                            }
-                            .pickerStyle(.menu)
-                        }
-                    }
-
-                    if !isTop6 {
+                    Group {
                         VStack(alignment: .leading, spacing: 8) {
                             Text("카테고리 아이콘")
                                 .font(.subheadline)
@@ -285,6 +246,7 @@ struct AddRestaurantView: View {
             .scrollDismissesKeyboard(.interactively)
             #endif
             .navigationTitle("식당 추가")
+            .saveFailureAlert($saveFailed)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
@@ -325,7 +287,7 @@ struct AddRestaurantView: View {
     }
     
     private func saveRestaurant() {
-        logger.info("식당 저장 시작: 이름=\(name), 주소=\(address), 카테고리=\(category), 별점=\(rating), 메뉴=\(menuItem), 탑6=\(isTop6), 구분=\(listType.displayName)")
+        logger.info("식당 저장 시작: 이름=\(name), 주소=\(address), 카테고리=\(category), 별점=\(rating), 메뉴=\(menuItem), 구분=\(listType.displayName)")
 
         let restaurant = Restaurant(
             name: name,
@@ -337,8 +299,6 @@ struct AddRestaurantView: View {
             visitDate: visitDate,
             category: category,
             phoneNumber: phoneNumber,
-            isTop6: isTop6,
-            top6Rank: isTop6 ? top6Rank : nil,
             categoryIcon: categoryIcon,
             foodCategory: foodCategory,
             listType: listType
@@ -359,7 +319,14 @@ struct AddRestaurantView: View {
             logger.info("첫 방문 기록 생성: 메뉴=\(menuItem), 별점=\(rating)")
         }
 
-        logger.info("식당 저장 완료: \(name) (탑6=\(isTop6), 랭킹=\(top6Rank ?? 0), 아이콘=\(categoryIcon), 구분=\(listType.displayName))")
+        // 자동 저장에 맡기지 않는다 — 실패하면 알리고 화면을 닫지 않는다
+        do {
+            try modelContext.save()
+        } catch {
+            logger.error("식당 저장 실패: \(error.localizedDescription)")
+            saveFailed = true
+            return
+        }
         dismiss()
     }
 }

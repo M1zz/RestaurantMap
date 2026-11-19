@@ -18,7 +18,7 @@ struct ContentView: View {
         TabView(selection: $selectedTab) {
             // 아이폰 듀오를 펴면 왼쪽(세로면 아래)에 이 탭, 오른쪽(위)에 고른 식당 또는 취향이 선다.
             // 접혀 있거나 보통 아이폰이면 `FoldTab` 은 이 탭만 그린다. 지금 화면 그대로.
-            FoldTab { MapView(restaurants: restaurants) }
+            FoldTab { MapView(restaurants: restaurants, ranks: restaurants.regularRanks()) }
                 .tabItem {
                     Label("지도", systemImage: "map")
                 }

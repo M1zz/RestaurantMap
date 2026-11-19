@@ -7,6 +7,7 @@ struct TasteProfileView: View {
 
     @State private var profile: TasteProfile
     @State private var isEditing = false
+    @State private var saveFailed = false
     @State private var purchases = Purchases.shared
     @State private var paywallFeature: RestaurantFeature?
 
@@ -49,6 +50,7 @@ struct TasteProfileView: View {
                 .padding()
             }
             .navigationTitle("취향 프로필")
+            .saveFailureAlert($saveFailed)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(isEditing ? "완료" : "수정", systemImage: isEditing ? "checkmark" : "pencil") {
@@ -142,7 +144,11 @@ struct TasteProfileView: View {
 
     private func saveProfile() {
         profile.updatedAt = Date()
-        try? modelContext.save()
+        do {
+            try modelContext.save()
+        } catch {
+            saveFailed = true
+        }
     }
 }
 

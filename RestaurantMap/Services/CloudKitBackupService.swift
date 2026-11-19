@@ -222,6 +222,10 @@ class CloudKitBackupService {
                     photoId: visit.photoId,
                     photoFilenames: photos.map(\.filename),
                     // 일반
+                    gourmetIngredient: visit.gourmetIngredient,
+                    gourmetTechnique: visit.gourmetTechnique,
+                    gourmetHarmony: visit.gourmetHarmony,
+                    gourmetPersonality: visit.gourmetPersonality,
                     spicy: visit.spicy,
                     boldness: visit.boldness,
                     sweetness: visit.sweetness,
@@ -548,12 +552,13 @@ class CloudKitBackupService {
                 visitDate: backupRestaurant.visitDate,
                 category: backupRestaurant.category,
                 phoneNumber: backupRestaurant.phoneNumber,
-                isTop6: backupRestaurant.isTop6,
-                top6Rank: backupRestaurant.top6Rank,
                 categoryIcon: backupRestaurant.categoryIcon,
                 foodCategory: foodCategory,
-                listType: backupRestaurant.isWishlist ? .wishlist : (backupRestaurant.isTop6 ? .michelin : .visited)
+                listType: backupRestaurant.isWishlist ? .wishlist : .visited
             )
+            // 예전에 직접 고르던 탑6 — 쓰지 않지만 백업에 든 값은 그대로 되살린다
+            restaurant.isTop6 = backupRestaurant.isTop6
+            restaurant.top6Rank = backupRestaurant.top6Rank
 
             context.insert(restaurant)
 
@@ -583,6 +588,10 @@ class CloudKitBackupService {
                 }
 
                 // 일반
+                visit.gourmetIngredient = backupVisit.gourmetIngredient
+                visit.gourmetTechnique = backupVisit.gourmetTechnique
+                visit.gourmetHarmony = backupVisit.gourmetHarmony
+                visit.gourmetPersonality = backupVisit.gourmetPersonality
                 visit.spicy = backupVisit.spicy
                 visit.boldness = backupVisit.boldness
                 visit.sweetness = backupVisit.sweetness
@@ -799,6 +808,11 @@ struct BackupVisit: Codable {
     var photoFilenames: [String]? = nil
 
     // 일반 맛 취향
+    // 미식 기준 — 예전 백업에는 없다
+    var gourmetIngredient: Int?
+    var gourmetTechnique: Int?
+    var gourmetHarmony: Int?
+    var gourmetPersonality: Int?
     let spicy: Double?
     let boldness: Double?
     let sweetness: Double?

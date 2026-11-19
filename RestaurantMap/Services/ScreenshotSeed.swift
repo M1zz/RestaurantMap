@@ -35,27 +35,34 @@ enum ScreenshotSeed {
         let names = Self.names(for: Locale.preferredLanguages.first ?? "en")
         let cats = FoodCategoryRepository.builtInCategories
         let day: (Int) -> Date = { Calendar.current.date(byAdding: .day, value: -$0, to: .now)! }
-        // (이름 순서, 분류, 서울 성수 근처 좌표, 별점, 방문 수, 탑6 순위, 가볼 곳)
-        let rows: [(Int, Int, Double, Double, Int, Int, Int?, Bool)] = [
-            (0, 1, 37.5446, 127.0557, 5, 3, 1, false),
-            (1, 2, 37.5471, 127.0442, 5, 2, 2, false),
-            (2, 3, 37.5408, 127.0569, 5, 4, 3, false),
-            (3, 5, 37.5489, 127.0503, 4, 2, 4, false),
-            (4, 4, 37.5431, 127.0478, 4, 2, 5, false),
-            (5, 0, 37.5395, 127.0505, 5, 3, 6, false),
-            (6, 6, 37.5459, 127.0591, 4, 2, nil, false),
-            (7, 0, 37.5502, 127.0461, 0, 0, nil, true),
+        // (이름 순서, 분류, 서울 성수 근처 좌표, 별점, 방문 수, 가볼 곳)
+        // 방문은 한 달 간격이다 — 앞의 여섯 곳은 네 번 넘게 다녀와 나의 미슐랭에 오르고, 맨 앞 둘은 반년을 넘겨 인생 맛집이 된다.
+        let rows: [(Int, Int, Double, Double, Int, Int, Bool)] = [
+            (0, 1, 37.5446, 127.0557, 5, 9, false),
+            (1, 2, 37.5471, 127.0442, 5, 8, false),
+            (2, 3, 37.5408, 127.0569, 5, 6, false),
+            (3, 5, 37.5489, 127.0503, 4, 5, false),
+            (4, 4, 37.5431, 127.0478, 4, 4, false),
+            (5, 0, 37.5395, 127.0505, 5, 4, false),
+            (6, 6, 37.5459, 127.0591, 4, 2, false),
+            (7, 0, 37.5502, 127.0461, 0, 0, true),
         ]
         var first: Restaurant?
-        for (i, (n, c, lat, lon, rating, count, rank, wish)) in rows.enumerated() {
+        for (i, (n, c, lat, lon, rating, count, wish)) in rows.enumerated() {
             let r = Restaurant(name: names[n], address: "", latitude: lat, longitude: lon,
                                rating: rating, visitDate: day(5 + i * 9),
                                category: c == 5 ? "MKPOICategoryBar" : c == 6 ? "MKPOICategoryCafe" : "MKPOICategoryRestaurant",
-                               isTop6: rank != nil, top6Rank: rank, foodCategory: cats[c],
+                               foodCategory: cats[c],
                                listType: wish ? .wishlist : .visited)
             context.insert(r)
             for v in 0..<count {
-                let visit = Visit(restaurant: r, visitDate: day(5 + i * 9 + v * 21), rating: rating)
+                let visit = Visit(restaurant: r, visitDate: day(5 + i * 9 + v * 30), rating: rating)
+                if i < 6 { // 단골집: 상세 화면에 미식 기준이 보이게
+                    visit.gourmetIngredient = [5, 5, 4][(v + i) % 3]
+                    visit.gourmetTechnique = [5, 4, 5][(v + i) % 3]
+                    visit.gourmetHarmony = [4, 5, 5][(v + i) % 3]
+                    visit.gourmetPersonality = [4, 4, 5][(v + i) % 3]
+                }
                 if c == 1 { // 스테이크: 상세 화면에 맛 평가 차트가 보이게
                     visit.steakDoneness = [6.5, 7, 6][v % 3]
                     visit.steakJuiciness = [8.5, 9, 8][v % 3]
@@ -75,7 +82,7 @@ enum ScreenshotSeed {
         }
     }
 
-    /// 탑6 여섯 · 가본 곳 · 가볼 곳 하나씩. 라틴 문자 언어는 영어 상호를 그대로 쓴다 (상호는 번역하지 않는다).
+    /// 단골집 여섯 · 가본 곳 · 가볼 곳 하나씩. 라틴 문자 언어는 영어 상호를 그대로 쓴다 (상호는 번역하지 않는다).
     private static func names(for language: String) -> [String] {
         let code = language.lowercased()
         if code.hasPrefix("ko") { return ["불과 참나무", "스시 하루", "멘야 소라", "코르크 바", "나폴리 화덕", "럭키 식당", "로스터리 모먼트", "블루밍 브런치"] }

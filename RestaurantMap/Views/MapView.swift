@@ -81,6 +81,8 @@ enum POICategoryMapper {
 struct MapView: View {
     @Environment(\.modelContext) private var modelContext
     let restaurants: [Restaurant]
+    /// 나의 미슐랭 순위 (→ Regular.swift). 부르는 쪽이 한 번 세어 넘긴다.
+    var ranks: [PersistentIdentifier: Int] = [:]
 
     @StateObject private var locationDelegate = LocationDelegate()
     @State private var position: MapCameraPosition = .userLocation(fallback: .automatic)
@@ -359,7 +361,7 @@ struct MapView: View {
 
             ForEach(restaurants) { restaurant in
                 Annotation(restaurant.name, coordinate: restaurant.coordinate) {
-                    RestaurantPinView(restaurant: restaurant) {
+                    RestaurantPinView(restaurant: restaurant, rank: ranks[restaurant.persistentModelID]) {
                         openDetail(restaurant)
                     }
                 }
@@ -918,24 +920,23 @@ struct SearchResultPinView: View {
 
 struct RestaurantPinView: View {
     let restaurant: Restaurant
+    /// 나의 미슐랭 순위 (→ Regular.swift). 순위에 없으면 nil.
+    var rank: Int? = nil
     let onTap: () -> Void
     @Environment(\.accessibilityDifferentiateWithoutColor) private var differentiateWithoutColor
 
     var body: some View {
         ZStack {
-            if restaurant.isTop6 {
-                // 탑6 - 노란 별
+            if let rank {
+                // 나의 미슐랭 - 노란 별에 순위
                 Image(systemName: "star.fill")
                     .font(.system(size: 40))
                     .foregroundStyle(.yellow)
                     .shadow(radius: 2)
 
-                if let rank = restaurant.top6Rank {
-                    // 랭킹 숫자 표시
-                    Text("\(rank)")
-                        .font(.system(size: 18, weight: .bold))
-                        .foregroundStyle(.black)
-                }
+                Text(verbatim: "\(rank)")
+                    .font(.system(size: 18, weight: .bold))
+                    .foregroundStyle(.black)
             } else {
                 // 일반 식당 - 원
                 Circle()
@@ -951,7 +952,7 @@ struct RestaurantPinView: View {
         }
         // 색을 구별하기 어려우면 저장한 식당 핀에 책갈피를 달아 검색 결과(파란 핀)와 모양으로도 가른다
         .overlay(alignment: .topTrailing) {
-            if differentiateWithoutColor && !restaurant.isTop6 {
+            if differentiateWithoutColor && rank == nil {
                 Image(systemName: "bookmark.fill")
                     .font(.caption2)
                     .foregroundStyle(.white)
@@ -962,7 +963,7 @@ struct RestaurantPinView: View {
         }
         .accessibleTap(onTap)
         .accessibilityLabel(Text(verbatim: restaurant.name))
-        .accessibilityValue(restaurant.isTop6 ? Text("나의 미슐랭") : Text("저장한 식당"))
+        .accessibilityValue(rank.map { Text("나의 미슐랭 \($0)위") } ?? Text("저장한 식당"))
     }
 }
 

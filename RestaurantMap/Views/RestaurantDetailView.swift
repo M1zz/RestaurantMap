@@ -17,14 +17,14 @@ struct RestaurantDetailView: View {
     @State private var showingAddVisit = false
     @State private var selectedVisit: Visit?
     @State private var isEditing = false
-    @State private var showingTop6LimitAlert = false
     @State private var purchases = Purchases.shared
     @State private var paywallFeature: RestaurantFeature?
 
     private let logger = Logger(subsystem: "com.restaurantmap", category: "RestaurantDetail")
 
-    private var top6Count: Int {
-        allRestaurants.filter { $0.isTop6 }.count
+    /// 나의 미슐랭 순위. 순위에 없으면 nil.
+    private var rank: Int? {
+        allRestaurants.regularRanks()[restaurant.persistentModelID]
     }
 
     var sortedVisits: [Visit] {
@@ -58,40 +58,9 @@ struct RestaurantDetailView: View {
                     }
                 }
 
-                Section("방문 통계") {
-                    LabeledContent("총 방문 횟수", value: String(localized: "\(restaurant.visitCount)회"))
-
-                    if let lastVisit = restaurant.lastVisitDate {
-                        LabeledContent("최근 방문일") {
-                            Text(lastVisit, format: .dateTime.year().month().day())
-                        }
-                    }
-
-                    if restaurant.visitCount > 0 {
-                        LabeledContent("평균 별점") {
-                            HStack(spacing: 4) {
-                                FractionalStarRatingView(rating: restaurant.averageRating, starSize: 14)
-                                Text(String(format: "%.1f", restaurant.averageRating))
-                                    .font(.caption)
-                                    .foregroundStyle(.secondary)
-                            }
-                        }
-
-                        // 리이오미슐랭 만족도 점수
-                        LabeledContent("리이오미슐랭 점수") {
-                            HStack(spacing: 4) {
-                                Image(systemName: "medal.fill")
-                                    .foregroundStyle(.green)
-                                Text(String(format: "%.0f", restaurant.satisfactionScore))
-                                    .font(.headline)
-                                    .fontWeight(.bold)
-                                    .foregroundStyle(.green)
-                                Text("/ 100")
-                                    .font(.caption)
-                                    .foregroundStyle(.secondary)
-                            }
-                        }
-                    }
+                if !restaurant.isWishlist {
+                    regularSection
+                    gourmetSection
                 }
 
                 // 응원 부탁 — 이미 Pro 인 사람에게만, 방문 기록을 꽤 쌓아 온 때 드물게(방문을 남기고 돌아온 자리)
@@ -193,8 +162,12 @@ struct RestaurantDetailView: View {
                         LabeledContent("음식 종류", value: restaurant.foodCategory.displayName)
                         if !restaurant.phoneNumber.isEmpty {
                             LabeledContent("전화번호") {
-                                Link(restaurant.phoneNumber, destination: URL(string: "tel://\(restaurant.phoneNumber)")!)
-                                    .foregroundStyle(.blue)
+                                if let call = URL(string: "tel://" + restaurant.phoneNumber.filter { $0.isNumber || $0 == "+" }) {
+                                    Link(restaurant.phoneNumber, destination: call)
+                                        .foregroundStyle(.blue)
+                                } else {
+                                    Text(restaurant.phoneNumber)
+                                }
                             }
                         }
                     }
@@ -205,14 +178,7 @@ struct RestaurantDetailView: View {
                     if isEditing {
                         Picker("구분", selection: Binding(
                             get: { restaurant.listType },
-                            set: { newValue in
-                                restaurant.listType = newValue
-                                // 가볼곳으로 변경하면 탑6 자동 해제
-                                if newValue == .wishlist {
-                                    restaurant.isTop6 = false
-                                    restaurant.top6Rank = nil
-                                }
-                            }
+                            set: { restaurant.listType = $0 }
                         )) {
                             ForEach([RestaurantListType.visited, RestaurantListType.wishlist], id: \.self) { type in
                                 HStack {
@@ -233,78 +199,8 @@ struct RestaurantDetailView: View {
                     }
                 } header: {
                     Text("식당 구분")
-                } footer: {
-                    if isEditing && restaurant.listType == .wishlist {
-                        Text("가볼 곳으로 설정된 식당은 탑6로 지정할 수 없습니다")
-                    }
                 }
 
-                Section {
-                    if isEditing && restaurant.listType == .visited {
-                        Toggle(isOn: Binding(
-                            get: { restaurant.isTop6 },
-                            set: { newValue in
-                                // 탑6를 켜려고 할 때
-                                if newValue && !restaurant.isTop6 {
-                                    if !purchases.allows(.top6) {
-                                        // 순위 매기기는 Plus. 이미 정한 탑6는 그대로 보이고 뺄 수 있다.
-                                        paywallFeature = .top6
-                                    } else if top6Count >= 6 {
-                                        // 현재 탑6가 6개 이상이면 경고
-                                        showingTop6LimitAlert = true
-                                    } else {
-                                        restaurant.isTop6 = true
-                                    }
-                                } else {
-                                    // 탑6를 끄는 경우는 제한 없음
-                                    restaurant.isTop6 = newValue
-                                    if !newValue {
-                                        restaurant.top6Rank = nil
-                                    }
-                                }
-                            }
-                        )) {
-                            LockedLabel(title: "나의 최애 탑6", feature: .top6)
-                        }
-
-                        if restaurant.isTop6 {
-                            Picker("랭킹", selection: $restaurant.top6Rank) {
-                                Text("선택 안함").tag(nil as Int?)
-                                ForEach(1...6, id: \.self) { rank in
-                                    HStack {
-                                        Image(systemName: "star.fill")
-                                            .foregroundStyle(.yellow)
-                                        Text("\(rank)위")
-                                    }
-                                    .tag(rank as Int?)
-                                }
-                            }
-                            .pickerStyle(.menu)
-                        }
-                    } else if restaurant.listType == .visited {
-                        LabeledContent("탑6 여부") {
-                            if restaurant.isTop6 {
-                                HStack {
-                                    Image(systemName: "star.fill")
-                                        .foregroundStyle(.yellow)
-                                    Text("\(restaurant.top6Rank ?? 0)위")
-                                }
-                            } else {
-                                Text("아니오")
-                                    .foregroundStyle(.secondary)
-                            }
-                        }
-                    }
-                } header: {
-                    if restaurant.listType == .visited || isEditing {
-                        Text("탑6 설정")
-                    }
-                } footer: {
-                    if isEditing && restaurant.listType == .visited {
-                        Text("탑6는 최대 6개까지만 지정할 수 있습니다 (현재: \(top6Count)/6)")
-                    }
-                }
-                
                 Section("위치") {
                     Map(initialPosition: .region(MKCoordinateRegion(
                         center: restaurant.coordinate,
@@ -393,11 +289,6 @@ struct RestaurantDetailView: View {
             } message: {
                 Text("'\(restaurant.name)'과(와) 모든 방문 기록을 삭제하시겠습니까?")
             }
-            .alert("탑6 제한", isPresented: $showingTop6LimitAlert) {
-                Button("확인", role: .cancel) { }
-            } message: {
-                Text("탑6는 최대 6개까지만 지정할 수 있습니다. 다른 식당의 탑6를 해제한 후 다시 시도해주세요.")
-            }
             .paywall(for: $paywallFeature)
             .sheet(isPresented: $showingAddVisit) {
                 AddVisitView(restaurant: restaurant)
@@ -468,6 +359,107 @@ struct RestaurantDetailView: View {
                 UIApplication.shared.open(url)
             }
         }
+    }
+}
+
+// MARK: - 단골 인정 · 미식 기준
+
+extension RestaurantDetailView {
+    /// 다녀온 날로 앱이 인정한 단계와, 다음 단계까지 남은 길.
+    var regularSection: some View {
+        let regular = restaurant.regular
+        return Section {
+            LabeledContent("단골 인정") {
+                if regular.level > .none {
+                    RegularBadge(regular: regular)
+                } else {
+                    Text("아직이에요").foregroundStyle(.secondary)
+                }
+            }
+            if let rank {
+                LabeledContent("나의 미슐랭") {
+                    HStack(spacing: 4) {
+                        Image(systemName: "crown.fill").foregroundStyle(.yellow).accessibilityHidden(true)
+                        Text("\(rank)위")
+                    }
+                }
+            }
+            LabeledContent("다녀온 날", value: String(localized: "\(regular.days)회"))
+            if let first = regular.first, regular.days > 1 {
+                LabeledContent("처음 간 날") {
+                    Text(first, format: .dateTime.year().month().day())
+                }
+            }
+            if let lastVisit = restaurant.lastVisitDate {
+                LabeledContent("최근 방문일") {
+                    Text(lastVisit, format: .dateTime.year().month().day())
+                }
+            }
+            if restaurant.visitCount > 0 {
+                LabeledContent("평균 별점") {
+                    HStack(spacing: 4) {
+                        FractionalStarRatingView(rating: restaurant.averageRating, starSize: 14)
+                        Text(String(format: "%.1f", restaurant.averageRating))
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+            }
+        } header: {
+            Text("단골 인정")
+        } footer: {
+            if let hint = regular.nextStep {
+                Text(verbatim: hint)
+            } else {
+                Text("직접 고르지 않아요. 다녀온 날이 쌓이면 앱이 인정해요.")
+            }
+        }
+    }
+
+    /// 방문마다 적은 미식 기준의 평균과, 갈 때마다 한결같았는지.
+    @ViewBuilder
+    var gourmetSection: some View {
+        if restaurant.hasGourmetNotes || restaurant.consistency != nil {
+            Section {
+                ForEach(GourmetCriterion.allCases) { criterion in
+                    if let average = restaurant.gourmetAverage(criterion) {
+                        GourmetBar(criterion: criterion, value: average)
+                    }
+                }
+                if let consistency = restaurant.consistency {
+                    LabeledContent {
+                        Text(verbatim: consistency.title)
+                    } label: {
+                        Label("한결같음", systemImage: "equal.circle.fill")
+                    }
+                }
+            } header: {
+                Text("미식 기준")
+            } footer: {
+                Text("접시 위의 음식만 봐요. 한결같음은 여러 번 간 기록으로 앱이 세요.")
+            }
+        }
+    }
+}
+
+/// 미식 기준 하나를 1~5 막대로.
+struct GourmetBar: View {
+    let criterion: GourmetCriterion
+    let value: Double
+
+    var body: some View {
+        HStack(spacing: 12) {
+            Label(criterion.title, systemImage: criterion.symbol)
+                .frame(minWidth: 72, alignment: .leading)
+            ProgressView(value: min(max(value, 0), 5), total: 5)
+                .tint(.orange)
+            Text(verbatim: value.formatted(.number.precision(.fractionLength(1))))
+                .font(.subheadline.monospacedDigit())
+                .foregroundStyle(.secondary)
+        }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(Text(verbatim: criterion.title))
+        .accessibilityValue(Text("\(value.formatted(.number.precision(.fractionLength(1))))점"))
     }
 }
 

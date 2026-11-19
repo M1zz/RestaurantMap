@@ -100,9 +100,6 @@ struct PaywallView: View {
         case .customCategory:
             (String(localized: "음식 종류 직접 추가는 Plus에서 열려요"),
              String(localized: "자주 가는 음식 종류를 더해 내 방식대로 정리해요."))
-        case .top6:
-            (String(localized: "나의 탑6는 Plus에서 열려요"),
-             String(localized: "인생 맛집 여섯 곳을 골라 1위부터 6위까지 순위를 매겨요."))
         case .tasteProfile:
             (String(localized: "취향 프로필 수정은 Plus에서 열려요"),
              String(localized: "맵기, 단맛, 짠맛, 기름진 맛, 본연의 맛까지 내 입맛을 차트로 맞춰요."))
@@ -140,7 +137,6 @@ struct PaywallView: View {
                 row("checkmark.circle", "무료의 모든 것")
                 row("mappin.and.ellipse", "식당 무제한")
                 row("plus.square.on.square", "음식 종류 직접 추가")
-                row("crown", "나의 탑6 순위")
                 row("chart.pie", "나의 취향 프로필")
             } else {
                 tagline(String(localized: "다녀온 뒤 잊지 않게 알려 주고, 쌓인 기록은 지켜요."))
@@ -480,9 +476,9 @@ struct PlanComparisonTable: View {
                  free: .text(String(localized: "\(RestaurantPlan.freeRestaurants)곳")), plus: unlimited, pro: unlimited),
             Line(title: String(localized: "방문 기록 · 사진 · 별점"), free: .yes, plus: .yes, pro: .yes),
             Line(title: String(localized: "음식별 맛 평가"), free: .yes, plus: .yes, pro: .yes),
+            Line(title: String(localized: "단골 인정 · 나의 미슐랭"), free: .yes, plus: .yes, pro: .yes),
             Line(title: String(localized: "지도 · 길찾기 · 전화"), free: .yes, plus: .yes, pro: .yes),
             Line(title: String(localized: "음식 종류 직접 추가"), free: .no, plus: .yes, pro: .yes),
-            Line(title: String(localized: "나의 탑6 순위"), free: .no, plus: .yes, pro: .yes),
             Line(title: String(localized: "취향 프로필"), free: .no, plus: .yes, pro: .yes),
             Line(title: String(localized: "다녀온 뒤 기록 알림"), free: .no, plus: .no, pro: .yes),
             Line(title: String(localized: "iCloud 백업 · 복구"), free: .no, plus: .no, pro: .yes),

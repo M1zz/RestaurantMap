@@ -10,6 +10,9 @@ struct AddVisitView: View {
     @State private var visitDate = Date()
     @State private var notes = ""
     @State private var rating = 3
+    /// 미식 기준 (→ Gourmet.swift). 적지 않은 기준은 들어 있지 않다.
+    @State private var gourmet: [GourmetCriterion: Int] = [:]
+    @State private var saveFailed = false
     @State private var menuItem = "" // 먹은 메뉴 이름 (텍스트)
     @State private var selectedMenu: MenuItem? // 선택한 메뉴 (등록된 메뉴 중)
     @State private var showingAddMenu = false // 메뉴 추가 시트 표시 여부
@@ -147,6 +150,8 @@ struct AddVisitView: View {
                     }
                 }
 
+                GourmetInputSection(values: $gourmet)
+
                 // 메뉴 입력 섹션 (필수)
                 Section {
                     // 등록된 메뉴가 있으면 선택 옵션 제공
@@ -259,6 +264,7 @@ struct AddVisitView: View {
             .scrollDismissesKeyboard(.interactively)
             #endif
             .navigationTitle("방문 기록 추가")
+            .saveFailureAlert($saveFailed)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
@@ -458,6 +464,8 @@ struct AddVisitView: View {
         }
         logger.info("  - \(selectedPhotos.count)장의 사진 저장됨")
 
+        for (criterion, value) in gourmet { visit[criterion] = value }
+
         modelContext.insert(visit)
         logger.info("  ✅ modelContext.insert 완료")
 
@@ -465,7 +473,15 @@ struct AddVisitView: View {
         // restaurant.visits?.append(visit)
         logger.info("  ✅ relationship은 SwiftData가 자동 관리")
 
-        try? modelContext.save()
+        // 실패하면 알리고 화면을 닫지 않는다 — 적은 내용이 그대로 남아 있다
+        do {
+            try modelContext.save()
+        } catch {
+            logger.error("방문 저장 실패: \(error.localizedDescription)")
+            modelContext.delete(visit)
+            saveFailed = true
+            return
+        }
         logger.info("  ✅ modelContext.save 완료")
 
         dismiss()
@@ -720,4 +736,67 @@ struct CombinedEvaluationRow: View {
 
     return AddVisitView(restaurant: restaurant)
         .modelContainer(container)
+}
+
+// MARK: - 미식 기준 입력
+
+/// 접시 위의 음식을 네 가지 기준으로. 모두 선택이고, 고른 점수를 다시 누르면 지워진다.
+struct GourmetInputSection: View {
+    @Binding var values: [GourmetCriterion: Int]
+
+    var body: some View {
+        Section {
+            ForEach(GourmetCriterion.allCases) { criterion in
+                VStack(alignment: .leading, spacing: 8) {
+                    HStack(spacing: 6) {
+                        Image(systemName: criterion.symbol)
+                            .foregroundStyle(.orange)
+                            .accessibilityHidden(true)
+                        Text(verbatim: criterion.title)
+                            .font(.subheadline.weight(.semibold))
+                        Text(verbatim: criterion.hint)
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                    HStack(spacing: 10) {
+                        ForEach(1...5, id: \.self) { score in
+                            let isOn = score <= (values[criterion] ?? 0)
+                            Circle()
+                                .fill(isOn ? Color.orange : Color.gray.opacity(0.2))
+                                .frame(width: 30, height: 30)
+                                .overlay {
+                                    Text(verbatim: "\(score)")
+                                        .font(.caption.weight(.bold))
+                                        .foregroundStyle(isOn ? .white : .secondary)
+                                }
+                                .contentShape(Rectangle())
+                                .onTapGesture { set(criterion, score) }
+                        }
+                    }
+                    .accessibilityHidden(true)
+                }
+                .padding(.vertical, 2)
+                .accessibilityElement(children: .ignore)
+                .accessibilityLabel(Text(verbatim: criterion.title))
+                .accessibilityHint(Text(verbatim: criterion.hint))
+                .accessibilityValue(values[criterion].map { Text("\($0)점") } ?? Text("적지 않음"))
+                .accessibilityAdjustableAction { direction in
+                    let now = values[criterion] ?? 0
+                    switch direction {
+                    case .increment: values[criterion] = min(now + 1, 5)
+                    case .decrement: values[criterion] = now > 1 ? now - 1 : nil
+                    @unknown default: break
+                    }
+                }
+            }
+        } header: {
+            Text("미식 기준")
+        } footer: {
+            Text("접시 위의 음식만 봐요. 적고 싶은 것만 적어도 돼요.")
+        }
+    }
+
+    private func set(_ criterion: GourmetCriterion, _ score: Int) {
+        values[criterion] = values[criterion] == score ? nil : score
+    }
 }

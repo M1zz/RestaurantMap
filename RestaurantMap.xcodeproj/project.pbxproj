@@ -15,6 +15,8 @@
 		1A000001 /* RestaurantMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000000 /* RestaurantMapApp.swift */; };
 		1A000003 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000002 /* ContentView.swift */; };
 		1A000005 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000004 /* Restaurant.swift */; };
+		AB483B68ED8D13FB601C3544 /* Gourmet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA483B68ED8D13FB601C3544 /* Gourmet.swift */; };
+		AB16EADDC6616A5907499656 /* Regular.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA16EADDC6616A5907499656 /* Regular.swift */; };
 		1A000007 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000006 /* MapView.swift */; };
 		1A000009 /* RestaurantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000008 /* RestaurantListView.swift */; };
 		1A00000B /* AddRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A00000A /* AddRestaurantView.swift */; };
@@ -66,6 +68,8 @@
 		1A000000 /* RestaurantMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMapApp.swift; sourceTree = "<group>"; };
 		1A000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1A000004 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		AA483B68ED8D13FB601C3544 /* Gourmet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gourmet.swift; sourceTree = "<group>"; };
+		AA16EADDC6616A5907499656 /* Regular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regular.swift; sourceTree = "<group>"; };
 		1A000006 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		1A000008 /* RestaurantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListView.swift; sourceTree = "<group>"; };
 		1A00000A /* AddRestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRestaurantView.swift; sourceTree = "<group>"; };
@@ -175,6 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				1A000004 /* Restaurant.swift */,
+				AA483B68ED8D13FB601C3544 /* Gourmet.swift */,
+				AA16EADDC6616A5907499656 /* Regular.swift */,
 				1A00001A /* TasteProfile.swift */,
 				1A00001E /* Visit.swift */,
 				7A1C0DE0457FA610 /* VisitPhoto.swift */,
@@ -328,6 +334,8 @@
 				151514A90D2E4946AE362F3D /* RestaurantPlan.swift in Sources */,
 				1A000003 /* ContentView.swift in Sources */,
 				1A000005 /* Restaurant.swift in Sources */,
+				AB483B68ED8D13FB601C3544 /* Gourmet.swift in Sources */,
+				AB16EADDC6616A5907499656 /* Regular.swift in Sources */,
 				1A000007 /* MapView.swift in Sources */,
 				1A000009 /* RestaurantListView.swift in Sources */,
 				1A00000B /* AddRestaurantView.swift in Sources */,

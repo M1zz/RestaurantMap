@@ -66,6 +66,7 @@ struct VisitDetailView: View {
     @Bindable var visit: Visit
 
     @State private var isEditing = false
+    @State private var saveFailed = false
     @State private var editingPhotos: [UIImage] = [] // 편집 중 추가할 새 사진들
     @State private var photosToDelete: Set<UUID> = [] // 편집 중 삭제 표시된 사진들
 
@@ -195,6 +196,27 @@ struct VisitDetailView: View {
                     }
                 }
 
+                // 미식 기준 (→ Gourmet.swift)
+                if isEditing {
+                    GourmetInputSection(values: Binding(
+                        get: {
+                            Dictionary(uniqueKeysWithValues: GourmetCriterion.allCases.compactMap { criterion in
+                                visit[criterion].map { (criterion, $0) }
+                            })
+                        },
+                        set: { new in
+                            for criterion in GourmetCriterion.allCases { visit[criterion] = new[criterion] }
+                        }))
+                } else if visit.hasGourmetNote {
+                    Section("미식 기준") {
+                        ForEach(GourmetCriterion.allCases) { criterion in
+                            if let value = visit[criterion] {
+                                GourmetBar(criterion: criterion, value: Double(value))
+                            }
+                        }
+                    }
+                }
+
                 Section("메모") {
                     if isEditing {
                         TextEditor(text: $visit.notes)
@@ -283,6 +305,7 @@ struct VisitDetailView: View {
             .scrollDismissesKeyboard(.interactively)
             #endif
             .navigationTitle(visit.restaurant?.name ?? String(localized: "방문 기록"))
+            .saveFailureAlert($saveFailed)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
@@ -314,8 +337,14 @@ struct VisitDetailView: View {
                             editingPhotos.removeAll()
                             photosToDelete.removeAll()
 
-                            // 4. 변경사항 저장
-                            try? modelContext.save()
+                            // 4. 변경사항 저장 — 실패하면 알리고 편집을 닫지 않는다
+                            do {
+                                try modelContext.save()
+                            } catch {
+                                logger.error("방문 고치기 저장 실패: \(error.localizedDescription)")
+                                saveFailed = true
+                                return
+                            }
                         }
 
                         isEditing.toggle()
