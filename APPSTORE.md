@@ -93,7 +93,7 @@ Rate, rank and map your meals
 
 ### 키워드
 
-restaurant,diary,journal,favorites,bucketlist,wishlist,dining,foodie,review,steak,ramen,sushi
+tasting,date night,brunch,ranking,places,spots,bucketlist,ramen,foodie,favorites,wishlist,diary
 
 ### 프로모션 텍스트
 
@@ -231,7 +231,7 @@ https://m1zz.github.io/RestaurantMap/ja/
 
 ### 키워드
 
-レストラン,飲食店,食べ歩き,日記,お気に入り,行きたい,ラーメン,寿司,ステーキ,カフェ,デート,ランチ,ディナー,口コミ,焼肉,居酒屋,外食,レビュー
+カフェ巡り,外食記録,グルメ日記,お店リスト,行きたいお店,グルメマップ,グルメ記録,食事記録,ラーメン巡り,行きたい,レビュー,お気に入り,食べ歩き,ステーキ,カフェ,ディナー,寿司,ラーメン,日記
 
 ### 프로모션 텍스트
 
@@ -300,7 +300,7 @@ https://m1zz.github.io/RestaurantMap/zh-Hans/
 
 ### 키워드
 
-探店,打卡,日记,收藏,想去,拉面,寿司,牛排,咖啡,约会,点评,清单,攻略,足迹,烧烤,火锅,日料,韩餐,烤肉,甜点,夜宵,聚餐,菜单,评分,旅行,吃货,必吃榜
+想吃清单,美食打卡,私藏,美食地图,美食记录,美食日记,排行榜,聚餐,吃货,火锅,菜单,寿司,收藏,想去,韩餐,甜点,咖啡,拉面,日料,足迹,探店,攻略,夜宵,烧烤,评分,约会,牛排,烤肉,打卡,清单
 
 ### 프로모션 텍스트
 
