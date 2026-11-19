@@ -17,6 +17,12 @@ SCHEME="RestaurantMap"
 PROJECT_FLAG="-project"
 PROJECT="RestaurantMap.xcodeproj"
 
+# 카카오 키는 레포에 없다(Config/Secrets.xcconfig). 빠진 채로 내면 카카오 검색이 통째로 죽는다.
+if ! grep -Eq '^KAKAO_REST_API_KEY *= *[^ ]+' Config/Secrets.xcconfig 2>/dev/null; then
+  echo "❌ Config/Secrets.xcconfig 에 KAKAO_REST_API_KEY 가 없습니다 (Config/Secrets.example.xcconfig 참고)"
+  exit 1
+fi
+
 # 시뮬레이터는 **가장 최신 iOS 런타임의 iPhone** 으로 고른다.
 # `grep iPhone | head -1` 로 고르면 구버전 런타임 기기가 먼저 잡혀
 # "Unable to find a destination matching..." (exit 70) 로 죽는다.

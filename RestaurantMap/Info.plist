@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>KAKAO_REST_API_KEY</key>
-	<string>90a03e52b1626c8d8a3546700c2c8315</string>
+	<string>$(KAKAO_REST_API_KEY)</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>지도에서 현재 위치를 표시하고 저장된 가게 근처인지 확인하기 위해 필요합니다.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>

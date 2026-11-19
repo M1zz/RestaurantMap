@@ -4,3 +4,6 @@ xcuserdata/
 **/xcshareddata/IDEWorkspaceChecks.plist
 
 build/
+
+# 비밀 값 (카카오 키)
+Config/Secrets.xcconfig

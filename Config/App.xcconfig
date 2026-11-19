@@ -1,0 +1,4 @@
+// 앱 타깃의 바탕 설정. 비밀 값은 Secrets.xcconfig 에서 온다 — 그 파일은 커밋하지 않는다.
+// 새 Mac 에서는 Secrets.example.xcconfig 를 Secrets.xcconfig 로 복사해 값을 채운다.
+KAKAO_REST_API_KEY =
+#include? "Secrets.xcconfig"

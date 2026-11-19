@@ -39,6 +39,7 @@
 		41384CCCA61A204486C1128F /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697357049ED220481E397856 /* PhotoPickerView.swift */; };
 		5E000B9D5DE2612D8295E49E /* PhotoStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E8C84619F1DE96AB117EB1 /* PhotoStorageManager.swift */; };
 		7A1C0DE12A7ACEE6 /* PhotoMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1C0DE0ACDD4F2D /* PhotoMigration.swift */; };
+		ABD0A7243F2C862AB61229D2 /* KakaoLocalSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD0A7243F2C862AB61229D2 /* KakaoLocalSearchService.swift */; };
 		7A1C0DE3AB000001 /* CloudKitSchemaWarmup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1C0DE2AB000001 /* CloudKitSchemaWarmup.swift */; };
 		7A1C0DE5AB000001 /* ScreenshotSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1C0DE4AB000001 /* ScreenshotSeed.swift */; };
 		60D48A4C54ED925C4780FF67 /* CustomCategorySettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD27675423ADDCC051FA3D1 /* CustomCategorySettingsView.swift */; };
@@ -59,6 +60,7 @@
 		130C9D405E83F0E949E172F4 /* AddCustomCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMap/Views/AddCustomCategoryView.swift; sourceTree = "<group>"; };
 		17E8C84619F1DE96AB117EB1 /* PhotoStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStorageManager.swift; sourceTree = "<group>"; };
 		7A1C0DE0ACDD4F2D /* PhotoMigration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMigration.swift; sourceTree = "<group>"; };
+		AAD0A7243F2C862AB61229D2 /* KakaoLocalSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLocalSearchService.swift; sourceTree = "<group>"; };
 		7A1C0DE2AB000001 /* CloudKitSchemaWarmup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitSchemaWarmup.swift; sourceTree = "<group>"; };
 		7A1C0DE4AB000001 /* ScreenshotSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotSeed.swift; sourceTree = "<group>"; };
 		1A000000 /* RestaurantMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMapApp.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 		1A00000C /* RestaurantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailView.swift; sourceTree = "<group>"; };
 		1A00000E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A0000F2 /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
+		1A0000F3 /* App.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = App.xcconfig; path = Config/App.xcconfig; sourceTree = SOURCE_ROOT; };
 		1A000010 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1A00001A /* TasteProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasteProfile.swift; sourceTree = "<group>"; };
 		1A00001C /* TasteProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasteProfileView.swift; sourceTree = "<group>"; };
@@ -127,6 +130,7 @@
 				49C64975CA314B3499093F64 /* RestaurantPlan.swift */,
 				17E8C84619F1DE96AB117EB1 /* PhotoStorageManager.swift */,
 				7A1C0DE0ACDD4F2D /* PhotoMigration.swift */,
+				AAD0A7243F2C862AB61229D2 /* KakaoLocalSearchService.swift */,
 				7A1C0DE2AB000001 /* CloudKitSchemaWarmup.swift */,
 				7A1C0DE4AB000001 /* ScreenshotSeed.swift */,
 				1A000026 /* VisitReminderManager.swift */,
@@ -139,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				1AFFFFF5 /* RestaurantMap */,
+				1A0000F3 /* App.xcconfig */,
 				1AFFFFFE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -344,6 +349,7 @@
 				1A000001 /* RestaurantMapApp.swift in Sources */,
 				5E000B9D5DE2612D8295E49E /* PhotoStorageManager.swift in Sources */,
 				7A1C0DE12A7ACEE6 /* PhotoMigration.swift in Sources */,
+				ABD0A7243F2C862AB61229D2 /* KakaoLocalSearchService.swift in Sources */,
 				7A1C0DE3AB000001 /* CloudKitSchemaWarmup.swift in Sources */,
 				7A1C0DE5AB000001 /* ScreenshotSeed.swift in Sources */,
 				16F26C12F5687998036CE66B /* HeroImageView.swift in Sources */,
@@ -484,6 +490,7 @@
 		};
 		1A000015 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A0000F3 /* App.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -523,6 +530,7 @@
 		};
 		1A000016 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A0000F3 /* App.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -589,7 +597,7 @@
 			repositoryURL = "https://github.com/M1zz/LeeoKit.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 3.43.0;
+				minimumVersion = 3.46.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
