@@ -20,6 +20,7 @@
 		1A00000B /* AddRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A00000A /* AddRestaurantView.swift */; };
 		1A00000D /* RestaurantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A00000C /* RestaurantDetailView.swift */; };
 		1A00000F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A00000E /* Assets.xcassets */; };
+		1A0000F1 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 1A0000F2 /* AppIcon.icon */; };
 		1A000011 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A000010 /* Preview Assets.xcassets */; };
 		1A00001B /* TasteProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A00001A /* TasteProfile.swift */; };
 		1A00001D /* TasteProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A00001C /* TasteProfileView.swift */; };
@@ -68,6 +69,7 @@
 		1A00000A /* AddRestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRestaurantView.swift; sourceTree = "<group>"; };
 		1A00000C /* RestaurantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailView.swift; sourceTree = "<group>"; };
 		1A00000E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1A0000F2 /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
 		1A000010 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1A00001A /* TasteProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasteProfile.swift; sourceTree = "<group>"; };
 		1A00001C /* TasteProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasteProfileView.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				1AFFFFF7 /* Views */,
 				1A000028 /* Services */,
 				1A00000E /* Assets.xcassets */,
+				1A0000F2 /* AppIcon.icon */,
 				1AFFFFF8 /* Preview Content */,
 				54692912D3196B73FF3330D8 /* RestaurantMapSpec.swift */,
 				FE5D58AA1008E7DFAC23E8AB /* RestaurantMapRoadmap.swift */,
@@ -301,6 +304,7 @@
 			files = (
 				1A000011 /* Preview Assets.xcassets in Resources */,
 				1A00000F /* Assets.xcassets in Resources */,
+				1A0000F1 /* AppIcon.icon in Resources */,
 				A000BD0DB6806D29A2895F2B /* Localizable.xcstrings in Resources */,
 				BCD42C458D49EBB6323B677B /* AppShortcuts.xcstrings in Resources */,
 			);
