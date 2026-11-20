@@ -7,6 +7,9 @@
 //   · 읽기는 누구나, 올리기는 iCloud 에 로그인한 사람만. 자기 글만 고치고 지울 수 있다(CloudKit 기본 권한).
 //   · 신고(`ReviewReport`)는 레코드로 남고 개발자 피드백함에도 간다. 신고한 글은 그 자리에서 내 화면에서 사라진다.
 //   · 차단은 이 기기에 적는다. 차단한 사람의 글은 다시 보이지 않고, 차단했다는 사실도 신고로 전해진다.
+//   · 서로 다른 세 사람이 신고한 글은 개발자가 보기 전에 모두의 화면에서 먼저 가린다.
+//   · 개발자는 마스터 모드에서 글을 모두에게서 내린다. 지울 권한은 CloudKit 의 Moderator 역할이 판정한다
+//     (앱의 버튼은 숨겨 둔 것일 뿐, 역할이 없는 사람이 눌러도 서버가 거절한다).
 //   · 사고가 나면 원격 스위치(`RestaurantFlag.publicReviews`)로 심사 없이 끈다.
 //
 //  ⚠️ 레코드 타입 · 색인은 CloudKit 콘솔에서 운영(Production)에 올려야 스토어 빌드에서 보인다
@@ -51,12 +54,14 @@ final class RegularReviews {
 
     private(set) var blocked: Set<String> { didSet { defaults.set(Array(blocked), forKey: Key.blocked) } }
     private(set) var hidden: Set<String> { didSet { defaults.set(Array(hidden), forKey: Key.hidden) } }
+    /// 여러 사람이 신고해 모두에게서 가린 글.
+    private(set) var flagged: Set<String> = []
     var nickname: String { didSet { defaults.set(nickname, forKey: Key.nickname) } }
     var agreedToRules: Bool { didSet { defaults.set(agreedToRules, forKey: Key.agreed) } }
 
     /// 차단 · 신고로 가린 것을 뺀, 화면에 보일 후기.
     var visible: [RegularReview] {
-        reviews.filter { !blocked.contains($0.author) && !hidden.contains($0.id) }
+        reviews.filter { !blocked.contains($0.author) && !hidden.contains($0.id) && !flagged.contains($0.id) }
     }
 
     var isEnabled: Bool { LeeoRemoteFlags.isEnabled(RestaurantFlag.publicReviews) }
@@ -75,6 +80,8 @@ final class RegularReviews {
     }
 
     private static let pageSize = 30
+    /// 이만큼의 서로 다른 사람이 신고하면 모두에게서 가린다.
+    static let hideAfterReports = 3
 
     private init() {
         blocked = Set(defaults.stringArray(forKey: Key.blocked) ?? [])
@@ -100,6 +107,7 @@ final class RegularReviews {
             reviews = results.compactMap { try? $0.1.get() }.compactMap(RegularReview.init(record:))
             cursor = next
             hasMore = next != nil
+            await loadFlagged()
             phase = .loaded
         } catch {
             logger.error("후기 읽기 실패: \(error.localizedDescription)")
@@ -219,6 +227,38 @@ final class RegularReviews {
     }
 
     func unblockAll() { blocked = [] }
+
+    /// 신고를 모아 서로 다른 세 사람이 신고한 글을 찾는다. 못 읽으면 지난 결과를 그대로 둔다.
+    private func loadFlagged() async {
+        let query = CKQuery(recordType: "ReviewReport", predicate: NSPredicate(format: "kind == %@", "report"))
+        guard let (results, _) = try? await database.records(matching: query, resultsLimit: 400) else { return }
+        var reporters: [String: Set<String>] = [:]
+        for case .success(let record) in results.map(\.1) {
+            guard let review = record["review"] as? String, let who = record["reporter"] as? String else { continue }
+            reporters[review, default: []].insert(who)
+        }
+        flagged = Set(reporters.filter { $0.value.count >= Self.hideAfterReports }.keys)
+    }
+
+    // MARK: 관리자
+
+    enum TakeDown { case removed, notAllowed, failed }
+
+    /// 개발자가 글을 모두에게서 내린다. CloudKit 에서 Moderator 역할을 받은 계정만 남의 글을 지울 수 있다.
+    func takeDown(_ review: RegularReview) async -> TakeDown {
+        do {
+            try await database.deleteRecord(withID: CKRecord.ID(recordName: review.id))
+        } catch let error as CKError where error.code == .unknownItem {
+            // 이미 없다 — 내린 것과 같다
+        } catch let error as CKError where error.code == .permissionFailure || error.code == .notAuthenticated {
+            return .notAllowed
+        } catch {
+            logger.error("후기 내리기 실패: \(error.localizedDescription)")
+            return .failed
+        }
+        reviews.removeAll { $0.id == review.id }
+        return .removed
+    }
 
     private func file(_ review: RegularReview, kind: String, reason: String) async {
         let record = CKRecord(recordType: "ReviewReport")

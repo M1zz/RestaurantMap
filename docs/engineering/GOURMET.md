@@ -69,7 +69,7 @@ https://guide.michelin.com/kr/ko/article/features/what-is-a-michelin-star-KOREAN
 | 요구 | 앱에서 |
 |---|---|
 | 부적절한 내용 거르기 | `ReviewFilter` 가 올리기 전에 욕설 · 링크 · 연락처를 막는다. 사진은 받지 않는다 |
-| 신고와 제때 대응 | 후기마다 신고. `ReviewReport` 레코드와 피드백함으로 온다. 신고한 글은 신고한 사람 화면에서 바로 사라진다 |
+| 신고와 제때 대응 | 후기마다 신고. `ReviewReport` 레코드와 피드백함으로 온다. 신고한 글은 신고한 사람 화면에서 바로 사라지고, 서로 다른 세 사람이 신고하면 모두에게서 가려진다. 개발자는 앱에서 바로 내린다 |
 | 악성 사용자 차단 | 후기마다 '이 사람 차단'. 차단도 신고로 전해진다 |
 | 연락처 | 후기 규칙 화면의 이메일 |
 | 약관 동의 | 처음 올릴 때 후기 규칙에 동의 |
@@ -77,8 +77,12 @@ https://guide.michelin.com/kr/ko/article/features/what-is-a-michelin-star-KOREAN
 ### 운영 — 사람이 하는 일
 
 - 신고는 24시간 안에 본다. 피드백함에 `[후기 신고: …]` 로 오고, 후기 ID 와 올린 사람 ID 가 들어 있다.
-- 규칙을 어긴 글은 CloudKit 콘솔 ▸ Public Database ▸ `RegularReview` 에서 그 레코드를 지운다.
-- 같은 사람이 되풀이하면 `author` 로 찾아 모두 지운다.
+- 규칙을 어긴 글은 앱에서 내린다: 설정 ▸ 버전을 7번 눌러 마스터 모드를 켜면, 단골 후기 카드의 `…` 에
+  '관리자: 모두에게서 내리기' 가 보인다. 누르면 레코드가 지워져 모든 사용자 화면에서 사라진다.
+  남의 글을 지울 수 있는 것은 Moderator 역할을 받은 iCloud 계정뿐이다(아래 6번). 버튼만 보여서는 지워지지 않는다.
+- 서로 다른 세 사람이 신고한 글은 앱이 먼저 모두에게서 가린다(`RegularReviews.hideAfterReports`). 글은 지워지지 않고 남으니,
+  신고가 억울하면 CloudKit 콘솔 ▸ `ReviewReport` 에서 그 글의 신고 레코드를 지우면 다시 보인다.
+- 같은 사람이 되풀이하면 CloudKit 콘솔 ▸ `RegularReview` 에서 `author` 로 찾아 모두 지운다.
 
 ## 무엇이 무료이고 무엇이 Plus 인가 (`Services/RestaurantPlan.swift`)
 
@@ -105,9 +109,14 @@ https://guide.michelin.com/kr/ko/article/features/what-is-a-michelin-star-KOREAN
    개인 DB 에 `CD_Visit` 의 `CD_gourmet…` 네 필드와 `CD_Restaurant` 의 `CD_sharedReviewID` 가,
    공개 DB 에 `RegularReview` · `ReviewReport` 가 개발 환경에 생긴다.
 2. CloudKit 콘솔(개발 환경) ▸ Indexes ▸ `RegularReview`: `postedAt` 에 QUERYABLE 과 SORTABLE 을 단다.
+   `ReviewReport`: `kind` 에 QUERYABLE 을 단다 (세 사람 신고를 세는 데 쓴다).
 3. Security Roles 가 기본값인지 본다: `RegularReview` · `ReviewReport` 모두 World 읽기, Authenticated 만들기, Creator 쓰기.
-4. Deploy Schema Changes 로 운영에 올린다.
-5. 스토어 빌드(TestFlight)에서 후기 올리기 · 읽기 · 신고가 되는지 본다.
+4. Security Roles 에 `Moderator` 역할을 새로 만들고 `RegularReview` 에 읽기 · 쓰기를 준다.
+5. Deploy Schema Changes 로 운영에 올린다.
+6. **운영 환경**에서 개발자 계정에 `Moderator` 를 준다: 개발자 iPhone 의 스토어 빌드(TestFlight)로 한 번 열어
+   `Users` 에 내 레코드가 생기게 한 뒤, 콘솔(Production) ▸ Records ▸ `Users` 에서 그 레코드를 열어 역할에 `Moderator` 를 더한다.
+   개발 환경에서도 시험하려면 개발 환경 `Users` 에도 같은 일을 한다.
+7. 스토어 빌드(TestFlight)에서 후기 올리기 · 읽기 · 신고 · 관리자 내리기가 되는지 본다.
 
 ## 아직 안 한 것
 

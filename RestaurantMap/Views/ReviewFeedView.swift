@@ -23,6 +23,9 @@ struct ReviewFeedView: View {
     @State private var showsRules = false
     @State private var reporting: RegularReview?
     @State private var blocking: RegularReview?
+    @State private var takingDown: RegularReview?
+    /// LeeoKit 마스터 모드(설정 ▸ 버전 7번 누르기). 켜져 있으면 관리자 메뉴가 보인다.
+    @AppStorage("dev.masterMode") private var masterMode = false
     @State private var notice: String?
 
     /// 후기를 올릴 수 있는 내 단골집.
@@ -121,6 +124,22 @@ struct ReviewFeedView: View {
             } message: { review in
                 Text("\(review.nickname) 님이 올린 후기가 더는 보이지 않아요.")
             }
+            // 관리자 메뉴는 개발자만 보므로 번역하지 않는다 (verbatim).
+            .confirmationDialog(Text(verbatim: "관리자: 이 후기를 모두에게서 내릴까요?"),
+                                isPresented: Binding(get: { takingDown != nil }, set: { if !$0 { takingDown = nil } }),
+                                titleVisibility: .visible, presenting: takingDown) { review in
+                Button(role: .destructive) {
+                    Task {
+                        switch await store.takeDown(review) {
+                        case .removed: notice = "내렸어요. 모든 사용자 화면에서 사라졌어요."
+                        case .notAllowed: notice = "이 iCloud 계정에는 관리자 권한이 없어요. CloudKit 콘솔에서 Moderator 역할을 주세요 (docs/engineering/GOURMET.md)."
+                        case .failed: notice = "내리지 못했어요. 연결을 확인한 뒤 다시 해 주세요."
+                        }
+                    }
+                } label: { Text(verbatim: "내리기") }
+            } message: { review in
+                Text(verbatim: "\(review.nickname) · \(review.placeName)\n\(review.text)")
+            }
             .alert(Text(verbatim: notice ?? ""), isPresented: Binding(get: { notice != nil }, set: { if !$0 { notice = nil } })) {
                 Button("확인", role: .cancel) {}
             }
@@ -195,6 +214,12 @@ struct ReviewFeedView: View {
             }
             Button(role: .destructive) { blocking = review } label: {
                 Label("이 사람 차단", systemImage: "person.crop.circle.badge.xmark")
+            }
+        }
+        if masterMode {
+            Divider()
+            Button(role: .destructive) { takingDown = review } label: {
+                Label { Text(verbatim: "관리자: 모두에게서 내리기") } icon: { Image(systemName: "trash") }
             }
         }
     }
