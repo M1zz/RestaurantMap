@@ -44,7 +44,11 @@ struct RestaurantMapApp: App {
             let small = VisitPhoto(data: Data(repeating: 1, count: 2_048), sortOrder: 0)
             let large = VisitPhoto(data: Data(repeating: 2, count: 1_500_000), sortOrder: 1)
             visit.photos = [small, large]
-            return [restaurant, menu, visit, small, large, TasteProfile()]
+            visit.tastes = [.depth: 3, .kick: 3]
+            let profile = TasteProfile()
+            profile.selfDepth = 3
+            profile.selfKick = 3
+            return [restaurant, menu, visit, small, large, profile]
         }
         #endif
     }
