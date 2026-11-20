@@ -20,7 +20,7 @@ struct WelcomeView: View {
     }
 
     private let pages: [Page] = [
-        Page(id: 0, symbol: "rosette",
+        Page(id: 0, symbol: "heart.fill",
              title: "자주 가는 집이 진짜 좋아하는 집",
              body: "좋아한다고 말한 집이 아니라 실제로 다녀온 날을 세요. 네 번 가면 단골, 반년 넘게 꾸준히 가면 인생 맛집으로 인정해요."),
         Page(id: 1, symbol: "leaf.fill",

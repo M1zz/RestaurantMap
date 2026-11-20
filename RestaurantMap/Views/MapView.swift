@@ -926,30 +926,11 @@ struct RestaurantPinView: View {
     @Environment(\.accessibilityDifferentiateWithoutColor) private var differentiateWithoutColor
 
     var body: some View {
-        ZStack {
-            if let rank {
-                // 나의 미슐랭 - 노란 별에 순위
-                Image(systemName: "star.fill")
-                    .font(.system(size: 40))
-                    .foregroundStyle(.yellow)
-                    .shadow(radius: 2)
-
-                Text(verbatim: "\(rank)")
-                    .font(.system(size: 18, weight: .bold))
-                    .foregroundStyle(.black)
-            } else {
-                // 일반 식당 - 원
-                Circle()
-                    .fill(.orange.gradient)
-                    .frame(width: 40, height: 40)
-                    .shadow(radius: 2)
-
-                // 카테고리 아이콘
-                Image(systemName: restaurant.categoryIcon)
-                    .font(.system(size: 16))
-                    .foregroundStyle(.white)
-            }
-        }
+        // 얼마나 자주 갔는지가 한눈에 보이는 도장 (→ VisitStamp.swift). 지도 위라 흰 바탕과 그림자를 깐다.
+        VisitStamp(restaurant: restaurant, rank: rank, size: 40)
+            .background(.background, in: Circle())
+            .overlay(Circle().stroke(.white, lineWidth: 2))
+            .shadow(radius: 2)
         // 색을 구별하기 어려우면 저장한 식당 핀에 책갈피를 달아 검색 결과(파란 핀)와 모양으로도 가른다
         .overlay(alignment: .topTrailing) {
             if differentiateWithoutColor && rank == nil {

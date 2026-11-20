@@ -428,7 +428,7 @@ extension RestaurantDetailView {
                     composingReview = true
                 } label: {
                     Label(restaurant.sharedReviewID == nil ? "단골 후기 올리기" : "올린 후기 고치기",
-                          systemImage: restaurant.sharedReviewID == nil ? "rosette" : "checkmark.seal")
+                          systemImage: restaurant.sharedReviewID == nil ? "heart.circle" : "checkmark.seal")
                 }
                 .disabled(!RegularReviews.shared.isEnabled)
                 if !purchases.allows(.regularCard) {

@@ -17,12 +17,7 @@ struct RegularCardView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(alignment: .top, spacing: 12) {
-                Image(systemName: review.categoryIcon)
-                    .font(.system(size: 20))
-                    .foregroundStyle(.orange)
-                    .frame(width: 44, height: 44)
-                    .background(.yellow.opacity(0.3), in: Circle())
-                    .accessibilityHidden(true)
+                VisitStamp(days: review.days, level: review.level, size: 44)
 
                 VStack(alignment: .leading, spacing: 3) {
                     Text(verbatim: review.placeName)

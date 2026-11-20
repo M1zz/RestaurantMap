@@ -40,8 +40,8 @@ enum RegularLevel: Int, Comparable, CaseIterable {
     var symbol: String {
         switch self {
         case .none: "fork.knife"
-        case .returned: "repeat.circle.fill"
-        case .regular: "rosette"
+        case .returned: "repeat"
+        case .regular: "heart.fill"
         case .lifetime: "crown.fill"
         }
     }

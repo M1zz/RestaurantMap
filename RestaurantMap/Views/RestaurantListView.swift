@@ -403,20 +403,8 @@ struct RestaurantRow: View {
     var body: some View {
         let regular = restaurant.regular
         HStack(spacing: 12) {
-            ZStack {
-                Circle()
-                    .fill(.yellow.opacity(0.3))
-                    .frame(width: 40, height: 40)
-                if let rank {
-                    Text(verbatim: "\(rank)")
-                        .font(.system(size: 18, weight: .bold, design: .rounded))
-                        .foregroundStyle(.orange)
-                } else {
-                    Image(systemName: categoryIcon)
-                        .font(.system(size: 20))
-                        .foregroundStyle(.orange)
-                }
-            }
+            // 얼마나 자주 갔는지가 한눈에 보이는 도장 (→ VisitStamp.swift)
+            VisitStamp(restaurant: restaurant, rank: rank)
             .accessibilityElement(children: .ignore)
             .accessibilityLabel(rank.map { Text("\($0)위") } ?? Text(verbatim: ""))
 

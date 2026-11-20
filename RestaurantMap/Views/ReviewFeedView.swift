@@ -39,7 +39,7 @@ struct ReviewFeedView: View {
                     ProgressView()
                 case .unavailable:
                     ContentUnavailableView {
-                        Label("단골 후기를 준비하고 있어요", systemImage: "rosette")
+                        Label("단골 후기를 준비하고 있어요", systemImage: "heart.circle")
                     } description: {
                         Text("지금은 후기를 불러올 수 없어요. 잠시 뒤 다시 열어 주세요.")
                     } actions: {
@@ -164,7 +164,7 @@ struct ReviewFeedView: View {
         .overlay {
             if store.visible.isEmpty {
                 ContentUnavailableView {
-                    Label("아직 후기가 없어요", systemImage: "rosette")
+                    Label("아직 후기가 없어요", systemImage: "heart.circle")
                 } description: {
                     Text(myRegulars.isEmpty
                          ? "같은 집을 네 번 가면 단골이 되고, 단골 후기를 올릴 수 있어요."

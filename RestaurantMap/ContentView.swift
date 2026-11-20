@@ -32,7 +32,7 @@ struct ContentView: View {
 
             FoldTab { ReviewFeedView(restaurants: restaurants) }
                 .tabItem {
-                    Label("단골 후기", systemImage: "rosette")
+                    Label("단골 후기", systemImage: "heart.text.square")
                 }
                 .tag(2)
 

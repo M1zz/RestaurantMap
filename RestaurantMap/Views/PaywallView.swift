@@ -145,7 +145,7 @@ struct PaywallView: View {
                 row("plus.square.on.square", "음식 종류 직접 추가")
                 row("chart.pie", "나의 취향 프로필")
                 row("leaf", "미식 총평")
-                row("rosette", "단골 카드")
+                row("heart.circle", "단골 카드")
             } else {
                 tagline(String(localized: "다녀온 뒤 잊지 않게 알려 주고, 쌓인 기록은 지켜요."))
                 row("square.stack.3d.up", "Plus의 모든 것")
