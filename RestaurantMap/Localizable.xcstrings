@@ -109868,6 +109868,1198 @@
           }
         }
       }
+    },
+    "미식 총평은 Plus에서 열려요" : {
+      "comment" : "Paywall headline: the gourmet summary (per-restaurant averages) unlocks in the Plus plan",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "미식 총평은 Plus에서 열려요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gourmet Summary unlocks with Plus"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gourmet Summary unlocks with Plus"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "美食総評はPlusで利用できます"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "美食总评需 Plus 解锁"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "美食總評需 Plus 解鎖"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Гастрономический итог доступен в Plus"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El resumen gastronómico se desbloquea con Plus"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das Gourmet-Fazit gibt es mit Plus"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le bilan gastronomique se débloque avec Plus"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il bilancio gastronomico si sblocca con Plus"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O resumo gastronômico é liberado no Plus"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สรุปนักชิมปลดล็อกได้ใน Plus"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tổng kết ẩm thực mở khóa với Plus"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gastronomické shrnutí je součástí Plus"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gastronomisk overblik låses op med Plus"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Η γαστρονομική σύνοψη ξεκλειδώνει με το Plus"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gastronominen yhteenveto kuuluu Plus-tasoon"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rangkuman kuliner terbuka di Plus"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gastronomisk oversikt låses opp med Plus"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Culinair overzicht ontgrendel je met Plus"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Podsumowanie kulinarne jest dostępne w Plus"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gastronomisk överblick låses upp med Plus"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gurme özeti Plus ile açılır"
+          }
+        }
+      }
+    },
+    "방문마다 적은 재료, 조리, 조화, 개성의 평균과 갈 때마다 한결같은지를 한눈에 봐요." : {
+      "comment" : "Paywall note for gourmet summary",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "방문마다 적은 재료, 조리, 조화, 개성의 평균과 갈 때마다 한결같은지를 한눈에 봐요."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "See your average scores for ingredients, technique, harmony and personality, and how consistent the place is across your visits, at a glance."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "See your average scores for ingredients, technique, harmony and personality, and how consistent the place is across your visits, at a glance."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "訪問ごとに記録した素材、調理、調和、個性の平均と、いつ行っても安定しているかがひと目でわかります。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每次到访所记食材、烹调、协调、个性的平均分，以及每次去是否稳定，一目了然。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每次造訪所記食材、烹調、協調、個性的平均分，以及每次去是否穩定，一目了然。"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Средние баллы за продукты, приготовление, гармонию и характер по всем визитам и стабильность кухни — на одном экране."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Consulta de un vistazo la media de ingredientes, técnica, armonía y personalidad que anotas en cada visita, y si el sitio se mantiene constante."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sieh auf einen Blick deine Durchschnittswerte für Zutaten, Zubereitung, Harmonie und Handschrift – und wie beständig die Küche über deine Besuche ist."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retrouvez d'un coup d'œil la moyenne des produits, de la technique, de l'harmonie et de la personnalité notés à chaque visite, et voyez si l'assiette reste constante."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vedi a colpo d'occhio la media di ingredienti, tecnica, armonia e personalità annotati a ogni visita, e se il locale resta costante."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Veja de relance a média de ingredientes, técnica, harmonia e personalidade que você anota a cada visita, e se o lugar se mantém constante."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ดูค่าเฉลี่ยวัตถุดิบ การปรุง ความกลมกล่อม และเอกลักษณ์ที่บันทึกไว้แต่ละครั้ง พร้อมความสม่ำเสมอของร้านได้ในหน้าเดียว"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xem nhanh điểm trung bình nguyên liệu, kỹ thuật nấu, hài hòa, cá tính bạn ghi mỗi lần ghé và quán có ổn định hay không."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Průměry surovin, přípravy, harmonie a osobitosti ze všech návštěv i vyrovnanost podniku na jeden pohled."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se gennemsnittet for råvarer, tilberedning, harmoni og personlighed fra dine besøg, og om niveauet holder hver gang – samlet ét sted."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Δες με μια ματιά τον μέσο όρο σε υλικά, τεχνική, αρμονία και χαρακτήρα από κάθε επίσκεψη, και αν το φαγητό μένει σταθερό."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Näe yhdellä silmäyksellä käyntiesi raaka-aineiden, valmistuksen, tasapainon ja persoonallisuuden keskiarvot sekä se, pysyykö taso samana joka kerta."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lihat sekilas rata-rata bahan, teknik masak, harmoni rasa, dan karakter dari tiap kunjungan, serta apakah rasanya konsisten."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se gjennomsnittet for råvarer, tilberedning, harmoni og personlighet fra besøkene dine, og om nivået holder hver gang – samlet på ett sted."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bekijk in één oogopslag je gemiddelden voor ingrediënten, bereiding, harmonie en karakter, en hoe constant de keuken is over je bezoeken heen."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zobacz na jednym ekranie średnie za składniki, przyrządzenie, harmonię i charakter ze wszystkich wizyt oraz to, czy poziom jest stały."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se snittet för råvaror, tillagning, harmoni och personlighet från dina besök, och om nivån håller varje gång – samlat på ett ställe."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Her ziyarette verdiğin malzeme, pişirme, uyum ve karakter puanlarının ortalamasını ve mekânın istikrarını tek bakışta gör."
+          }
+        }
+      }
+    },
+    "단골 카드는 Plus에서 열려요" : {
+      "comment" : "Paywall headline: the shareable regular card unlocks in Plus",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "단골 카드는 Plus에서 열려요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Regular Card unlocks with Plus"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Regular Card unlocks with Plus"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "常連カードはPlusで利用できます"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "常客卡片需 Plus 解锁"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "常客卡片需 Plus 解鎖"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Карточка завсегдатая доступна в Plus"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La tarjeta de Habitual se desbloquea con Plus"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Stammgast-Karte gibt es mit Plus"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La carte d'Habitué se débloque avec Plus"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La card Habitué si sblocca con Plus"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O cartão de Cliente fiel é liberado no Plus"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "การ์ดขาประจำปลดล็อกได้ใน Plus"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thẻ khách quen mở khóa với Plus"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Karta štamgasta je součástí Plus"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stamgæstkort låses op med Plus"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Η κάρτα θαμώνα ξεκλειδώνει με το Plus"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kanta-asiakaskortti kuuluu Plus-tasoon"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kartu pelanggan tetap terbuka di Plus"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stamgjestkort låses opp med Plus"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stamgastkaart ontgrendel je met Plus"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Karta stałego bywalca jest dostępna w Plus"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stamgästkort låses upp med Plus"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Müdavim kartı Plus ile açılır"
+          }
+        }
+      }
+    },
+    "단골집을 한 장의 카드로 만들어 친구에게 보내요." : {
+      "comment" : "Paywall note for the regular card",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "단골집을 한 장의 카드로 만들어 친구에게 보내요."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turn your regular spot into a card and send it to friends."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turn your regular spot into a card and send it to friends."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "行きつけの店を1枚のカードにして、友だちに送れます。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "把常去的店做成一张卡片，发给朋友。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "把常去的店做成一張卡片，傳給朋友。"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Превратите место, где вы завсегдатай, в карточку и отправьте её друзьям."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Convierte un sitio donde eres Habitual en una tarjeta y envíasela a tus amigos."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mach aus deinem Stammlokal eine Karte und schick sie an Freunde."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transformez une adresse où vous êtes Habitué en carte à envoyer à vos amis."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trasforma un locale di cui sei Habitué in una card da inviare agli amici."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transforme um lugar onde você é Cliente fiel em um cartão e envie aos amigos."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ทำร้านประจำเป็นการ์ดหนึ่งใบ แล้วส่งให้เพื่อน"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Biến quán ruột thành một tấm thẻ để gửi cho bạn bè."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Udělejte ze svého stálého podniku kartu a pošlete ji přátelům."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lav dit stamsted om til et kort, og send det til dine venner."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Κάνε το στέκι σου μια κάρτα και στείλε τη στους φίλους σου."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tee kantapaikastasi kortti ja lähetä se ystäville."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jadikan tempat langgananmu selembar kartu, lalu kirim ke teman."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gjør stamstedet ditt om til et kort, og send det til venner."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maak van je vaste stek een kaart en stuur die naar vrienden."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zamień swoje stałe miejsce w kartę i wyślij ją znajomym."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gör ditt stamställe till ett kort och skicka det till dina vänner."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Müdavimi olduğun mekânı tek bir karta dönüştür, arkadaşlarına gönder."
+          }
+        }
+      }
+    },
+    "미식 총평" : {
+      "comment" : "Feature name: gourmet summary of a restaurant (averages of the gourmet criteria + consistency)",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "미식 총평"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gourmet Summary"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gourmet Summary"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "美食総評"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "美食总评"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "美食總評"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Гастрономический итог"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resumen gastronómico"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gourmet-Fazit"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bilan gastronomique"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bilancio gastronomico"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resumo gastronômico"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สรุปนักชิม"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tổng kết ẩm thực"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gastronomické shrnutí"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gastronomisk overblik"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Γαστρονομική σύνοψη"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gastronominen yhteenveto"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rangkuman kuliner"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gastronomisk oversikt"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Culinair overzicht"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Podsumowanie kulinarne"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gastronomisk överblick"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gurme özeti"
+          }
+        }
+      }
+    },
+    "단골 카드" : {
+      "comment" : "Feature name: a shareable image card of a place where I'm a regular",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "단골 카드"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Regular Card"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Regular Card"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "常連カード"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "常客卡片"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "常客卡片"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Карточка завсегдатая"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tarjeta de Habitual"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stammgast-Karte"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Carte d'Habitué"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Card Habitué"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cartão de Cliente fiel"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "การ์ดขาประจำ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thẻ khách quen"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Karta štamgasta"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stamgæstkort"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Κάρτα θαμώνα"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kanta-asiakaskortti"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kartu pelanggan tetap"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stamgjestkort"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stamgastkaart"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Karta stałego bywalca"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stamgästkort"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Müdavim kartı"
+          }
+        }
+      }
+    },
+    "미식 기준 기록 · 단골 후기" : {
+      "comment" : "Plan comparison row: logging gourmet criteria and regulars' reviews (both free)",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "미식 기준 기록 · 단골 후기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gourmet criteria logging · Regulars' Reviews"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gourmet criteria logging · Regulars' Reviews"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "美食の基準の記録 · 常連レビュー"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "美食标准记录 · 常客点评"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "美食標準記錄 · 常客評價"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Записи по гастрономическим критериям · Отзывы завсегдатаев"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Registro con criterios gastronómicos · Reseñas de habituales"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gourmet-Kriterien festhalten · Stammgast-Rezensionen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notation selon les critères gastronomiques · Avis d'habitués"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appunti con criteri gastronomici · Recensioni degli habitué"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Registro com critérios gastronômicos · Resenhas de clientes fiéis"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บันทึกตามเกณฑ์นักชิม · รีวิวจากขาประจำ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ghi theo tiêu chí ẩm thực · Đánh giá từ khách quen"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Záznamy podle gastronomických kritérií · Recenze štamgastů"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notater ud fra gastronomiske kriterier · Stamgæsternes anmeldelser"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Καταγραφή με γαστρονομικά κριτήρια · Κριτικές θαμώνων"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kirjaukset gastronomisin kriteerein · Kanta-asiakkaiden arvostelut"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Catatan dengan kriteria kuliner · Ulasan pelanggan tetap"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notater ut fra gastronomiske kriterier · Stamgjestenes anmeldelser"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vastleggen volgens culinaire criteria · Reviews van stamgasten"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wpisy według kryteriów kulinarnych · Opinie stałych bywalców"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anteckningar utifrån gastronomiska kriterier · Stamgästernas recensioner"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gurme ölçütleriyle kayıt · Müdavim yorumları"
+          }
+        }
+      }
+    },
+    "방문마다 적은 점수는 각 방문 기록에서 그대로 볼 수 있어요." : {
+      "comment" : "Footer under the locked gourmet summary: per-visit scores stay visible in each visit",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "방문마다 적은 점수는 각 방문 기록에서 그대로 볼 수 있어요."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The scores you gave on each visit are still there in its Visit Log entry."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The scores you gave on each visit are still there in its Visit Log entry."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "訪問ごとに付けた点数は、各訪問記録でそのまま確認できます。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每次到访打的分数，仍可在各条到访记录中查看。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每次造訪打的分數，仍可在各筆造訪紀錄中查看。"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Баллы за каждый визит по-прежнему видны в записях о визитах."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Las puntuaciones que anotas en cada visita siguen a la vista en el registro de visitas."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deine Punkte pro Besuch findest du weiterhin im Besuchsprotokoll."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les scores attribués à chaque visite restent visibles dans le journal des visites."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I punteggi di ogni visita restano visibili nel registro delle visite."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "As pontuações de cada visita continuam visíveis no registro de visitas."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "คะแนนที่ให้ไว้แต่ละครั้งยังดูได้ในบันทึกการเยี่ยมชมแต่ละรายการ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Điểm bạn chấm mỗi lần ghé vẫn xem được trong từng mục nhật ký ghé thăm."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Body z jednotlivých návštěv dál najdete v záznamech návštěv."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dine point fra hvert besøg kan stadig ses i besøgsloggen."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Οι βαθμοί κάθε επίσκεψης φαίνονται κανονικά στο ιστορικό επισκέψεων."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kullakin käynnillä antamasi pisteet näkyvät edelleen käyntilokissa."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nilai dari tiap kunjungan tetap bisa dilihat di catatan kunjungan masing-masing."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poengene fra hvert besøk kan du fortsatt se i besøksloggen."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De scores per bezoek blijf je gewoon zien in het bezoeklogboek."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oceny z każdej wizyty nadal zobaczysz we wpisach z wizyt."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poängen från varje besök kan du fortfarande se i besöksloggen."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Her ziyarette verdiğin puanlar, ilgili ziyaret kaydında görünmeye devam eder."
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

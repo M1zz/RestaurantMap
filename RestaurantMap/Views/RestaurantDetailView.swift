@@ -431,8 +431,13 @@ extension RestaurantDetailView {
                           systemImage: restaurant.sharedReviewID == nil ? "rosette" : "checkmark.seal")
                 }
                 .disabled(!RegularReviews.shared.isEnabled)
-                if let card = RegularReview(restaurant: restaurant, id: "card", text: "",
-                                            nickname: RegularReviews.shared.nickname, author: "") {
+                if !purchases.allows(.regularCard) {
+                    // 카드로 꾸며 내보내기는 Plus
+                    Button { paywallFeature = .regularCard } label: {
+                        LockedLabel(title: "단골 카드 공유", systemImage: "square.and.arrow.up", feature: .regularCard)
+                    }
+                } else if let card = RegularReview(restaurant: restaurant, id: "card", text: "",
+                                                   nickname: RegularReviews.shared.nickname, author: "") {
                     RegularCardShareLink(review: card)
                 }
             } header: {
@@ -446,7 +451,20 @@ extension RestaurantDetailView {
     /// 방문마다 적은 미식 기준의 평균과, 갈 때마다 한결같았는지.
     @ViewBuilder
     var gourmetSection: some View {
-        if restaurant.hasGourmetNotes || restaurant.consistency != nil {
+        if !(restaurant.hasGourmetNotes || restaurant.consistency != nil) {
+            EmptyView()
+        } else if !purchases.allows(.gourmetSummary) {
+            // 모아 보기는 Plus. 방문마다 적은 점수는 각 방문 기록에서 그대로 보인다.
+            Section {
+                Button { paywallFeature = .gourmetSummary } label: {
+                    LockedLabel(title: "미식 총평", systemImage: "leaf.fill", feature: .gourmetSummary)
+                }
+            } header: {
+                Text("미식 기준")
+            } footer: {
+                Text("방문마다 적은 점수는 각 방문 기록에서 그대로 볼 수 있어요.")
+            }
+        } else {
             Section {
                 ForEach(GourmetCriterion.allCases) { criterion in
                     if let average = restaurant.gourmetAverage(criterion) {

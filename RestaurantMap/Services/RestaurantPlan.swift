@@ -7,11 +7,12 @@
 //   · 무료: 식당 30곳(가본 곳 · 가볼 곳), 지도 검색 · 위치 고르기, 방문 기록(날짜 · 별점 · 메뉴 · 사진 · 메모),
 //           단골 인정 · 나의 미슐랭(앱이 매기는 순위) · 미식 기준 · 단골 후기,
 //           음식별 맛 평가, 길찾기 · 전화, 식당 · 방문 기록 CSV 내보내기
-//   · Plus: 식당 무제한, 음식 종류 직접 추가, 취향 프로필 수정
+//   · Plus: 식당 무제한, 음식 종류 직접 추가, 취향 프로필 수정, 미식 총평(식당별 기준 평균 · 한결같음), 단골 카드 공유
+//           — 적는 것은 무료, 모아 보는 것과 꾸며 내보내는 것은 Plus 다.
 //   · Pro:  Plus 전부 + 다녀온 뒤 기록 알림, iCloud 백업
 //
 //  ⚠️ 절대 잠그지 않는 것: 이미 저장한 식당 · 방문 기록 보기 · 고치기 · 지우기(30곳이 넘어도),
-//     취향 프로필 보기, iCloud 에서 되살리기, CSV 내보내기, 접근성.
+//     방문마다 적은 미식 기준 보기 · 고치기, 단골 인정 · 나의 미슐랭, 단골 후기 보기 · 올리기 · 내리기, 취향 프로필 보기, iCloud 에서 되살리기, CSV 내보내기, 접근성.
 //     한도는 **새 식당을 저장할 때만** 본다.
 //
 //  StoreKit 은 여기 없다. 영수증은 `Purchases` 가 읽는다.
@@ -42,6 +43,8 @@ enum RestaurantFeature: String, Identifiable, CaseIterable {
     case restaurants
     case customCategory
     case tasteProfile
+    case gourmetSummary
+    case regularCard
     case visitReminder
     case backup
 
@@ -50,7 +53,7 @@ enum RestaurantFeature: String, Identifiable, CaseIterable {
     /// 이 기능을 여는 가장 낮은 칸.
     var tier: RestaurantTier {
         switch self {
-        case .restaurants, .customCategory, .tasteProfile: .plus
+        case .restaurants, .customCategory, .tasteProfile, .gourmetSummary, .regularCard: .plus
         case .visitReminder, .backup: .pro
         }
     }

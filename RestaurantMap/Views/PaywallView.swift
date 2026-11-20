@@ -103,6 +103,12 @@ struct PaywallView: View {
         case .tasteProfile:
             (String(localized: "취향 프로필 수정은 Plus에서 열려요"),
              String(localized: "맵기, 단맛, 짠맛, 기름진 맛, 본연의 맛까지 내 입맛을 차트로 맞춰요."))
+        case .gourmetSummary:
+            (String(localized: "미식 총평은 Plus에서 열려요"),
+             String(localized: "방문마다 적은 재료, 조리, 조화, 개성의 평균과 갈 때마다 한결같은지를 한눈에 봐요."))
+        case .regularCard:
+            (String(localized: "단골 카드는 Plus에서 열려요"),
+             String(localized: "단골집을 한 장의 카드로 만들어 친구에게 보내요."))
         case .visitReminder:
             (String(localized: "다녀온 뒤 기록 알림은 Pro에서 열려요"),
              String(localized: "저장한 식당에서 먹고 나오면 40분 뒤에 기록을 남기라고 알려 드려요."))
@@ -138,6 +144,8 @@ struct PaywallView: View {
                 row("mappin.and.ellipse", "식당 무제한")
                 row("plus.square.on.square", "음식 종류 직접 추가")
                 row("chart.pie", "나의 취향 프로필")
+                row("leaf", "미식 총평")
+                row("rosette", "단골 카드")
             } else {
                 tagline(String(localized: "다녀온 뒤 잊지 않게 알려 주고, 쌓인 기록은 지켜요."))
                 row("square.stack.3d.up", "Plus의 모든 것")
@@ -477,9 +485,12 @@ struct PlanComparisonTable: View {
             Line(title: String(localized: "방문 기록 · 사진 · 별점"), free: .yes, plus: .yes, pro: .yes),
             Line(title: String(localized: "음식별 맛 평가"), free: .yes, plus: .yes, pro: .yes),
             Line(title: String(localized: "단골 인정 · 나의 미슐랭"), free: .yes, plus: .yes, pro: .yes),
+            Line(title: String(localized: "미식 기준 기록 · 단골 후기"), free: .yes, plus: .yes, pro: .yes),
             Line(title: String(localized: "지도 · 길찾기 · 전화"), free: .yes, plus: .yes, pro: .yes),
             Line(title: String(localized: "음식 종류 직접 추가"), free: .no, plus: .yes, pro: .yes),
             Line(title: String(localized: "취향 프로필"), free: .no, plus: .yes, pro: .yes),
+            Line(title: String(localized: "미식 총평"), free: .no, plus: .yes, pro: .yes),
+            Line(title: String(localized: "단골 카드"), free: .no, plus: .yes, pro: .yes),
             Line(title: String(localized: "다녀온 뒤 기록 알림"), free: .no, plus: .no, pro: .yes),
             Line(title: String(localized: "iCloud 백업 · 복구"), free: .no, plus: .no, pro: .yes),
         ]
