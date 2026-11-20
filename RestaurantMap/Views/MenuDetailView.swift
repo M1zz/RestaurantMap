@@ -200,7 +200,7 @@ struct MenuVisitRowView: View {
                     .lineLimit(2)
             }
 
-            if visit.hasTasteProfile {
+            if visit.hasTasteNote {
                 HStack(spacing: 4) {
                     Image(systemName: "chart.pie.fill")
                         .font(.caption2)

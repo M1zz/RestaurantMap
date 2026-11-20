@@ -226,6 +226,7 @@ class CloudKitBackupService {
                     gourmetTechnique: visit.gourmetTechnique,
                     gourmetHarmony: visit.gourmetHarmony,
                     gourmetPersonality: visit.gourmetPersonality,
+                    tastes: Dictionary(uniqueKeysWithValues: visit.tastes.map { ($0.key.rawValue, $0.value) }),
                     spicy: visit.spicy,
                     boldness: visit.boldness,
                     sweetness: visit.sweetness,
@@ -358,7 +359,9 @@ class CloudKitBackupService {
                 naturalTaste: profile.naturalTaste,
                 texture: profile.texture,
                 cooking: profile.cooking,
-                updatedAt: profile.updatedAt
+                updatedAt: profile.updatedAt,
+                selfDepth: profile.selfDepth,
+                selfKick: profile.selfKick
             )
         }
 
@@ -594,6 +597,11 @@ class CloudKitBackupService {
                 visit.gourmetTechnique = backupVisit.gourmetTechnique
                 visit.gourmetHarmony = backupVisit.gourmetHarmony
                 visit.gourmetPersonality = backupVisit.gourmetPersonality
+                if let tastes = backupVisit.tastes {
+                    visit.tastes = Dictionary(uniqueKeysWithValues: tastes.compactMap { key, value in
+                        TasteAxis(rawValue: key).map { ($0, value) }
+                    })
+                }
                 visit.spicy = backupVisit.spicy
                 visit.boldness = backupVisit.boldness
                 visit.sweetness = backupVisit.sweetness
@@ -694,6 +702,8 @@ class CloudKitBackupService {
                 visit.coffeeAftertasteAppropriate = backupVisit.coffeeAftertasteAppropriate
                 visit.coffeeSweetnessAppropriate = backupVisit.coffeeSweetnessAppropriate
                 visit.coffeeBalanceAppropriate = backupVisit.coffeeBalanceAppropriate
+                // 맛 기록이 없는 옛 백업이면 옛 칸에서 옮긴다
+                visit.migrateLegacyTaste()
 
                 context.insert(visit)
             }
@@ -711,6 +721,8 @@ class CloudKitBackupService {
             profile.texture = backupProfile.texture
             profile.cooking = backupProfile.cooking
             profile.updatedAt = backupProfile.updatedAt
+            profile.selfDepth = backupProfile.selfDepth
+            profile.selfKick = backupProfile.selfKick
 
             context.insert(profile)
         }
@@ -817,6 +829,8 @@ struct BackupVisit: Codable {
     var gourmetTechnique: Int?
     var gourmetHarmony: Int?
     var gourmetPersonality: Int?
+    /// 맛 기록 (축 이름 → 1~5) — 예전 백업에는 없다. 없으면 아래 옛 칸에서 옮긴다.
+    var tastes: [String: Int]?
     let spicy: Double?
     let boldness: Double?
     let sweetness: Double?
@@ -930,6 +944,9 @@ struct BackupTasteProfile: Codable {
     let texture: Double
     let cooking: Double
     let updatedAt: Date
+    /// 내가 생각하는 나 — 예전 백업에는 없다
+    var selfDepth: Double?
+    var selfKick: Double?
 }
 
 enum BackupError: LocalizedError {

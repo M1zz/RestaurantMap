@@ -20,6 +20,11 @@ final class TasteProfile {
 
     var updatedAt: Date = Date()
 
+    /// 내가 생각하는 나 — 맛 지도 위의 한 점 (진하기 · 자극, 1~5). 찍지 않았으면 nil.
+    /// 위의 여덟 칸은 옛 취향 화면의 것이라 더 쓰지 않는다.
+    var selfDepth: Double?
+    var selfKick: Double?
+
     init(
         userId: String = "default",
         spicy: Double = 5.0,
@@ -41,19 +46,5 @@ final class TasteProfile {
         self.texture = texture
         self.cooking = cooking
         self.updatedAt = Date()
-    }
-
-    // 레이더 차트용 데이터
-    var radarData: [(String, Double, String)] {
-        [
-            (String(localized: "맵기"), spicy, String(localized: "순한 ↔ 매운")),
-            (String(localized: "진한맛"), boldness, String(localized: "담백 ↔ 진한")),
-            (String(localized: "단맛"), sweetness, String(localized: "안좋아함 ↔ 좋아함")),
-            (String(localized: "짠맛"), saltiness, String(localized: "싱거움 ↔ 짭짤")),
-            (String(localized: "기름진"), richness, String(localized: "담백 ↔ 고소")),
-            (String(localized: "본연의맛"), naturalTaste, String(localized: "양념 ↔ 재료맛")),
-            (String(localized: "질감"), texture, String(localized: "부드러움 ↔ 쫄깃")),
-            (String(localized: "조리법"), cooking, String(localized: "날것 ↔ 구이"))
-        ]
     }
 }

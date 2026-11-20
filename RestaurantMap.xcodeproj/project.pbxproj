@@ -17,6 +17,7 @@
 		1A000005 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000004 /* Restaurant.swift */; };
 		ABCEAE8A2084D47ED45E0A3D /* RegularReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACEAE8A2084D47ED45E0A3D /* RegularReview.swift */; };
 		AB483B68ED8D13FB601C3544 /* Gourmet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA483B68ED8D13FB601C3544 /* Gourmet.swift */; };
+		AB22E1B6D7A614E1E39E299D /* Taste.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA22E1B6D7A614E1E39E299D /* Taste.swift */; };
 		AB16EADDC6616A5907499656 /* Regular.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA16EADDC6616A5907499656 /* Regular.swift */; };
 		1A000007 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000006 /* MapView.swift */; };
 		1A000009 /* RestaurantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000008 /* RestaurantListView.swift */; };
@@ -30,6 +31,7 @@
 		1A00001F /* Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A00001E /* Visit.swift */; };
 		7A1C0DE1E27C116D /* VisitPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1C0DE0457FA610 /* VisitPhoto.swift */; };
 		1A000021 /* AddVisitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000020 /* AddVisitView.swift */; };
+		AB0FBE17AA056CC9D63CCC39 /* TasteViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0FBE17AA056CC9D63CCC39 /* TasteViews.swift */; };
 		ABB5D54F90702FA363000E89 /* VisitStamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB5D54F90702FA363000E89 /* VisitStamp.swift */; };
 		AB3EF6105BF7FA5C0E88B619 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3EF6105BF7FA5C0E88B619 /* WelcomeView.swift */; };
 		AB44F927DBD74666AD4DCF3C /* ReviewFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA44F927DBD74666AD4DCF3C /* ReviewFeedView.swift */; };
@@ -77,6 +79,7 @@
 		1A000004 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		AACEAE8A2084D47ED45E0A3D /* RegularReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularReview.swift; sourceTree = "<group>"; };
 		AA483B68ED8D13FB601C3544 /* Gourmet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gourmet.swift; sourceTree = "<group>"; };
+		AA22E1B6D7A614E1E39E299D /* Taste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taste.swift; sourceTree = "<group>"; };
 		AA16EADDC6616A5907499656 /* Regular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regular.swift; sourceTree = "<group>"; };
 		1A000006 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		1A000008 /* RestaurantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListView.swift; sourceTree = "<group>"; };
@@ -91,6 +94,7 @@
 		1A00001E /* Visit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visit.swift; sourceTree = "<group>"; };
 		7A1C0DE0457FA610 /* VisitPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitPhoto.swift; sourceTree = "<group>"; };
 		1A000020 /* AddVisitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVisitView.swift; sourceTree = "<group>"; };
+		AA0FBE17AA056CC9D63CCC39 /* TasteViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasteViews.swift; sourceTree = "<group>"; };
 		AAB5D54F90702FA363000E89 /* VisitStamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitStamp.swift; sourceTree = "<group>"; };
 		AA3EF6105BF7FA5C0E88B619 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		AA44F927DBD74666AD4DCF3C /* ReviewFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewFeedView.swift; sourceTree = "<group>"; };
@@ -194,6 +198,7 @@
 				1A000004 /* Restaurant.swift */,
 				AACEAE8A2084D47ED45E0A3D /* RegularReview.swift */,
 				AA483B68ED8D13FB601C3544 /* Gourmet.swift */,
+				AA22E1B6D7A614E1E39E299D /* Taste.swift */,
 				AA16EADDC6616A5907499656 /* Regular.swift */,
 				1A00001A /* TasteProfile.swift */,
 				1A00001E /* Visit.swift */,
@@ -214,6 +219,7 @@
 				1A00000C /* RestaurantDetailView.swift */,
 				1A00001C /* TasteProfileView.swift */,
 				1A000020 /* AddVisitView.swift */,
+				AA0FBE17AA056CC9D63CCC39 /* TasteViews.swift */,
 				AAB5D54F90702FA363000E89 /* VisitStamp.swift */,
 				AA3EF6105BF7FA5C0E88B619 /* WelcomeView.swift */,
 				AA44F927DBD74666AD4DCF3C /* ReviewFeedView.swift */,
@@ -354,6 +360,7 @@
 				1A000005 /* Restaurant.swift in Sources */,
 				ABCEAE8A2084D47ED45E0A3D /* RegularReview.swift in Sources */,
 				AB483B68ED8D13FB601C3544 /* Gourmet.swift in Sources */,
+				AB22E1B6D7A614E1E39E299D /* Taste.swift in Sources */,
 				AB16EADDC6616A5907499656 /* Regular.swift in Sources */,
 				1A000007 /* MapView.swift in Sources */,
 				1A000009 /* RestaurantListView.swift in Sources */,
@@ -364,6 +371,7 @@
 				1A00001F /* Visit.swift in Sources */,
 				7A1C0DE1E27C116D /* VisitPhoto.swift in Sources */,
 				1A000021 /* AddVisitView.swift in Sources */,
+				AB0FBE17AA056CC9D63CCC39 /* TasteViews.swift in Sources */,
 				ABB5D54F90702FA363000E89 /* VisitStamp.swift in Sources */,
 				AB3EF6105BF7FA5C0E88B619 /* WelcomeView.swift in Sources */,
 				AB44F927DBD74666AD4DCF3C /* ReviewFeedView.swift in Sources */,

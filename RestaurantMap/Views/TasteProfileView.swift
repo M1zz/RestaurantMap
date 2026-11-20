@@ -1,413 +1,287 @@
+//
+//  TasteProfileView.swift
+//  인생 맛집
+//
+//  취향 — 묻지 않고 기록에서 센다 (→ Models/Taste.swift `TasteReport`).
+//
+//   · 맛 지도: 가로 진하기 · 세로 자극. 다녀온 집이 도장으로 찍히고, 별을 많이 준 쪽으로 '기록의 나'가 선다.
+//     위스키 플레이버 맵처럼 축 두 개로 한 장에 놓는다.
+//   · 내가 생각하는 나: 내가 찍는 점 하나. 기록의 나와 어긋나면 그게 발견이다.
+//   · 자주 가는 종류: 다녀온 날로 센다.
+//   · 기록이 말하는 취향 (Plus): 무엇에 별을 많이 주는지, 고기 · 생선 … 계열마다 어느 쪽을 먹는지.
+//
+
 import SwiftUI
 import SwiftData
 
 struct TasteProfileView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var profiles: [TasteProfile]
+    @Query private var restaurants: [Restaurant]
 
-    @State private var profile: TasteProfile
-    @State private var isEditing = false
-    @State private var saveFailed = false
     @State private var purchases = Purchases.shared
     @State private var paywallFeature: RestaurantFeature?
+    @State private var opened: Restaurant?
 
-    init() {
-        // 초기 프로필 생성
-        _profile = State(initialValue: TasteProfile())
-    }
+    private var report: TasteReport { TasteReport(restaurants: restaurants) }
+    private var profile: TasteProfile? { profiles.first }
 
     var body: some View {
+        let report = report
         NavigationStack {
-            ScrollView {
-                VStack(spacing: 30) {
-                    // 레이더 차트
-                    RadarChartView(data: profile.radarData)
-                    // 같은 값을 아래 속성 줄들이 글로 읽어 준다
-                    .accessibilityHidden(true)
-                        .frame(height: 300)
-                        .padding()
-
-                    // 설명
-                    VStack(spacing: 8) {
-                        Text("나의 미식 DNA")
-                            .font(.title2)
-                            .fontWeight(.bold)
-
-                        Text("6가지 속성으로 나의 취향을 표현합니다")
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
-                    }
-
-                    // 슬라이더 섹션
-                    if isEditing {
-                        editingSection
-                    } else {
-                        attributesListView
-                    }
-
-                    Spacer(minLength: 40)
-                }
-                .padding()
+            List {
+                mapSection(report)
+                selfSection
+                if !report.favorites.isEmpty { favoritesSection(report) }
+                insightSection(report)
             }
-            .navigationTitle("취향 프로필")
-            .saveFailureAlert($saveFailed)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(isEditing ? "완료" : "수정", systemImage: isEditing ? "checkmark" : "pencil") {
-                        // 보기는 누구나. 내 입맛대로 고치는 것은 Plus.
-                        guard isEditing || purchases.allows(.tasteProfile) else {
-                            paywallFeature = .tasteProfile
-                            return
-                        }
-                        withAnimation {
-                            isEditing.toggle()
-                            if !isEditing {
-                                saveProfile()
-                            }
-                        }
-                    }
-                }
-            }
-            .onAppear {
-                loadProfile()
-            }
+            .navigationTitle("취향")
+            .sheet(item: $opened) { RestaurantDetailView(restaurant: $0) }
             .paywall(for: $paywallFeature)
         }
     }
 
-    private var attributesListView: some View {
-        VStack(spacing: 16) {
-            Text("맛 선호도")
-                .font(.headline)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.top, 8)
+    // MARK: 맛 지도
 
-            AttributeRowView(title: String(localized: "🌶️ 맵기"), value: profile.spicy, subtitle: String(localized: "순한 ↔ 매운"))
-            AttributeRowView(title: String(localized: "💪 진한맛"), value: profile.boldness, subtitle: String(localized: "담백 ↔ 진한"))
-            AttributeRowView(title: String(localized: "🍯 단맛"), value: profile.sweetness, subtitle: String(localized: "안좋아함 ↔ 좋아함"))
-            AttributeRowView(title: String(localized: "🧂 짠맛"), value: profile.saltiness, subtitle: String(localized: "싱거움 ↔ 짭짤"))
-            AttributeRowView(title: String(localized: "🥓 기름진"), value: profile.richness, subtitle: String(localized: "담백 ↔ 고소"))
-
-            Divider()
-                .padding(.vertical, 8)
-
-            Text("음식 스타일")
-                .font(.headline)
-                .frame(maxWidth: .infinity, alignment: .leading)
-
-            AttributeRowView(title: String(localized: "🌿 본연의맛"), value: profile.naturalTaste, subtitle: String(localized: "양념 ↔ 재료맛"))
-            AttributeRowView(title: String(localized: "✨ 질감"), value: profile.texture, subtitle: String(localized: "부드러움 ↔ 쫄깃"))
-            AttributeRowView(title: String(localized: "🔥 조리법"), value: profile.cooking, subtitle: String(localized: "날것 ↔ 구이"))
-        }
-        .padding(.horizontal)
-    }
-
-    private var editingSection: some View {
-        VStack(spacing: 20) {
-            VStack(spacing: 16) {
-                Text("맛 선호도")
-                    .font(.headline)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-
-                SliderRowView(title: String(localized: "🌶️ 맵기"), subtitle: String(localized: "순한 ↔ 매운"), value: $profile.spicy)
-                SliderRowView(title: String(localized: "💪 진한맛"), subtitle: String(localized: "담백 ↔ 진한"), value: $profile.boldness)
-                SliderRowView(title: String(localized: "🍯 단맛"), subtitle: String(localized: "안좋아함 ↔ 좋아함"), value: $profile.sweetness)
-                SliderRowView(title: String(localized: "🧂 짠맛"), subtitle: String(localized: "싱거움 ↔ 짭짤"), value: $profile.saltiness)
-                SliderRowView(title: String(localized: "🥓 기름진"), subtitle: String(localized: "담백 ↔ 고소"), value: $profile.richness)
+    private func mapSection(_ report: TasteReport) -> some View {
+        Section {
+            TasteMapView(report: report,
+                         selfPoint: profile.flatMap { p in p.selfDepth.flatMap { d in p.selfKick.map { (d, $0) } } },
+                         onOpen: { opened = $0 })
+                .aspectRatio(1, contentMode: .fit)
+                .listRowInsets(EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
+            HStack(spacing: 16) {
+                legend { VisitStamp(days: 4, level: .regular, size: 16) } text: { Text("다녀온 집") }
+                legend { TasteMapMarker(kind: .record, size: 16) } text: { Text("기록의 나") }
+                legend { TasteMapMarker(kind: .guess, size: 16) } text: { Text("내가 생각하는 나") }
             }
-
-            Divider()
-
-            VStack(spacing: 16) {
-                Text("음식 스타일")
-                    .font(.headline)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-
-                SliderRowView(title: String(localized: "🌿 본연의맛"), subtitle: String(localized: "양념 ↔ 재료맛"), value: $profile.naturalTaste)
-                SliderRowView(title: String(localized: "✨ 질감"), subtitle: String(localized: "부드러움 ↔ 쫄깃"), value: $profile.texture)
-                SliderRowView(title: String(localized: "🔥 조리법"), subtitle: String(localized: "날것 ↔ 구이"), value: $profile.cooking)
+            .font(.caption)
+            .foregroundStyle(.secondary)
+        } header: {
+            Text("맛 지도")
+        } footer: {
+            if report.spots.isEmpty {
+                Text("방문을 기록할 때 진하기와 자극을 적으면 다녀온 집이 여기 찍혀요.")
+            } else {
+                Text("집마다 적은 맛의 평균이에요. 별을 많이 준 집일수록 '기록의 나'를 더 끌어당겨요. 도장을 누르면 그 집이 열려요.")
             }
         }
-        .padding(.horizontal)
     }
 
-    private func loadProfile() {
-        if let existingProfile = profiles.first {
-            profile = existingProfile
+    private func legend(@ViewBuilder _ mark: () -> some View, @ViewBuilder text: () -> Text) -> some View {
+        HStack(spacing: 6) {
+            mark().accessibilityHidden(true)
+            text()
+        }
+    }
+
+    // MARK: 내가 생각하는 나
+
+    private var selfSection: some View {
+        Section {
+            TasteAxisInput(axis: .depth, value: selfBinding(\.selfDepth))
+            TasteAxisInput(axis: .kick, value: selfBinding(\.selfKick))
+        } header: {
+            Text("내가 생각하는 나")
+        } footer: {
+            Text("지도 위 점선 원이에요. 기록의 나와 얼마나 가까운지 보세요.")
+        }
+    }
+
+    private func selfBinding(_ key: ReferenceWritableKeyPath<TasteProfile, Double?>) -> Binding<Int?> {
+        Binding(
+            get: { profile?[keyPath: key].map { Int($0.rounded()) } },
+            set: { value in
+                let target = profile ?? { let new = TasteProfile(); modelContext.insert(new); return new }()
+                target[keyPath: key] = value.map(Double.init)
+                target.updatedAt = .now
+                try? modelContext.save()
+            })
+    }
+
+    // MARK: 자주 가는 종류
+
+    private func favoritesSection(_ report: TasteReport) -> some View {
+        Section("자주 가는 종류") {
+            ForEach(report.favorites) { favorite in
+                LabeledContent {
+                    Text(favorite.regulars > 0
+                         ? String(localized: "\(favorite.days)번 · 단골 \(favorite.regulars)곳", comment: "Favorite food type: visit days and regular places")
+                         : String(localized: "\(favorite.days)번", comment: "Favorite food type: visit days"))
+                } label: {
+                    Text(verbatim: favorite.category.displayName)
+                }
+            }
+        }
+    }
+
+    // MARK: 기록이 말하는 취향 (Plus)
+
+    @ViewBuilder
+    private func insightSection(_ report: TasteReport) -> some View {
+        if !purchases.allows(.tasteProfile) {
+            Section {
+                Button { paywallFeature = .tasteProfile } label: {
+                    LockedLabel(title: "기록이 말하는 취향", systemImage: "sparkles", feature: .tasteProfile)
+                }
+            } footer: {
+                Text("무엇에 별을 많이 주는지, 고기 · 생선 · 면은 어느 쪽으로 먹는지 기록에서 찾아 드려요.")
+            }
         } else {
-            // 새 프로필 생성
-            let newProfile = TasteProfile()
-            modelContext.insert(newProfile)
-            profile = newProfile
-        }
-    }
-
-    private func saveProfile() {
-        profile.updatedAt = Date()
-        do {
-            try modelContext.save()
-        } catch {
-            saveFailed = true
-        }
-    }
-}
-
-// MARK: - Attribute Row View
-struct AttributeRowView: View {
-    let title: String
-    let value: Double
-    let subtitle: String
-
-    var body: some View {
-        VStack(spacing: 8) {
-            HStack {
-                Text(title)
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
-
-                Spacer()
-
-                Text("\(Int(value))")
-                    .font(.subheadline)
-                    .fontWeight(.bold)
-                    .foregroundStyle(.blue)
+            Section {
+                if let criterion = report.drivingCriterion {
+                    Label(criterion.starSentence, systemImage: criterion.symbol)
+                } else {
+                    Text("미식 기준을 \(TasteReport.criterionMinimum)번 넘게 적으면, 무엇에 별을 많이 주는지 알려 드려요.")
+                        .foregroundStyle(.secondary)
+                }
+            } header: {
+                Text("기록이 말하는 취향")
             }
-
-            GeometryReader { geometry in
-                ZStack(alignment: .leading) {
-                    // 배경
-                    RoundedRectangle(cornerRadius: 6)
-                        .fill(.gray.opacity(0.15))
-
-                    // 값 표시
-                    RoundedRectangle(cornerRadius: 6)
-                        .fill(.blue.gradient)
-                        .frame(width: geometry.size.width * (value / 10))
+            if report.families.isEmpty {
+                Section {
+                    Text("고기 · 생선 · 면처럼 계열 맛을 \(TasteReport.familyMinimum)번 넘게 적으면 계열마다 어느 쪽을 먹는지 보여 드려요.")
+                        .foregroundStyle(.secondary)
                 }
             }
-            .frame(height: 20)
-
-            Text(subtitle)
-                .font(.caption2)
-                .foregroundStyle(.secondary)
-                .frame(maxWidth: .infinity, alignment: .leading)
-        }
-        .accessibilityElement(children: .combine)
-    }
-}
-
-// MARK: - Slider Row View
-struct SliderRowView: View {
-    let title: String
-    let subtitle: String
-    @Binding var value: Double
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            HStack {
-                Text(title)
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
-                Spacer()
-                Text("\(Int(value))")
-                    .font(.title3)
-                    .fontWeight(.bold)
-                    .foregroundStyle(.blue)
-            }
-
-            Slider(value: $value, in: 0...10, step: 1)
-                .tint(.blue)
-                .accessibilityLabel(Text(verbatim: title))
-                .accessibilityValue(Text(verbatim: "\(Int(value))"))
-                .contentShape(Rectangle())  // 터치 영역 명확히 지정
-                .gesture(DragGesture(minimumDistance: 0))  // 스크롤보다 슬라이더 우선
-
-            HStack {
-                Text(subtitle.components(separatedBy: " ↔ ").first ?? "")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-                Spacer()
-                Text(subtitle.components(separatedBy: " ↔ ").last ?? "")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-            }
-        }
-        .padding()
-        .background(.gray.opacity(0.08))
-        .clipShape(RoundedRectangle(cornerRadius: 12))
-    }
-}
-
-// MARK: - Radar Chart View
-struct RadarChartView: View {
-    let data: [(String, Double, String)]
-    let maxValue: Double = 10.0
-    var userProfile: TasteProfile? = nil  // 사용자 취향 (적절함 계산용)
-
-    var body: some View {
-        GeometryReader { geometry in
-            let center = CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2)
-            let radius = min(geometry.size.width, geometry.size.height) / 2 - 40
-
-            ZStack {
-                // 배경 그리드 (3단계)
-                ForEach(1...3, id: \.self) { level in
-                    radarPolygon(
-                        center: center,
-                        radius: radius * Double(level) / 3,
-                        sides: data.count
-                    )
-                    .stroke(.gray.opacity(0.2), lineWidth: 1)
-                }
-
-                // 적절함 영역 (채워진 도형) - userProfile이 있을 때만
-                if userProfile != nil {
-                    adequacyPolygon(center: center, radius: radius)
-                        .fill(.green.opacity(0.3))
-                }
-
-                // 맛 정보 영역 (테두리만 있는 빈 도형)
-                radarDataPolygon(center: center, radius: radius)
-                    .stroke(.blue, lineWidth: 2)
-
-                // 축 선
-                ForEach(0..<data.count, id: \.self) { index in
-                    let angle = angleForIndex(index, total: data.count)
-                    let endPoint = pointOnCircle(
-                        center: center,
-                        radius: radius,
-                        angle: angle
-                    )
-
-                    Path { path in
-                        path.move(to: center)
-                        path.addLine(to: endPoint)
+            ForEach(report.families) { note in
+                Section {
+                    ForEach(note.axes, id: \.axis) { item in
+                        TasteAxisBar(axis: item.axis, value: item.value)
                     }
-                    .stroke(.gray.opacity(0.3), lineWidth: 1)
-                }
-
-                // 데이터 포인트
-                ForEach(0..<data.count, id: \.self) { index in
-                    let angle = angleForIndex(index, total: data.count)
-                    let value = data[index].1
-                    let distance = radius * (value / maxValue)
-                    let point = pointOnCircle(
-                        center: center,
-                        radius: distance,
-                        angle: angle
-                    )
-
-                    Circle()
-                        .fill(.blue)
-                        .frame(width: 8, height: 8)
-                        .position(point)
-                }
-
-                // 라벨
-                ForEach(0..<data.count, id: \.self) { index in
-                    let angle = angleForIndex(index, total: data.count)
-                    let labelRadius = radius + 30
-                    let point = pointOnCircle(
-                        center: center,
-                        radius: labelRadius,
-                        angle: angle
-                    )
-
-                    Text(data[index].0)
-                        .font(.caption)
-                        .fontWeight(.semibold)
-                        .position(point)
+                } header: {
+                    Text(verbatim: "\(note.family.emoji) \(note.family.title)")
+                } footer: {
+                    Text("\(note.visits)번 적은 기록이에요.")
                 }
             }
         }
     }
+}
 
-    private func radarPolygon(center: CGPoint, radius: CGFloat, sides: Int) -> Path {
-        var path = Path()
+// MARK: - 맛 지도
 
-        for i in 0..<sides {
-            let angle = angleForIndex(i, total: sides)
-            let point = pointOnCircle(center: center, radius: radius, angle: angle)
+/// 가로 진하기(담백 → 진함) · 세로 자극(순함 → 자극적). 1~5 를 판 안쪽에 고르게 편다.
+struct TasteMapView: View {
+    let report: TasteReport
+    let selfPoint: (depth: Double, kick: Double)?
+    let onOpen: (Restaurant) -> Void
 
-            if i == 0 {
-                path.move(to: point)
-            } else {
-                path.addLine(to: point)
+    private let stamp: CGFloat = 26
+
+    var body: some View {
+        GeometryReader { geo in
+            let inset: CGFloat = 30
+            let side = CGSize(width: geo.size.width - inset * 2, height: geo.size.height - inset * 2)
+            let place = { (depth: Double, kick: Double) -> CGPoint in
+                CGPoint(x: inset + side.width * (depth - 1) / 4,
+                        y: inset + side.height * (1 - (kick - 1) / 4))
+            }
+            ZStack {
+                board(inset: inset)
+                ForEach(Array(spread(report.spots).enumerated()), id: \.element.spot.id) { _, item in
+                    Button { onOpen(item.spot.restaurant) } label: {
+                        VisitStamp(restaurant: item.spot.restaurant, size: stamp)
+                            .background(.background, in: Circle())
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityLabel(Text(verbatim: "\(item.spot.restaurant.name), \(TasteAxis.depth.describe(item.spot.depth)), \(TasteAxis.kick.describe(item.spot.kick))"))
+                    .position(place(item.spot.depth, item.spot.kick) + item.offset)
+                }
+                if let selfPoint {
+                    TasteMapMarker(kind: .guess, size: 30)
+                        .position(place(selfPoint.depth, selfPoint.kick))
+                        .accessibilityLabel(Text("내가 생각하는 나"))
+                }
+                if let center = report.center {
+                    TasteMapMarker(kind: .record, size: 30)
+                        .position(place(center.depth, center.kick))
+                        .accessibilityLabel(Text("기록의 나"))
+                        .accessibilityValue(Text(verbatim: "\(TasteAxis.depth.describe(center.depth)), \(TasteAxis.kick.describe(center.kick))"))
+                }
             }
         }
-
-        path.closeSubpath()
-        return path
     }
 
-    private func radarDataPolygon(center: CGPoint, radius: CGFloat) -> Path {
-        var path = Path()
+    /// 판: 가운데 십자선과 네 끝의 말.
+    private func board(inset: CGFloat) -> some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 16).fill(.teal.opacity(0.06))
+            GeometryReader { geo in
+                Path { path in
+                    path.move(to: CGPoint(x: geo.size.width / 2, y: inset / 2))
+                    path.addLine(to: CGPoint(x: geo.size.width / 2, y: geo.size.height - inset / 2))
+                    path.move(to: CGPoint(x: inset / 2, y: geo.size.height / 2))
+                    path.addLine(to: CGPoint(x: geo.size.width - inset / 2, y: geo.size.height / 2))
+                }
+                .stroke(.teal.opacity(0.25), style: StrokeStyle(lineWidth: 1, dash: [4, 4]))
+            }
+            VStack {
+                Text(verbatim: TasteAxis.kick.high)
+                Spacer()
+                Text(verbatim: TasteAxis.kick.low)
+            }
+            .padding(.vertical, 6)
+            HStack {
+                Text(verbatim: TasteAxis.depth.low)
+                Spacer()
+                Text(verbatim: TasteAxis.depth.high)
+            }
+            .padding(.horizontal, 8)
+        }
+        .font(.caption2.weight(.semibold))
+        .foregroundStyle(.secondary)
+        .accessibilityHidden(true)
+    }
 
-        for i in 0..<data.count {
-            let angle = angleForIndex(i, total: data.count)
-            let value = data[i].1
-            let distance = radius * (value / maxValue)
-            let point = pointOnCircle(center: center, radius: distance, angle: angle)
-
-            if i == 0 {
-                path.move(to: point)
-            } else {
-                path.addLine(to: point)
+    /// 같은 자리에 겹친 집은 그 둘레로 살짝 벌린다.
+    private func spread(_ spots: [TasteReport.Spot]) -> [(spot: TasteReport.Spot, offset: CGSize)] {
+        let groups = Dictionary(grouping: spots) { "\(Int((($0.depth) * 4).rounded()))-\(Int((($0.kick) * 4).rounded()))" }
+        return groups.values.flatMap { group in
+            group.enumerated().map { index, spot in
+                guard group.count > 1 else { return (spot, .zero) }
+                let angle = Double(index) / Double(group.count) * 2 * .pi
+                return (spot, CGSize(width: cos(angle) * stamp * 0.6, height: sin(angle) * stamp * 0.6))
             }
         }
-
-        path.closeSubpath()
-        return path
+        .sorted { $0.spot.restaurant.regular.days < $1.spot.restaurant.regular.days }
     }
+}
 
-    // 적절함 도형: 맛 정보 범위 내에서 매칭율만큼 채움
-    private func adequacyPolygon(center: CGPoint, radius: CGFloat) -> Path {
-        var path = Path()
-        guard let profile = userProfile else { return path }
+/// 맛 지도 위의 나 — 기록의 나(꽉 찬 원) · 내가 생각하는 나(점선 원).
+struct TasteMapMarker: View {
+    enum Kind { case record, guess }
+    let kind: Kind
+    var size: CGFloat = 30
 
-        let profileValues = [
-            profile.spicy, profile.boldness, profile.sweetness, profile.saltiness,
-            profile.richness, profile.naturalTaste, profile.texture, profile.cooking
-        ]
-
-        for i in 0..<data.count {
-            let angle = angleForIndex(i, total: data.count)
-            let restaurantValue = data[i].1
-            let userValue = profileValues[i]
-
-            // 적절함 계산: 1 - (차이 / 10), 차이가 클수록 적절함이 낮음
-            let difference = abs(restaurantValue - userValue)
-            let adequacy = 1.0 - (difference / maxValue)
-
-            // 적절함 비율만큼 식당 맛 정보 범위 내에서 채움
-            let restaurantDistance = radius * (restaurantValue / maxValue)
-            let adequacyDistance = restaurantDistance * adequacy
-            let point = pointOnCircle(center: center, radius: adequacyDistance, angle: angle)
-
-            if i == 0 {
-                path.move(to: point)
-            } else {
-                path.addLine(to: point)
+    var body: some View {
+        ZStack {
+            switch kind {
+            case .record:
+                Circle().fill(.teal.gradient)
+                Image(systemName: "person.fill")
+                    .font(.system(size: size * 0.5))
+                    .foregroundStyle(.white)
+            case .guess:
+                Circle().fill(.background)
+                Circle().strokeBorder(.teal, style: StrokeStyle(lineWidth: max(size * 0.08, 1.5), dash: [3, 2]))
+                Image(systemName: "person")
+                    .font(.system(size: size * 0.45))
+                    .foregroundStyle(.teal)
             }
         }
-
-        path.closeSubpath()
-        return path
+        .frame(width: size, height: size)
+        .shadow(color: .black.opacity(kind == .record ? 0.2 : 0), radius: 2)
     }
+}
 
-    private func angleForIndex(_ index: Int, total: Int) -> Double {
-        let angleStep = 2 * .pi / Double(total)
-        return angleStep * Double(index) - .pi / 2
-    }
-
-    private func pointOnCircle(center: CGPoint, radius: CGFloat, angle: Double) -> CGPoint {
-        let x = center.x + radius * cos(angle)
-        let y = center.y + radius * sin(angle)
-        return CGPoint(x: x, y: y)
+private extension CGPoint {
+    static func + (point: CGPoint, offset: CGSize) -> CGPoint {
+        CGPoint(x: point.x + offset.width, y: point.y + offset.height)
     }
 }
 
 #Preview {
     TasteProfileView()
-        .modelContainer(for: TasteProfile.self, inMemory: true)
+        .modelContainer(for: [Restaurant.self, TasteProfile.self], inMemory: true)
 }

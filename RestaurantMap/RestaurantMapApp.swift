@@ -95,6 +95,8 @@ struct RestaurantMapApp: App {
             }
             // 파일로 두던 옛 방문 사진을 기록 안으로 — 그래야 iCloud 로 같이 따라간다.
             PhotoMigration.run(container)
+            // 옛 맛 평가(종류마다 여섯 칸)를 새 맛 축으로 (→ Taste.swift)
+            TasteMigration.run(container.mainContext)
 
             // 기존 Restaurant 데이터를 UUID 기반 카테고리로 마이그레이션
             let context = container.mainContext

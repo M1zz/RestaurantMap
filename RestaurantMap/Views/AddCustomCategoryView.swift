@@ -6,6 +6,7 @@ struct AddCustomCategoryView: View {
 
     @State private var name = ""
     @State private var selectedIcon = "🍴"
+    @State private var family: TasteFamily = .basic
 
     let commonIcons = [
         "🍴", "🥘", "🍲", "🥗", "🌮", "🌯",
@@ -42,6 +43,16 @@ struct AddCustomCategoryView: View {
                     }
                     .padding(.vertical, 8)
                 }
+
+                Section {
+                    Picker("맛 기록 계열", selection: $family) {
+                        ForEach(TasteFamily.allCases) { family in
+                            Text(verbatim: "\(family.emoji) \(family.title)").tag(family)
+                        }
+                    }
+                } footer: {
+                    Text("방문을 기록할 때 이 계열에 맞는 맛 항목이 더 나와요. 고기면 굽기 · 육향처럼요.")
+                }
             }
             .navigationTitle("새 음식 종류")
             .navigationBarTitleDisplayMode(.inline)
@@ -51,7 +62,7 @@ struct AddCustomCategoryView: View {
                 }
                 ToolbarItem(placement: .confirmationAction) {
                     Button("저장", systemImage: "checkmark") {
-                        repository.addCustomCategory(name: name, icon: selectedIcon)
+                        repository.addCustomCategory(name: name, icon: selectedIcon, family: family)
                         dismiss()
                     }
                     .disabled(name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)

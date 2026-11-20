@@ -101,8 +101,8 @@ struct PaywallView: View {
             (String(localized: "음식 종류 직접 추가는 Plus에서 열려요"),
              String(localized: "자주 가는 음식 종류를 더해 내 방식대로 정리해요."))
         case .tasteProfile:
-            (String(localized: "취향 프로필 수정은 Plus에서 열려요"),
-             String(localized: "맵기, 단맛, 짠맛, 기름진 맛, 본연의 맛까지 내 입맛을 차트로 맞춰요."))
+            (String(localized: "기록이 말하는 취향은 Plus에서 열려요"),
+             String(localized: "무엇에 별을 많이 주는지, 고기 · 생선 · 면은 어느 쪽으로 먹는지 기록에서 찾아 드려요."))
         case .gourmetSummary:
             (String(localized: "미식 총평은 Plus에서 열려요"),
              String(localized: "방문마다 적은 재료, 조리, 조화, 개성의 평균과 갈 때마다 한결같은지를 한눈에 봐요."))
@@ -143,7 +143,7 @@ struct PaywallView: View {
                 row("checkmark.circle", "무료의 모든 것")
                 row("mappin.and.ellipse", "식당 무제한")
                 row("plus.square.on.square", "음식 종류 직접 추가")
-                row("chart.pie", "나의 취향 프로필")
+                row("sparkles", "기록이 말하는 취향")
                 row("leaf", "미식 총평")
                 row("heart.circle", "단골 카드")
             } else {
@@ -488,7 +488,7 @@ struct PlanComparisonTable: View {
             Line(title: String(localized: "미식 기준 기록 · 단골 후기"), free: .yes, plus: .yes, pro: .yes),
             Line(title: String(localized: "지도 · 길찾기 · 전화"), free: .yes, plus: .yes, pro: .yes),
             Line(title: String(localized: "음식 종류 직접 추가"), free: .no, plus: .yes, pro: .yes),
-            Line(title: String(localized: "취향 프로필"), free: .no, plus: .yes, pro: .yes),
+            Line(title: String(localized: "기록이 말하는 취향"), free: .no, plus: .yes, pro: .yes),
             Line(title: String(localized: "미식 총평"), free: .no, plus: .yes, pro: .yes),
             Line(title: String(localized: "단골 카드"), free: .no, plus: .yes, pro: .yes),
             Line(title: String(localized: "다녀온 뒤 기록 알림"), free: .no, plus: .no, pro: .yes),

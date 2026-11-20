@@ -64,19 +64,23 @@ enum ScreenshotSeed {
                     visit.gourmetHarmony = [4, 5, 5][(v + i) % 3]
                     visit.gourmetPersonality = [4, 4, 5][(v + i) % 3]
                 }
-                if c == 1 { // 스테이크: 상세 화면에 맛 평가 차트가 보이게
-                    visit.steakDoneness = [6.5, 7, 6][v % 3]
-                    visit.steakJuiciness = [8.5, 9, 8][v % 3]
-                    visit.steakTenderness = [8, 8.5, 9][v % 3]
-                    visit.steakSeasoning = [7, 6.5, 7.5][v % 3]
-                    visit.steakFlavor = [9, 8.5, 9][v % 3]
-                    visit.steakMarbling = [7.5, 8, 7][v % 3]
+                // 맛: 집마다 자리가 달라 맛 지도에 흩어지게 · 계열 맛은 취향 탭 카드가 보이게
+                let spot = [(4, 2), (2, 1), (5, 3), (3, 4), (4, 3), (3, 5), (2, 2), (3, 3)][i]
+                visit.tastes = [.depth: spot.0 + (v % 2 == 0 ? 0 : -1), .kick: spot.1]
+                switch cats[c].tasteFamily {
+                case .meat: visit[.doneness] = 2; visit[.fat] = 4; visit[.meatiness] = 4 + v % 2
+                case .seafood: visit[.aging] = 4; visit[.wasabi] = 2; visit[.riceSeasoning] = 3
+                case .noodle: visit[.noodleBite] = 4; visit[.broth] = 5
+                default: break
                 }
                 context.insert(visit)
             }
             if first == nil { first = r }
         }
-        context.insert(TasteProfile(spicy: 6.5, boldness: 7, sweetness: 4, saltiness: 5.5, richness: 7.5))
+        let profile = TasteProfile()
+        profile.selfDepth = 3
+        profile.selfKick = 4
+        context.insert(profile)
         try? context.save()
         if ScreenshotScene.current == .detail, let first {
             RestaurantRouter.shared.restaurantID = first.persistentModelID
