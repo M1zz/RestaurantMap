@@ -6,7 +6,9 @@ struct PhotoGalleryView: View {
     let isEditable: Bool
     let onDelete: ((Int) -> Void)?
 
-    @State private var selectedPhotoIndex: Int?
+    /// 크게 볼 사진. `fullScreenCover(item:)` 는 Identifiable 을 원해서 번호를 감싼다.
+    private struct Opened: Identifiable { let id: Int }
+    @State private var opened: Opened?
 
     private let columns = [
         GridItem(.adaptive(minimum: 100, maximum: 150), spacing: 8)
@@ -18,8 +20,8 @@ struct PhotoGalleryView: View {
                 photoThumbnail(for: photo, at: index)
             }
         }
-        .fullScreenCover(item: $selectedPhotoIndex) { index in
-            PhotoDetailView(photos: photos, initialIndex: index)
+        .fullScreenCover(item: $opened) { opened in
+            PhotoDetailView(photos: photos, initialIndex: opened.id)
         }
     }
 
@@ -39,7 +41,7 @@ struct PhotoGalleryView: View {
         }
         .frame(width: 100, height: 100)
         .accessibleTap {
-            selectedPhotoIndex = index
+            opened = Opened(id: index)
         }
         .accessibilityLabel(Text("사진"))
         .overlay(alignment: .topTrailing) {
@@ -110,9 +112,4 @@ struct PhotoDataImage<Content: View, Loading: View, Failure: View>: View {
             if let decoded { image = decoded } else { failed = true }
         }
     }
-}
-
-// MARK: - Int Identifiable Extension
-extension Int: Identifiable {
-    public var id: Int { self }
 }

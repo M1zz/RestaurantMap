@@ -31,7 +31,16 @@ enum RestaurantFlag: String, LeeoRemoteFlag, CaseIterable {
 final class RegularReviews {
     static let shared = RegularReviews()
 
-    enum Phase: Equatable { case idle, loading, loaded, unavailable }
+    /// 후기 화면이 무엇을 보여 줄지. 후기가 0개인 것은 `.loaded` 다 — 못 읽은 것과 섞지 않는다.
+    enum Phase: Equatable {
+        case idle, loading, loaded
+        /// 아직 열지 않았다: 원격 스위치가 꺼졌거나, 운영 CloudKit 에 후기 틀 · 색인이 없다.
+        case preparing
+        /// 인터넷이나 iCloud 서버에 닿지 못했다. 다시 하면 된다.
+        case offline
+        /// 그 밖의 이유로 읽지 못했다.
+        case failed
+    }
 
     enum Failure: LocalizedError {
         case needsICloud, notRegular, rejected(ReviewFilter.Problem), network
@@ -96,7 +105,7 @@ final class RegularReviews {
         #if DEBUG
         if ScreenshotScene.current != nil { reviews = Self.samples; phase = .loaded; return }
         #endif
-        guard isEnabled else { phase = .unavailable; return }
+        guard isEnabled else { phase = .preparing; return }
         if reviews.isEmpty { phase = .loading }
         await identify()
         let query = CKQuery(recordType: RegularReview.recordType,
@@ -111,7 +120,20 @@ final class RegularReviews {
             phase = .loaded
         } catch {
             logger.error("후기 읽기 실패: \(error.localizedDescription)")
-            if reviews.isEmpty { phase = .unavailable }
+            if reviews.isEmpty { phase = Self.phase(for: error) }
+        }
+    }
+
+    /// 읽기 실패를 사용자가 할 수 있는 일로 나눈다.
+    private static func phase(for error: Error) -> Phase {
+        switch (error as? CKError)?.code {
+        case .unknownItem, .invalidArguments:
+            // 운영에 RegularReview 틀이 없거나 postedAt 색인이 없다 — 사용자 탓이 아니고 다시 해도 같다
+            .preparing
+        case .networkUnavailable, .networkFailure, .serviceUnavailable, .requestRateLimited, .zoneBusy:
+            .offline
+        default:
+            .failed
         }
     }
 

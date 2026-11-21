@@ -40,11 +40,25 @@ struct ReviewFeedView: View {
                 switch store.phase {
                 case .idle, .loading:
                     ProgressView()
-                case .unavailable:
+                case .preparing:
                     ContentUnavailableView {
                         Label("단골 후기를 준비하고 있어요", systemImage: "heart.circle")
                     } description: {
-                        Text("지금은 후기를 불러올 수 없어요. 잠시 뒤 다시 열어 주세요.")
+                        Text("곧 열려요. 그동안 단골집을 늘려 두면 열리자마자 후기를 올릴 수 있어요.", comment: "Reviews feed: feature not open yet")
+                    }
+                case .offline:
+                    ContentUnavailableView {
+                        Label("연결할 수 없어요", systemImage: "wifi.slash")
+                    } description: {
+                        Text("인터넷 연결을 확인한 뒤 다시 불러와 주세요.", comment: "Reviews feed: network unreachable")
+                    } actions: {
+                        Button("다시 불러오기") { Task { await store.load() } }
+                    }
+                case .failed:
+                    ContentUnavailableView {
+                        Label("후기를 불러오지 못했어요", systemImage: "exclamationmark.triangle")
+                    } description: {
+                        Text("잠시 뒤 다시 불러와 주세요.", comment: "Reviews feed: load failed for another reason")
                     } actions: {
                         Button("다시 불러오기") { Task { await store.load() } }
                     }
