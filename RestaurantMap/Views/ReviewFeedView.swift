@@ -547,3 +547,109 @@ struct ReviewRulesView: View {
         }
     }
 }
+
+// MARK: - 신고된 후기 (관리자)
+
+/// 들어온 신고를 후기별로 모아 보고 모두에게서 내린다.
+/// 설정 ▸ 버전 7번 ▸ 관리자 비밀번호를 거쳐 들어온다 — 심사관도 이 길로 신고가 어떻게 처리되는지 본다.
+/// 내리기는 CloudKit 의 Moderator 역할이 있는 계정만 된다. 화면에 들어온 것만으로 남의 글을 지울 수는 없다.
+struct ReportedReviewsView: View {
+    @State private var store = RegularReviews.shared
+    @State private var reports: [RegularReviews.Reported] = []
+    @State private var phase: Phase = .loading
+    @State private var removing: RegularReviews.Reported?
+    @State private var notice: String?
+
+    private enum Phase { case loading, loaded, failed }
+
+    var body: some View {
+        List {
+            switch phase {
+            case .loading:
+                ProgressView().frame(maxWidth: .infinity)
+            case .failed:
+                ContentUnavailableView("신고를 불러오지 못했어요", systemImage: "wifi.exclamationmark",
+                                       description: Text("연결을 확인한 뒤 당겨서 다시 불러 주세요."))
+            case .loaded where reports.isEmpty:
+                ContentUnavailableView("들어온 신고가 없어요", systemImage: "checkmark.shield")
+            case .loaded:
+                Section {
+                    ForEach(reports) { row($0) }
+                } footer: {
+                    Text("서로 다른 세 사람이 신고한 후기는 모두의 화면에서 먼저 가려져요. 신고는 24시간 안에 확인해 내려요.")
+                }
+            }
+        }
+        .navigationTitle("신고된 후기")
+        .task { await load() }
+        .refreshable { await load() }
+        .confirmationDialog("이 후기를 모두에게서 내릴까요?",
+                            isPresented: Binding(get: { removing != nil }, set: { if !$0 { removing = nil } }),
+                            titleVisibility: .visible, presenting: removing) { report in
+            Button("내리기", role: .destructive) { Task { await takeDown(report) } }
+            Button("취소", role: .cancel) {}
+        } message: { report in
+            Text(verbatim: "\(report.nickname) · \(report.placeName)\n\(report.text)")
+        }
+        .alert(Text(verbatim: notice ?? ""), isPresented: Binding(get: { notice != nil }, set: { if !$0 { notice = nil } })) {
+            Button("확인", role: .cancel) {}
+        }
+    }
+
+    private func row(_ report: RegularReviews.Reported) -> some View {
+        VStack(alignment: .leading, spacing: 6) {
+            HStack {
+                Text(verbatim: "\(report.placeName) · \(report.nickname)").font(.headline)
+                Spacer()
+                if report.isRemoved {
+                    Text("내려짐").font(.caption.bold()).foregroundStyle(.secondary)
+                }
+            }
+            Text(verbatim: report.text).font(.subheadline)
+            Text("신고 \(report.reporters.count)명 · \(reasons(report))")
+                .font(.caption).foregroundStyle(.red)
+            Text(report.lastReportedAt, format: .dateTime.month().day().hour().minute())
+                .font(.caption2).foregroundStyle(.secondary)
+        }
+        .padding(.vertical, 2)
+        .swipeActions {
+            if !report.isRemoved {
+                Button("내리기", role: .destructive) { removing = report }
+            }
+        }
+        .contextMenu {
+            if !report.isRemoved {
+                Button(role: .destructive) { removing = report } label: {
+                    Label("모두에게서 내리기", systemImage: "trash")
+                }
+            }
+        }
+    }
+
+    private func reasons(_ report: RegularReviews.Reported) -> String {
+        report.reasons
+            .map { RegularReviews.ReportReason(rawValue: $0)?.title ?? $0 }
+            .formatted(.list(type: .and))
+    }
+
+    private func load() async {
+        do {
+            reports = try await store.loadReports()
+            phase = .loaded
+        } catch {
+            phase = .failed
+        }
+    }
+
+    private func takeDown(_ report: RegularReviews.Reported) async {
+        switch await store.takeDown(id: report.id) {
+        case .removed:
+            if let i = reports.firstIndex(where: { $0.id == report.id }) { reports[i].isRemoved = true }
+            notice = String(localized: "내렸어요. 모든 사용자 화면에서 사라졌어요.")
+        case .notAllowed:
+            notice = String(localized: "이 iCloud 계정에는 후기를 내릴 권한이 없어요. 신고는 개발자가 24시간 안에 확인해 내려요.")
+        case .failed:
+            notice = String(localized: "내리지 못했어요. 연결을 확인한 뒤 다시 해 주세요.")
+        }
+    }
+}

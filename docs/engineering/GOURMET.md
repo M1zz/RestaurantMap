@@ -109,6 +109,20 @@ https://guide.michelin.com/kr/ko/article/features/what-is-a-michelin-star-KOREAN
 - **곧 단골**: 두세 번 간 집 셋과 단골까지 남은 횟수.
 - **다른 단골들의 후기**: 없음 · 준비 중 · 연결 안 됨 · 읽기 실패를 이 칸 안에서 따로 말한다. 화면 전체를 덮지 않는다.
 
+## 신고된 후기 보기 — 관리자 (`ReportedReviewsView`)
+
+설정 ▸ 맨 아래 '버전' 을 7번 누르면(LeeoKit 마스터 모드) 관리자 비밀번호 `4321` 을 묻는다.
+맞으면 설정에 '관리자 ▸ 신고된 후기' 가 생기고, 틀리거나 취소하면 마스터 모드가 다시 꺼진다.
+신고를 후기별로 모아 신고한 사람 수 · 이유 · 마지막 신고 시각을 보이고, 이미 내려간 글은 '내려짐' 으로 표시한다.
+비밀번호는 목록을 여는 열쇠일 뿐이다 — 내리기는 Moderator 역할이 있는 계정만 서버가 허락한다.
+
+심사 메모(App Store Connect ▸ 앱 심사 정보 ▸ 메모)에 아래 글을 넣는다. 이 기능이 든 빌드를 낼 때 함께 바꾼다.
+
+```
+User-generated content (Regulars' Reviews tab): every review has a menu to report it or block its author. A reported review disappears for the reporter at once, is hidden for everyone after three different people report it, and the developer reviews every report within 24 hours.
+To see the moderation queue: Map tab > "..." > Settings > tap the "Version" row at the bottom 7 times > enter passcode 4321 > Admin > Reported Reviews. Removing a review for everyone works only from the developer's moderator iCloud account.
+```
+
 ## 배포 전에 CloudKit 에서 할 일 (사람)
 
 스키마는 기기에서 올릴 수 없다. 아래를 하지 않으면 스토어 빌드에서 후기 화면이 '준비 중'으로 서고,

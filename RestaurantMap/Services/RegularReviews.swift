@@ -269,10 +269,59 @@ final class RegularReviews {
 
     enum TakeDown { case removed, notAllowed, failed }
 
+    /// 신고가 들어온 후기 하나. 신고 레코드에 글이 함께 적혀 있어 원래 후기가 지워져도 무엇이 신고됐는지 보인다.
+    struct Reported: Identifiable {
+        let id: String
+        let nickname: String
+        let placeName: String
+        let text: String
+        var reasons: [String]
+        var reporters: Set<String>
+        var lastReportedAt: Date
+        /// 원래 후기가 이미 모두에게서 내려갔는가.
+        var isRemoved = false
+    }
+
+    /// 들어온 신고를 후기별로 모은다 — 신고한 사람이 많은 순, 같으면 최근 순.
+    func loadReports() async throws -> [Reported] {
+        let query = CKQuery(recordType: "ReviewReport", predicate: NSPredicate(format: "kind == %@", "report"))
+        let (results, _) = try await database.records(matching: query, resultsLimit: 400)
+        var byReview: [String: Reported] = [:]
+        for case .success(let record) in results.map(\.1) {
+            guard let id = record["review"] as? String else { continue }
+            let at = record.creationDate ?? .distantPast
+            var item = byReview[id] ?? Reported(id: id,
+                                                nickname: record["nickname"] as? String ?? "",
+                                                placeName: record["placeName"] as? String ?? "",
+                                                text: record["text"] as? String ?? "",
+                                                reasons: [], reporters: [], lastReportedAt: at)
+            if let reason = record["reason"] as? String, !item.reasons.contains(reason) { item.reasons.append(reason) }
+            item.reporters.insert(record["reporter"] as? String ?? record.recordID.recordName)
+            item.lastReportedAt = max(item.lastReportedAt, at)
+            byReview[id] = item
+        }
+        // 원래 후기가 아직 있는지 한 번에 묻는다. 없는 것은 이미 내려간 글이다.
+        let ids = byReview.keys.map { CKRecord.ID(recordName: $0) }
+        if !ids.isEmpty, let found = try? await database.records(for: ids, desiredKeys: []) {
+            for (id, result) in found {
+                if case .failure(let error as CKError) = result, error.code == .unknownItem {
+                    byReview[id.recordName]?.isRemoved = true
+                }
+            }
+        }
+        return byReview.values.sorted {
+            ($0.reporters.count, $0.lastReportedAt) > ($1.reporters.count, $1.lastReportedAt)
+        }
+    }
+
     /// 개발자가 글을 모두에게서 내린다. CloudKit 에서 Moderator 역할을 받은 계정만 남의 글을 지울 수 있다.
     func takeDown(_ review: RegularReview) async -> TakeDown {
+        await takeDown(id: review.id)
+    }
+
+    func takeDown(id: String) async -> TakeDown {
         do {
-            try await database.deleteRecord(withID: CKRecord.ID(recordName: review.id))
+            try await database.deleteRecord(withID: CKRecord.ID(recordName: id))
         } catch let error as CKError where error.code == .unknownItem {
             // 이미 없다 — 내린 것과 같다
         } catch let error as CKError where error.code == .permissionFailure || error.code == .notAuthenticated {
@@ -281,7 +330,7 @@ final class RegularReviews {
             logger.error("후기 내리기 실패: \(error.localizedDescription)")
             return .failed
         }
-        reviews.removeAll { $0.id == review.id }
+        reviews.removeAll { $0.id == id }
         return .removed
     }
 

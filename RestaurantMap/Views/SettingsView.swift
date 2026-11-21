@@ -23,6 +23,13 @@ struct SettingsView: View {
     @State private var showsPaywall = false
     @State private var showsGraduation = false
     @State private var showsManageSubscription = false
+    /// LeeoKit 마스터 모드(버전 7번 누르기). 이 앱은 켜질 때 관리자 비밀번호를 한 번 더 묻는다.
+    @AppStorage("dev.masterMode") private var masterMode = false
+    @State private var asksPasscode = false
+    @State private var passcode = ""
+    /// 신고 목록을 여는 열쇠일 뿐 보안 장치는 아니다 — 후기를 지우는 권한은 CloudKit 의 Moderator 역할이 판정한다.
+    /// 심사 메모에 적어 심사관에게 알려 준다.
+    private static let adminPasscode = "4321"
 
     var body: some View {
         NavigationStack {
@@ -167,8 +174,35 @@ struct SettingsView: View {
                     Text("지원")
                 }
 
+                if masterMode && !asksPasscode {
+                    Section {
+                        NavigationLink {
+                            ReportedReviewsView()
+                        } label: {
+                            Label("신고된 후기", systemImage: "exclamationmark.bubble")
+                        }
+                    } header: {
+                        Text("관리자")
+                    }
+                }
+
                 // 개발자 문의
                 DeveloperContactSection()
+            }
+            .onChange(of: masterMode) { _, isOn in
+                guard isOn else { return }
+                passcode = ""
+                asksPasscode = true
+            }
+            .alert("관리자 비밀번호", isPresented: $asksPasscode) {
+                SecureField("비밀번호", text: $passcode)
+                    .keyboardType(.numberPad)
+                Button("취소", role: .cancel) { masterMode = false }
+                Button("확인") {
+                    if passcode != Self.adminPasscode { masterMode = false }
+                }
+            } message: {
+                Text("신고된 후기를 보려면 비밀번호를 넣어 주세요.")
             }
             .navigationTitle("설정")
             .navigationBarTitleDisplayMode(.inline)
