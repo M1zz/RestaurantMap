@@ -18,16 +18,16 @@ import LeeoKit
 extension RestaurantMapSpec {
     static var roadmap: [LeeoRoadmapItem] {[
         // MARK: 다음 업데이트에 들어가요
-        .init(id: "regulars", status: .building,
+        .init(id: "regulars", status: .shipped("1.0.2"),
               title: NSLocalizedString("자주 가면 단골로 인정", comment: "Roadmap item: regulars are recognized by visits"),
               detail: NSLocalizedString("다녀온 날을 세어 단골과 인생 맛집을 앱이 인정하고, 나의 미슐랭 순위를 매겨요.", comment: "Roadmap item detail: regulars")),
-        .init(id: "gourmet", status: .building,
+        .init(id: "gourmet", status: .shipped("1.0.2"),
               title: NSLocalizedString("미식 기준으로 기록", comment: "Roadmap item: gourmet criteria"),
               detail: NSLocalizedString("재료, 조리, 조화, 개성으로 음식을 적고, 갈 때마다 한결같은지 알려 줘요.", comment: "Roadmap item detail: gourmet criteria")),
         .init(id: "reviews", status: .building,
               title: NSLocalizedString("단골 후기", comment: "Roadmap item: reviews by regulars"),
               detail: NSLocalizedString("네 번 넘게 간 단골만 올리는 후기를 보고, 내 단골집 후기도 올려요.", comment: "Roadmap item detail: reviews by regulars")),
-        .init(id: "taste.map", status: .building,
+        .init(id: "taste.map", status: .shipped("1.0.2"),
               title: NSLocalizedString("맛 지도와 계열별 맛 기록", comment: "Roadmap item: taste map and per-family taste notes"),
               detail: NSLocalizedString("진하기와 자극으로 다녀온 집을 지도에 놓고, 고기 · 생선 · 면은 어느 쪽으로 먹는지 기록에서 찾아요.", comment: "Roadmap item detail: taste map")),
         .init(id: "list.search", status: .building,

@@ -168,13 +168,15 @@ struct ReviewFeedView: View {
                 }
             }
 
-            Section {
-                others
-            } header: {
-                Text("다른 단골들의 후기", comment: "Section: reviews posted by other regulars")
-            } footer: {
-                if store.phase == .loaded {
-                    Text("네 번 넘게 간 단골만 후기를 올릴 수 있어요. 한 번 가 보고 쓴 글은 여기 없어요.")
+            if store.phase != .preparing {
+                Section {
+                    others
+                } header: {
+                    Text("다른 단골들의 후기", comment: "Section: reviews posted by other regulars")
+                } footer: {
+                    if store.phase == .loaded {
+                        Text("네 번 넘게 간 단골만 후기를 올릴 수 있어요. 한 번 가 보고 쓴 글은 여기 없어요.")
+                    }
                 }
             }
         }
@@ -195,8 +197,7 @@ struct ReviewFeedView: View {
         case .idle, .loading:
             HStack { Spacer(); ProgressView(); Spacer() }
         case .preparing:
-            status("단골 후기를 준비하고 있어요", "곧 열려요. 그동안 단골집을 늘려 두면 열리자마자 후기를 올릴 수 있어요.",
-                   symbol: "heart.circle", retries: false)
+            EmptyView()   // 아직 열지 않았으면 이 칸을 통째로 숨긴다 (list 가 거른다)
         case .offline:
             status("연결할 수 없어요", "인터넷 연결을 확인한 뒤 다시 불러와 주세요.", symbol: "wifi.slash", retries: true)
         case .failed:
@@ -369,7 +370,7 @@ struct ReviewComposeView: View {
     @State private var sharesPublicly = false
 
     private var isEditing: Bool { restaurant.sharedReviewID != nil }
-    private var publishes: Bool { isEditing || (sharesPublicly && store.isEnabled) }
+    private var publishes: Bool { isEditing || (sharesPublicly && store.canPost) }
     private var trimmed: String { text.trimmingCharacters(in: .whitespacesAndNewlines) }
 
     private var preview: RegularReview? {
@@ -403,7 +404,7 @@ struct ReviewComposeView: View {
                     }
                 }
 
-                if !isEditing, store.isEnabled {
+                if !isEditing, store.canPost {
                     Section {
                         Toggle(isOn: $sharesPublicly.animation()) {
                             Text("모두에게 올리기", comment: "Toggle: post this note publicly as a regular's review")
@@ -459,6 +460,8 @@ struct ReviewComposeView: View {
                 }
             }
             .task {
+                // 가게 화면에서 바로 열렸으면 후기가 열려 있는지부터 안다
+                if store.phase == .idle { await store.load() }
                 // 적어 둔 한마디에서 시작한다. 없으면 올려 둔 글에서.
                 guard text.isEmpty else { return }
                 if !restaurant.regularWord.isEmpty {
