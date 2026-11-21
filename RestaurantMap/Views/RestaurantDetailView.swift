@@ -396,29 +396,44 @@ extension RestaurantDetailView {
         }
     }
 
-    /// 단골이 된 집은 후기를 모두에게 올리거나, 카드 그림으로 내보낼 수 있다.
+    /// 단골이 된 집은 한마디를 적고, 모두에게 올리거나, 카드 그림으로 내보낼 수 있다.
     @ViewBuilder
     var shareSection: some View {
         if restaurant.regular.isRanked {
             Section {
+                // 나만 보는 한마디. 누르면 적고, 거기서 모두에게 올릴 수도 있다.
                 Button {
                     composingReview = true
                 } label: {
-                    Label(restaurant.sharedReviewID == nil ? "단골 후기 올리기" : "올린 후기 고치기",
-                          systemImage: restaurant.sharedReviewID == nil ? "heart.circle" : "checkmark.seal")
+                    if restaurant.regularWord.isEmpty {
+                        Label("이 집을 왜 계속 가나요?", systemImage: "square.and.pencil")
+                    } else {
+                        HStack(alignment: .top) {
+                            Text(verbatim: restaurant.regularWord)
+                                .foregroundStyle(.primary)
+                                .multilineTextAlignment(.leading)
+                            Spacer(minLength: 8)
+                            if restaurant.sharedReviewID != nil {
+                                Text("올림", comment: "Badge: this regular's note is posted publicly")
+                                    .font(.caption2.weight(.semibold))
+                                    .padding(.horizontal, 6).padding(.vertical, 2)
+                                    .background(Color.pink.opacity(0.15), in: Capsule())
+                                    .foregroundStyle(.pink)
+                            }
+                        }
+                    }
                 }
-                .disabled(!RegularReviews.shared.isEnabled)
                 if !purchases.allows(.regularCard) {
                     // 카드로 꾸며 내보내기는 Plus
                     Button { paywallFeature = .regularCard } label: {
                         LockedLabel(title: "단골 카드 공유", systemImage: "square.and.arrow.up", feature: .regularCard)
                     }
-                } else if let card = RegularReview(restaurant: restaurant, id: "card", text: "",
+                } else if let card = RegularReview(restaurant: restaurant, id: "card", text: restaurant.regularWord,
                                                    nickname: RegularReviews.shared.nickname, author: "") {
                     RegularCardShareLink(review: card)
                 }
             } header: {
-                Text("단골 후기")
+                Text("한마디")
             } footer: {
                 Text("단골이 된 집만 후기를 올릴 수 있어요.")
             }
