@@ -36,36 +36,7 @@ struct ReviewFeedView: View {
 
     var body: some View {
         NavigationStack {
-            Group {
-                switch store.phase {
-                case .idle, .loading:
-                    ProgressView()
-                case .preparing:
-                    ContentUnavailableView {
-                        Label("단골 후기를 준비하고 있어요", systemImage: "heart.circle")
-                    } description: {
-                        Text("곧 열려요. 그동안 단골집을 늘려 두면 열리자마자 후기를 올릴 수 있어요.", comment: "Reviews feed: feature not open yet")
-                    }
-                case .offline:
-                    ContentUnavailableView {
-                        Label("연결할 수 없어요", systemImage: "wifi.slash")
-                    } description: {
-                        Text("인터넷 연결을 확인한 뒤 다시 불러와 주세요.", comment: "Reviews feed: network unreachable")
-                    } actions: {
-                        Button("다시 불러오기") { Task { await store.load() } }
-                    }
-                case .failed:
-                    ContentUnavailableView {
-                        Label("후기를 불러오지 못했어요", systemImage: "exclamationmark.triangle")
-                    } description: {
-                        Text("잠시 뒤 다시 불러와 주세요.", comment: "Reviews feed: load failed for another reason")
-                    } actions: {
-                        Button("다시 불러오기") { Task { await store.load() } }
-                    }
-                case .loaded:
-                    list
-                }
-            }
+            list
             .navigationTitle("단골 후기")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -88,7 +59,6 @@ struct ReviewFeedView: View {
                         Image(systemName: "square.and.pencil")
                     }
                     .accessibilityLabel(Text("단골 후기 올리기"))
-                    .disabled(!store.isEnabled)
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
                     Menu {
@@ -163,48 +133,122 @@ struct ReviewFeedView: View {
 
     private var list: some View {
         List {
+            // 혼자 써도 남는 것: 내 단골집과 나만 보는 한마디. 후기를 못 읽어도 이 칸은 늘 보인다.
             Section {
-                ForEach(store.visible) { review in
-                    RegularCardView(review: review)
-                        .padding(.vertical, 6)
-                        .swipeActions(edge: .trailing, allowsFullSwipe: false) {
-                            if review.author != store.me {
-                                Button { reporting = review } label: { Label("신고", systemImage: "exclamationmark.bubble") }
-                                    .tint(.red)
+                if myRegulars.isEmpty {
+                    Text("같은 집을 네 번 가면 단골이 돼요. 다녀온 날을 기록하면 여기 모여요.", comment: "My regulars: empty hint")
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                }
+                ForEach(myRegulars) { restaurant in
+                    Button { composing = restaurant } label: { MyRegularRow(restaurant: restaurant) }
+                        .buttonStyle(.plain)
+                }
+            } header: {
+                Text("내 단골집", comment: "Section: my own regular places")
+            }
+
+            if !almostRegulars.isEmpty {
+                Section {
+                    ForEach(almostRegulars) { restaurant in
+                        let regular = restaurant.regular
+                        HStack(spacing: 12) {
+                            VisitStamp(days: regular.days, level: regular.level, size: 36)
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text(verbatim: restaurant.name).font(.subheadline.weight(.semibold))
+                                if let next = regular.nextStep {
+                                    Text(verbatim: next).font(.caption).foregroundStyle(.secondary)
+                                }
                             }
                         }
-                        .contextMenu { actions(for: review) }
-                        .overlay(alignment: .bottomTrailing) {
-                            Menu {
-                                actions(for: review)
-                            } label: {
-                                Image(systemName: "ellipsis")
-                                    .frame(width: 44, height: 32)
-                                    .contentShape(Rectangle())
-                            }
-                            .accessibilityLabel(Text("\(review.placeName) 후기 더 보기"))
-                        }
+                        .accessibilityElement(children: .combine)
+                    }
+                } header: {
+                    Text("곧 단골", comment: "Section: places one or two visits away from becoming a regular")
                 }
-                if store.hasMore {
-                    Button("더 보기") { Task { await store.loadMore() } }
-                        .frame(maxWidth: .infinity)
-                }
+            }
+
+            Section {
+                others
+            } header: {
+                Text("다른 단골들의 후기", comment: "Section: reviews posted by other regulars")
             } footer: {
-                Text("네 번 넘게 간 단골만 후기를 올릴 수 있어요. 한 번 가 보고 쓴 글은 여기 없어요.")
+                if store.phase == .loaded {
+                    Text("네 번 넘게 간 단골만 후기를 올릴 수 있어요. 한 번 가 보고 쓴 글은 여기 없어요.")
+                }
             }
         }
         .refreshable { await store.load() }
-        .overlay {
+    }
+
+    /// 곧 단골이 될 집 — 두세 번 간 집을 많이 간 순으로 셋.
+    private var almostRegulars: [Restaurant] {
+        restaurants.filter { $0.regular.level == .returned && !$0.regular.isLapsed }
+            .sorted { $0.regular.days > $1.regular.days }
+            .prefix(3).map { $0 }
+    }
+
+    /// 다른 사람들의 후기 칸. 없음 · 준비 중 · 연결 안 됨 · 실패를 따로 말한다.
+    @ViewBuilder
+    private var others: some View {
+        switch store.phase {
+        case .idle, .loading:
+            HStack { Spacer(); ProgressView(); Spacer() }
+        case .preparing:
+            status("단골 후기를 준비하고 있어요", "곧 열려요. 그동안 단골집을 늘려 두면 열리자마자 후기를 올릴 수 있어요.",
+                   symbol: "heart.circle", retries: false)
+        case .offline:
+            status("연결할 수 없어요", "인터넷 연결을 확인한 뒤 다시 불러와 주세요.", symbol: "wifi.slash", retries: true)
+        case .failed:
+            status("후기를 불러오지 못했어요", "잠시 뒤 다시 불러와 주세요.", symbol: "exclamationmark.triangle", retries: true)
+        case .loaded:
             if store.visible.isEmpty {
-                ContentUnavailableView {
-                    Label("아직 후기가 없어요", systemImage: "heart.circle")
-                } description: {
-                    Text(myRegulars.isEmpty
-                         ? "같은 집을 네 번 가면 단골이 되고, 단골 후기를 올릴 수 있어요."
-                         : "내 단골집 후기를 처음으로 올려 보세요.")
-                }
+                status("아직 후기가 없어요",
+                       myRegulars.isEmpty ? "같은 집을 네 번 가면 단골이 되고, 단골 후기를 올릴 수 있어요."
+                                          : "내 단골집 후기를 처음으로 올려 보세요.",
+                       symbol: "heart.circle", retries: false)
+            }
+            ForEach(store.visible) { review in
+                RegularCardView(review: review)
+                    .padding(.vertical, 6)
+                    .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+                        if review.author != store.me {
+                            Button { reporting = review } label: { Label("신고", systemImage: "exclamationmark.bubble") }
+                                .tint(.red)
+                        }
+                    }
+                    .contextMenu { actions(for: review) }
+                    .overlay(alignment: .bottomTrailing) {
+                        Menu {
+                            actions(for: review)
+                        } label: {
+                            Image(systemName: "ellipsis")
+                                .frame(width: 44, height: 32)
+                                .contentShape(Rectangle())
+                        }
+                        .accessibilityLabel(Text("\(review.placeName) 후기 더 보기"))
+                    }
+            }
+            if store.hasMore {
+                Button("더 보기") { Task { await store.loadMore() } }
+                    .frame(maxWidth: .infinity)
             }
         }
+    }
+
+    private func status(_ title: LocalizedStringKey, _ detail: LocalizedStringKey, symbol: String, retries: Bool) -> some View {
+        VStack(spacing: 6) {
+            Image(systemName: symbol).font(.title2).foregroundStyle(.secondary).accessibilityHidden(true)
+            Text(title).font(.subheadline.weight(.semibold))
+            Text(detail).font(.caption).foregroundStyle(.secondary).multilineTextAlignment(.center)
+            if retries {
+                Button("다시 불러오기") { Task { await store.load() } }
+                    .font(.subheadline)
+                    .padding(.top, 2)
+            }
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 12)
     }
 
     @ViewBuilder
@@ -265,9 +309,54 @@ struct ReviewFeedView: View {
     }
 }
 
+// MARK: - 내 단골집
+
+/// 내 단골집 한 줄 — 도장, 이름, 나만 보는 한마디. 누르면 한마디를 적는다.
+private struct MyRegularRow: View {
+    let restaurant: Restaurant
+
+    var body: some View {
+        let regular = restaurant.regular
+        HStack(alignment: .top, spacing: 12) {
+            VisitStamp(days: regular.days, level: regular.level, size: 44)
+            VStack(alignment: .leading, spacing: 4) {
+                HStack(spacing: 6) {
+                    Text(verbatim: restaurant.name).font(.headline)
+                    if restaurant.sharedReviewID != nil {
+                        Text("올림", comment: "Badge: this regular's note is posted publicly")
+                            .font(.caption2.weight(.semibold))
+                            .padding(.horizontal, 6).padding(.vertical, 2)
+                            .background(Color.pink.opacity(0.15), in: Capsule())
+                            .foregroundStyle(.pink)
+                    }
+                }
+                Text(verbatim: "\(regular.title) · \(String(localized: "\(regular.days)번"))")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                if restaurant.regularWord.isEmpty {
+                    Text("이 집을 왜 계속 가나요?")
+                        .font(.subheadline)
+                        .foregroundStyle(.tertiary)
+                } else {
+                    Text(verbatim: restaurant.regularWord)
+                        .font(.subheadline)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+            }
+            Spacer(minLength: 0)
+            Image(systemName: "square.and.pencil").font(.footnote).foregroundStyle(.tertiary).accessibilityHidden(true)
+        }
+        .padding(.vertical, 4)
+        .contentShape(Rectangle())
+        .accessibilityElement(children: .combine)
+        .accessibilityAddTraits(.isButton)
+    }
+}
+
 // MARK: - 올리기
 
-/// 단골 후기 쓰기 · 고치기. 처음 올릴 때는 규칙에 먼저 동의한다.
+/// 단골집 한마디 쓰기. 그냥 저장하면 나만 보고, '모두에게 올리기' 를 켜면 단골 후기가 된다.
+/// 처음 올릴 때는 규칙에 먼저 동의한다.
 struct ReviewComposeView: View {
     let restaurant: Restaurant
     @Environment(\.dismiss) private var dismiss
@@ -276,8 +365,12 @@ struct ReviewComposeView: View {
     @State private var isPosting = false
     @State private var failure: String?
     @State private var confirmsRemoval = false
+    /// 모두에게 올릴지. 이미 올린 글을 고칠 때는 늘 켜져 있다.
+    @State private var sharesPublicly = false
 
     private var isEditing: Bool { restaurant.sharedReviewID != nil }
+    private var publishes: Bool { isEditing || (sharesPublicly && store.isEnabled) }
+    private var trimmed: String { text.trimmingCharacters(in: .whitespacesAndNewlines) }
 
     private var preview: RegularReview? {
         RegularReview(restaurant: restaurant, id: "preview", text: text,
@@ -291,20 +384,10 @@ struct ReviewComposeView: View {
     var body: some View {
         NavigationStack {
             Form {
-                if let preview {
+                if publishes, let preview {
                     Section("이렇게 보여요") {
                         RegularCardView(review: preview)
                     }
-                }
-
-                Section {
-                    TextField("별명", text: $store.nickname)
-                        .textInputAutocapitalization(.never)
-                        .autocorrectionDisabled()
-                } header: {
-                    Text("별명")
-                } footer: {
-                    Text("실명 말고 별명을 적어 주세요. \(RegularReview.nicknameLength.lowerBound)~\(RegularReview.nicknameLength.upperBound)자.")
                 }
 
                 Section {
@@ -314,17 +397,39 @@ struct ReviewComposeView: View {
                     Text("한마디")
                 } footer: {
                     HStack {
-                        if let problem, !text.isEmpty { Text(verbatim: problem.message).foregroundStyle(.red) }
+                        if publishes, let problem, !text.isEmpty { Text(verbatim: problem.message).foregroundStyle(.red) }
                         Spacer()
                         Text(verbatim: "\(text.count)/\(RegularReview.textLimit)")
                     }
                 }
 
-                Section {
-                    Toggle("후기 규칙을 지킬게요", isOn: $store.agreedToRules)
-                    NavigationLink("후기 규칙 보기") { ReviewRulesView() }
-                } footer: {
-                    Text("가게 이름과 위치, 다녀온 횟수, 별점과 미식 기준 평균, 한마디, 별명이 모두에게 보여요. 다녀온 날짜와 사진, 메모는 올라가지 않아요.")
+                if !isEditing, store.isEnabled {
+                    Section {
+                        Toggle(isOn: $sharesPublicly.animation()) {
+                            Text("모두에게 올리기", comment: "Toggle: post this note publicly as a regular's review")
+                        }
+                    } footer: {
+                        Text("끄면 나만 보는 한마디로 남아요. 켜면 단골 후기로 모두에게 보여요.", comment: "Footer for the post-publicly toggle")
+                    }
+                }
+
+                if publishes {
+                    Section {
+                        TextField("별명", text: $store.nickname)
+                            .textInputAutocapitalization(.never)
+                            .autocorrectionDisabled()
+                    } header: {
+                        Text("별명")
+                    } footer: {
+                        Text("실명 말고 별명을 적어 주세요. \(RegularReview.nicknameLength.lowerBound)~\(RegularReview.nicknameLength.upperBound)자.")
+                    }
+
+                    Section {
+                        Toggle("후기 규칙을 지킬게요", isOn: $store.agreedToRules)
+                        NavigationLink("후기 규칙 보기") { ReviewRulesView() }
+                    } footer: {
+                        Text("가게 이름과 위치, 다녀온 횟수, 별점과 미식 기준 평균, 한마디, 별명이 모두에게 보여요. 다녀온 날짜와 사진, 메모는 올라가지 않아요.")
+                    }
                 }
 
                 if isEditing {
@@ -333,7 +438,7 @@ struct ReviewComposeView: View {
                     }
                 }
             }
-            .navigationTitle(isEditing ? Text("후기 고치기") : Text("단골 후기 올리기"))
+            .navigationTitle(isEditing ? Text("후기 고치기") : publishes ? Text("단골 후기 올리기") : Text(verbatim: restaurant.name))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
@@ -343,15 +448,22 @@ struct ReviewComposeView: View {
                     if isPosting {
                         ProgressView()
                     } else {
-                        Button("올리기") { post() }
-                            .disabled(problem != nil || !store.agreedToRules)
+                        if publishes {
+                            Button("올리기") { post() }
+                                .disabled(problem != nil || !store.agreedToRules)
+                        } else {
+                            Button("저장") { saveWord(); dismiss() }
+                                .disabled(text.count > RegularReview.textLimit)
+                        }
                     }
                 }
             }
             .task {
-                // 고칠 때는 올려 둔 한마디에서 시작한다
-                if let id = restaurant.sharedReviewID, text.isEmpty,
-                   let mine = store.reviews.first(where: { $0.id == id }) {
+                // 적어 둔 한마디에서 시작한다. 없으면 올려 둔 글에서.
+                guard text.isEmpty else { return }
+                if !restaurant.regularWord.isEmpty {
+                    text = restaurant.regularWord
+                } else if let id = restaurant.sharedReviewID, let mine = store.reviews.first(where: { $0.id == id }) {
                     text = mine.text
                 }
             }
@@ -365,11 +477,18 @@ struct ReviewComposeView: View {
         }
     }
 
+    /// 나만 보는 한마디로 남긴다. 올리든 안 올리든 늘 남는다.
+    private func saveWord() {
+        restaurant.regularWord = trimmed
+        try? restaurant.modelContext?.save()
+    }
+
     private func post() {
         isPosting = true
         Task {
             do {
                 try await store.post(text: text, for: restaurant)
+                saveWord()
                 dismiss()
             } catch {
                 failure = error.localizedDescription

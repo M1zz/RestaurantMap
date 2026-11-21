@@ -100,13 +100,22 @@ https://guide.michelin.com/kr/ko/article/features/what-is-a-michelin-star-KOREAN
 - 직접 고르던 탑6 가 Plus 에서 빠진 자리를 미식 총평과 단골 카드가 채운다.
 - 공개 후기에는 올린 사람의 기준 평균이 실린다. 무료 사용자도 자기 후기에서는 그 숫자를 본다. 잠그는 것은 식당 화면의 총평이다.
 
+## 혼자 써도 남는 것 — 내 단골집
+
+단골 후기 탭은 다른 사람의 후기가 없어도 비지 않는다. 맨 위가 늘 내 것이다.
+
+- **내 단골집**: 단골 · 인생 맛집이 된 집과 나만 보는 한마디(`Restaurant.regularWord`). 누르면 한마디를 적는다.
+  그냥 저장하면 기기와 내 iCloud 에만 남고, '모두에게 올리기' 를 켜야 단골 후기가 된다. 올려도 한마디는 내 쪽에 남는다.
+- **곧 단골**: 두세 번 간 집 셋과 단골까지 남은 횟수.
+- **다른 단골들의 후기**: 없음 · 준비 중 · 연결 안 됨 · 읽기 실패를 이 칸 안에서 따로 말한다. 화면 전체를 덮지 않는다.
+
 ## 배포 전에 CloudKit 에서 할 일 (사람)
 
 스키마는 기기에서 올릴 수 없다. 아래를 하지 않으면 스토어 빌드에서 후기 화면이 '준비 중'으로 서고,
 미식 기준 값이 다른 기기로 넘어가지 않는다.
 
 1. Xcode 에서 디버그 빌드를 실행 인자 `-cloudKitSchemaWarmup` 으로 띄운다(iCloud 에 로그인한 기기 · 시뮬레이터).
-   개인 DB 에 `CD_Visit` 의 `CD_gourmet…` 네 필드와 `CD_Restaurant` 의 `CD_sharedReviewID` 가,
+   개인 DB 에 `CD_Visit` 의 `CD_gourmet…` 네 필드와 `CD_Restaurant` 의 `CD_sharedReviewID` · `CD_regularWord` 가,
    공개 DB 에 `RegularReview` · `ReviewReport` 가 개발 환경에 생긴다.
 2. CloudKit 콘솔(개발 환경) ▸ Indexes ▸ `RegularReview`: `postedAt` 에 QUERYABLE 과 SORTABLE 을 단다.
    `ReviewReport`: `kind` 에 QUERYABLE 을 단다 (세 사람 신고를 세는 데 쓴다).

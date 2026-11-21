@@ -43,6 +43,8 @@ final class Restaurant {
     var isWishlist: Bool = false  // 가볼 곳 여부 (Boolean은 마이그레이션이 안전함)
     /// 공개한 단골 후기의 ID. 올리지 않았으면 nil (→ RegularReviews).
     var sharedReviewID: String?
+    /// 이 집을 왜 계속 가는지 나만 보는 한마디. 올리지 않아도 남는다 (→ ReviewFeedView 의 내 단골집).
+    var regularWord: String = ""
 
     // 방문 기록들
     @Relationship(deleteRule: .cascade, inverse: \Visit.restaurant)

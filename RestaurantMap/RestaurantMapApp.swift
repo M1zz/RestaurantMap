@@ -39,6 +39,7 @@ struct RestaurantMapApp: App {
             visit.menu = menu
             // 값이 비어 있으면 필드가 생기지 않는다 — 새로 더한 필드에 값을 넣어 둔다
             restaurant.sharedReviewID = "warmup"
+            restaurant.regularWord = "warmup"
             for criterion in GourmetCriterion.allCases { visit[criterion] = 5 }
             // 작은 사진과 큰 사진(CKAsset 으로 나가는 크기)을 하나씩 — 두 저장 꼴의 필드가 다 생기게
             let small = VisitPhoto(data: Data(repeating: 1, count: 2_048), sortOrder: 0)
