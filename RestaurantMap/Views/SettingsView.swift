@@ -23,6 +23,7 @@ struct SettingsView: View {
     @State private var showsPaywall = false
     @State private var showsGraduation = false
     @State private var showsManageSubscription = false
+    @State private var showsGoogleImport = false
     /// LeeoKit 마스터 모드(버전 7번 누르기). 이 앱은 켜질 때 관리자 비밀번호를 한 번 더 묻는다.
     @AppStorage("dev.masterMode") private var masterMode = false
     @State private var asksPasscode = false
@@ -60,6 +61,9 @@ struct SettingsView: View {
                         CustomCategorySettingsView()
                     } label: {
                         Label("음식 종류 관리", systemImage: "list.bullet")
+                    }
+                    Button { showsGoogleImport = true } label: {
+                        Label("구글 지도에서 가져오기", systemImage: "square.and.arrow.down")
                     }
                     ShareLink(item: RestaurantExport(restaurants: restaurants),
                               preview: SharePreview(RestaurantExport.fileName)) {
@@ -209,6 +213,7 @@ struct SettingsView: View {
             .manageSubscriptionsSheet(isPresented: $showsManageSubscription)
             .paywall(for: $paywallFeature)
             .sheet(isPresented: $showsPaywall) { PaywallView() }
+            .sheet(isPresented: $showsGoogleImport) { GoogleImportView() }
             .sheet(isPresented: $showsGraduation) {
                 LeeoGraduationOfferView(graduate: purchases.product(RestaurantPlan.graduateID)) {
                     await purchases.refresh()
