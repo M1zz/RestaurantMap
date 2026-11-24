@@ -123,15 +123,7 @@ struct AddRestaurantView: View {
         NavigationStack {
             Form {
                 Section("기본 정보") {
-                    Picker("음식 종류", selection: $foodCategory) {
-                        ForEach(FoodCategoryRepository.builtInCategories) { category in
-                            Text(category.displayName).tag(category)
-                        }
-                    }
-                    .pickerStyle(.menu)
-                    .onAppear {
-                        logger.info("Picker onAppear - foodCategory: \(foodCategory.name)")
-                    }
+                    FoodCategoryPicker(selection: $foodCategory)
 
                     TextField("식당 이름", text: $name)
                     TextField("주소", text: $address)

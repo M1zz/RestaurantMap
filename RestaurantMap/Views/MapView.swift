@@ -108,7 +108,16 @@ struct MapView: View {
     @State private var showSavedOnly = false
     @State private var kakaoPlaces: [KakaoPlace] = []
     @State private var kakaoSearchResults: [KakaoPlace] = []  // 검색 결과 (파란색으로 표시)
-    @State private var isUsingKakaoSearch = true  // 기본값: 카카오 검색 사용
+    @State private var mapRegion: MKCoordinateRegion?  // 지금 보고 있는 지도 영역
+
+    /// 한국 안을 보고 있으면 카카오, 밖이면 Apple 지도로 찾는다.
+    /// 지도를 아직 못 봤으면 내 위치, 그것도 없으면 기기 지역으로 정한다.
+    private var isUsingKakaoSearch: Bool {
+        if let center = mapRegion?.center ?? locationDelegate.userLocation {
+            return KakaoLocalSearchService.covers(center)
+        }
+        return Locale.current.region == .southKorea
+    }
     @State private var isKakaoSearching = false
     @State private var selectedKakaoPlace: KakaoPlace?
     @State private var kakaoPlaceForAdd: KakaoPlace?  // AddRestaurantView에 전달할 장소 정보
@@ -146,18 +155,6 @@ struct MapView: View {
                             Label(
                                 showSavedOnly ? "모든 장소 보기" : "저장된 식당만 보기",
                                 systemImage: showSavedOnly ? "map" : "bookmark.fill"
-                            )
-                        }
-
-                        Divider()
-
-                        // 카카오 검색 / Apple Maps 검색 전환
-                        Button {
-                            isUsingKakaoSearch.toggle()
-                        } label: {
-                            Label(
-                                isUsingKakaoSearch ? "Apple Maps 검색 사용" : "카카오 검색 사용",
-                                systemImage: isUsingKakaoSearch ? "applelogo" : "magnifyingglass"
                             )
                         }
 
@@ -376,6 +373,8 @@ struct MapView: View {
             logger.info("📍 지도 카메라 변경 감지 - 중심: \(context.region.center.latitude), \(context.region.center.longitude)")
             logger.info("📍 지도 범위 - span: \(context.region.span.latitudeDelta), \(context.region.span.longitudeDelta)")
 
+            mapRegion = context.region
+
             // 애플맵으로 주변 POI 검색 (카카오는 검색창에서만 사용)
             searchNearbyPOIsIfNeeded(in: context.region)
         }
@@ -424,13 +423,12 @@ struct MapView: View {
         // 저장된 식당만 보기 모드를 끄고, 주변 POI 표시
         showSavedOnly = false
 
-        // 카카오 검색 모드 활성화
-        if !isUsingKakaoSearch {
-            isUsingKakaoSearch = true
+        // 주변 장소 검색 강제 실행 — 한국이면 카카오, 밖이면 Apple 지도
+        if KakaoLocalSearchService.covers(center) {
+            searchKakaoPlaces(in: region)
+        } else {
+            searchNearbyPOIs(in: region)
         }
-
-        // 주변 장소 검색 강제 실행
-        searchKakaoPlaces(in: region)
     }
 
     private func addRestaurantAtCurrentLocation() {
@@ -513,6 +511,8 @@ struct MapView: View {
             // Apple Maps 검색
             let request = MKLocalSearch.Request()
             request.naturalLanguageQuery = searchText
+            // 지금 보는 지도 근처부터 찾는다
+            if let mapRegion { request.region = mapRegion }
 
             let search = MKLocalSearch(request: request)
             search.start { [self] response, error in

@@ -96,6 +96,15 @@ class KakaoLocalSearchService: ObservableObject {
 
     private init() {}
 
+    /// 카카오 로컬은 한국 안의 장소만 찾는다. 이 밖에서는 Apple 지도로 찾아야 한다.
+    /// 한국을 감싸는 상자에서 쓰시마 · 규슈 쪽(부산 남동쪽 바다 건너)을 뺀다.
+    static func covers(_ coordinate: CLLocationCoordinate2D) -> Bool {
+        let (lat, lon) = (coordinate.latitude, coordinate.longitude)
+        let inBox = (33.0...38.7).contains(lat) && (124.5...131.9).contains(lon)
+        let japanSide = lat < 35.0 && lon > 129.2
+        return inBox && !japanSide
+    }
+
     // MARK: - 키워드 검색
 
     /// 키워드로 장소 검색

@@ -191,10 +191,11 @@ class FoodCategoryRepository: ObservableObject {
 
     // MARK: - Public Methods
 
-    func addCustomCategory(name: String, icon: String, family: TasteFamily) {
+    @discardableResult
+    func addCustomCategory(name: String, icon: String, family: TasteFamily) -> FoodCategory {
         let newCategory = FoodCategory(
             id: UUID(),
-            name: name,
+            name: name.trimmingCharacters(in: .whitespacesAndNewlines),
             icon: icon,
             isCustom: true,
             isBuiltIn: false,
@@ -203,6 +204,7 @@ class FoodCategoryRepository: ObservableObject {
 
         customCategories.append(newCategory)
         saveCustomCategories()
+        return newCategory
     }
 
     func deleteCustomCategory(id: UUID) {

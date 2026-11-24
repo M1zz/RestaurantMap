@@ -122,15 +122,10 @@ struct RestaurantDetailView: View {
                         TextField("전화번호", text: $restaurant.phoneNumber)
                             .keyboardType(.phonePad)
 
-                        Picker("음식 종류", selection: Binding(
+                        FoodCategoryPicker(selection: Binding(
                             get: { restaurant.foodCategory },
                             set: { restaurant.foodCategory = $0 }
-                        )) {
-                            ForEach(FoodCategoryRepository.builtInCategories) { category in
-                                Text(category.displayName).tag(category)
-                            }
-                        }
-                        .pickerStyle(.menu)
+                        ))
                     } else {
                         // 보기 모드
                         LabeledContent("식당 이름", value: restaurant.name)
