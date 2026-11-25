@@ -13,6 +13,8 @@ struct ContentView: View {
     @State private var purchases = Purchases.shared
     /// 구독 6개월째 · 갱신 7일 전의 '평생으로 바꾸기' 제안 (→ LeeoGraduation).
     @State private var showsGraduation = false
+    /// 할인 배너에서 연 페이월
+    @State private var showsSalePaywall = false
     /// 지금 시트가 식당을 한 번이라도 열었는가 — 연 뒤에 사라졌으면 지운 것이라 오류 화면을 띄우지 않는다.
     @State private var openedRestaurant = false
 
@@ -82,6 +84,9 @@ struct ContentView: View {
         #if DEBUG
         .onAppear { if let scene = ScreenshotScene.current { selectedTab = scene.tab } }
         #endif
+        // 할인 기간이면 앱을 연 뒤 한 번 할인 배너를 띄운다. 단추는 요금제를 연다 (LeeoKit).
+        .leeoSaleBanner { showsSalePaywall = true }
+        .sheet(isPresented: $showsSalePaywall) { PaywallView() }
         .sheet(isPresented: $showsGraduation) {
             LeeoGraduationOfferView(graduate: purchases.product(RestaurantPlan.graduateID)) {
                 await purchases.refresh()
