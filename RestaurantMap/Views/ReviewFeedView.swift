@@ -30,7 +30,7 @@ struct ReviewFeedView: View {
 
     /// 후기를 올릴 수 있는 내 단골집.
     private var myRegulars: [Restaurant] {
-        restaurants.filter { $0.regular.isRanked }
+        restaurants.filter { !$0.isGone && $0.regular.isRanked }
             .sorted { $0.regular.days > $1.regular.days }
     }
 
@@ -185,7 +185,7 @@ struct ReviewFeedView: View {
 
     /// 곧 단골이 될 집 — 두세 번 간 집을 많이 간 순으로 셋.
     private var almostRegulars: [Restaurant] {
-        restaurants.filter { $0.regular.level == .returned && !$0.regular.isLapsed }
+        restaurants.filter { !$0.isGone && $0.regular.level == .returned && !$0.regular.isLapsed }
             .sorted { $0.regular.days > $1.regular.days }
             .prefix(3).map { $0 }
     }
@@ -260,6 +260,7 @@ struct ReviewFeedView: View {
             Label("가볼 곳에 담기", systemImage: "star.circle")
         }
         Button {
+            guard review.coordinate.isMappable else { return }
             let item = MKMapItem(placemark: MKPlacemark(coordinate: review.coordinate))
             item.name = review.placeName
             item.openInMaps()
@@ -296,8 +297,10 @@ struct ReviewFeedView: View {
             paywallFeature = .restaurants
             return
         }
+        // 남이 올린 좌표가 지도에 찍을 수 없는 값(범위 밖 · NaN)이면 0,0 으로 둔다 — 그대로 저장하면 지도와 백업(JSON)이 깨진다
+        let usable = review.coordinate.isMappable
         let restaurant = Restaurant(name: review.placeName, address: review.address,
-                                    latitude: review.latitude, longitude: review.longitude,
+                                    latitude: usable ? review.latitude : 0, longitude: usable ? review.longitude : 0,
                                     categoryIcon: review.categoryIcon, listType: .wishlist)
         modelContext.insert(restaurant)
         do {
@@ -369,12 +372,13 @@ struct ReviewComposeView: View {
     /// 모두에게 올릴지. 이미 올린 글을 고칠 때는 늘 켜져 있다.
     @State private var sharesPublicly = false
 
-    private var isEditing: Bool { restaurant.sharedReviewID != nil }
+    private var isEditing: Bool { !restaurant.isGone && restaurant.sharedReviewID != nil }
     private var publishes: Bool { isEditing || (sharesPublicly && store.canPost) }
     private var trimmed: String { text.trimmingCharacters(in: .whitespacesAndNewlines) }
 
     private var preview: RegularReview? {
-        RegularReview(restaurant: restaurant, id: "preview", text: text,
+        guard !restaurant.isGone else { return nil }
+        return RegularReview(restaurant: restaurant, id: "preview", text: text,
                       nickname: store.nickname.isEmpty ? String(localized: "별명") : store.nickname, author: "")
     }
 
@@ -439,7 +443,7 @@ struct ReviewComposeView: View {
                     }
                 }
             }
-            .navigationTitle(isEditing ? Text("후기 고치기") : publishes ? Text("단골 후기 올리기") : Text(verbatim: restaurant.name))
+            .navigationTitle(isEditing ? Text("후기 고치기") : publishes ? Text("단골 후기 올리기") : Text(verbatim: restaurant.isGone ? "" : restaurant.name))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
@@ -463,7 +467,7 @@ struct ReviewComposeView: View {
                 // 가게 화면에서 바로 열렸으면 후기가 열려 있는지부터 안다
                 if store.phase == .idle { await store.load() }
                 // 적어 둔 한마디에서 시작한다. 없으면 올려 둔 글에서.
-                guard text.isEmpty else { return }
+                guard text.isEmpty, !restaurant.isGone else { return }
                 if !restaurant.regularWord.isEmpty {
                     text = restaurant.regularWord
                 } else if let id = restaurant.sharedReviewID, let mine = store.reviews.first(where: { $0.id == id }) {
@@ -482,8 +486,10 @@ struct ReviewComposeView: View {
 
     /// 나만 보는 한마디로 남긴다. 올리든 안 올리든 늘 남는다.
     private func saveWord() {
+        guard !restaurant.isGone else { return }
         restaurant.regularWord = trimmed
-        try? restaurant.modelContext?.save()
+        // 실패를 삼키지 않는다 — 적은 한마디가 저장되지 않았으면 알린다
+        restaurant.modelContext?.saveNow()
     }
 
     private func post() {

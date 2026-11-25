@@ -59,7 +59,8 @@ struct PhotoPickerView: View {
         }
         .onChange(of: cameraImage) { oldValue, newValue in
             if let image = newValue {
-                selectedImages.append(image)
+                // 찍은 사진도 같은 크기로 줄여 든다
+                selectedImages.append(PickedPhoto.shrunk(image))
                 cameraImage = nil // 리셋
             }
         }
@@ -68,8 +69,10 @@ struct PhotoPickerView: View {
     /// PhotosPicker에서 선택한 사진들을 UIImage로 변환
     private func loadPhotosFromPicker(_ items: [PhotosPickerItem]) async {
         for item in items {
+            // 원본(24~48MP)을 그대로 쥐고 미리보기로 그리면 한 장에 100MB 넘게 든다 — 열 장을 고르면 앱이 꺼진다.
+            // 저장할 때 어차피 줄이므로(→ PhotoStorageManager) 여기서 먼저 줄여 든다.
             if let data = try? await item.loadTransferable(type: Data.self),
-               let image = UIImage(data: data) {
+               let image = PhotoDownsampler.image(from: data, maxPixel: PickedPhoto.maxPixel) ?? UIImage(data: data) {
                 await MainActor.run {
                     selectedImages.append(image)
                 }
@@ -80,5 +83,20 @@ struct PhotoPickerView: View {
         await MainActor.run {
             photoPickerItems = []
         }
+    }
+}
+
+/// 고른 사진을 저장 전까지 들고 있을 크기.
+enum PickedPhoto {
+    /// 저장되는 크기(긴 변 1024pt × 화면 배율)보다 작지 않게 — 저장되는 사진의 화질은 그대로다.
+    static var maxPixel: CGFloat { 1024 * max(UITraitCollection.current.displayScale, 1) }
+
+    /// 이미 풀려 있는 큰 그림(카메라)을 줄인다. 줄일 수 없으면 그대로 돌려준다.
+    static func shrunk(_ image: UIImage) -> UIImage {
+        let longest = max(image.size.width, image.size.height) * image.scale
+        guard longest.isFinite, longest > maxPixel,
+              let data = image.jpegData(compressionQuality: 0.95),
+              let small = PhotoDownsampler.image(from: data, maxPixel: maxPixel) else { return image }
+        return small
     }
 }

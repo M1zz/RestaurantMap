@@ -206,7 +206,10 @@ extension Visit {
         func take(_ pairs: [(Double?, TasteAxis)], group: [Double?]) {
             let touched = group.contains { $0 != nil && $0 != 5 }
             guard touched else { return }
-            for case let (value?, axis) in pairs { moved[axis] = min(max(Int((value / 2.5).rounded()) + 1, 1), 5) }
+            // 유한한 값만 — NaN · 무한대를 Int 로 바꾸면 그 자리에서 죽는다 (옛 백업 · 동기화로 들어온 값).
+            for case let (value?, axis) in pairs where value.isFinite {
+                moved[axis] = min(max(Int((min(max(value, 0), 10) / 2.5).rounded()) + 1, 1), 5)
+            }
         }
         take([(boldness, .depth), (spicy, .kick)],
              group: [spicy, boldness, sweetness, saltiness, richness, naturalTaste])

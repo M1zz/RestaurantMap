@@ -89,17 +89,18 @@ struct RestaurantQuery: EntityStringQuery {
 
     func entities(for identifiers: [String]) async throws -> [RestaurantEntity] {
         let wanted = Set(identifiers)
-        return RestaurantLibrary.all(in: container).map(RestaurantEntity.init).filter { wanted.contains($0.id) }
+        return RestaurantLibrary.read(in: container) { $0.map(RestaurantEntity.init).filter { wanted.contains($0.id) } }
     }
 
     func entities(matching string: String) async throws -> [RestaurantEntity] {
-        RestaurantLibrary.all(in: container)
-            .filter { $0.name.localizedCaseInsensitiveContains(string) || $0.address.localizedCaseInsensitiveContains(string) }
-            .map(RestaurantEntity.init)
+        RestaurantLibrary.read(in: container) { all in
+            all.filter { $0.name.localizedCaseInsensitiveContains(string) || $0.address.localizedCaseInsensitiveContains(string) }
+                .map(RestaurantEntity.init)
+        }
     }
 
     func suggestedEntities() async throws -> [RestaurantEntity] {
-        RestaurantLibrary.all(in: container).sorted { $0.rating > $1.rating }.prefix(20).map(RestaurantEntity.init)
+        RestaurantLibrary.read(in: container) { $0.sorted { $0.rating > $1.rating }.prefix(20).map(RestaurantEntity.init) }
     }
 }
 
@@ -115,13 +116,14 @@ struct NearbyRestaurantsIntent: AppIntent {
     @Dependency private var container: ModelContainer
 
     func perform() async throws -> some IntentResult & ReturnsValue<[RestaurantEntity]> & ProvidesDialog {
-        let visited = RestaurantLibrary.all(in: container).filter { !$0.isWishlist }
+        // 모델은 읽는 동안만 쓰고, 밖으로는 값(RestaurantEntity)만 들고 나온다 (→ RestaurantLibrary.read)
+        let visited = RestaurantLibrary.read(in: container) { $0.filter { !$0.isWishlist }.map(RestaurantEntity.init) }
         guard !visited.isEmpty else {
             return .result(value: [], dialog: IntentDialog(LocalizedStringResource("아직 저장한 맛집이 없어요.", comment: "Siri: no restaurants yet")))
         }
         // 이 앱은 방문 알림 때문에 위치 권한을 받아 둔다. 마지막으로 안 위치를 쓴다(새로 묻지 않는다).
         guard let here = CLLocationManager().location else {
-            let best = visited.sorted { $0.rating > $1.rating }.prefix(5).map(RestaurantEntity.init)
+            let best = visited.sorted { $0.rating > $1.rating }.prefix(5)
             return .result(value: Array(best), dialog: IntentDialog(LocalizedStringResource("위치를 몰라서 별점 높은 순으로 보여 드릴게요.", comment: "Siri: location unknown, showing top rated")))
         }
         let near = visited
@@ -132,7 +134,7 @@ struct NearbyRestaurantsIntent: AppIntent {
         let distance = Measurement(value: first.1, unit: UnitLength.meters)
             .formatted(.measurement(width: .abbreviated, usage: .road))
         return .result(
-            value: near.map { RestaurantEntity($0.0) },
+            value: near.map(\.0),
             dialog: IntentDialog(LocalizedStringResource("가장 가까운 곳은 \(first.0.name)이에요. \(distance) 떨어져 있어요.", comment: "Siri: nearest restaurant. Arguments: name, distance"))
         )
     }
@@ -148,7 +150,7 @@ struct WishlistIntent: AppIntent {
     @Dependency private var container: ModelContainer
 
     func perform() async throws -> some IntentResult & ReturnsValue<[RestaurantEntity]> & ProvidesDialog {
-        let wish = RestaurantLibrary.all(in: container).filter(\.isWishlist).map(RestaurantEntity.init)
+        let wish = RestaurantLibrary.read(in: container) { $0.filter(\.isWishlist).map(RestaurantEntity.init) }
         let dialog = wish.isEmpty
             ? IntentDialog(LocalizedStringResource("가볼 곳이 비어 있어요.", comment: "Siri: wishlist empty"))
             : IntentDialog(LocalizedStringResource("가볼 곳이 \(wish.count)곳 있어요.", comment: "Siri: wishlist count"))
@@ -204,14 +206,19 @@ struct RestaurantMapShortcuts: AppShortcutsProvider {
 // MARK: - 읽기 · 색인
 
 enum RestaurantLibrary {
-    static func all(in container: ModelContainer) -> [Restaurant] {
-        (try? ModelContext(container).fetch(FetchDescriptor<Restaurant>())) ?? []
+    /// 저장된 식당을 읽어 값으로 바꿔 돌려준다.
+    /// 모델은 자기를 읽어 온 컨텍스트가 살아 있는 동안만 믿을 수 있다 — 예전처럼 임시 컨텍스트에서 읽은 모델 배열을
+    /// 그대로 돌려주면, 컨텍스트가 먼저 사라진 뒤에 속성을 읽게 된다. 그래서 읽기를 이 안에서 끝낸다.
+    static func read<T>(in container: ModelContainer, _ body: ([Restaurant]) -> T) -> T {
+        let context = ModelContext(container)
+        let all = (try? context.fetch(FetchDescriptor<Restaurant>())) ?? []
+        return withExtendedLifetime(context) { body(all) }
     }
 
     /// Spotlight 에 싣는 식당을 지금 것에 맞춘다. 앱을 열 때와 뒤로 보낼 때 부른다.
     static func reindex(_ container: ModelContainer) async {
         guard #available(iOS 18.0, *) else { return }
-        let entities = all(in: container).filter { !$0.name.isEmpty }.map(RestaurantEntity.init)
+        let entities = read(in: container) { $0.filter { !$0.name.isEmpty }.map(RestaurantEntity.init) }
         let index = CSSearchableIndex.default()
         try? await index.deleteAppEntities(ofType: RestaurantEntity.self)
         try? await index.indexAppEntities(entities)

@@ -171,15 +171,17 @@ final class RegularReviews {
         if let problem = ReviewFilter.problem(in: text) ?? ReviewFilter.nicknameProblem(nickname) {
             throw Failure.rejected(problem)
         }
-        let id = restaurant.sharedReviewID ?? "review-" + UUID().uuidString
+        let id = restaurant.sharedReviewID.flatMap { $0.isEmpty ? nil : $0 } ?? "review-" + UUID().uuidString
         guard let review = RegularReview(restaurant: restaurant, id: id,
                                          text: text.trimmingCharacters(in: .whitespacesAndNewlines),
                                          nickname: nickname.trimmingCharacters(in: .whitespaces), author: author) else {
             throw Failure.notRegular
         }
         try await save(review)
+        // 올리는 동안(네트워크) 식당이 지워졌을 수 있다 — 지워진 모델에 쓰면 죽는다
+        guard !restaurant.isGone else { return }
         restaurant.sharedReviewID = id
-        try? restaurant.modelContext?.save()
+        restaurant.modelContext?.saveNow()
         reviews.removeAll { $0.id == id }
         reviews.insert(review, at: 0)
         if phase != .loaded { phase = .loaded }
@@ -187,8 +189,10 @@ final class RegularReviews {
 
     /// 새 방문을 남긴 뒤, 올려 둔 후기의 숫자(다녀온 횟수 · 평균)를 지금 기록으로 맞춘다. 한마디는 그대로다.
     func refreshSnapshot(for restaurant: Restaurant) async {
-        guard let id = restaurant.sharedReviewID, isEnabled, let author = await identify() else { return }
+        guard !restaurant.isGone, let id = restaurant.sharedReviewID, !id.isEmpty, isEnabled, let author = await identify() else { return }
+        // 서버를 다녀오는 사이 식당이 지워졌으면 그만둔다 (방문을 남기고 곧바로 식당을 지운 경우)
         guard let record = try? await database.record(for: CKRecord.ID(recordName: id)),
+              !restaurant.isGone,
               let old = RegularReview(record: record),
               var review = RegularReview(restaurant: restaurant, id: id, text: old.text, nickname: old.nickname, author: author) else { return }
         review.postedAt = old.postedAt
@@ -197,7 +201,8 @@ final class RegularReviews {
     }
 
     func remove(for restaurant: Restaurant) async throws {
-        guard let id = restaurant.sharedReviewID else { return }
+        // 빈 이름으로 레코드 ID 를 만들면 예외로 죽는다 (깨진 백업에서 되살아난 값)
+        guard let id = restaurant.sharedReviewID, !id.isEmpty else { return }
         do {
             try await database.deleteRecord(withID: CKRecord.ID(recordName: id))
         } catch let error as CKError where error.code == .unknownItem {
@@ -205,8 +210,9 @@ final class RegularReviews {
         } catch {
             throw Failure.network
         }
+        guard !restaurant.isGone else { reviews.removeAll { $0.id == id }; return }
         restaurant.sharedReviewID = nil
-        try? restaurant.modelContext?.save()
+        restaurant.modelContext?.saveNow()
         reviews.removeAll { $0.id == id }
     }
 
@@ -301,7 +307,7 @@ final class RegularReviews {
             byReview[id] = item
         }
         // 원래 후기가 아직 있는지 한 번에 묻는다. 없는 것은 이미 내려간 글이다.
-        let ids = byReview.keys.map { CKRecord.ID(recordName: $0) }
+        let ids = byReview.keys.filter { !$0.isEmpty }.map { CKRecord.ID(recordName: $0) }
         if !ids.isEmpty, let found = try? await database.records(for: ids, desiredKeys: []) {
             for (id, result) in found {
                 if case .failure(let error as CKError) = result, error.code == .unknownItem {
@@ -320,6 +326,7 @@ final class RegularReviews {
     }
 
     func takeDown(id: String) async -> TakeDown {
+        guard !id.isEmpty else { return .failed }
         do {
             try await database.deleteRecord(withID: CKRecord.ID(recordName: id))
         } catch let error as CKError where error.code == .unknownItem {

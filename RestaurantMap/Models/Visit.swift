@@ -165,7 +165,9 @@ final class Visit {
     // 사진 관련 computed properties
     /// 넣은 순서대로.
     var sortedPhotos: [VisitPhoto] {
-        (photos ?? []).sorted { ($0.sortOrder, $0.createdAt) < ($1.sortOrder, $1.createdAt) }
+        // 지우기로 표시된 사진은 뺀다 — 저장 전까지 관계에 남아 있을 수 있고, 저장된 뒤에 읽으면 죽는다.
+        (photos ?? []).filter { !$0.isDeleted }
+            .sorted { ($0.sortOrder, $0.createdAt) < ($1.sortOrder, $1.createdAt) }
     }
 
     var heroPhoto: VisitPhoto? {

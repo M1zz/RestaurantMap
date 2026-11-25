@@ -27,7 +27,8 @@ struct PhotoGalleryView: View {
 
     @ViewBuilder
     private func photoThumbnail(for photo: VisitPhoto, at index: Int) -> some View {
-        PhotoDataImage(data: photo.data) { image in
+        // 100pt 칸이다 — 원본 크기로 풀지 않는다 (사진이 많은 방문에서 메모리로 꺼지던 자리)
+        PhotoDataImage(data: photo.data, maxPixel: 400, cacheKey: photo.id.uuidString) { image in
             image
                 .resizable()
                 .aspectRatio(contentMode: .fill)
@@ -89,6 +90,10 @@ struct PhotoGalleryView: View {
 /// 기록 안의 사진 데이터를 화면 밖에서 풀어 그린다 (AsyncImage 의 파일 URL 자리를 대신한다).
 struct PhotoDataImage<Content: View, Loading: View, Failure: View>: View {
     let data: Data?
+    /// 긴 변을 이 픽셀까지만 푼다. nil 이면 원본 크기 (크게 보는 화면).
+    var maxPixel: CGFloat? = nil
+    /// 줄인 그림을 잠깐 쥐어 둘 이름 (사진 ID). nil 이면 쥐어 두지 않는다.
+    var cacheKey: String? = nil
     @ViewBuilder let content: (Image) -> Content
     @ViewBuilder let loading: () -> Loading
     @ViewBuilder let failure: () -> Failure
@@ -108,8 +113,22 @@ struct PhotoDataImage<Content: View, Loading: View, Failure: View>: View {
         }
         .task(id: data?.count ?? 0) {
             guard let data else { failed = true; return }
-            let decoded = await Task.detached(priority: .userInitiated) { UIImage(data: data) }.value
-            if let decoded { image = decoded } else { failed = true }
+            let key = cacheKey.flatMap { key in maxPixel.map { "\(key)@\(Int($0))" as NSString } }
+            if let key, let cached = PhotoDownsampler.thumbnails.object(forKey: key) {
+                image = cached
+                return
+            }
+            let maxPixel = maxPixel
+            let decoded = await Task.detached(priority: .userInitiated) { () -> UIImage? in
+                if let maxPixel { return PhotoDownsampler.image(from: data, maxPixel: maxPixel) }
+                return UIImage(data: data)
+            }.value
+            if let decoded {
+                if let key { PhotoDownsampler.thumbnails.setObject(decoded, forKey: key, cost: decoded.cgImage.map { $0.bytesPerRow * $0.height } ?? 0) }
+                image = decoded
+            } else {
+                failed = true
+            }
         }
     }
 }

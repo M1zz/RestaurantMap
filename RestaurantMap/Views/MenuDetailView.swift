@@ -13,10 +13,19 @@ struct MenuDetailView: View {
     @State private var editIsSignature = false
 
     var sortedVisits: [Visit] {
-        (menuItem.visits ?? []).sorted(by: { $0.visitDate > $1.visitDate })
+        (menuItem.visits ?? []).filter { !$0.isDeleted }.sorted(by: { $0.visitDate > $1.visitDate })
     }
 
     var body: some View {
+        // 열려 있는 사이 지워진 메뉴의 속성을 읽으면 죽는다 — 빈 화면으로 둔다
+        if menuItem.isGone {
+            Color.clear
+        } else {
+            content
+        }
+    }
+
+    private var content: some View {
         NavigationStack {
             List {
                 // 메뉴 정보
@@ -168,6 +177,8 @@ struct MenuDetailView: View {
         menuItem.price = Int(editPrice.filter { $0.isNumber })
         menuItem.menuDescription = editDescription
         menuItem.isSignature = editIsSignature
+        // 고친 것을 바로 내린다
+        modelContext.saveNow()
     }
 }
 
@@ -176,6 +187,10 @@ struct MenuVisitRowView: View {
     let visit: Visit
 
     var body: some View {
+        if !visit.isGone { row }
+    }
+
+    private var row: some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack {
                 Text(visit.visitDate, format: .dateTime.year().month().day())

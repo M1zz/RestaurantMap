@@ -9,7 +9,8 @@ struct MenuListView: View {
     @State private var selectedMenu: MenuItem?
 
     var sortedMenus: [MenuItem] {
-        (restaurant.menus ?? []).sorted { menu1, menu2 in
+        // 지우기로 표시된 메뉴는 저장 전까지 관계에 남아 있을 수 있다 — 줄로 그리지 않는다
+        (restaurant.menus ?? []).filter { !$0.isDeleted }.sorted { menu1, menu2 in
             // 대표 메뉴가 먼저
             if menu1.isSignature != menu2.isSignature {
                 return menu1.isSignature
@@ -24,6 +25,15 @@ struct MenuListView: View {
     }
 
     var body: some View {
+        // 식당이 지워진 뒤에도 이 화면이 한 박자 남아 다시 그려질 수 있다
+        if restaurant.isGone {
+            Color.clear
+        } else {
+            content
+        }
+    }
+
+    private var content: some View {
         List {
             if sortedMenus.isEmpty {
                 Section {
@@ -90,9 +100,13 @@ struct MenuListView: View {
     }
 
     private func deleteMenus(at offsets: IndexSet) {
-        for index in offsets {
-            modelContext.delete(sortedMenus[index])
+        // 지우는 동안 목록이 바뀌어도 번호가 어긋나지 않게 먼저 한 번만 읽는다
+        let menus = sortedMenus
+        for index in offsets where index < menus.count {
+            if selectedMenu === menus[index] { selectedMenu = nil }
+            modelContext.delete(menus[index])
         }
+        modelContext.saveNow()
     }
 }
 
@@ -101,6 +115,11 @@ struct MenuRowView: View {
     let menuItem: MenuItem
 
     var body: some View {
+        // 지워진 메뉴의 줄이 한 박자 남아 다시 그려져도 모델을 읽지 않는다
+        if !menuItem.isGone { row }
+    }
+
+    private var row: some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack {
                 Text(menuItem.name)

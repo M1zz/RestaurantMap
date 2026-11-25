@@ -64,7 +64,9 @@ struct AddRestaurantView: View {
         self.initialPhone = initialPhone
         self.initialCategory = initialCategory
 
-        let initialCoordinate = coordinate ?? CLLocationCoordinate2D(latitude: 37.5665, longitude: 126.9780)
+        // 지도에 찍을 수 없는 좌표(범위 밖 · NaN)로 지도 영역을 만들면 죽는다 — 그런 좌표는 기본 위치로 바꾼다
+        let initialCoordinate = coordinate.flatMap { $0.isMappable ? $0 : nil }
+            ?? CLLocationCoordinate2D(latitude: 37.5665, longitude: 126.9780)
         _selectedCoordinate = State(initialValue: initialCoordinate)
         _region = State(initialValue: MKCoordinateRegion(
             center: initialCoordinate,
@@ -316,6 +318,8 @@ struct AddRestaurantView: View {
             try modelContext.save()
         } catch {
             logger.error("식당 저장 실패: \(error.localizedDescription)")
+            // 저장되지 않은 식당을 컨텍스트에 남겨 두면 다시 '저장' 을 누를 때마다 같은 식당이 하나씩 더 생긴다
+            modelContext.rollback()
             saveFailed = true
             return
         }
@@ -345,7 +349,8 @@ struct MapSelectionView: View {
         NavigationStack {
             Map(position: $position)
                 .onMapCameraChange { context in
-                    selectedLocation = context.region.center
+                    // 쓸 수 없는 중심(지구가 다 보이게 줄였을 때 등)은 받지 않는다 — 식당 좌표로 저장된다
+                    if context.region.center.isMappable { selectedLocation = context.region.center }
                 }
                 .navigationTitle("위치 선택")
                 .navigationBarTitleDisplayMode(.inline)

@@ -22,9 +22,12 @@ struct RestaurantMapApp: App {
         // 저장소는 금고 뒤에 연다 (프로퍼티 초기값으로 두면 init 보다 먼저 열린다)
         sharedModelContainer = Self.makeModelContainer()
 
+        // 메모리 저장소마저 열지 못했으면 저장소 없이 뜬다 — 죽지 않고 안내 화면 한 장만 보인다 (→ StoreUnavailableView).
+        // 인텐트 · 알림 · 색인은 저장소가 있어야 하므로 걸지 않는다.
+        guard let container = sharedModelContainer else { return }
+
         // Siri · Spotlight 인텐트가 같은 저장소를 읽게 한다 (→ RestaurantIntents.swift).
         // 인텐트는 화면 없이 앱을 깨워 돌기도 해서, 화면이 아니라 여기서 넘긴다.
-        let container = sharedModelContainer
         AppDependencyManager.shared.add(dependency: container)
         // 다녀온 뒤 알림: 시스템이 방문을 알리려고 앱을 깨웠을 때도 받을 수 있게 화면보다 먼저 건다.
         VisitReminderManager.shared.configure(with: container)
@@ -54,14 +57,15 @@ struct RestaurantMapApp: App {
         #endif
     }
 
-    let sharedModelContainer: ModelContainer
+    /// 저장소. 디스크도 메모리도 열지 못했을 때만 nil 이다.
+    let sharedModelContainer: ModelContainer?
 
     /// 앱 자체 iCloud 컨테이너. entitlements 에 이 이름이 있어야 1 단계가 열린다. 백업(CloudKitBackupService)도 같은 곳을 쓴다.
     static let cloudContainer = "iCloud.com.Ysoup.restaurantmap"
     /// 이번 실행이 iCloud 와 이어져 열렸는가 (makeModelContainer 가 한 번 정한다).
     private(set) static var usesCloud = false
 
-    private static func makeModelContainer() -> ModelContainer {
+    private static func makeModelContainer() -> ModelContainer? {
         let logger = Logger(subsystem: "com.restaurantmap", category: "App")
         logger.info("ModelContainer 초기화 시작")
 
@@ -189,38 +193,51 @@ struct RestaurantMapApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .storeFallbackNotice()
-                // 아이폰 듀오: 접힘을 재서 아래로 흘리고, 시트 · 알림창이 접힌 선을 비키게 한다.
-                .foldAware()
-                // 처음 한 번, 이 앱이 무엇을 하는지 (→ WelcomeView.swift)
-                .welcomeOnce()
-                // 유료가 된 날 콘페티, 모든 사용자에게 한 번의 감사 (LeeoKit)
-                .leeoCelebrations(appName: RestaurantMapSpec.appName)
-                .leeoSatisfactionCheck(RestaurantMapSpec.self)
-                // 개발자가 보낸 의견에 답장하면, 앱이 앞으로 올 때 답장을 시트로 보여 준다 (LeeoKit).
-                .leeoFeedbackReplyNotice(RestaurantMapSpec.self)
-                // Spotlight 에 싣는 식당을 지금 것에 맞춘다. 열 때 한 번, 뒤로 보낼 때마다.
-                .task { await RestaurantLibrary.reindex(sharedModelContainer) }
-                .onChange(of: scenePhase) { _, phase in
-                    if phase == .background { Task { await RestaurantLibrary.reindex(sharedModelContainer) } }
-                    // 다른 기기에서 산 것 · 구독 만료 · 환불을 앞으로 나올 때마다 맞춘다.
-                    if phase == .active { Task { await purchases.refresh() } }
-                }
-                .task {
-                    logger.info("RestaurantMap 앱 시작됨")
-                    VisitReminderManager.shared.configure(with: sharedModelContainer)
-                    await VisitReminderManager.shared.carryOverEarlierChoice()
-                    // 칸을 App Store 에 물은 뒤에 다녀온 뒤 기록 알림을 켜거나 끈다.
-                    await purchases.refresh()
-                    await VisitReminderManager.shared.apply(allowed: purchases.allows(.visitReminder))
-                }
-                // Pro 를 사거나 구독이 끝나면 알림도 따라 켜지거나 꺼진다.
-                .onChange(of: purchases.allows(.visitReminder)) { _, allowed in
-                    Task { await VisitReminderManager.shared.apply(allowed: allowed) }
-                }
+            if let container = sharedModelContainer {
+                root(container)
+            } else {
+                // 저장소를 하나도 열지 못했다. 모델을 읽는 화면은 띄우지 않는다.
+                StoreUnavailableView()
+            }
         }
-        .modelContainer(sharedModelContainer)
+    }
+
+    private func root(_ container: ModelContainer) -> some View {
+        ContentView()
+            .storeFallbackNotice()
+            // 아이폰 듀오: 접힘을 재서 아래로 흘리고, 시트 · 알림창이 접힌 선을 비키게 한다.
+            .foldAware()
+            // 처음 한 번, 이 앱이 무엇을 하는지 (→ WelcomeView.swift)
+            .welcomeOnce()
+            // 유료가 된 날 콘페티, 모든 사용자에게 한 번의 감사 (LeeoKit)
+            .leeoCelebrations(appName: RestaurantMapSpec.appName)
+            .leeoSatisfactionCheck(RestaurantMapSpec.self)
+            // 개발자가 보낸 의견에 답장하면, 앱이 앞으로 올 때 답장을 시트로 보여 준다 (LeeoKit).
+            .leeoFeedbackReplyNotice(RestaurantMapSpec.self)
+            // Spotlight 에 싣는 식당을 지금 것에 맞춘다. 열 때 한 번, 뒤로 보낼 때마다.
+            .task { await RestaurantLibrary.reindex(container) }
+            .onChange(of: scenePhase) { _, phase in
+                if phase == .background {
+                    // 뒤로 갈 때 아직 내려가지 않은 변경을 먼저 내린다 — 뒤에서 앱이 정리돼도 방금 적은 것이 남는다.
+                    container.mainContext.saveNow()
+                    Task { await RestaurantLibrary.reindex(container) }
+                }
+                // 다른 기기에서 산 것 · 구독 만료 · 환불을 앞으로 나올 때마다 맞춘다.
+                if phase == .active { Task { await purchases.refresh() } }
+            }
+            .task {
+                logger.info("RestaurantMap 앱 시작됨")
+                VisitReminderManager.shared.configure(with: container)
+                await VisitReminderManager.shared.carryOverEarlierChoice()
+                // 칸을 App Store 에 물은 뒤에 다녀온 뒤 기록 알림을 켜거나 끈다.
+                await purchases.refresh()
+                await VisitReminderManager.shared.apply(allowed: purchases.allows(.visitReminder))
+            }
+            // Pro 를 사거나 구독이 끝나면 알림도 따라 켜지거나 꺼진다.
+            .onChange(of: purchases.allows(.visitReminder)) { _, allowed in
+                Task { await VisitReminderManager.shared.apply(allowed: allowed) }
+            }
+            .modelContainer(container)
     }
 }
 
@@ -287,7 +304,8 @@ enum StoreFallback {
     /// 이번 실행이 임시(메모리) 저장소로 열렸는가
     private(set) static var isActive = false
 
-    static func memoryContainer(schema: Schema, after error: Error) -> ModelContainer {
+    /// 메모리 저장소마저 열지 못하면 nil — 앱을 죽이지 않고 안내 화면만 띄운다 (→ StoreUnavailableView).
+    static func memoryContainer(schema: Schema, after error: Error) -> ModelContainer? {
         isActive = true
         print("⚠️ 저장소를 열지 못해 이번 실행은 메모리에서 엽니다: \(error)")
         do {
@@ -296,8 +314,70 @@ enum StoreFallback {
                 configurations: ModelConfiguration(schema: schema, isStoredInMemoryOnly: true, cloudKitDatabase: .none)
             )
         } catch {
-            // 메모리 저장소마저 안 되는 건 스키마 자체가 잘못된 것 — 개발 중에 바로 드러난다
-            fatalError("메모리 저장소도 열지 못함: \(error)")
+            // 예전에는 여기서 fatalError 로 죽었다. 사용자 기기에서 죽으면 기록을 되살릴 길도 같이 막힌다.
+            assertionFailure("메모리 저장소도 열지 못함: \(error)")
+            Logger(subsystem: "com.restaurantmap", category: "App").fault("메모리 저장소도 열지 못함: \(error.localizedDescription)")
+            return nil
+        }
+    }
+}
+
+/// 저장소를 하나도 열지 못한 날의 화면. 모델을 읽지 않는다.
+private struct StoreUnavailableView: View {
+    var body: some View {
+        VStack(spacing: 16) {
+            Image(systemName: "externaldrive.badge.exclamationmark")
+                .font(.system(size: 56))
+                .foregroundStyle(.orange)
+                .accessibilityHidden(true)
+            Text("기록을 열지 못했어요")
+                .font(.title2.weight(.semibold))
+            Text("저장된 기록은 지워지지 않았어요. 다만 지금 적는 내용은 저장되지 않으니, 앱을 껐다 켜 보세요.")
+                .font(.body)
+                .foregroundStyle(.secondary)
+                .multilineTextAlignment(.center)
+        }
+        .padding(32)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+}
+
+// MARK: - 지워진 모델 · 바로 저장
+
+extension PersistentModel {
+    /// 이미 지워진 모델인가. 지워진 모델의 속성을 읽으면 SwiftData 가 그 자리에서 앱을 죽인다
+    /// ("backing data could no longer be found") — 화면이 모델을 쥔 채 다시 그려질 때 먼저 이것을 본다.
+    /// 지우고 저장하기 전에는 `isDeleted`, 저장한 뒤에는 `modelContext == nil` 로 드러난다.
+    /// ⚠️ 아직 insert 하지 않은 새 모델도 `modelContext == nil` 이다. 화면에는 insert 한 모델만 넘길 것.
+    var isGone: Bool { modelContext == nil || isDeleted }
+}
+
+/// 저장이 실패했다는 것을 맨 바깥 화면에 한 번 알린다 (→ StoreFallbackNotice).
+@MainActor @Observable
+final class SaveFailureNotice {
+    static let shared = SaveFailureNotice()
+    var isPresented = false
+    /// 같은 말을 되풀이하지 않는다 — 이번 실행에 한 번.
+    @ObservationIgnored private var told = false
+
+    func report(_ error: Error) {
+        Logger(subsystem: "com.restaurantmap", category: "App").error("저장 실패: \(error.localizedDescription)")
+        guard !told else { return }
+        told = true
+        isPresented = true
+    }
+}
+
+extension ModelContext {
+    /// 방금 적은 것을 자동 저장을 기다리지 않고 바로 내린다 — 적은 직후 앱이 꺼져도 남게.
+    /// 실패하면 이번 실행에 한 번 알린다. 뷰 body 안에서는 부르지 않는다(버튼 · onDisappear 에서만).
+    @MainActor
+    func saveNow() {
+        guard hasChanges else { return }
+        do {
+            try save()
+        } catch {
+            SaveFailureNotice.shared.report(error)
         }
     }
 }
@@ -311,11 +391,14 @@ extension View {
 
 private struct StoreFallbackNotice: ViewModifier {
     @State private var isPresented = StoreFallback.isActive
+    @Bindable private var saveFailure = SaveFailureNotice.shared
 
     func body(content: Content) -> some View {
         content.alert("기록을 열지 못했어요", isPresented: $isPresented) {
         } message: {
             Text("저장된 기록은 지워지지 않았어요. 다만 지금 적는 내용은 저장되지 않으니, 앱을 껐다 켜 보세요.")
         }
+        // 닫으면서 바로 저장하는 자리(→ ModelContext.saveNow)가 실패했을 때
+        .saveFailureAlert($saveFailure.isPresented)
     }
 }

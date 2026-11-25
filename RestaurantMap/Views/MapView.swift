@@ -78,6 +78,28 @@ enum POICategoryMapper {
     }
 }
 
+// MARK: - 지도에 넘겨도 되는 좌표 · 영역
+
+extension CLLocationCoordinate2D {
+    /// 지도에 찍어도 되는 좌표인가. 위도 ±90 · 경도 ±180 밖이거나 NaN 인 좌표를 MapKit 에 넘기면
+    /// "Invalid Coordinate / Invalid Region" 예외로 앱이 죽는다 (가져온 파일 · 되살린 백업 · 남이 올린 후기에서 들어올 수 있다).
+    var isMappable: Bool {
+        latitude.isFinite && longitude.isFinite && CLLocationCoordinate2DIsValid(self)
+    }
+}
+
+extension MKCoordinateRegion {
+    /// 검색 · 카메라에 써도 되는 영역으로 다듬는다. 쓸 수 없으면 nil.
+    /// 지도를 지구가 다 보이게 줄였을 때 넘어오는 영역은 폭이 180°/360° 를 넘거나 NaN 일 수 있다.
+    var mappable: MKCoordinateRegion? {
+        guard center.isMappable, span.latitudeDelta.isFinite, span.longitudeDelta.isFinite,
+              span.latitudeDelta > 0, span.longitudeDelta > 0 else { return nil }
+        return MKCoordinateRegion(center: center,
+                                  span: MKCoordinateSpan(latitudeDelta: min(span.latitudeDelta, 180),
+                                                         longitudeDelta: min(span.longitudeDelta, 360)))
+    }
+}
+
 struct MapView: View {
     @Environment(\.modelContext) private var modelContext
     let restaurants: [Restaurant]
@@ -130,8 +152,12 @@ struct MapView: View {
     @StateObject private var kakaoService = KakaoLocalSearchService.shared
     private let logger = Logger(subsystem: "com.restaurantmap", category: "MapView")
     
+    /// 지도에 세워 두는 주변 장소 핀의 한도.
+    private static let maxNearbyPOIs = 400
+
     /// 식당 자세히: 아이폰 듀오를 폈으면 결과 쪽 판에, 아니면 지금처럼 시트로.
     private func openDetail(_ restaurant: Restaurant) {
+        guard !restaurant.isGone else { return }
         if foldPick?.show(restaurant, in: fold) == true { return }
         selectedRestaurant = restaurant
         showingDetail = true
@@ -223,8 +249,17 @@ struct MapView: View {
                 }
             }
             .sheet(isPresented: $showingDetail) {
-                if let restaurant = selectedRestaurant {
+                // 시트 안에서 식당을 지우면 내려가는 동안에도 이 자리가 다시 그려진다 — 지워진 식당은 넘기지 않는다
+                if let restaurant = selectedRestaurant, !restaurant.isGone {
                     RestaurantDetailView(restaurant: restaurant)
+                }
+            }
+            .onChange(of: showingDetail) { _, isShowing in
+                // 닫힌 뒤에는 쥐고 있지 않는다 (지워진 식당을 계속 가리키지 않게). 내려가는 동안 빈 화면이 되지 않게 조금 뒤에.
+                if !isShowing {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        if !showingDetail { selectedRestaurant = nil }
+                    }
                 }
             }
             .sheet(isPresented: $showingPOIDetail) {
@@ -261,7 +296,7 @@ struct MapView: View {
             }
             .onChange(of: locationDelegate.locationUpdated) { _, _ in
                 // 앱 시작 시 한 번만 현재 위치로 이동
-                if !hasInitializedPosition, let location = locationDelegate.userLocation {
+                if !hasInitializedPosition, let location = locationDelegate.userLocation, location.isMappable {
                     logger.info("지도 초기 위치 설정: 위도=\(location.latitude), 경도=\(location.longitude)")
                     // 사용자 위치를 중심으로 적절한 줌 레벨로 지도 이동
                     // span 값: 0.01은 약 1km 반경을 보여줍니다
@@ -303,7 +338,7 @@ struct MapView: View {
             if !showSavedOnly {
                 // 카카오 검색 결과 마커 (파란색 - 우선 표시)
                 if isUsingKakaoSearch {
-                    ForEach(kakaoSearchResults) { place in
+                    ForEach(kakaoSearchResults.filter(\.coordinate.isMappable)) { place in
                         Annotation(place.placeName, coordinate: place.coordinate) {
                             KakaoSearchResultPinView(place: place) {
                                 logger.info("🎯 카카오 검색 결과 마커 탭됨: \(place.placeName)")
@@ -316,7 +351,7 @@ struct MapView: View {
 
                 // 카카오 주변 장소 마커 (기본색 - 검색 결과가 아닌 것들만)
                 if isUsingKakaoSearch {
-                    ForEach(kakaoPlaces) { place in
+                    ForEach(kakaoPlaces.filter(\.coordinate.isMappable)) { place in
                         // 검색 결과에 포함되지 않은 것만 표시
                         if !kakaoSearchResults.contains(where: { $0.id == place.id }) {
                             Annotation(place.placeName, coordinate: place.coordinate) {
@@ -333,7 +368,7 @@ struct MapView: View {
                 // Apple Maps POI 마커
                 if !isUsingKakaoSearch {
                     ForEach(nearbyPOIs, id: \.self) { item in
-                        if let coord = item.placemark.location?.coordinate {
+                        if let coord = item.placemark.location?.coordinate, coord.isMappable {
                             Annotation(item.name ?? String(localized: "장소"), coordinate: coord) {
                                 NearbyPOIPinView(mapItem: item) {
                                     logger.info("🎯 POI 마커 탭됨: \(item.name ?? "이름없음")")
@@ -346,7 +381,7 @@ struct MapView: View {
                 }
 
                 ForEach(searchResults, id: \.self) { item in
-                    if let coord = item.placemark.location?.coordinate {
+                    if let coord = item.placemark.location?.coordinate, coord.isMappable {
                         Annotation(item.name ?? String(localized: "장소"), coordinate: coord) {
                             SearchResultPinView(mapItem: item) {
                                 selectSearchResult(item)
@@ -356,7 +391,8 @@ struct MapView: View {
                 }
             }
 
-            ForEach(restaurants) { restaurant in
+            // 지워진 식당 · 지도에 찍을 수 없는 좌표의 식당은 핀을 세우지 않는다 (목록에서는 그대로 보인다)
+            ForEach(restaurants.filter { !$0.isGone && $0.coordinate.isMappable }) { restaurant in
                 Annotation(restaurant.name, coordinate: restaurant.coordinate) {
                     RestaurantPinView(restaurant: restaurant, rank: ranks[restaurant.persistentModelID]) {
                         openDetail(restaurant)
@@ -373,10 +409,12 @@ struct MapView: View {
             logger.info("📍 지도 카메라 변경 감지 - 중심: \(context.region.center.latitude), \(context.region.center.longitude)")
             logger.info("📍 지도 범위 - span: \(context.region.span.latitudeDelta), \(context.region.span.longitudeDelta)")
 
-            mapRegion = context.region
+            // 지구가 다 보이게 줄였을 때의 영역은 검색에 넘길 수 없다 — 다듬어서 쓰고, 안 되면 이번은 건너뛴다
+            guard let region = context.region.mappable else { return }
+            mapRegion = region
 
             // 애플맵으로 주변 POI 검색 (카카오는 검색창에서만 사용)
-            searchNearbyPOIsIfNeeded(in: context.region)
+            searchNearbyPOIsIfNeeded(in: region)
         }
         .onChange(of: mapSelection) { oldValue, newValue in
             logger.info("맵 선택 변경: \(String(describing: newValue?.name))")
@@ -433,9 +471,10 @@ struct MapView: View {
 
     private func addRestaurantAtCurrentLocation() {
         // 현재 위치를 사용하거나, 없으면 기본 위치 사용
-        selectedCoordinate = locationDelegate.userLocation ?? CLLocationCoordinate2D(latitude: 37.5665, longitude: 126.9780)
+        let coordinate = locationDelegate.userLocation ?? CLLocationCoordinate2D(latitude: 37.5665, longitude: 126.9780)
+        selectedCoordinate = coordinate
         selectedMapItem = nil
-        logger.info("현재 위치에 식당 추가 시작: 위도=\(selectedCoordinate!.latitude), 경도=\(selectedCoordinate!.longitude)")
+        logger.info("현재 위치에 식당 추가 시작: 위도=\(coordinate.latitude), 경도=\(coordinate.longitude)")
         showingAddSheet = true
     }
 
@@ -469,7 +508,7 @@ struct MapView: View {
                         }
 
                         // 첫 번째 결과로 지도 이동 및 줌인
-                        if let firstPlace = result.documents.first {
+                        if let firstPlace = result.documents.first(where: \.coordinate.isMappable) {
                             // 애니메이션과 함께 이동 (줌인된 상태 유지)
                             withAnimation(reduceMotion ? nil : .easeInOut(duration: 0.5)) {
                                 position = .region(MKCoordinateRegion(
@@ -528,11 +567,15 @@ struct MapView: View {
                 if let response = response {
                     searchResults = response.mapItems
                     logger.info("검색 결과: \(response.mapItems.count)개")
-                    if !searchResults.isEmpty {
+                    if searchResults.isEmpty {
+                        // 결과가 없으면 아무 일도 없던 것처럼 보였다 — 카카오 검색과 같은 말로 알린다
+                        errorMessage = String(localized: "'\(searchText)' 검색 결과가 없습니다.\n\n다른 키워드로 시도해보세요.")
+                        showingError = true
+                    } else {
                         isSearchingManual = true
 
                         // 첫 번째 결과로 지도 이동
-                        if let firstResult = response.mapItems.first {
+                        if let firstResult = response.mapItems.first(where: \.placemark.coordinate.isMappable) {
                             // 애니메이션과 함께 이동 (줌인된 상태 유지)
                             withAnimation(reduceMotion ? nil : .easeInOut(duration: 0.5)) {
                                 position = .region(MKCoordinateRegion(
@@ -588,15 +631,22 @@ struct MapView: View {
     private func selectSearchResult(_ mapItem: MKMapItem) {
         logger.info("검색 결과 선택: \(mapItem.name ?? "이름 없음")")
 
-        selectedCoordinate = mapItem.placemark.coordinate
-        selectedMapItem = mapItem
-        temporaryPin = mapItem.placemark.coordinate
+        // 좌표를 쓸 수 없는 결과면 지도는 그대로 두고 추가 화면만 연다 (추가 화면이 기본 위치에서 시작한다)
+        let coordinate = mapItem.placemark.coordinate
+        if coordinate.isMappable {
+            selectedCoordinate = coordinate
+            temporaryPin = coordinate
 
-        // 선택한 위치로 지도 이동
-        position = .region(MKCoordinateRegion(
-            center: mapItem.placemark.coordinate,
-            span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-        ))
+            // 선택한 위치로 지도 이동
+            position = .region(MKCoordinateRegion(
+                center: coordinate,
+                span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+            ))
+        } else {
+            selectedCoordinate = nil
+            temporaryPin = nil
+        }
+        selectedMapItem = mapItem
 
         isSearchingManual = false
         searchText = ""
@@ -636,8 +686,9 @@ struct MapView: View {
         Task {
             do {
                 // 반경 계산 (span을 미터로 변환)
-                let radiusInMeters = Int(region.span.latitudeDelta * 111_000 / 2)  // 1도 ≈ 111km
-                let clampedRadius = min(radiusInMeters, 20000)  // 최대 20km
+                // 유한한 값으로 먼저 자른 뒤에 Int 로 바꾼다 (NaN · 무한대를 Int 로 바꾸면 죽는다). 최대 20km
+                let meters = region.span.latitudeDelta * 111_000 / 2  // 1도 ≈ 111km
+                let clampedRadius = meters.isFinite ? Int(min(max(meters, 1), 20000)) : 20000
 
                 let places = try await kakaoService.searchNearbyPlaces(
                     coordinate: region.center,
@@ -740,6 +791,9 @@ struct MapView: View {
                 if let error = error {
                     let nsError = error as NSError
                     logger.error("❌ '\(keyword)' 검색 실패: \(error.localizedDescription) (code: \(nsError.code))")
+                    // "이 근처에 그런 곳이 없다"(placemarkNotFound)는 실패가 아니다. 이것까지 실패로 치면
+                    // 열다섯 개 중 하나만 비어도 전부 다시 불러서 지도 검색이 잠시 막힌다(요청 제한).
+                    if (error as? MKError)?.code == .placemarkNotFound { return }
                     hasError = true
                     lastError = error
                     return
@@ -757,8 +811,8 @@ struct MapView: View {
 
             // 네트워크 오류 발생 시 재시도
             if hasError, let error = lastError {
-                let nsError = error as NSError
-                if nsError.domain == "MKErrorDomain" && nsError.code == 4 && retryCount < 3 {
+                // 서버에 닿지 못한 것만 다시 부른다. 요청 제한(loadingThrottled)은 다시 부를수록 길어진다.
+                if (error as? MKError)?.code == .serverFailure && allResults.isEmpty && retryCount < 3 {
                     logger.warning("⚠️ 네트워크 오류 - 1초 후 재시도...")
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                         self.searchNearbyPOIs(in: region, retryCount: retryCount + 1)
@@ -787,7 +841,9 @@ struct MapView: View {
                     }
                 }
 
-                nearbyPOIs = uniquePOIs
+                // 지도를 옮길 때마다 쌓이기만 하면 핀이 수천 개가 되어 메모리로 꺼진다 — 최근 것만 남긴다
+                nearbyPOIs = Array(uniquePOIs.suffix(Self.maxNearbyPOIs))
+                if searchedRegions.count > 500 { searchedRegions.removeAll() }
                 logger.info("✅ nearbyPOIs 배열 업데이트 완료: \(nearbyPOIs.count)개 (중복 제거 후)")
             } else {
                 logger.warning("⚠️ 모든 검색이 실패하거나 결과가 없습니다")
@@ -926,6 +982,11 @@ struct RestaurantPinView: View {
     @Environment(\.accessibilityDifferentiateWithoutColor) private var differentiateWithoutColor
 
     var body: some View {
+        // 지워진 식당의 핀이 한 박자 남아 다시 그려져도 모델을 읽지 않는다
+        if !restaurant.isGone { pin }
+    }
+
+    private var pin: some View {
         // 얼마나 자주 갔는지가 한눈에 보이는 도장 (→ VisitStamp.swift). 지도 위라 흰 바탕과 그림자를 깐다.
         VisitStamp(restaurant: restaurant, rank: rank, size: 40)
             .background(.background, in: Circle())
@@ -1182,8 +1243,14 @@ struct POIDetailView: View {
                     VStack(alignment: .leading, spacing: 8) {
                         Label("전화번호", systemImage: "phone.fill")
                             .font(.headline)
-                        Link(phone, destination: URL(string: "tel:\(phone.filter { $0.isASCII && ($0.isNumber || $0 == "+") })")!)
-                            .font(.body)
+                        // 번호로 바꿀 수 없는 문자열이면 누를 수 없는 글자로 보인다 (강제로 풀지 않는다)
+                        if let call = URL(string: "tel:\(phone.filter { $0.isASCII && ($0.isNumber || $0 == "+") })") {
+                            Link(phone, destination: call)
+                                .font(.body)
+                        } else {
+                            Text(phone)
+                                .font(.body)
+                        }
                     }
                     .padding(.horizontal)
                 }
@@ -1373,8 +1440,13 @@ struct KakaoPlaceDetailView: View {
                         VStack(alignment: .leading, spacing: 8) {
                             Label("전화번호", systemImage: "phone.fill")
                                 .font(.headline)
-                            Link(place.phone, destination: URL(string: "tel:\(place.phone.filter { $0.isASCII && ($0.isNumber || $0 == "+") })")!)
-                                .font(.body)
+                            if let call = URL(string: "tel:\(place.phone.filter { $0.isASCII && ($0.isNumber || $0 == "+") })") {
+                                Link(place.phone, destination: call)
+                                    .font(.body)
+                            } else {
+                                Text(place.phone)
+                                    .font(.body)
+                            }
                         }
                         .padding(.horizontal)
                     }

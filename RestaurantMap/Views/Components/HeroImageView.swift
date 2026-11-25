@@ -11,7 +11,8 @@ struct HeroImageView: View {
     }
 
     var body: some View {
-        PhotoDataImage(data: data) { image in
+        // 화면 폭만큼만 푼다
+        PhotoDataImage(data: data, maxPixel: 1600) { image in
             image
                 .resizable()
                 .aspectRatio(contentMode: .fill)

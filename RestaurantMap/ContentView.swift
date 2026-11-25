@@ -15,6 +15,8 @@ struct ContentView: View {
     @State private var showsGraduation = false
 
     var body: some View {
+        // 방금 지운 식당이 질의가 새로 고쳐지기 전 한 박자 남아 있을 수 있다. 지워진 모델을 읽으면 죽으므로 여기서 한 번 거른다.
+        let restaurants = restaurants.filter { !$0.isGone }
         TabView(selection: $selectedTab) {
             // 아이폰 듀오를 펴면 왼쪽(세로면 아래)에 이 탭, 오른쪽(위)에 고른 식당 또는 취향이 선다.
             // 접혀 있거나 보통 아이폰이면 `FoldTab` 은 이 탭만 그린다. 지금 화면 그대로.
@@ -44,8 +46,12 @@ struct ContentView: View {
         }
         // Siri · Spotlight 에서 고른 식당 (→ RestaurantIntents.swift)
         .sheet(item: $router.restaurantID) { id in
-            if let restaurant = modelContext.model(for: id) as? Restaurant {
+            // `modelContext.model(for:)` 은 이미 지운 식당의 ID 에도 빈 껍데기를 돌려주고, 그것을 읽는 순간 죽는다
+            // (Spotlight · Siri 에 남아 있던 옛 항목). 지금 저장된 식당 중에서 찾는다.
+            if let restaurant = restaurants.first(where: { $0.persistentModelID == id }) {
                 NavigationStack { RestaurantDetailView(restaurant: restaurant) }
+            } else {
+                ErrorSheetView()
             }
         }
         // 펴면 시스템 탭바 대신 고르는 쪽 판 바닥에 막대가 선다. 취향은 결과 쪽에 서 있다.

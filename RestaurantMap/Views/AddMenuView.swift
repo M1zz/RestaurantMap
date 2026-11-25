@@ -68,6 +68,8 @@ struct AddMenuView: View {
         )
 
         modelContext.insert(menu)
+        // 적은 메뉴를 바로 내린다
+        modelContext.saveNow()
         dismiss()
     }
 }

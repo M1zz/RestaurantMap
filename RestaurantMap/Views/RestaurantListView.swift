@@ -236,7 +236,8 @@ struct RestaurantListView: View {
                 AddRestaurantView(coordinate: nil)
             }
             .sheet(isPresented: $showingDetail) {
-                if let restaurant = selectedRestaurant {
+                // 시트 안에서 식당을 지우면 내려가는 동안에도 이 자리가 다시 그려진다 — 지워진 식당은 넘기지 않는다
+                if let restaurant = selectedRestaurant, !restaurant.isGone {
                     RestaurantDetailViewWrapper(restaurant: restaurant)
                 } else {
                     LoadingSheetView()
@@ -252,7 +253,7 @@ struct RestaurantListView: View {
                 }
             }
             .confirmationDialog(
-                Text("\(pendingDelete?.name ?? "") 지우기"),
+                Text("\(pendingDeleteName) 지우기"),
                 isPresented: Binding(get: { pendingDelete != nil }, set: { if !$0 { pendingDelete = nil } }),
                 titleVisibility: .visible,
                 presenting: pendingDelete
@@ -260,7 +261,8 @@ struct RestaurantListView: View {
                 Button("지우기", role: .destructive) { delete(restaurant) }
                 Button("취소", role: .cancel) {}
             } message: { restaurant in
-                if restaurant.visitCount > 0 {
+                // 지운 직후 창이 닫히는 동안에도 이 글이 다시 그려질 수 있다 — 지워진 식당은 읽지 않는다
+                if !restaurant.isGone, restaurant.visitCount > 0 {
                     Text("방문 기록 \(restaurant.visitCount)개와 사진도 함께 지워져요. 되돌릴 수 없어요.")
                 } else {
                     Text("되돌릴 수 없어요.")
@@ -282,6 +284,12 @@ struct RestaurantListView: View {
                 }
             }
         }
+    }
+
+    /// 지우려는 식당의 이름. 이미 지워졌으면 읽지 않는다.
+    private var pendingDeleteName: String {
+        guard let pendingDelete, !pendingDelete.isGone else { return "" }
+        return pendingDelete.name
     }
 
     private func rows(_ list: [Restaurant], ranks: [PersistentIdentifier: Int]) -> some View {
@@ -343,6 +351,11 @@ struct RestaurantListView: View {
     }
 
     private func delete(_ restaurant: Restaurant) {
+        // 확인 창 · 결과 쪽 판이 지워질 식당을 쥐고 있지 않게 먼저 놓는다 (지운 뒤에 읽으면 죽는다)
+        pendingDelete = nil
+        if selectedRestaurant === restaurant { selectedRestaurant = nil }
+        if foldPick?.restaurant === restaurant { foldPick?.restaurant = nil }
+        guard !restaurant.isGone else { return }
         logger.info("식당 삭제: 방문 \(restaurant.visitCount)개")
         modelContext.delete(restaurant)
         do {
@@ -401,8 +414,13 @@ struct RestaurantRow: View {
     }
 
     var body: some View {
+        // 지워진 식당의 줄이 한 박자 남아 다시 그려져도 모델을 읽지 않는다
+        if !restaurant.isGone { row }
+    }
+
+    private var row: some View {
         let regular = restaurant.regular
-        HStack(spacing: 12) {
+        return HStack(spacing: 12) {
             // 얼마나 자주 갔는지가 한눈에 보이는 도장 (→ VisitStamp.swift)
             VisitStamp(restaurant: restaurant, rank: rank)
             .accessibilityElement(children: .ignore)
@@ -492,6 +510,9 @@ struct RestaurantDetailViewWrapper: View {
                 ErrorSheetView()
             } else if isLoading {
                 LoadingSheetView()
+            } else if restaurant.isGone {
+                // 이 화면에서 지웠거나 동기화로 지워진 식당 — 닫히는 동안 빈 화면으로 둔다
+                Color.clear
             } else {
                 RestaurantDetailView(restaurant: restaurant)
             }
@@ -500,8 +521,8 @@ struct RestaurantDetailViewWrapper: View {
             // 데이터 검증
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                 withAnimation {
-                    // Restaurant 객체가 유효한지 확인
-                    if restaurant.name.isEmpty {
+                    // Restaurant 객체가 유효한지 확인 (그 사이 지워졌으면 속성을 읽지 않는다)
+                    if restaurant.isGone || restaurant.name.isEmpty {
                         hasError = true
                     }
                     isLoading = false

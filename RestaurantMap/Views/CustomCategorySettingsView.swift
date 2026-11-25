@@ -58,9 +58,10 @@ struct CustomCategorySettingsView: View {
     }
 
     private func deleteCategories(at offsets: IndexSet) {
-        for index in offsets {
-            let category = repository.customCategories[index]
-            repository.deleteCustomCategory(id: category.id)
+        // 지우면 배열이 줄어든다 — 번호를 먼저 ID 로 바꿔 두고 지운다 (여러 줄을 한 번에 지워도 범위를 넘지 않게).
+        let ids = offsets.filter { $0 < repository.customCategories.count }.map { repository.customCategories[$0].id }
+        for id in ids {
+            repository.deleteCustomCategory(id: id)
         }
     }
 }

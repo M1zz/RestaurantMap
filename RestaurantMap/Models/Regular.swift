@@ -148,6 +148,7 @@ extension Sequence where Element == Restaurant {
 
     /// 식당 → 순위(1부터). 순위에 없는 식당은 들어 있지 않다.
     func regularRanks() -> [PersistentIdentifier: Int] {
-        Dictionary(uniqueKeysWithValues: rankedRegulars().enumerated().map { ($1.persistentModelID, $0 + 1) })
+        // 같은 식당이 두 번 들어온 목록(화면이 합쳐 넘긴 배열 등)이어도 죽지 않게 — 겹치면 앞 순위를 쓴다.
+        Dictionary(rankedRegulars().enumerated().map { ($1.persistentModelID, $0 + 1) }, uniquingKeysWith: { first, _ in first })
     }
 }

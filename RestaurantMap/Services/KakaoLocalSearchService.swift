@@ -138,6 +138,8 @@ class KakaoLocalSearchService: ObservableObject {
 
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
+        // 기본 60초는 너무 길다 — 연결이 나쁠 때 아무 반응 없이 기다리게 된다
+        request.timeoutInterval = 15
         request.setValue("KakaoAK \(apiKey)", forHTTPHeaderField: "Authorization")
 
         logger.info("🔍 카카오 검색 요청: \(query)")
@@ -190,6 +192,8 @@ class KakaoLocalSearchService: ObservableObject {
 
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
+        // 기본 60초는 너무 길다 — 연결이 나쁠 때 아무 반응 없이 기다리게 된다
+        request.timeoutInterval = 15
         let authHeader = "KakaoAK \(apiKey)"
         request.setValue(authHeader, forHTTPHeaderField: "Authorization")
 

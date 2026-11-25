@@ -90,12 +90,12 @@ struct TasteProfileView: View {
 
     private func selfBinding(_ key: ReferenceWritableKeyPath<TasteProfile, Double?>) -> Binding<Int?> {
         Binding(
-            get: { profile?[keyPath: key].map { Int($0.rounded()) } },
+            get: { profile?[keyPath: key].flatMap { $0.isFinite ? Int(min(max($0, 1), 5).rounded()) : nil } },
             set: { value in
                 let target = profile ?? { let new = TasteProfile(); modelContext.insert(new); return new }()
                 target[keyPath: key] = value.map(Double.init)
                 target.updatedAt = .now
-                try? modelContext.save()
+                modelContext.saveNow()
             })
     }
 

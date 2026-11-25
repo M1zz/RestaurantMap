@@ -147,13 +147,11 @@ class CloudKitBackupService {
             let photos = try await downloadPhotos(of: backupData)
             defer { try? FileManager.default.removeItem(at: photos.folder) }
 
-            // 3. 로컬 데이터 삭제
-            progressMessage = String(localized: "기존 데이터 정리 중...")
-            try await deleteLocalData(modelContainer: modelContainer)
-
-            // 4. 복구된 데이터 저장 — 사진은 기록 안(VisitPhoto)으로
+            // 3 · 4. 지우기와 되살리기를 한 번의 저장으로 묶는다 — 사진은 기록 안(VisitPhoto)으로.
+            // 예전에는 지운 것을 먼저 저장한 뒤에 넣어서, 넣다가 실패하면(깨진 백업 · 저장 공간 부족) 기기의 기록이 통째로 사라졌다.
+            // 이제는 실패하면 되돌려서 지금 기록이 그대로 남는다.
             progressMessage = String(localized: "데이터 복구 중...")
-            let restored = try await restoreLocalData(modelContainer: modelContainer, data: backupData)
+            let restored = try await replaceLocalData(modelContainer: modelContainer, data: backupData)
             try await attachPhotos(photos.files, to: restored, modelContainer: modelContainer)
 
             progressMessage = String(localized: "복구 완료!")
@@ -171,6 +169,8 @@ class CloudKitBackupService {
     /// 로컬 데이터 초기화 (모든 데이터 삭제)
     func resetLocalData(modelContainer: ModelContainer) async -> Bool {
         progressMessage = String(localized: "데이터 초기화 중...")
+        // 지난 실패 문구가 남아 이번 결과처럼 보이지 않게
+        errorMessage = nil
 
         do {
             try await deleteLocalData(modelContainer: modelContainer)
@@ -468,6 +468,12 @@ class CloudKitBackupService {
             let batch = Array(wanted[start..<min(start + 20, wanted.count)])
             let results = try await container.privateCloudDatabase.records(for: batch.map(\.id))
             for item in batch {
+                // 백업에서 사라진 사진(없는 레코드)만 건너뛴다. 연결이 끊겨 못 받은 것까지 건너뛰면
+                // 사진 없이 되살아나고, 다음 백업이 그 사진을 iCloud 에서도 지운다 — 그때는 복구를 멈춘다(기기 기록은 아직 그대로다).
+                if case .failure(let error)? = results[item.id], (error as? CKError)?.code != .unknownItem {
+                    try? FileManager.default.removeItem(at: folder)
+                    throw error
+                }
                 guard case .success(let record)? = results[item.id],
                       let source = (record["image"] as? CKAsset)?.fileURL else { continue }
                 let target = folder.appendingPathComponent("\(item.visitID.uuidString)-\(item.filename)")
@@ -495,9 +501,25 @@ class CloudKitBackupService {
         }
     }
 
-    /// 로컬 데이터 삭제
+    /// 기기의 기록을 백업의 것으로 바꾼다. 지우기와 넣기를 한 번에 저장하고, 실패하면 둘 다 되돌린다.
+    /// 메인 액터에서 쉬지 않고 끝까지 돌기 때문에 그 사이에 자동 저장이 끼어들어 '지운 것만' 내려가지 않는다.
     @MainActor
-    private func deleteLocalData(modelContainer: ModelContainer) throws {
+    private func replaceLocalData(modelContainer: ModelContainer, data: BackupData) throws -> [UUID: Visit] {
+        let context = modelContainer.mainContext
+        // 화면에서 고치던 것이 있으면 먼저 내린다 — 아래에서 되돌릴 때 같이 사라지지 않게
+        if context.hasChanges { try context.save() }
+        do {
+            try deleteLocalData(modelContainer: modelContainer, saves: false)
+            return try restoreLocalData(modelContainer: modelContainer, data: data)
+        } catch {
+            context.rollback()
+            throw error
+        }
+    }
+
+    /// 로컬 데이터 삭제. `saves` 가 false 면 저장은 부르는 쪽이 한다 (→ replaceLocalData).
+    @MainActor
+    private func deleteLocalData(modelContainer: ModelContainer, saves: Bool = true) throws {
         let context = modelContainer.mainContext
 
         // Visit 삭제
@@ -521,7 +543,15 @@ class CloudKitBackupService {
             context.delete(profile)
         }
 
-        try context.save()
+        if saves {
+            do {
+                try context.save()
+            } catch {
+                // 저장하지 못한 지우기를 컨텍스트에 남겨 두면 나중에 자동 저장이 조용히 지워 버린다
+                context.rollback()
+                throw error
+            }
+        }
         logger.info("로컬 데이터 삭제 완료")
     }
 
@@ -600,9 +630,10 @@ class CloudKitBackupService {
                 visit.gourmetHarmony = backupVisit.gourmetHarmony
                 visit.gourmetPersonality = backupVisit.gourmetPersonality
                 if let tastes = backupVisit.tastes {
-                    visit.tastes = Dictionary(uniqueKeysWithValues: tastes.compactMap { key, value in
+                    // 백업 파일은 밖에서 온 데이터다 — 키가 겹쳐도 죽지 않게 받는다
+                    visit.tastes = Dictionary(tastes.compactMap { key, value in
                         TasteAxis(rawValue: key).map { ($0, value) }
-                    })
+                    }, uniquingKeysWith: { first, _ in first })
                 }
                 visit.spicy = backupVisit.spicy
                 visit.boldness = backupVisit.boldness
@@ -748,7 +779,13 @@ class CloudKitBackupService {
             context.insert(photo)
             photo.visit = visit
         }
-        try context.save()
+        do {
+            try context.save()
+        } catch {
+            // 붙이다 만 사진을 되돌린다 — 기록(글)은 이미 되살아나 있다
+            context.rollback()
+            throw error
+        }
         logger.info("사진 \(files.count)장을 기록에 붙임")
     }
 

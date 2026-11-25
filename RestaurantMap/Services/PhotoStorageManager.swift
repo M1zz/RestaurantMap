@@ -1,5 +1,34 @@
 import UIKit
 import Foundation
+import ImageIO
+
+/// 사진 데이터를 화면에 그릴 만큼만 풀어 낸다.
+///
+/// `UIImage(data:)` 는 그릴 때 원본 크기 그대로 풀린다 — 요즘 아이폰 사진 한 장(24~48MP)이 100~190MB 다.
+/// 100pt 칸에 열 장을 그리면 메모리가 모자라 앱이 꺼진다. ImageIO 는 원본을 다 풀지 않고 필요한 크기로 바로 줄인다.
+enum PhotoDownsampler {
+    /// 긴 변이 `maxPixel` 픽셀을 넘지 않는 그림. 방향(EXIF)은 그림에 구워 넣는다. 읽지 못하면 nil.
+    static func image(from data: Data, maxPixel: CGFloat) -> UIImage? {
+        guard maxPixel >= 1, !data.isEmpty,
+              let source = CGImageSourceCreateWithData(data as CFData, [kCGImageSourceShouldCache: false] as CFDictionary) else { return nil }
+        let options: [CFString: Any] = [
+            kCGImageSourceCreateThumbnailFromImageAlways: true,
+            kCGImageSourceCreateThumbnailWithTransform: true,
+            kCGImageSourceShouldCacheImmediately: true,
+            kCGImageSourceThumbnailMaxPixelSize: maxPixel,
+        ]
+        guard let cgImage = CGImageSourceCreateThumbnailAtIndex(source, 0, options as CFDictionary) else { return nil }
+        return UIImage(cgImage: cgImage)
+    }
+
+    /// 작은 칸에 그릴 그림을 잠깐 쥐어 둔다 — 목록이 다시 그려질 때마다 풀지 않게. 메모리가 모자라면 시스템이 비운다.
+    static let thumbnails: NSCache<NSString, UIImage> = {
+        let cache = NSCache<NSString, UIImage>()
+        cache.countLimit = 200
+        cache.totalCostLimit = 48 * 1024 * 1024
+        return cache
+    }()
+}
 
 /// 방문 사진의 옛 저장소(Documents/VisitPhotos/{visitID}/)와 사진 압축.
 /// 사진은 이제 기록 안(`VisitPhoto`)에 들어간다. 파일 저장소는 옛 사진을 옮길 때(→ PhotoMigration)만 읽는다.
@@ -175,8 +204,9 @@ final class PhotoStorageManager {
     private func resizeImage(_ image: UIImage, maxSize: CGFloat) -> UIImage {
         let size = image.size
 
-        // 이미 작으면 그대로 반환
-        guard size.width > maxSize || size.height > maxSize else {
+        // 이미 작으면 그대로 반환. 크기가 0 이거나 숫자가 아닌 그림은 그리려 하면 죽으므로 건드리지 않는다.
+        guard size.width.isFinite, size.height.isFinite, size.width > 0, size.height > 0,
+              size.width > maxSize || size.height > maxSize else {
             return image
         }
 
@@ -189,6 +219,9 @@ final class PhotoStorageManager {
         } else {
             newSize = CGSize(width: maxSize * aspectRatio, height: maxSize)
         }
+
+        // 아주 길쭉한 그림은 짧은 변이 0 에 가까워진다 — 1 아래로는 내리지 않는다
+        newSize = CGSize(width: max(newSize.width.rounded(), 1), height: max(newSize.height.rounded(), 1))
 
         let renderer = UIGraphicsImageRenderer(size: newSize)
         let resizedImage = renderer.image { context in

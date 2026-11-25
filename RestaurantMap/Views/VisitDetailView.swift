@@ -17,11 +17,15 @@ struct VisitDetailViewWrapper: View {
                 ErrorSheetView()
             } else if isLoading {
                 LoadingSheetView()
+            } else if visit.isGone {
+                // 열려 있는 사이 지워진 방문(식당 지우기 · 동기화) — 읽지 않는다
+                ErrorSheetView()
             } else {
                 VisitDetailView(visit: visit)
             }
         }
         .onAppear {
+            guard !visit.isGone else { showError = true; isLoading = false; return }
             logger.info("🔵 VisitDetailViewWrapper.onAppear - 시작")
             logger.info("  - Visit Date: \(visit.visitDate)")
             logger.info("  - Visit Rating: \(visit.rating)")
@@ -73,6 +77,15 @@ struct VisitDetailView: View {
     private let logger = Logger(subsystem: "com.restaurantmap", category: "VisitDetail")
 
     var body: some View {
+        // 열려 있는 사이 지워진 방문의 속성을 읽으면 죽는다 — 빈 화면으로 둔다
+        if visit.isGone {
+            Color.clear
+        } else {
+            content
+        }
+    }
+
+    private var content: some View {
         NavigationStack {
             Form {
                 // 히어로 이미지 (읽기 모드만)
@@ -303,7 +316,7 @@ struct VisitDetailView: View {
                             logger.info("  - \(editingPhotos.count)장의 새 사진 저장됨")
 
                             // 2. 표시된 사진 삭제
-                            for photo in (visit.photos ?? []) where photosToDelete.contains(photo.id) {
+                            for photo in (visit.photos ?? []) where !photo.isDeleted && photosToDelete.contains(photo.id) {
                                 modelContext.delete(photo)
                             }
                             logger.info("  - \(photosToDelete.count)장의 사진 삭제됨")
@@ -326,6 +339,8 @@ struct VisitDetailView: View {
                     }
                 }
             }
+            // 편집 중에 닫아도 고친 것(날짜 · 별점 · 메모)이 남게
+            .onDisappear { modelContext.saveNow() }
             .onAppear {
                 logger.info("🟢 VisitDetailView.onAppear")
                 logger.info("  - Restaurant: \(visit.restaurant?.name ?? "nil")")

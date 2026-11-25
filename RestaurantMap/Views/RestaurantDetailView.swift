@@ -29,10 +29,21 @@ struct RestaurantDetailView: View {
     }
 
     var sortedVisits: [Visit] {
-        (restaurant.visits ?? []).sorted(by: { $0.visitDate > $1.visitDate })
+        // 지우기로 표시된 방문은 저장 전까지 관계에 남아 있을 수 있다 — 줄로 그리지 않는다
+        (restaurant.visits ?? []).filter { !$0.isDeleted }.sorted(by: { $0.visitDate > $1.visitDate })
     }
 
     var body: some View {
+        // 이 화면에서 식당을 지우면(또는 동기화 · 복원으로 지워지면) 닫히는 동안에도 다시 그려진다.
+        // 지워진 식당의 속성을 읽으면 죽으므로 빈 화면으로 둔다.
+        if restaurant.isGone {
+            Color.clear
+        } else {
+            content
+        }
+    }
+
+    private var content: some View {
         NavigationStack {
             Form {
                 if !restaurant.isWishlist {
@@ -176,23 +187,26 @@ struct RestaurantDetailView: View {
                 }
 
                 Section("위치") {
-                    Map(initialPosition: .region(MKCoordinateRegion(
-                        center: restaurant.coordinate,
-                        span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-                    ))) {
-                        Annotation(restaurant.name, coordinate: restaurant.coordinate) {
-                            ZStack {
-                                Circle()
-                                    .fill(.red)
-                                    .frame(width: 30, height: 30)
-                                Image(systemName: "fork.knife")
-                                    .foregroundStyle(.white)
-                                    .font(.system(size: 14))
+                    // 지도에 찍을 수 없는 좌표(가져온 파일 · 옛 백업)면 지도를 그리지 않는다 — 잘못된 영역은 예외로 죽는다
+                    if restaurant.coordinate.isMappable {
+                        Map(initialPosition: .region(MKCoordinateRegion(
+                            center: restaurant.coordinate,
+                            span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+                        ))) {
+                            Annotation(restaurant.name, coordinate: restaurant.coordinate) {
+                                ZStack {
+                                    Circle()
+                                        .fill(.red)
+                                        .frame(width: 30, height: 30)
+                                    Image(systemName: "fork.knife")
+                                        .foregroundStyle(.white)
+                                        .font(.system(size: 14))
+                                }
                             }
                         }
+                        .frame(height: 200)
+                        .listRowInsets(EdgeInsets())
                     }
-                    .frame(height: 200)
-                    .listRowInsets(EdgeInsets())
 
                     Button {
                         openInAppleMaps()
@@ -252,6 +266,8 @@ struct RestaurantDetailView: View {
                 ToolbarItem(placement: .primaryAction) {
                     Button(isEditing ? LocalizedStringKey("완료") : LocalizedStringKey("편집"), systemImage: isEditing ? "checkmark" : "pencil") {
                         isEditing.toggle()
+                        // 고친 것을 '완료' 에서 바로 내린다 (자동 저장만 믿으면 직후에 꺼질 때 사라진다)
+                        if !isEditing { modelContext.saveNow() }
                     }
                 }
             }
@@ -271,21 +287,30 @@ struct RestaurantDetailView: View {
             .sheet(item: $selectedVisit) { visit in
                 VisitDetailViewWrapper(visit: visit)
             }
+            // 편집 중에 닫아도 고친 것이 남게
+            .onDisappear { modelContext.saveNow() }
         }
     }
 
     private func deleteRestaurant() {
+        // 이 화면이 쥐고 있던 방문부터 놓는다 (같이 지워진다)
+        selectedVisit = nil
         modelContext.delete(restaurant)
-        dismiss()
+        modelContext.saveNow()
+        if let onClose { onClose() } else { dismiss() }
     }
 
     private func deleteVisits(at offsets: IndexSet) {
-        for index in offsets {
-            modelContext.delete(sortedVisits[index])
+        // 지우는 동안 목록이 바뀌어도 번호가 어긋나지 않게 먼저 한 번만 읽는다
+        let visits = sortedVisits
+        for index in offsets where index < visits.count {
+            modelContext.delete(visits[index])
         }
+        modelContext.saveNow()
     }
 
     private func openInAppleMaps() {
+        guard restaurant.coordinate.isMappable else { return }
         let coordinate = CLLocationCoordinate2D(
             latitude: restaurant.latitude,
             longitude: restaurant.longitude
@@ -521,6 +546,11 @@ struct VisitRowView: View {
     let visit: Visit
 
     var body: some View {
+        // 지워진 방문의 줄이 한 박자 남아 다시 그려져도 모델을 읽지 않는다
+        if !visit.isGone { row }
+    }
+
+    private var row: some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack {
                 Text(visit.visitDate, format: .dateTime.year().month().day())

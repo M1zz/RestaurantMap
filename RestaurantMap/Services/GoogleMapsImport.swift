@@ -112,12 +112,16 @@ enum GoogleMapsImport {
                       let lat = number(geo["Latitude"]), let lng = number(geo["Longitude"]), lat != 0 || lng != 0 {
                 coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lng)
             }
+            // 파일에 적힌 좌표가 범위 밖이면(깨진 파일 · 순서가 뒤바뀐 값) 없는 것으로 친다 — 링크나 이름으로 다시 찾는다.
+            // 그대로 저장하면 그 식당을 지도에 그릴 때 죽는다.
+            if let found = coordinate, !found.isMappable { coordinate = nil }
 
             var place = ImportedPlace(name: name, address: address, coordinate: coordinate ?? Self.coordinate(in: link),
                                       note: text(props["review_text_published"], props["Comment"], props["comment"]))
-            if let stars = number(props["five_star_rating_published"]) {
+            // 유한한 값만, 먼저 0~5 로 자른 뒤 Int 로 — NaN 이나 아주 큰 수를 Int 로 바꾸면 죽는다
+            if let stars = number(props["five_star_rating_published"]), stars.isFinite {
                 reviewed = true
-                place.rating = min(5, max(0, Int(stars)))
+                place.rating = Int(min(5, max(0, stars)))
             }
             place.date = (props["date"] as? String).flatMap { try? Date($0, strategy: .iso8601) }
             return place
@@ -198,7 +202,7 @@ enum GoogleMapsImport {
             let place = lists[l].places[p]
             guard let item = await search(place, near: place.coordinate.map {
                 MKCoordinateRegion(center: $0, latitudinalMeters: 500, longitudinalMeters: 500) } ?? region) else { continue }
-            if place.coordinate == nil { lists[l].places[p].coordinate = item.placemark.coordinate }
+            if place.coordinate == nil, item.placemark.coordinate.isMappable { lists[l].places[p].coordinate = item.placemark.coordinate }
             if place.address.isEmpty { lists[l].places[p].address = item.placemark.title ?? "" }
         }
         progress(missing.count, missing.count)
@@ -272,6 +276,7 @@ enum CSV {
 /// 저장(0) · deflate(8) 만 읽는다 — 구글 내보내기는 이 둘뿐이다.
 enum ZipReader {
     struct Entry { let name: String; let data: Data }
+    private static let maxEntrySize = 64 * 1024 * 1024
 
     static func entries(in data: Data, where keep: (String) -> Bool) -> [Entry] {
         let bytes = [UInt8](data)
@@ -290,12 +295,15 @@ enum ZipReader {
         for _ in 0..<u16(end + 10) {
             guard p + 46 <= bytes.count, u32(p) == 0x0201_4b50 else { break }
             let method = u16(p + 10), packed = u32(p + 20), size = u32(p + 24)
+            // 풀었을 때 너무 큰 파일(위치 기록처럼 수백 MB~GB 인 JSON)은 건너뛴다 — 통째로 메모리에 올리다 꺼진다.
+            // 저장한 장소 파일은 몇 MB 를 넘지 않는다.
+            let tooBig = size > maxEntrySize
             let nameLength = u16(p + 28), local = u32(p + 42)
             guard p + 46 + nameLength <= bytes.count else { break }
             let name = String(decoding: bytes[(p + 46)..<(p + 46 + nameLength)], as: UTF8.self)
             p += 46 + nameLength + u16(p + 30) + u16(p + 32)
 
-            guard keep(name), local + 30 <= bytes.count, u32(local) == 0x0403_4b50 else { continue }
+            guard keep(name), !tooBig, local + 30 <= bytes.count, u32(local) == 0x0403_4b50 else { continue }
             let start = local + 30 + u16(local + 26) + u16(local + 28)
             guard start + packed <= bytes.count else { continue }
             let raw = Array(bytes[start..<(start + packed)])
