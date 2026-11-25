@@ -14,6 +14,8 @@ struct SettingsView: View {
     @State private var showResultAlert = false
     @State private var resultMessage = ""
     @State private var isSuccess = false
+    /// 기기의 식당이 iCloud 백업보다 크게 적어 덮어쓰기를 묻는 중 (기기 수, 백업 수)
+    @State private var shrinkingBackup: (local: Int, backup: Int)?
 
     @Query private var storedRestaurants: [Restaurant]
     /// 복원 · 지우기 직후 질의가 새로 고쳐지기 전에 한 박자 남은 지워진 식당은 읽지 않는다(읽으면 죽는다).
@@ -238,6 +240,17 @@ struct SettingsView: View {
             } message: {
                 Text("현재 데이터를 iCloud에 백업합니다. 기존 백업이 있다면 덮어씌워집니다.")
             }
+            // 기기가 거의 비었는데 백업을 덮어쓰려 할 때 — 새 기기에서 복구 전에 백업을 누르면 iCloud 의 기록이 통째로 사라졌다
+            .alert("백업을 덮어쓸까요?", isPresented: Binding(get: { shrinkingBackup != nil }, set: { if !$0 { shrinkingBackup = nil } })) {
+                Button("취소", role: .cancel) { }
+                Button("그래도 덮어쓰기", role: .destructive) {
+                    performBackup(allowShrinking: true)
+                }
+            } message: {
+                if let shrinkingBackup {
+                    Text("iCloud 백업에는 식당이 \(shrinkingBackup.backup)곳 있는데, 이 기기에는 \(shrinkingBackup.local)곳뿐이에요. 덮어쓰면 백업에만 있는 기록과 사진이 사라져요. 새 기기라면 먼저 'iCloud에서 복구'를 해 주세요.")
+                }
+            }
             // 복구 확인 알림
             .alert("iCloud에서 복구", isPresented: $showRestoreAlert) {
                 Button("취소", role: .cancel) { }
@@ -355,15 +368,24 @@ struct SettingsView: View {
 
     // MARK: - Actions
 
-    private func performBackup() {
+    private func performBackup(allowShrinking: Bool = false) {
         let container = modelContext.container
 
         Task {
-            let success = await backupService.backup(modelContainer: container)
+            let outcome = await backupService.backup(modelContainer: container, allowShrinking: allowShrinking)
             await MainActor.run {
-                isSuccess = success
-                resultMessage = success ? String(localized: "백업이 완료되었습니다.") : (backupService.errorMessage ?? String(localized: "백업에 실패했습니다."))
-                showResultAlert = true
+                switch outcome {
+                case .needsConfirmation(let local, let backup):
+                    shrinkingBackup = (local, backup)
+                case .done:
+                    isSuccess = true
+                    resultMessage = String(localized: "백업이 완료되었습니다.")
+                    showResultAlert = true
+                case .failed:
+                    isSuccess = false
+                    resultMessage = backupService.errorMessage ?? String(localized: "백업에 실패했습니다.")
+                    showResultAlert = true
+                }
             }
         }
     }

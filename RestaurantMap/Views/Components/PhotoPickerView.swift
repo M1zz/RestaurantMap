@@ -9,6 +9,8 @@ struct PhotoPickerView: View {
     @State private var showingCamera = false
     @State private var photoPickerItems: [PhotosPickerItem] = []
     @State private var cameraImage: UIImage?
+    /// 이번에 고른 사진 중 불러오지 못한 장 수 (iCloud 사진 · 오프라인 · 깨진 파일)
+    @State private var failedCount = 0
 
     // 카메라 사용 가능 여부 확인
     private var isCameraAvailable: Bool {
@@ -47,6 +49,9 @@ struct PhotoPickerView: View {
             maxSelectionCount: 10,
             matching: .images
         )
+        .alert("사진 \(failedCount)장을 불러오지 못했어요", isPresented: Binding(get: { failedCount > 0 }, set: { if !$0 { failedCount = 0 } })) {
+            Button("확인", role: .cancel) { }
+        }
         #if !os(visionOS)
         .sheet(isPresented: $showingCamera) {
             CameraView(image: $cameraImage)
@@ -68,20 +73,26 @@ struct PhotoPickerView: View {
 
     /// PhotosPicker에서 선택한 사진들을 UIImage로 변환
     private func loadPhotosFromPicker(_ items: [PhotosPickerItem]) async {
+        guard !items.isEmpty else { return }
+        var failed = 0
         for item in items {
             // 원본(24~48MP)을 그대로 쥐고 미리보기로 그리면 한 장에 100MB 넘게 든다 — 열 장을 고르면 앱이 꺼진다.
             // 저장할 때 어차피 줄이므로(→ PhotoStorageManager) 여기서 먼저 줄여 든다.
+            // 줄이지 못한 사진을 원본 크기(UIImage(data:))로 받지 않는다 — 그게 바로 메모리로 꺼지던 길이다. 못 불러온 것으로 센다.
             if let data = try? await item.loadTransferable(type: Data.self),
-               let image = PhotoDownsampler.image(from: data, maxPixel: PickedPhoto.maxPixel) ?? UIImage(data: data) {
+               let image = PhotoDownsampler.image(from: data, maxPixel: PickedPhoto.maxPixel) {
                 await MainActor.run {
                     selectedImages.append(image)
                 }
+            } else {
+                failed += 1
             }
         }
 
-        // 선택 완료 후 초기화
+        // 선택 완료 후 초기화. 못 불러온 사진이 있으면 말없이 빠지지 않게 알린다.
         await MainActor.run {
             photoPickerItems = []
+            if failed > 0 { failedCount = failed }
         }
     }
 }

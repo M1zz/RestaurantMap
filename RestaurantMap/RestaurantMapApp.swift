@@ -22,13 +22,15 @@ struct RestaurantMapApp: App {
         // 저장소는 금고 뒤에 연다 (프로퍼티 초기값으로 두면 init 보다 먼저 열린다)
         sharedModelContainer = Self.makeModelContainer()
 
-        // 메모리 저장소마저 열지 못했으면 저장소 없이 뜬다 — 죽지 않고 안내 화면 한 장만 보인다 (→ StoreUnavailableView).
-        // 인텐트 · 알림 · 색인은 저장소가 있어야 하므로 걸지 않는다.
-        guard let container = sharedModelContainer else { return }
-
         // Siri · Spotlight 인텐트가 같은 저장소를 읽게 한다 (→ RestaurantIntents.swift).
         // 인텐트는 화면 없이 앱을 깨워 돌기도 해서, 화면이 아니라 여기서 넘긴다.
-        AppDependencyManager.shared.add(dependency: container)
+        // 저장소를 못 열었어도 등록한다 — 인텐트가 등록되지 않은 의존성을 읽으면 앱이 죽는다. 그때는 인텐트가 알림 문구로 실패한다.
+        let store = RestaurantStore(modelContainer: sharedModelContainer)
+        AppDependencyManager.shared.add(dependency: store)
+
+        // 메모리 저장소마저 열지 못했으면 저장소 없이 뜬다 — 죽지 않고 안내 화면 한 장만 보인다 (→ StoreUnavailableView).
+        // 알림 · 색인은 저장소가 있어야 하므로 걸지 않는다.
+        guard let container = sharedModelContainer else { return }
         // 다녀온 뒤 알림: 시스템이 방문을 알리려고 앱을 깨웠을 때도 받을 수 있게 화면보다 먼저 건다.
         VisitReminderManager.shared.configure(with: container)
         VisitReminderManager.shared.resume(allowed: Purchases.shared.allows(.visitReminder))

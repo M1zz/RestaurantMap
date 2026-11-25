@@ -128748,6 +128748,746 @@
           }
         }
       }
+    },
+    "기록을 임시로 연 상태라 백업 · 복구를 할 수 없어요. 앱을 껐다 켠 뒤 다시 해 주세요." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기록을 임시로 연 상태라 백업 · 복구를 할 수 없어요. 앱을 껐다 켠 뒤 다시 해 주세요."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your records were opened temporarily, so backup and restore aren't available. Quit and reopen the app, then try again."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "記録を一時的に開いている状態のため、バックアップと復元はできません。アプリを終了して再度開いてから、もう一度お試しください。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "记录目前以临时方式打开，无法备份或恢复。请退出并重新打开 App 后再试。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "紀錄目前以暫時方式開啟，無法備份或還原。請結束並重新開啟 App 後再試一次。"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Записи открыты временно, поэтому резервное копирование и восстановление недоступны. Закройте и снова откройте приложение, затем повторите попытку."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tus registros se abrieron de forma temporal, así que no se puede hacer copia ni restaurar. Cierra y vuelve a abrir la app e inténtalo de nuevo."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deine Einträge wurden nur vorübergehend geöffnet, daher sind Sicherung und Wiederherstellung nicht möglich. Beende die App, öffne sie erneut und versuche es noch einmal."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vos données ont été ouvertes temporairement : la sauvegarde et la restauration sont indisponibles. Quittez puis rouvrez l’app, puis réessayez."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I tuoi dati sono stati aperti in modo temporaneo, quindi backup e ripristino non sono disponibili. Chiudi e riapri l’app, poi riprova."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seus registros foram abertos temporariamente, então backup e restauração não estão disponíveis. Feche e abra o app de novo e tente outra vez."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ข้อมูลถูกเปิดแบบชั่วคราว จึงสำรองหรือกู้คืนไม่ได้ ปิดแอปแล้วเปิดใหม่ จากนั้นลองอีกครั้ง"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dữ liệu đang được mở tạm thời nên không thể sao lưu hoặc khôi phục. Hãy thoát và mở lại ứng dụng rồi thử lại."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Záznamy jsou otevřené jen dočasně, takže zálohování a obnovení není k dispozici. Ukončete a znovu otevřete aplikaci a zkuste to znovu."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dine data er kun åbnet midlertidigt, så sikkerhedskopiering og gendannelse er ikke mulig. Luk appen, åbn den igen, og prøv igen."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Τα δεδομένα σας άνοιξαν προσωρινά, οπότε η δημιουργία αντιγράφου και η επαναφορά δεν είναι διαθέσιμες. Κλείστε και ανοίξτε ξανά την εφαρμογή και δοκιμάστε πάλι."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tietosi on avattu vain väliaikaisesti, joten varmuuskopiointi ja palautus eivät ole käytettävissä. Sulje ja avaa appi uudelleen ja yritä sitten uudelleen."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Catatan Anda dibuka sementara, jadi pencadangan dan pemulihan tidak tersedia. Tutup lalu buka lagi aplikasinya, kemudian coba lagi."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dataene dine er bare åpnet midlertidig, så sikkerhetskopiering og gjenoppretting er ikke tilgjengelig. Lukk appen, åpne den igjen og prøv på nytt."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je gegevens zijn tijdelijk geopend, dus reservekopie en terugzetten zijn niet beschikbaar. Sluit de app, open hem opnieuw en probeer het nog eens."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Twoje dane zostały otwarte tymczasowo, więc kopia zapasowa i przywracanie są niedostępne. Zamknij i ponownie otwórz aplikację, a potem spróbuj jeszcze raz."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dina data har bara öppnats tillfälligt, så säkerhetskopiering och återställning är inte tillgängliga. Stäng appen, öppna den igen och försök på nytt."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kayıtların geçici olarak açıldı, bu yüzden yedekleme ve geri yükleme kullanılamıyor. Uygulamayı kapatıp yeniden aç, sonra tekrar dene."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your records were opened temporarily, so backup and restore aren't available. Quit and reopen the app, then try again."
+          }
+        }
+      }
+    },
+    "백업을 덮어쓸까요?" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "백업을 덮어쓸까요?"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Overwrite your backup?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "バックアップを上書きしますか？"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "要覆盖备份吗？"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "要覆寫備份嗎？"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Перезаписать резервную копию?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Sobrescribir la copia de seguridad?"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sicherung überschreiben?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Écraser la sauvegarde ?"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sovrascrivere il backup?"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Substituir o backup?"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เขียนทับข้อมูลสำรองไหม"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ghi đè bản sao lưu?"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přepsat zálohu?"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Overskriv sikkerhedskopien?"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Αντικατάσταση του αντιγράφου ασφαλείας;"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Korvataanko varmuuskopio?"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timpa cadangan?"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vil du overskrive sikkerhetskopien?"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reservekopie overschrijven?"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zastąpić kopię zapasową?"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vill du skriva över säkerhetskopian?"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yedeğin üzerine yazılsın mı?"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Overwrite your backup?"
+          }
+        }
+      }
+    },
+    "그래도 덮어쓰기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "그래도 덮어쓰기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Overwrite Anyway"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上書きする"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仍然覆盖"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仍要覆寫"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Всё равно перезаписать"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sobrescribir de todos modos"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trotzdem überschreiben"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Écraser quand même"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sovrascrivi comunque"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Substituir mesmo assim"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เขียนทับต่อไป"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vẫn ghi đè"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přesto přepsat"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Overskriv alligevel"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Αντικατάσταση ούτως ή άλλως"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Korvaa silti"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tetap timpa"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Overskriv likevel"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toch overschrijven"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zastąp mimo to"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skriv över ändå"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yine de üzerine yaz"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Overwrite Anyway"
+          }
+        }
+      }
+    },
+    "iCloud 백업에는 식당이 %lld곳 있는데, 이 기기에는 %lld곳뿐이에요. 덮어쓰면 백업에만 있는 기록과 사진이 사라져요. 새 기기라면 먼저 'iCloud에서 복구'를 해 주세요." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud 백업에는 식당이 %1$lld곳 있는데, 이 기기에는 %2$lld곳뿐이에요. 덮어쓰면 백업에만 있는 기록과 사진이 사라져요. 새 기기라면 먼저 'iCloud에서 복구'를 해 주세요."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your iCloud backup has %1$lld restaurants, but this device has only %2$lld. Overwriting will erase the records and photos that exist only in the backup. On a new device, use “Restore from iCloud” first."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloudのバックアップには%1$lld件の店がありますが、このデバイスには%2$lld件しかありません。上書きすると、バックアップにだけある記録と写真が消えます。新しいデバイスなら、先に「iCloudから復元」を行ってください。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud 备份中有 %1$lld 家餐厅，但此设备上只有 %2$lld 家。覆盖后，仅存在于备份中的记录和照片将被删除。如果这是新设备，请先使用“从 iCloud 恢复”。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud 備份中有 %1$lld 家餐廳，但這部裝置上只有 %2$lld 家。覆寫後，只存在於備份中的紀錄與照片將被刪除。如果這是新裝置，請先使用「從 iCloud 還原」。"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В резервной копии iCloud ресторанов: %1$lld, а на этом устройстве только %2$lld. При перезаписи записи и фото, которые есть только в копии, будут удалены. Если это новое устройство, сначала выберите «Восстановить из iCloud»."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu copia de iCloud tiene %1$lld restaurantes, pero este dispositivo solo tiene %2$lld. Si la sobrescribes, se borrarán los registros y fotos que solo están en la copia. Si es un dispositivo nuevo, usa primero “Restaurar desde iCloud”."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deine iCloud-Sicherung enthält %1$lld Restaurants, dieses Gerät aber nur %2$lld. Beim Überschreiben gehen Einträge und Fotos verloren, die nur in der Sicherung sind. Auf einem neuen Gerät wähle zuerst „Aus iCloud wiederherstellen“."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Votre sauvegarde iCloud contient %1$lld restaurants, mais cet appareil n’en a que %2$lld. L’écraser effacera les données et photos présentes uniquement dans la sauvegarde. Sur un nouvel appareil, utilisez d’abord « Restaurer depuis iCloud »."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il backup iCloud contiene %1$lld ristoranti, ma questo dispositivo solo %2$lld. Sovrascrivendo, i dati e le foto presenti solo nel backup verranno cancellati. Su un nuovo dispositivo, usa prima “Ripristina da iCloud”."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seu backup no iCloud tem %1$lld restaurantes, mas este aparelho tem só %2$lld. Ao substituir, os registros e fotos que existem apenas no backup serão apagados. Em um aparelho novo, use primeiro “Restaurar do iCloud”."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ข้อมูลสำรองใน iCloud มีร้าน %1$lld แห่ง แต่อุปกรณ์นี้มีเพียง %2$lld แห่ง หากเขียนทับ บันทึกและรูปภาพที่มีเฉพาะในข้อมูลสำรองจะหายไป หากเป็นอุปกรณ์ใหม่ ให้ใช้ “กู้คืนจาก iCloud” ก่อน"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bản sao lưu iCloud có %1$lld nhà hàng, nhưng thiết bị này chỉ có %2$lld. Nếu ghi đè, các ghi chép và ảnh chỉ có trong bản sao lưu sẽ bị xóa. Nếu đây là thiết bị mới, hãy dùng “Khôi phục từ iCloud” trước."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Záloha na iCloudu obsahuje restaurace: %1$lld, ale toto zařízení jen %2$lld. Přepsáním smažete záznamy a fotky, které jsou jen v záloze. Na novém zařízení nejdřív použijte „Obnovit z iCloudu“."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Din iCloud-sikkerhedskopi har %1$lld restauranter, men denne enhed har kun %2$lld. Hvis du overskriver, slettes de data og fotos, der kun findes i sikkerhedskopien. På en ny enhed skal du først bruge “Gendan fra iCloud”."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Το αντίγραφο στο iCloud έχει %1$lld εστιατόρια, αλλά αυτή η συσκευή μόνο %2$lld. Η αντικατάσταση θα διαγράψει τα δεδομένα και τις φωτογραφίες που υπάρχουν μόνο στο αντίγραφο. Σε νέα συσκευή, χρησιμοποιήστε πρώτα «Επαναφορά από το iCloud»."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud-varmuuskopiossa on %1$lld ravintolaa, mutta tällä laitteella vain %2$lld. Korvaaminen poistaa tiedot ja kuvat, jotka ovat vain varmuuskopiossa. Uudella laitteella valitse ensin ”Palauta iCloudista”."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cadangan iCloud Anda berisi %1$lld restoran, tetapi perangkat ini hanya %2$lld. Jika ditimpa, catatan dan foto yang hanya ada di cadangan akan terhapus. Di perangkat baru, gunakan “Pulihkan dari iCloud” terlebih dahulu."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud-sikkerhetskopien har %1$lld restauranter, men denne enheten har bare %2$lld. Hvis du overskriver, slettes data og bilder som bare finnes i sikkerhetskopien. På en ny enhet bør du først bruke «Gjenopprett fra iCloud»."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je iCloud-reservekopie bevat %1$lld restaurants, maar dit apparaat maar %2$lld. Overschrijven wist de gegevens en foto’s die alleen in de reservekopie staan. Gebruik op een nieuw apparaat eerst ‘Terugzetten vanuit iCloud’."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopia w iCloud zawiera restauracje: %1$lld, a to urządzenie tylko %2$lld. Zastąpienie usunie dane i zdjęcia, które są tylko w kopii. Na nowym urządzeniu najpierw użyj „Przywróć z iCloud”."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Din iCloud-säkerhetskopia har %1$lld restauranger, men den här enheten har bara %2$lld. Om du skriver över raderas data och bilder som bara finns i säkerhetskopian. På en ny enhet, välj först ”Återställ från iCloud”."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud yedeğinde %1$lld restoran var ama bu cihazda yalnızca %2$lld var. Üzerine yazarsan yalnızca yedekte bulunan kayıtlar ve fotoğraflar silinir. Yeni bir cihazdaysan önce “iCloud’dan geri yükle”yi kullan."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your iCloud backup has %1$lld restaurants, but this device has only %2$lld. Overwriting will erase the records and photos that exist only in the backup. On a new device, use “Restore from iCloud” first."
+          }
+        }
+      }
+    },
+    "사진 %lld장을 불러오지 못했어요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "사진 %lld장을 불러오지 못했어요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Photos that couldn't be loaded: %lld"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld枚の写真を読み込めませんでした"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "有 %lld 张照片无法载入"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "有 %lld 張照片無法載入"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось загрузить фото: %lld"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotos que no se pudieron cargar: %lld"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nicht geladene Fotos: %lld"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Photos non chargées : %lld"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto non caricate: %lld"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotos que não puderam ser carregadas: %lld"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "โหลดรูปภาพไม่ได้ %lld รูป"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không tải được %lld ảnh"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nenačtené fotky: %lld"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotos, der ikke kunne indlæses: %lld"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Φωτογραφίες που δεν φορτώθηκαν: %lld"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kuvia, joita ei voitu ladata: %lld"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld foto tidak dapat dimuat"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bilder som ikke kunne lastes inn: %lld"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto’s die niet konden worden geladen: %lld"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nie udało się wczytać zdjęć: %lld"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bilder som inte kunde läsas in: %lld"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yüklenemeyen fotoğraf: %lld"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Photos that couldn't be loaded: %lld"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

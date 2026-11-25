@@ -11,8 +11,11 @@ import OSLog
 /// 레코드 ID 로만 읽고 써서 쿼리 인덱스가 필요 없다. ⚠️ 두 레코드 타입을 Production 스키마에 배포해야 한다.
 ///
 /// 백업은 Pro, 되살리기는 누구나 (내 기록을 되찾는 길은 잠그지 않는다).
-@Observable
-class CloudKitBackupService {
+///
+/// 화면이 읽는 상태(진행 문구 · 오류)를 바꾸므로 메인 액터에서 돈다. 무거운 파일 쓰기 · JSON 은
+/// `nonisolated static` 도우미를 `Task.detached` 로 돌려 화면을 멈추지 않는다.
+@MainActor @Observable
+final class CloudKitBackupService {
     static let shared = CloudKitBackupService()
 
     private let logger = Logger(subsystem: "com.restaurantmap", category: "CloudKitBackup")
@@ -79,52 +82,99 @@ class CloudKitBackupService {
         }
     }
 
-    /// 데이터 백업
-    func backup(modelContainer: ModelContainer) async -> Bool {
-        guard await checkiCloudStatus() else { return false }
+    /// 백업 결과
+    enum BackupOutcome {
+        case done
+        case failed
+        /// 기기의 식당이 iCloud 백업보다 크게 적다 — 덮어쓰면 백업에만 있는 기록이 사라진다. 사용자에게 물은 뒤
+        /// `allowShrinking: true` 로 다시 부른다.
+        case needsConfirmation(local: Int, backup: Int)
+    }
+
+    /// 임시(메모리) 저장소로 열린 실행에서는 백업도 복구도 하지 않는다.
+    /// 백업은 빈 기록으로 iCloud 의 백업을 덮고(→ 지난 사진까지 지운다), 복구는 '완료' 라고 하고도 껐다 켜면 사라진다.
+    private func refuseOnFallbackStore() -> Bool {
+        guard StoreFallback.isActive else { return false }
+        errorMessage = String(localized: "기록을 임시로 연 상태라 백업 · 복구를 할 수 없어요. 앱을 껐다 켠 뒤 다시 해 주세요.")
+        progressMessage = nil
+        logger.error("임시 저장소라 백업 · 복구를 막음")
+        return true
+    }
+
+    /// 데이터 백업. `allowShrinking` 이 false 면, 기기의 식당이 지난 백업보다 크게 적을 때(새 기기 · 아직 동기화 전)
+    /// 덮어쓰지 않고 `.needsConfirmation` 을 돌려준다.
+    func backup(modelContainer: ModelContainer, allowShrinking: Bool = false) async -> BackupOutcome {
+        guard !refuseOnFallbackStore() else { return .failed }
+        guard await checkiCloudStatus() else { return .failed }
 
         isBackingUp = true
         errorMessage = nil
         progressMessage = String(localized: "백업 준비 중...")
 
-        defer { isBackingUp = false }
+        defer {
+            isBackingUp = false
+            // 사진 데이터를 다음 백업까지 쥐고 있지 않는다
+            pendingPhotoData = [:]
+        }
 
         do {
-            // 1. 로컬 데이터 가져오기
-            progressMessage = String(localized: "데이터 수집 중...")
-            let backupData = try await fetchLocalData(modelContainer: modelContainer)
+            // 1. 지난 백업을 먼저 읽는다 — 덮어써도 되는지 보고, 이미 올린 사진을 건너뛰려고.
+            // 예전에는 읽기 실패(연결 끊김)를 '백업 없음' 으로 봐서, 그 상태로 덮어쓰는 것을 막을 길이 없었다.
+            let previous: BackupData?
+            do {
+                previous = try await fetchFromCloudKit()
+            } catch let error where error is DecodingError || (error as? BackupError) == .invalidData {
+                // 깨진 백업 — 되살릴 수 없으니 덮어써도 잃을 것이 없다. 그 밖의 오류(연결 끊김)는 백업을 멈춘다.
+                logger.warning("지난 백업을 읽지 못함(깨짐) — 새로 덮어씀")
+                previous = nil
+            }
 
-            // 2. 사진 올리기 (지난 백업에 이미 있는 사진은 건너뛴다)
+            // 2. 로컬 데이터 가져오기
+            progressMessage = String(localized: "데이터 수집 중...")
+            let backupData = try fetchLocalData(modelContainer: modelContainer)
+
+            // 3. 기기가 거의 비어 있는데 백업에는 기록이 있으면 묻는다 (새 기기에서 복구 전에 백업을 누른 경우)
+            if !allowShrinking, let previous {
+                let local = backupData.restaurants.count
+                let backedUp = previous.restaurants.count
+                if backedUp > 0, local == 0 || local * 2 < backedUp {
+                    logger.warning("백업을 줄이려 함: 기기 \(local)곳, 백업 \(backedUp)곳 — 확인을 받는다")
+                    progressMessage = nil
+                    return .needsConfirmation(local: local, backup: backedUp)
+                }
+            }
+
+            // 4. 사진 올리기 (지난 백업에 이미 있는 사진은 건너뛴다)
             progressMessage = String(localized: "사진 올리는 중...")
-            let previous = try? await fetchFromCloudKit()
             let previousPhotos = Set(previous?.photoRecordNames ?? [])
             try await uploadPhotos(of: backupData, skipping: previousPhotos)
 
-            // 3. 새 백업 저장 (같은 자리에 덮어쓴다)
+            // 5. 새 백업 저장 (같은 자리에 덮어쓴다). 하나라도 실패하면 던지므로 아래 지우기까지 가지 않는다.
             progressMessage = String(localized: "iCloud에 저장 중...")
             try await saveToCloudKit(data: backupData)
 
-            // 4. 이제 어느 방문에도 없는 사진은 지운다
+            // 6. 새 백업이 다 저장된 뒤에만, 이제 어느 방문에도 없는 사진을 지운다
             try? await deletePhotos(named: previousPhotos.subtracting(backupData.photoRecordNames))
 
-            // 5. 마지막 백업 시간 저장
+            // 7. 마지막 백업 시간 저장
             lastBackupDate = Date()
             saveLastBackupDate()
 
             progressMessage = String(localized: "백업 완료!")
             logger.info("백업 성공")
-            return true
+            return .done
 
         } catch {
             logger.error("백업 실패: \(error.localizedDescription)")
             errorMessage = String(localized: "백업 실패: \(error.localizedDescription)")
             progressMessage = nil
-            return false
+            return .failed
         }
     }
 
     /// 데이터 복구
     func restore(modelContainer: ModelContainer) async -> Bool {
+        guard !refuseOnFallbackStore() else { return false }
         guard await checkiCloudStatus() else { return false }
 
         isRestoring = true
@@ -153,7 +203,7 @@ class CloudKitBackupService {
             progressMessage = String(localized: "데이터 복구 중...")
             // 사진도 같은 저장에 넣는다. 따로 저장하면, 사진 붙이기만 실패했을 때(저장 공간이 모자라면 큰 사진부터
             // 깨진다) 기록은 이미 백업 것으로 바뀐 채 사진만 빠지고, 다음 백업이 iCloud 의 사진까지 지웠다.
-            try await replaceLocalData(modelContainer: modelContainer, data: backupData, photos: photos.files)
+            try replaceLocalData(modelContainer: modelContainer, data: backupData, photos: photos.files)
 
             progressMessage = String(localized: "복구 완료!")
             logger.info("복구 성공")
@@ -174,7 +224,7 @@ class CloudKitBackupService {
         errorMessage = nil
 
         do {
-            try await deleteLocalData(modelContainer: modelContainer)
+            try deleteLocalData(modelContainer: modelContainer)
             progressMessage = String(localized: "초기화 완료!")
             logger.info("로컬 데이터 초기화 완료")
             return true
@@ -189,7 +239,6 @@ class CloudKitBackupService {
     // MARK: - Private Methods
 
     /// 로컬 데이터를 백업 구조체로 변환
-    @MainActor
     private func fetchLocalData(modelContainer: ModelContainer) throws -> BackupData {
         let context = modelContainer.mainContext
 
@@ -381,10 +430,8 @@ class CloudKitBackupService {
             throw BackupError.cloudKitNotAvailable
         }
 
-        let encoder = JSONEncoder()
-        encoder.dateEncodingStrategy = .iso8601
-        let file = FileManager.default.temporaryDirectory.appendingPathComponent("backup-\(UUID().uuidString).json")
-        try encoder.encode(data).write(to: file)
+        // JSON 은 식당 · 방문이 많으면 무겁다 — 메인 밖에서 만든다
+        let file = try await Task.detached { try Self.writeJSON(data) }.value
         defer { try? FileManager.default.removeItem(at: file) }
 
         let record = CKRecord(recordType: recordType, recordID: backupRecordID)
@@ -393,6 +440,21 @@ class CloudKitBackupService {
 
         try await save([record], in: container.privateCloudDatabase)
         logger.info("CloudKit에 백업 저장 완료")
+    }
+
+    nonisolated private static func writeJSON(_ data: BackupData) throws -> URL {
+        let encoder = JSONEncoder()
+        encoder.dateEncodingStrategy = .iso8601
+        let file = FileManager.default.temporaryDirectory.appendingPathComponent("backup-\(UUID().uuidString).json")
+        try encoder.encode(data).write(to: file)
+        return file
+    }
+
+    nonisolated private static func readJSON(at url: URL) throws -> BackupData {
+        guard let jsonData = try? Data(contentsOf: url) else { throw BackupError.invalidData }
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
+        return try decoder.decode(BackupData.self, from: jsonData)
     }
 
     /// CloudKit에서 데이터 가져오기. 백업이 없으면 nil.
@@ -408,14 +470,10 @@ class CloudKitBackupService {
             return nil
         }
 
-        guard let url = (record["payload"] as? CKAsset)?.fileURL,
-              let jsonData = try? Data(contentsOf: url) else {
+        guard let url = (record["payload"] as? CKAsset)?.fileURL else {
             throw BackupError.invalidData
         }
-
-        let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .iso8601
-        return try decoder.decode(BackupData.self, from: jsonData)
+        return try await Task.detached { try Self.readJSON(at: url) }.value
     }
 
     /// 방문 사진을 한 장씩 레코드로 올린다. `skipping` 에 있는 것(지난 백업에 이미 있는 사진)은 건너뛴다.
@@ -427,18 +485,27 @@ class CloudKitBackupService {
         try FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true)
         defer { try? FileManager.default.removeItem(at: folder) }
 
-        var records: [CKRecord] = []
+        var toWrite: [(name: String, bytes: Data)] = []
         for visit in data.allVisits {
             guard let photoId = visit.photoId else { continue }
             for filename in visit.photoFilenames ?? [] {
                 let name = BackupData.photoRecordName(photoId: photoId, filename: filename)
                 guard !uploaded.contains(name), let bytes = pendingPhotoData[name] else { continue }
-                let url = folder.appendingPathComponent(name)
-                try bytes.write(to: url)
-                let record = CKRecord(recordType: photoRecordType, recordID: CKRecord.ID(recordName: name))
-                record["image"] = CKAsset(fileURL: url)
-                records.append(record)
+                toWrite.append((name, bytes))
             }
+        }
+        // 사진 파일 쓰기는 메인 밖에서
+        let written = try await Task.detached { () throws -> [(name: String, url: URL)] in
+            try toWrite.map { item in
+                let url = folder.appendingPathComponent(item.name)
+                try item.bytes.write(to: url)
+                return (item.name, url)
+            }
+        }.value
+        let records: [CKRecord] = written.map { item in
+            let record = CKRecord(recordType: photoRecordType, recordID: CKRecord.ID(recordName: item.name))
+            record["image"] = CKAsset(fileURL: item.url)
+            return record
         }
 
         // 한 번에 너무 많이 보내면 CloudKit 이 거절한다 — 나눠서 보낸다.
@@ -478,7 +545,7 @@ class CloudKitBackupService {
                 guard case .success(let record)? = results[item.id],
                       let source = (record["image"] as? CKAsset)?.fileURL else { continue }
                 let target = folder.appendingPathComponent("\(item.visitID.uuidString)-\(item.filename)")
-                try FileManager.default.copyItem(at: source, to: target)
+                try await Task.detached { try FileManager.default.copyItem(at: source, to: target) }.value
                 files.append((target, item.filename, item.visitID))
             }
         }
@@ -504,7 +571,6 @@ class CloudKitBackupService {
 
     /// 기기의 기록을 백업의 것으로 바꾼다. 지우기와 넣기를 한 번에 저장하고, 실패하면 둘 다 되돌린다.
     /// 메인 액터에서 쉬지 않고 끝까지 돌기 때문에 그 사이에 자동 저장이 끼어들어 '지운 것만' 내려가지 않는다.
-    @MainActor
     private func replaceLocalData(modelContainer: ModelContainer, data: BackupData,
                                   photos: [(url: URL, filename: String, visitID: UUID)]) throws {
         let context = modelContainer.mainContext
@@ -520,7 +586,6 @@ class CloudKitBackupService {
     }
 
     /// 로컬 데이터 삭제. `saves` 가 false 면 저장은 부르는 쪽이 한다 (→ replaceLocalData).
-    @MainActor
     private func deleteLocalData(modelContainer: ModelContainer, saves: Bool = true) throws {
         let context = modelContainer.mainContext
 
@@ -558,8 +623,6 @@ class CloudKitBackupService {
     }
 
     /// 복구된 데이터를 로컬에 넣고, 받아 둔 사진까지 붙여 한 번에 저장한다.
-    @MainActor
-    @discardableResult
     private func restoreLocalData(modelContainer: ModelContainer, data: BackupData,
                                   photos: [(url: URL, filename: String, visitID: UUID)]) throws {
         let context = modelContainer.mainContext
@@ -770,7 +833,6 @@ class CloudKitBackupService {
 
     /// 받아 둔 사진 파일을 되살린 방문의 기록 안(VisitPhoto)에 넣는다. 백업에 적힌 순서를 지킨다.
     /// 저장은 하지 않는다 — 기록과 한 번에 저장해야 반쪽짜리 복원이 남지 않는다(→ replaceLocalData).
-    @MainActor
     private func insertPhotos(_ files: [(url: URL, filename: String, visitID: UUID)],
                               to visits: [UUID: Visit], context: ModelContext) {
         var order: [UUID: Int] = [:]

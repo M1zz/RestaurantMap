@@ -40,6 +40,30 @@ extension PersistentIdentifier {
     }
 }
 
+// MARK: - 저장소
+
+/// 인텐트가 읽는 저장소. 저장소를 열지 못한 실행에서도 늘 등록해 두고(→ RestaurantMapApp.init),
+/// 읽을 때 없으면 알림 문구와 함께 실패한다. 예전에는 등록이 빠져 `@Dependency` 를 읽는 순간 앱이 죽었다.
+struct RestaurantStore: Sendable {
+    let modelContainer: ModelContainer?
+
+    func container() throws -> ModelContainer {
+        guard let modelContainer else { throw RestaurantIntentError.storeUnavailable }
+        return modelContainer
+    }
+}
+
+enum RestaurantIntentError: Error, CustomLocalizedStringResourceConvertible {
+    case storeUnavailable
+
+    var localizedStringResource: LocalizedStringResource {
+        switch self {
+        case .storeUnavailable:
+            LocalizedStringResource("기록을 열지 못했어요")
+        }
+    }
+}
+
 // MARK: - 식당
 
 struct RestaurantEntity: AppEntity {
@@ -85,22 +109,22 @@ extension RestaurantEntity: IndexedEntity {
 }
 
 struct RestaurantQuery: EntityStringQuery {
-    @Dependency private var container: ModelContainer
+    @Dependency private var store: RestaurantStore
 
     func entities(for identifiers: [String]) async throws -> [RestaurantEntity] {
         let wanted = Set(identifiers)
-        return RestaurantLibrary.read(in: container) { $0.map(RestaurantEntity.init).filter { wanted.contains($0.id) } }
+        return try RestaurantLibrary.read(in: store.container()) { $0.map(RestaurantEntity.init).filter { wanted.contains($0.id) } }
     }
 
     func entities(matching string: String) async throws -> [RestaurantEntity] {
-        RestaurantLibrary.read(in: container) { all in
+        try RestaurantLibrary.read(in: store.container()) { all in
             all.filter { $0.name.localizedCaseInsensitiveContains(string) || $0.address.localizedCaseInsensitiveContains(string) }
                 .map(RestaurantEntity.init)
         }
     }
 
     func suggestedEntities() async throws -> [RestaurantEntity] {
-        RestaurantLibrary.read(in: container) { $0.sorted { $0.rating > $1.rating }.prefix(20).map(RestaurantEntity.init) }
+        try RestaurantLibrary.read(in: store.container()) { $0.sorted { $0.rating > $1.rating }.prefix(20).map(RestaurantEntity.init) }
     }
 }
 
@@ -113,11 +137,11 @@ struct NearbyRestaurantsIntent: AppIntent {
         LocalizedStringResource("지금 있는 곳에서 가까운 내 맛집을 알려 줍니다.", comment: "Siri: nearby restaurants description")
     )
 
-    @Dependency private var container: ModelContainer
+    @Dependency private var store: RestaurantStore
 
     func perform() async throws -> some IntentResult & ReturnsValue<[RestaurantEntity]> & ProvidesDialog {
         // 모델은 읽는 동안만 쓰고, 밖으로는 값(RestaurantEntity)만 들고 나온다 (→ RestaurantLibrary.read)
-        let visited = RestaurantLibrary.read(in: container) { $0.filter { !$0.isWishlist }.map(RestaurantEntity.init) }
+        let visited = try RestaurantLibrary.read(in: store.container()) { $0.filter { !$0.isWishlist }.map(RestaurantEntity.init) }
         guard !visited.isEmpty else {
             return .result(value: [], dialog: IntentDialog(LocalizedStringResource("아직 저장한 맛집이 없어요.", comment: "Siri: no restaurants yet")))
         }
@@ -147,10 +171,10 @@ struct WishlistIntent: AppIntent {
         LocalizedStringResource("가볼 곳으로 담아 둔 식당을 보여 줍니다.", comment: "Siri: wishlist description")
     )
 
-    @Dependency private var container: ModelContainer
+    @Dependency private var store: RestaurantStore
 
     func perform() async throws -> some IntentResult & ReturnsValue<[RestaurantEntity]> & ProvidesDialog {
-        let wish = RestaurantLibrary.read(in: container) { $0.filter(\.isWishlist).map(RestaurantEntity.init) }
+        let wish = try RestaurantLibrary.read(in: store.container()) { $0.filter(\.isWishlist).map(RestaurantEntity.init) }
         let dialog = wish.isEmpty
             ? IntentDialog(LocalizedStringResource("가볼 곳이 비어 있어요.", comment: "Siri: wishlist empty"))
             : IntentDialog(LocalizedStringResource("가볼 곳이 \(wish.count)곳 있어요.", comment: "Siri: wishlist count"))

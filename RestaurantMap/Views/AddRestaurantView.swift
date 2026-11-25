@@ -299,6 +299,8 @@ struct AddRestaurantView: View {
         )
 
         modelContext.insert(restaurant)
+        // 저장에 실패하면 이번에 넣은 것만 걷어 낸다
+        var inserted: [any PersistentModel] = [restaurant]
 
         // 가본곳일 때만 첫 방문 기록 생성 (별점이 있거나 메뉴가 입력된 경우)
         if listType == .visited && (rating > 0 || !menuItem.isEmpty) {
@@ -310,6 +312,7 @@ struct AddRestaurantView: View {
             )
             firstVisit.menuItem = menuItem
             modelContext.insert(firstVisit)
+            inserted.append(firstVisit)
             logger.info("첫 방문 기록 생성: 메뉴=\(menuItem), 별점=\(rating)")
         }
 
@@ -318,8 +321,9 @@ struct AddRestaurantView: View {
             try modelContext.save()
         } catch {
             logger.error("식당 저장 실패: \(error.localizedDescription)")
-            // 저장되지 않은 식당을 컨텍스트에 남겨 두면 다시 '저장' 을 누를 때마다 같은 식당이 하나씩 더 생긴다
-            modelContext.rollback()
+            // 저장되지 않은 식당을 컨텍스트에 남겨 두면 다시 '저장' 을 누를 때마다 같은 식당이 하나씩 더 생긴다.
+            // rollback() 은 같은 컨텍스트에서 아직 저장되지 않은 다른 화면의 고침까지 버리므로, 이번에 넣은 것만 지운다.
+            for model in inserted.reversed() { modelContext.delete(model) }
             saveFailed = true
             return
         }

@@ -214,6 +214,9 @@ struct GoogleImportView: View {
 
     private func save() {
         let places = chosen.prefix(saveCount)
+        // 저장에 실패하면 이번에 넣은 것만 걷어 낸다 (rollback 은 다른 화면의 저장 전 고침까지 버린다)
+        var inserted: [any PersistentModel] = []
+        var restaurantCount = 0
         for (place, visited) in places {
             guard let c = place.coordinate else { continue }
             let restaurant = Restaurant(name: place.name, address: place.address,
@@ -221,17 +224,22 @@ struct GoogleImportView: View {
                                         notes: place.note, rating: place.rating, visitDate: place.date ?? Date(),
                                         listType: visited ? .visited : .wishlist)
             modelContext.insert(restaurant)
+            inserted.append(restaurant)
+            restaurantCount += 1
             // 구글에 별점을 남긴 곳은 그날 한 번 다녀온 것으로 적는다.
             if visited && place.rating > 0 {
-                modelContext.insert(Visit(restaurant: restaurant, visitDate: place.date ?? Date(),
-                                          notes: place.note, rating: place.rating))
+                let visit = Visit(restaurant: restaurant, visitDate: place.date ?? Date(),
+                                  notes: place.note, rating: place.rating)
+                modelContext.insert(visit)
+                inserted.append(visit)
             }
         }
         do {
             try modelContext.save()
-            savedCount = places.count
+            // 위치가 없어 건너뛴 곳은 세지 않는다 — 실제로 저장한 식당 수
+            savedCount = restaurantCount
         } catch {
-            modelContext.rollback()
+            for model in inserted.reversed() { modelContext.delete(model) }
             failure = error.localizedDescription
         }
     }
