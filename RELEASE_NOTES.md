@@ -3,6 +3,152 @@
 App Store 의 "이 버전의 새로운 기능" 에 그대로 올라가는 글이다.
 평문만 쓴다. 한 줄에 한 문장, 3~5줄, 한 줄 40자 이내.
 
+## 1.0.5
+
+### 앱스토어 (한국어)
+
+나만 쓰기로 혼자 보는 맛집 일기가 돼요
+홈 화면의 앱 이름이 내 언어로 보여요
+위치와 사진 권한 안내도 내 언어로 나와요
+
+### 앱스토어 (English)
+
+Private Mode makes it your own diary
+The app name now shows in your language
+Location and photo prompts are too
+
+### 앱스토어 (en-GB)
+
+Private Mode makes it your own diary
+The app name now shows in your language
+Location and photo prompts are too
+
+### 앱스토어 (日本語)
+
+自分だけで使う設定で自分専用の日記に
+ホーム画面のアプリ名が日本語になりました
+位置情報と写真の許可の案内も日本語に
+
+### 앱스토어 (简体中文)
+
+开启仅自己使用，变成私人美食日记
+主屏幕上的应用名称会显示为中文
+位置和照片权限提示也改为中文
+
+### 앱스토어 (繁體中文)
+
+開啟僅自己使用，變成私人美食日記
+主畫面上的 App 名稱會顯示為中文
+位置與照片權限提示也改為中文
+
+### 앱스토어 (Русский)
+
+Режим «Только для меня» для себя
+Название приложения теперь по-русски
+Запросы доступа тоже на русском
+
+### 앱스토어 (Español)
+
+Con Solo para mí, tu diario es privado
+El nombre de la app sale en tu idioma
+También los avisos de ubicación y fotos
+
+### 앱스토어 (Deutsch)
+
+„Nur für mich“ macht sie zum Esstagebuch
+Der App-Name erscheint jetzt auf Deutsch
+Auch Standort- und Fotofragen
+
+### 앱스토어 (Français)
+
+Le Mode privé en fait votre journal
+Le nom de l'app est dans votre langue
+Les demandes d'accès aussi
+
+### 앱스토어 (Italiano)
+
+Con Solo per me hai un diario tutto tuo
+Il nome dell'app è nella tua lingua
+Anche le richieste di posizione e foto
+
+### 앱스토어 (pt-BR)
+
+Com Só para mim, um diário só seu
+O nome do app aparece no seu idioma
+Os pedidos de localização e fotos também
+
+### 앱스토어 (ไทย)
+
+โหมดใช้คนเดียว เป็นไดอารี่อาหารส่วนตัว
+ชื่อแอปบนหน้าโฮมเป็นภาษาไทยแล้ว
+คำขอสิทธิ์ตำแหน่งและรูปภาพก็เป็นภาษาไทย
+
+### 앱스토어 (Tiếng Việt)
+
+Chế độ Chỉ mình tôi cho nhật ký riêng
+Tên ứng dụng hiển thị bằng tiếng Việt
+Lời xin quyền vị trí và ảnh cũng vậy
+
+### 앱스토어 (Čeština)
+
+Režim Jen pro mě pro soukromý deník
+Název aplikace je teď v češtině
+I žádosti o polohu a fotky jsou česky
+
+### 앱스토어 (Dansk)
+
+Kun til mig gør den til din maddagbog
+Appens navn vises nu på dansk
+Spørgsmål om placering og fotos også
+
+### 앱스토어 (Ελληνικά)
+
+Μόνο για μένα: το δικό σας ημερολόγιο
+Το όνομα της εφαρμογής στα ελληνικά
+Και τα αιτήματα πρόσβασης επίσης
+
+### 앱스토어 (Suomi)
+
+Vain minulle: oma ruokapäiväkirjasi
+Sovelluksen nimi näkyy nyt suomeksi
+Myös sijainti- ja kuvaluvat suomeksi
+
+### 앱스토어 (Indonesia)
+
+Hanya untuk saya, jadi diari pribadimu
+Nama aplikasi kini tampil dalam bahasamu
+Izin lokasi dan foto juga begitu
+
+### 앱스토어 (Norsk bokmål)
+
+Bare for meg gjør den til din matdagbok
+Appnavnet vises nå på norsk
+Spørsmål om posisjon og bilder også
+
+### 앱스토어 (Nederlands)
+
+Alleen voor mij maakt het je eetdagboek
+De appnaam staat nu in het Nederlands
+Ook vragen om locatie en foto's
+
+### 앱스토어 (Polski)
+
+Tylko dla mnie to Twój prywatny dziennik
+Nazwa aplikacji jest teraz po polsku
+Prośby o lokalizację i zdjęcia też
+
+### 앱스토어 (Svenska)
+
+Bara för mig gör den till din matdagbok
+Appens namn visas nu på svenska
+Frågor om plats och bilder också
+
+### 앱스토어 (Türkçe)
+
+Yalnızca ben ile kendi yemek günlüğün
+Uygulama adı artık Türkçe görünüyor
+Konum ve fotoğraf izinleri de Türkçe
+
 ## 1.0.4
 
 ### 앱스토어 (한국어)
