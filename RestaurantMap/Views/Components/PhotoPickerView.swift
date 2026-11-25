@@ -89,7 +89,9 @@ struct PhotoPickerView: View {
 /// 고른 사진을 저장 전까지 들고 있을 크기.
 enum PickedPhoto {
     /// 저장되는 크기(긴 변 1024pt × 화면 배율)보다 작지 않게 — 저장되는 사진의 화질은 그대로다.
-    static var maxPixel: CGFloat { 1024 * max(UITraitCollection.current.displayScale, 1) }
+    /// 배율은 저장할 때 줄이는 렌더러(`resizeImage`)가 쓰는 것과 같은 값을 쓴다. `UITraitCollection.current` 는
+    /// 그리기 밖에서 1 로 나올 수 있어, 그러면 사진을 미리 1024px 로 줄여 저장 화질이 떨어졌다.
+    static var maxPixel: CGFloat { 1024 * max(UIGraphicsImageRendererFormat.default().scale, 1) }
 
     /// 이미 풀려 있는 큰 그림(카메라)을 줄인다. 줄일 수 없으면 그대로 돌려준다.
     static func shrunk(_ image: UIImage) -> UIImage {

@@ -13,7 +13,9 @@ import CoreLocation
 struct GoogleImportView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
-    @Query private var restaurants: [Restaurant]
+    @Query private var storedRestaurants: [Restaurant]
+    /// 지워진 식당은 읽지 않는다(→ ContentView 와 같은 까닭).
+    private var restaurants: [Restaurant] { storedRestaurants.filter { !$0.isGone } }
     @State private var purchases = Purchases.shared
 
     @State private var picking = false

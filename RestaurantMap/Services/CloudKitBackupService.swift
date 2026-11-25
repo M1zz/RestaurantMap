@@ -151,8 +151,9 @@ class CloudKitBackupService {
             // 예전에는 지운 것을 먼저 저장한 뒤에 넣어서, 넣다가 실패하면(깨진 백업 · 저장 공간 부족) 기기의 기록이 통째로 사라졌다.
             // 이제는 실패하면 되돌려서 지금 기록이 그대로 남는다.
             progressMessage = String(localized: "데이터 복구 중...")
-            let restored = try await replaceLocalData(modelContainer: modelContainer, data: backupData)
-            try await attachPhotos(photos.files, to: restored, modelContainer: modelContainer)
+            // 사진도 같은 저장에 넣는다. 따로 저장하면, 사진 붙이기만 실패했을 때(저장 공간이 모자라면 큰 사진부터
+            // 깨진다) 기록은 이미 백업 것으로 바뀐 채 사진만 빠지고, 다음 백업이 iCloud 의 사진까지 지웠다.
+            try await replaceLocalData(modelContainer: modelContainer, data: backupData, photos: photos.files)
 
             progressMessage = String(localized: "복구 완료!")
             logger.info("복구 성공")
@@ -504,13 +505,14 @@ class CloudKitBackupService {
     /// 기기의 기록을 백업의 것으로 바꾼다. 지우기와 넣기를 한 번에 저장하고, 실패하면 둘 다 되돌린다.
     /// 메인 액터에서 쉬지 않고 끝까지 돌기 때문에 그 사이에 자동 저장이 끼어들어 '지운 것만' 내려가지 않는다.
     @MainActor
-    private func replaceLocalData(modelContainer: ModelContainer, data: BackupData) throws -> [UUID: Visit] {
+    private func replaceLocalData(modelContainer: ModelContainer, data: BackupData,
+                                  photos: [(url: URL, filename: String, visitID: UUID)]) throws {
         let context = modelContainer.mainContext
         // 화면에서 고치던 것이 있으면 먼저 내린다 — 아래에서 되돌릴 때 같이 사라지지 않게
         if context.hasChanges { try context.save() }
         do {
             try deleteLocalData(modelContainer: modelContainer, saves: false)
-            return try restoreLocalData(modelContainer: modelContainer, data: data)
+            try restoreLocalData(modelContainer: modelContainer, data: data, photos: photos)
         } catch {
             context.rollback()
             throw error
@@ -555,10 +557,11 @@ class CloudKitBackupService {
         logger.info("로컬 데이터 삭제 완료")
     }
 
-    /// 복구된 데이터를 로컬에 저장. 되살린 방문을 사진 ID 로 돌려준다 (→ attachPhotos).
+    /// 복구된 데이터를 로컬에 넣고, 받아 둔 사진까지 붙여 한 번에 저장한다.
     @MainActor
     @discardableResult
-    private func restoreLocalData(modelContainer: ModelContainer, data: BackupData) throws -> [UUID: Visit] {
+    private func restoreLocalData(modelContainer: ModelContainer, data: BackupData,
+                                  photos: [(url: URL, filename: String, visitID: UUID)]) throws {
         let context = modelContainer.mainContext
         var restoredVisits: [UUID: Visit] = [:]
 
@@ -760,17 +763,16 @@ class CloudKitBackupService {
             context.insert(profile)
         }
 
+        insertPhotos(photos, to: restoredVisits, context: context)
         try context.save()
-        logger.info("로컬 데이터 복구 완료: \(data.restaurants.count)개 식당")
-        return restoredVisits
+        logger.info("로컬 데이터 복구 완료: \(data.restaurants.count)개 식당, 사진 \(photos.count)장")
     }
 
-    /// 받아 둔 사진 파일을 되살린 방문의 기록 안(VisitPhoto)에 붙인다. 백업에 적힌 순서를 지킨다.
+    /// 받아 둔 사진 파일을 되살린 방문의 기록 안(VisitPhoto)에 넣는다. 백업에 적힌 순서를 지킨다.
+    /// 저장은 하지 않는다 — 기록과 한 번에 저장해야 반쪽짜리 복원이 남지 않는다(→ replaceLocalData).
     @MainActor
-    private func attachPhotos(_ files: [(url: URL, filename: String, visitID: UUID)],
-                              to visits: [UUID: Visit], modelContainer: ModelContainer) throws {
-        guard !files.isEmpty else { return }
-        let context = modelContainer.mainContext
+    private func insertPhotos(_ files: [(url: URL, filename: String, visitID: UUID)],
+                              to visits: [UUID: Visit], context: ModelContext) {
         var order: [UUID: Int] = [:]
         for file in files {
             guard let visit = visits[file.visitID], let data = try? Data(contentsOf: file.url) else { continue }
@@ -779,14 +781,6 @@ class CloudKitBackupService {
             context.insert(photo)
             photo.visit = visit
         }
-        do {
-            try context.save()
-        } catch {
-            // 붙이다 만 사진을 되돌린다 — 기록(글)은 이미 되살아나 있다
-            context.rollback()
-            throw error
-        }
-        logger.info("사진 \(files.count)장을 기록에 붙임")
     }
 
     // MARK: - UserDefaults

@@ -364,7 +364,9 @@ final class SaveFailureNotice {
         Logger(subsystem: "com.restaurantmap", category: "App").error("저장 실패: \(error.localizedDescription)")
         guard !told else { return }
         told = true
-        isPresented = true
+        // 저장은 대개 시트를 닫는 순간에 한다. 시트가 내려가는 도중에는 바깥 알림창이 뜨지 못하므로
+        // 내려간 뒤에 세운다.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) { self.isPresented = true }
     }
 }
 

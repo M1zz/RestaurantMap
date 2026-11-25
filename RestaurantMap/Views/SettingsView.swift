@@ -15,7 +15,9 @@ struct SettingsView: View {
     @State private var resultMessage = ""
     @State private var isSuccess = false
 
-    @Query private var restaurants: [Restaurant]
+    @Query private var storedRestaurants: [Restaurant]
+    /// 복원 · 지우기 직후 질의가 새로 고쳐지기 전에 한 박자 남은 지워진 식당은 읽지 않는다(읽으면 죽는다).
+    private var restaurants: [Restaurant] { storedRestaurants.filter { !$0.isGone } }
 
     @State private var purchases = Purchases.shared
     @State private var reminder = VisitReminderManager.shared

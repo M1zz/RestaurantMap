@@ -11,7 +11,9 @@ struct RestaurantDetailView: View {
     @Bindable var restaurant: Restaurant
     /// 시트가 아니라 아이폰 듀오의 결과 쪽 판에 설 때, 닫기가 할 일(판을 비운다).
     var onClose: (() -> Void)? = nil
-    @Query private var allRestaurants: [Restaurant]
+    @Query private var storedRestaurants: [Restaurant]
+    /// 다른 식당이 막 지워진 순간에도 순위를 셀 수 있게 지워진 것은 뺀다(→ ContentView 와 같은 까닭).
+    private var allRestaurants: [Restaurant] { storedRestaurants.filter { !$0.isGone } }
 
     @State private var showingDeleteAlert = false
     @State private var showingAddVisit = false

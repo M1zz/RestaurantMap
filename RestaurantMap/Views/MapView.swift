@@ -827,7 +827,8 @@ struct MapView: View {
                 logger.info("✅ 전체 검색 완료! 원본 결과: \(allResults.count)개")
 
                 // 기존 POI와 새로운 POI를 합치고 중복 제거
-                let combinedPOIs = nearbyPOIs + allResults
+                // 새 결과를 앞에 둔다 — 중복은 먼저 나온 쪽이 남으므로, 지금 화면의 것이 한도에 잘리지 않게
+                let combinedPOIs = allResults + nearbyPOIs
                 var uniquePOIs: [MKMapItem] = []
                 var seenCoordinates = Set<String>()
 
@@ -842,7 +843,7 @@ struct MapView: View {
                 }
 
                 // 지도를 옮길 때마다 쌓이기만 하면 핀이 수천 개가 되어 메모리로 꺼진다 — 최근 것만 남긴다
-                nearbyPOIs = Array(uniquePOIs.suffix(Self.maxNearbyPOIs))
+                nearbyPOIs = Array(uniquePOIs.prefix(Self.maxNearbyPOIs))
                 if searchedRegions.count > 500 { searchedRegions.removeAll() }
                 logger.info("✅ nearbyPOIs 배열 업데이트 완료: \(nearbyPOIs.count)개 (중복 제거 후)")
             } else {

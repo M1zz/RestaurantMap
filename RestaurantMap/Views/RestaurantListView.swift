@@ -239,6 +239,9 @@ struct RestaurantListView: View {
                 // 시트 안에서 식당을 지우면 내려가는 동안에도 이 자리가 다시 그려진다 — 지워진 식당은 넘기지 않는다
                 if let restaurant = selectedRestaurant, !restaurant.isGone {
                     RestaurantDetailViewWrapper(restaurant: restaurant)
+                } else if selectedRestaurant?.isGone == true {
+                    // 이 시트에서 지운 식당 — 내려가는 동안 불러오는 중 화면이 비치지 않게 비워 둔다
+                    Color.clear
                 } else {
                     LoadingSheetView()
                 }
