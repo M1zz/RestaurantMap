@@ -3,6 +3,200 @@
 App Store 의 "이 버전의 새로운 기능" 에 그대로 올라가는 글이다.
 평문만 쓴다. 한 줄에 한 문장, 3~5줄, 한 줄 40자 이내.
 
+## 1.0.4
+
+### 앱스토어 (한국어)
+
+구글 지도에 저장한 곳을 한 번에 가져와요
+해외에서도 식당을 검색할 수 있어요
+내가 만든 음식 종류를 바로 고를 수 있어요
+할인 기간에는 앱을 열 때 소식을 알려 드려요
+처음 구독하면 할인된 값으로 시작할 수 있어요
+
+### 앱스토어 (English)
+
+Import saved places from Google Maps
+Search restaurants outside Korea too
+Pick your own cuisine types when adding
+The app now tells you when a sale is on
+New subscribers start at a lower price
+
+### 앱스토어 (en-GB)
+
+Import saved places from Google Maps
+Search restaurants outside Korea too
+Pick your own cuisine types when adding
+The app now tells you when a sale is on
+New subscribers start at a lower price
+
+### 앱스토어 (日本語)
+
+Googleマップの保存場所をまとめて取り込めます
+韓国以外でもお店を検索できます
+自分で作った料理ジャンルをすぐ選べます
+セール期間中はアプリを開くとお知らせします
+初めての登録なら割引価格で始められます
+
+### 앱스토어 (简体中文)
+
+一键导入在 Google 地图收藏的地点
+在韩国以外也能搜索餐厅
+可直接选择自己建立的菜系
+优惠期间打开应用时会通知你
+首次订阅可以优惠价开始
+
+### 앱스토어 (繁體中文)
+
+一次匯入在 Google 地圖收藏的地點
+在韓國以外也能搜尋餐廳
+可直接選擇自己建立的料理類型
+優惠期間開啟 App 時會通知你
+首次訂閱可用優惠價開始
+
+### 앱스토어 (Русский)
+
+Импорт сохранённых мест из Google Карт
+Поиск ресторанов и за пределами Кореи
+Свои категории кухни можно выбрать сразу
+Приложение сообщит о скидках при запуске
+Новая подписка по сниженной цене
+
+### 앱스토어 (Español)
+
+Importa tus sitios de Google Maps
+Busca restaurantes fuera de Corea
+Elige tus propios tipos de comida
+La app te avisa cuando hay ofertas
+Tu primera suscripción tiene descuento
+
+### 앱스토어 (Deutsch)
+
+Orte aus Google Maps auf einmal holen
+Restaurants auch außerhalb Koreas finden
+Eigene Küchenarten direkt auswählen
+Die App zeigt dir laufende Angebote
+Neue Abos starten zum reduzierten Preis
+
+### 앱스토어 (Français)
+
+Importez vos lieux de Google Maps
+Cherchez des restos hors de Corée
+Choisissez vos propres types de cuisine
+L’app vous prévient pendant les promos
+Premier abonnement à prix réduit
+
+### 앱스토어 (Italiano)
+
+Importa i luoghi salvati su Google Maps
+Cerca ristoranti anche fuori dalla Corea
+Scegli subito i tuoi tipi di cucina
+L’app ti avvisa quando c’è un’offerta
+Con il primo abbonamento parti scontato
+
+### 앱스토어 (pt-BR)
+
+Importe lugares salvos do Google Maps
+Busque restaurantes fora da Coreia
+Escolha seus próprios tipos de comida
+O app avisa quando há promoção
+A primeira assinatura tem desconto
+
+### 앱스토어 (ไทย)
+
+นำเข้าที่บันทึกไว้ใน Google Maps ได้ทันที
+ค้นหาร้านอาหารนอกเกาหลีได้แล้ว
+เลือกประเภทอาหารที่สร้างเองได้ทันที
+ช่วงลดราคา เราจะแจ้งเมื่อคุณเปิดแอป
+สมัครครั้งแรกเริ่มได้ในราคาพิเศษ
+
+### 앱스토어 (Tiếng Việt)
+
+Nhập địa điểm đã lưu từ Google Maps
+Tìm nhà hàng cả ngoài Hàn Quốc
+Chọn ngay loại món ăn do bạn tạo
+Khi có ưu đãi, ứng dụng sẽ báo cho bạn
+Lần đăng ký đầu tiên có giá ưu đãi
+
+### 앱스토어 (Čeština)
+
+Import uložených míst z Map Google
+Hledání restaurací i mimo Koreu
+Vlastní druhy kuchyně hned k výběru
+Během slev vám dáme vědět po otevření
+Noví předplatitelé začnou se slevou
+
+### 앱스토어 (Dansk)
+
+Hent gemte steder fra Google Maps
+Søg efter restauranter uden for Korea
+Vælg dine egne madtyper med det samme
+Appen fortæller dig, når der er udsalg
+Nye abonnenter starter til nedsat pris
+
+### 앱스토어 (Ελληνικά)
+
+Εισαγωγή μερών από το Google Maps
+Αναζήτηση εστιατορίων και εκτός Κορέας
+Διάλεξε αμέσως τις δικές σου κουζίνες
+Η εφαρμογή σας ενημερώνει για προσφορές
+Οι νέοι συνδρομητές ξεκινούν με έκπτωση
+
+### 앱스토어 (Suomi)
+
+Tuo tallennetut paikat Google Mapsista
+Ravintolahaku myös Korean ulkopuolella
+Valitse omat ruokalajisi heti
+Alennuksista kerrotaan, kun avaat apin
+Uudet tilaajat aloittavat alennushintaan
+
+### 앱스토어 (Indonesia)
+
+Impor tempat tersimpan dari Google Maps
+Cari restoran di luar Korea juga
+Pilih jenis makanan buatanmu langsung
+App memberi tahu saat ada diskon
+Pelanggan baru mulai dengan harga diskon
+
+### 앱스토어 (Norsk bokmål)
+
+Hent lagrede steder fra Google Maps
+Søk etter restauranter utenfor Korea
+Velg dine egne mattyper med en gang
+Appen sier fra når det er salg
+Nye abonnenter starter til redusert pris
+
+### 앱스토어 (Nederlands)
+
+Importeer je plekken uit Google Maps
+Zoek ook restaurants buiten Korea
+Kies meteen je eigen keukensoorten
+De app laat weten wanneer er korting is
+Nieuwe abonnees beginnen met korting
+
+### 앱스토어 (Polski)
+
+Import zapisanych miejsc z Map Google
+Szukaj restauracji także poza Koreą
+Wybieraj od razu własne rodzaje kuchni
+Aplikacja powie Ci o promocjach
+Nowi subskrybenci zaczną w niższej cenie
+
+### 앱스토어 (Svenska)
+
+Hämta sparade platser från Google Maps
+Sök restauranger även utanför Korea
+Välj dina egna mattyper direkt
+Appen berättar nu när det är rea
+Nya prenumeranter börjar till lägre pris
+
+### 앱스토어 (Türkçe)
+
+Google Haritalar'daki yerleri aktar
+Kore dışında da restoran ara
+Kendi yemek türlerini hemen seç
+Uygulama indirimleri size haber verir
+Yeni aboneler indirimli başlayabilir
+
 ## 1.0.2
 
 ### 앱스토어 (한국어)
