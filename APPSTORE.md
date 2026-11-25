@@ -34,6 +34,7 @@ https://m1zz.github.io/RestaurantMap/
 
 다녀온 식당을 지도에 남기고, 갈 때마다 맛을 기록하세요.
 인생 맛집은 내가 직접 고른 맛집만 모아 두는 나만의 맛집 지도입니다.
+기록은 내 기기에만 남는 나만의 맛집 일기이고, 후기는 원할 때만 모두에게 올립니다.
 
 지도에 모으는 맛집
 식당을 검색하거나 지도에서 위치를 골라 저장합니다. 저장한 곳은 지도에 방문 도장으로 표시되고, 갈 때마다 도장이 차오릅니다.
@@ -103,6 +104,7 @@ Drop a pin on every restaurant you visit and save your rating and notes. One pla
 
 Pin the places you have eaten and note how each meal tasted, every time you go.
 Insaeng Matjip is your own food map, made only of the restaurants you chose.
+It is a private food diary that stays on your device. Share a review with others only if you want to.
 
 A map of your favorite places
 Search for a restaurant or pick a spot on the map to save it. Saved places show up on the map as visit stamps that fill in a little more each time you go.
@@ -172,6 +174,7 @@ Drop a pin on every restaurant you visit and save your rating and notes. One pla
 
 Pin the places you have eaten and note how each meal tasted, every time you go.
 Insaeng Matjip is your own food map, made only of the restaurants you chose.
+It is a private food diary that stays on your device. Share a review with others only if you want to.
 
 A map of your favourite places
 Search for a restaurant or pick a spot on the map to save it. Saved places show up on the map as visit stamps that fill in a little more each time you go.
@@ -241,6 +244,7 @@ https://m1zz.github.io/RestaurantMap/ja/
 
 行ったお店を地図に残して、訪れるたびに味を記録しましょう。
 人生グルメは、自分で選んだお店だけを集めるマイグルメマップです。
+記録はこの端末だけに残る自分だけのグルメ日記。レビューは公開したいときだけ共有できます。
 
 地図に集めるお気に入りの店
 店を検索するか、地図で場所を選んで保存します。保存した店は地図に訪問スタンプで表示され、行くたびにスタンプが満ちていきます。
@@ -310,6 +314,7 @@ https://m1zz.github.io/RestaurantMap/zh-Hans/
 
 把去过的餐厅标在地图上，每次光顾都记下味道。
 人生美食是一张只属于你的美食地图，里面只收录你亲自挑选的餐厅。
+记录只保存在你的设备上，是一本私人美食日记；只有你愿意时，才会公开分享评价。
 
 收进地图的餐厅
 搜索餐厅或在地图上选好位置即可保存。保存的店会以到访印章显示在地图上，每去一次印章就满一些。
@@ -379,6 +384,7 @@ https://m1zz.github.io/RestaurantMap/zh-Hant/
 
 把去過的餐廳標在地圖上，每次光顧都記下味道。
 人生美食是一張只屬於你的美食地圖，裡面只收錄你親自挑選的餐廳。
+紀錄只儲存在你的裝置上，是一本私人美食日記；只有你願意時，才會公開分享評價。
 
 收進地圖的餐廳
 搜尋餐廳或在地圖上選好位置即可儲存。儲存的店會以到訪印章顯示在地圖上，每去一次印章就滿一些。
@@ -448,6 +454,7 @@ Insaeng: карта ресторанов
 
 Отмечайте рестораны на карте и записывайте вкус при каждом визите.
 Insaeng — ваша личная гастрономическая карта, в которой только рестораны, выбранные вами.
+Это личный гастродневник: записи хранятся только на вашем устройстве, а отзывом можно поделиться, лишь если захотите.
 
 Карта любимых мест
 Найдите ресторан или выберите точку на карте и сохраните. Сохранённые места отмечаются на карте штампами визитов, которые заполняются с каждым походом.
@@ -517,6 +524,7 @@ Marca en el mapa cada restaurante que visites y guarda tu puntuación y tus nota
 
 Marca en el mapa los sitios donde has comido y anota cómo sabía cada comida.
 Insaeng es tu mapa gastronómico personal, hecho solo con los restaurantes que tú eliges.
+Es un diario gastronómico privado que se queda en tu dispositivo; solo compartes una reseña si quieres.
 
 Un mapa de tus sitios favoritos
 Busca un restaurante o elige un punto en el mapa para guardarlo. Los sitios guardados aparecen en el mapa como sellos de visita que se llenan un poco más cada vez que vas.
@@ -586,6 +594,7 @@ Setze für jedes besuchte Restaurant einen Pin auf die Karte und halte Bewertung
 
 Markiere die Orte, an denen du gegessen hast, und halte bei jedem Besuch fest, wie es geschmeckt hat.
 Insaeng ist deine ganz persönliche Restaurant-Karte – nur mit Lokalen, die du selbst ausgewählt hast.
+Ein privates Esstagebuch, das auf deinem Gerät bleibt – Bewertungen teilst du nur, wenn du willst.
 
 Eine Karte deiner Lieblingsorte
 Suche ein Restaurant oder wähle einen Punkt auf der Karte, um es zu speichern. Gespeicherte Orte erscheinen auf der Karte als Besuchsstempel, die sich mit jedem Besuch weiter füllen.
@@ -655,6 +664,7 @@ carnet,favoris,gourmand,avis,envies,steak,ramen,sushi,café,adresses,notes,photo
 
 Épinglez les lieux où vous avez mangé et notez le goût de chaque repas, à chaque visite.
 Insaeng est votre carte gourmande personnelle, composée uniquement des restaurants que vous avez choisis.
+C'est un journal gourmand privé qui reste sur votre appareil ; vous ne partagez un avis que si vous le souhaitez.
 
 Une carte de vos adresses préférées
 Cherchez un restaurant ou choisissez un point sur la carte pour l'enregistrer. Vos adresses apparaissent sur la carte sous forme de tampons de visite qui se remplissent un peu plus à chaque passage.
@@ -724,6 +734,7 @@ Segna con uno spillo ogni ristorante visitato e conserva voto e appunti. Posto d
 
 Segna sulla mappa i posti dove hai mangiato e annota com’era il gusto, a ogni visita.
 Insaeng è la tua mappa gastronomica personale, fatta solo dei ristoranti che scegli tu.
+È un diario gastronomico privato che resta sul tuo dispositivo; condividi una recensione solo se vuoi.
 
 Una mappa dei tuoi posti preferiti
 Cerca un ristorante o scegli un punto sulla mappa per salvarlo. I posti salvati compaiono sulla mappa come timbri di visita che si riempiono un po' di più ogni volta che ci vai.
@@ -793,6 +804,7 @@ Marque no mapa cada restaurante que visitar e guarde sua nota e suas anotações
 
 Marque no mapa os lugares onde você comeu e anote como foi o sabor a cada visita.
 O Insaeng é o seu mapa gastronômico pessoal, feito só com os restaurantes que você escolheu.
+É um diário gastronômico privado que fica no seu aparelho; você só compartilha uma avaliação se quiser.
 
 Um mapa dos seus lugares favoritos
 Busque um restaurante ou escolha um ponto no mapa para salvar. Os lugares salvos aparecem no mapa como carimbos de visita que se completam um pouco mais a cada ida.
@@ -862,6 +874,7 @@ Insaeng: แผนที่ร้านอาหาร
 
 ปักหมุดร้านที่คุณเคยไป แล้วจดรสชาติของแต่ละมื้อทุกครั้งที่ไป
 Insaeng คือแผนที่ร้านอาหารส่วนตัว ที่มีเฉพาะร้านที่คุณเลือกเอง
+เป็นไดอารี่อาหารส่วนตัวที่เก็บไว้ในเครื่องของคุณ จะแชร์รีวิวให้คนอื่นเห็นก็ต่อเมื่อคุณต้องการเท่านั้น
 
 แผนที่ร้านโปรดของคุณ
 ค้นหาร้านหรือเลือกจุดบนแผนที่เพื่อบันทึก ร้านที่บันทึกไว้จะแสดงบนแผนที่เป็นตราประทับการไป ซึ่งเต็มขึ้นทุกครั้งที่ไป
@@ -931,6 +944,7 @@ Ghim mọi quán bạn đã ghé lên bản đồ, rồi lưu điểm số và g
 
 Ghim những nơi bạn đã ăn và ghi lại hương vị mỗi lần ghé.
 Insaeng là tấm bản đồ ẩm thực của riêng bạn, chỉ gồm những quán do chính bạn chọn.
+Đây là nhật ký ăn uống riêng tư, chỉ lưu trên thiết bị của bạn; bạn chỉ chia sẻ đánh giá khi muốn.
 
 Bản đồ những quán bạn yêu
 Tìm quán hoặc chọn một điểm trên bản đồ để lưu. Quán đã lưu hiện trên bản đồ thành con dấu ghé thăm, đầy thêm sau mỗi lần bạn đến.
@@ -1000,6 +1014,7 @@ Označte špendlíkem každou navštívenou restauraci a uložte si hodnocení i
 
 Označte na mapě místa, kde jste jedli, a při každé návštěvě si zapište, jak chutnalo.
 Insaeng je vaše osobní gurmánská mapa, ve které najdete jen restaurace, které jste sami vybrali.
+Je to soukromý gastrodeník, který zůstává ve vašem zařízení; recenzi sdílíte jen tehdy, když chcete.
 
 Mapa oblíbených podniků
 Vyhledejte restauraci nebo vyberte místo na mapě a uložte ji. Uložená místa se na mapě ukazují jako razítka návštěv, která se s každou návštěvou trochu víc zaplní.
@@ -1069,6 +1084,7 @@ Sæt en nål på kortet for hver restaurant, du besøger, og gem din bedømmelse
 
 Sæt nåle på de steder, hvor du har spist, og skriv ned, hvordan det smagte – hver gang du er der.
 Insaeng er dit personlige madkort, som kun rummer de restauranter, du selv har valgt.
+Det er en privat maddagbog, der bliver på din enhed – du deler kun en anmeldelse, hvis du vil.
 
 Et kort over dine yndlingssteder
 Søg efter en restaurant, eller vælg et punkt på kortet for at gemme den. Gemte steder vises på kortet som besøgsstempler, der fyldes lidt mere ud for hvert besøg.
@@ -1138,6 +1154,7 @@ Insaeng: Χάρτης εστιατορίων
 
 Καρφιτσώστε τα μέρη όπου φάγατε και σημειώστε πώς ήταν η γεύση, κάθε φορά που πηγαίνετε.
 Το Insaeng είναι ο προσωπικός σας γαστρονομικός χάρτης, με μόνο τα εστιατόρια που διαλέξατε εσείς.
+Είναι ένα ιδιωτικό ημερολόγιο φαγητού που μένει στη συσκευή σας· κοινοποιείτε κριτική μόνο αν το θέλετε.
 
 Ένας χάρτης με τα αγαπημένα σας μέρη
 Αναζητήστε ένα εστιατόριο ή διαλέξτε σημείο στον χάρτη για να το αποθηκεύσετε. Τα αποθηκευμένα μέρη εμφανίζονται στον χάρτη ως σφραγίδες επίσκεψης που γεμίζουν λίγο περισσότερο κάθε φορά που πηγαίνετε.
@@ -1207,6 +1224,7 @@ Merkitse jokainen vierailemasi ravintola kartalle ja tallenna arvio ja muistiinp
 
 Merkitse kartalle paikat, joissa olet syönyt, ja kirjaa ylös, miltä ateria maistui – joka kerta.
 Insaeng on henkilökohtainen ruokakarttasi, jossa ovat vain itse valitsemasi ravintolat.
+Se on yksityinen ruokapäiväkirja, joka pysyy laitteellasi – jaat arvion vain, jos haluat.
 
 Kartta lempipaikoistasi
 Hae ravintola tai valitse kohta kartalta ja tallenna se. Tallennetut paikat näkyvät kartalla käyntileimoina, jotka täyttyvät vähän enemmän joka käynnillä.
@@ -1276,6 +1294,7 @@ Sematkan setiap restoran yang kamu kunjungi di peta, lalu simpan nilai dan catat
 
 Sematkan tempat-tempat yang pernah kamu kunjungi dan catat rasa makanannya setiap kali datang.
 Insaeng adalah peta kuliner pribadimu, hanya berisi restoran yang kamu pilih sendiri.
+Ini buku harian kuliner pribadi yang tetap ada di perangkatmu; ulasan hanya dibagikan jika kamu mau.
 
 Peta tempat makan favoritmu
 Cari restoran atau pilih titik di peta untuk menyimpannya. Tempat yang disimpan muncul di peta sebagai cap kunjungan yang makin penuh setiap kali kamu datang.
@@ -1345,6 +1364,7 @@ Sett en nål på kartet for hver restaurant du besøker, og lagre vurderingen og
 
 Sett nåler på stedene der du har spist, og skriv ned hvordan det smakte – hver gang du er der.
 Insaeng er ditt personlige matkart, med bare de restaurantene du selv har valgt.
+Det er en privat matdagbok som blir på enheten din – du deler bare en anmeldelse hvis du vil.
 
 Et kart over favorittstedene dine
 Søk etter en restaurant eller velg et punkt på kartet for å lagre den. Lagrede steder vises på kartet som besøksstempler som fylles litt mer for hvert besøk.
@@ -1414,6 +1434,7 @@ Prik een speld in de kaart bij elk restaurant dat je bezoekt en bewaar je beoord
 
 Markeer de plekken waar je hebt gegeten en noteer bij elk bezoek hoe het smaakte.
 Insaeng is je persoonlijke eetkaart, met alleen de restaurants die je zelf hebt gekozen.
+Het is een privé eetdagboek dat op je apparaat blijft; je deelt alleen een review als je dat wilt.
 
 Een kaart van je favoriete plekken
 Zoek een restaurant of kies een punt op de kaart om het te bewaren. Bewaarde plekken staan op de kaart als bezoekstempels die bij elk bezoek wat verder vollopen.
@@ -1483,6 +1504,7 @@ Zaznacz pinezką każdą odwiedzoną restaurację i zapisz ocenę oraz notatki. 
 
 Zaznacz na mapie miejsca, w których jadłeś, i zapisuj, jak smakowało – przy każdej wizycie.
 Insaeng to Twoja osobista mapa kulinarna, w której są tylko restauracje wybrane przez Ciebie.
+To prywatny dziennik kulinarny, który zostaje na Twoim urządzeniu; recenzją dzielisz się tylko wtedy, gdy chcesz.
 
 Mapa ulubionych miejsc
 Wyszukaj restaurację lub wybierz punkt na mapie, aby ją zapisać. Zapisane miejsca pojawiają się na mapie jako pieczątki wizyt, które wypełniają się z każdą wizytą.
@@ -1552,6 +1574,7 @@ Sätt en nål på kartan för varje restaurang du besöker och spara betyg och a
 
 Markera stället där du har ätit och skriv ner hur det smakade – varje gång du är där.
 Insaeng är din personliga matkarta, med bara de restauranger du själv har valt.
+Det är en privat matdagbok som stannar på din enhet – du delar bara en recension om du vill.
 
 En karta över dina favoritställen
 Sök efter en restaurang eller välj en punkt på kartan för att spara den. Sparade ställen visas på kartan som besöksstämplar som fylls lite mer för varje besök.
@@ -1621,6 +1644,7 @@ Gittiğiniz her restoranı haritaya iğneleyin, puanınızı ve notlarınızı k
 
 Yemek yediğiniz yerleri haritaya iğneleyin ve her gidişinizde lezzetini not edin.
 Insaeng, yalnızca sizin seçtiğiniz restoranlardan oluşan kişisel yemek haritanızdır.
+Kayıtlarınız yalnızca cihazınızda kalan özel bir yemek günlüğüdür; yorumunuzu yalnızca isterseniz paylaşırsınız.
 
 Sevdiğin yerlerin haritası
 Bir restoran ara ya da haritada bir nokta seçip kaydet. Kaydettiğin yerler haritada, her gidişte biraz daha dolan ziyaret damgaları olarak görünür.

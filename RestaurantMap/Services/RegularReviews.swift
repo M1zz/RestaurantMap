@@ -76,7 +76,12 @@ final class RegularReviews {
     var isEnabled: Bool { LeeoRemoteFlags.isEnabled(RestaurantFlag.publicReviews) }
     /// 지금 모두에게 올릴 수 있는가. 아직 열지 않았으면(스위치 꺼짐 · 운영에 후기 틀 없음) 올리기와 남의 후기 칸을 통째로 숨긴다 —
     /// '곧 열려요' 같은 빈 칸을 보이지 않고, 앱은 나만 쓰는 단골 수첩으로 온전하다.
-    var canPost: Bool { isEnabled && phase != .preparing }
+    /// 나만 쓰기를 켰으면 남의 후기도, '모두에게 올리기' 도 없다.
+    var canPost: Bool { isEnabled && phase != .preparing && !Self.isPrivate }
+
+    /// 나만 쓰기 — 켜면 '단골 후기' 탭과 '모두에게 올리기' 를 숨겨 앱이 나만 보는 맛집 일기가 된다 (→ 설정).
+    static let privateKey = "privateMode"
+    static var isPrivate: Bool { UserDefaults.standard.bool(forKey: privateKey) }
 
     @ObservationIgnored private var cursor: CKQueryOperation.Cursor?
     @ObservationIgnored private let defaults = UserDefaults.standard

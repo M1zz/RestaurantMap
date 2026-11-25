@@ -66,10 +66,11 @@ private struct FoldRestaurantResult: View {
 }
 
 enum FoldTabs {
-    /// 펼쳤을 때 고르는 쪽 판 바닥에 서는 칸. 취향(3)은 결과 쪽에 서므로 빠진다.
-    static let items: [FoldTabBar<Int>.Item] = [
-        .init(value: 0, title: String(localized: "지도"), symbol: "map"),
-        .init(value: 1, title: String(localized: "목록"), symbol: "list.bullet"),
-        .init(value: 2, title: String(localized: "단골 후기"), symbol: "heart.text.square"),
-    ]
+    /// 펼쳤을 때 고르는 쪽 판 바닥에 서는 칸. 취향(3)은 결과 쪽에 서므로 빠진다. 나만 쓰기면 단골 후기도 빠진다.
+    static func items(isPrivate: Bool) -> [FoldTabBar<Int>.Item] {
+        [
+            .init(value: 0, title: String(localized: "지도"), symbol: "map"),
+            .init(value: 1, title: String(localized: "목록"), symbol: "list.bullet"),
+        ] + (isPrivate ? [] : [.init(value: 2, title: String(localized: "단골 후기"), symbol: "heart.text.square")])
+    }
 }

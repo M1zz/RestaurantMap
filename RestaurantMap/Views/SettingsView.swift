@@ -30,6 +30,7 @@ struct SettingsView: View {
     @State private var showsGoogleImport = false
     /// LeeoKit 마스터 모드(버전 7번 누르기). 이 앱은 켜질 때 관리자 비밀번호를 한 번 더 묻는다.
     @AppStorage("dev.masterMode") private var masterMode = false
+    @AppStorage(RegularReviews.privateKey) private var isPrivate = false
     @State private var asksPasscode = false
     @State private var passcode = ""
     /// 신고 목록을 여는 열쇠일 뿐 보안 장치는 아니다 — 후기를 지우는 권한은 CloudKit 의 Moderator 역할이 판정한다.
@@ -78,6 +79,15 @@ struct SettingsView: View {
                     Text("데이터 관리")
                 } footer: {
                     Text("내보내기는 어느 칸이든 무료예요.")
+                }
+
+                // 나만 쓰기
+                Section {
+                    Toggle(isOn: $isPrivate) {
+                        Label("나만 쓰기", systemImage: "lock")
+                    }
+                } footer: {
+                    Text("켜면 단골 후기 탭과 모두에게 올리기가 사라져, 나만 보는 맛집 일기가 돼요. 기록은 원래 이 기기에만 저장돼요.")
                 }
 
                 #if !os(visionOS)

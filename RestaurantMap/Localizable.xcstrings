@@ -1,6 +1,290 @@
 {
   "sourceLanguage" : "ko",
   "strings" : {
+    "나만 쓰기" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jen pro mě"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kun til mig"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nur für mich"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Μόνο για μένα"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Private Mode"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Private Mode"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Solo para mí"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vain minulle"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mode privé"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hanya untuk saya"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Solo per me"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自分だけで使う"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bare for meg"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alleen voor mij"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tylko dla mnie"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Só para mim"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Только для меня"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bara för mig"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ใช้คนเดียว"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yalnızca ben"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chỉ mình tôi"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仅自己使用"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "僅自己使用"
+          }
+        }
+      }
+    },
+    "켜면 단골 후기 탭과 모두에게 올리기가 사라져, 나만 보는 맛집 일기가 돼요. 기록은 원래 이 기기에만 저장돼요." : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skryje kartu recenzí štamgastů a zveřejňování pro všechny, takže z aplikace bude váš vlastní gastrodeník. Záznamy jsou vždy uložené jen v tomto zařízení."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skjuler fanen med stamgæsteanmeldelser og deling med alle, så appen bliver din egen maddagbog. Dine noter gemmes altid kun på denne enhed."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blendet den Tab mit Stammgast-Bewertungen und das Veröffentlichen aus – die App wird zu deinem eigenen Esstagebuch. Deine Einträge bleiben ohnehin nur auf diesem Gerät."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Κρύβει την καρτέλα κριτικών θαμώνων και τη δημοσίευση για όλους, ώστε η εφαρμογή να γίνει το δικό σας ημερολόγιο φαγητού. Οι καταγραφές σας μένουν πάντα μόνο σε αυτή τη συσκευή."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hides the Regulars tab and posting for everyone, so the app becomes your own food diary. Your records are always kept only on this device."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hides the Regulars tab and posting for everyone, so the app becomes your own food diary. Your records are always kept only on this device."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oculta la pestaña de reseñas de habituales y la publicación para todos, y la app se convierte en tu diario gastronómico. Tus registros siempre se guardan solo en este dispositivo."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Piilottaa kanta-asiakasarvioiden välilehden ja julkaisun kaikille, jolloin sovelluksesta tulee oma ruokapäiväkirjasi. Merkinnät tallentuvat aina vain tälle laitteelle."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Masque l'onglet des avis d'habitués et la publication pour tous : l'app devient votre journal gourmand. Vos notes restent de toute façon uniquement sur cet appareil."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menyembunyikan tab ulasan pelanggan setia dan posting untuk semua orang, sehingga aplikasi menjadi buku harian kuliner pribadi Anda. Catatan Anda memang hanya disimpan di perangkat ini."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nasconde la scheda delle recensioni degli habitué e la pubblicazione per tutti: l'app diventa il tuo diario gastronomico. I tuoi dati restano comunque solo su questo dispositivo."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オンにすると常連レビューのタブとみんなへの投稿が消え、自分だけのグルメ日記になります。記録はもともとこの端末にだけ保存されます。"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skjuler fanen med stamgjestanmeldelser og deling med alle, slik at appen blir din egen matdagbok. Notatene dine lagres uansett bare på denne enheten."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verbergt het tabblad met vaste-gastreviews en het delen met iedereen, zodat de app je eigen eetdagboek wordt. Je gegevens staan sowieso alleen op dit apparaat."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ukrywa kartę recenzji stałych gości i publikowanie dla wszystkich, a aplikacja staje się Twoim prywatnym dziennikiem kulinarnym. Wpisy i tak są zapisywane tylko na tym urządzeniu."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oculta a aba de avaliações de clientes fiéis e a publicação para todos, e o app vira seu diário gastronômico. Seus registros já ficam só neste aparelho."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скрывает вкладку отзывов завсегдатаев и публикацию для всех — приложение становится вашим личным гастродневником. Записи и так хранятся только на этом устройстве."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Döljer fliken med stamgästrecensioner och delning med alla, så blir appen din egen matdagbok. Dina anteckningar sparas alltid bara på den här enheten."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เมื่อเปิด แท็บรีวิวขาประจำและการโพสต์ให้ทุกคนเห็นจะหายไป แอปจะเป็นไดอารี่อาหารของคุณคนเดียว บันทึกทั้งหมดเก็บไว้ในเครื่องนี้เท่านั้นอยู่แล้ว"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Müdavim yorumları sekmesini ve herkese paylaşmayı gizler; uygulama sana özel bir yemek günlüğüne dönüşür. Kayıtların zaten yalnızca bu cihazda saklanır."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ẩn thẻ đánh giá của khách quen và việc đăng cho mọi người, biến ứng dụng thành nhật ký ăn uống của riêng bạn. Dữ liệu vốn chỉ lưu trên thiết bị này."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开启后会隐藏常客评价标签和公开发布，变成只属于你的美食日记。记录本来就只保存在这台设备上。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開啟後會隱藏常客評價分頁和公開發佈，變成只屬於你的美食日記。紀錄本來就只儲存在這台裝置上。"
+          }
+        }
+      }
+    },
     "%@의 메뉴" : {
       "localizations" : {
         "ko" : {

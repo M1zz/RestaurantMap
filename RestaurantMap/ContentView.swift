@@ -17,6 +17,8 @@ struct ContentView: View {
     @State private var showsSalePaywall = false
     /// 지금 시트가 식당을 한 번이라도 열었는가 — 연 뒤에 사라졌으면 지운 것이라 오류 화면을 띄우지 않는다.
     @State private var openedRestaurant = false
+    /// 나만 쓰기를 켜면 남의 후기를 보는 탭을 숨긴다 (→ 설정).
+    @AppStorage(RegularReviews.privateKey) private var isPrivate = false
 
     var body: some View {
         // 방금 지운 식당이 질의가 새로 고쳐지기 전 한 박자 남아 있을 수 있다. 지워진 모델을 읽으면 죽으므로 여기서 한 번 거른다.
@@ -36,11 +38,13 @@ struct ContentView: View {
                 }
                 .tag(1)
 
-            FoldTab { ReviewFeedView(restaurants: restaurants) }
-                .tabItem {
-                    Label("단골 후기", systemImage: "heart.text.square")
-                }
-                .tag(2)
+            if !isPrivate {
+                FoldTab { ReviewFeedView(restaurants: restaurants) }
+                    .tabItem {
+                        Label("단골 후기", systemImage: "heart.text.square")
+                    }
+                    .tag(2)
+            }
 
             TasteProfileView()
                 .tabItem {
@@ -69,7 +73,10 @@ struct ContentView: View {
                 .map { found in restaurants.contains { $0 === found } } ?? false
         }
         // 펴면 시스템 탭바 대신 고르는 쪽 판 바닥에 막대가 선다. 취향은 결과 쪽에 서 있다.
-        .foldTabBar(items: FoldTabs.items, selected: selectedTab == 3 ? 1 : selectedTab) { selectedTab = $0 }
+        .foldTabBar(items: FoldTabs.items(isPrivate: isPrivate), selected: selectedTab == 3 ? 1 : selectedTab) { selectedTab = $0 }
+        .onChange(of: isPrivate) { _, hidden in
+            if hidden, selectedTab == 2 { selectedTab = 0 }
+        }
         .onChange(of: fold.isUnfolded, initial: true) { _, unfolded in
             // 취향 탭에 있다가 펴면 목록으로. 취향은 결과 쪽 판에 그대로 보인다.
             if unfolded, selectedTab == 3 { selectedTab = 1 }
