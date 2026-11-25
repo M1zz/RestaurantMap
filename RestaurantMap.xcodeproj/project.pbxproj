@@ -64,6 +64,7 @@
 		ABFDA4457021684BED378416 /* RegularCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFDA4457021684BED378416 /* RegularCardView.swift */; };
 		B60294BB536A0E5F624240AC /* RestaurantMap/Views/AddCustomCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130C9D405E83F0E949E172F4 /* RestaurantMap/Views/AddCustomCategoryView.swift */; };
 		BCD42C458D49EBB6323B677B /* AppShortcuts.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 456D6B249D1FA6B6D46886F4 /* AppShortcuts.xcstrings */; };
+		1AF0C1A0B2C3D4E5F6A7B8C9 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1AF0C1A1B2C3D4E5F6A7B8C9 /* InfoPlist.xcstrings */; };
 		EF58C461041A18D03924B4D3 /* LeeoKit in Frameworks */ = {isa = PBXBuildFile; productRef = EA31E41C51A96BFB1501A4EF /* LeeoKit */; };
 		F3FEC8CF47B74E084FAE9776 /* RestaurantMapRoadmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5D58AA1008E7DFAC23E8AB /* RestaurantMapRoadmap.swift */; };
 /* End PBXBuildFile section */
@@ -101,6 +102,7 @@
 		1EFF3BE8DA3BF72210A80C8B /* RestaurantMap/Views/Components/PhotoGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMap/Views/Components/PhotoGalleryView.swift; sourceTree = "<group>"; };
 		2AD27675423ADDCC051FA3D1 /* RestaurantMap/Views/CustomCategorySettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMap/Views/CustomCategorySettingsView.swift; sourceTree = "<group>"; };
 		456D6B249D1FA6B6D46886F4 /* AppShortcuts.xcstrings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json.xcstrings; path = AppShortcuts.xcstrings; sourceTree = "<group>"; };
+		1AF0C1A1B2C3D4E5F6A7B8C9 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		49C64975CA314B3499093F64 /* RestaurantPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantPlan.swift; sourceTree = "<group>"; };
 		54692912D3196B73FF3330D8 /* RestaurantMapSpec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RestaurantMapSpec.swift; sourceTree = "<group>"; };
 		5636A571159DAB42440B2B7F /* FoldPanes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FoldPanes.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				E98A59A68B9CAA9DA38753A9 /* Localizable.xcstrings */,
 				DA318A16A955B6601BA9E6F8 /* RestaurantIntents.swift */,
 				456D6B249D1FA6B6D46886F4 /* AppShortcuts.xcstrings */,
+				1AF0C1A1B2C3D4E5F6A7B8C9 /* InfoPlist.xcstrings */,
 			);
 			path = RestaurantMap;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				1A0000F1 /* AppIcon.icon in Resources */,
 				A000BD0DB6806D29A2895F2B /* Localizable.xcstrings in Resources */,
 				BCD42C458D49EBB6323B677B /* AppShortcuts.xcstrings in Resources */,
+				1AF0C1A0B2C3D4E5F6A7B8C9 /* InfoPlist.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,7 +576,6 @@
 				INFOPLIST_FILE = RestaurantMap/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "인생맛집";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "근처의 식당을 지도에 표시하기 위해 현재 위치가 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -611,7 +614,6 @@
 				INFOPLIST_FILE = RestaurantMap/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "인생맛집";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "근처의 식당을 지도에 표시하기 위해 현재 위치가 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

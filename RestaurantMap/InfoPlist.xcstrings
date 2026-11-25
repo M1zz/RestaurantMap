@@ -1,0 +1,751 @@
+{
+  "sourceLanguage": "ko",
+  "strings": {
+    "CFBundleDisplayName": {
+      "extractionState": "manual",
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Insaeng"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Insaeng"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Insaeng"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Insaeng"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Insaeng"
+          }
+        },
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Insaeng"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Insaeng"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Insaeng"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Insaeng"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Insaeng"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Insaeng"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "人生グルメ"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "인생맛집"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Insaeng"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Insaeng"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Insaeng"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Insaeng"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Insaeng"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Insaeng"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Insaeng"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Insaeng"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Insaeng"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "人生美食"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "人生美食"
+          }
+        }
+      }
+    },
+    "NSCameraUsageDescription": {
+      "extractionState": "manual",
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Přístup ke kameře umožňuje fotit k návštěvám."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adgang til kameraet lader dig tage billeder til dine besøg."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mit Zugriff auf die Kamera kannst du Fotos für deine Besuche aufnehmen."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Η πρόσβαση στην κάμερα σάς επιτρέπει να τραβάτε φωτογραφίες για τις επισκέψεις σας."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Camera access lets you take pictures for your visit notes."
+          }
+        },
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Camera access lets you take pictures for your visit notes."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El acceso a la cámara te permite hacer fotos para tus visitas."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kameran käyttö antaa ottaa kuvia käynteihisi."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L'accès à l'appareil photo vous permet de prendre des photos pour vos visites."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Akses kamera memungkinkan Anda memotret untuk catatan kunjungan."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L'accesso alla fotocamera ti permette di scattare foto per le tue visite."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "訪問記録に追加する写真を撮るためにカメラを使います。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "방문 기록에 추가할 사진을 촬영하기 위해 카메라 접근이 필요합니다."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tilgang til kameraet lar deg ta bilder til besøkene dine."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Met toegang tot de camera maak je foto's voor je bezoeken."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dostęp do aparatu pozwala robić zdjęcia do wizyt."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O acesso à câmera permite tirar fotos para as suas visitas."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Доступ к камере нужен, чтобы снимать фото для заметок о визитах."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Åtkomst till kameran låter dig ta bilder till dina besök."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ใช้กล้องเพื่อถ่ายรูปสำหรับบันทึกการไปร้าน"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kamera erişimi, ziyaretlerin için fotoğraf çekmeni sağlar."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quyền truy cập camera giúp bạn chụp ảnh cho nhật ký ghé quán."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用于拍摄照片并添加到你的到访记录。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用於拍攝照片並加入你的造訪紀錄。"
+          }
+        }
+      }
+    },
+    "NSLocationAlwaysAndWhenInUseUsageDescription": {
+      "extractionState": "manual",
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Polohu používáme na pozadí, abychom vám po návštěvě uloženého podniku připomněli hodnocení."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Din placering bruges i baggrunden til at minde dig om at anmelde et gemt sted efter dit besøg."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dein Standort wird im Hintergrund genutzt, um dich nach dem Besuch eines gespeicherten Lokals an eine Bewertung zu erinnern."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Η τοποθεσία χρησιμοποιείται στο παρασκήνιο για να σας θυμίσει να αξιολογήσετε ένα αποθηκευμένο μέρος μετά την επίσκεψη."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your location is used in the background to remind you to review a saved place after you visit."
+          }
+        },
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your location is used in the background to remind you to review a saved place after you visit."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usamos tu ubicación en segundo plano para recordarte reseñar un lugar guardado después de visitarlo."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sijaintiasi käytetään taustalla muistuttamaan arvostelusta, kun olet käynyt tallennetussa paikassa."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Votre position est utilisée en arrière-plan pour vous rappeler de noter une adresse enregistrée après votre visite."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lokasi dipakai di latar belakang untuk mengingatkan Anda memberi ulasan setelah mengunjungi tempat yang disimpan."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La tua posizione viene usata in background per ricordarti di recensire un locale salvato dopo la visita."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保存したお店を訪れた後にレビューの通知を送るため、バックグラウンドでも位置情報を使います。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "저장된 가게 방문 후 리뷰 요청 알림을 보내기 위해 백그라운드에서도 위치 정보가 필요합니다."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Posisjonen brukes i bakgrunnen for å minne deg på å anmelde et lagret sted etter besøket."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Je locatie wordt op de achtergrond gebruikt om je na een bezoek aan een bewaarde plek te herinneren aan een review."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lokalizacja w tle służy do przypomnienia o ocenie zapisanego miejsca po wizycie."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sua localização é usada em segundo plano para lembrar você de avaliar um lugar salvo depois da visita."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Геопозиция в фоне нужна, чтобы после визита в сохранённое место напомнить оставить отзыв."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Din plats används i bakgrunden för att påminna dig om att recensera ett sparat ställe efter besöket."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ใช้ตำแหน่งเบื้องหลังเพื่อเตือนให้รีวิวร้านที่บันทึกไว้หลังจากคุณไปมาแล้ว"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Konumun, kayıtlı bir mekânı ziyaret ettikten sonra değerlendirme hatırlatması için arka planda kullanılır."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vị trí được dùng ở chế độ nền để nhắc bạn đánh giá quán đã lưu sau khi ghé."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在你去过已收藏的餐厅后提醒你写评价，因此需要在后台使用位置信息。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在你去過已收藏的餐廳後提醒你寫評價，因此需要在背景使用位置資訊。"
+          }
+        }
+      }
+    },
+    "NSLocationWhenInUseUsageDescription": {
+      "extractionState": "manual",
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Polohu používáme k zobrazení na mapě a ke zjištění, zda jste u uloženého podniku."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Din placering bruges til at vise dig på kortet og se, om du er tæt på et gemt sted."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dein Standort zeigt dich auf der Karte und erkennt, ob du in der Nähe eines gespeicherten Lokals bist."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Η τοποθεσία σας δείχνει πού βρίσκεστε στον χάρτη και αν είστε κοντά σε αποθηκευμένο μέρος."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your location is used to show where you are on the map and whether you're near a saved place."
+          }
+        },
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your location is used to show where you are on the map and whether you're near a saved place."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usamos tu ubicación para mostrarte en el mapa y saber si estás cerca de un lugar guardado."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sijaintiasi käytetään näyttämään sinut kartalla ja tunnistamaan, oletko tallennetun paikan lähellä."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Votre position sert à vous situer sur la carte et à savoir si vous êtes près d'une adresse enregistrée."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lokasi Anda dipakai untuk menampilkan posisi di peta dan mengetahui apakah Anda dekat tempat yang disimpan."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La tua posizione serve a mostrarti sulla mappa e a capire se sei vicino a un locale salvato."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "地図に現在地を表示し、保存したお店の近くにいるかを確認するために使います。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "지도에서 현재 위치를 표시하고 저장된 가게 근처인지 확인하기 위해 필요합니다."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Posisjonen din brukes til å vise deg på kartet og se om du er nær et lagret sted."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Je locatie wordt gebruikt om je op de kaart te tonen en te zien of je bij een bewaarde plek bent."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lokalizacja służy do pokazania Cię na mapie i sprawdzenia, czy jesteś blisko zapisanego miejsca."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sua localização é usada para mostrar onde você está no mapa e se está perto de um lugar salvo."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Геопозиция нужна, чтобы показать вас на карте и понять, рядом ли сохранённое место."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Din plats används för att visa dig på kartan och se om du är nära ett sparat ställe."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ใช้ตำแหน่งของคุณเพื่อแสดงบนแผนที่และดูว่าคุณอยู่ใกล้ร้านที่บันทึกไว้หรือไม่"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Konumun, seni haritada göstermek ve kayıtlı bir mekâna yakın olup olmadığını anlamak için kullanılır."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vị trí của bạn được dùng để hiển thị trên bản đồ và biết bạn có ở gần quán đã lưu không."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用于在地图上显示你的位置，并判断你是否在已收藏的餐厅附近。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用於在地圖上顯示你的位置，並判斷你是否在已收藏的餐廳附近。"
+          }
+        }
+      }
+    },
+    "NSPhotoLibraryUsageDescription": {
+      "extractionState": "manual",
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Přístup k fotkám umožňuje přidávat obrázky k návštěvám."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adgang til fotos lader dig føje billeder til dine besøg."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mit Zugriff auf Fotos kannst du deinen Besuchen Bilder hinzufügen."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Η πρόσβαση στις φωτογραφίες σάς επιτρέπει να προσθέτετε εικόνες στις επισκέψεις σας."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Photo access lets you add pictures to your visit notes."
+          }
+        },
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Photo access lets you add pictures to your visit notes."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El acceso a fotos te permite añadir imágenes a tus visitas."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kuvien käyttö antaa lisätä kuvia käynteihisi."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L'accès aux photos vous permet d'ajouter des images à vos visites."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Akses foto memungkinkan Anda menambahkan gambar ke catatan kunjungan."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L'accesso alle foto ti permette di aggiungere immagini alle tue visite."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "訪問記録に写真を追加するために写真ライブラリを使います。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "사진을 방문 기록에 추가하기 위해 사진 라이브러리 접근이 필요합니다."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tilgang til bilder lar deg legge til bilder i besøkene dine."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Met toegang tot foto's voeg je afbeeldingen toe aan je bezoeken."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dostęp do zdjęć pozwala dodawać obrazy do wizyt."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O acesso às fotos permite adicionar imagens às suas visitas."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Доступ к фото нужен, чтобы добавлять снимки в заметки о визитах."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Åtkomst till bilder låter dig lägga till bilder i dina besök."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ใช้รูปภาพเพื่อเพิ่มลงในบันทึกการไปร้าน"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fotoğraflara erişim, ziyaretlerine görsel eklemeni sağlar."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quyền truy cập ảnh giúp bạn thêm ảnh vào nhật ký ghé quán."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用于将照片添加到你的到访记录。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用於將照片加入你的造訪紀錄。"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}
