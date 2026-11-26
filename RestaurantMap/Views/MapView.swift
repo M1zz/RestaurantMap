@@ -1619,7 +1619,10 @@ struct QuickSaveButton: View {
                 .disabled(name.isEmpty || !coordinate.isMappable)
             }
         }
+        // Vision Pro 에는 손끝 진동이 없다 (visionOS 2 에는 이 API 도 없다)
+        #if !os(visionOS)
         .sensoryFeedback(.success, trigger: justSaved)
+        #endif
         .saveFailureAlert($saveFailed)
         .sheet(item: $paywallFeature, onDismiss: {
             // Plus 를 열고 돌아왔으면 하던 저장을 마친다
