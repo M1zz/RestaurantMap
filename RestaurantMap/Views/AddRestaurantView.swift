@@ -87,26 +87,18 @@ struct AddRestaurantView: View {
             _category = State(initialValue: initialCategory)
         }
 
+        // 장소의 분류 · 이름으로 음식 종류를 미리 고른다 (고를 수 있게 그대로 둔다)
+        let hints = [initialCategory, initialName, mapItem?.pointOfInterestCategory?.rawValue, mapItem?.name].compactMap { $0 }
+        if !hints.isEmpty {
+            _foodCategory = State(initialValue: FoodCategoryRepository.guess(from: hints))
+        }
+
         // MKMapItem이 있으면 자동으로 정보 채우기 (초기값이 없을 때만)
         if let mapItem = mapItem, initialName == nil {
             _name = State(initialValue: mapItem.name ?? "")
 
-            // 주소 정보 추출
-            let placemark = mapItem.placemark
-            var addressComponents: [String] = []
-
-            if let thoroughfare = placemark.thoroughfare {
-                addressComponents.append(thoroughfare)
-            }
-            if let subThoroughfare = placemark.subThoroughfare {
-                addressComponents.append(subThoroughfare)
-            }
-            if let locality = placemark.locality {
-                addressComponents.append(locality)
-            }
-
             if initialAddress == nil {
-                _address = State(initialValue: addressComponents.isEmpty ? (placemark.title ?? "") : addressComponents.joined(separator: " "))
+                _address = State(initialValue: mapItem.restaurantAddress)
             }
 
             // 전화번호

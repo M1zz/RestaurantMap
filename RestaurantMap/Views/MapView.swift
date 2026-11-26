@@ -122,7 +122,8 @@ struct MapView: View {
     @State private var selectedMapItem: MKMapItem?
     @State private var selectedPOI: MKMapItem?
     @State private var showingPOIDetail = false
-    @State private var mapSelection: MKMapItem?
+    /// 지도에서 고른 것: 애플 지도가 그려 둔 식당 · 카페 표시(MapFeature)를 누르면 여기로 온다.
+    @State private var mapSelection: MapSelection<MKMapItem>?
     @State private var nearbyPOIs: [MKMapItem] = []
     @State private var searchedRegions: Set<String> = []
     @State private var isPOISearching = false
@@ -416,13 +417,41 @@ struct MapView: View {
             // 애플맵으로 주변 POI 검색 (카카오는 검색창에서만 사용)
             searchNearbyPOIsIfNeeded(in: region)
         }
-        .onChange(of: mapSelection) { oldValue, newValue in
-            logger.info("맵 선택 변경: \(String(describing: newValue?.name))")
-            if let newValue = newValue {
-                selectedPOI = newValue
-                showingPOIDetail = true
-                logger.info("POI 상세 시트 표시: \(newValue.name ?? "이름 없음")")
+        // 지도에 그려진 식당 · 카페 이름만 누를 수 있게 (나라 · 산 · 강 이름은 빼고)
+        .mapFeatureSelectionDisabled { $0.kind != .pointOfInterest }
+        .onChange(of: mapSelection) { _, newValue in
+            guard let newValue else { return }
+            // 같은 곳을 다시 눌러도 열리도록 고른 것은 바로 놓는다
+            mapSelection = nil
+            if let item = newValue.value {
+                showPOIDetail(item)
+            } else if let feature = newValue.feature {
+                openMapFeature(feature)
             }
+        }
+    }
+
+    private func showPOIDetail(_ item: MKMapItem) {
+        logger.info("POI 상세 시트 표시: \(item.name ?? "이름 없음")")
+        selectedPOI = item
+        showingPOIDetail = true
+    }
+
+    /// 지도에 그려진 장소 표시를 눌렀을 때: 이름 · 주소 · 전화번호를 애플 지도에서 받아 장소 정보를 연다.
+    /// 받지 못하면 표시에 적힌 이름과 좌표만으로 연다 — 나머지는 식당 추가에서 직접 적는다.
+    private func openMapFeature(_ feature: MapFeature) {
+        logger.info("지도 장소 표시 탭됨: \(feature.title ?? "이름 없음")")
+        Task {
+            let item: MKMapItem
+            if let fetched = try? await MKMapItemRequest(feature: feature).mapItem {
+                item = fetched
+            } else {
+                guard feature.coordinate.isMappable else { return }
+                item = MKMapItem(placemark: MKPlacemark(coordinate: feature.coordinate))
+                item.name = feature.title
+                item.pointOfInterestCategory = feature.pointOfInterestCategory
+            }
+            showPOIDetail(item)
         }
     }
 
@@ -1270,6 +1299,17 @@ struct POIDetailView: View {
 
                 Spacer(minLength: 20)
 
+                // 한 번에 가볼 곳에 저장 — 나머지는 나중에 식당 자세히에서 적는다
+                QuickSaveButton(
+                    name: mapItem.name ?? "",
+                    address: mapItem.restaurantAddress,
+                    phone: mapItem.phoneNumber ?? "",
+                    category: mapItem.pointOfInterestCategory.map { POICategoryMapper.toKorean($0.rawValue) } ?? "",
+                    categoryHints: [mapItem.pointOfInterestCategory?.rawValue ?? "", mapItem.name ?? ""],
+                    coordinate: mapItem.placemark.coordinate
+                )
+                .padding(.horizontal)
+
                 // 식당으로 추가 버튼
                 Button {
                     onAddRestaurant()
@@ -1466,6 +1506,17 @@ struct KakaoPlaceDetailView: View {
 
                     Spacer(minLength: 20)
 
+                    // 한 번에 가볼 곳에 저장 — 나머지는 나중에 식당 자세히에서 적는다
+                    QuickSaveButton(
+                        name: place.placeName,
+                        address: !place.roadAddressName.isEmpty ? place.roadAddressName : place.addressName,
+                        phone: place.phone,
+                        category: place.categoryGroupName,
+                        categoryHints: [place.categoryName, place.placeName],
+                        coordinate: place.coordinate
+                    )
+                    .padding(.horizontal)
+
                     // 식당으로 추가 버튼
                     Button {
                         onAddRestaurant()
@@ -1497,6 +1548,110 @@ struct KakaoPlaceDetailView: View {
                     .accessibilityLabel(Text("닫기"))
                 }
             }
+        }
+    }
+}
+
+// MARK: - 지도에서 바로 저장
+
+extension MKMapItem {
+    /// 식당 주소로 쓸 글: 길 이름 · 번지 · 동네, 없으면 지도가 주는 한 줄 주소.
+    var restaurantAddress: String {
+        let parts = [placemark.thoroughfare, placemark.subThoroughfare, placemark.locality].compactMap { $0 }
+        return parts.isEmpty ? (placemark.title ?? "") : parts.joined(separator: " ")
+    }
+}
+
+/// 장소 정보에서 한 번 눌러 '가볼 곳' 에 저장한다. 이름 · 주소 · 전화번호 · 음식 종류는 장소에서 채우고,
+/// 별점 · 메뉴 · 메모는 나중에 식당 자세히에서 적는다. 이미 저장한 곳(이름이 같고 100m 안)이면 저장했다고만 보인다.
+struct QuickSaveButton: View {
+    let name: String
+    let address: String
+    let phone: String
+    let category: String
+    let categoryHints: [String]
+    let coordinate: CLLocationCoordinate2D
+
+    @Environment(\.modelContext) private var modelContext
+    @Query private var savedRestaurants: [Restaurant]
+    @State private var purchases = Purchases.shared
+    @State private var paywallFeature: RestaurantFeature?
+    @State private var pendingSave = false
+    @State private var justSaved = false
+    @State private var saveFailed = false
+
+    private var alreadySaved: Bool {
+        guard coordinate.isMappable else { return false }
+        let here = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        return savedRestaurants.contains { restaurant in
+            !restaurant.isGone && restaurant.name == name && restaurant.coordinate.isMappable
+                && CLLocation(latitude: restaurant.coordinate.latitude, longitude: restaurant.coordinate.longitude)
+                    .distance(from: here) < 100
+        }
+    }
+
+    var body: some View {
+        Group {
+            if justSaved || alreadySaved {
+                Label(justSaved ? "가볼 곳에 저장했어요" : "이미 저장한 식당이에요", systemImage: "checkmark.circle.fill")
+                    .font(.body.weight(.semibold))
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .foregroundStyle(.green)
+                    .background(.green.opacity(0.12))
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+            } else {
+                Button {
+                    if purchases.canAddRestaurant(having: savedRestaurants.count) {
+                        save()
+                    } else {
+                        paywallFeature = .restaurants
+                    }
+                } label: {
+                    Label("가볼 곳에 저장", systemImage: "bookmark.fill")
+                        .font(.body.weight(.semibold))
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .foregroundStyle(.orange)
+                        .background(.orange.opacity(0.15))
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                }
+                .disabled(name.isEmpty || !coordinate.isMappable)
+            }
+        }
+        .sensoryFeedback(.success, trigger: justSaved)
+        .saveFailureAlert($saveFailed)
+        .sheet(item: $paywallFeature, onDismiss: {
+            // Plus 를 열고 돌아왔으면 하던 저장을 마친다
+            if pendingSave, purchases.canAddRestaurant(having: savedRestaurants.count) { save() }
+            pendingSave = false
+        }) { feature in
+            PaywallView(highlight: feature)
+                .onAppear { pendingSave = feature == .restaurants }
+        }
+    }
+
+    private func save() {
+        guard !justSaved, !alreadySaved else { return }
+        let restaurant = Restaurant(
+            name: name,
+            address: address,
+            latitude: coordinate.latitude,
+            longitude: coordinate.longitude,
+            category: category,
+            phoneNumber: phone,
+            categoryIcon: POICategoryMapper.toIcon(category),
+            foodCategory: FoodCategoryRepository.guess(from: categoryHints + [category]),
+            listType: .wishlist
+        )
+        modelContext.insert(restaurant)
+        do {
+            try modelContext.save()
+            justSaved = true
+        } catch {
+            // 이번에 넣은 것만 걷어 낸다 (rollback 은 다른 화면의 고침까지 버린다)
+            modelContext.delete(restaurant)
+            saveFailed = true
         }
     }
 }
