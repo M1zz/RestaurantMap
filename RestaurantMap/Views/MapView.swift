@@ -124,9 +124,7 @@ struct MapView: View {
     @State private var showingPOIDetail = false
     /// 지도에서 고른 것: 애플 지도가 그려 둔 식당 · 카페 표시(MapFeature)를 누르면 여기로 온다.
     @State private var mapSelection: MapSelection<MKMapItem>?
-    @State private var nearbyPOIs: [MKMapItem] = []
     @State private var searchedRegions: Set<String> = []
-    @State private var isPOISearching = false
     @State private var lastSearchTime: Date?
     @State private var showSavedOnly = false
     @State private var kakaoPlaces: [KakaoPlace] = []
@@ -153,9 +151,6 @@ struct MapView: View {
     @StateObject private var kakaoService = KakaoLocalSearchService.shared
     private let logger = Logger(subsystem: "com.restaurantmap", category: "MapView")
     
-    /// 지도에 세워 두는 주변 장소 핀의 한도.
-    private static let maxNearbyPOIs = 400
-
     /// 식당 자세히: 아이폰 듀오를 폈으면 결과 쪽 판에, 아니면 지금처럼 시트로.
     private func openDetail(_ restaurant: Restaurant) {
         guard !restaurant.isGone else { return }
@@ -292,7 +287,6 @@ struct MapView: View {
             }
             .onAppear {
                 logger.info("🚀 MapView appeared")
-                logger.info("🚀 nearbyPOIs 초기 개수: \(nearbyPOIs.count)")
                 locationDelegate.requestLocation()
             }
             .onChange(of: locationDelegate.locationUpdated) { _, _ in
@@ -307,9 +301,6 @@ struct MapView: View {
                     ))
                     hasInitializedPosition = true
                 }
-            }
-            .onChange(of: nearbyPOIs) { oldValue, newValue in
-                logger.info("🔄 nearbyPOIs 배열 변경됨: \(oldValue.count) -> \(newValue.count)")
             }
             .alert("오류", isPresented: $showingError) {
                 Button("확인", role: .cancel) {
@@ -366,21 +357,6 @@ struct MapView: View {
                     }
                 }
 
-                // Apple Maps POI 마커
-                if !isUsingKakaoSearch {
-                    ForEach(nearbyPOIs, id: \.self) { item in
-                        if let coord = item.placemark.location?.coordinate, coord.isMappable {
-                            Annotation(item.name ?? String(localized: "장소"), coordinate: coord) {
-                                NearbyPOIPinView(mapItem: item) {
-                                    logger.info("🎯 POI 마커 탭됨: \(item.name ?? "이름없음")")
-                                    selectedPOI = item
-                                    showingPOIDetail = true
-                                }
-                            }
-                        }
-                    }
-                }
-
                 ForEach(searchResults, id: \.self) { item in
                     if let coord = item.placemark.location?.coordinate, coord.isMappable {
                         Annotation(item.name ?? String(localized: "장소"), coordinate: coord) {
@@ -413,9 +389,6 @@ struct MapView: View {
             // 지구가 다 보이게 줄였을 때의 영역은 검색에 넘길 수 없다 — 다듬어서 쓰고, 안 되면 이번은 건너뛴다
             guard let region = context.region.mappable else { return }
             mapRegion = region
-
-            // 애플맵으로 주변 POI 검색 (카카오는 검색창에서만 사용)
-            searchNearbyPOIsIfNeeded(in: region)
         }
         // 지도에 그려진 식당 · 카페 이름만 누를 수 있게 (나라 · 산 · 강 이름은 빼고)
         .mapFeatureSelectionDisabled { $0.kind != .pointOfInterest }
@@ -490,11 +463,13 @@ struct MapView: View {
         // 저장된 식당만 보기 모드를 끄고, 주변 POI 표시
         showSavedOnly = false
 
-        // 주변 장소 검색 강제 실행 — 한국이면 카카오, 밖이면 Apple 지도
+        // 한국이면 카카오로 찾아 핀을 세운다. 밖에서는 지도가 그리는 식당 · 카페 표시가 곧 주변 장소다 — 그리로 옮긴다.
         if KakaoLocalSearchService.covers(center) {
             searchKakaoPlaces(in: region)
         } else {
-            searchNearbyPOIs(in: region)
+            withAnimation(reduceMotion ? nil : .easeInOut(duration: 0.5)) {
+                position = .region(region)
+            }
         }
     }
 
@@ -621,33 +596,6 @@ struct MapView: View {
         }
     }
 
-    private func searchNearbyPOIsIfNeeded(in region: MKCoordinateRegion) {
-        // 중복 검색 방지: 같은 영역을 이미 검색했는지 확인
-        let regionKey = regionToKey(region)
-
-        // 이미 검색 중이거나, 최근에 검색한 영역이면 스킵
-        if isPOISearching {
-            logger.info("⏸️ 이미 검색 중이므로 스킵")
-            return
-        }
-
-        // 같은 영역을 최근에 검색했으면 스킵 (캐싱)
-        if searchedRegions.contains(regionKey) {
-            logger.info("💾 캐시된 영역이므로 스킵: \(regionKey)")
-            return
-        }
-
-        // 너무 자주 검색하지 않도록 throttling (최소 1초 간격)
-        if let lastTime = lastSearchTime, Date().timeIntervalSince(lastTime) < 1.0 {
-            logger.info("⏱️ 검색 간격이 너무 짧아서 스킷 (throttling)")
-            return
-        }
-
-        lastSearchTime = Date()
-        searchedRegions.insert(regionKey)
-        searchNearbyPOIs(in: region)
-    }
-
     private func regionToKey(_ region: MKCoordinateRegion) -> String {
         // 소수점 3자리로 반올림하여 비슷한 영역을 같은 것으로 취급
         let lat = round(region.center.latitude * 1000) / 1000
@@ -772,114 +720,6 @@ struct MapView: View {
         }
     }
 
-    // MARK: - Apple Maps Search Methods
-
-    private func searchNearbyPOIs(in region: MKCoordinateRegion, retryCount: Int = 0) {
-        isPOISearching = true
-        logger.info("🔍 화면 영역의 POI 검색 시작 (시도: \(retryCount + 1))")
-        logger.info("🔍 검색 영역 중심: \(region.center.latitude), \(region.center.longitude)")
-        logger.info("🔍 검색 범위: \(region.span.latitudeDelta) x \(region.span.longitudeDelta)")
-
-        // 여러 키워드로 병렬 검색 (먹고 마실 수 있는 모든 곳)
-        let keywords = [
-            "restaurant",    // 식당
-            "cafe",          // 카페
-            "food",          // 음식점
-            "bar",           // 바
-            "bakery",        // 베이커리
-            "coffee",        // 커피숍
-            "dessert",       // 디저트
-            "pizza",         // 피자
-            "burger",        // 버거
-            "pub",           // 펍
-            "brewery",       // 양조장
-            "chicken",       // 치킨
-            "bbq",           // 바베큐
-            "noodle",        // 국수/면
-            "sushi"          // 초밥/일식
-        ]
-        var allResults: [MKMapItem] = []
-        let group = DispatchGroup()
-        var hasError = false
-        var lastError: Error?
-
-        for keyword in keywords {
-            group.enter()
-
-            let request = MKLocalSearch.Request()
-            request.naturalLanguageQuery = keyword
-            request.region = region
-            request.resultTypes = .pointOfInterest
-
-            logger.info("🔍 '\(keyword)' 검색 시작")
-
-            let search = MKLocalSearch(request: request)
-            search.start { response, error in
-                defer { group.leave() }
-
-                if let error = error {
-                    let nsError = error as NSError
-                    logger.error("❌ '\(keyword)' 검색 실패: \(error.localizedDescription) (code: \(nsError.code))")
-                    // "이 근처에 그런 곳이 없다"(placemarkNotFound)는 실패가 아니다. 이것까지 실패로 치면
-                    // 열다섯 개 중 하나만 비어도 전부 다시 불러서 지도 검색이 잠시 막힌다(요청 제한).
-                    if (error as? MKError)?.code == .placemarkNotFound { return }
-                    hasError = true
-                    lastError = error
-                    return
-                }
-
-                if let response = response {
-                    logger.info("✅ '\(keyword)' 검색 성공: \(response.mapItems.count)개")
-                    allResults.append(contentsOf: response.mapItems)
-                }
-            }
-        }
-
-        group.notify(queue: .main) { [self] in
-            isPOISearching = false
-
-            // 네트워크 오류 발생 시 재시도
-            if hasError, let error = lastError {
-                // 서버에 닿지 못한 것만 다시 부른다. 요청 제한(loadingThrottled)은 다시 부를수록 길어진다.
-                if (error as? MKError)?.code == .serverFailure && allResults.isEmpty && retryCount < 3 {
-                    logger.warning("⚠️ 네트워크 오류 - 1초 후 재시도...")
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                        self.searchNearbyPOIs(in: region, retryCount: retryCount + 1)
-                    }
-                    return
-                } else {
-                    logger.error("❌ 검색 포기 (최대 재시도 횟수 초과 또는 다른 오류)")
-                }
-            }
-
-            if !allResults.isEmpty {
-                logger.info("✅ 전체 검색 완료! 원본 결과: \(allResults.count)개")
-
-                // 기존 POI와 새로운 POI를 합치고 중복 제거
-                // 새 결과를 앞에 둔다 — 중복은 먼저 나온 쪽이 남으므로, 지금 화면의 것이 한도에 잘리지 않게
-                let combinedPOIs = allResults + nearbyPOIs
-                var uniquePOIs: [MKMapItem] = []
-                var seenCoordinates = Set<String>()
-
-                for item in combinedPOIs {
-                    if let coord = item.placemark.location?.coordinate {
-                        let key = "\(coord.latitude),\(coord.longitude)"
-                        if !seenCoordinates.contains(key) {
-                            seenCoordinates.insert(key)
-                            uniquePOIs.append(item)
-                        }
-                    }
-                }
-
-                // 지도를 옮길 때마다 쌓이기만 하면 핀이 수천 개가 되어 메모리로 꺼진다 — 최근 것만 남긴다
-                nearbyPOIs = Array(uniquePOIs.prefix(Self.maxNearbyPOIs))
-                if searchedRegions.count > 500 { searchedRegions.removeAll() }
-                logger.info("✅ nearbyPOIs 배열 업데이트 완료: \(nearbyPOIs.count)개 (중복 제거 후)")
-            } else {
-                logger.warning("⚠️ 모든 검색이 실패하거나 결과가 없습니다")
-            }
-        }
-    }
 }
 
 // MARK: - Supporting Views
@@ -891,54 +731,6 @@ struct TemporaryPinView: View {
             .foregroundStyle(.orange)
             .shadow(radius: 3)
             .accessibilityHidden(true)
-    }
-}
-
-struct NearbyPOIPinView: View {
-    let mapItem: MKMapItem
-    let onTap: () -> Void
-
-    private var iconName: String {
-        if let category = mapItem.pointOfInterestCategory?.rawValue {
-            return POICategoryMapper.toIcon(category)
-        }
-        return "fork.knife"
-    }
-
-    private var iconColor: Color {
-        if let category = mapItem.pointOfInterestCategory?.rawValue {
-            switch category {
-            case "MKPOICategoryCafe":
-                return .brown
-            case "MKPOICategoryBakery":
-                return .orange
-            case "MKPOICategoryBar", "MKPOICategoryWinery", "MKPOICategoryBrewery":
-                return .purple
-            case "MKPOICategoryNightlife":
-                return .indigo
-            case "MKPOICategoryFastFood":
-                return .red
-            default:
-                return .green
-            }
-        }
-        return .green
-    }
-
-    var body: some View {
-        VStack(spacing: 2) {
-            ZStack {
-                Circle()
-                    .fill(.white)
-                    .frame(width: 32, height: 32)
-                Image(systemName: iconName)
-                    .font(.system(size: 18))
-                    .foregroundStyle(iconColor)
-            }
-            .shadow(radius: 2)
-        }
-        .accessibleTap(onTap)
-        .accessibilityLabel(Text(verbatim: mapItem.name ?? ""))
     }
 }
 
