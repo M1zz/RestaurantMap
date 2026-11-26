@@ -12,6 +12,7 @@ App Store 의 "이 버전의 새로운 기능" 에 그대로 올라가는 글이
 사진첩의 음식 사진으로 지난 맛집을 한꺼번에 불러와요
 지도의 식당을 눌러 바로 저장하고 메뉴에 사진을 남겨요
 앱 언어를 따로 고르고 나만 쓰기로 혼자 볼 수 있어요
+보낸 의견이 채택되면 감사 선물을 드려요
 
 ### 앱스토어 (English)
 
@@ -20,6 +21,7 @@ See how scores and tastes change
 Import past meals from your food photos
 Save from the map, add photos to menus
 Choose the app language, or go private
+Get a thank-you gift when we use your idea
 
 ### 앱스토어 (en-GB)
 
@@ -28,6 +30,7 @@ See how scores and tastes change
 Import past meals from your food photos
 Save from the map, add photos to menus
 Choose the app language, or go private
+Get a thank-you gift when we use your idea
 
 ### 앱스토어 (日本語)
 
@@ -36,6 +39,7 @@ Choose the app language, or go private
 写真の料理から過去のお店をまとめて追加
 地図のお店をタップで保存、メニューに写真も
 アプリの言語を選べて、自分だけで使うことも
+ご意見が採用されるとお礼のギフトが届きます
 
 ### 앱스토어 (简体中文)
 
@@ -44,6 +48,7 @@ Choose the app language, or go private
 用相册里的美食照片一次导入过往餐厅
 点地图上的餐厅即可保存，菜单也能加照片
 单独选择App语言，私密模式只给自己看
+你的建议被采纳后，会收到一份感谢礼物
 
 ### 앱스토어 (繁體中文)
 
@@ -52,6 +57,7 @@ Choose the app language, or go private
 用相簿裡的美食照片一次匯入過往餐廳
 點地圖上的餐廳即可儲存，菜單也能加照片
 單獨選擇App語言，私密模式只給自己看
+你的建議被採納後，會收到一份感謝禮物
 
 ### 앱스토어 (Русский)
 
@@ -60,6 +66,7 @@ Choose the app language, or go private
 Импорт прошлых мест по фото еды
 Сохраняйте с карты, добавляйте фото блюд
 Свой язык приложения и режим «Только я»
+Если мы примем ваш отзыв, вас ждёт подарок
 
 ### 앱스토어 (Español)
 
@@ -68,6 +75,7 @@ Mira cómo cambian tus notas y sabores
 Importa comidas pasadas desde tus fotos
 Guarda desde el mapa y pon fotos al menú
 Elige el idioma de la app o modo privado
+Si adoptamos tu idea, te enviamos un regalo
 
 ### 앱스토어 (Deutsch)
 
@@ -76,6 +84,7 @@ Punkte und Geschmack im Verlauf sehen
 Frühere Besuche aus Essensfotos laden
 Von der Karte sichern, Fotos zum Gericht
 Sprache der App wählen oder Nur für mich
+Danke-Geschenk für umgesetzte Vorschläge
 
 ### 앱스토어 (Français)
 
@@ -84,6 +93,7 @@ Suivez l'évolution des notes et goûts
 Importez vos repas passés via vos photos
 Sauvez depuis la carte, photos de plats
 Choisissez la langue ou Juste pour moi
+Un cadeau si nous retenons votre idée
 
 ### 앱스토어 (Italiano)
 
@@ -92,6 +102,7 @@ Guarda come cambiano voti e sapori
 Importa i pasti passati dalle tue foto
 Salva dalla mappa, foto per ogni piatto
 Scegli la lingua o la modalità privata
+Un regalo se scegliamo la tua idea
 
 ### 앱스토어 (pt-BR)
 
@@ -100,6 +111,7 @@ Veja como suas notas e sabores mudam
 Importe refeições antigas das suas fotos
 Salve pelo mapa e adicione fotos ao menu
 Escolha o idioma do app ou Modo Privado
+Ganhe um presente se usarmos sua ideia
 
 ### 앱스토어 (ไทย)
 
@@ -108,6 +120,7 @@ Escolha o idioma do app ou Modo Privado
 นำเข้าร้านเก่าจากรูปอาหารในคลังภาพ
 แตะร้านบนแผนที่เพื่อบันทึก ใส่รูปเมนูได้
 เลือกภาษาแอปแยกได้ หรือใช้โหมดส่วนตัว
+รับของขวัญเมื่อเรานำไอเดียของคุณไปใช้
 
 ### 앱스토어 (Tiếng Việt)
 
@@ -116,6 +129,7 @@ Xem điểm và vị món thay đổi ra sao
 Nhập quán cũ từ ảnh món ăn của bạn
 Lưu quán từ bản đồ, thêm ảnh cho món
 Chọn ngôn ngữ app hoặc Chế độ riêng tư
+Nhận quà khi góp ý của bạn được chọn
 
 ### 앱스토어 (Čeština)
 
@@ -124,6 +138,7 @@ Sledujte, jak se mění body a chuť
 Importujte stará jídla z fotek
 Ukládejte z mapy, fotky k jídlům v menu
 Vyberte jazyk aplikace nebo Jen pro mě
+Za přijatý návrh dostanete dárek
 
 ### 앱스토어 (Dansk)
 
@@ -132,6 +147,7 @@ Se hvordan point og smag ændrer sig
 Importér tidligere måltider fra fotos
 Gem fra kortet, tilføj fotos til menuer
 Vælg appens sprog, eller brug Kun mig
+Få en gave, når vi bruger din idé
 
 ### 앱스토어 (Ελληνικά)
 
@@ -140,6 +156,7 @@ Vælg appens sprog, eller brug Kun mig
 Εισαγωγή παλιών γευμάτων από φωτογραφίες
 Αποθήκευση από χάρτη, φωτογραφίες πιάτων
 Επιλέξτε γλώσσα ή Ιδιωτική λειτουργία
+Ένα δώρο αν υιοθετήσουμε την ιδέα σας
 
 ### 앱스토어 (Suomi)
 
@@ -148,6 +165,7 @@ Katso, miten pisteet ja maut muuttuvat
 Tuo menneet ateriat ruokakuvista
 Tallenna kartalta, lisää kuvia ruokiin
 Valitse kieli tai käytä Vain minulle
+Saat lahjan, kun toteutamme ideasi
 
 ### 앱스토어 (Indonesia)
 
@@ -156,6 +174,7 @@ Grafik perubahan nilai dan rasa
 Impor tempat makan lama dari foto
 Simpan dari peta, tambah foto ke menu
 Pilih bahasa app atau pakai Mode Pribadi
+Dapatkan hadiah saat ide Anda kami pakai
 
 ### 앱스토어 (Norsk bokmål)
 
@@ -164,6 +183,7 @@ Se hvordan poeng og smak endrer seg
 Importer tidligere måltider fra bildene
 Lagre fra kartet, bilder til rettene
 Velg språk for appen eller bruk Bare meg
+Få en gave når vi bruker ideen din
 
 ### 앱스토어 (Nederlands)
 
@@ -172,6 +192,7 @@ Zie hoe scores en smaak veranderen
 Importeer oude maaltijden uit je foto's
 Bewaar via de kaart, foto's bij menu's
 Kies de taal van de app, of Alleen ik
+Een cadeau als we jouw idee gebruiken
 
 ### 앱스토어 (Polski)
 
@@ -180,6 +201,7 @@ Zobacz, jak zmieniają się oceny i smak
 Importuj dawne posiłki ze zdjęć jedzenia
 Zapisuj z mapy, dodawaj zdjęcia do dań
 Wybierz język aplikacji lub Tylko ja
+Prezent, gdy wykorzystamy Twój pomysł
 
 ### 앱스토어 (Svenska)
 
@@ -188,6 +210,7 @@ Se hur poäng och smak ändras över tid
 Importera gamla måltider från bilder
 Spara från kartan, bilder till rätterna
 Välj appens språk eller Bara för mig
+Få en gåva när vi använder din idé
 
 ### 앱스토어 (Türkçe)
 
@@ -196,6 +219,7 @@ Puan ve lezzetin nasıl değiştiğini gör
 Eski yemekleri fotoğraflardan içe aktar
 Haritadan kaydet, menülere fotoğraf ekle
 Uygulama dilini seç ya da Yalnızca ben
+Fikriniz kullanılırsa size bir hediye
 
 ## 1.0.4
 
