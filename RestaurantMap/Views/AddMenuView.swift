@@ -10,6 +10,9 @@ struct AddMenuView: View {
     @State private var price = ""
     @State private var menuDescription = ""
     @State private var isSignature = false
+    @State private var photo: UIImage?
+    @State private var myRating = 0
+    @State private var wouldOrderAgain: Bool?
 
     var body: some View {
         NavigationStack {
@@ -26,6 +29,27 @@ struct AddMenuView: View {
 
                     TextField("메뉴 설명 (선택)", text: $menuDescription, axis: .vertical)
                         .lineLimit(3...5)
+                }
+
+                Section("사진") {
+                    MenuPhotoField(image: $photo)
+                }
+
+                Section {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("내 점수")
+                            .font(.body)
+                        MenuRatingPicker(rating: $myRating)
+                    }
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("다음에 또 시킬까요?")
+                            .font(.body)
+                        ReorderPicker(value: $wouldOrderAgain)
+                    }
+                } header: {
+                    Text("내 평가")
+                } footer: {
+                    Text("먹어 본 뒤에 매겨도 돼요")
                 }
 
                 Section {
@@ -66,6 +90,10 @@ struct AddMenuView: View {
             isSignature: isSignature,
             restaurant: restaurant
         )
+
+        menu.myRating = myRating
+        menu.wouldOrderAgain = wouldOrderAgain
+        menu.setPhoto(photo)
 
         modelContext.insert(menu)
         // 적은 메뉴를 바로 내린다

@@ -17,6 +17,8 @@ struct AddVisitView: View {
     @State private var selectedMenu: MenuItem? // 선택한 메뉴 (등록된 메뉴 중)
     @State private var showingAddMenu = false // 메뉴 추가 시트 표시 여부
     @State private var selectedPhotos: [UIImage] = [] // 선택한 사진들
+    /// 먹은 메뉴를 다음에 또 시킬지 (메뉴에 남긴다). nil 은 안 정함.
+    @State private var wouldOrderAgain: Bool?
 
     /// 맛 (→ Taste.swift). 적지 않은 축은 들어 있지 않다.
     @State private var tastes: [TasteAxis: Int] = [:]
@@ -71,6 +73,8 @@ struct AddVisitView: View {
                             if newMenu != nil {
                                 menuItem = ""
                             }
+                            // 지난번에 정해 둔 것을 보여 준다
+                            wouldOrderAgain = newMenu?.wouldOrderAgain
                         }
                     }
 
@@ -102,6 +106,17 @@ struct AddVisitView: View {
                     if restaurant.menus?.isEmpty ?? true {
                         Text("이 식당에 등록된 메뉴가 없습니다. 메뉴를 먼저 등록하거나 직접 입력하세요.")
                             .foregroundStyle(.secondary)
+                    }
+                }
+
+                // 먹은 메뉴를 또 시킬지 — 메뉴 목록에 남는다
+                if selectedMenu != nil || !menuItem.trimmingCharacters(in: .whitespaces).isEmpty {
+                    Section {
+                        ReorderPicker(value: $wouldOrderAgain)
+                    } header: {
+                        Text("이 메뉴, 다음에 또 시킬까요?")
+                    } footer: {
+                        Text("메뉴 목록에서 다시 볼 수 있어요")
                     }
                 }
 
@@ -221,6 +236,10 @@ struct AddVisitView: View {
                 visit.menu = newMenuItem
                 visit.menuItem = trimmedMenuName
             }
+        }
+
+        if let wouldOrderAgain, let menu = visit.menu {
+            menu.wouldOrderAgain = wouldOrderAgain
         }
 
         visit.tastes = tastes

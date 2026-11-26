@@ -45,6 +45,12 @@ struct RestaurantMapApp: App {
             // 값이 비어 있으면 필드가 생기지 않는다 — 새로 더한 필드에 값을 넣어 둔다
             restaurant.sharedReviewID = "warmup"
             restaurant.regularWord = "warmup"
+            menu.myRating = 5
+            menu.wouldOrderAgain = true
+            menu.photoData = Data(repeating: 3, count: 1_500_000)
+            // 메뉴 사진도 작은 것 하나 — 기록 안 · CKAsset 두 저장 꼴의 필드가 다 생기게
+            let smallMenu = MenuItem(name: "표본 메뉴 2", restaurant: restaurant)
+            smallMenu.photoData = Data(repeating: 4, count: 2_048)
             for criterion in GourmetCriterion.allCases { visit[criterion] = 5 }
             // 작은 사진과 큰 사진(CKAsset 으로 나가는 크기)을 하나씩 — 두 저장 꼴의 필드가 다 생기게
             let small = VisitPhoto(data: Data(repeating: 1, count: 2_048), sortOrder: 0)
@@ -54,7 +60,7 @@ struct RestaurantMapApp: App {
             let profile = TasteProfile()
             profile.selfDepth = 3
             profile.selfKick = 3
-            return [restaurant, menu, visit, small, large, profile]
+            return [restaurant, menu, smallMenu, visit, small, large, profile]
         }
         #endif
     }

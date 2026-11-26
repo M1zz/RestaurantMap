@@ -120,64 +120,82 @@ struct MenuRowView: View {
     }
 
     private var row: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            HStack {
-                Text(menuItem.name)
-                    .font(.headline)
-
-                if menuItem.isSignature {
-                    Image(systemName: "crown.fill")
-                        .font(.caption)
-                        .foregroundStyle(.yellow)
+        HStack(alignment: .top, spacing: 12) {
+            if let cover = menuItem.coverPhotoData {
+                PhotoDataImage(data: cover, maxPixel: 240) { image in
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                } loading: {
+                    Color.gray.opacity(0.15)
+                } failure: {
+                    Color.gray.opacity(0.15)
                 }
-
-                Spacer()
-
-                Text(menuItem.formattedPrice)
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
+                .frame(width: 72, height: 72)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .accessibilityHidden(true)
             }
 
-            if !menuItem.menuDescription.isEmpty {
-                Text(menuItem.menuDescription)
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-                    .lineLimit(2)
-            }
+            VStack(alignment: .leading, spacing: 6) {
+                HStack {
+                    Text(menuItem.name)
+                        .font(.headline)
 
-            HStack(spacing: 12) {
-                // 평균 별점
-                if menuItem.orderCount > 0 {
-                    HStack(spacing: 2) {
-                        Image(systemName: "star.fill")
-                            .font(.caption2)
+                    if menuItem.isSignature {
+                        Image(systemName: "crown.fill")
+                            .font(.body)
                             .foregroundStyle(.yellow)
-                        Text(String(format: "%.1f", menuItem.averageRating))
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
                     }
-                }
 
-                // 주문 횟수
-                HStack(spacing: 2) {
-                    Image(systemName: "cart.fill")
-                        .font(.caption2)
-                        .foregroundStyle(.blue)
-                    Text("\(menuItem.orderCount)회")
-                        .font(.caption)
+                    Spacer()
+
+                    Text(menuItem.formattedPrice)
+                        .font(.body)
                         .foregroundStyle(.secondary)
                 }
 
-                // 최근 주문일
-                if let lastOrderDate = menuItem.lastOrderDate {
+                if !menuItem.menuDescription.isEmpty {
+                    Text(menuItem.menuDescription)
+                        .font(.body)
+                        .foregroundStyle(.secondary)
+                        .lineLimit(2)
+                }
+
+                AdaptiveStack(spacing: 12) {
+                    // 내 점수, 없으면 방문 별점 평균
+                    if menuItem.displayRating > 0 {
+                        HStack(spacing: 2) {
+                            Image(systemName: "star.fill")
+                                .foregroundStyle(.yellow)
+                            Text(String(format: "%.1f", menuItem.displayRating))
+                                .foregroundStyle(.secondary)
+                        }
+                        .starRatingLabel(menuItem.displayRating)
+                    }
+
+                    // 주문 횟수
                     HStack(spacing: 2) {
-                        Image(systemName: "clock.fill")
-                            .font(.caption2)
-                            .foregroundStyle(.green)
-                        Text(lastOrderDate, format: .dateTime.month().day())
-                            .font(.caption)
+                        Image(systemName: "cart.fill")
+                            .foregroundStyle(.blue)
+                        Text("\(menuItem.orderCount)회")
                             .foregroundStyle(.secondary)
                     }
+
+                    // 최근 주문일
+                    if let lastOrderDate = menuItem.lastOrderDate {
+                        HStack(spacing: 2) {
+                            Image(systemName: "clock.fill")
+                                .foregroundStyle(.green)
+                            Text(lastOrderDate, format: .dateTime.month().day())
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+                }
+                .font(.body)
+
+                if let again = menuItem.wouldOrderAgain {
+                    ReorderLabel(again: again)
+                        .foregroundStyle(again ? .green : .orange)
                 }
             }
         }

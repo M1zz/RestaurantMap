@@ -393,7 +393,8 @@ final class CloudKitBackupService {
                 isWishlist: restaurant.isWishlist,
                 visits: visits,
                 menus: (restaurant.menus ?? []).map {
-                    BackupMenu(name: $0.name, price: $0.price, menuDescription: $0.menuDescription, isSignature: $0.isSignature)
+                    BackupMenu(name: $0.name, price: $0.price, menuDescription: $0.menuDescription, isSignature: $0.isSignature,
+                               myRating: $0.myRating, wouldOrderAgain: $0.wouldOrderAgain, photoData: $0.photoData)
                 }
             )
             backupRestaurants.append(backupRestaurant)
@@ -671,6 +672,10 @@ final class CloudKitBackupService {
                 let menu = MenuItem(name: backupMenu.name, price: backupMenu.price,
                                     menuDescription: backupMenu.menuDescription, isSignature: backupMenu.isSignature,
                                     restaurant: restaurant)
+                // 백업 JSON 은 밖에서 온 데이터 — 범위 밖 점수는 버린다
+                menu.myRating = (1...5).contains(backupMenu.myRating ?? 0) ? backupMenu.myRating ?? 0 : 0
+                menu.wouldOrderAgain = backupMenu.wouldOrderAgain
+                menu.photoData = backupMenu.photoData
                 context.insert(menu)
                 menusByName[menu.name] = menu
             }
@@ -885,6 +890,11 @@ struct BackupMenu: Codable {
     let price: Int?
     let menuDescription: String
     let isSignature: Bool
+    // 1.0.6 에서 더함 — 옛 백업에는 없다 (nil)
+    var myRating: Int? = nil
+    var wouldOrderAgain: Bool? = nil
+    /// 메뉴 사진 한 장(≤800KB JPEG). 방문 사진과 달리 따로 레코드로 올리지 않고 백업 파일(CKAsset) 안에 담는다.
+    var photoData: Data? = nil
 }
 
 struct BackupRestaurant: Codable {

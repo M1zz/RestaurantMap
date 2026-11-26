@@ -75,15 +75,28 @@ struct RestaurantDetailView: View {
                             Spacer()
                             if let menuCount = restaurant.menus?.count, menuCount > 0 {
                                 Text("\(menuCount)개")
-                                    .font(.caption)
+                                    .font(.body)
                                     .foregroundStyle(.secondary)
                             }
                         }
                     }
+
+                    // 또 시킬 메뉴 — 다음에 와서 바로 본다
+                    let again = (restaurant.menus ?? []).filter { !$0.isDeleted && $0.wouldOrderAgain == true }
+                        .sorted { $0.displayRating > $1.displayRating }
+                    if !again.isEmpty {
+                        VStack(alignment: .leading, spacing: 4) {
+                            ReorderLabel(again: true)
+                                .foregroundStyle(.green)
+                            Text(again.map(\.name).formatted(.list(type: .and)))
+                                .font(.body)
+                        }
+                        .accessibilityElement(children: .combine)
+                    }
                 } header: {
                     Text("메뉴")
                 } footer: {
-                    Text("메뉴를 등록하면 방문 기록 추가 시 선택할 수 있습니다")
+                    Text("메뉴마다 사진 · 내 점수 · 또 시킬지를 남길 수 있어요")
                 }
 
                 // 방문 기록 목록
