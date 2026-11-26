@@ -142809,6 +142809,600 @@
           }
         }
       }
+    },
+    "보고 저장한 글" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "보고 저장한 글"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saved from"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saved from"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保存元の投稿"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "收藏来源"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "收藏來源"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Источник"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guardado desde"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gespeichert von"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enregistré depuis"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salvato da"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salvo de"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บันทึกจาก"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lưu từ"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uloženo z"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gemt fra"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Αποθηκεύτηκε από"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tallennettu lähteestä"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Disimpan dari"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lagret fra"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bewaard van"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zapisano z"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sparat från"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kaydedildiği yer"
+          }
+        }
+      }
+    },
+    "보고 저장한 글 링크" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "보고 저장한 글 링크"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Link to the post you saved from"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Link to the post you saved from"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保存元の投稿のリンク"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "收藏来源链接"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "收藏來源連結"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ссылка на публикацию"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enlace de la publicación"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Link zum Beitrag"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lien de la publication"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Link del post"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Link da publicação"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ลิงก์โพสต์ต้นทาง"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liên kết bài viết gốc"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odkaz na příspěvek"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Link til opslaget"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Σύνδεσμος ανάρτησης"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Julkaisun linkki"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tautan postingan"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lenke til innlegget"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Link naar het bericht"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Link do posta"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Länk till inlägget"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gönderi bağlantısı"
+          }
+        }
+      }
+    },
+    "공유 버튼으로 맛집 담기" : {
+      "comment" : "Roadmap item: save places from the share sheet",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "공유 버튼으로 맛집 담기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save places with the Share button"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save places with the Share button"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "共有ボタンでお店を保存"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用分享按钮收藏餐厅"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用分享按鈕收藏餐廳"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохранение мест через «Поделиться»"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guardar lugares con Compartir"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lokale per Teilen sichern"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enregistrer via le bouton Partager"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salvare con il tasto Condividi"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salvar lugares pelo Compartilhar"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เก็บร้านด้วยปุ่มแชร์"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lưu quán bằng nút Chia sẻ"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ukládání přes tlačítko Sdílet"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gem steder med Del-knappen"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Αποθήκευση με το κουμπί Κοινοποίηση"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tallenna paikat Jaa-painikkeella"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simpan tempat lewat tombol Bagikan"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lagre steder med Del-knappen"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zaken bewaren via de deelknop"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zapisywanie przez przycisk Udostępnij"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spara ställen med Dela-knappen"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paylaş düğmesiyle mekan kaydetme"
+          }
+        }
+      }
+    },
+    "인스타, 릴스, 블로그, 지도 앱에서 공유를 누르면 글 속 가게를 찾아 링크와 함께 가볼 곳에 담아요." : {
+      "comment" : "Roadmap item detail: save from share sheet",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "인스타, 릴스, 블로그, 지도 앱에서 공유를 누르면 글 속 가게를 찾아 링크와 함께 가볼 곳에 담아요."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap Share on Instagram, Reels, a blog or a map app — we find the place in the post and save it to Want to Go with the link."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap Share on Instagram, Reels, a blog or a map app — we find the place in the post and save it to Want to Go with the link."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "インスタ、リール、ブログ、地図アプリで共有を押すと、投稿のお店を見つけてリンクごと行きたい店に保存します。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在 Instagram、Reels、博客或地图 App 里点分享，就能找出帖子里的店，连同链接收进想去。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在 Instagram、Reels、部落格或地圖 App 裡按分享，就能找出貼文裡的店，連同連結收進想去。"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажмите «Поделиться» в Instagram, Reels, блоге или картах — найдём заведение из поста и сохраним его в «Хочу сходить» со ссылкой."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toca Compartir en Instagram, Reels, un blog o una app de mapas: encontramos el lugar y lo guardamos en Quiero ir con el enlace."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tippe in Instagram, Reels, Blogs oder Karten-Apps auf Teilen – wir finden das Lokal und legen es mit Link unter „Will hin“ ab."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Touchez Partager dans Instagram, Reels, un blog ou une app de cartes : on trouve le lieu et l'ajoute à À essayer avec le lien."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tocca Condividi su Instagram, Reels, un blog o un'app di mappe: troviamo il locale e lo salviamo in Da provare con il link."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toque em Compartilhar no Instagram, Reels, num blog ou app de mapas: achamos o lugar e salvamos em Quero ir com o link."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กดแชร์จาก Instagram, Reels, บล็อก หรือแอปแผนที่ แอปจะหาร้านในโพสต์แล้วเก็บไว้ในที่อยากไปพร้อมลิงก์"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bấm Chia sẻ trên Instagram, Reels, blog hay ứng dụng bản đồ, ứng dụng sẽ tìm quán trong bài và lưu vào Muốn đến kèm liên kết."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klepněte na Sdílet v Instagramu, Reels, blogu nebo mapách – podnik z příspěvku najdeme a uložíme do Chci navštívit i s odkazem."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryk på Del i Instagram, Reels, en blog eller en kortapp – vi finder stedet og gemmer det i Vil prøve med linket."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Πατήστε Κοινοποίηση στο Instagram, Reels, ένα blog ή χάρτες – βρίσκουμε το μαγαζί και το βάζουμε στα Θέλω να πάω με τον σύνδεσμο."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Napauta Jaa Instagramissa, Reelsissä, blogissa tai karttasovelluksessa – löydämme paikan ja tallennamme sen linkin kanssa Haluan käydä -listaan."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketuk Bagikan di Instagram, Reels, blog, atau aplikasi peta, tempatnya kami cari lalu simpan ke Ingin dikunjungi beserta tautannya."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trykk på Del i Instagram, Reels, en blogg eller en kartapp – vi finner stedet og lagrer det i Vil prøve med lenken."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tik op Delen in Instagram, Reels, een blog of een kaartapp – we vinden de zaak en bewaren die met link bij Wil ik heen."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stuknij Udostępnij w Instagramie, Reels, blogu lub mapach – znajdziemy lokal i zapiszemy go w Chcę odwiedzić z linkiem."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryck på Dela i Instagram, Reels, en blogg eller en kartapp – vi hittar stället och sparar det i Vill testa med länken."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram, Reels, blog ya da harita uygulamasında Paylaş'a dokun; gönderideki mekanı bulup bağlantısıyla listene ekleriz."
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

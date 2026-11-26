@@ -3,6 +3,152 @@
 App Store 의 "이 버전의 새로운 기능" 에 그대로 올라가는 글이다.
 평문만 쓴다. 한 줄에 한 문장, 3~5줄, 한 줄 40자 이내.
 
+## 1.0.6
+
+### 앱스토어 (한국어)
+
+인스타와 블로그에서 공유를 누르면 맛집이 담겨요
+글 속 가게를 찾아 링크와 함께 가볼 곳에 넣어요
+저장한 식당에서 보고 저장한 글로 바로 돌아가요
+
+### 앱스토어 (English)
+
+Save spots right from Instagram or blogs
+We find the place and keep the link
+Open the original post from the place
+
+### 앱스토어 (en-GB)
+
+Save spots right from Instagram or blogs
+We find the place and keep the link
+Open the original post from the place
+
+### 앱스토어 (日本語)
+
+インスタやブログから共有するだけで保存
+投稿のお店を見つけ、リンクごと行きたい店に
+保存したお店から元の投稿へすぐ戻れます
+
+### 앱스토어 (简体中文)
+
+在 Instagram 或博客点分享，就能收藏餐厅
+自动找出帖子里的店，连同链接收进想去
+从收藏的餐厅一键回到原来的帖子
+
+### 앱스토어 (繁體中文)
+
+在 Instagram 或部落格按分享，就能收藏餐廳
+自動找出貼文裡的店，連同連結收進想去
+從收藏的餐廳一鍵回到原本的貼文
+
+### 앱스토어 (Русский)
+
+Сохраняйте места из Instagram и блогов
+Найдём заведение и сохраним ссылку
+Из места можно открыть исходный пост
+
+### 앱스토어 (Español)
+
+Guarda sitios desde Instagram o blogs
+Hallamos el lugar y guardamos el enlace
+Abre la publicación original al instante
+
+### 앱스토어 (Deutsch)
+
+Lokale direkt aus Instagram und Blogs
+Wir finden das Lokal samt Link
+Vom Lokal zurück zum Originalbeitrag
+
+### 앱스토어 (Français)
+
+Gardez des adresses depuis Instagram
+On trouve le lieu et garde le lien
+Rouvrez la publication d'origine
+
+### 앱스토어 (Italiano)
+
+Salva locali da Instagram e dai blog
+Troviamo il locale e teniamo il link
+Riapri il post originale dal locale
+
+### 앱스토어 (pt-BR)
+
+Salve lugares do Instagram e de blogs
+Achamos o lugar e guardamos o link
+Abra o post original direto do lugar
+
+### 앱스토어 (ไทย)
+
+เก็บร้านจาก Instagram และบล็อกได้เลย
+แอปหาร้านให้และเก็บลิงก์ไว้ด้วย
+เปิดโพสต์ต้นทางได้จากหน้าร้าน
+
+### 앱스토어 (Tiếng Việt)
+
+Lưu quán ngay từ Instagram hay blog
+Tự tìm quán và giữ lại liên kết
+Mở lại bài viết gốc từ quán đã lưu
+
+### 앱스토어 (Čeština)
+
+Ukládejte podniky z Instagramu a blogů
+Podnik najdeme a uložíme i s odkazem
+Z podniku otevřete původní příspěvek
+
+### 앱스토어 (Dansk)
+
+Gem steder fra Instagram og blogs
+Vi finder stedet og gemmer linket
+Åbn det oprindelige opslag fra stedet
+
+### 앱스토어 (Ελληνικά)
+
+Αποθηκεύστε μαγαζιά από Instagram
+Βρίσκουμε το μαγαζί μαζί με τον σύνδεσμο
+Ανοίξτε την αρχική ανάρτηση από το μαγαζί
+
+### 앱스토어 (Suomi)
+
+Tallenna paikkoja suoraan Instagramista
+Löydämme paikan ja tallennamme linkin
+Avaa alkuperäinen julkaisu paikasta
+
+### 앱스토어 (Indonesia)
+
+Simpan tempat dari Instagram dan blog
+Tempat kami temukan, tautannya disimpan
+Buka postingan asli dari tempat itu
+
+### 앱스토어 (Norsk bokmål)
+
+Lagre steder fra Instagram og blogger
+Vi finner stedet og lagrer lenken
+Åpne det opprinnelige innlegget
+
+### 앱스토어 (Nederlands)
+
+Bewaar zaken vanuit Instagram en blogs
+We vinden de zaak en bewaren de link
+Open het originele bericht vanaf de zaak
+
+### 앱스토어 (Polski)
+
+Zapisuj lokale z Instagrama i blogów
+Znajdziemy lokal i zachowamy link
+Z lokalu otworzysz oryginalny post
+
+### 앱스토어 (Svenska)
+
+Spara ställen från Instagram och bloggar
+Vi hittar stället och sparar länken
+Öppna originalinlägget från stället
+
+### 앱스토어 (Türkçe)
+
+Instagram ve bloglardan mekan kaydet
+Mekanı bulur, bağlantısını saklarız
+Mekandan asıl gönderiyi hemen aç
+
 ## 1.0.5
 
 ### 앱스토어 (한국어)

@@ -45,6 +45,8 @@ final class Restaurant {
     var sharedReviewID: String?
     /// 이 집을 왜 계속 가는지 나만 보는 한마디. 올리지 않아도 남는다 (→ ReviewFeedView 의 내 단골집).
     var regularWord: String = ""
+    /// 보고 저장한 글 · 영상의 주소 (인스타 · 블로그에서 공유로 담았을 때). 없으면 빈 글 (→ ShareInboxReceiver).
+    var sourceLink: String = ""
 
     // 방문 기록들
     @Relationship(deleteRule: .cascade, inverse: \Visit.restaurant)

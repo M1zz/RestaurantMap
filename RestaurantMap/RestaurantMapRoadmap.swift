@@ -36,6 +36,9 @@ extension RestaurantMapSpec {
         .init(id: "list.search", status: .building,
               title: NSLocalizedString("목록에서 찾기와 정렬", comment: "Roadmap item: list search and sort"),
               detail: NSLocalizedString("이름, 동네, 메뉴로 찾고 자주 간 순, 별점 순으로 줄 세워요.", comment: "Roadmap item detail: list search and sort")),
+        .init(id: "import.share", status: .building,
+              title: NSLocalizedString("공유 버튼으로 맛집 담기", comment: "Roadmap item: save places from the share sheet"),
+              detail: NSLocalizedString("인스타, 릴스, 블로그, 지도 앱에서 공유를 누르면 글 속 가게를 찾아 링크와 함께 가볼 곳에 담아요.", comment: "Roadmap item detail: save from share sheet")),
 
         // MARK: 다음에 만들어요
         .init(id: "reviews.nearby", status: .planned,

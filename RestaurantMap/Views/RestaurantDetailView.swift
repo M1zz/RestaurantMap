@@ -153,6 +153,10 @@ struct RestaurantDetailView: View {
                         TextField("카테고리", text: $restaurant.category)
                         TextField("전화번호", text: $restaurant.phoneNumber)
                             .keyboardType(.phonePad)
+                        TextField("보고 저장한 글 링크", text: $restaurant.sourceLink)
+                            .keyboardType(.URL)
+                            .textInputAutocapitalization(.never)
+                            .autocorrectionDisabled()
 
                         FoodCategoryPicker(selection: Binding(
                             get: { restaurant.foodCategory },
@@ -174,6 +178,15 @@ struct RestaurantDetailView: View {
                                 } else {
                                     Text(restaurant.phoneNumber)
                                 }
+                            }
+                        }
+                        // 인스타 · 블로그에서 공유로 담았으면 그 글로 돌아간다
+                        if let link = URL(string: restaurant.sourceLink), let host = link.host() {
+                            LabeledContent("보고 저장한 글") {
+                                Link(destination: link) {
+                                    Label(host.replacingOccurrences(of: "www.", with: ""), systemImage: "link")
+                                }
+                                .foregroundStyle(.blue)
                             }
                         }
                     }

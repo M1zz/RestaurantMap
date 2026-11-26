@@ -45,6 +45,7 @@ struct RestaurantMapApp: App {
             // 값이 비어 있으면 필드가 생기지 않는다 — 새로 더한 필드에 값을 넣어 둔다
             restaurant.sharedReviewID = "warmup"
             restaurant.regularWord = "warmup"
+            restaurant.sourceLink = "https://example.com/warmup"
             menu.myRating = 5
             menu.wouldOrderAgain = true
             menu.photoData = Data(repeating: 3, count: 1_500_000)
@@ -74,6 +75,11 @@ struct RestaurantMapApp: App {
     /// 이번 실행이 iCloud 와 이어져 열렸는가 (makeModelContainer 가 한 번 정한다).
     private(set) static var usesCloud = false
 
+    /// 저장 파일 자리. ⚠️ 비워 두면 안 된다 — 앱 그룹(공유 확장과 나누는 곳 → SharedPlace.swift)이 생기면
+    /// SwiftData 가 기본 자리를 앱 그룹 폴더로 바꿔, 기존 기록을 두고 빈 저장소를 새로 연다.
+    /// 처음부터 써 온 앱 안의 Application Support/default.store 로 못박는다.
+    static let storeURL = URL.applicationSupportDirectory.appending(path: "default.store")
+
     private static func makeModelContainer() -> ModelContainer? {
         let logger = Logger(subsystem: "com.restaurantmap", category: "App")
         logger.info("ModelContainer 초기화 시작")
@@ -90,7 +96,7 @@ struct RestaurantMapApp: App {
         // 컨테이너가 잡히므로 .none 을 명시한다.
         let modelConfiguration = ModelConfiguration(
             schema: schema,
-            isStoredInMemoryOnly: false,
+            url: storeURL,
             cloudKitDatabase: .none
         )
 
@@ -100,7 +106,7 @@ struct RestaurantMapApp: App {
             //    새 기기는 계정에 있던 것을 받아 온다. 개발자는 볼 수 없다.
             if let synced = try? ModelContainer(
                 for: schema,
-                configurations: [ModelConfiguration(schema: schema, isStoredInMemoryOnly: false,
+                configurations: [ModelConfiguration(schema: schema, url: storeURL,
                                                     cloudKitDatabase: .private(cloudContainer))]
             ) {
                 usesCloud = true
@@ -223,6 +229,8 @@ struct RestaurantMapApp: App {
             .leeoSatisfactionCheck(RestaurantMapSpec.self)
             // 개발자가 보낸 의견에 답장하면, 앱이 앞으로 올 때 답장을 시트로 보여 준다 (LeeoKit).
             .leeoFeedbackReplyNotice(RestaurantMapSpec.self)
+            // 인스타 · 블로그 · 지도 앱에서 공유로 담은 식당을 '가볼 곳' 에 넣는다 (→ ShareInboxReceiver)
+            .shareInbox()
             // Spotlight 에 싣는 식당을 지금 것에 맞춘다. 열 때 한 번, 뒤로 보낼 때마다.
             .task { await RestaurantLibrary.reindex(container) }
             .onChange(of: scenePhase) { _, phase in
