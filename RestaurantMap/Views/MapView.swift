@@ -1661,6 +1661,7 @@ class LocationDelegate: NSObject, ObservableObject, CLLocationManagerDelegate {
     private let manager = CLLocationManager()
     @Published var userLocation: CLLocationCoordinate2D?
     @Published var locationUpdated = false
+    @Published var authorizationStatus: CLAuthorizationStatus = .notDetermined
 
     private let logger = Logger(subsystem: "com.restaurantmap", category: "Location")
 
@@ -1668,6 +1669,7 @@ class LocationDelegate: NSObject, ObservableObject, CLLocationManagerDelegate {
         super.init()
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
+        authorizationStatus = manager.authorizationStatus
         logger.info("LocationDelegate 초기화됨")
     }
 
@@ -1697,6 +1699,7 @@ class LocationDelegate: NSObject, ObservableObject, CLLocationManagerDelegate {
         if ScreenshotScene.current != nil { return }  // 스크린샷 장면에는 권한 창이 없어야 한다
         #endif
         let status = manager.authorizationStatus
+        authorizationStatus = status
         logger.info("위치 권한 상태 변경: \(String(describing: status))")
 
         switch status {

@@ -18,6 +18,8 @@ struct AddRestaurantView: View {
     @State private var address = ""
     @State private var notes = ""
     @State private var rating = 0
+    /// 첫 방문의 100점 점수 (→ VisitScore.swift)
+    @State private var score: Int?
     @State private var category = ""
     @State private var phoneNumber = ""
     @State private var visitDate = Date()
@@ -36,6 +38,18 @@ struct AddRestaurantView: View {
     @State private var purchases = Purchases.shared
     @State private var paywallFeature: RestaurantFeature?
     @State private var pendingSave = false
+
+    /// 빈 칸으로 열었을 때(목록의 +) 지금 위치 근처 식당을 띄워 고르면 채운다 (→ NearbyRestaurants).
+    @StateObject private var locator = LocationDelegate()
+    @State private var nearby: [MKMapItem] = []
+    @State private var nearbyState = NearbyState.idle
+    @State private var nearbyCenter: CLLocation?
+    @State private var pickedNearby: MKMapItem?
+
+    private enum NearbyState { case idle, locating, searching, done, denied }
+
+    /// 장소 정보 없이 빈 칸으로 열었나.
+    private var startsBlank: Bool { mapItem == nil && initialName == nil }
 
     private let logger = Logger(subsystem: "com.restaurantmap", category: "AddRestaurant")
 
@@ -116,6 +130,10 @@ struct AddRestaurantView: View {
     var body: some View {
         NavigationStack {
             Form {
+                if startsBlank && nearbyState != .idle {
+                    nearbySection
+                }
+
                 Section("기본 정보") {
                     FoodCategoryPicker(selection: $foodCategory)
 
@@ -125,7 +143,7 @@ struct AddRestaurantView: View {
                     TextField("전화번호", text: $phoneNumber)
                         .keyboardType(.phonePad)
 
-                    if mapItem != nil || initialName != nil {
+                    if mapItem != nil || initialName != nil || pickedNearby != nil {
                         Label("장소 정보에서 자동 입력됨", systemImage: "checkmark.circle.fill")
                             .font(.caption)
                             .foregroundStyle(.green)
@@ -166,6 +184,10 @@ struct AddRestaurantView: View {
                             .font(.caption)
                             .foregroundStyle(.secondary)
                     }
+                }
+
+                if listType == .visited {
+                    VisitScoreSection(score: $score, stars: rating)
                 }
 
                 Section("카테고리 설정") {
@@ -253,6 +275,17 @@ struct AddRestaurantView: View {
                     .disabled(name.isEmpty || address.isEmpty)
                 }
             }
+            .onChange(of: locator.userLocation?.latitude) { _, _ in
+                guard nearbyState == .locating, let here = locator.userLocation else { return }
+                if here.isMappable {
+                    selectedCoordinate = here
+                    region.center = here
+                }
+                searchNearby(around: here)
+            }
+            .onChange(of: locator.authorizationStatus) { _, status in
+                if nearbyState == .locating, status == .denied || status == .restricted { nearbyState = .denied }
+            }
             .sheet(isPresented: $showingMap) {
                 MapSelectionView(coordinate: $selectedCoordinate)
             }
@@ -265,6 +298,7 @@ struct AddRestaurantView: View {
                     .onAppear { pendingSave = feature == .restaurants }
             }
             .onAppear {
+                startNearbySearch()
                 logger.info("AddRestaurantView appeared")
                 logger.info("  - coordinate: \(String(describing: coordinate))")
                 logger.info("  - foodCategory: \(foodCategory.name)")
@@ -272,6 +306,115 @@ struct AddRestaurantView: View {
         }
     }
     
+    // MARK: 근처 식당
+
+    @ViewBuilder
+    private var nearbySection: some View {
+        Section {
+            switch nearbyState {
+            case .idle:
+                EmptyView()
+            case .locating, .searching:
+                HStack(spacing: 12) {
+                    ProgressView()
+                    Text("지금 있는 곳 근처 식당을 찾는 중…")
+                        .foregroundStyle(.secondary)
+                }
+            case .denied:
+                Text("위치 권한을 주면 지금 있는 식당을 골라 이름과 주소를 바로 채울 수 있어요.")
+                    .foregroundStyle(.secondary)
+            case .done:
+                if nearby.isEmpty {
+                    Text("근처에서 식당을 찾지 못했어요. 직접 적어 주세요.")
+                        .foregroundStyle(.secondary)
+                } else {
+                    ForEach(nearby, id: \.self) { item in
+                        Button { fill(from: item) } label: { nearbyRow(item) }
+                            .accessibilityAddTraits(pickedNearby == item ? .isSelected : [])
+                    }
+                }
+            }
+        } header: {
+            Text("혹시 여기인가요?")
+        } footer: {
+            if nearbyState == .done, !nearby.isEmpty {
+                Text("고르면 이름 · 주소 · 전화번호 · 음식 종류를 채워요. 고친 뒤 저장해도 돼요.")
+                    .font(.body)
+            }
+        }
+    }
+
+    private func nearbyRow(_ item: MKMapItem) -> some View {
+        HStack(spacing: 12) {
+            VStack(alignment: .leading, spacing: 2) {
+                Text(verbatim: item.name ?? "")
+                    .font(.headline)
+                    .foregroundStyle(.primary)
+                let address = item.restaurantAddress
+                if !address.isEmpty {
+                    Text(verbatim: address)
+                        .foregroundStyle(.secondary)
+                        .lineLimit(1)
+                }
+            }
+            Spacer()
+            if let nearbyCenter {
+                Text(verbatim: NearbyRestaurants.distanceText(NearbyRestaurants.distance(item, from: nearbyCenter)))
+                    .foregroundStyle(.secondary)
+            }
+            if pickedNearby == item {
+                Image(systemName: "checkmark.circle.fill")
+                    .foregroundStyle(.green)
+                    .accessibilityHidden(true)
+            }
+        }
+        .contentShape(Rectangle())
+    }
+
+    /// 빈 칸으로 열었으면 지금 위치(넘겨받은 좌표가 있으면 그 자리) 근처를 찾는다.
+    private func startNearbySearch() {
+        guard startsBlank, nearbyState == .idle else { return }
+        if let coordinate, coordinate.isMappable {
+            searchNearby(around: coordinate)
+            return
+        }
+        switch locator.authorizationStatus {
+        case .denied, .restricted:
+            nearbyState = .denied
+        default:
+            nearbyState = .locating
+            locator.requestLocation()
+        }
+    }
+
+    private func searchNearby(around center: CLLocationCoordinate2D) {
+        nearbyState = .searching
+        nearbyCenter = CLLocation(latitude: center.latitude, longitude: center.longitude)
+        Task {
+            let found = await NearbyRestaurants.search(around: center)
+            nearby = found
+            nearbyState = .done
+        }
+    }
+
+    private func fill(from item: MKMapItem) {
+        pickedNearby = item
+        name = item.name ?? name
+        let address = item.restaurantAddress
+        if !address.isEmpty { self.address = address }
+        if let phone = item.phoneNumber, !phone.isEmpty { phoneNumber = phone }
+        if let raw = item.pointOfInterestCategory?.rawValue {
+            category = POICategoryMapper.toKorean(raw)
+        }
+        foodCategory = FoodCategoryRepository.guess(
+            from: [item.pointOfInterestCategory?.rawValue, item.name].compactMap { $0 })
+        let spot = item.placemark.coordinate
+        if spot.isMappable {
+            selectedCoordinate = spot
+            region.center = spot
+        }
+    }
+
     private func saveRestaurant() {
         logger.info("식당 저장 시작: 이름=\(name), 주소=\(address), 카테고리=\(category), 별점=\(rating), 메뉴=\(menuItem), 구분=\(listType.displayName)")
 
@@ -295,7 +438,7 @@ struct AddRestaurantView: View {
         var inserted: [any PersistentModel] = [restaurant]
 
         // 가본곳일 때만 첫 방문 기록 생성 (별점이 있거나 메뉴가 입력된 경우)
-        if listType == .visited && (rating > 0 || !menuItem.isEmpty) {
+        if listType == .visited && (rating > 0 || !menuItem.isEmpty || score != nil) {
             let firstVisit = Visit(
                 restaurant: restaurant,
                 visitDate: visitDate,
@@ -303,6 +446,7 @@ struct AddRestaurantView: View {
                 rating: rating
             )
             firstVisit.menuItem = menuItem
+            firstVisit.score = score
             modelContext.insert(firstVisit)
             inserted.append(firstVisit)
             logger.info("첫 방문 기록 생성: 메뉴=\(menuItem), 별점=\(rating)")

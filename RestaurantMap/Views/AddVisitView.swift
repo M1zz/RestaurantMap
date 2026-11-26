@@ -10,6 +10,8 @@ struct AddVisitView: View {
     @State private var visitDate = Date()
     @State private var notes = ""
     @State private var rating = 3
+    /// 100점 점수 (→ VisitScore.swift). nil 은 매기지 않음.
+    @State private var score: Int?
     /// 미식 기준 (→ Gourmet.swift). 적지 않은 기준은 들어 있지 않다.
     @State private var gourmet: [GourmetCriterion: Int] = [:]
     @State private var saveFailed = false
@@ -48,6 +50,7 @@ struct AddVisitView: View {
                     }
                 }
 
+                VisitScoreSection(score: $score, stars: rating)
                 GourmetInputSection(values: $gourmet)
                 TasteInputSection(family: restaurant.tasteFamily, values: $tastes)
 
@@ -243,6 +246,7 @@ struct AddVisitView: View {
         }
 
         visit.tastes = tastes
+        visit.score = score
 
         logger.info("  - Visit 생성됨")
         logger.info("  - Visit.restaurant: \(visit.restaurant?.name ?? "nil")")

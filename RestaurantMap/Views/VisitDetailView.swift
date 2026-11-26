@@ -169,7 +169,19 @@ struct VisitDetailView: View {
                             }
                             .starRatingLabel(Double(visit.rating))
                         }
+
+                        if let score = visit.score {
+                            LabeledContent("100점 점수") {
+                                Text(verbatim: "\(scoreText(score)) · \(VisitScore.meaning(score))")
+                                    .fontWeight(.semibold)
+                            }
+                        }
                     }
+                }
+
+                // 100점 점수 (→ VisitScore.swift)
+                if isEditing {
+                    VisitScoreSection(score: $visit.score, stars: visit.rating)
                 }
 
                 // 미식 기준 (→ Gourmet.swift)

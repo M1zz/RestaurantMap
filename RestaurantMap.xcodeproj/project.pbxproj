@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD5CE6C5A9FB57F9D2E9D64B /* PhotoImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5CE6C5A9FB57F9D2E9D64B /* PhotoImportView.swift */; };
+		AD4CC6367F453D3ABDEC5EEB /* NearbyRestaurants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4CC6367F453D3ABDEC5EEB /* NearbyRestaurants.swift */; };
+		AD01CA8B07C7FC0BBDD5907F /* ScoreViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01CA8B07C7FC0BBDD5907F /* ScoreViews.swift */; };
+		ADD344414C33E6D2075E459E /* VisitScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD344414C33E6D2075E459E /* VisitScore.swift */; };
 		02D2DB7D53AEABF344566792 /* RestaurantMap/Views/Components/PhotoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A40CB361376D1A3B48AD2E /* RestaurantMap/Views/Components/PhotoDetailView.swift */; };
 		052AC2EDD33E8042077FA16E /* RestaurantMap/Views/Components/PhotoGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFF3BE8DA3BF72210A80C8B /* RestaurantMap/Views/Components/PhotoGalleryView.swift */; };
 		151514A90D2E4946AE362F3D /* RestaurantPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C64975CA314B3499093F64 /* RestaurantPlan.swift */; };
@@ -70,6 +74,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC5CE6C5A9FB57F9D2E9D64B /* PhotoImportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoImportView.swift; sourceTree = "<group>"; };
+		AC4CC6367F453D3ABDEC5EEB /* NearbyRestaurants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyRestaurants.swift; sourceTree = "<group>"; };
+		AC01CA8B07C7FC0BBDD5907F /* ScoreViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViews.swift; sourceTree = "<group>"; };
+		ACD344414C33E6D2075E459E /* VisitScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitScore.swift; sourceTree = "<group>"; };
 		0A219B8DCC8D437793BA34E6 /* Purchases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purchases.swift; sourceTree = "<group>"; };
 		130C9D405E83F0E949E172F4 /* RestaurantMap/Views/AddCustomCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMap/Views/AddCustomCategoryView.swift; sourceTree = "<group>"; };
 		17E8C84619F1DE96AB117EB1 /* PhotoStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStorageManager.swift; sourceTree = "<group>"; };
@@ -151,6 +159,7 @@
 		1A000028 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				AC4CC6367F453D3ABDEC5EEB /* NearbyRestaurants.swift */,
 				68A098629C0D400DBFE7ADB4 /* RestaurantExport.swift */,
 				6A1C0E2F9B4D4E7A8C3F5D01 /* GoogleMapsImport.swift */,
 				0A219B8DCC8D437793BA34E6 /* Purchases.swift */,
@@ -204,6 +213,7 @@
 		1AFFFFF6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				ACD344414C33E6D2075E459E /* VisitScore.swift */,
 				1A000004 /* Restaurant.swift */,
 				AACEAE8A2084D47ED45E0A3D /* RegularReview.swift */,
 				AA483B68ED8D13FB601C3544 /* Gourmet.swift */,
@@ -221,6 +231,8 @@
 		1AFFFFF7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AC5CE6C5A9FB57F9D2E9D64B /* PhotoImportView.swift */,
+				AC01CA8B07C7FC0BBDD5907F /* ScoreViews.swift */,
 				62444744C4054ABCBC3AB63E /* PaywallView.swift */,
 				1A000006 /* MapView.swift */,
 				1A000008 /* RestaurantListView.swift */,
@@ -388,6 +400,10 @@
 				AB483B68ED8D13FB601C3544 /* Gourmet.swift in Sources */,
 				AB22E1B6D7A614E1E39E299D /* Taste.swift in Sources */,
 				AB16EADDC6616A5907499656 /* Regular.swift in Sources */,
+				AD5CE6C5A9FB57F9D2E9D64B /* PhotoImportView.swift in Sources */,
+				AD4CC6367F453D3ABDEC5EEB /* NearbyRestaurants.swift in Sources */,
+				AD01CA8B07C7FC0BBDD5907F /* ScoreViews.swift in Sources */,
+				ADD344414C33E6D2075E459E /* VisitScore.swift in Sources */,
 				1A000007 /* MapView.swift in Sources */,
 				1A000009 /* RestaurantListView.swift in Sources */,
 				1A00000B /* AddRestaurantView.swift in Sources */,
@@ -666,7 +682,7 @@
 			repositoryURL = "https://github.com/M1zz/LeeoKit.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 3.51.2;
+				minimumVersion = 3.52.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

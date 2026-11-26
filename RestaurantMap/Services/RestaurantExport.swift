@@ -23,7 +23,7 @@ struct RestaurantExport: Transferable {
             String(localized: "위도"), String(localized: "경도"), String(localized: "단골 인정"),
             String(localized: "식당 메모"), String(localized: "방문 날짜"), String(localized: "별점"),
             String(localized: "메뉴"), String(localized: "방문 메모"), String(localized: "사진 수"),
-        ] + GourmetCriterion.allCases.map(\.title) + [String(localized: "맛")]
+        ] + GourmetCriterion.allCases.map(\.title) + [String(localized: "맛"), String(localized: "100점 점수")]
         let day = Date.ISO8601FormatStyle().year().month().day()
         var rows = [header]
         for restaurant in restaurants.sorted(by: { $0.name.localizedStandardCompare($1.name) == .orderedAscending }) {
@@ -36,13 +36,13 @@ struct RestaurantExport: Transferable {
             ]
             let visits = (restaurant.visits ?? []).sorted { $0.visitDate < $1.visitDate }
             if visits.isEmpty {
-                rows.append(place + Array(repeating: "", count: 6 + GourmetCriterion.allCases.count))
+                rows.append(place + Array(repeating: "", count: 7 + GourmetCriterion.allCases.count))
             }
             for visit in visits {
                 rows.append(place + [
                     visit.visitDate.formatted(day), visit.rating > 0 ? String(visit.rating) : "",
                     visit.displayMenuName, visit.notes, visit.hasPhotos ? String(visit.photos?.count ?? 0) : "",
-                ] + GourmetCriterion.allCases.map { visit[$0].map(String.init) ?? "" } + [Self.tasteLine(visit)])
+                ] + GourmetCriterion.allCases.map { visit[$0].map(String.init) ?? "" } + [Self.tasteLine(visit), visit.score.map(String.init) ?? ""])
             }
         }
         self.rows = rows

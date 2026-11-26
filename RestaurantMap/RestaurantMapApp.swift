@@ -52,6 +52,7 @@ struct RestaurantMapApp: App {
             let smallMenu = MenuItem(name: "표본 메뉴 2", restaurant: restaurant)
             smallMenu.photoData = Data(repeating: 4, count: 2_048)
             for criterion in GourmetCriterion.allCases { visit[criterion] = 5 }
+            visit.score = 90
             // 작은 사진과 큰 사진(CKAsset 으로 나가는 크기)을 하나씩 — 두 저장 꼴의 필드가 다 생기게
             let small = VisitPhoto(data: Data(repeating: 1, count: 2_048), sortOrder: 0)
             let large = VisitPhoto(data: Data(repeating: 2, count: 1_500_000), sortOrder: 1)

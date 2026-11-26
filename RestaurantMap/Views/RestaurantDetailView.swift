@@ -30,6 +30,8 @@ struct RestaurantDetailView: View {
         allRestaurants.regularRanks()[restaurant.persistentModelID]
     }
 
+    @AppStorage(SignatureList.nameKey) private var signatureName = ""
+
     var sortedVisits: [Visit] {
         // 지우기로 표시된 방문은 저장 전까지 관계에 남아 있을 수 있다 — 줄로 그리지 않는다
         (restaurant.visits ?? []).filter { !$0.isDeleted }.sorted(by: { $0.visitDate > $1.visitDate })
@@ -50,6 +52,10 @@ struct RestaurantDetailView: View {
             Form {
                 if !restaurant.isWishlist {
                     regularSection
+                    ScoreSection(restaurant: restaurant,
+                                 signatureRank: allRestaurants.signatureRanks()[restaurant.persistentModelID],
+                                 signatureTitle: SignatureList.title(signatureName))
+                    TasteShiftSection(restaurant: restaurant)
                     gourmetSection
                     tasteSection
                     shareSection

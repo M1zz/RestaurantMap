@@ -28,6 +28,7 @@ struct SettingsView: View {
     @State private var showsGraduation = false
     @State private var showsManageSubscription = false
     @State private var showsGoogleImport = false
+    @State private var showsPhotoImport = false
     /// LeeoKit 마스터 모드(버전 7번 누르기). 이 앱은 켜질 때 관리자 비밀번호를 한 번 더 묻는다.
     @AppStorage("dev.masterMode") private var masterMode = false
     @AppStorage(RegularReviews.privateKey) private var isPrivate = false
@@ -67,6 +68,9 @@ struct SettingsView: View {
                     } label: {
                         Label("음식 종류 관리", systemImage: "list.bullet")
                     }
+                    Button { showsPhotoImport = true } label: {
+                        Label("사진으로 지난 맛집 불러오기", systemImage: "photo.on.rectangle.angled")
+                    }
                     Button { showsGoogleImport = true } label: {
                         Label("구글 지도에서 가져오기", systemImage: "square.and.arrow.down")
                     }
@@ -79,6 +83,13 @@ struct SettingsView: View {
                     Text("데이터 관리")
                 } footer: {
                     Text("내보내기는 어느 칸이든 무료예요.")
+                }
+
+                // 언어 — 기기와 다른 언어로 이 앱만 쓰기 (→ LeeoKit LeeoLanguageLink)
+                Section {
+                    LeeoLanguageLink()
+                } footer: {
+                    Text("기기 언어와 상관없이 이 앱에서 쓸 언어를 고를 수 있어요.")
                 }
 
                 // 나만 쓰기
@@ -228,6 +239,7 @@ struct SettingsView: View {
             .paywall(for: $paywallFeature)
             .sheet(isPresented: $showsPaywall) { PaywallView() }
             .sheet(isPresented: $showsGoogleImport) { GoogleImportView() }
+            .sheet(isPresented: $showsPhotoImport) { PhotoImportView() }
             .sheet(isPresented: $showsGraduation) {
                 LeeoGraduationOfferView(graduate: purchases.product(RestaurantPlan.graduateID)) {
                     await purchases.refresh()

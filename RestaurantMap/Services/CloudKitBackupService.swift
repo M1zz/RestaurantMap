@@ -276,6 +276,7 @@ final class CloudKitBackupService {
                     gourmetTechnique: visit.gourmetTechnique,
                     gourmetHarmony: visit.gourmetHarmony,
                     gourmetPersonality: visit.gourmetPersonality,
+                    score: visit.score,
                     tastes: Dictionary(uniqueKeysWithValues: visit.tastes.map { ($0.key.rawValue, $0.value) }),
                     spicy: visit.spicy,
                     boldness: visit.boldness,
@@ -700,6 +701,7 @@ final class CloudKitBackupService {
                 visit.gourmetTechnique = backupVisit.gourmetTechnique
                 visit.gourmetHarmony = backupVisit.gourmetHarmony
                 visit.gourmetPersonality = backupVisit.gourmetPersonality
+                visit.score = backupVisit.score.map { min(max($0, VisitScore.range.lowerBound), VisitScore.range.upperBound) }
                 if let tastes = backupVisit.tastes {
                     // 백업 파일은 밖에서 온 데이터다 — 키가 겹쳐도 죽지 않게 받는다
                     visit.tastes = Dictionary(tastes.compactMap { key, value in
@@ -936,6 +938,8 @@ struct BackupVisit: Codable {
     var gourmetTechnique: Int?
     var gourmetHarmony: Int?
     var gourmetPersonality: Int?
+    /// 100점 점수 — 예전 백업에는 없다
+    var score: Int?
     /// 맛 기록 (축 이름 → 1~5) — 예전 백업에는 없다. 없으면 아래 옛 칸에서 옮긴다.
     var tastes: [String: Int]?
     let spicy: Double?

@@ -105,6 +105,7 @@ struct RestaurantListView: View {
     @Environment(\.modelContext) private var modelContext
     let restaurants: [Restaurant]
     @State private var showingAddSheet = false
+    @State private var showingPhotoImport = false
     @State private var selectedRestaurant: Restaurant?
     @Environment(\.foldLayout) private var fold
     @Environment(FoldRestaurantPick.self) private var foldPick: FoldRestaurantPick?
@@ -116,6 +117,10 @@ struct RestaurantListView: View {
     /// 지우기 전에 한 번 묻는다 — 방문 기록과 사진까지 같이 사라진다.
     @State private var pendingDelete: Restaurant?
     @State private var saveFailed = false
+    /// 내 이름을 건 맛집에 붙는 이름 (→ ScoreViews.swift)
+    @AppStorage(SignatureList.nameKey) private var signatureName = ""
+    @State private var editingSignatureName = false
+    @State private var signatureDraft = ""
 
     private let logger = Logger(subsystem: "com.restaurantmap", category: "RestaurantList")
 
@@ -163,9 +168,46 @@ struct RestaurantListView: View {
             .sorted { (ranks[$0.persistentModelID] ?? 99) < (ranks[$1.persistentModelID] ?? 99) }
         let visited = sort.sorted(shown.filter { !$0.isWishlist && ranks[$0.persistentModelID] == nil })
         let wishlist = sort.sorted(shown.filter(\.isWishlist))
+        // 내 이름을 건 맛집 — 순위는 거르기 전 전체에서, 보이는 것은 거른 것만
+        let shownIDs = Set(shown.map(\.persistentModelID))
+        let signature = restaurants.signaturePicks().enumerated()
+            .map { (rank: $0.offset + 1, restaurant: $0.element) }
+            .filter { shownIDs.contains($0.restaurant.persistentModelID) }
 
         NavigationStack {
             List {
+                // 내 이름을 건 맛집 — 방문마다 매긴 100점 점수의 평균이 가장 높은 여섯 곳
+                Section {
+                    if signature.isEmpty {
+                        Text(isFiltering ? "찾는 식당이 없습니다" : "방문에 100점 점수를 매기면 평균이 가장 높은 여섯 곳이 여기 올라와요.")
+                            .foregroundStyle(.secondary)
+                    } else {
+                        ForEach(signature, id: \.restaurant.persistentModelID) { entry in
+                            SignatureRow(restaurant: entry.restaurant, rank: entry.rank)
+                                .contentShape(Rectangle())
+                                .accessibleTap { openDetail(entry.restaurant) }
+                        }
+                    }
+                } header: {
+                    HStack {
+                        Image(systemName: "signature")
+                            .foregroundStyle(.orange)
+                            .accessibilityHidden(true)
+                        Text(verbatim: SignatureList.title(signatureName))
+                        Spacer()
+                        Button("이름 붙이기") {
+                            signatureDraft = signatureName
+                            editingSignatureName = true
+                        }
+                        .font(.body)
+                        .textCase(nil)
+                    }
+                    .font(.headline)
+                } footer: {
+                    Text("다녀온 횟수와 상관없이, 내가 매긴 점수의 평균으로만 줄 세워요.")
+                        .font(.body)
+                }
+
                 // 나의 미슐랭 — 자주 간 집을 앱이 줄 세운다
                 Section {
                     if michelin.isEmpty {
@@ -204,10 +246,18 @@ struct RestaurantListView: View {
             .searchable(text: $searchText, prompt: Text("이름 · 동네 · 메뉴로 찾기"))
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        showingAddSheet = true
+                    // 누르면 식당 추가, 길게 누르면 다른 방법
+                    Menu {
+                        Button { showingAddSheet = true } label: {
+                            Label("식당 추가", systemImage: "plus")
+                        }
+                        Button { showingPhotoImport = true } label: {
+                            Label("사진으로 지난 맛집 불러오기", systemImage: "photo.on.rectangle.angled")
+                        }
                     } label: {
                         Image(systemName: "plus")
+                    } primaryAction: {
+                        showingAddSheet = true
                     }
                     .accessibilityLabel(Text("식당 추가"))
                 }
@@ -234,6 +284,9 @@ struct RestaurantListView: View {
             }
             .sheet(isPresented: $showingAddSheet) {
                 AddRestaurantView(coordinate: nil)
+            }
+            .sheet(isPresented: $showingPhotoImport) {
+                PhotoImportView()
             }
             .sheet(isPresented: $showingDetail) {
                 // 시트 안에서 식당을 지우면 내려가는 동안에도 이 자리가 다시 그려진다 — 지워진 식당은 넘기지 않는다
@@ -272,6 +325,13 @@ struct RestaurantListView: View {
                 }
             }
             .saveFailureAlert($saveFailed)
+            .alert("이 목록에 붙일 이름", isPresented: $editingSignatureName) {
+                TextField("이름", text: $signatureDraft)
+                Button("저장") { signatureName = signatureDraft.trimmingCharacters(in: .whitespacesAndNewlines) }
+                Button("취소", role: .cancel) {}
+            } message: {
+                Text("적은 이름으로 '○○의 맛집' 이 돼요.")
+            }
             .overlay {
                 if restaurants.isEmpty {
                     ContentUnavailableView {

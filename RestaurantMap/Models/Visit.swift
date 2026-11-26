@@ -25,6 +25,9 @@ final class Visit {
     var gourmetHarmony: Int?
     var gourmetPersonality: Int?
 
+    /// 100점 만점 점수 (0~100, 선택). 별점과 따로, 이 방문 한 번을 절대 기준으로 매긴다 (→ VisitScore.swift).
+    var score: Int?
+
     /// 맛 기록 — 축 이름 → 1~5 를 JSON 으로 담은 한 칸 (→ Taste.swift `tastes`).
     var tasteData: Data?
 
