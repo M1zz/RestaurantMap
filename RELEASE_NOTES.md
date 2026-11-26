@@ -7,147 +7,195 @@ App Store 의 "이 버전의 새로운 기능" 에 그대로 올라가는 글이
 
 ### 앱스토어 (한국어)
 
-나만 쓰기로 혼자 보는 맛집 일기가 돼요
-홈 화면의 앱 이름이 내 언어로 보여요
-위치와 사진 권한 안내도 내 언어로 나와요
+방문마다 100점으로 매겨 나만의 맛집 여섯 곳을 골라요
+이 집 점수와 맛이 어떻게 달라졌는지 그래프로 봐요
+사진첩의 음식 사진으로 지난 맛집을 한꺼번에 불러와요
+지도의 식당을 눌러 바로 저장하고 메뉴에 사진을 남겨요
+앱 언어를 따로 고르고 나만 쓰기로 혼자 볼 수 있어요
 
 ### 앱스토어 (English)
 
-Private Mode makes it your own diary
-The app name now shows in your language
-Location and photo prompts are too
+Score visits out of 100, see your top 6
+See how scores and tastes change
+Import past meals from your food photos
+Save from the map, add photos to menus
+Choose the app language, or go private
 
 ### 앱스토어 (en-GB)
 
-Private Mode makes it your own diary
-The app name now shows in your language
-Location and photo prompts are too
+Score visits out of 100, see your top 6
+See how scores and tastes change
+Import past meals from your food photos
+Save from the map, add photos to menus
+Choose the app language, or go private
 
 ### 앱스토어 (日本語)
 
-自分だけで使う設定で自分専用の日記に
-ホーム画面のアプリ名が日本語になりました
-位置情報と写真の許可の案内も日本語に
+訪問ごとに100点で採点、トップ6を選出
+このお店の点数と味の変化をグラフで確認
+写真の料理から過去のお店をまとめて追加
+地図のお店をタップで保存、メニューに写真も
+アプリの言語を選べて、自分だけで使うことも
 
 ### 앱스토어 (简体中文)
 
-开启仅自己使用，变成私人美食日记
-主屏幕上的应用名称会显示为中文
-位置和照片权限提示也改为中文
+每次到访按100分打分，选出你的前6家
+用图表查看这家店的分数和口味变化
+用相册里的美食照片一次导入过往餐厅
+点地图上的餐厅即可保存，菜单也能加照片
+单独选择App语言，私密模式只给自己看
 
 ### 앱스토어 (繁體中文)
 
-開啟僅自己使用，變成私人美食日記
-主畫面上的 App 名稱會顯示為中文
-位置與照片權限提示也改為中文
+每次造訪以100分評分，選出你的前6家
+用圖表查看這家店的分數與口味變化
+用相簿裡的美食照片一次匯入過往餐廳
+點地圖上的餐廳即可儲存，菜單也能加照片
+單獨選擇App語言，私密模式只給自己看
 
 ### 앱스토어 (Русский)
 
-Режим «Только для меня» для себя
-Название приложения теперь по-русски
-Запросы доступа тоже на русском
+Ставьте до 100 баллов, ваш топ 6
+График того, как менялись оценки и вкус
+Импорт прошлых мест по фото еды
+Сохраняйте с карты, добавляйте фото блюд
+Свой язык приложения и режим «Только я»
 
 ### 앱스토어 (Español)
 
-Con Solo para mí, tu diario es privado
-El nombre de la app sale en tu idioma
-También los avisos de ubicación y fotos
+Puntúa cada visita sobre 100, tu top 6
+Mira cómo cambian tus notas y sabores
+Importa comidas pasadas desde tus fotos
+Guarda desde el mapa y pon fotos al menú
+Elige el idioma de la app o modo privado
 
 ### 앱스토어 (Deutsch)
 
-„Nur für mich“ macht sie zum Esstagebuch
-Der App-Name erscheint jetzt auf Deutsch
-Auch Standort- und Fotofragen
+Besuche mit 100 Punkten bewerten, Top 6
+Punkte und Geschmack im Verlauf sehen
+Frühere Besuche aus Essensfotos laden
+Von der Karte sichern, Fotos zum Gericht
+Sprache der App wählen oder Nur für mich
 
 ### 앱스토어 (Français)
 
-Le Mode privé en fait votre journal
-Le nom de l'app est dans votre langue
-Les demandes d'accès aussi
+Notez chaque visite sur 100, votre top 6
+Suivez l'évolution des notes et goûts
+Importez vos repas passés via vos photos
+Sauvez depuis la carte, photos de plats
+Choisissez la langue ou Juste pour moi
 
 ### 앱스토어 (Italiano)
 
-Con Solo per me hai un diario tutto tuo
-Il nome dell'app è nella tua lingua
-Anche le richieste di posizione e foto
+Voti da 1 a 100 per visita, la tua top 6
+Guarda come cambiano voti e sapori
+Importa i pasti passati dalle tue foto
+Salva dalla mappa, foto per ogni piatto
+Scegli la lingua o la modalità privata
 
 ### 앱스토어 (pt-BR)
 
-Com Só para mim, um diário só seu
-O nome do app aparece no seu idioma
-Os pedidos de localização e fotos também
+Dê notas de 0 a 100 e veja seu top 6
+Veja como suas notas e sabores mudam
+Importe refeições antigas das suas fotos
+Salve pelo mapa e adicione fotos ao menu
+Escolha o idioma do app ou Modo Privado
 
 ### 앱스토어 (ไทย)
 
-โหมดใช้คนเดียว เป็นไดอารี่อาหารส่วนตัว
-ชื่อแอปบนหน้าโฮมเป็นภาษาไทยแล้ว
-คำขอสิทธิ์ตำแหน่งและรูปภาพก็เป็นภาษาไทย
+ให้คะแนนเต็ม 100 ทุกครั้ง ดู 6 ร้านโปรด
+ดูกราฟคะแนนและรสชาติที่เปลี่ยนไป
+นำเข้าร้านเก่าจากรูปอาหารในคลังภาพ
+แตะร้านบนแผนที่เพื่อบันทึก ใส่รูปเมนูได้
+เลือกภาษาแอปแยกได้ หรือใช้โหมดส่วนตัว
 
 ### 앱스토어 (Tiếng Việt)
 
-Chế độ Chỉ mình tôi cho nhật ký riêng
-Tên ứng dụng hiển thị bằng tiếng Việt
-Lời xin quyền vị trí và ảnh cũng vậy
+Chấm mỗi lần ghé trên 100, xem top 6
+Xem điểm và vị món thay đổi ra sao
+Nhập quán cũ từ ảnh món ăn của bạn
+Lưu quán từ bản đồ, thêm ảnh cho món
+Chọn ngôn ngữ app hoặc Chế độ riêng tư
 
 ### 앱스토어 (Čeština)
 
-Režim Jen pro mě pro soukromý deník
-Název aplikace je teď v češtině
-I žádosti o polohu a fotky jsou česky
+Hodnoťte návštěvy ze 100 bodů, top 6
+Sledujte, jak se mění body a chuť
+Importujte stará jídla z fotek
+Ukládejte z mapy, fotky k jídlům v menu
+Vyberte jazyk aplikace nebo Jen pro mě
 
 ### 앱스토어 (Dansk)
 
-Kun til mig gør den til din maddagbog
-Appens navn vises nu på dansk
-Spørgsmål om placering og fotos også
+Giv besøg op til 100 point, se din top 6
+Se hvordan point og smag ændrer sig
+Importér tidligere måltider fra fotos
+Gem fra kortet, tilføj fotos til menuer
+Vælg appens sprog, eller brug Kun mig
 
 ### 앱스토어 (Ελληνικά)
 
-Μόνο για μένα: το δικό σας ημερολόγιο
-Το όνομα της εφαρμογής στα ελληνικά
-Και τα αιτήματα πρόσβασης επίσης
+Βαθμολογήστε έως 100, δείτε το top 6
+Δείτε πώς αλλάζουν βαθμοί και γεύσεις
+Εισαγωγή παλιών γευμάτων από φωτογραφίες
+Αποθήκευση από χάρτη, φωτογραφίες πιάτων
+Επιλέξτε γλώσσα ή Ιδιωτική λειτουργία
 
 ### 앱스토어 (Suomi)
 
-Vain minulle: oma ruokapäiväkirjasi
-Sovelluksen nimi näkyy nyt suomeksi
-Myös sijainti- ja kuvaluvat suomeksi
+Pisteytä käynnit 100:sta, katso top 6
+Katso, miten pisteet ja maut muuttuvat
+Tuo menneet ateriat ruokakuvista
+Tallenna kartalta, lisää kuvia ruokiin
+Valitse kieli tai käytä Vain minulle
 
 ### 앱스토어 (Indonesia)
 
-Hanya untuk saya, jadi diari pribadimu
-Nama aplikasi kini tampil dalam bahasamu
-Izin lokasi dan foto juga begitu
+Nilai kunjungan dari 100, lihat top 6
+Grafik perubahan nilai dan rasa
+Impor tempat makan lama dari foto
+Simpan dari peta, tambah foto ke menu
+Pilih bahasa app atau pakai Mode Pribadi
 
 ### 앱스토어 (Norsk bokmål)
 
-Bare for meg gjør den til din matdagbok
-Appnavnet vises nå på norsk
-Spørsmål om posisjon og bilder også
+Gi besøk opptil 100 poeng, se din topp 6
+Se hvordan poeng og smak endrer seg
+Importer tidligere måltider fra bildene
+Lagre fra kartet, bilder til rettene
+Velg språk for appen eller bruk Bare meg
 
 ### 앱스토어 (Nederlands)
 
-Alleen voor mij maakt het je eetdagboek
-De appnaam staat nu in het Nederlands
-Ook vragen om locatie en foto's
+Geef bezoeken tot 100 punten, je top 6
+Zie hoe scores en smaak veranderen
+Importeer oude maaltijden uit je foto's
+Bewaar via de kaart, foto's bij menu's
+Kies de taal van de app, of Alleen ik
 
 ### 앱스토어 (Polski)
 
-Tylko dla mnie to Twój prywatny dziennik
-Nazwa aplikacji jest teraz po polsku
-Prośby o lokalizację i zdjęcia też
+Oceniaj wizyty w skali 100, zobacz top 6
+Zobacz, jak zmieniają się oceny i smak
+Importuj dawne posiłki ze zdjęć jedzenia
+Zapisuj z mapy, dodawaj zdjęcia do dań
+Wybierz język aplikacji lub Tylko ja
 
 ### 앱스토어 (Svenska)
 
-Bara för mig gör den till din matdagbok
-Appens namn visas nu på svenska
-Frågor om plats och bilder också
+Ge besök upp till 100 poäng, din topp 6
+Se hur poäng och smak ändras över tid
+Importera gamla måltider från bilder
+Spara från kartan, bilder till rätterna
+Välj appens språk eller Bara för mig
 
 ### 앱스토어 (Türkçe)
 
-Yalnızca ben ile kendi yemek günlüğün
-Uygulama adı artık Türkçe görünüyor
-Konum ve fotoğraf izinleri de Türkçe
+Ziyaretleri 100 üzerinden puanla, ilk 6
+Puan ve lezzetin nasıl değiştiğini gör
+Eski yemekleri fotoğraflardan içe aktar
+Haritadan kaydet, menülere fotoğraf ekle
+Uygulama dilini seç ya da Yalnızca ben
 
 ## 1.0.4
 
