@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import LeeoKit
 
 struct WelcomeView: View {
     @Environment(\.dismiss) private var dismiss
@@ -62,6 +63,8 @@ struct WelcomeView: View {
                 if page < pages.count - 1 {
                     withAnimation { page += 1 }
                 } else {
+                    // 이 안내는 처음 한 번만 뜬다 (WelcomeOnce)
+                    LeeoAnalyticsCenter.track(.custom(name: "onboarding_completed", parameters: [:]))
                     dismiss()
                 }
             } label: {

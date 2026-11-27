@@ -1,6 +1,7 @@
 import SwiftUI
 import SwiftData
 import OSLog
+import LeeoKit
 
 struct AddVisitView: View {
     @Environment(\.modelContext) private var modelContext
@@ -276,6 +277,8 @@ struct AddVisitView: View {
             return
         }
         logger.info("  ✅ modelContext.save 완료")
+        // 다녀온 날을 세는 앱의 가치 순간 — 허브 품질 탭의 '핵심 기능' 칸 (docs/usage-spec.json)
+        LeeoAnalyticsCenter.track(.custom(name: "visit_saved", parameters: [:]))
         let restaurant = restaurant
         Task { await RegularReviews.shared.refreshSnapshot(for: restaurant) }
 
