@@ -124,8 +124,6 @@ struct MapView: View {
     @State private var showingPOIDetail = false
     /// 지도에서 고른 것: 애플 지도가 그려 둔 식당 · 카페 표시(MapFeature)를 누르면 여기로 온다.
     @State private var mapSelection: MapSelection<MKMapItem>?
-    @State private var searchedRegions: Set<String> = []
-    @State private var lastSearchTime: Date?
     @State private var showSavedOnly = false
     @State private var kakaoPlaces: [KakaoPlace] = []
     @State private var kakaoSearchResults: [KakaoPlace] = []  // 검색 결과 (파란색으로 표시)
@@ -138,6 +136,11 @@ struct MapView: View {
             return KakaoLocalSearchService.covers(center)
         }
         return Locale.current.region == .southKorea
+    }
+    /// 카카오 주변 장소 핀 — 지도에 찍을 수 있고, 검색 결과(파란 핀)와 겹치지 않는 것만.
+    private var nearbyKakaoPins: [KakaoPlace] {
+        let searched = Set(kakaoSearchResults.map(\.id))
+        return kakaoPlaces.filter { $0.coordinate.isMappable && !searched.contains($0.id) }
     }
     @State private var isKakaoSearching = false
     @State private var selectedKakaoPlace: KakaoPlace?
@@ -343,15 +346,12 @@ struct MapView: View {
 
                 // 카카오 주변 장소 마커 (기본색 - 검색 결과가 아닌 것들만)
                 if isUsingKakaoSearch {
-                    ForEach(kakaoPlaces.filter(\.coordinate.isMappable)) { place in
-                        // 검색 결과에 포함되지 않은 것만 표시
-                        if !kakaoSearchResults.contains(where: { $0.id == place.id }) {
-                            Annotation(place.placeName, coordinate: place.coordinate) {
-                                KakaoPlacePinView(place: place) {
-                                    logger.info("🎯 카카오 장소 마커 탭됨: \(place.placeName)")
-                                    // item 바인딩 사용: place 설정만으로 자동으로 시트 열림
-                                    selectedKakaoPlace = place
-                                }
+                    ForEach(nearbyKakaoPins) { place in
+                        Annotation(place.placeName, coordinate: place.coordinate) {
+                            KakaoPlacePinView(place: place) {
+                                logger.info("🎯 카카오 장소 마커 탭됨: \(place.placeName)")
+                                // item 바인딩 사용: place 설정만으로 자동으로 시트 열림
+                                selectedKakaoPlace = place
                             }
                         }
                     }
@@ -596,15 +596,6 @@ struct MapView: View {
         }
     }
 
-    private func regionToKey(_ region: MKCoordinateRegion) -> String {
-        // 소수점 3자리로 반올림하여 비슷한 영역을 같은 것으로 취급
-        let lat = round(region.center.latitude * 1000) / 1000
-        let lon = round(region.center.longitude * 1000) / 1000
-        let spanLat = round(region.span.latitudeDelta * 1000) / 1000
-        let spanLon = round(region.span.longitudeDelta * 1000) / 1000
-        return "\(lat),\(lon),\(spanLat),\(spanLon)"
-    }
-
     private func selectSearchResult(_ mapItem: MKMapItem) {
         logger.info("검색 결과 선택: \(mapItem.name ?? "이름 없음")")
 
@@ -632,30 +623,6 @@ struct MapView: View {
 
     // MARK: - Kakao Search Methods
 
-    private func searchKakaoPlacesIfNeeded(in region: MKCoordinateRegion) {
-        // 중복 검색 방지
-        let regionKey = regionToKey(region)
-
-        if isKakaoSearching {
-            logger.info("⏸️ 이미 카카오 검색 중이므로 스킵")
-            return
-        }
-
-        if searchedRegions.contains(regionKey) {
-            logger.info("💾 캐시된 영역이므로 스킵: \(regionKey)")
-            return
-        }
-
-        if let lastTime = lastSearchTime, Date().timeIntervalSince(lastTime) < 1.0 {
-            logger.info("⏱️ 검색 간격이 너무 짧아서 스킵 (throttling)")
-            return
-        }
-
-        lastSearchTime = Date()
-        searchedRegions.insert(regionKey)
-        searchKakaoPlaces(in: region)
-    }
-
     private func searchKakaoPlaces(in region: MKCoordinateRegion) {
         isKakaoSearching = true
         logger.info("🔍 카카오 주변 장소 검색 시작")
@@ -673,19 +640,9 @@ struct MapView: View {
                 )
 
                 await MainActor.run {
-                    // 기존 장소와 새 장소를 합치고 중복 제거
-                    let combined = kakaoPlaces + places
-                    var uniquePlaces: [KakaoPlace] = []
-                    var seenIDs = Set<String>()
-
-                    for place in combined {
-                        if !seenIDs.contains(place.id) {
-                            seenIDs.insert(place.id)
-                            uniquePlaces.append(place)
-                        }
-                    }
-
-                    kakaoPlaces = uniquePlaces
+                    // 누른 자리의 주변 장소로 바꾼다. 예전에는 누를 때마다 쌓아 핀이 끝없이 늘었고,
+                    // 지도는 화면이 바뀔 때마다 그 핀을 모두 다시 맞춰 보느라 메인 스레드를 붙잡았다(0x8BADF00D).
+                    kakaoPlaces = places
                     logger.info("✅ 카카오 검색 완료: \(kakaoPlaces.count)개 장소")
 
                     // 자동 주변 검색에서는 지도를 강제로 이동하지 않음
