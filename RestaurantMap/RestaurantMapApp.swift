@@ -117,52 +117,13 @@ struct RestaurantMapApp: App {
                 container = try ModelContainer(for: schema, configurations: [modelConfiguration])
                 logger.info("ModelContainer 초기화 성공 (기기 안)")
             }
+            // 한 번만 하면 되는 옮기기 — 첫 화면이 뜨기 전 메인 스레드에서 돌아서, 끝난 뒤로는 기록 전체를 다시 읽지 않는다.
             // 파일로 두던 옛 방문 사진을 기록 안으로 — 그래야 iCloud 로 같이 따라간다.
-            PhotoMigration.run(container)
-            // 옛 맛 평가(종류마다 여섯 칸)를 새 맛 축으로 (→ Taste.swift)
+            OneTimeMigration.run(.photos) { PhotoMigration.run(container) }
+            // 옛 카테고리 이름을 UUID 로 (→ CategoryMigration)
+            OneTimeMigration.run(.categories) { CategoryMigration.run(container.mainContext) }
+            // 옛 맛 평가(종류마다 여섯 칸)를 새 맛 축으로 (→ Taste.swift). 옮길 방문만 골라 읽어 가볍다.
             TasteMigration.run(container.mainContext)
-
-            // 기존 Restaurant 데이터를 UUID 기반 카테고리로 마이그레이션
-            let context = container.mainContext
-            let descriptor = FetchDescriptor<Restaurant>()
-            if let restaurants = try? context.fetch(descriptor) {
-                var needsSave = false
-
-                // 구 카테고리 이름 → 새 UUID 매핑
-                let categoryMigration: [String: String] = [
-                    "일반": FoodCategoryRepository.builtInCategories[0].id.uuidString,
-                    "스테이크": FoodCategoryRepository.builtInCategories[1].id.uuidString,
-                    "초밥": FoodCategoryRepository.builtInCategories[2].id.uuidString,
-                    "라멘": FoodCategoryRepository.builtInCategories[3].id.uuidString,
-                    "피자": FoodCategoryRepository.builtInCategories[4].id.uuidString,
-                    "와인": FoodCategoryRepository.builtInCategories[5].id.uuidString,
-                    "커피": FoodCategoryRepository.builtInCategories[6].id.uuidString
-                ]
-
-                for restaurant in restaurants {
-                    // 이미 UUID 형식이면 스킵
-                    if UUID(uuidString: restaurant.foodCategoryId) != nil {
-                        continue
-                    }
-
-                    // 구 방식 데이터 변환
-                    if let newId = categoryMigration[restaurant.foodCategoryId] {
-                        restaurant.foodCategoryId = newId
-                        logger.info("Restaurant '\(restaurant.name)' 카테고리 마이그레이션: \(restaurant.foodCategoryId) → UUID")
-                        needsSave = true
-                    } else {
-                        // 매핑되지 않은 값이면 기본값(일반)으로
-                        restaurant.foodCategoryId = FoodCategoryRepository.builtInCategories[0].id.uuidString
-                        logger.warning("Restaurant '\(restaurant.name)' 알 수 없는 카테고리, 기본값으로 설정")
-                        needsSave = true
-                    }
-                }
-
-                if needsSave {
-                    try? context.save()
-                    logger.info("✅ 카테고리 마이그레이션 완료")
-                }
-            }
 
             return container
         } catch {
@@ -309,6 +270,52 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
             Task { @MainActor in RestaurantRouter.shared.pendingName = restaurantName }
         }
         completionHandler()
+    }
+}
+
+// MARK: - 한 번만 하는 옮기기
+
+/// 끝났으면 기기에 표시를 남기고 다음 실행부터 건너뛴다. 실패하면 표시를 남기지 않아 다음에 다시 돈다.
+enum OneTimeMigration: String {
+    case photos = "migration.photosIntoStore.done"
+    case categories = "migration.categoryUUID.done"
+
+    @MainActor
+    static func run(_ migration: OneTimeMigration, _ work: () -> Bool) {
+        let defaults = UserDefaults.standard
+        guard !defaults.bool(forKey: migration.rawValue) else { return }
+        if work() { defaults.set(true, forKey: migration.rawValue) }
+    }
+}
+
+/// 옛 카테고리 이름("일반" · "스테이크" …)을 UUID 로. 모르는 값은 '일반' 으로. 끝까지 옮겼으면 true.
+enum CategoryMigration {
+    @MainActor
+    static func run(_ context: ModelContext) -> Bool {
+        let logger = Logger(subsystem: "com.restaurantmap", category: "App")
+        guard let restaurants = try? context.fetch(FetchDescriptor<Restaurant>()) else { return false }
+        let builtIn = FoodCategoryRepository.builtInCategories
+        let legacy = ["일반", "스테이크", "초밥", "라멘", "피자", "와인", "커피"]
+        let mapping = Dictionary(uniqueKeysWithValues: legacy.enumerated().compactMap { index, name in
+            index < builtIn.count ? (name, builtIn[index].id.uuidString) : nil
+        })
+        guard let fallback = builtIn.first?.id.uuidString else { return true }
+
+        var changed = false
+        for restaurant in restaurants where UUID(uuidString: restaurant.foodCategoryId) == nil {
+            restaurant.foodCategoryId = mapping[restaurant.foodCategoryId] ?? fallback
+            changed = true
+        }
+        guard changed else { return true }
+        do {
+            try context.save()
+            logger.info("✅ 카테고리 마이그레이션 완료")
+            return true
+        } catch {
+            logger.error("카테고리 마이그레이션 저장 실패: \(error.localizedDescription)")
+            context.rollback()
+            return false
+        }
     }
 }
 

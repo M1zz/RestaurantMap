@@ -142,6 +142,34 @@ struct MapView: View {
         let searched = Set(kakaoSearchResults.map(\.id))
         return kakaoPlaces.filter { $0.coordinate.isMappable && !searched.contains($0.id) }
     }
+    /// 지도에 한 번에 세우는 저장한 식당 핀의 최대 수.
+    /// 지도는 핀을 맞추는 일을 메인 스레드에서 한다. 구글 지도에서 한꺼번에 옮겨 오면 수백 개가 되는데,
+    /// 그만큼 세우면 지도를 움직일 때마다 멈추고 앱을 닫을 때 시간 안에 못 끝나 시스템이 앱을 죽인다(0x8BADF00D).
+    static let savedPinLimit = 150
+
+    /// 지도에 세울 저장한 식당. 지워진 식당 · 찍을 수 없는 좌표는 빼고(목록에서는 그대로 보인다),
+    /// 한도를 넘으면 지금 보는 곳(없으면 내 위치)에서 가까운 것부터 한도만큼.
+    private var savedPins: [Restaurant] {
+        Self.pins(of: restaurants, near: mapRegion?.center ?? locationDelegate.userLocation)
+    }
+
+    static func pins(of restaurants: [Restaurant], near center: CLLocationCoordinate2D?, limit: Int = savedPinLimit) -> [Restaurant] {
+        let pins = restaurants.filter { !$0.isGone && $0.coordinate.isMappable }
+        guard pins.count > limit else { return pins }
+        guard let center, center.isMappable else { return Array(pins.prefix(limit)) }
+        // 가까운 순 — 경도 차는 위도에 따라 줄어드는 만큼 줄여 잰다 (정확한 거리까지는 필요 없다)
+        let shrink = cos(center.latitude * .pi / 180)
+        func distance(_ c: CLLocationCoordinate2D) -> Double {
+            let dLat = c.latitude - center.latitude
+            var dLon = abs(c.longitude - center.longitude)
+            if dLon > 180 { dLon = 360 - dLon }
+            return dLat * dLat + (dLon * shrink) * (dLon * shrink)
+        }
+        return pins.map { ($0, distance($0.coordinate)) }
+            .sorted { $0.1 < $1.1 }
+            .prefix(limit)
+            .map(\.0)
+    }
     @State private var isKakaoSearching = false
     @State private var selectedKakaoPlace: KakaoPlace?
     @State private var kakaoPlaceForAdd: KakaoPlace?  // AddRestaurantView에 전달할 장소 정보
@@ -368,8 +396,7 @@ struct MapView: View {
                 }
             }
 
-            // 지워진 식당 · 지도에 찍을 수 없는 좌표의 식당은 핀을 세우지 않는다 (목록에서는 그대로 보인다)
-            ForEach(restaurants.filter { !$0.isGone && $0.coordinate.isMappable }) { restaurant in
+            ForEach(savedPins) { restaurant in
                 Annotation(restaurant.name, coordinate: restaurant.coordinate) {
                     RestaurantPinView(restaurant: restaurant, rank: ranks[restaurant.persistentModelID]) {
                         openDetail(restaurant)
